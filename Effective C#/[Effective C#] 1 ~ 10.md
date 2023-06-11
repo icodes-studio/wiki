@@ -15,18 +15,18 @@
 ‌
 
 ### 3. 캐스트보다는 is, as가 좋다.
--- 
-as는 런타임에 더 효율적이고 안전하게 동작한다.
-비싼 InvalidCastException 예외처리를 사용하지 않는다.
-See Also
-C# 7.0 - is pattern matching
+---
+- as는 런타임에 더 효율적이고 안전하게 동작한다.
+- 비싼 InvalidCastException 예외처리를 사용하지 않는다.
+- ***See Also***
+    - ***C# 7.0 - is pattern matching***
 ‌
-
-4. string.Format()을 보간 문자열로 대체하라.
-코드 가독성이 대폭 향상된다.
-정적 타입 검사를 수행하기 때문에 개발자의 실수를 미연에 방지한다.
-문자열을 생성하기 위한 표현식이 더 풍성하다.
-
+### 4. string.Format()을 보간 문자열로 대체하라.
+---
+- 코드 가독성이 대폭 향상된다.
+- 정적 타입 검사를 수행하기 때문에 개발자의 실수를 미연에 방지한다.
+- 문자열을 생성하기 위한 표현식이 더 풍성하다.
+```
 // 앞에 $를 붙이고 표현식을 {}안에 둔다.
 Console.WriteLine($"The value of pi is {Math.PI}");
  
@@ -45,8 +45,9 @@ Console.WriteLine($"The customer's name is {c?.Name ?? "Name is missing"}");
  
 // 전달할 인자를 사전에 문자열로 변경하면 값 타입이 박싱되는 것을 피할 수 있다.
 Console.WriteLine($"The value of PI is {Math.PI.ToString()}");
-See Also
-C# 6.0 - string interpolation
+```
+- ***See Also***
+    - ***C# 6.0 - string interpolation***
 ‌
 
 5. 문화권 별로 다른 문자열을 생성하려면 FormattableString을 사용하라.

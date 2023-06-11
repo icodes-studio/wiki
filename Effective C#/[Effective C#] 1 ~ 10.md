@@ -48,6 +48,7 @@ Console.WriteLine($"The value of PI is {Math.PI.ToString()}");
 ```
 - ***See Also***
     - ***C# 6.0 - string interpolation***
+    - ***C# 11 - Allow new-lines in all interpolations***
 
 ### 5. 문화권 별로 다른 문자열을 생성하려면 FormattableString을 사용하라.
 ---
@@ -85,18 +86,19 @@ class Program
     - ***C# 6.0 - nameof operator***
 ‌
 
-7. 델리게이트를 이용하여 콜백을 표현하라.
-타입 안정적이고 인터페이스 콜백 보다 효율적이다.
-자주 사용되는 델리게이트 정의 : Predicate<T>, Acton<T>, Func<T>
-멀티 캐스트가 가능하다.
-See Also:
-C# 1.0 - delegate
-C# 3.0 - Action & Func
+### 7. 델리게이트를 이용하여 콜백을 표현하라.
+--- 
+- 타입 안정적이고 인터페이스 콜백 보다 효율적이다.
+- 자주 사용되는 델리게이트 정의 : Predicate<T>, Acton<T>, Func<T>
+- 멀티 캐스트가 가능하다.
+- ***See Also:***
+    - ***C# 1.0 - delegate***
+    - ***C# 3.0 - Action & Func***
 ‌
 
-8. 이벤트 호출 시에는 null 조건 연산자를 사용하라.
-멀티 쓰레드 환경에서 효율적인 코드를 만들어 낸다.
-
+### 8. 이벤트 호출 시에는 null 조건 연산자를 사용하라.
+- 멀티 쓰레드 환경에서 효율적인 코드를 만들어 낸다.
+```
 public void RaiseUpdates()
 {
     counter++;
@@ -122,19 +124,19 @@ public void RaiseUpdates()
     counter++;
     Updated?.Invoke(this, counter);
 }
-See Also
-C# 1.0 - event
-C# 6.0 - null conditional operator
+```
+- ***See Also***
+    - ***C# 1.0 - event***
+    - ***C# 6.0 - null conditional operator***
 ‌
 
-9. 박싱과 언박싱을 최소화하라.
-박싱은 값 타입을 참조 타입으로 변경한다.
-박싱과 언박싱은 성능에 좋지 않은 영향을 미친다.
-
-져네릭(generic) 클래스와 메서드를 사용하면 박싱과 언박싱을 피할 수 있다.
-
-컴파일러가 자동으로 reference type 변환을 하지 않도록 사용해서 피할 수 있다.
-
+### 9. 박싱과 언박싱을 최소화하라.
+---
+- 박싱은 값 타입을 참조 타입으로 변경한다.
+- 박싱과 언박싱은 성능에 좋지 않은 영향을 미친다.
+- 져네릭(generic) 클래스와 메서드를 사용하면 박싱과 언박싱을 피할 수 있다.
+- 컴파일러가 자동으로 reference type 변환을 하지 않도록 사용해서 피할 수 있다.
+```
 int firstNumber = 25;
 int secondNumber = 35;
 Console.WriteLine($"A few numbers:{firstNumber}, {secondNumber}");
@@ -146,10 +148,11 @@ Console.WriteLine(o.ToString());
  
 // ToString() 메서드로 박싱을 피할 수 있다
 Console.WriteLine($"A few numbers:{firstNumber.ToString()}, {secondNumber.ToString()}");
-See Also
-C# 2.0 - generic
-‌
+```
+- ***See Also***
+    - ***C# 2.0 - generic***
 
-10. 베이스 클래스가 업그레이드된 경우에만 new 한정자를 사용하라.
-베이스 클래스의 메서드와 하위 클래스에서 재정의한 메서드가 완전히 다른 내용을 구현했다 하더라도 이를 사용하는 대부분의 개발자는 두 메서드가 완전히 동일한 작업을 수행할 것으로 기대한다.
-베이스 클래스가 업그레이드되어 메서드의 이름이 충돌하는 경우는 매우 특별한 경우라서 new 한정자를 검토해볼 수 있다. 그 외의 경우라면 절대로 new 한정자를 사용하지 말자.
+### 10. 베이스 클래스가 업그레이드된 경우에만 new 한정자를 사용하라.
+---
+- 베이스 클래스의 메서드와 하위 클래스에서 재정의한 메서드가 완전히 다른 내용을 구현했다 하더라도 이를 사용하는 대부분의 개발자는 두 메서드가 완전히 동일한 작업을 수행할 것으로 기대한다.
+- 베이스 클래스가 업그레이드되어 메서드의 이름이 충돌하는 경우는 매우 특별한 경우라서 new 한정자를 검토해볼 수 있다. 그 외의 경우라면 절대로 new 한정자를 사용하지 말자.

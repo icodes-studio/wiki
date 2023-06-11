@@ -6,12 +6,14 @@
 - ***See Also***
     - ***C# 3.0 - var keyword***
 ‌
+
 ### 2. const 보다는 readonly 가 좋다.
 ---
 - readonly는 유연하다.
 - 상수 값이 업데이트 되면 참조하는 모든 코드는 반드시 재컴파일 해야한다. 하지만 readonly는 그럴 필요가 없다.
 - 성능이 중요하고, 값이 절대 바뀌지 않는 경우가 아니라면…
 ‌
+
 ### 3. 캐스트보다는 is, as가 좋다.
 ---
 - as는 런타임에 더 효율적이고 안전하게 동작한다.
@@ -19,6 +21,7 @@
 - ***See Also***
     - ***C# 7.0 - is pattern matching***
 ‌
+
 ### 4. string.Format()을 보간 문자열로 대체하라.
 ---
 - 코드 가독성이 대폭 향상된다.
@@ -47,6 +50,7 @@ Console.WriteLine($"The value of PI is {Math.PI.ToString()}");
 - ***See Also***
     - ***C# 6.0 - string interpolation***
     - ***C# 11 - Allow new-lines in all interpolations***
+
 
 ### 5. 문화권 별로 다른 문자열을 생성하려면 FormattableString을 사용하라.
 ---
@@ -85,6 +89,7 @@ class Program
 - ***See Also***
     - ***C# 6.0 - nameof operator***
 ‌
+
 ### 7. 델리게이트를 이용하여 콜백을 표현하라.
 --- 
 - 타입 안정적이고 인터페이스 콜백 보다 효율적이다.

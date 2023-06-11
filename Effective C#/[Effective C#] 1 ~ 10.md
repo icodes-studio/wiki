@@ -48,11 +48,11 @@ Console.WriteLine($"The value of PI is {Math.PI.ToString()}");
 ```
 - ***See Also***
     - ***C# 6.0 - string interpolation***
-‌
 
-5. 문화권 별로 다른 문자열을 생성하려면 FormattableString을 사용하라.
-문자열 보간을 사용하여 문자열을 만들면 반환값이 문자열일수도, FormattableString을 상속한 타입일 수도 있다.
-FormattableString을 사용하면 현재 컴퓨터에 지정된 문화권을 고려하여 문자열을 생성할 수 있다.
+### 5. 문화권 별로 다른 문자열을 생성하려면 FormattableString을 사용하라.
+---
+- 문자열 보간을 사용하여 문자열을 만들면 반환값이 문자열일수도, FormattableString을 상속한 타입일 수도 있다.
+- FormattableString을 사용하면 현재 컴퓨터에 지정된 문화권을 고려하여 문자열을 생성할 수 있다.
 
 public static string ToGerman(FormattableString src)
 {

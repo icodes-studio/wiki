@@ -53,20 +53,36 @@ Console.WriteLine($"The value of PI is {Math.PI.ToString()}");
 ---
 - 문자열 보간을 사용하여 문자열을 만들면 반환값이 문자열일수도, FormattableString을 상속한 타입일 수도 있다.
 - FormattableString을 사용하면 현재 컴퓨터에 지정된 문화권을 고려하여 문자열을 생성할 수 있다.
-
-public static string ToGerman(FormattableString src)
+```
+class Program
 {
-    return string.Format(
-    System.Globalization.CultureInfo.CreateSpecificCulture("de-de"),
-    src.Format, src.GetArguments());
+    static void Main(string[] args)
+    {
+        FormattableString fs = $"{Math.PI}";
+        Console.WriteLine(fs);
+        Console.WriteLine(ToGerman(fs));
+    }
+ 
+    public static string ToGerman(FormattableString src)
+    {
+        return string.Format(
+            CultureInfo.CreateSpecificCulture("de-de"),
+            src.Format,
+            src.GetArgument(0));
+    }
 }
-‌
+ 
+// 출력결과
+// 3.141592653589793
+// 3,141592653589793
+‌```
 
-6. nameof() 연산자를 적극 활용하라.
-로컬 심볼 이름을 문자열로 반환하는 역할을 수행한다.
-심볼의 이름을 바꾸거나 수정할때 실수를 줄일 수 있다.
-See Also
-C# 6.0 - nameof operator
+### 6. nameof() 연산자를 적극 활용하라.
+---
+- 로컬 심볼 이름을 문자열로 반환하는 역할을 수행한다.
+- 심볼의 이름을 바꾸거나 수정할때 실수를 줄일 수 있다.
+- ***See Also***
+    - ***C# 6.0 - nameof operator***
 ‌
 
 7. 델리게이트를 이용하여 콜백을 표현하라.

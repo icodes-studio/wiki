@@ -1,22 +1,22 @@
 ### 21. 타입 매개변수가 IDisposable을 구현한 경우를 대비하여 제네릭 클래스를 작성하라
 ---
 - 제네릭 클래스의 타입 매개변수로 객체를 생성하는 경우, 이 타입이 IDisposable을 구현하고 있는지 확인하고 적절히 처리하자.
-```
-public interface IEngine
-{
-    void DoWork();
-}
- 
-public class EngineDriverOne<T> where T : IEngine, new()
-{
-    public void GetThingsDone()
+    ```
+    public interface IEngine
     {
-        T driver = new T();
-        using (driver as IDisposable)
-        driver.Dowork();
+        void DoWork();
     }
-}
-```
+    
+    public class EngineDriverOne<T> where T : IEngine, new()
+    {
+        public void GetThingsDone()
+        {
+            T driver = new T();
+            using (driver as IDisposable)
+            driver.Dowork();
+        }
+    }
+    ```
 
 
 　
@@ -31,21 +31,21 @@ public class EngineDriverOne<T> where T : IEngine, new()
     - 공변성과 반공변성은 가변성(variance)라고 부르는데 그의 반대.
 - 제네릭타입은 기본적으로 불변성이기 때문에 class C<T>가 정의되어 있더라도 C<Base>에 C<Derived>를 할당할 수 없다.
 - 하지만 C#의 대표적인 IEnumerable<T>는 IEnumerable<Base>변수에 IEnumerable<Derived>인스턴스를 할당할 수 있는데 그 이유는 IEnumerable이 공변적(<out T>)으로 지정되었기 때문이다.
-```
-// object를 상속하는 자식 객체 string 이 object 부모 변수에 할당됩니다.
-IEnumerable<string> strings = new List<string>();
-IEnumerable<object> objects = strings;
- 
-// 반환타입이 object 로 string 의 부모인 대리자에 반환타입이 string 으로 obejct의 자식인 함수를 할당합니다.
-static string GetString() { return ""; }
-Func<object> del = GetString;
-```
+    ```
+    // object를 상속하는 자식 객체 string 이 object 부모 변수에 할당됩니다.
+    IEnumerable<string> strings = new List<string>();
+    IEnumerable<object> objects = strings;
+    
+    // 반환타입이 object 로 string 의 부모인 대리자에 반환타입이 string 으로 obejct의 자식인 함수를 할당합니다.
+    static string GetString() { return ""; }
+    Func<object> del = GetString;
+    ```
 - 반대로 부모 객체가 자식 변수로 할당되는 형변환 키워드는 in
-```
-static void SetObject(object o) { }
-Action<object> actObject = SetObject;
-Action<string> actString = actObject;
-```
+    ```
+    static void SetObject(object o) { }
+    Action<object> actObject = SetObject;
+    Action<string> actString = actObject;
+    ```
 - ***See Also***
     - ***C# 9.0 - covariant return types***
     - ***https://youtu.be/v5op4r6AojI***
@@ -66,26 +66,26 @@ Action<string> actString = actObject;
 - 델리게이크를 이용한 메서드 제약
     - 제약조건으로 설정하고 싶은 메서드에 부합하는 델리게이트를 작성하고 이를 델리게이트 타입 T로 정의한다.
 - 활용 예
-```
-class Program
-{
-    static void Main()
+    ```
+    class Program
     {
-        int left = 10;
-        int right = 20;
-        int sum = Example.Add(left, right, (left, right) => left + right);
-        int minus = Example.Minus(left, right, (left, right) => left - right);
-        Console.WriteLine($"Sum: {sum}");
-        Console.WriteLine($"Minus: {minus}");
+        static void Main()
+        {
+            int left = 10;
+            int right = 20;
+            int sum = Example.Add(left, right, (left, right) => left + right);
+            int minus = Example.Minus(left, right, (left, right) => left - right);
+            Console.WriteLine($"Sum: {sum}");
+            Console.WriteLine($"Minus: {minus}");
+        }
     }
-}
- 
-public static class Example
-{
-    public static T Add<T>(T left, T right, Func<T, T, T> AddFunc) => AddFunc(left, right);
-    public static T Minus<T>(T left, T right, Func<T, T, T> MinusFunc) => MinusFunc(left, right);
-}
-```
+    
+    public static class Example
+    {
+        public static T Add<T>(T left, T right, Func<T, T, T> AddFunc) => AddFunc(left, right);
+        public static T Minus<T>(T left, T right, Func<T, T, T> MinusFunc) => MinusFunc(left, right);
+    }
+    ```
 
 
 　
@@ -93,36 +93,36 @@ public static class Example
 ### 24. 베이스 클래스나 인터페이스에 대해서 제네릭을 특화하지 말라
 ---
 - 아래 코드의 출력은 어떻게 될까?
-```
-public abstract class Parent
-{
-    public double Mass { get; set; }
-    public string Name { get; set; }
-}
- 
-public class DerivedA : Parent
-{
-}
- 
-public class MyTest
-{
-    public void MyMethod()
+    ```
+    public abstract class Parent
     {
-        DerivedA a = new DerivedA();
-        Print(a);
+        public double Mass { get; set; }
+        public string Name { get; set; }
     }
- 
-    public void Print<T>(T p)
+    
+    public class DerivedA : Parent
     {
-        Debug.Log("제네릭 T");
     }
- 
-    public void Print(Parent p)
+    
+    public class MyTest
     {
-        Debug.Log("부모");
+        public void MyMethod()
+        {
+            DerivedA a = new DerivedA();
+            Print(a);
+        }
+    
+        public void Print<T>(T p)
+        {
+            Debug.Log("제네릭 T");
+        }
+    
+        public void Print(Parent p)
+        {
+            Debug.Log("부모");
+        }
     }
-}
-```
+    ```
 - 정답: "제네릭 T"
 - "부모"를 출력하게 하고 싶으면 Parent로 명시적 캐스팅 해야 한다.
 - 즉, 베이스 클래스에 대해서 제네릭을 특화하려고 시도해봤자 T가 우선권을 가져가기 때문에 의미가 없다는 소리.
@@ -146,40 +146,40 @@ public class MyTest
 ---
 - 제네릭이 없던 시절에 개발된 코드들을 지원해야 한다.
 - 명시적 방법으로 구현
-```
-public class Name : IComparable<Name>, IComparable
-{
-    public string First { get; set; }
-    public string Last { get; set; }
-    public string Middle { get; set; }
- 
-    public int CompareTo(Name other)
+    ```
+    public class Name : IComparable<Name>, IComparable
     {
-        if (Object.ReferenceEquals(this, other))
-            return 0;
-        if (Object.ReferenceEquals(other, null))
-            return 1;
- 
-        int result = Comparer<string>.Default.Compare(Last, other.Last);
-        if (result != 0)
-            return result;
- 
-        result = Comparer<string>.Default.Compare(First, other.First);
-        if (result != 0)
-            return result;
- 
-        return Comparer<string>.Default.Compare(Middle, other.Middle);
+        public string First { get; set; }
+        public string Last { get; set; }
+        public string Middle { get; set; }
+    
+        public int CompareTo(Name other)
+        {
+            if (Object.ReferenceEquals(this, other))
+                return 0;
+            if (Object.ReferenceEquals(other, null))
+                return 1;
+    
+            int result = Comparer<string>.Default.Compare(Last, other.Last);
+            if (result != 0)
+                return result;
+    
+            result = Comparer<string>.Default.Compare(First, other.First);
+            if (result != 0)
+                return result;
+    
+            return Comparer<string>.Default.Compare(Middle, other.Middle);
+        }
+    
+        int IComparable.CompareTo(object obj)
+        {
+            // Name의 파생 클래스를 필터링 하기 위해서
+            if (obj.GetType() != typeof(Name))
+                throw new ArgumentException("Argument is not a Name object");
+            return this.CompareTo(obj as Name);
+        }
     }
- 
-    int IComparable.CompareTo(object obj)
-    {
-        // Name의 파생 클래스를 필터링 하기 위해서
-        if (obj.GetType() != typeof(Name))
-            throw new ArgumentException("Argument is not a Name object");
-        return this.CompareTo(obj as Name);
-    }
-}
-```
+    ```
 - 논제네릭을 명시적으로 구현한다면 암시적으로 구현된 제네릭 메서드가 우선적으로 선택되기 때문에 실수로 논제네릭을 사용하는 일을 방지할 수 있다.
 - 참고: 명시적으로 구현된 인터페이스 메서드는 해당 인터페이스의 참조를 통해서만 호출할 수 있다.
 - ***See Also***
@@ -203,22 +203,22 @@ public class Name : IComparable<Name>, IComparable
 ---
 - 기능을 추가할 때 구체화된 제네릭 필드를 상속하여 메서드를 추가하기 보다는 확장메서드를 구현하는 것을 고려하자.
 - 뭔 말이냐면, 아래 코드처럼 상속 받아서 새로운 기능을 추가하지 말고
-```
-public class CustomerList : List<Customer>
-{
-    public void SendEmailCoupons(Coupon specialOffer)
+    ```
+    public class CustomerList : List<Customer>
+    {
+        public void SendEmailCoupons(Coupon specialOffer)
+        {
+            //...
+        }
+    }
+    ```
+- 구체화된 컬렉션 타입에 대해 확장 메서드를 작성하자.
+    ```
+    public static void SendEmailCoupons(this IEnumerable<Customer> customers, Coupon specialOffer)
     {
         //...
     }
-}
-```
-- 구체화된 컬렉션 타입에 대해 확장 메서드를 작성하자.
-```
-public static void SendEmailCoupons(this IEnumerable<Customer> customers, Coupon specialOffer)
-{
-    //...
-}
-```
+    ```
 
 
 　
@@ -226,9 +226,9 @@ public static void SendEmailCoupons(this IEnumerable<Customer> customers, Coupon
 ### 29. 컬렉션을 반환하기보다 이터레이터를 반환하는 것이 낫다
 - 이터레이터란 호출자가 요청한 시퀀스를 생성하기 위해서 사용하는 Enumerable / Enumerator를 의미한다.
 - Enumerable.Range()를 사용하는 경우를 생각해보자 
-```
-IEnumerable<int> allNumbers = Enumerable.Range(0, int.MaxValue);
-```
+    ```
+    IEnumerable<int> allNumbers = Enumerable.Range(0, int.MaxValue);
+    ```
 - Range 메서드를 호출하면 일련의 숫자 컬렉션이 아니라 숫자 시퀀스를 만들어내는 객체를 생성한다.
 - 호출 측에서는 이터레이터 메서드의 결과 값을 추가적인 컬렉션에 저장하지 않는 이상 방대한 결과치를 저장하기 위한 공간이 필요없다.
 - '필요할 때 생성' 이라는 전략은 이터레이터 메서드를 작성할 때 가장 중요한 전략 중 하나이다.
@@ -246,30 +246,30 @@ IEnumerable<int> allNumbers = Enumerable.Range(0, int.MaxValue);
     - 질의의 내용을 구성할 수 있을 뿐 아니라 개별 항목에 대해 수행하려는 작업의 수행 시기를 연기할 수 있다.
     - 사용자의 의도를 더 명확하게 드러낼 수 있다.
 - 예시: (0, 0)에서 떨어진 거리 순으로 정렬하여 객체를 반환
-```
-// 루프 방식
-private static IEnumerable<Tuple<int, int>> ProduceIndices3()
-{
-    var storage = new List<Tuple<int, int>>();
-    for (var x = 0; x < 100; x++)
-        for (var y = 0; x < 100; y++)
-            storage.Add(Tuple.Create(x, y));
- 
-    storage.Sort((point1, point2) =>
-        (point2.Item1 * point2.Item1 + point2.Item2 * point2.Item2).CompareTo
-        (point1.Item1 * point1.Item1 + point1.Item2 * point1.Item2));
- 
-    return storage;
-}
- 
-// 쿼리구문 방식
-private static IEnumerable<Tuple<int, int>> QueryIndices3()
-{
-    return  from x in Enumerable.Range(0, 100)
-            from y in Enumerable.Range(0, 100)
-            orderby(x * x + y * y) descending
-            select Tuple.Create(x, y);
-}
-```
+    ```
+    // 루프 방식
+    private static IEnumerable<Tuple<int, int>> ProduceIndices3()
+    {
+        var storage = new List<Tuple<int, int>>();
+        for (var x = 0; x < 100; x++)
+            for (var y = 0; x < 100; y++)
+                storage.Add(Tuple.Create(x, y));
+    
+        storage.Sort((point1, point2) =>
+            (point2.Item1 * point2.Item1 + point2.Item2 * point2.Item2).CompareTo
+            (point1.Item1 * point1.Item1 + point1.Item2 * point1.Item2));
+    
+        return storage;
+    }
+    
+    // 쿼리구문 방식
+    private static IEnumerable<Tuple<int, int>> QueryIndices3()
+    {
+        return  from x in Enumerable.Range(0, 100)
+                from y in Enumerable.Range(0, 100)
+                orderby(x * x + y * y) descending
+                select Tuple.Create(x, y);
+    }
+    ```
 - ***See Also***
     - ***C# 3.0 - LINQ(Language INtegrated Query)***

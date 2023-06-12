@@ -44,13 +44,13 @@
 
 　
 
-### 42. IEnumerable<T> 데이터 소스와 IQueryable<T> 데이터 소스를 구분하라
+### 42. IEnumerable\<T\> 데이터 소스와 IQueryable\<T\> 데이터 소스를 구분하라
 ---
 - IQueryable와 IEnumerable는 거의 동일한 API 정의를 갖기 때문에 상호 교환 가능하다.
 - 하지만 이 두 인터페이스는 동작 방식도 매우 다르고 성능도 차이 난다.
 - 결과값은 동일하지만 동작 방식은 다른 예시
     ```
-    // 일반적인 LINQ to SQL 쿼리로 IQueryable<T>의 기능을 이용한다.
+    // 일반적인 LINQ to SQL 쿼리로 IQueryable\<T\>의 기능을 이용한다.
     // where 절과 order 절이 모두 결합된 단일의 T-SQL 구문을 만들어서 데이터베이스를 한 번만 호출
     var q =
         from c in dbContext.Customers
@@ -74,17 +74,17 @@
         orderby c.Name
         select c;
     ```
-- 두 번째 예는 데이터베이스 객체를 IEnumerable<T> 시퀀스로 변경하기 때문에 데이터베이스가 아니라 로컬에서 더 많은 작업을 수행하게 된다.
-- 쿼리문이 IEnumerable<T> 시퀀스를 반환하므로 그다음 작업은 LINQ to Objects 구현체와 델리게이트를 이용하여 수행된다.
-- 대부분의 경우 쿼리 작업을 수행할 때 IEnumerable<T>보다는 IQueryable<T>를 사용하는 편이 훨씬 효율적이다.
-- **IEnumerable<T>**
+- 두 번째 예는 데이터베이스 객체를 IEnumerable\<T\> 시퀀스로 변경하기 때문에 데이터베이스가 아니라 로컬에서 더 많은 작업을 수행하게 된다.
+- 쿼리문이 IEnumerable\<T\> 시퀀스를 반환하므로 그다음 작업은 LINQ to Objects 구현체와 델리게이트를 이용하여 수행된다.
+- 대부분의 경우 쿼리 작업을 수행할 때 IEnumerable\<T\>보다는 IQueryable\<T\>를 사용하는 편이 훨씬 효율적이다.
+- **IEnumerable\<T\>**
     > - 쿼리식 내의 람다 표현식과 함수 매개변수를 나타내기 위해 델리게이트를 사용한다.
     > - 모든 메서드가 로컬 머신에서 수행된다. 따라서 모든 데이터를 메모리로 가져와야 한다.
-- **IQueryable<T>**
+- **IQueryable\<T\>**
     > - 표현식 트리를 이용하여 이를 처리한다.
     > - 데이터가 실제 위치하고 있는 컴퓨터에서 수행한다.
-    > - 코드로 표현할 수 있는 쿼리 표현식이 IEnumerable<T>에 비해 제한적이다.
-- IQueryable<T>는 각각의 메서드를 분석하지 않는다.
+    > - 코드로 표현할 수 있는 쿼리 표현식이 IEnumerable\<T\>에 비해 제한적이다.
+- IQueryable\<T\>는 각각의 메서드를 분석하지 않는다.
 - 따라서 쿼리 표현식이 다른 메서드를 호출한다면 Enumerable구현체를 사용하도록 변경해야 한다.
     ```
     private bool IsValidProduct(Product p) => p.ProductName.LastIndexOf('C') == 0;

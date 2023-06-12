@@ -301,7 +301,7 @@
 ---
 - 제네릭을 활용하면 코드를 덜 작성해도 되기 때문에 매우 유용하지만 타입이나 메서드를 제네릭화하면 구체적인 타입이 주는 장점을 잃고 타입의 세부적인 특징을 고려한 최적화한 알고리즘도 사용할 수 없다.
 - 그래서 만약 어떤 알고리즘이 특정 타입에 대해 더 효율적으로 동작한다고 생각된다면 그냥 그 타입을 이용하도록 작성하는 것도 좋다. 제약 조건을 설정하는 방법도 있지만 제약 조건이 항상 능사는 아니다.
-- ILIst<T>를 복제하는 최적화 되지 않은 코드
+- ILIst\<T\>를 복제하는 최적화 되지 않은 코드
     ```
     public sealed class ReverseEnumerable<T> : IEnumerable<T>
     {
@@ -351,13 +351,13 @@
         }
     ...
     ```
-- string, ICollection<T> 최적화
+- string, ICollection\<T\> 최적화
     - ...
 
 
 　
 
-### 20. IComparable<T>와 IComparer<T>를 이용하여 객체의 선후 관계를 정의하라
+### 20. IComparable\<T\>와 IComparer\<T\>를 이용하여 객체의 선후 관계를 정의하라
 ---
 - IComoparable과 IComparer는 타입에 선후 관계를 제공하기 위한 표준 메커니즘이다.
 - 기본적인 선후 관계는 IComparable을 통해 구현한다.

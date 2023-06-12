@@ -24,13 +24,13 @@
 ### 22. 공변성과 반공변성을 지원하라
 ---
 - 공변 (Covariance)
-    > X → Y가 가능할 때, C<T>가 C<X> → C(Y)로 가능하다면
+    > X → Y가 가능할 때, C\<T\>가 C\<X\> → C(Y)로 가능하다면
 - 반공변 (Contravariance)
-    > X → Y가 가능할 때, C<T>가 C<Y> → C(X)로 가능하다면
+    > X → Y가 가능할 때, C\<T\>가 C\<Y\> → C(X)로 가능하다면
 - 불변성 (Invariance)
     > 공변성과 반공변성은 가변성(variance)라고 부르는데 그의 반대.
-- 제네릭타입은 기본적으로 불변성이기 때문에 class C<T>가 정의되어 있더라도 C<Base>에 C<Derived>를 할당할 수 없다.
-- 하지만 C#의 대표적인 IEnumerable<T>는 IEnumerable<Base>변수에 IEnumerable<Derived>인스턴스를 할당할 수 있는데 그 이유는 IEnumerable이 공변적(<out T>)으로 지정되었기 때문이다.
+- 제네릭타입은 기본적으로 불변성이기 때문에 class C\<T\>가 정의되어 있더라도 C\<Base\>에 C\<Derived\>를 할당할 수 없다.
+- 하지만 C#의 대표적인 IEnumerable\<T\>는 IEnumerable\<Base\>변수에 IEnumerable\<Derived\>인스턴스를 할당할 수 있는데 그 이유는 IEnumerable이 공변적(\<out T\>)으로 지정되었기 때문이다.
     ```
     // object를 상속하는 자식 객체 string 이 object 부모 변수에 할당됩니다.
     IEnumerable<string> strings = new List<string>();

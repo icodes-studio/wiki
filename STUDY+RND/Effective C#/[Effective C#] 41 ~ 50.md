@@ -359,8 +359,6 @@ public class DoesWorkThatMightFail
 - 사용자 입장에서 Dispose()메서드가 항상 호출되도록 코드를 작성하기 위한 최선의 방법은 using문이나 try/finally 블록을 활용하는 것이다.
 - TIPs: 중첩된 uinsg을 피하기 위해 아래와 같이 명시적으로 try/finally문을 구성하는 방법도 있다.
 ```
-// 중첩된 uinsg을 피하기 위해 아래와 같이 명시적으로 try/finally문을 구성하는 방법도 있다.
- 
 public void ExecuteCommand(string connString, string commandString)
 {
     SqlConnection myConnection = null;

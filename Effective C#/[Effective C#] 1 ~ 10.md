@@ -5,19 +5,25 @@
 - 타입을 애매하게 만들거나 가독성이 떨어지면 쓰지 말자.
 - ***See Also***
     - ***C# 3.0 - var keyword***
-‌
+
+　
+
 ### 2. const 보다는 readonly 가 좋다.
 ---
 - readonly는 유연하다.
 - 상수 값이 업데이트 되면 참조하는 모든 코드는 반드시 재컴파일 해야한다. 하지만 readonly는 그럴 필요가 없다.
 - 성능이 중요하고, 값이 절대 바뀌지 않는 경우가 아니라면…
-‌
+
+　
+
 ### 3. 캐스트보다는 is, as가 좋다.
 ---
 - as는 런타임에 더 효율적이고 안전하게 동작한다.
 - 비싼 InvalidCastException 예외처리를 사용하지 않는다.
 - ***See Also***
     - ***C# 7.0 - is pattern matching***
+
+　
 ‌
 ### 4. string.Format()을 보간 문자열로 대체하라.
 ---
@@ -48,6 +54,8 @@ Console.WriteLine($"The value of PI is {Math.PI.ToString()}");
     - ***C# 6.0 - string interpolation***
     - ***C# 11 - Allow new-lines in all interpolations***
 
+　
+
 ### 5. 문화권 별로 다른 문자열을 생성하려면 FormattableString을 사용하라.
 ---
 - 문자열 보간을 사용하여 문자열을 만들면 반환값이 문자열일수도, FormattableString을 상속한 타입일 수도 있다.
@@ -76,6 +84,8 @@ class Program
 // 3,141592653589793
 ```
 
+　
+
 ### 6. nameof() 연산자를 적극 활용하라.
 ---
 - 로컬 심볼 이름을 문자열로 반환하는 역할을 수행한다.
@@ -83,6 +93,8 @@ class Program
 - ***See Also***
     - ***C# 6.0 - nameof operator***
 ‌
+　
+
 ### 7. 델리게이트를 이용하여 콜백을 표현하라.
 --- 
 - 타입 안정적이고 인터페이스 콜백 보다 효율적이다.
@@ -92,6 +104,8 @@ class Program
     - ***C# 1.0 - delegate***
     - ***C# 3.0 - Action & Func***
 ‌
+　
+
 ### 8. 이벤트 호출 시에는 null 조건 연산자를 사용하라.
 ---    
 - 멀티 쓰레드 환경에서 효율적인 코드를 만들어 낸다.
@@ -126,6 +140,8 @@ public void RaiseUpdates()
     - ***C# 1.0 - event***
     - ***C# 6.0 - null conditional operator***
 ‌
+　
+
 ### 9. 박싱과 언박싱을 최소화하라.
 ---
 - 박싱은 값 타입을 참조 타입으로 변경한다.
@@ -147,6 +163,8 @@ Console.WriteLine($"A few numbers:{firstNumber.ToString()}, {secondNumber.ToStri
 ```
 - ***See Also***
     - ***C# 2.0 - generic***
+
+　
 
 ### 10. 베이스 클래스가 업그레이드된 경우에만 new 한정자를 사용하라.
 ---

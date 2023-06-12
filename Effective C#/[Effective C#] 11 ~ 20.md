@@ -66,6 +66,8 @@ class UnmanagedMemoryManager : IDisposable
 - ***See Also***
     - ***C# 1.0 - heap & stack***
 ‌
+　
+
 ### 12. 할당 구문보다 멤버 초기화 구문이 좋다.
 ---
 - 새로운 생성자를 추가하더라도 별도로 초기화할 필요가 없다.
@@ -76,13 +78,16 @@ class UnmanagedMemoryManager : IDisposable
 - ***See Also***
     - ***C# 6.0 - initializers for auto-properties***
 ‌
+　
+
 ### 13. 정적 클래스 멤버를 올바르게 초기화하라.
 ---
 - 인스턴스를 생성하기 전에 반드시 정적 멤버 변수(있다면)를 초기화 해야 한다.
     - 정적 멤버 초기화 구문 이용 초기화
     - 정적 생성자 이용 초기화
 - 정적 생성자에서 예외가 발생하면 죴땐다. 주의하라.
-‌
+
+　
 
 ### 14. 초기화 코드가 중복되는 것을 최소화하라.
 ---
@@ -114,6 +119,8 @@ public class MyClass
 }
 ```
 
+　
+
 ### 15. 불필요한 객체를 만들지 말라.
 ---
 - 자주 생성되는 객체의 경우 클래스 멤버로 관리하거나…
@@ -130,6 +137,8 @@ public static Brush Black
     }
 }
 ```
+
+　
 
 ### 16. 생성자 내에서는 절대로 가상 함수를 호출하지 말라.
 ---
@@ -164,6 +173,8 @@ class Derived : B
     }
 }
 ```
+
+　
 
 ### 17. 표준 Dispose 패턴을 구현하라.
 - 비관리 리소스를 포함하고 있다면 반드시 finalizer를 구현하라.
@@ -222,6 +233,8 @@ class UnmanagedMemoryManager : IDisposable
 - ***See Also***
     - ***C# 1.0 - Finalizer***
 ‌
+　
+
 ### 18. 반드시 필요한 제약 조건만 설정하라.
 ---
 - 너무 많은 제약 조건을 설정하면...
@@ -272,6 +285,8 @@ public static bool AreEqual<T>(T left, T right)
     - 기본생성자 new T()를 반드시 호출해야 하는 경우가 아니면 default()를 적절히 활용하여 new() 제약 조건을 사용하지 않는 것이 좋다.
 - ***See Also***
     - ***C# 2.0 - generic type constraint***
+
+　
 
 ### 19. 런타임에 타입을 확인하여 최적의 알고리즘을 사용하라.
 ---
@@ -329,6 +344,8 @@ public sealed class ReverseEnumerable<T> : IEnumerable<T>
 ```
 - string, ICollection<T> 최적화
     - ...
+
+　
 
 ### 20. IComparable<T>와 IComparer<T>를 이용하여 객체의 선후 관계를 정의하라
 ---

@@ -6,14 +6,12 @@
 - ***See Also***
     - ***C# 3.0 - var keyword***
 ‌
-
 ### 2. const 보다는 readonly 가 좋다.
 ---
 - readonly는 유연하다.
 - 상수 값이 업데이트 되면 참조하는 모든 코드는 반드시 재컴파일 해야한다. 하지만 readonly는 그럴 필요가 없다.
 - 성능이 중요하고, 값이 절대 바뀌지 않는 경우가 아니라면…
 ‌
-
 ### 3. 캐스트보다는 is, as가 좋다.
 ---
 - as는 런타임에 더 효율적이고 안전하게 동작한다.
@@ -21,7 +19,6 @@
 - ***See Also***
     - ***C# 7.0 - is pattern matching***
 ‌
-
 ### 4. string.Format()을 보간 문자열로 대체하라.
 ---
 - 코드 가독성이 대폭 향상된다.
@@ -51,7 +48,6 @@ Console.WriteLine($"The value of PI is {Math.PI.ToString()}");
     - ***C# 6.0 - string interpolation***
     - ***C# 11 - Allow new-lines in all interpolations***
 
-
 ### 5. 문화권 별로 다른 문자열을 생성하려면 FormattableString을 사용하라.
 ---
 - 문자열 보간을 사용하여 문자열을 만들면 반환값이 문자열일수도, FormattableString을 상속한 타입일 수도 있다.
@@ -78,8 +74,7 @@ class Program
 // 출력결과
 // 3.141592653589793
 // 3,141592653589793
-‌```
-
+```
 
 ### 6. nameof() 연산자를 적극 활용하라.
 ---
@@ -88,7 +83,6 @@ class Program
 - ***See Also***
     - ***C# 6.0 - nameof operator***
 ‌
-
 ### 7. 델리게이트를 이용하여 콜백을 표현하라.
 --- 
 - 타입 안정적이고 인터페이스 콜백 보다 효율적이다.
@@ -99,6 +93,7 @@ class Program
     - ***C# 3.0 - Action & Func***
 ‌
 ### 8. 이벤트 호출 시에는 null 조건 연산자를 사용하라.
+---    
 - 멀티 쓰레드 환경에서 효율적인 코드를 만들어 낸다.
 ```
 public void RaiseUpdates()
@@ -157,4 +152,3 @@ Console.WriteLine($"A few numbers:{firstNumber.ToString()}, {secondNumber.ToStri
 ---
 - 베이스 클래스의 메서드와 하위 클래스에서 재정의한 메서드가 완전히 다른 내용을 구현했다 하더라도 이를 사용하는 대부분의 개발자는 두 메서드가 완전히 동일한 작업을 수행할 것으로 기대한다.
 - 베이스 클래스가 업그레이드되어 메서드의 이름이 충돌하는 경우는 매우 특별한 경우라서 new 한정자를 검토해볼 수 있다. 그 외의 경우라면 절대로 new 한정자를 사용하지 말자.
-

@@ -14,55 +14,55 @@
 - 하지만, Finalizer를 포함하고 있는 객체는 Finalizer를 호출하기 위해 종료 큐에 임시 저장되어 바로 가비지 컬렉트 되지 않는다.
 - 또한 언제 Finalize 될지 알 수도 없다. 그래서…
 - 비관리 리소스를 안전하게 해제하는 좋은 방법.
-```
-using System.Threading;
-using System.Diagnostics;
-using System.Runtime.InteropServices;
- 
-class UnmanagedMemoryManager : IDisposable
-{
-    private IntPtr buffer;
-    private bool disposed;
-    protected virtual void OnDispose(bool disposing)
+    ```
+    using System.Threading;
+    using System.Diagnostics;
+    using System.Runtime.InteropServices;
+    
+    class UnmanagedMemoryManager : IDisposable
     {
-        if (false == disposed)
+        private IntPtr buffer;
+        private bool disposed;
+        protected virtual void OnDispose(bool disposing)
         {
-            Marshal.FreeCoTaskMem(buffer);
-            disposed = true;
-        }
- 
-        if (true == disposing)
-        {
-            // 종료 큐에서 자신을 제거해 GC의 부담을 줄인다.
-            GC.SuppressFinalize(this);
-        }
-    }
-    public void Dispose()
-    {
-        OnDispose(true);
-    }
-    public UnmanagedMemoryManager()
-    {
-        buffer = Marshal.AllocCoTaskMem(4096 * 1024);
-    }
-    ~UnmanagedMemoryManager()
-    {
-        OnDispose(false);
-    }
-    public static void Main()
-    {
-        while (true)
-        {
-            // 메모리 해제 확인
-            using (var m = new UnmanagedMemoryManager())
+            if (false == disposed)
             {
-                Thread.Sleep(1000);
+                Marshal.FreeCoTaskMem(buffer);
+                disposed = true;
             }
-            Console.WriteLine(Process.GetCurrentProcess().PrivateMemorySize64);
+    
+            if (true == disposing)
+            {
+                // 종료 큐에서 자신을 제거해 GC의 부담을 줄인다.
+                GC.SuppressFinalize(this);
+            }
+        }
+        public void Dispose()
+        {
+            OnDispose(true);
+        }
+        public UnmanagedMemoryManager()
+        {
+            buffer = Marshal.AllocCoTaskMem(4096 * 1024);
+        }
+        ~UnmanagedMemoryManager()
+        {
+            OnDispose(false);
+        }
+        public static void Main()
+        {
+            while (true)
+            {
+                // 메모리 해제 확인
+                using (var m = new UnmanagedMemoryManager())
+                {
+                    Thread.Sleep(1000);
+                }
+                Console.WriteLine(Process.GetCurrentProcess().PrivateMemorySize64);
+            }
         }
     }
-}
-```
+    ```
 - ***See Also***
     - ***C# 1.0 - heap & stack***
 ‌
@@ -102,25 +102,25 @@ class UnmanagedMemoryManager : IDisposable
     - 베이스 생성자 호출 코드가 반복적으로 확장 되는 것도 막아준다.
     - readonly, init 등의 immutable 변수도 초기화 가능하다.
 - 예제 코드
-```
-public class MyClass
-{
-    private List<int> collection;
-    private readonly string name;
- 
-    public MyClass() :
-        this(0, string.Empty)
+    ```
+    public class MyClass
     {
+        private List<int> collection;
+        private readonly string name;
+    
+        public MyClass() :
+            this(0, string.Empty)
+        {
+        }
+        public MyClass(int initalCount = 0, string name = "")
+        {
+            collection = (initalCount > 0) ?
+                new List<int>(initalCount) :
+                new List<int>();
+            this.name = name;
+        }
     }
-    public MyClass(int initalCount = 0, string name = "")
-    {
-        collection = (initalCount > 0) ?
-            new List<int>(initalCount) :
-            new List<int>();
-        this.name = name;
-    }
-}
-```
+    ```
 
 
 　
@@ -129,18 +129,18 @@ public class MyClass
 ---
 - 자주 생성되는 객체의 경우 클래스 멤버로 관리하거나…
 - 아래처럼 캐싱 기법을 사용하자.
-```
-private static Brush blackBrush;
-public static Brush Black
-{
-    get
+    ```
+    private static Brush blackBrush;
+    public static Brush Black
     {
-        if (blackBrush == null)
-            blackBrush = new SolidBrush(Color.Black);
-        return blackBrush;
+        get
+        {
+            if (blackBrush == null)
+                blackBrush = new SolidBrush(Color.Black);
+            return blackBrush;
+        }
     }
-}
-```
+    ```
 
 
 　
@@ -149,35 +149,35 @@ public static Brush Black
 ---
 - 객체가 완전히 생성되기전 가상 함수를 호출하면 이상동작(?)이 발생한다.
 - 아래 코드는 어떤 문자열을 출력할까?
-```
-class B
-{
-    protected B()
+    ```
+    class B
     {
-        VFunc();
+        protected B()
+        {
+            VFunc();
+        }
+        protected virtual void VFunc()
+        {
+            Console.WriteLine("VFunc in B");
+        }
     }
-    protected virtual void VFunc()
+    class Derived : B
     {
-        Console.WriteLine("VFunc in B");
+        private readonly string msg = "Set by initializer";
+        public Derived(string msg)
+        {
+            this.msg = msg;
+        }
+        protected override void VFunc()
+        {
+            Console.WriteLine(msg);
+        }
+        public static void Main()
+        {
+            var derived = new Derived("Constructed in main");
+        }
     }
-}
-class Derived : B
-{
-    private readonly string msg = "Set by initializer";
-    public Derived(string msg)
-    {
-        this.msg = msg;
-    }
-    protected override void VFunc()
-    {
-        Console.WriteLine(msg);
-    }
-    public static void Main()
-    {
-        var derived = new Derived("Constructed in main");
-    }
-}
-```
+    ```
 
 
 　
@@ -187,55 +187,55 @@ class Derived : B
 - 반대로 비관리 리소스가 없을 경우, finalizer를 절대로 추가하지 마라.
 - Dispose 메서드 내에서는 리소스 정리작업만 수행하라.
 - 비관리 리소스를 안전하게 해제하는 좋은 방법.
-```
-using System.Threading;
-using System.Diagnostics;
-using System.Runtime.InteropServices;
- 
-class UnmanagedMemoryManager : IDisposable
-{
-    private IntPtr buffer;
-    private bool disposed;
-    protected virtual void OnDispose(bool disposing)
+    ```
+    using System.Threading;
+    using System.Diagnostics;
+    using System.Runtime.InteropServices;
+    
+    class UnmanagedMemoryManager : IDisposable
     {
-        if (false == disposed)
+        private IntPtr buffer;
+        private bool disposed;
+        protected virtual void OnDispose(bool disposing)
         {
-            Marshal.FreeCoTaskMem(buffer);
-            disposed = true;
-        }
- 
-        if (true == disposing)
-        {
-            // 종료 큐에서 자신을 제거해 GC의 부담을 줄인다.
-            GC.SuppressFinalize(this);
-        }
-    }
-    public void Dispose()
-    {
-        OnDispose(true);
-    }
-    public UnmanagedMemoryManager()
-    {
-        buffer = Marshal.AllocCoTaskMem(4096 * 1024);
-    }
-    ~UnmanagedMemoryManager()
-    {
-        OnDispose(false);
-    }
-    public static void Main()
-    {
-        while (true)
-        {
-            // 메모리 해제 확인
-            using (var m = new UnmanagedMemoryManager())
+            if (false == disposed)
             {
-                Thread.Sleep(1000);
+                Marshal.FreeCoTaskMem(buffer);
+                disposed = true;
             }
-            Console.WriteLine(Process.GetCurrentProcess().PrivateMemorySize64);
+    
+            if (true == disposing)
+            {
+                // 종료 큐에서 자신을 제거해 GC의 부담을 줄인다.
+                GC.SuppressFinalize(this);
+            }
+        }
+        public void Dispose()
+        {
+            OnDispose(true);
+        }
+        public UnmanagedMemoryManager()
+        {
+            buffer = Marshal.AllocCoTaskMem(4096 * 1024);
+        }
+        ~UnmanagedMemoryManager()
+        {
+            OnDispose(false);
+        }
+        public static void Main()
+        {
+            while (true)
+            {
+                // 메모리 해제 확인
+                using (var m = new UnmanagedMemoryManager())
+                {
+                    Thread.Sleep(1000);
+                }
+                Console.WriteLine(Process.GetCurrentProcess().PrivateMemorySize64);
+            }
         }
     }
-}
-```
+    ```
 - ***See Also***
     - ***C# 1.0 - Finalizer***
 ‌
@@ -258,29 +258,29 @@ class UnmanagedMemoryManager : IDisposable
     - 가상함수 호출 오버헤드를 피할 수 있다.
 
 - 제약 조건 활용 예 - 코드가 간결하다.
-```
-public static bool AreEqual<T>(T left, T right) where T : IComparable<T> => left.CompareTo(right) == 0;
-```
+    ```
+    public static bool AreEqual<T>(T left, T right) where T : IComparable<T> => left.CompareTo(right) == 0;
+    ```
 - 제약 조건 없이 런타임으로 타입을 확인하는 경우
-```
-public static bool AreEqual<T>(T left, T right)
-{
-    if (left == null)
-        return right == null;
- 
-    if (left is IComparable<T> lval)
+    ```
+    public static bool AreEqual<T>(T left, T right)
     {
-        if (right is IComparable<T>)
-            return lval.CompareTo(right) == 0;
+        if (left == null)
+            return right == null;
+    
+        if (left is IComparable<T> lval)
+        {
+            if (right is IComparable<T>)
+                return lval.CompareTo(right) == 0;
+            else
+                throw new ArgumentException("Type does not implement IComparable<T>", nameof(right));
+        }
         else
-            throw new ArgumentException("Type does not implement IComparable<T>", nameof(right));
+        {
+            throw new ArgumentException("Type does not implement IComparable<T>", nameof(left));
+        }
     }
-    else
-    {
-        throw new ArgumentException("Type does not implement IComparable<T>", nameof(left));
-    }
-}
-```
+    ```
 - 제약 조건을 최소화하는 방법
     - 제네릭 타입 내에서 반드시 필요한 기능만 제약 조건으로 설정하기
     - 런타임에 특정 인터페이스나 특정 베이스 클래스를 상속한 타입인지 확인 후 사용하기.
@@ -301,55 +301,55 @@ public static bool AreEqual<T>(T left, T right)
 - 제네릭을 활용하면 코드를 덜 작성해도 되기 때문에 매우 유용하지만 타입이나 메서드를 제네릭화하면 구체적인 타입이 주는 장점을 잃고 타입의 세부적인 특징을 고려한 최적화한 알고리즘도 사용할 수 없다.
 - 그래서 만약 어떤 알고리즘이 특정 타입에 대해 더 효율적으로 동작한다고 생각된다면 그냥 그 타입을 이용하도록 작성하는 것도 좋다. 제약 조건을 설정하는 방법도 있지만 제약 조건이 항상 능사는 아니다.
 - ILIst<T>를 복제하는 최적화 되지 않은 코드
-```
-public sealed class ReverseEnumerable<T> : IEnumerable<T>
-{
-    private IEnumerable<T> source;
-    private IList<T> copy;
-    public ReverseEnumerable(IEnumerable<T> sequence)
+    ```
+    public sealed class ReverseEnumerable<T> : IEnumerable<T>
     {
-        source = sequence;
-    }
-    public IEnumerator<T> GetEnumerator()
-    {
-        if (null == copy)
+        private IEnumerable<T> source;
+        private IList<T> copy;
+        public ReverseEnumerable(IEnumerable<T> sequence)
         {
-            // IList<T>를 복제하는 최적화 되지 않은 코드
-            copy = source.ToList();
+            source = sequence;
         }
-        return new ReverseEnumerator(copy);
-    }
-    IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
- 
-    private class ReverseEnumerator : IEnumerator<T>
-    {
-        private int index;
-        private IList<T> collection;
-        public ReverseEnumerator(IList<T> source)
+        public IEnumerator<T> GetEnumerator()
         {
-            collection = source;
-            index = collection.Count;
+            if (null == copy)
+            {
+                // IList<T>를 복제하는 최적화 되지 않은 코드
+                copy = source.ToList();
+            }
+            return new ReverseEnumerator(copy);
         }
-        public void Dispose()
+        IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
+    
+        private class ReverseEnumerator : IEnumerator<T>
         {
+            private int index;
+            private IList<T> collection;
+            public ReverseEnumerator(IList<T> source)
+            {
+                collection = source;
+                index = collection.Count;
+            }
+            public void Dispose()
+            {
+            }
+            public T Current => collection[index];
+            object IEnumerator.Current => this.Current;
+            public bool MoveNext() => --index >= 0;
+            public void Reset() => index = collection.Count;
         }
-        public T Current => collection[index];
-        object IEnumerator.Current => this.Current;
-        public bool MoveNext() => --index >= 0;
-        public void Reset() => index = collection.Count;
     }
-}
-```
+    ```
 - 타입 확인하는 효율적인 코드로 개선 (생성자 변경)
-```
-...
-    public ReverseEnumerable(IEnumerable<T> sequence)
-    {
-        source = sequence;
-        copy = sequence as IList<T>;
-    }
-...
-```
+    ```
+    ...
+        public ReverseEnumerable(IEnumerable<T> sequence)
+        {
+            source = sequence;
+            copy = sequence as IList<T>;
+        }
+    ...
+    ```
 - string, ICollection<T> 최적화
     - ...
 
@@ -363,53 +363,53 @@ public sealed class ReverseEnumerable<T> : IEnumerable<T>
 - IComparable을 구현할 때는 관계 연산자도 함께 오버 로딩해서 일관된 결과를 제공해야 한다.
 - IComparable.CompareTo()는 System.Object 타입의 매개변수를 취하므로 별도로 오버 로딩된 메서드를 제공해야 한다.
 - 별도로 IComparer를 이용하면 추가적인 선후 관계를 정의할 수 있다.
-```
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
- 
-public struct Customer : IComparable<Customer>, IComparable
-{
-    private readonly string name;
-    private double revenue;
-    public Customer(string name, double revenue)
+    ```
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    
+    public struct Customer : IComparable<Customer>, IComparable
     {
-        this.name = name;
-        this.revenue = revenue;
+        private readonly string name;
+        private double revenue;
+        public Customer(string name, double revenue)
+        {
+            this.name = name;
+            this.revenue = revenue;
+        }
+        public int CompareTo(Customer other) => name.CompareTo(other.name);
+        int IComparable.CompareTo(object obj)
+        {
+            if (obj is Customer other)
+                return this.CompareTo(other);
+            else
+                throw new ArgumentException($"Argument is not a {nameof(Customer)}", nameof(obj));
+        }
+    
+        public static bool operator <(Customer lhs, Customer rhs) => lhs.CompareTo(rhs) < 0;
+        public static bool operator <=(Customer lhs, Customer rhs) => lhs.CompareTo(rhs) <= 0;
+        public static bool operator >(Customer lhs, Customer rhs) => lhs.CompareTo(rhs) > 0;
+        public static bool operator >=(Customer lhs, Customer rhs) => lhs.CompareTo(rhs) >= 0;
+    
+        private static Lazy<RevenueComparer> revComp = new Lazy<RevenueComparer>(() => new RevenueComparer());
+        public static IComparer<Customer> RevenueCompare => revComp.Value;
+        public static Comparison<Customer> CompareByRevenue => (left, right) => left.revenue.CompareTo(right.revenue);
+    
+        private class RevenueComparer : IComparer<Customer>
+        {
+            int IComparer<Customer>.Compare(Customer lhs, Customer rhs) => lhs.revenue.CompareTo(rhs.revenue);
+        }
+    
+        static void Main()
+        {
+            Customer a = new Customer("1", 1);
+            Customer b = new Customer("2", 2);
+            int c = a.CompareTo(b);
+            int d = Customer.RevenueCompare.Compare(a, b);
+            int e = Customer.CompareByRevenue(a, b);
+            Console.WriteLine($"{c}, {d}, {e}")
+        }
     }
-    public int CompareTo(Customer other) => name.CompareTo(other.name);
-    int IComparable.CompareTo(object obj)
-    {
-        if (obj is Customer other)
-            return this.CompareTo(other);
-        else
-            throw new ArgumentException($"Argument is not a {nameof(Customer)}", nameof(obj));
-    }
- 
-    public static bool operator <(Customer lhs, Customer rhs) => lhs.CompareTo(rhs) < 0;
-    public static bool operator <=(Customer lhs, Customer rhs) => lhs.CompareTo(rhs) <= 0;
-    public static bool operator >(Customer lhs, Customer rhs) => lhs.CompareTo(rhs) > 0;
-    public static bool operator >=(Customer lhs, Customer rhs) => lhs.CompareTo(rhs) >= 0;
- 
-    private static Lazy<RevenueComparer> revComp = new Lazy<RevenueComparer>(() => new RevenueComparer());
-    public static IComparer<Customer> RevenueCompare => revComp.Value;
-    public static Comparison<Customer> CompareByRevenue => (left, right) => left.revenue.CompareTo(right.revenue);
- 
-    private class RevenueComparer : IComparer<Customer>
-    {
-        int IComparer<Customer>.Compare(Customer lhs, Customer rhs) => lhs.revenue.CompareTo(rhs.revenue);
-    }
- 
-    static void Main()
-    {
-        Customer a = new Customer("1", 1);
-        Customer b = new Customer("2", 2);
-        int c = a.CompareTo(b);
-        int d = Customer.RevenueCompare.Compare(a, b);
-        int e = Customer.CompareByRevenue(a, b);
-        Console.WriteLine($"{c}, {d}, {e}")
-    }
-}
-```
+    ```

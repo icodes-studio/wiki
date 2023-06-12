@@ -33,26 +33,26 @@
 - 코드 가독성이 대폭 향상된다.
 - 정적 타입 검사를 수행하기 때문에 개발자의 실수를 미연에 방지한다.
 - 문자열을 생성하기 위한 표현식이 더 풍성하다.
-```
-// 앞에 $를 붙이고 표현식을 {}안에 둔다.
-Console.WriteLine($"The value of pi is {Math.PI}");
- 
-// 원하는 포매팅을 위한 추가적 인자 전달
-Console.WriteLine($"The value of pi is {Math.PI.ToString("F2")}");
- 
-// :을 이용해도 가능
-Console.WriteLine($"The value of pi is {Math.PI:F2}");
- 
-// @를 넣고 ()를 사용해 ':' 가 조건연산자임을 알려줄 수 있다..
-Console.WriteLine($@"THe value of pi is {(round ?
-    Math.PI.ToString() : Math.PI.ToString("F2"))}");
- 
-// ?. 연산자와 ?? 연산자도 사용가능!
-Console.WriteLine($"The customer's name is {c?.Name ?? "Name is missing"}");
- 
-// 전달할 인자를 사전에 문자열로 변경하면 값 타입이 박싱되는 것을 피할 수 있다.
-Console.WriteLine($"The value of PI is {Math.PI.ToString()}");
-```
+    ```
+    // 앞에 $를 붙이고 표현식을 {}안에 둔다.
+    Console.WriteLine($"The value of pi is {Math.PI}");
+    
+    // 원하는 포매팅을 위한 추가적 인자 전달
+    Console.WriteLine($"The value of pi is {Math.PI.ToString("F2")}");
+    
+    // :을 이용해도 가능
+    Console.WriteLine($"The value of pi is {Math.PI:F2}");
+    
+    // @를 넣고 ()를 사용해 ':' 가 조건연산자임을 알려줄 수 있다..
+    Console.WriteLine($@"THe value of pi is {(round ?
+        Math.PI.ToString() : Math.PI.ToString("F2"))}");
+    
+    // ?. 연산자와 ?? 연산자도 사용가능!
+    Console.WriteLine($"The customer's name is {c?.Name ?? "Name is missing"}");
+    
+    // 전달할 인자를 사전에 문자열로 변경하면 값 타입이 박싱되는 것을 피할 수 있다.
+    Console.WriteLine($"The value of PI is {Math.PI.ToString()}");
+    ```
 - ***See Also***
     - ***C# 6.0 - string interpolation***
     - ***C# 11 - Allow new-lines in all interpolations***
@@ -64,30 +64,30 @@ Console.WriteLine($"The value of PI is {Math.PI.ToString()}");
 ---
 - 문자열 보간을 사용하여 문자열을 만들면 반환값이 문자열일수도, FormattableString을 상속한 타입일 수도 있다.
 - FormattableString을 사용하면 현재 컴퓨터에 지정된 문화권을 고려하여 문자열을 생성할 수 있다.
-```
-class Program
-{
-    static void Main(string[] args)
+    ```
+    class Program
     {
-        FormattableString fs = $"{Math.PI}";
-        Console.WriteLine(fs);
-        Console.WriteLine(ToGerman(fs));
+        static void Main(string[] args)
+        {
+            FormattableString fs = $"{Math.PI}";
+            Console.WriteLine(fs);
+            Console.WriteLine(ToGerman(fs));
+        }
+    
+        public static string ToGerman(FormattableString src)
+        {
+            return string.Format(
+                CultureInfo.CreateSpecificCulture("de-de"),
+                src.Format,
+                src.GetArgument(0));
+        }
     }
- 
-    public static string ToGerman(FormattableString src)
-    {
-        return string.Format(
-            CultureInfo.CreateSpecificCulture("de-de"),
-            src.Format,
-            src.GetArgument(0));
-    }
-}
- 
-/* 출력결과
-3.141592653589793
-3,141592653589793
-*/
-```
+    
+    /* 출력결과
+    3.141592653589793
+    3,141592653589793
+    */
+    ```
 
 
 　
@@ -117,33 +117,33 @@ class Program
 ### 8. 이벤트 호출 시에는 null 조건 연산자를 사용하라.
 ---    
 - 멀티 쓰레드 환경에서 효율적인 코드를 만들어 낸다.
-```
-public void RaiseUpdates()
-{
-    counter++;
-    if(Updated != null)
+    ```
+    public void RaiseUpdates()
     {
-        // 이 타이밍에 다른 스레드에서 이벤트 핸들러 등록을 취소 할경우 NullReferenceException이 발생.
-        Updated(this, counter);
+        counter++;
+        if(Updated != null)
+        {
+            // 이 타이밍에 다른 스레드에서 이벤트 핸들러 등록을 취소 할경우 NullReferenceException이 발생.
+            Updated(this, counter);
+        }
     }
-}
- 
-// 가독성 떨어지는 방어코드 - 동작하긴 한다.
-public void RaiseUpdates()
-{
-    counter++;
-    var handler = Updated;
-    if (handler != null)
-        handler(this, counter);
-}
- 
-// 멀티스레딩 환경에도 안전한 아름다운 코드
-public void RaiseUpdates()
-{
-    counter++;
-    Updated?.Invoke(this, counter);
-}
-```
+    
+    // 가독성 떨어지는 방어코드 - 동작하긴 한다.
+    public void RaiseUpdates()
+    {
+        counter++;
+        var handler = Updated;
+        if (handler != null)
+            handler(this, counter);
+    }
+    
+    // 멀티스레딩 환경에도 안전한 아름다운 코드
+    public void RaiseUpdates()
+    {
+        counter++;
+        Updated?.Invoke(this, counter);
+    }
+    ```
 - ***See Also***
     - ***C# 1.0 - event***
     - ***C# 6.0 - null conditional operator***
@@ -157,19 +157,19 @@ public void RaiseUpdates()
 - 박싱과 언박싱은 성능에 좋지 않은 영향을 미친다.
 - 져네릭(generic) 클래스와 메서드를 사용하면 박싱과 언박싱을 피할 수 있다.
 - 컴파일러가 자동으로 reference type 변환을 하지 않도록 사용해서 피할 수 있다.
-```
-int firstNumber = 25;
-int secondNumber = 35;
-Console.WriteLine($"A few numbers:{firstNumber}, {secondNumber}");
- 
-// 위 코드의 동작방식
-int i = 25;
-object o = i; // 박싱
-Console.WriteLine(o.ToString());
- 
-// ToString() 메서드로 박싱을 피할 수 있다
-Console.WriteLine($"A few numbers:{firstNumber.ToString()}, {secondNumber.ToString()}");
-```
+    ```
+    int firstNumber = 25;
+    int secondNumber = 35;
+    Console.WriteLine($"A few numbers:{firstNumber}, {secondNumber}");
+    
+    // 위 코드의 동작방식
+    int i = 25;
+    object o = i; // 박싱
+    Console.WriteLine(o.ToString());
+    
+    // ToString() 메서드로 박싱을 피할 수 있다
+    Console.WriteLine($"A few numbers:{firstNumber.ToString()}, {secondNumber.ToString()}");
+    ```
 - ***See Also***
     - ***C# 2.0 - generic***
 

@@ -18,6 +18,7 @@ public class EngineDriverOne<T> where T : IEngine, new()
 }
 ```
 
+
 　
 
 ### 22. 공변성과 반공변성을 지원하라
@@ -52,6 +53,7 @@ Action<string> actString = actObject;
     - ***https://sticky32.tistory.com/entry/C-%EA%B3%B5%EB%B3%80%EC%84%B1%EA%B3%BC-%EB%B0%98%EA%B3%B5%EB%B3%80%EC%84%B1%EC%9D%B4%EB%9E%80***
     - ***https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/covariance-contravariance/***
 
+
 　
 
 ### 23. 타입 매개변수에 대해 메서드 제약 조건을 설정하려면 델리게이트를 활용하라
@@ -84,6 +86,7 @@ public static class Example
     public static T Minus<T>(T left, T right, Func<T, T, T> MinusFunc) => MinusFunc(left, right);
 }
 ```
+
 
 　
 
@@ -126,6 +129,7 @@ public class MyTest
 - 타입이 몇 개 없다면 차라리 런타임 중에 타입을 is로 확인하여 분기시키는 게 나을 수도 있다.
 - 특화를 할 거라면 해당 타입 뿐 아니라 이 타입을 상속한 모든 파생 타입에 대해서도 특화를 수행해야 한다.
 
+
 　
 
 ### 25. 타입 매개변수로 인스턴스 필드를 만들 필요가 없다면 제네릭 메서드를 정의하라
@@ -134,6 +138,7 @@ public class MyTest
 - 제네릭 클래스는 클래스 전체를 하나의 제약조건으로 감싸게 되지만
 - 일반 클래스 내의 제네릭 메서드는 각 메서드마다 개별적인 제약 조건을 설정할 수 있다.
 - 제네릭 클래스의 메서드 호출 시마다 매번 타입 매개변수를 명시적으로 지정해야 하는 불편함도 있다.
+
 
 　
 
@@ -180,6 +185,7 @@ public class Name : IComparable<Name>, IComparable
 - ***See Also***
     - ***C# 1.0 - interface***
 
+
 　
 
 ### 27. 인터페이스는 간략히 정의하고 기능의 확장은 확장 메서드를 사용하라
@@ -189,6 +195,7 @@ public class Name : IComparable<Name>, IComparable
 - 기존(또는 새로 만들) 구현체에 확장 기능을 넣으려고 수정할 필요가 없다.
 - 새로운 메서드를 추가하기 이전에, 이미 정의되어 있는 다른 메서드를 이용하여 구현 가능한 기능인지를 확인해보자.
 - 만약 기존 멤버를 이용하여 구현 가능한 메서드라면 확장 메서드로 구현할 수 있는 좋은 후보가 된다.
+
 
 　
 
@@ -213,6 +220,7 @@ public static void SendEmailCoupons(this IEnumerable<Customer> customers, Coupon
 }
 ```
 
+
 　
 
 ### 29. 컬렉션을 반환하기보다 이터레이터를 반환하는 것이 낫다
@@ -227,6 +235,7 @@ IEnumerable<int> allNumbers = Enumerable.Range(0, int.MaxValue);
 - ***See Also***
     - ***IEnumerable / IEnumerator***
     - ***yield return/break 사용하여 열거하기***
+
 
 　
 

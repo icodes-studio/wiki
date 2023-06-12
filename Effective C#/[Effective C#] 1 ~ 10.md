@@ -6,6 +6,7 @@
 - ***See Also***
     - ***C# 3.0 - var keyword***
 
+
 　
 
 ### 2. const 보다는 readonly 가 좋다.
@@ -13,6 +14,7 @@
 - readonly는 유연하다.
 - 상수 값이 업데이트 되면 참조하는 모든 코드는 반드시 재컴파일 해야한다. 하지만 readonly는 그럴 필요가 없다.
 - 성능이 중요하고, 값이 절대 바뀌지 않는 경우가 아니라면…
+
 
 　
 
@@ -22,6 +24,7 @@
 - 비싼 InvalidCastException 예외처리를 사용하지 않는다.
 - ***See Also***
     - ***C# 7.0 - is pattern matching***
+
 
 　
 ‌
@@ -54,6 +57,7 @@ Console.WriteLine($"The value of PI is {Math.PI.ToString()}");
     - ***C# 6.0 - string interpolation***
     - ***C# 11 - Allow new-lines in all interpolations***
 
+
 　
 
 ### 5. 문화권 별로 다른 문자열을 생성하려면 FormattableString을 사용하라.
@@ -83,6 +87,7 @@ class Program
 // 3.141592653589793
 // 3,141592653589793
 ```
+
 
 　
 
@@ -142,6 +147,7 @@ public void RaiseUpdates()
     - ***C# 1.0 - event***
     - ***C# 6.0 - null conditional operator***
 ‌
+
 　
 
 ### 9. 박싱과 언박싱을 최소화하라.
@@ -165,6 +171,7 @@ Console.WriteLine($"A few numbers:{firstNumber.ToString()}, {secondNumber.ToStri
 ```
 - ***See Also***
     - ***C# 2.0 - generic***
+
 
 　
 

@@ -84,7 +84,8 @@ var finalAnswer =
     > - 표현식 트리를 이용하여 이를 처리한다.
     > - 데이터가 실제 위치하고 있는 컴퓨터에서 수행한다.
     > - 코드로 표현할 수 있는 쿼리 표현식이 IEnumerable<T>에 비해 제한적이다.
-- IQueryable<T>는 각각의 메서드를 분석하지 않는다. 따라서 쿼리 표현식이 다른 메서드를 호출한다면 Enumerable구현체를 사용하도록 변경해야 한다.
+- IQueryable<T>는 각각의 메서드를 분석하지 않는다.
+- 따라서 쿼리 표현식이 다른 메서드를 호출한다면 Enumerable구현체를 사용하도록 변경해야 한다.
 ```
 private bool IsValidProduct(Product p) => p.ProductName.LastIndexOf('C') == 0;
  
@@ -263,7 +264,7 @@ public class ModeFilter
 }
 ```
 - 예시C (지역변수 or 메서드 매개변수에 접근하는 경우)
-    > - 지역변수를 사용하는 클로저가 필요하기 때문에, 이 경우 상당한 추가 작업을 수행한다.
+- 지역변수를 사용하는 클로저가 필요하기 때문에, 이 경우 상당한 추가 작업을 수행한다.
 ```
 // 예시C(지역변수 or 메서드 매개변수에 접근하는 경우)
 public class ModFilter

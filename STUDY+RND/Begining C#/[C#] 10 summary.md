@@ -1,0 +1,398 @@
+> ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/assets/dotnet6.png)
+> 
+> C# 10은 2021년 11월 8일에 "닷넷 6"의 발표와 함께 공개됐다. 개발 환경은 17.0 버전의 비주얼 스튜디오 2022부터 제공된다.
+
+　
+
+　
+
+### 18.1 Record structs
+---
+- 값 형식의 타입 생성을 지시하는 "record struct"가 추가됐다.
+
+
+　
+
+### 18.1.1 class 타입의 record에 ToString 메서드의 sealed 지원
+---
+- record가 자동으로 생성한 메서드 중 ToString과 GetHashCode 메서드에 한해 사용자 측에서 재정의할 수 있다.
+- C# 10부터는 상속 클래스에서의 재정의를 막는 sealed 예약어를 ToString 메서드에 적용하는 것이 가능해졌다.
+    ```
+    record Vector2D(float X, float Y)
+    {
+        // 재정의 가능 - ToString 메서드에 한해 sealed 예약어를 사용할 수 있다.
+        public sealed override string ToString()
+        {
+            return $"2D({X}, {Y})";
+        }
+    
+        // 재정의 가능
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+    
+        // 컴파일 오류 발생 - Equals 메서드는 재정의 할 수 없음
+        public override bool Equals(object obj)
+        {
+            return base.Equals(obj);
+        }
+    }
+    ```
+
+
+　
+
+### 18.2.1 Parameterless struct constructors
+---
+- struct도 class 처럼 기본 생성자를 정의하는 것이 가능해졌다. ← 아... 이거 원래 안 됐었음?
+- class의 경우 매개변수를 갖는 생성자가 정의되면 기본 생성자가 제거된다.
+- struct의 경우는 기본 생성자가 그대로 유지된다.
+    ```
+    class Program
+    {
+        public static void Main()
+        {
+            // struct에도 기본 생성자를 정의 할 수 있다.
+            var s1 = new Person1();
+            Console.WriteLine(s1.Name);
+    
+            // struct는 매개변수 생성자가 정의 되도 기본 생성자가 제거되지 않는다.
+            var s2 = new Person2();
+            Console.WriteLine(s2.Name);
+    
+            // 컴파일 에러 - class는 매개변수 생성자가 정의 되면 기본 생성자가 제거된다.
+            var c3 = new Person3();
+            Console.WriteLine(c3.Name);
+    
+            // 매개변수를 갖는 생성자를 호출하는 것도 가능하지만
+            Point pt1 = new Point(5, 6);
+            Console.WriteLine($"{pt1.X}, {pt1.Y}"); // 출력결과: 5, 6
+    
+            // 클래스와는 달리 (별도로 정의하지 않은) 기본 생성자 유형도 호출 가능
+            Point pt2 = new Point();
+            Console.WriteLine($"{pt2.X}, {pt2.Y}"); // 출력결과: 0, 0
+        }
+    
+        public struct Person1
+        {
+            string name;
+            public string Name => name;
+            public Person1() : this("John") { }
+            public Person1(string name) => this.name = name;
+        }
+    
+        public struct Person2
+        {
+            string name;
+            public string Name => name;
+            public Person2(string name) => this.name = name;
+        }
+    
+        public class Person3
+        {
+            string name;
+            public string Name => name;
+            public Person3(string name) => this.name = name;
+        }
+    
+        public struct Point
+        {
+            public int X { get; init; }
+            public int Y { get; init; }
+            public Point(int x, int y) => (X, Y) = (x, y);
+        }
+    }
+    ```
+- record struct 역시 마찬가지로 기본 생성자를 기존의 class record와 동일한 문법 체계로 지원한다.
+    ```
+    record struct Vector(int X, int Y)
+    {
+        // 기존 record (class)와 마찬가지로,
+        // C# 컴파일러가 추가한 매개변수가 있는 생성자로 this 구문을 활용해 초깃값 전달
+        public Vector() : this(-1, -1) { }
+        public Vector(int x) : this(x, -1) { }
+    }
+    ```
+
+
+　
+
+### 18.2.2 필드 초기화 지원
+---
+- 앞에서 살펴본 기본 생성자 지원은 사실 바로 이 "필드 초기화"를 위해 추가된 것이다.
+- 필드 초기화의 실제 코드는 생성자에 포함되므로,
+- 실제로 아래와 같은 식으로 구조체를 정의하면...
+    ```
+    public struct Language
+    {
+        public string Author = "John";
+        public string Name { get; private set; } = "C#";
+        public Language(string name)
+        {
+            this.Name = name;
+        }
+        public Language()
+        {
+        }
+    }
+    ```
+- C# 컴파일러는 필드 초기화 코드를 생성자에 병합하는 식으로 처리한다.
+    ```
+    public struct Language
+    {
+        public string Author;
+        public string Name { get; private set; };
+        public Language(string name)
+        {
+            // 필드 초기화 코드가 생성자에 병합
+            this.Author = "John";
+            this.Name = "C#";
+            this.Name = name;
+        }
+        public Language()
+        {
+            // 필드 초기화 코드는 구조체가 가진 모든 생성자에 병합
+            this.Author = "John";
+            this.Name = "C#";
+        }
+    }
+    ```
+- 구조체의 경우 필드 초기화를 사용하기 위해 반드시 1개 이상의 생성자를 정의해야 한다.
+- 또한, 정의한 생성자를 통해서만 필드 초기화 구문이 동작한다. 
+- 무슨 말이냐면...
+    ```
+    TestStruct t1 = new TestStruct();
+    Console.WriteLine($"{t1.i}, {t1.s}"); // 출력: 0,
+    TestStruct t2 = new TestStruct(1);
+    Console.WriteLine($"{t2.i}, {t2.s}"); // 출력: 1, test
+    
+    struct TestStruct
+    {
+        public int i = 10;
+        public string s = "test";
+        public TestStruct(int i) { this.i = i; }
+    }
+    ```
+- 혼란 스럽지만... 직접 이 기능을 쓰라고 만든 건 아닌 거 같다. 그저 record struct를 위한 사전 작업에 해당하는 것으로 보인다.
+    ```
+    Student student1 = new Student();
+    Console.WriteLine(student1); // 출력: Student { Name = John, Id = 20 }
+    Student student2 = new Student(1);
+    Console.WriteLine(student2); // 출력: Student { Name = John, Id = 1 }
+    
+    record struct Student()
+    {
+        // 기본 생성자와 필드 초기화를 추가했기 때문에 가능한 record struct
+        public string Name { get; init; } = "John";
+        public int Id { get; init; } = 20;
+        public Student(int id) : this() => this.Id = id;
+    
+        // 컴파일 에러 CS8862 - 레코드에서의 매개변수 있는 생성자는 항상 this()를 호출해야 한다.
+        public Student(int id) => this.Id = id;
+    }
+    ```
+
+
+　
+
+### 18.3.1 Global Using Directive
+---
+- 프로젝트에 포함되는 하나의 소스 코드 파일에 "global" 예약어를 이용한 네임스페이스 선언을 포함하면 전역 네임스페이스 선언이 된다.
+    ```
+    global using System;
+    global using System.Linq;
+    ```
+
+
+　
+
+### 18.3.2 File Scoped Namespaces
+---
+- AS-IS
+    ```
+    using System;
+    namespace ConsoleApplication
+    {
+        public static class Program
+        {
+            public static void Main()
+            {
+            }
+        }
+    }
+    ```
+- TO-BE (영역이 생략 되었으므로 네임 스페이스의 범위는 제목 그대로 File Scoped)
+    ```
+    using System;
+    namespace ConsoleApplication;
+    public static class Program
+    {
+        public static void Main()
+        {
+        }
+    }
+    ```
+
+
+　
+
+### 18.4 Constant Interpolated Strings
+---
+- 보간식에 사용한 코드가 오직 상수 문자열인 경우라면 보간된 문자열을 상수 문자열로 처리할 수 있다.
+    ```
+    namespace ConsoleApp;
+    
+    [DebuggerDisplay($"class {nameof(ConsoleApp)}.{nameof(Program)}")]
+    internal class Program
+    {
+        const string Author = "Anders";
+        const string text = $"C#: {Author}";
+        const float PI = 3.14f;
+    
+        // 컴파일 오류 - 내부적으로 PI.ToString()을 호출하기 때문에 컴파일 타임에 결정지을 수 없다.
+        // 오직 상수 문자열인 경우만 지원한다.
+        const string output = $"nameof{PI} == {PI}";
+    }
+    ```
+
+
+　
+
+### 18.5 Extended property patterns
+---
+- 타입이 중첩된 경우 내부 인스턴스가 가진 필드에 대한 패턴 매칭을 쩜(.)을 통해 접근해서 간편하게 수행한다.
+    ```
+    Name n1 = new Name("Anders", "Hejlsberg");
+    Name n2 = new Name("Kevin", "Arnold");
+    Person p1 = new(n1, 60);
+    Person p2 = new(n2, 15);
+    Person[] people = new Person[] { p1, p2 };
+    
+    foreach (var person in people)
+    {
+        // if (person is { Name: { LastName: "Arnold" } } arnold) // 기존 방식
+        if (person is { Name.LastName: "Arnold" } arnold) // 새로운 방식
+            Console.WriteLine(arnold);
+    }
+    
+    record class Name(string FirstName, string LastName);
+    record class Person(Name Name, int Age);
+    ```
+
+
+　
+
+### 18.6.1 Lambda improvements - 특성 허용
+---
+- 람다 식 자체와 매개변수, 반환 값 모두에 특성을 추가할 수 있게 됐다.
+- 특성을 사용하는 경우 매개변수가 하나라도 반드시 괄호를 함께 지정해야 한다.
+    ```
+    var list = new List<string> { "Anders", "Kevin" };
+    
+    // 람다 식에 특성 허용
+    list.ForEach([MyMethod()] (elem) => Console.WriteLine(elem));
+    
+    // 리턴 값에도 특성 허용
+    Func<int> f1 = [return: MyReturn] () => 1;
+    
+    // 매개변수에도 특성 허용
+    Action<string> action = static ([MyParameter] elem) => Console.WriteLine(elem);
+    
+    // 괄호 없이 특성을 지정하면 컴파일 오류 발생
+    list.ForEach([MyMethod()] elem => Console.WriteLine(elem);)
+    
+    [AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
+    public class MyMethodAttribute : Attribute
+    {
+    }
+    
+    [AttributeUsage(AttributeTargets.ReturnValue, AllowMultiple = true)]
+    public class MyReturnAttribute : Attribute
+    {
+    }
+    
+    [AttributeUsage(AttributeTargets.Parameter, AllowMultiple = true)]
+    public class MyParameterAttribute : Attribute
+    {
+    }
+    ```
+
+
+　
+
+### 18.6.2 Lambda improvements - 반환 타입 지정 + 람다 식의 var 추론
+---
+- 람다 식의 반환값을 명시적으로 지정할 수 있다.
+- 이 경우 매개변수가 하나라도 반드시 괄호를 함께 지정해야 한다.
+    ```
+    // 반환 타입을 명시적으로 short로 지정, 매개변수가 하나라도 x를 괄호에 포함
+    Func<int, short> f1 = short (x) => 1;
+    
+    // ref 반환도 지정 가능
+    MethodRefDelegate f2 = ref int (ref int x) => ref x;
+    public delegate ref int MethodRefDelegate(ref int arg);
+    
+    public class MyType<T>
+    {
+        public void Print()
+        {
+            Func<T?> f = T? () => default;
+            Console.WriteLine($"T Result: {f()}");
+        }
+    }
+    ```
+- 사실 위 경우처럼 반환 타입을 지정하는 것은 의미 없다. 컴파일러가 이미 잘 알아서 타입추론 해주고 있었다.
+- 반환 타입 지정이 의미 있는 경우는 람다식을 var로 정의한 변수에 타입 추론하여 지정하는 경우이다.
+    ```
+    // 매개변수의 타입을 지정했으므로 var 추론 가능
+    // -> Action<int> f1 = (int x) => { };
+    var f1 = (int x) => { }
+    
+    // 반환 타입 명시
+    // -> Func<int> f2 = int () => default;
+    var f2 = int () => default;
+    
+    // 반환 및 매개변수 타입 명시
+    // -> Func<int, int> f3 = int (int x) => x;
+    var f3 = int (int x) => x;
+    ```
+
+
+　
+
+### 18.7 Caller Argument Expression
+---
+- 메서드 매개변수에 전달한 식을 문자열로 전달해 달라고 특성을 통해 지시하는 것.
+    ```
+    MyDebug.Assert(args.Length >= 1);
+    
+    public static class MyDebug
+    {
+        public static void Assert(bool condition, [CallerArgumentExpression("condition")] string message = null)
+        {
+            if (condition == false)
+                Console.WriteLine("Assert failed: " + message);
+        }
+    }
+    
+    /* 출력결과
+    Assert failed: args.Length >= 1
+    */
+    ```
+
+- ***See Also***
+    - ***C# 5.0 - caller information***
+    - ***C# 11 - support for method parameter names in nameof()***
+
+
+　
+
+### 18.8 기타 개선 사항
+---
+- *18.8.1 Improved Definite Assignment Analysis*
+- *18.8.2 Improved Interpolated Strings*
+- *18.8.3 Mix Declarations and Variables in Deconstruction*
+- *18.8.4 AsyncMethodBuilder*
+- *18.8.5 Source Generator V2 API*
+- *18.8.6 Enhanced #line directives*

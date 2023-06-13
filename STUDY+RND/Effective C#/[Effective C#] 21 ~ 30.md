@@ -47,7 +47,7 @@
     Action<string> actString = actObject;
     ```
 - ***See Also***
-    - ***C# 9.0 - covariant return types***
+    - [***C# 9.0 - covariant return types***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2009.0%20summary.md#179-covariant-return-types)
     - ***https://youtu.be/v5op4r6AojI***
     - ***https://ibocon.tistory.com/91***
     - ***https://sticky32.tistory.com/entry/C-%EA%B3%B5%EB%B3%80%EC%84%B1%EA%B3%BC-%EB%B0%98%EA%B3%B5%EB%B3%80%EC%84%B1%EC%9D%B4%EB%9E%80***
@@ -183,7 +183,7 @@
 - 논제네릭을 명시적으로 구현한다면 암시적으로 구현된 제네릭 메서드가 우선적으로 선택되기 때문에 실수로 논제네릭을 사용하는 일을 방지할 수 있다.
 - 참고: 명시적으로 구현된 인터페이스 메서드는 해당 인터페이스의 참조를 통해서만 호출할 수 있다.
 - ***See Also***
-    - ***C# 1.0 - interface***
+    - [***C# 1.0 - interface***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2001.0%20summary.md#4514-interface)
 
 
 　
@@ -233,8 +233,8 @@
 - 호출 측에서는 이터레이터 메서드의 결과 값을 추가적인 컬렉션에 저장하지 않는 이상 방대한 결과치를 저장하기 위한 공간이 필요없다.
 - '필요할 때 생성' 이라는 전략은 이터레이터 메서드를 작성할 때 가장 중요한 전략 중 하나이다.
 - ***See Also***
-    - ***IEnumerable / IEnumerator***
-    - ***yield return/break 사용하여 열거하기***
+    - [***IEnumerable / IEnumerator***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2001.0%20summary.md#4514-interface)
+    - [***yield return/break 사용하여 열거하기***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2002.0%20summary.md#74-yield-returnbreak)
 
 
 　
@@ -272,4 +272,4 @@
     }
     ```
 - ***See Also***
-    - ***C# 3.0 - LINQ(Language INtegrated Query)***
+    - [***C# 3.0 - LINQ(Language INtegrated Query)***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2003.0%20summary.md#89-linqlanguage-integrated-query)

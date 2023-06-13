@@ -229,9 +229,9 @@
     }
     ```
 - ***See Also***
-    - ***C# 1.0 - IEnumerable***
-    - ***C# 2.0 - yield return/break***
-    - ***C# 3.0 - standard query operators***
+    - [***C# 1.0 - IEnumerable***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2001.0%20summary.md#4514-interface)
+    - [***C# 2.0 - yield return/break***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2002.0%20summary.md#74-yield-returnbreak)
+    - [***C# 3.0 - standard query operators***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2003.0%20summary.md#892-standard-query-operators)
 
 
 　
@@ -270,7 +270,7 @@
     }
     ```
 - ***See Also***
-    - ***C# 3.0 - Action & Func***
+    - [***C# 3.0 - Action & Func***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2003.0%20summary.md#8811-action--func)
 
 
 　
@@ -417,8 +417,8 @@
     }
     ```
 - ***See Also***
-    - ***27. 인터페이스는 간략히 정의하고 기능의 확장은 확장 메서드를 사용하라***
-    - ***28. 확장 메서드를 이용하여 구체화된 제네릭 타입을 개선하라***
+    - [***27. 인터페이스는 간략히 정의하고 기능의 확장은 확장 메서드를 사용하라***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Effective%20C%23/%5BEffective%20C%23%5D%2021%20~%2030.md#27-%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4%EB%8A%94-%EA%B0%84%EB%9E%B5%ED%9E%88-%EC%A0%95%EC%9D%98%ED%95%98%EA%B3%A0-%EA%B8%B0%EB%8A%A5%EC%9D%98-%ED%99%95%EC%9E%A5%EC%9D%80-%ED%99%95%EC%9E%A5-%EB%A9%94%EC%84%9C%EB%93%9C%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC)
+    - [***28. 확장 메서드를 이용하여 구체화된 제네릭 타입을 개선하라***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Effective%20C%23/%5BEffective%20C%23%5D%2021%20~%2030.md#28-%ED%99%95%EC%9E%A5-%EB%A9%94%EC%84%9C%EB%93%9C%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-%EA%B5%AC%EC%B2%B4%ED%99%94%EB%90%9C-%EC%A0%9C%EB%84%A4%EB%A6%AD-%ED%83%80%EC%9E%85%EC%9D%84-%EA%B0%9C%EC%84%A0%ED%95%98%EB%9D%BC)
 
 
 　
@@ -511,8 +511,8 @@
                 (number, label) => new { number, label }); // result
     ```
 - ***See Also***
-    - ***C# 3.0 - LINQ(Language INtegrated Query)***
-    - ***C# 3.0 - SelectMany***
+    - [***C# 3.0 - LINQ(Language INtegrated Query)***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2003.0%20summary.md#89-linqlanguage-integrated-query)
+    - [***C# 3.0 - SelectMany***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2003.0%20summary.md#8921-selectmany)
 
 
 　
@@ -607,7 +607,7 @@
                             select p;
     ```
 - ***See Also***
-    - ***C# 3.0 - standard query operators***
+    - [***C# 3.0 - standard query operators***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2003.0%20summary.md#892-standard-query-operators)
 
 
 　

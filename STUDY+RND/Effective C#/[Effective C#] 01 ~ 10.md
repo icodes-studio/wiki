@@ -4,7 +4,7 @@
 - 내장 숫자 타입은 그냥 쓰자. 형 변환으로 인한 정밀도 손실 문제를 가져올 수 있다.
 - 타입을 애매하게 만들거나 가독성이 떨어지면 쓰지 말자.
 - ***See Also***
-    - [***C# 3.0 - var keyword***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2003.0%20summary.md#81-var-keyword)
+    - [***C# 3.0. var keyword***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2003.0%20summary.md#81-var-keyword)
 
 
 　
@@ -23,7 +23,7 @@
 - as는 런타임에 더 효율적이고 안전하게 동작한다.
 - 비싼 InvalidCastException 예외처리를 사용하지 않는다.
 - ***See Also***
-    - [***C# 7.0 - is pattern matching***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2007.0%20summary.md#12101-is---pattern-matching)
+    - [***C# 7.0. is pattern matching***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2007.0%20summary.md#12101-is---pattern-matching)
 
 
 　
@@ -54,8 +54,8 @@
     Console.WriteLine($"The value of PI is {Math.PI.ToString()}");
     ```
 - ***See Also***
-    - [***C# 6.0 - string interpolation***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2006.0%20summary.md#115-string-interpolation)
-    - [***C# 11 - Allow new-lines in all interpolations***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2011.0%20summary.md#192-allow-new-lines-in-all-interpolations)
+    - [***C# 6.0. String interpolation***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2006.0%20summary.md#115-string-interpolation)
+    - [***C# 11. Allow new-lines in all interpolations***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2011.0%20summary.md#192-allow-new-lines-in-all-interpolations)
 
 
 　
@@ -97,7 +97,7 @@
 - 로컬 심볼 이름을 문자열로 반환하는 역할을 수행한다.
 - 심볼의 이름을 바꾸거나 수정할때 실수를 줄일 수 있다.
 - ***See Also***
-    - [***C# 6.0 - nameof operator***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2006.0%20summary.md#116-nameof-operator)
+    - [***C# 6.0. nameof operator***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2006.0%20summary.md#116-nameof-operator)
 ‌
 
 　
@@ -108,8 +108,8 @@
 - 자주 사용되는 델리게이트 정의 : Predicate\<T\>, Acton\<T\>, Func\<T\>
 - 멀티 캐스트가 가능하다.
 - ***See Also:***
-    - [***C# 1.0 - delegate***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2001.0%20summary.md#4513-delegate)
-    - [***C# 3.0 - Action & Func***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2003.0%20summary.md#8811-action--func)
+    - [***C# 1.0. delegate***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2001.0%20summary.md#4513-delegate)
+    - [***C# 3.0. Action & Func***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2003.0%20summary.md#8811-action--func)
 ‌
 
 　
@@ -145,8 +145,8 @@
     }
     ```
 - ***See Also***
-    - [***C# 1.0 - event***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2001.0%20summary.md#4523-event)
-    - [***C# 6.0 - null conditional operator***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2006.0%20summary.md#114-null-conditional-operator)
+    - [***C# 1.0. Event***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2001.0%20summary.md#4523-event)
+    - [***C# 6.0. null conditional operator***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2006.0%20summary.md#114-null-conditional-operator)
 ‌
 
 　
@@ -171,7 +171,7 @@
     Console.WriteLine($"A few numbers:{firstNumber.ToString()}, {secondNumber.ToString()}");
     ```
 - ***See Also***
-    - [***C# 2.0 - generic***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2002.0%20summary.md#71-generic)
+    - [***C# 2.0. Generic***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2002.0%20summary.md#71-generic)
 
 
 　

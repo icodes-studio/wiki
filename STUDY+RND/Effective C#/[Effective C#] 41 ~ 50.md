@@ -455,7 +455,6 @@
     > - 또한 델리게이트의 대상이되는 메서드도 예외를 발생시키면 안된다.
 - 실무 활용 예
     ```
-    // GRC LoadDB 코드 발췌
     public static bool LoadDB(bool major = false, bool minor = false)
     {
         Log.Message($"SERVERINFO UPDATE START > (major:{major}, minor:{minor})");

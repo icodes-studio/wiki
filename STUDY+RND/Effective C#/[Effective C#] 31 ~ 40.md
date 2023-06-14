@@ -229,9 +229,9 @@
     }
     ```
 - ***See Also***
-    - [***C# 1.0 - IEnumerable***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2001.0%20summary.md#4514-interface)
-    - [***C# 2.0 - yield return/break***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2002.0%20summary.md#74-yield-returnbreak)
-    - [***C# 3.0 - standard query operators***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2003.0%20summary.md#892-standard-query-operators)
+    - [***C# 1.0. IEnumerable***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2001.0%20summary.md#4514-interface)
+    - [***C# 2.0. yield return/break***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2002.0%20summary.md#74-yield-returnbreak)
+    - [***C# 3.0. standard query operators***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2003.0%20summary.md#892-standard-query-operators)
 
 
 　
@@ -270,7 +270,7 @@
     }
     ```
 - ***See Also***
-    - [***C# 3.0 - Action & Func***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2003.0%20summary.md#8811-action--func)
+    - [***C# 3.0. Action & Func***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2003.0%20summary.md#8811-action--func)
 
 
 　
@@ -511,8 +511,8 @@
                 (number, label) => new { number, label }); // result
     ```
 - ***See Also***
-    - [***C# 3.0 - LINQ(Language INtegrated Query)***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2003.0%20summary.md#89-linqlanguage-integrated-query)
-    - [***C# 3.0 - SelectMany***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2003.0%20summary.md#8921-selectmany)
+    - [***C# 3.0. LINQ(Language INtegrated Query)***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2003.0%20summary.md#89-linqlanguage-integrated-query)
+    - [***C# 3.0. SelectMany***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2003.0%20summary.md#8921-selectmany)
 
 
 　
@@ -607,7 +607,7 @@
                             select p;
     ```
 - ***See Also***
-    - [***C# 3.0 - standard query operators***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2003.0%20summary.md#892-standard-query-operators)
+    - [***C# 3.0. Standard query operators***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2003.0%20summary.md#892-standard-query-operators)
 
 
 　

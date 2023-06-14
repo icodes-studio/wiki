@@ -47,7 +47,7 @@
     Action<string> actString = actObject;
     ```
 - ***See Also***
-    - [***C# 9.0 - covariant return types***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2009.0%20summary.md#179-covariant-return-types)
+    - [***C# 9.0. Covariant return types***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2009.0%20summary.md#179-covariant-return-types)
     - ***https://youtu.be/v5op4r6AojI***
     - ***https://ibocon.tistory.com/91***
     - ***https://sticky32.tistory.com/entry/C-%EA%B3%B5%EB%B3%80%EC%84%B1%EA%B3%BC-%EB%B0%98%EA%B3%B5%EB%B3%80%EC%84%B1%EC%9D%B4%EB%9E%80***
@@ -183,7 +183,7 @@
 - 논제네릭을 명시적으로 구현한다면 암시적으로 구현된 제네릭 메서드가 우선적으로 선택되기 때문에 실수로 논제네릭을 사용하는 일을 방지할 수 있다.
 - 참고: 명시적으로 구현된 인터페이스 메서드는 해당 인터페이스의 참조를 통해서만 호출할 수 있다.
 - ***See Also***
-    - [***C# 1.0 - interface***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2001.0%20summary.md#4514-interface)
+    - [***C# 1.0. Interface***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2001.0%20summary.md#4514-interface)
 
 
 　
@@ -272,4 +272,4 @@
     }
     ```
 - ***See Also***
-    - [***C# 3.0 - LINQ(Language INtegrated Query)***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2003.0%20summary.md#89-linqlanguage-integrated-query)
+    - [***C# 3.0. LINQ(Language INtegrated Query)***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2003.0%20summary.md#89-linqlanguage-integrated-query)

@@ -195,6 +195,8 @@
 - 기존(또는 새로 만들) 구현체에 확장 기능을 넣으려고 수정할 필요가 없다.
 - 새로운 메서드를 추가하기 이전에, 이미 정의되어 있는 다른 메서드를 이용하여 구현 가능한 기능인지를 확인해보자.
 - 만약 기존 멤버를 이용하여 구현 가능한 메서드라면 확장 메서드로 구현할 수 있는 좋은 후보가 된다.
+- ***See Also***
+    - [***C# 3.0 Extension method***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2003.0%20summary.md#87-extension-method)
 
 
 　
@@ -219,6 +221,8 @@
         //...
     }
     ```
+- ***See Also***
+    - [***C# 3.0 Extension method***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2003.0%20summary.md#87-extension-method)
 
 
 　

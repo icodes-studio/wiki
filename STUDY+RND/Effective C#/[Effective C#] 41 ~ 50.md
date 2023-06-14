@@ -588,6 +588,8 @@
         }
     }
     ```
+- ***See Also***
+    - [***C# 6.0. Exception filters***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2006.0%20summary.md#118-exception-filters)
 
 
 　
@@ -638,3 +640,5 @@
     }
     catch ...
     ```
+- ***See Also***
+    - [***C# 6.0. Exception filters***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2006.0%20summary.md#118-exception-filters)

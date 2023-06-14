@@ -290,7 +290,7 @@
 - new 제약조건에 관하여...
     > - new 대신 default()를 사용하면 new() 제약 조건이 필요 없을 수도 있다.
     > - default() 연산자는 특정 타입의 기본 값을 가져온다. 값 타입일 경우에는 0을, 참조 타입일 경우에는 null을 가져온다.
-    > - 기본생성자 new T()를 반드시 호출해야 하는 경우가 아니면 default()를 적절히 활용하여 new() 제약 조건을 사용하지 않는 것이 좋다.
+    > - 기본생성자를 반드시 호출해야 하는 경우가 아니면 default()를 적절히 활용하여 new() 제약 조건을 사용하지 않는 것이 좋다.
 - ***See Also***
     - [***C# 2.0 - generic type constraint***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2002.0%20summary.md#711-generic-type-constraint)
 

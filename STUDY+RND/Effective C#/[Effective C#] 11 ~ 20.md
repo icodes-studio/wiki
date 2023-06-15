@@ -78,6 +78,7 @@
 - 예외 처리가 필요하다면 생성자 내에서 처리하자.
 - ***See Also***
     - [***C# 6.0. Initializers for auto-properties***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2006.0%20summary.md#111-initializers-for-auto-properties)
+    - [***C# 10. 필드 초기화 지원***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Begining%20C%23/%5BC%23%5D%2010.0%20summary.md#1822-%ED%95%84%EB%93%9C-%EC%B4%88%EA%B8%B0%ED%99%94-%EC%A7%80%EC%9B%90)
 ‌
 
 　

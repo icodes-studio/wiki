@@ -14,6 +14,7 @@
     ```
     #include <iostream>
     using namespace std;
+
     int main()
     {
         cout << "Hello World!" << endl;
@@ -26,6 +27,7 @@
     #include <iostream>
     using std::cout;
     using std::endl;
+
     int main()
     {
         cout << "Hello World!" << endl;
@@ -172,3 +174,36 @@
     - [***C++ 자료형의 크기 및 범위***](https://myblog.opendocs.co.kr/archives/1230)
     - [***부동 소수점(Floating Point)란 무엇인가?***](https://steemit.com/kr/@modolee/floating-point)
     - [***단정도(single precision), 배정도(double precision)이란?***](https://whatisthenext.tistory.com/146)
+
+
+　
+
+### 2.3 inline functions
+---
+- inline 함수는 C의 매크로 함수를 대체하는 기능을 제공한다.
+    ```
+    #include <iostream>
+    using namespace std;
+
+    // C 매크로 함수
+    //#define SQ(x) (x) * (x)
+
+    // C++ 인라인 함수
+    inline int SQ(int x)
+    {
+        return x * x;
+    }
+
+    int main()
+    {
+        cout << SQ(8) << '\n';
+        cout << SQ(9 + 5) << '\n';
+    }
+    ```
+
+
+　
+
+### 2.4 const keyword
+---
+- 

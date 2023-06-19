@@ -116,11 +116,8 @@
     |bool|true/false 값을 갖는 논리 타입|bool b = true;|
     |***auto***|***컴파일러에 의해 자동으로 타입이 결정되는 타입***|auto i = 7; // i는 자동으로 int 타입|
     |***decltype(expr)***|***expr에 의해 결정되는 타입을 따르는 타입***|int i = 7;<br>decltype(i) j = 8; // j는 i의 타입을 따르는 int 타입|
-- ***See Also***
-    - [***C++ 자료형의 크기 및 범위***](https://myblog.opendocs.co.kr/archives/1230)
-    - [***부동 소수점(Floating Point)란 무엇인가?***](https://steemit.com/kr/@modolee/floating-point)
-    - [***단정도(single precision), 배정도(double precision)이란?***](https://whatisthenext.tistory.com/146)
-- auto(C++ 11) 타입은 컴파일러에게 타입추론을 맡긴다는 의미
+
+- ***auto(C++ 11)*** 타입은 컴파일러에게 타입추론을 맡긴다는 의미
     ```
     #include <iostream>
 
@@ -144,7 +141,7 @@
         return i * 2;
     }
     ```
-- decltype(expr) 타입은 expr 표현식의 결과로 타입을 결정하라는 의미이고,
+- ***decltype(expr)*** 타입은 ***expr*** 표현식의 결과로 타입을 결정하라는 의미이고,
 - 나중에 설명할 템플릿 함수의 반환 타입을 결정하는데 유용하게 사용된다.
     ```
     int x = 3;
@@ -155,8 +152,8 @@
             return a / b;
     }
     ```
-- size_t 타입은 32비트 컴퓨터에서는 4바이트로, 64비트 컴퓨터에서는 8바이트로 설정된다.
-- 그래서 특정 타입의 메모리 크기를 반환하는 sizeof 함수의 반환 타입으로 사용된다.
+- ***size_t*** 타입은 32비트 컴퓨터에서는 4바이트로, 64비트 컴퓨터에서는 8바이트로 설정된다.
+- 그래서 특정 타입의 메모리 크기를 반환하는 ***sizeof*** 함수의 반환 타입으로 사용된다.
 - 배열을 사용하는 반복문에서 배열의 인덱스 값의 타입으로도 많이 사용한다.
     ```
     int arr[5] = { 0, 1, 2, 3, 4 };
@@ -171,3 +168,7 @@
     int d = 0b1010;         // 2진수 (C++ 14)
     int e = 100'000'000;    // 숫자 분리자 (C++ 14)
     ```
+- ***See Also***
+    - [***C++ 자료형의 크기 및 범위***](https://myblog.opendocs.co.kr/archives/1230)
+    - [***부동 소수점(Floating Point)란 무엇인가?***](https://steemit.com/kr/@modolee/floating-point)
+    - [***단정도(single precision), 배정도(double precision)이란?***](https://whatisthenext.tistory.com/146)

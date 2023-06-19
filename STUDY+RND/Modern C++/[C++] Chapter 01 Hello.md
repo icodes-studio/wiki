@@ -116,6 +116,51 @@
     |bool|true/false 값을 갖는 논리 타입|bool b = true;|
     |***auto***|***컴파일러에 의해 자동으로 타입이 결정되는 타입***|auto i = 7; // i는 자동으로 int 타입|
     |***decltype(expr)***|***expr에 의해 결정되는 타입을 따르는 타입***|int i = 7;<br>decltype(i) j = 8; // j는 i의 타입을 따르는 int 타입|
+- 기본 데이터 타입의 크기 출력
+    ```
+    #include <iostream>
+    using namespace std;
+    int main()
+    {
+        cout << "char \t\t: " << sizeof(char) << " bytes\n";
+        cout << "unsigned char \t: " << sizeof(unsigned char) << " bytes\n";
+        cout << "wchar_t \t: " << sizeof(wchar_t) << " bytes\n";
+        cout << "bool \t\t: " << sizeof(bool) << " bytes\n";
+        cout << "short \t\t: " << sizeof(short) << " bytes\n";
+        cout << "unsigned short \t: " << sizeof(unsigned short) << " bytes\n";
+        cout << "int \t\t: " << sizeof(int) << " bytes\n";
+        cout << "unsigned int \t: " << sizeof(unsigned int) << " bytes\n";
+        cout << "long  \t\t: " << sizeof(long) << " bytes\n";
+        cout << "unsigned long \t: " << sizeof(unsigned long) << " bytes\n";
+        cout << "__int8 \t\t: " << sizeof(__int8) << " bytes\n";
+        cout << "__int16 \t: " << sizeof(__int16) << " bytes\n";
+        cout << "__int32 \t: " << sizeof(__int32) << " bytes\n";
+        cout << "__int64 \t: " << sizeof(__int64) << " bytes\n";
+        cout << "float \t\t: " << sizeof(float) << " bytes\n";
+        cout << "double \t\t: " << sizeof(double) << " bytes\n";
+        cout << "long double \t: " << sizeof(long double) << " bytes\n";
+        return 0;
+    }
+    /* 출력결과
+    char            : 1 bytes
+    unsigned char   : 1 bytes
+    wchar_t         : 2 bytes
+    bool            : 1 bytes
+    short           : 2 bytes
+    unsigned short  : 2 bytes
+    int             : 4 bytes
+    unsigned int    : 4 bytes
+    long            : 4 bytes
+    unsigned long   : 4 bytes
+    __int8          : 1 bytes
+    __int16         : 2 bytes
+    __int32         : 4 bytes
+    __int64         : 8 bytes
+    float           : 4 bytes
+    double          : 8 bytes
+    long double     : 8 bytes
+    */
+    ```
 - ***See Also***
     - [***부동 소수점(Floating Point)란 무엇인가?***](https://steemit.com/kr/@modolee/floating-point)
     - [***단정도(single precision), 배정도(double precision)이란?***](https://whatisthenext.tistory.com/146)

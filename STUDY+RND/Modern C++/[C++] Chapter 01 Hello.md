@@ -114,8 +114,8 @@
     |char32_t|32 비트 문자|char32_t c = U'm';|
     |wchar_t|와이드 문자로 컴파일러에 따라 다름|wchar_t w = L'm';|
     |bool|true/false 값을 갖는 논리 타입|bool b = true;|
-    |***auto***|***컴파일러에 의해 자동으로 타입이 결정되는 타입***|auto i = 7; // i는 int 타입|
-    |***decltype(expr)***|***expr에 의해 결정되는 타입을 따르는 타입***|int i = 7;<br>decltype(i) j = 8; // j는 int 타입|
+    |***auto***|***컴파일러에 의해 자동으로 타입이 결정되는 타입***|auto i = 7; // i는 자동으로 int 타입|
+    |***decltype(expr)***|***expr에 의해 결정되는 타입을 따르는 타입***|int i = 7;<br>decltype(i) j = 8; // j는 i의 타입을 따르는 int 타입|
 - ***See Also***
     - [***부동 소수점(Floating Point)란 무엇인가?***](https://steemit.com/kr/@modolee/floating-point)
     - [***단정도(single precision), 배정도(double precision)이란?***](https://whatisthenext.tistory.com/146)

@@ -10,7 +10,7 @@
         return 0;
     }
     ```
-- Using namespace xxx
+- using namespace xxx
     ```
     #include <iostream>
     using namespace std;
@@ -96,6 +96,23 @@
 
 　
 
-### Built-in data type
+### 2.2 Built-in data type
 ---
 - 기본 데이터 타입과 사용 예
+    |데이터 타입|설명|사용 예|
+    |:---|:---|:---|
+    |int|정수, 표현 가능한 크기는 컴파일러에 따라 다름<br>보통 4바이트|int i = 7;|
+    |short (int)|2 바이트 정수|short s = 10;|
+    |long (int)|4 바이트 정수|long l = -8;|
+    |long long (int)|8 바이트 정수|long long ll = 14;|
+    |unsigned int<br>unsigned short (int)<br>unsigned long (int)<br>unsigned long long (int)|부호 없는 정수|unsigned int i = 3;<br>unsigned short s = 32;<br>unsigend long l = 2300;<br>unsigned long long ll = 130;|
+    |float|실수(부동소수점 수)|float f = 7.5f;|
+    |double|float의 배정도 정밀한 실수|double d = 7.9;|
+    |long double|double의 배정도 정밀한 실수|long double ld = 16.98L;|
+    |char|8 비트 문자|char c = 'm';|
+    |char16_t|16 비트 문자|char16_t c = u'm';|
+    |char32_t|32 비트 문자|char32_t c = U'm';|
+    |wchar_t|와이드 문자로 컴파일러에 따라 다름|wchar_t w = L'm';|
+    |bool|true/false 값을 갖는 논리 타입|bool b = true;|
+    |***auto***|***컴파일러에 의해 자동으로 타입이 결정되는 타입***|auto i = 7;|
+    |***decltype(expr)***|***expr에 의해 결정되는 타입을 따르는 타입***|int i = 7;<br>decltype(i) j = 8;|

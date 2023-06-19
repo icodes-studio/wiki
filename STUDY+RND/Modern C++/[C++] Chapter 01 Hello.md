@@ -116,51 +116,50 @@
     |bool|true/false 값을 갖는 논리 타입|bool b = true;|
     |***auto***|***컴파일러에 의해 자동으로 타입이 결정되는 타입***|auto i = 7; // i는 자동으로 int 타입|
     |***decltype(expr)***|***expr에 의해 결정되는 타입을 따르는 타입***|int i = 7;<br>decltype(i) j = 8; // j는 i의 타입을 따르는 int 타입|
-- 기본 데이터 타입의 크기 출력
-    ```
-    #include <iostream>
-    using namespace std;
-    int main()
-    {
-        cout << "char \t\t: " << sizeof(char) << " bytes\n";
-        cout << "unsigned char \t: " << sizeof(unsigned char) << " bytes\n";
-        cout << "wchar_t \t: " << sizeof(wchar_t) << " bytes\n";
-        cout << "bool \t\t: " << sizeof(bool) << " bytes\n";
-        cout << "short \t\t: " << sizeof(short) << " bytes\n";
-        cout << "unsigned short \t: " << sizeof(unsigned short) << " bytes\n";
-        cout << "int \t\t: " << sizeof(int) << " bytes\n";
-        cout << "unsigned int \t: " << sizeof(unsigned int) << " bytes\n";
-        cout << "long  \t\t: " << sizeof(long) << " bytes\n";
-        cout << "unsigned long \t: " << sizeof(unsigned long) << " bytes\n";
-        cout << "__int8 \t\t: " << sizeof(__int8) << " bytes\n";
-        cout << "__int16 \t: " << sizeof(__int16) << " bytes\n";
-        cout << "__int32 \t: " << sizeof(__int32) << " bytes\n";
-        cout << "__int64 \t: " << sizeof(__int64) << " bytes\n";
-        cout << "float \t\t: " << sizeof(float) << " bytes\n";
-        cout << "double \t\t: " << sizeof(double) << " bytes\n";
-        cout << "long double \t: " << sizeof(long double) << " bytes\n";
-        return 0;
-    }
-    /* 출력결과
-    char            : 1 bytes
-    unsigned char   : 1 bytes
-    wchar_t         : 2 bytes
-    bool            : 1 bytes
-    short           : 2 bytes
-    unsigned short  : 2 bytes
-    int             : 4 bytes
-    unsigned int    : 4 bytes
-    long            : 4 bytes
-    unsigned long   : 4 bytes
-    __int8          : 1 bytes
-    __int16         : 2 bytes
-    __int32         : 4 bytes
-    __int64         : 8 bytes
-    float           : 4 bytes
-    double          : 8 bytes
-    long double     : 8 bytes
-    */
-    ```
 - ***See Also***
+    - [***C++ 자료형의 크기 및 범위***](https://myblog.opendocs.co.kr/archives/1230)
     - [***부동 소수점(Floating Point)란 무엇인가?***](https://steemit.com/kr/@modolee/floating-point)
     - [***단정도(single precision), 배정도(double precision)이란?***](https://whatisthenext.tistory.com/146)
+- auto(C++ 11) 타입은 컴파일러에게 타입추론을 맡긴다는 의미
+    ```
+    #include <iostream>
+
+    int main()
+    {
+        auto i = 100;           // i 변수의 타입은 int
+        auto j = i;             // j 변수의 타입은 int
+        auto d = 106.9L;        // d 변수의 타입은 long double
+    }
+
+    auto divide(double a, int b) // 반환 타입은 double
+    {
+        if (b != 0)
+            return a / b;
+    }
+    ```
+- 실제 반환 타입은 -> 뒤에 명시할 수도 있다. (C++ 14)
+    ```
+    auto foo(int i) -> int
+    {
+        return i * 2;
+    }
+    ```
+- decltype(expr) 타입은 expr 표현식의 결과 타입으로 타입을 결정하라는 의미이고,
+- 템플릿 함수의 반환 타입을 결정하는데 유용하게 사용된다.
+    ```
+    int x = 3;
+    decltype(x) y = x; // auto y = x;
+    auto divide(double a, int b) -> decltype(a / b)
+    {
+        if (b != 0)
+            return a / b;
+    }
+    ```
+- size_t 타입은 32비트 컴퓨터에서는 4바이트로, 64비트 컴픁터에서는 8바이트로 설정된다.
+- 특정 타입의 메모리 크기를 반환하는 sizeof 함수의 반환 타입으로 사용된다.
+    ```
+    // 그래서 배열을 사용하는 반복문에서 배열의 인덱스 값의 타입으로도 많이 사용한다.
+    int arr[5] = { 0, 1, 2, 3, 4 };
+    for (size_t i = 0; i < 5; ++i)
+        std::cout << arr[i] << std::endl;
+    ```

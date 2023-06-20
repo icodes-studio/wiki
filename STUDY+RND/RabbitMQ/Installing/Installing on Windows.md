@@ -1,5 +1,5 @@
 # Installing on Windows
-> ![](https://www.rabbitmq.com/favicon.ico)[*Installing on Windows — RabbitMQ*](https://www.rabbitmq.com/install-windows.html)
+> ![](https://www.rabbitmq.com/favicon.ico) [*Installing on Windows — RabbitMQ*](https://www.rabbitmq.com/install-windows.html)
 
 　
 

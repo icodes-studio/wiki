@@ -415,8 +415,7 @@
     우측값 레퍼런스로 증가
     */
     ```
-- 함수를 하나만 정의해서 사용해보자.
-    > - l-value reference 함수만 사용
+- l-value reference 함수만 사용
     ```
     #include <iostream>
 
@@ -442,7 +441,7 @@
     좌측값 레퍼런스로 증가
     */
     ```
-    > - r-value reference 함수만 사용
+- r-value reference 함수만 사용
     ```
     #include <iostream>
 

@@ -1,31 +1,29 @@
-# Installing on Windows
+## Installing on Windows
 > ![](https://www.rabbitmq.com/favicon.ico) [*Installing on Windows — RabbitMQ*](https://www.rabbitmq.com/install-windows.html)
 
 　
 
 　
 
-# Overview
-이 가이드는 Windows에서 RabbitMQ 설치를 다룹니다. 여기서는 두 가지 권장 설치 옵션에 중점을 둡니다.
+## # Overview
+- 이 가이드는 Windows에서 RabbitMQ 설치를 다룹니다. 여기서는 두 가지 권장 설치 옵션에 중점을 둡니다.
+    > - Using Chocolatey
+    > - Using the official installer as an administrative user
+- 이 가이드에서는 Windows와 관련된 몇 가지 설치 후 주제도 다룹니다.
+    > - The basics of node configuration
+    > - CLI tool authentication
+    > - RabbitMQ Windows Service
+    > - Managing the node
+    > - Firewall and security tools effects
+    > - Log file location
+    > - Default user limitations
+- and more. These topics are covered in more details in [**the rest of documentation guides**](https://www.rabbitmq.com/documentation.html).
+- A separate companion guide covers known [**Windows-specific issues**](https://www.rabbitmq.com/windows-quirks.html) and ways to mitigate them.
 
-Using Chocolatey
-Using the official installer as an administrative user
-이 가이드에서는 Windows와 관련된 몇 가지 설치 후 주제도 다룹니다.
-
-The basics of node configuration
-CLI tool authentication
-RabbitMQ Windows Service
-Managing the node
-Firewall and security tools effects
-Log file location
-Default user limitations
-and more. These topics are covered in more details in the rest of documentation guides.
-
-A separate companion guide covers known Windows-specific issues and ways to mitigate them.
 
 　
 
-# Using chocolatey
+## # Using chocolatey
 RabbitMQ 패키지는 Chocolatey를 통해 배포됩니다. 새 릴리스는 승인을 받는 데 시간이 걸릴 수 있으므로(때로는 몇 주), 이 옵션이 최신 릴리스를 제공한다고 보장할 수는 없습니다만, 요구되어지는 디펜던시들을 제대로 관리합니다.
 
 Chocolatey를 사용하여 RabbitMQ를 설치하려면 커맨드라인 또는 파워쉘에서 다음 명령을 실행합니다.

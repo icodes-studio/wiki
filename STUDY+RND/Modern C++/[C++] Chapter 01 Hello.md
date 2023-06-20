@@ -371,9 +371,9 @@
     > - 메모리의 상수 영역에 임시로 생성되어 사용.
     > - 사용 후에는 바로 버려질 대상들이다.
     > - 배정 연산자의 우측에만 올 수 있다.
-- l-value reference
+- 좌측값 레퍼런스(l-value reference)
     > - l-value에 대한 reference
-- r-value reference
+- 우측값 레퍼런스(r-value reference)
     > - r-value에 대한 reference
     > - 메모리의 상수 영역이 아닌 곳에 메모리 공간을 생성하고, 생성된 공간에 이름을 붙여 줘서 일반 변수화하는 것.
     > - 동작성으로만 보면 걍 일반 변수와 같다.
@@ -415,9 +415,6 @@
     우측값 레퍼런스로 증가
     */
     ```
-    > - r-value reference는 우측값을 변수화하는 기능이다.
-    > - value 파라메터는 increment 함수 내에서 좌측값 행세를 하게 된다.
-    > - 하지만 value 변수의 값을 증가시킨 효과는 함수 종료와 함께 value 변수가 소멸되므로 나가리.
 - 함수를 하나만 정의해서 사용해보자.
     > - l-value reference 함수만 사용 (원하는 목적을 이루지 못함)
     ```

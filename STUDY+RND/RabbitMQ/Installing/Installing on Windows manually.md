@@ -127,7 +127,7 @@
     ```
     rabbitmq-service.bat install
     ```
-- **RABBITMQ_SERVICENAME**에 의해 정의된 이름을 가진 서비스가 이제 윈도우즈 서비스 제어판(Start > Run services.msc)에 나타나야 합니다.
+- **RABBITMQ_SERVICENAME**에 의해 정의된 이름을 가진 서비스가 이제 윈도우즈 서비스 제어판(Run services.msc)에 나타나야 합니다.
 
 
 　
@@ -204,7 +204,7 @@
 ## # Default User Access
 - 브로커는 password guest로 user guest를 생성합니다.
 - 구성되지 않은(Unconfigured) 클라이언트는 일반적으로 이러한 자격 증명을 사용합니다.
-- 기본적으로 이러한 자격 증명은 localhost로 브로커에 연결할 때만 사용할 수 있으므로 다른 시스템에서 연결하기 전에 조치를 취해야 합니다.
+- 이러한 자격 증명은 localhost로 브로커에 연결할 때만 사용할 수 있으므로 다른 시스템에서 연결하기 전에 조치를 취해야 합니다.
 - See the documentation on [access control](https://www.rabbitmq.com/access-control.html) for information on how to create more users and delete the guest user.
 
 

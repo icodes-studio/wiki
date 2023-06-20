@@ -13,13 +13,13 @@
     - 게시하려는 우편물을 우체통에 넣으면 편지 배달부가 결국 우편물을 받는 사람에게 배달할 것이라고 확신할 수 있다.
     - 가장 큰 차이점은 종이 대신 이진 데이터를 다룬 다는 것.
 - **전문용어**
-    - _**Producing**_
+    > - _**Producing**_
         - 메시지 보내기.
         - 메시지를 보내는 프로그램은 _Producer_
 
             ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/producer.png)
 
-    - _**A queue**_
+    > - _**A queue**_
         - RabbitMQ 내부에 있는 우편함의 이름.
         - 메시지는 큐 내부에만 저장할 수 있다.
         - 큐는 호스트의 메모리 및 디스크 크기에 의해서만 제한되므로, 본질적으로 큰 메시지 버퍼이다.
@@ -27,13 +27,13 @@
 
             ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/queue.png)
 
-    - _**Consuming**_
+    > - _**Consuming**_
         - Consumer는 메시지 수신을 기다리는 프로그램.
 
             ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/consumer.png)
 
-    - Producer, Consumer 및 Broker가 동일한 호스트에 상주할 필요는 없다.
-    - 애플리케이션은 Producer와 Consumer 모두가 될 수도 있다.
+    > - Producer, Consumer 및 Broker가 동일한 호스트에 상주할 필요는 없다.
+    > - 애플리케이션은 Producer와 Consumer 모두가 될 수도 있다.
 
 
 

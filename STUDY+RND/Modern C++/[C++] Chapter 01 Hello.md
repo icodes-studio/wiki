@@ -455,7 +455,7 @@
     {
         int a = 10, b = 20;
         // increment(a); 에러, l-value reference에 맞는 함수가 없다.
-        increment(std::move(a)); // 성공, l-value를 r-value로 변환
+        increment(std::move(a)); // l-value를 r-value로 변환
         std::cout << a << std::endl; // a는 더이상 의미 있는 값이 아니므로 새로운 값을 배정하거나 사용하지 않도록 한다.
         increment(a + b);
         increment(3);
@@ -472,7 +472,7 @@
     |구분|설명|
     |:---|:---|
     |좌측값(l-value)|고정 메모리 공간이 주어지고 이름이 붙는 값(일반적으로 변수)|
-    |우츨값(r-value)|좌측값이 아닌 값(일반적으로 상수 등의 임시값)|
+    |우측값(r-value)|좌측값이 아닌 값(일반적으로 상수 등의 임시값)|
     |좌측값 레퍼런스(l-value reference)|좌측값에 붙는 별명|
     |우측값 레퍼런스(r-value reference)|우측값에 고정 메모리 공간과 이름을 줘서 변수화(좌측값화)하는 기능<br>따라서 r-value reference는 l-value|
 - 이러한 구분을 위해서 우측값 레퍼런스의 사용은 필수이다.

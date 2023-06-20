@@ -227,7 +227,7 @@
 
 ### 2.5 enum & struct
 ---
-- 열거형 값을 일반 정수와 비교할 수 없게 만드는 ***엄격한 열거형 타입(strongly typed enumeration type)***이 C++ 11에 도입되었다.
+- 열거형 값을 일반 정수와 비교할 수 없게 만드는 ***엄격한 열거형 타입(strongly typed enumeration type)이*** C++ 11에 도입되었다.
     ```
     #include <iostream>
 

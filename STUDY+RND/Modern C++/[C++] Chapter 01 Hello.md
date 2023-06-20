@@ -283,7 +283,7 @@
 
 　
 
-### call by reference
+### 2.7.1 call by reference
 ---
 - C++은 레퍼런스 전달 호출(call by reference)을 지원한다.
     ```
@@ -324,6 +324,48 @@
 
 　
 
-### return by reference
+### 2.7.2 return by reference
 ---
-- 
+- 닥치고 예제
+    ```
+    #include <iostream>
+
+    int& max(int& a, int& b)
+    {
+        return (a > b) ? a : b;
+    }
+
+    int main()
+    {
+        int i = 20, j = 10;
+        int& k = max(i, j);
+        std::cout << k << std::endl;
+        i = 3;
+        std::cout << k << std::endl;
+        return 0;
+    }
+    /* 출력결과
+    20
+    3
+    */
+    ```
+
+
+　
+
+### 2.8 우측값 레퍼런스 (C++ 11)
+---
+- ***좌측값(l-value)은*** 메모리 공간이 생성되고 이 공간에 이름이 주어지는 대상을 의미
+- ***우측값(r-value)은*** 배정 연산의 우측에 놓이게 되는 상수나 표현식의 결과인 ***임시값***
+    ```
+    int x = 2, y = 3;   // 상수인 2와 3을 x와 y에 배정
+    int z = x + y;      // x + y 표현식의 결과인 5를 z에 배정
+    ```
+- l-value 
+    > - x, y, z
+    > - &x나 &y와 같이 & 연산자로 그 방의 주소값을 얻을 수 있다.
+    > - 메모리 내에 고정적인 위치가 있다.
+- r-value
+    > - 2, 3, x + y
+    > - 메모리의 상수 영역에 임시로 생성되어 사용.
+    > - 사용 후에는 바로 버려질 대상들이다.

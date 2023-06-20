@@ -24,6 +24,7 @@
 
 - **Running RabbitMQ Server as an Application**
     > - It can be executed to start a node in foreground.
+    >
         rabbitmq-server.bat
 
 - **Start the Broker as an Application**

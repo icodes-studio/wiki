@@ -416,7 +416,7 @@
     */
     ```
 - 함수를 하나만 정의해서 사용해보자.
-    > - l-value reference 함수만 사용 (원하는 목적을 이루지 못함)
+    > - l-value reference 함수만 사용
     ```
     #include <iostream>
 

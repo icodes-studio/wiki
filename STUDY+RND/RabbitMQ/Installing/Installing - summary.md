@@ -20,28 +20,28 @@
 
 ## # Run RabbitMQ
 - **The RabbitMQ service starts automatically**
-    > - Once both Erlang and RabbitMQ have been installed, a RabbitMQ node can be started as a Windows service.
+    - Once both Erlang and RabbitMQ have been installed, a RabbitMQ node can be started as a Windows service.
 
 - **Running RabbitMQ Server as an Application**
-    > - It can be executed to start a node in foreground.
+    - It can be executed to start a node in foreground.
     ```
     rabbitmq-server.bat
     ```
 
 - **Start the Broker as an Application**
-    > - This will start a node in the background
+    - This will start a node in the background
     ```
     rabbitmq-server.bat -detached
     ```
 
 - **Running RabbitMQ Server as a Service**
-    > - Install the service by running
+    - Install the service by running
     ```
     rabbitmq-service.bat install
     ```
 
 - **Start the Broker as a Service**
-    > - To start the broker, execute
+    - To start the broker, execute
     ```
     rabbitmq-service.bat start
     ```
@@ -51,13 +51,13 @@
 
 ## # Managing the Service
 - **Stopping a Node**
-    > - To stop the broker or check its status, use rabbitmqctl.bat in sbin (as an administrator).
+    - To stop the broker or check its status, use rabbitmqctl.bat in sbin (as an administrator).
     ```
     rabbitmqctl.bat stop
     ```
 
 - **Checking Node Status**
-    > - The most basic node health check and displays some information about the node
+    - The most basic node health check and displays some information about the node
     ```
     rabbitmqctl.bat status
     ```
@@ -67,12 +67,12 @@
 
 ## [# Management Plugin]()
 - **Getting Started**
-    > - It must be enabled before it can be used.
+    - It must be enabled before it can be used.
     ```
     rabbitmq-plugins enable rabbitmq_management
     ```
-    > - Management UI: http://localhost:15672/
-    > - Account: guest/guest
+    - Management UI: http://localhost:15672/
+    - Account: guest/guest
 
 
 　

@@ -353,7 +353,7 @@
 
 　
 
-### 2.8 우측값 레퍼런스 (C++ 11)
+### 2.8 r-value reference (C++ 11)
 ---
     ```
     int x = 2, y = 3;   // 상수인 2와 3을 x와 y에 배정
@@ -364,8 +364,118 @@
     > - 메모리 공간이 생성되고 이 공간에 이름이 주어지는 대상을 의미
     > - &x나 &y와 같이 & 연산자로 그 방의 주소값을 얻을 수 있다.
     > - 메모리 내에 고정적인 위치가 있다.
+    > - 배정 연산자의 좌측이나 우측에 올 수 있다.
 - 우측값(r-value)
     > - 2, 3, x + y
     > - 배정 연산의 우측에 놓이게 되는 상수나 표현식의 결과인 ***임시값***
     > - 메모리의 상수 영역에 임시로 생성되어 사용.
     > - 사용 후에는 바로 버려질 대상들이다.
+    > - 배정 연산자의 우측에만 올 수 있다.
+- l-value reference
+    > - l-value에 대한 reference
+- r-value reference
+    > - r-value에 대한 reference
+    > - 메모리의 상수 영역이 아닌 곳에 메모리 공간을 생성하고, 생성된 공간에 이름을 붙여 줘서 일반 변수화하는 것.
+    > - 동작성으로만 보면 걍 일반 변수와 같다.
+    ```
+    int x = 2, y = 3;
+    int&& m = 3;            // int m = 3; 과 같은 효과
+    int&& k = x + y;        // int k = x + y; 와 같은 효과
+    int&& t = std::move(x); // t는 x의 별명이 아니고 int t = x;와 같은 효과
+    ```
+- 그런데 굳이 왜 필요한 것인가?
+    ```
+    #include <iostream>
+
+    void increment(int& value)
+    {
+        std::cout << "좌측값 레퍼런스로 증가" << std::endl;
+        ++value;
+    }
+
+    void increment(int&& value)
+    {
+        std::cout << "우측값 레퍼런스로 증가" << std::endl;
+        ++value;
+    }
+
+    int main()
+    {
+        int a = 10, b = 20;
+        increment(a);
+        std::cout << a << std::endl;
+        increment(a + b);
+        increment(3);
+        return 0;
+    }
+    /* 출력결과
+    좌측값 레퍼런스로 증가
+    11
+    우측값 레퍼런스로 증가
+    우측값 레퍼런스로 증가
+    */
+    ```
+    > - r-value reference는 우측값을 변수화하는 기능이다.
+    > - value 파라메터는 increment 함수 내에서 좌측값 행세를 하게 된다.
+    > - 하지만 value 변수의 값을 증가시킨 효과는 함수 종료와 함께 value 변수가 소멸되므로 나가리.
+- 함수를 하나만 정의해서 사용해보자.
+    > - l-value reference 함수만 사용 (원하는 목적을 이루지 못함)
+    ```
+    #include <iostream>
+
+    void increment(const int& value)
+    {
+        std::cout << "좌측값 레퍼런스로 증가" << std::endl;
+        // ++value; 에러, value를 수정할 수 없다.
+    }
+
+    int main()
+    {
+        int a = 10, b = 20;
+        increment(a);
+        std::cout << a << std::endl;
+        increment(a + b);
+        increment(3);
+        return 0;
+    }
+    /* 출력결과
+    좌측값 레퍼런스로 증가
+    10
+    좌측값 레퍼런스로 증가
+    좌측값 레퍼런스로 증가
+    */
+    ```
+    > - r-value reference 함수만 사용
+    ```
+    #include <iostream>
+
+    void increment(int&& value)
+    {
+        std::cout << "우측값 레퍼런스로 증가" << std::endl;
+        ++value;
+    }
+
+    int main()
+    {
+        int a = 10, b = 20;
+        // increment(a); 에러, l-value reference에 맞는 함수가 없다.
+        increment(std::move(a)); // 성공, l-value를 r-value로 변환
+        std::cout << a << std::endl;
+        increment(a + b);
+        increment(3);
+        return 0;
+    }
+    /* 출력결과
+    우측값 레퍼런스로 증가
+    11
+    우측값 레퍼런스로 증가
+    우측값 레퍼런스로 증가
+    */
+    ```
+- 정리
+    |구분|설명|
+    |:---|:---|
+    |좌측값(l-value)|고정 메모리 공간이 주어지고 이름이 붙는 값(일반적으로 변수)|
+    |우츨값(r-value)|좌측값이 아닌 값(일반적으로 상수 등의 임시값)|
+    |좌측값 레퍼런스(l-value reference)|좌측값에 붙는 별명|
+    |우측값 레퍼런스(r-value reference)|우측값에 고정 메모리 공간과 이름을 줘서 변수화(좌측값화)하는 기능<br>따라서 r-value reference는 l-value|

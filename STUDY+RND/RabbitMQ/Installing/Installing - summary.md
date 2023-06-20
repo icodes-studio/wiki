@@ -1,8 +1,8 @@
 ## # Install Erlang/OTP
 - ***Downloads***
-    > - ***Download - Erlang/OTP 25.1***
-    > - *Download - OTP Versions Tree*
-- *64-bit supported version of Erlang for Windows*
+    > - [***Download - Erlang/OTP 25.1***](https://www.erlang.org/downloads)
+    > - [*Download - OTP Versions Tree*](https://erlang.org/download/otp_versions_tree.html)
+- [*64-bit supported version of Erlang for Windows*](https://www.rabbitmq.com/which-erlang.html)
 - *Note that Erlang must be installed using an **administrative** account*
 
 
@@ -10,10 +10,10 @@
 
 ## # Install RabbitMQ Server
 - ***Downloads***
-    > - ***rabbitmq-server-3.10.7.exe***
-    > - *Signature*
-- *Changelog*
-- *Release notes*
+    > - [***rabbitmq-server-3.10.7.exe***](https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.10.7/rabbitmq-server-3.10.7.exe)
+    > - [*Signature*](https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.10.7/rabbitmq-server-3.10.7.exe.asc)
+- [*Changelog*](https://www.rabbitmq.com/changelog.html)
+- [*Release notes*](https://github.com/rabbitmq/rabbitmq-server/releases)
 
 
 　
@@ -65,7 +65,7 @@
 
 　
 
-## [# Management Plugin]()
+## [# Management Plugin](https://www.rabbitmq.com/management.html)
 - **Getting Started**
     > - It must be enabled before it can be used.
     ```
@@ -91,12 +91,12 @@
 　
 
 ## # Port Access
-- **4369**: [epmd](), a peer discovery service used by RabbitMQ nodes and CLI tools.
+- **4369**: [epmd](https://www.erlang.org/doc/man/epmd.html), a peer discovery service used by RabbitMQ nodes and CLI tools.
 - **5672, 5671**: used by AMQP 0-9-1 and 1.0 clients without and with TLS.
 - **25672**: used for inter-node and CLI tools communication.
 - **35672-35682**: used by CLI tools (Erlang distribution client ports) for communication with nodes.
-- **15672**: [HTTP API]() clients, [management UI]() and [rabbitmqadmin]() (only if the [management plugin]() is enabled).
-- **61613, 61614**: [STOMP clients]() without and with TLS (only if the [STOMP plugin]() is enabled).
-- **1883, 8883**: [MQTT clients]() without and with TLS, if the [MQTT plugin]() is enabled.
-- **15674**: STOMP-over-WebSockets clients (only if the [Web STOMP plugin]() is enabled).
-- **15675**: MQTT-over-WebSockets clients (only if the [Web MQTT plugin]() is enabled).
+- **15672**: [HTTP API](https://www.rabbitmq.com/management.html) clients, [management UI](https://www.rabbitmq.com/management.html) and [rabbitmqadmin](https://www.rabbitmq.com/management-cli.html) (only if the [management plugin](https://www.rabbitmq.com/management.html) is enabled).
+- **61613, 61614**: [STOMP clients](https://stomp.github.io/stomp-specification-1.2.html) without and with TLS (only if the [STOMP plugin](https://www.rabbitmq.com/stomp.html) is enabled).
+- **1883, 8883**: [MQTT clients](https://mqtt.org/) without and with TLS, if the [MQTT plugin](https://www.rabbitmq.com/mqtt.html) is enabled.
+- **15674**: STOMP-over-WebSockets clients (only if the [Web STOMP plugin](https://www.rabbitmq.com/web-stomp.html) is enabled).
+- **15675**: MQTT-over-WebSockets clients (only if the [Web MQTT plugin](https://www.rabbitmq.com/web-mqtt.html) is enabled).

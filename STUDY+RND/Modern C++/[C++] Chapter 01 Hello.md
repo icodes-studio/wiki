@@ -482,5 +482,91 @@
 
 　
 
-### 2.9 Default parameters
+### 2.10 string type
 ---
+- string type 활용 예
+    ```
+    #include <iostream>
+    #include <string>
+
+    using namespace std;
+
+    int main()
+    {
+        string str1 = "hello ";
+        string str2("world");
+        const char* cstr = str2.c_str();
+        cout << "C string is " << cstr << endl;
+
+        string str3 = str1 + str2;
+        cout << "combined string is " << str3 << endl;
+
+        if (str3 == "hello world")
+            cout << "two strings are same" << endl;
+
+        string myString = "hi";
+        myString += ", there";
+        string myOtherString = myString;
+        if (myString == myOtherString)
+            myOtherString[0] = 'H';
+        cout << "value of myString is " << myString << endl;
+        cout << "value of myOtherString is " << myOtherString << endl;
+
+        long double d = 3.14;
+        string s1 = to_string(d);
+        cout << "double number is " << d << endl;
+        cout << "string version is " << s1 << endl;
+
+        const string s2 = "1234";
+        int i = stoi(s2);
+        cout << "string is " << s2 << endl;
+        cout << "integer version is " << i << endl;
+
+        return 0;
+    }
+    /* 출력결과
+    C string is world
+    combined string is hello world
+    two strings are same
+    value of myString is hi, there
+    value of myOtherString is Hi, there
+    double number is 3.14
+    string version is 3.140000
+    string is 1234
+    integer version is 1234
+    */
+    ```
+
+
+　
+
+### 2.12 Mathematical constant (C++ 20)
+---
+- 수학에서 사용하는 다양한 상수를 제공한다.
+    ```
+    #include <iostream>
+    #include <numbers>
+
+    int main()
+    {
+        std::cout << "Pi: " << std::numbers::pi << std::endl;
+        std::cout << "e: " << std::numbers::e << std::endl;
+        std::cout << "log2(e): " << std::numbers::log2e << std::endl;
+        std::cout << "log10(e): " << std::numbers::log10e << std::endl;
+        std::cout << "ln(2): " << std::numbers::ln2 << std::endl;
+        std::cout << "ln(10): " << std::numbers::ln10 << std::endl;
+        std::cout << "sqrt(2): " << std::numbers::sqrt2 << std::endl;
+        std::cout << "sqrt(3): " << std::numbers::sqrt3 << std::endl;
+        return 0;
+    }
+    /* 출력결과
+    Pi: 3.14159
+    e: 2.71828
+    log2(e): 1.4427
+    log10(e): 0.434294
+    ln(2): 0.693147
+    ln(10): 2.30259
+    sqrt(2): 1.41421
+    sqrt(3): 1.73205
+    */
+    ```

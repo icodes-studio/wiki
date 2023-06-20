@@ -16,6 +16,7 @@
     - _**Producing**_
         - 메시지 보내기.
         - 메시지를 보내는 프로그램은 _Producer_
+        
             ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/producer.png)
     - _**A queue**_
         - RabbitMQ 내부에 있는 우편함의 이름.

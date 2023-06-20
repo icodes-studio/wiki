@@ -279,3 +279,51 @@
     int& r = x;
     r = y; // 변수 x의 값이 4로 변경, r의 대상이 y로 변경되는 것은 아님
     ```
+
+
+　
+
+### call by reference
+---
+- C++은 레퍼런스 전달 호출(call by reference)을 지원한다.
+    ```
+    #include <iostream>
+    using namespace std;
+
+    void squareCube(int& s, int& c)
+    {
+        s = s * s;
+        c = c * c * c;
+    }
+
+    int main()
+    {
+        int number, square, cube;
+        cout << "정수 입력: ";
+        cin >> number;
+        square = cube = number;
+        squareCube(square, cube);
+        cout << number << "의 제곱은 " << square << endl;
+        cout << "세제곱은 " << cube << "입니다" << endl;
+        return 0;
+    }
+    /*출력결과
+    정수 입력: 5
+    5의 제곱은 25
+    세제곱은 125입니다
+    */
+    ```
+- 함수가 파라미터로 받은 값을 변경하지 않게 하려면 ***상수 레퍼런스 전달(call-by-constant reference)*** 방식을 사용할 수 있다.
+    ```
+    void squareCube(const int& s, const int& c)
+    {
+        ...
+    }
+    ```
+
+
+　
+
+### return by reference
+---
+- 

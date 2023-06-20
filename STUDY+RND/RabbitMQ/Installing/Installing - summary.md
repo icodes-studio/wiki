@@ -1,6 +1,6 @@
 ## # Install Erlang/OTP
 - ***Downloads***
-    > - [***Download - Erlang/OTP 25.1***](https://www.erlang.org/downloads)
+    > - [***Download - Erlang/OTP latest version***](https://www.erlang.org/downloads)
     > - [*Download - OTP Versions Tree*](https://erlang.org/download/otp_versions_tree.html)
 - [*64-bit supported version of Erlang for Windows*](https://www.rabbitmq.com/which-erlang.html)
 - *Note that Erlang must be installed using an **administrative** account*

@@ -24,85 +24,93 @@
 　
 
 ## # Using chocolatey
-RabbitMQ 패키지는 Chocolatey를 통해 배포됩니다. 새 릴리스는 승인을 받는 데 시간이 걸릴 수 있으므로(때로는 몇 주), 이 옵션이 최신 릴리스를 제공한다고 보장할 수는 없습니다만, 요구되어지는 디펜던시들을 제대로 관리합니다.
+- RabbitMQ 패키지는 [**Chocolatey를 통해 배포**](https://community.chocolatey.org/packages/rabbitmq)됩니다.
+- 새 릴리스는 승인을 받는 데 시간이 걸릴 수 있으므로(때로는 몇 주),
+- 이 옵션이 최신 릴리스를 제공한다고 보장할 수는 없습니다만,
+- 요구되어지는 디펜던시들을 제대로 관리합니다.
+- Chocolatey를 사용하여 RabbitMQ를 설치하려면 커맨드라인 또는 파워쉘에서 다음 명령을 실행합니다.
+    ```
+    choco install rabbitmq
+    ```
+- 많은 사례로 볼 때, Chocolatey는 최적의 설치 방법입니다.
+- Chocolatey RabbitMQ 패키지는 오픈소스로 공개되어 있고 [**GitHub에서 찾을 수**](https://github.com/rabbitmq/chocolatey-package) 있습니다.
 
-Chocolatey를 사용하여 RabbitMQ를 설치하려면 커맨드라인 또는 파워쉘에서 다음 명령을 실행합니다.
-
-choco install rabbitmq
-많은 사례로 볼 때, Chocolatey는 최적의 설치 방법입니다. Chocolatey RabbitMQ 패키지는 오픈소스로 공개되어 있고 GitHub에서 찾을 수 있습니다.
-
-　
-
-# Using the Installer
-공식 RabbitMQ 인스톨러는 모든 RabbitMQ 릴리스에 대해 제공됩니다.
-
-Chocolatey를 통한 설치와 비교할 때 이 옵션은 윈도우즈 사용자에게 가장 큰 유연성을 제공하지만 인스톨러에 대한 몇 몇 요구 사항과 이해를 요구합니다.
-
-한 번에 하나의 Erlang 버전만 설치해야 합니다.
-Erlang은 어드민 계정을 사용하여 설치해야 합니다.
-RabbitMQ도 어드민 계정으로 설치하는 것을 권장합니다.
-설치 경로는 ASCII 문자만 포함해야 합니다. 경로의 디렉토리 이름에는 공백이 포함되지 않는 것을 권장합니다.
-CLI 도구에서 사용하는 공유 비밀(shared secret) 파일을 수동으로 복사해야 할 수도 있습니다.
-CLI 도구를 사용하려면 윈도우즈 콘솔이 UTF-8 모드에서 작동해야 합니다.
-이러한 조건이 충족되지 않으면 윈도우즈 서비스 및 CLI 도구는 재 설치 해야 하거나 수동으로 무언가를 고쳐야 할 수도 있습니다.
-
-This is covered in more detail in the Windows-specific Issues guide.
 
 　
 
-# Dependencies
-RabbitMQ를 설치하려면 64비트 윈도우즈용 Erlang 버전이 필요합니다. 최신 바이너리 빌드는 Erlang/OTP Version Tree 또는 Download 페이지에서 얻을 수 있습니다.
+## # Using the Installer
+- 공식 RabbitMQ 인스톨러는 [**모든 RabbitMQ 릴리즈**](https://www.rabbitmq.com/changelog.html)에 대해 제공됩니다.
+- Chocolatey를 통한 설치와 비교할 때 이 옵션은 윈도우즈 사용자에게 가장 큰 유연성을 제공하지만 인스톨러에 대한 몇 몇 요구 사항과 이해를 요구합니다.
+    > - 한 번에 하나의 Erlang 버전만 설치해야 합니다.
+    > - Erlang은 어드민 계정을 사용하여 설치해야 합니다.
+    > - RabbitMQ도 어드민 계정으로 설치하는 것을 권장합니다.
+    > - 설치 경로는 ASCII 문자만 포함해야 합니다. 경로의 디렉토리 이름에는 공백이 포함되지 않는 것을 권장합니다.
+    > - CLI 도구에서 사용하는 [**공유 비밀(shared secret)**](https://www.rabbitmq.com/cli.html#erlang-cookie) 파일을 수동으로 복사해야 할 수도 있습니다.
+    > - CLI 도구를 사용하려면 [**윈도우즈 콘솔이 UTF-8 모드**](https://bloodguy.tistory.com/entry/Windows-cmdexe-UTF-8-%EC%84%A4%EC%A0%95%EC%9C%BC%EB%A1%9C-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-open-cmdexe-with-UTF-8)에서 작동해야 합니다.
+- 이러한 조건이 충족되지 않으면 윈도우즈 서비스 및 CLI 도구는 재 설치 해야 하거나 수동으로 무언가를 고쳐야 할 수도 있습니다.
+- This is covered in more detail in the [**Windows-specific Issues**](https://www.rabbitmq.com/windows-quirks.html) guide.
 
-Erlang은 어드민 계정을 사용하여 설치해야 합니다. 그렇지 않으면 RabbitMQ 윈도우즈 서비스 목록에 등록되지 않습니다.
-
-지원되는 Erlang 버전이 설치되면, RabbitMQ 설치 프로그램인 rabbitmq-server-{version}.exe를 다운로드하여 실행합니다. 그러면 RabbitMQ가 윈도우즈 서비스로 설치되고 기본 환경 구성으로 시작됩니다.
-
-　
-
-# Direct Downloads
-Description
-Installer for Windows systems (from GitHub)
-Download
-rabbitmq-server-3.10.7.exe
-Signature
-Signature
-　
-
-# Run RabbitMQ Windows Service
-Erlang과 RabbitMQ가 모두 설치되면, RabbitMQ 노드를 Windows 서비스로 시작할 수 있습니다. RabbitMQ 서비스는 사동으로 시작됩니다. RabbitMQ 윈도우즈 서비스는 시작(Start) 메뉴에서 관리할 수 있습니다.
 
 　
 
-# CLI Tools
-RabbitMQ 노드는 주로 PowerShell의 CLI 도구를 사용하여 관리, 검사 및 운영됩니다.
+## # Dependencies
+- RabbitMQ를 설치하려면 64비트 윈도우즈용 [**Erlang 버전이**](https://www.rabbitmq.com/which-erlang.html) 필요합니다.
+- 최신 바이너리 빌드는 [**Erlang/OTP Version Tree**](https://erlang.org/download/otp_versions_tree.html) 또는 [**Download**](https://www.erlang.org/downloads) 페이지에서 얻을 수 있습니다.
+- Erlang은 어드민 계정을 사용하여 설치해야 합니다. 그렇지 않으면 RabbitMQ 윈도우즈 서비스 목록에 등록되지 않습니다.
+- 지원되는 Erlang 버전이 설치되면, RabbitMQ 설치 프로그램인 rabbitmq-server-{version}.exe를 다운로드하여 실행합니다.
+- 그러면 RabbitMQ가 윈도우즈 서비스로 설치되고 기본 환경 구성으로 시작됩니다.
 
-윈도우즈 CLI 도구에는 다른 플랫폼의 그것과는 좀 다르게 .bat 확장자가 붙습니다. 예를 들어 윈도우즈의 rabbitmqctl은 rabbitmqctl.bat 스크립트로 호출됩니다.
 
-이러한 도구가 작동하려면 Erlang 쿠키라는 공유 비밀(shared secret) 파일을 사용하여 RabbitMQ 노드를 인증할 수 있어야 합니다.
-
-CLI tools guide 문서는 커맨드 라인 도구 사용과 관련된 대부분의 주제를 다룹니다.
-
-다양한 RabbitMQ CLI 도구가 제공하는 명령을 탐색하려면help커맨드를 사용하세요.
-
-# lists commands provided by rabbitmqctl.bat
-rabbitmqctl.bat help
-# lists commands provided by rabbitmq-diagnostics.bat
-rabbitmq-diagnostics.bat help
-# ...you guessed it!
-rabbitmq-plugins.bat help
-특정 커맨드에 대해 알아보려면 해당 이름을 도움말 인자로 전달하세요.
-
-rabbitmqctl.bat help add_user
 　
 
-# Cookie File Location
-윈도우즈에서 쿠키 파일 위치는 HOMEDRIVE 및 HOMEPATH 환경 변수의 설정 여부에 따라 다릅니다.
+## # Direct Downloads
+- Description
+    > Installer for Windows systems (from [**GitHub**](https://github.com/rabbitmq/rabbitmq-server/releases))
+- Download
+    > [**rabbitmq-server-3.10.7.exe**](https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.10.7/rabbitmq-server-3.10.7.exe)
+- Signature
+    > [**Signature**](https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.10.7/rabbitmq-server-3.10.7.exe.asc)
 
-어드민이 아닌 계정을 사용하여 RabbitMQ를 설치하면, 노드 및 CLI 도구에서 사용하는 공유 비밀(shared secret) 파일이 올바른 위치에 배치되지 않습니다. 결국 rabbitmqctl.bat 및 기타 CLI 도구를 사용할 때 인증에 실패하게 됩니다.
 
-이런 경우 아래 해결책이 있습니다.
+　
 
-RabbitMQ를 어드민 계정으로 다시 설치하세요.
+## # Run RabbitMQ Windows Service
+- Erlang과 RabbitMQ가 모두 설치되면, RabbitMQ 노드를 Windows 서비스로 시작할 수 있습니다.
+- RabbitMQ 서비스는 사동으로 시작됩니다.
+- RabbitMQ 윈도우즈 서비스는 시작(Start) 메뉴에서 관리할 수 있습니다.
+
+　
+
+## # CLI Tools
+- RabbitMQ 노드는 주로 [**PowerShell**](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/powershell)의 [**CLI 도구를**](https://www.rabbitmq.com/cli.html) 사용하여 관리, 검사 및 운영됩니다.
+- 윈도우즈 CLI 도구에는 다른 플랫폼의 그것과는 좀 다르게 .bat 확장자가 붙습니다.
+- 예를 들어 윈도우즈의 rabbitmqctl은 rabbitmqctl.bat 스크립트로 호출됩니다.
+- 이러한 도구가 작동하려면 Erlang 쿠키라는 공유 비밀(shared secret) 파일을 사용하여 [**RabbitMQ 노드를 인증**](https://www.rabbitmq.com/cli.html#erlang-cookie)할 수 있어야 합니다.
+- [**CLI tools guide**](https://www.rabbitmq.com/cli.html) 문서는 커맨드 라인 도구 사용과 관련된 대부분의 주제를 다룹니다.
+- 다양한 RabbitMQ CLI 도구가 제공하는 명령을 탐색하려면help커맨드를 사용하세요.
+    ```
+    # lists commands provided by rabbitmqctl.bat
+    rabbitmqctl.bat help
+    # lists commands provided by rabbitmq-diagnostics.bat
+    rabbitmq-diagnostics.bat help
+    # ...you guessed it!
+    rabbitmq-plugins.bat help
+    ```
+- 특정 커맨드에 대해 알아보려면 해당 이름을 도움말 인자로 전달하세요.
+    ```
+    rabbitmqctl.bat help add_user
+    ```
+
+
+　
+
+## # Cookie File Location
+- 윈도우즈에서 쿠키 파일 위치는 HOMEDRIVE 및 HOMEPATH 환경 변수의 설정 여부에 따라 다릅니다.
+- 어드민이 아닌 계정을 사용하여 RabbitMQ를 설치하면, 노드 및 CLI 도구에서 사용하는 공유 비밀(shared secret) 파일이 올바른 위치에 배치되지 않습니다.
+- 결국 rabbitmqctl.bat 및 기타 CLI 도구를 사용할 때 인증에 실패하게 됩니다.
+- 이런 경우 아래 해결책이 있습니다.
+    ```
+    RabbitMQ를 어드민 계정으로 다시 설치하세요.
 .erlang.cookie 파일을 %SystemRoot% 또는 %SystemRoot%\system32\config\systemprofile에서 %HOMEDRIVE%%HOMEPATH% 위치로 수동 복사합니다.
 　
 

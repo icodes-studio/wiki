@@ -1,5 +1,4 @@
-### # Install Erlang/OTP
----
+## # Install Erlang/OTP
 - ***Downloads***
     > - ***Download - Erlang/OTP 25.1***
     > - *Download - OTP Versions Tree*
@@ -9,8 +8,7 @@
 
 　
 
-### # Install RabbitMQ Server
----
+## # Install RabbitMQ Server
 - ***Downloads***
     > - ***rabbitmq-server-3.10.7.exe***
     > - *Signature*

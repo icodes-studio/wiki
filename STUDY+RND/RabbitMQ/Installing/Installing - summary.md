@@ -18,19 +18,18 @@
 
 　
 
-### # Run RabbitMQ
----
-The RabbitMQ service starts automatically
+## # Run RabbitMQ
+- **The RabbitMQ service starts automatically**
+    > - Once both Erlang and RabbitMQ have been installed, a RabbitMQ node can be started as a Windows service.
 
-Once both Erlang and RabbitMQ have been installed, a RabbitMQ node can be started as a Windows service.
-Running RabbitMQ Server as an Application
+- **Running RabbitMQ Server as an Application**
+    > - It can be executed to start a node in foreground.
+    > ```
+    rabbitmq-server.bat
+    ```
 
-It can be executed to start a node in foreground.
-
-rabbitmq-server.bat
-Start the Broker as an Application
-
-This will start a node in the background
+- **Start the Broker as an Application**
+    > - This will start a node in the background
 
 rabbitmq-server.bat -detached
 Running RabbitMQ Server as a Service

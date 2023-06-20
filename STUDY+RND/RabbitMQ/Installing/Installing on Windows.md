@@ -175,7 +175,7 @@
 ## # Default User Access
 - 브로커는 password guest로 user guest를 생성합니다.
 - 구성되지 않은(Unconfigured) 클라이언트는 일반적으로 이러한 자격 증명을 사용합니다.
-- 기본적으로 이러한 자격 증명은 localhost로 브로커에 연결할 때만 사용할 수 있으므로 다른 시스템에서 연결하기 전에 조치를 취해야 합니다.
+- 이러한 자격 증명은 localhost로 브로커에 연결할 때만 사용할 수 있으므로 다른 시스템에서 연결하기 전에 조치를 취해야 합니다.
 - See the documentation on [access control](https://www.rabbitmq.com/access-control.html) for information on how to create more users and delete the guest user.
 
 
@@ -209,7 +209,7 @@
 　
 
 ## # Dump File Location When Running as a Service
-- RabbitMQ가 서비스로 실행되는 동안 Erlang VM이 크래시나는 경우 덤프파일은 커런트 디렉터리에 남지 않습니다(서비스에 적합하지 않음).
+- RabbitMQ가 서비스로 실행되는 동안 Erlang VM이 크래시나는 경우 덤프파일은 커런트 디렉터리에 남지 않습니다.
 - 대신에 RabbitMQ 서버의 기본 디렉토리에 erl_crash.dump 파일로 남겨집니다.
 - 기본 디렉토리는 RABBITMQ_BASE 환경 변수에 의해 설정되고, 기본값은 %APPDATA%\%RABBITMQ_SERVICENAME% 입니다.
 - 일반적으로는 %APPDATA%\RabbitMQ 입니다.

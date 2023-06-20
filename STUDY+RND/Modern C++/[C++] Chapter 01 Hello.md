@@ -206,5 +206,76 @@
 
 ### 2.4 const keyword
 ---
-- 
+- const 키워드를 포인터와 함께 사용할 때는 주의가 필요하다.
+- 가리키는 데이터를 상수화하는 포인터를 ***상수 포인터라고*** 부른다.
+    ```
+    double e = 2.71828;
+    const double* doublePtr = &e; // 또는 double const* doublePtr = &e;
+    *doublePtr = 20.3027; // C3892 - 컴파일 오류
+    ```
+- 반면, 포인터 자체가 상수화된 포인터를 ***포인터 상수라고*** 부른다.
+    ```
+    double e = 2.71828;
+    double r = 3.894;
+    double* const doublePtr = &e;
+    *doublePtr = 20.3027;
+    doublePtr = &r; // C3892 - 컴파일 오류
+    ```
 
+
+　
+
+### 2.5 enum & struct
+---
+- 열거형 값을 일반 정수와 비교할 수 없게 만드는 ***엄격한 열거형 타입(strongly typed enumeration type)***이 C++ 11에 도입되었다.
+    ```
+    #include <iostream>
+
+    enum class Suit { clubs, diamonds, hearts, spades };
+
+    struct Card
+    {
+        Suit s;
+        int rank;
+    };
+    Card deck[52];
+
+    int main()
+    {
+        if (deck[3].s == 0) // C2676 - 컴파일 에러
+            std::cout << "clubs" << std::endl;
+
+        if (deck[3].s == Suit::clubs)
+            std::cout << "clubs" << std::endl;
+    }
+    ```
+
+
+　
+
+### 2.7 references
+---
+- 변수 선언이란 메모리 공간에 이름을 붙이는 것을 말한다.
+- ***참조자(reference)는*** 이 메모리 공간에 별명으로 이름을 하나 더 붙이는 것을 말한다.
+    ```
+    int n = 10;
+    int& nn = n;
+    ```
+- 숫자나 표현식의 결과처럼 이름 없는 값에는 별명을 붙일 수 없으므로 레퍼런스를 정의할 수 없다.
+    ```
+    int& k = 7;
+    int a = 2, b = 3;
+    int& j = a + b;
+    ```
+- 숫자와 같이 이름이 없는 값을 ***임시값이라고*** 부른다.
+- 임시값은 메모리의 ***상수영역에*** 이름이 붙지 않는 임시 공간이 생성되고 값이 저장되어 사용된다.
+- 상수 레퍼런스로 정의하면 임시값으로도 초기화할 수 있지만 값을 변경할 수는 없다.
+    ```
+    const int& k = 5;
+    ```
+- 기존 변수로 한번 초기화한 레퍼런스는 그 대상을 변경할 수 없다.
+    ```
+    int x = 3, y = 4;
+    int& r = x;
+    r = y; // 변수 x의 값이 4로 변경, r의 대상이 y로 변경되는 것은 아님
+    ```

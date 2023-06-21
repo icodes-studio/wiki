@@ -5,7 +5,7 @@
 
 　
 
-## # Setup & Build
+## # build SimpleAmqpClient
 
 - **GitHub**
     - [*GitHub - alanxz/SimpleAmqpClient: Simple C++ Interface to rabbitmq-c*](https://github.com/alanxz/SimpleAmqpClient)
@@ -70,3 +70,35 @@
         > - ***/third-party/*** *폴더에* ***googletest*** *받고 CMake 돌리면 되는데...*
         > - *컴팔 링킹 에러가 발생하고 있다.*
         > - *아직 확인 중...*
+
+
+　
+
+## # using SimpleAmqpClient
+
+- **Pre-requisites**
+    - [***RabbitMQ C 라이브러리 빌드***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Tutorials/C/Tutorial%2000%20-%20Setup.md)
+    - **설명을 위해**
+        - ***boost*** 라이브러리는 ***C:\boost_1_76_0***에 설치 되었다고 가정
+        - ***RabbitMQ C*** 소스 루트는 ***D:\Projects\RabbitMQ+C***에 준비 되었다고 가정
+        - ***RabbitMQ C++*** 소스 루트는 ***D:\Projects\RabbitMQ+C++***에 준비 되었다고 가정
+        - 이 튜토리얼 프로젝트는 ***D:\Projects\Tutorials+C++\Consume***에 준비한다고 가정
+- **프로젝트 속성**
+  - *C/C++ > General > Additional Include Directories*
+    - ***C:\boost_1_76_0***
+    - ***../../RabbitMQ+C/include***
+    - ***../../RabbitMQ+C++/src***
+  - *Linker > General > Additional Library Directories*
+    - ***C:\boost_1_76_0\lib64-msvc-14.2***
+    - ***../../RabbitMQ+C/librabbitmq/$(Configuration)***
+    - ***../../RabbitMQ+C++/$(Configuration)***
+  - *Linker > Input > Additional Dependencies*
+    - ***SimpleAmqpClient.7.lib***
+    - ***rabbitmq.4.lib***
+    - ***boost_chrono-vc142-mt(-gd)-x64-1_76.lib***
+    - ***boost_system-vc142-mt(-gd)-x64-1_76.lib***
+  - *DLL 준비*
+    - ***boost_chrono-vc142-mt(-gd)-x64-1_76.dll***
+    - ***boost_system-vc142-mt(-gd)-x64-1_76.dll***
+    - ***rabbitmq.4.dll***
+    - ***SimpleAmqpClient.7.dll***

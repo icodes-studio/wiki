@@ -201,7 +201,7 @@
             }
         }
         ```
-- 큐에서 메시지 전달받기
+    - 큐에서 메시지 전달받기
         ```
         using RabbitMQ.Client;using RabbitMQ.Client.Events;
         using System;

@@ -1,7 +1,7 @@
 ## Tutorial.7 - Publisher Confirms
 > *Reliable publishing with publisher confirms*
 >
-> [*RabbitMQ tutorial - Reliable Publishing with Publisher Confirms — RabbitMQ*](https://www.rabbitmq.com/tutorials/tutorial-seven-dotnet.html)
+> ![](https://www.rabbitmq.com/favicon.ico) [*RabbitMQ tutorial - Reliable Publishing with Publisher Confirms — RabbitMQ*](https://www.rabbitmq.com/tutorials/tutorial-seven-dotnet.html)
 >
 >　
 

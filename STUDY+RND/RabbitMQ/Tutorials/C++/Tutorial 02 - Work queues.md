@@ -1,7 +1,7 @@
 ## Tutorial.2 - Work queues
 > *Distributing tasks among workers*
 >
-> [*RabbitMQ tutorial - Work Queues — RabbitMQ*](https://www.rabbitmq.com/tutorials/tutorial-two-dotnet.html)
+> ![](https://www.rabbitmq.com/favicon.ico) [*RabbitMQ tutorial - Work Queues — RabbitMQ*](https://www.rabbitmq.com/tutorials/tutorial-two-dotnet.html)
 >　
 
 　

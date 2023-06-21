@@ -86,6 +86,7 @@
 ## # Sending
 - Publisher는 RabbitMQ에 접속하고 메시지 보낸 후 종료
     ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/sending.png)
+
 - _**Send.cs -**_ [_**Final code**_](https://github.com/rabbitmq/rabbitmq-tutorials/blob/main/dotnet/Send/Send.cs "‌")
     - 필요한 namespace 추가
     ```
@@ -164,21 +165,19 @@
 
 　
 
-## **# Receiving**
-
----
-
+## # Receiving
 - Publisher는 메시지 보낸 후 종료했었지만, Consumer는 계속 실행하여 메시지 수신하고 출력
+    ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/receiving.png)
   ‌
 - _**Receive.cs -**_ [_**Final code**_](https://github.com/rabbitmq/rabbitmq-tutorials/blob/main/dotnet/Receive/Receive.cs "‌")
-  - 필요한 namespace 추가
+    - 필요한 namespace 추가
     ```
-    using RabbitMQ.Client;
-    using RabbitMQ.Client.Events;
     using System;
     using System.Text;
+    using RabbitMQ.Client;
+    using RabbitMQ.Client.Events;
     ```
-  - 클랫스 셋업은 publisher와 동일함.
+    - 클랫스 셋업은 publisher와 동일함.
     ```
     class Receive
     {
@@ -199,7 +198,7 @@
         }
     }
     ```
-  - 큐에서 메시지 전달받기
+- 큐에서 메시지 전달받기
     ```
     using RabbitMQ.Client;using RabbitMQ.Client.Events;
     using System;
@@ -239,23 +238,19 @@
     }
     ```
 
-![receiving.png?version=1&modificationDate=1670579505981&api=v2](https://nwiki.neowiz.com/download/thumbnails/146261815/receiving.png?version=1&modificationDate=1670579505981&api=v2)
 
 　
 
-## **# Putting it all together**
-
----
-
+## # Putting it all together
 - Open two terminals.
 - You can run the clients in any order, as both declares the queue. We will run the consumer first so you can see it waiting for and then receiving the message:
-  ```
-  cd Receive
-  dotnet run
-  ```
+    ```
+    cd Receive
+    dotnet run
+    ```
 - Then run the producer:
-  ```
-  cd Send
-  dotnet run
-  ```
+    ```
+    cd Send
+    dotnet run
+    ```
 - The consumer will print the message it gets from the publisher via RabbitMQ. The consumer will keep running, waiting for messages, so try restarting the publisher several times.

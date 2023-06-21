@@ -47,11 +47,11 @@
     ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/python-one.png)
 
 - **The .NET client library**
-    - 메시징을 위한 개방형 범용 프로토콜인 * **AMQP 0-9-1 ** *을 사용.
+    - 메시징을 위한 개방형 범용 프로토콜인 ***AMQP 0-9-1***을 사용.
     - RabbitMQ에서 제공하는 .NET 클라이언트를 사용.
     - 클라이언트는 .NET Core 및 .NET Framework 4.5.1 이상을 지원.
     - 여기서는 RabbitMQ .NET 클라이언트 5.0 및 .NET Core를 사용.
-    - Windows에서 _**Powershell **_을 사용하고 있다고 가정.
+    - Windows에서 _**Powershell**_을 사용하고 있다고 가정.
 
 
 　

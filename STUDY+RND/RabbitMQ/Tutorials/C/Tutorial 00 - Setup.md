@@ -9,7 +9,6 @@
 
 - **GitHub**
     - [*GitHub - alanxz/rabbitmq-c: RabbitMQ C client*](https://github.com/alanxz/rabbitmq-c)
-    - ***"D:\Projects\RabbitMQ-C\"*** *위치로 받았다고 가정*
 
 - **CMake**
     - cmake-gui 실행
@@ -17,8 +16,8 @@
     - **Configure 실행**
 
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/cmake.png)
-        - Where is the source code: ***D:\Projects\RabbitMQ-C\\***
-        - Where to build the binaries: ***D:\Projects\RabbitMQ-C\\***
+        - Where is the source code: ***...\Projects\RabbitMQ-C\\***
+        - Where to build the binaries: ***...\Projects\RabbitMQ-C\\***
         - Configure 클릭
         - Visual Studio 버전 선택
         - Finish 클릭
@@ -44,24 +43,25 @@
 ## # 주요 프로젝트
 
 - **rabbitmq**
-  - _Configuration Type: **Dynamic Library (.dll)**_
-  - _Target Name: **rabbitmq.4**_
-  - _Output: **$(SolutionDir)\librabbitmq\$(Configuration)**_
-    - _rabbitmq.4.dll_
-    - _rabbitmq.4.lib_
-    - _rabbitmq.4.pdb_
+    - *Configuration Type:* ***Dynamic Library (.dll)***
+    - *Target Name:* ***rabbitmq.4***
+    - *Output:* ***$(SolutionDir)\librabbitmq\$(Configuration)***
+        - *rabbitmq.4.dll*
+        - *rabbitmq.4.lib*
+        - *rabbitmq.4.pdb*
 - **rabbitmq-static**
-  - _Configuration Type: **Static Library (.lib)**_
-  - _Target Name: **librabbitmq.4**_
-  - _Output: **$(SolutionDir)\librabbitmq\$(Configuration)**_
-    - _librabbitmq.4.lib_
+    - *Configuration Type:* ***Static Library (.lib)***
+    - *Target Name:* ***librabbitmq.4***
+    - *Output:* ***$(SolutionDir)\librabbitmq\$(Configuration)***
+        - *librabbitmq.4.lib*
 - **test_basic**
-  - _Configuration Type: **Application (.exe)**_
-  - _Target Name: **test_basic**_
-  - _Output: **$(SolutionDir)\tests\$(Configuration)**_
-    - _test_basic.exe_
-    - _test_basic.pdb_
-  - _Description: **rabbitmap-static** 라이브러리를 사용하는 **Basic Publish/Consume** 테스트_
+  - *Configuration Type: ***Application (.exe)***
+  - *Target Name:* ***test_basic***
+  - *Output:* ***$(SolutionDir)\tests\$(Configuration)***
+    - *test_basic.exe*
+    - *test_basic.pdb*
+  - *Description: **rabbitmap-static** 라이브러리를 사용하는 **Basic Publish/Consume** 테스트*
+
 
 　
 

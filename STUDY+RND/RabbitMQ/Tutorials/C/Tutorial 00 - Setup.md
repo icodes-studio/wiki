@@ -90,15 +90,11 @@
 - **빌드 실패**
     - 각 프로젝트에 추가 환경 설정 필요.
     - **examples-common**
-        - *C/C++ > General > Additional Include Directories*
-            - ***../include 추가***
+        > - *C/C++ > General > Additional Include Directories* > ***../include 추가***
     - **그 외 모든 프로젝트**
-        - *C/C++ > General > Additional Include Directories*
-            - ***../include 추가***
-        - *Linker > General > Additional Library Directories*
-            - ***../librabbitmq/$(Configuration) 추가***
-        - *Linker > Input*
-            - ***rabbitmq.4.lib 추가***
+        > - *C/C++ > General > Additional Include Directories* > ***../include 추가***
+        > - *Linker > General > Additional Library Directories* > ***../librabbitmq/$(Configuration) 추가***
+        > - *Linker > Input* > ***rabbitmq.4.lib 추가***
 - **실행 실패**
     - rabbitmq.4.dll 없음
     - rabbitmq.4.dll 준비

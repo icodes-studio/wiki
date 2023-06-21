@@ -23,16 +23,15 @@
     ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/C++ConsoleApp.png)
 
 - **프로젝트 환경설정**
-    - 설명을 위해 절대 경로로 표현했을 뿐...
     - *C/C++ > General > Additional Include Directories*
-        - ***D:\Projects\RabbitMQ-C\include***
-        - ***D:\Projects\RabbitMQ-C\librabbitmq***
+        - ***...\Projects\RabbitMQ-C\include***
+        - ***...\Projects\RabbitMQ-C\librabbitmq***
     - *Linker > General > Additional Library Directories*
-        - ***D:\Projects\RabbitMQ-C\librabbitmq\$(Configuration)***
+        - ***...\Projects\RabbitMQ-C\librabbitmq\$(Configuration)***
     - *Linker > Input > Additional Dependencies*
         - ***rabbitmq.4.lib***
     - *rabbitmq.4.dll 복사*
-        - from: ***D:\Projects\RabbitMQ-C\librabbitmq\$(Configuration)***
+        - from: ***...\Projects\RabbitMQ-C\librabbitmq\$(Configuration)***
         - to: ***$(SolutionDir)$(Platform)\$(Configuration)\\***
 
 

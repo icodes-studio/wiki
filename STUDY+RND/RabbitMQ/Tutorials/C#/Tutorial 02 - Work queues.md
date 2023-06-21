@@ -245,177 +245,169 @@
 
 ## # Message durability
 - **If RabbitMQ server stops**
-  - RabbitMQ 서버가 죽으면 메시지와 태스크는 날라간다.
-  - 메시지가 손실되지 않도록 하려면 큐와 메시지에 관련 속성(durable, persistent)을 설정해야 한다.
+    - RabbitMQ 서버가 죽으면 메시지와 태스크는 날라간다.
+    - 메시지가 손실되지 않도록 하려면 큐와 메시지에 관련 속성(durable, persistent)을 설정해야 한다.
 - **Queue에 durable 속성 설정**
-  - NewTask.cs, Worker.cs 둘 다 코드 업데이트
-  - 큐의 durable 속성을 true로 설정
-  - ***주의: 기존에 durable:false로 생성된 큐는 미리 삭제 해야한다.***
-    ```
-    channel.QueueDeclare(
-        queue: "task_queue",
-        durable: true,
-        exclusive: false,
-        autoDelete: false,
-        arguments: null);
-    ```
+    - NewTask.cs, Worker.cs 둘 다 코드 업데이트
+    - 큐의 durable 속성을 true로 설정
+    - ***주의: 기존에 durable:false로 생성된 큐는 미리 삭제 해야한다.***
+        ```
+        channel.QueueDeclare(
+            queue: "task_queue",
+            durable: true,
+            exclusive: false,
+            autoDelete: false,
+            arguments: null);
+        ```
 - **발행 메시지에 persistent 속성 설정**
-  - NewTask.cs 코드 업데이트
-  - 발행 메시지 persistent 속성을 true로 설정
-    ```
-    var properties = channel.CreateBasicProperties();
-    properties.Persistent = true;
-    　
-    channel.BasicPublish(
-        exchange: "",
-        routingKey: "task_queue",
-        basicProperties: properties,
-        body: body);
-    ```
+    - NewTask.cs 코드 업데이트
+    - 발행 메시지 persistent 속성을 true로 설정
+        ```
+        var properties = channel.CreateBasicProperties();
+        properties.Persistent = true;
+        　
+        channel.BasicPublish(
+            exchange: "",
+            routingKey: "task_queue",
+            basicProperties: properties,
+            body: body);
+        ```
 - **Note on Message Persistence**
-  - 이러한 메시지 persistent 방식은 완벽한 복구를 보장하지 못한다.
-  - 으... 응?
-  - Although it tells RabbitMQ to save the message to disk, there is still a short time window when RabbitMQ has accepted a message and hasn't saved it yet. Also, RabbitMQ doesn't do fsync(2) for every message -- it may be just saved to cache and not really written to the disk.
-  - The persistence guarantees aren't strong, but it's more than enough for our simple task queue.
-  - 강력한 복구 시나리오를 적용하려면 [***Publisher Confirms 레퍼런스*** ](https://www.rabbitmq.com/confirms.html "‌")참고.
-  - [***7번째 튜토리얼 - Publisher Confirms*** ](https://www.rabbitmq.com/tutorials/tutorial-seven-dotnet.html "‌")에서도 쉽게 설명하고 있음.
+    - 이러한 메시지 persistent 방식은 완벽한 복구를 보장하지 못한다.
+    - 으... 응?
+    - Although it tells RabbitMQ to save the message to disk, there is still a short time window when RabbitMQ has accepted a message and hasn't saved it yet. Also, RabbitMQ doesn't do fsync(2) for every message -- it may be just saved to cache and not really written to the disk.
+    - The persistence guarantees aren't strong, but it's more than enough for our simple task queue.
+    - 강력한 복구 시나리오를 적용하려면 [***Publisher Confirms 레퍼런스***](https://www.rabbitmq.com/confirms.html)참고.
+    - [***7번째 튜토리얼 - Publisher Confirms***](https://www.rabbitmq.com/tutorials/tutorial-seven-dotnet.html)에서도 쉽게 설명하고 있음.
 
 ‌
+　
 
-## **# Fair Dispatch**
-
----
-
+## # Fair Dispatch
 - **디스패치 개선**
-  - 바쁜 놈은 바쁘고 한가한 놈은 한가 하게 운영 될 수 있다.
-  - 메시지가 큐에 들어올 때 RabbitMQ가 Worker들의 상태를 살피지 않고 무조건 순서대로 디스패치를 하기 때문.
-  - 즉, Consumer의 unacknowledged messages의 갯수는 고려하지 않는다.
+    - 바쁜 놈은 바쁘고 한가한 놈은 한가 하게 운영 될 수 있다.
+    - 메시지가 큐에 들어올 때 RabbitMQ가 Worker들의 상태를 살피지 않고 무조건 순서대로 디스패치를 하기 때문.
+    - 즉, Consumer의 unacknowledged messages의 갯수는 고려하지 않는다.
 - **BasicQos 메서드 호출 with prefetchCount=1**
-  - Worker에게 한 번에 하나 이상의 메시지를 주지 않도록 한다.
-  - 즉, ACK를 받기 전까지 이 Worker에게 메시지 디스패치 안 됨.
-  - 대신 아직 사용 중이 아닌 다음 작업자에게 전달.
+    - Worker에게 한 번에 하나 이상의 메시지를 주지 않도록 한다.
+    - 즉, ACK를 받기 전까지 이 Worker에게 메시지 디스패치 안 됨.
+    - 대신 아직 사용 중이 아닌 다음 작업자에게 전달.
 - **코드 업데이트 - *Worker.cs* **
-  - After the existing QueueDeclare in Worker.cs add the call to BasicQos:
-    ```
-    channel.QueueDeclare(
-        queue: "task_queue",
-        durable: true,
-        exclusive: false,
-        autoDelete: false,
-        arguments: null);
-    channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
-    ```
+    - After the existing QueueDeclare in Worker.cs add the call to BasicQos:
+        ```
+        channel.QueueDeclare(
+            queue: "task_queue",
+            durable: true,
+            exclusive: false,
+            autoDelete: false,
+            arguments: null);
+        channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
+        ```
 
-![prefetch-count.png?version=1&modificationDate=1670579515557&api=v2](https://nwiki.neowiz.com/download/attachments/146261822/prefetch-count.png?version=1&modificationDate=1670579515557&api=v2)
+        ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/prefetch-count.png)
 
-‌
 
-## **# Putting it all together**
+　‌
 
----
-
+## # Putting it all together
 - Open two terminals.
 - Run the consumer (worker) first so that the topology (primarily the queue) is in place.
-- [***Here is its complete code***](https://github.com/rabbitmq/rabbitmq-tutorials/blob/main/dotnet/Worker/Worker.cs "‌")
-  ```
-  using System;
-  using System.Text;
-  using System.Threading;
-  using RabbitMQ.Client;
-  using RabbitMQ.Client.Events;
-   
-  class Worker
-  {
-      public static void Main()
-      {
-          var factory = new ConnectionFactory() { HostName = "localhost" };
-          using (var connection = factory.CreateConnection())
-          using (var channel = connection.CreateModel())
-          {
-              channel.QueueDeclare(
-                  queue: "task_queue",
-                  durable: true,
-                  exclusive: false,
-                  autoDelete: false,
-                  arguments: null);
-   
-              channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
-   
-              Console.WriteLine(" [*] Waiting for messages.");
-   
-              var consumer = new EventingBasicConsumer(channel);
-              consumer.Received += (model, ea) =>
-              {
-                  byte[] body = ea.Body.ToArray();
-                  var message = Encoding.UTF8.GetString(body);
-                  Console.WriteLine(" [x] Received {0}", message);
-   
-                  int dots = message.Split('.').Length - 1;
-                  Thread.Sleep(dots * 1000);
-                  Console.WriteLine(" [x] Done");
-   
-                  // here channel could also be accessed as ((EventingBasicConsumer)sender).Model
-                  channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
-              };
-   
-              channel.BasicConsume(
-                  queue: "task_queue",
-                  autoAck: false,
-                  consumer: consumer);
-   
-              Console.WriteLine(" Press [enter] to exit.");
-              Console.ReadLine();
-          }
-      }
-  }
-  ```
+- [***Here is its complete code***](https://github.com/rabbitmq/rabbitmq-tutorials/blob/main/dotnet/Worker/Worker.cs)
+    ```
+    using System;
+    using System.Text;
+    using System.Threading;
+    using RabbitMQ.Client;
+    using RabbitMQ.Client.Events;
+     
+    class Worker
+    {
+        public static void Main()
+        {
+            var factory = new ConnectionFactory() { HostName = "localhost" };
+            using (var connection = factory.CreateConnection())
+            using (var channel = connection.CreateModel())
+            {
+                channel.QueueDeclare(
+                    queue: "task_queue",
+                    durable: true,
+                    exclusive: false,
+                    autoDelete: false,
+                    arguments: null);
+     
+                channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
+     
+                Console.WriteLine(" [*] Waiting for messages.");
+     
+                var consumer = new EventingBasicConsumer(channel);
+                consumer.Received += (model, ea) =>
+                {
+                    byte[] body = ea.Body.ToArray();
+                    var message = Encoding.UTF8.GetString(body);
+                    Console.WriteLine(" [x] Received {0}", message);
+     
+                    int dots = message.Split('.').Length - 1;
+                    Thread.Sleep(dots * 1000);
+                    Console.WriteLine(" [x] Done");
+     
+                    // here channel could also be accessed as ((EventingBasicConsumer)sender).Model
+                    channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
+                };
+     
+                channel.BasicConsume(
+                    queue: "task_queue",
+                    autoAck: false,
+                    consumer: consumer);
+     
+                Console.WriteLine(" Press [enter] to exit.");
+                Console.ReadLine();
+            }
+        }
+    }
+    ```
 - Now run the task publisher.
-- [***Its final code is...***](https://github.com/rabbitmq/rabbitmq-tutorials/blob/main/dotnet/NewTask/NewTask.cs "‌")
-  ```
-  using System;
-  using System.Text;
-  using RabbitMQ.Client;
-   
-  class NewTask
-  {
-      public static void Main(string[] args)
-      {
-          var factory = new ConnectionFactory() { HostName = "localhost" };
-          using (var connection = factory.CreateConnection())
-          using (var channel = connection.CreateModel())
-          {
-              channel.QueueDeclare(
-                  queue: "task_queue",
-                  durable: true,
-                  exclusive: false,
-                  autoDelete: false,
-                  arguments: null);
-   
-              var message = GetMessage(args);
-              var body = Encoding.UTF8.GetBytes(message);
-              var properties = channel.CreateBasicProperties();
-              properties.Persistent = true;
-   
-              channel.BasicPublish(
-                  exchange: "",
-                  routingKey: "task_queue",
-                  basicProperties: properties,
-                  body: body);
-   
-              Console.WriteLine(" [x] Sent {0}", message);
-          }
-   
-          Console.WriteLine(" Press [enter] to exit.");
-          Console.ReadLine();
-      }
-   
-      private static string GetMessage(string[] args)
-      {
-          return ((args.Length > 0) ? string.Join(" ", args) : "Hello World!");
-      }
-  }
-  ```
-  ```
-
-
-  ```
+- [***Its final code is...***](https://github.com/rabbitmq/rabbitmq-tutorials/blob/main/dotnet/NewTask/NewTask.cs)
+    ```
+    using System;
+    using System.Text;
+    using RabbitMQ.Client;
+     
+    class NewTask
+    {
+        public static void Main(string[] args)
+        {
+            var factory = new ConnectionFactory() { HostName = "localhost" };
+            using (var connection = factory.CreateConnection())
+            using (var channel = connection.CreateModel())
+            {
+                channel.QueueDeclare(
+                    queue: "task_queue",
+                    durable: true,
+                    exclusive: false,
+                    autoDelete: false,
+                    arguments: null);
+     
+                var message = GetMessage(args);
+                var body = Encoding.UTF8.GetBytes(message);
+                var properties = channel.CreateBasicProperties();
+                properties.Persistent = true;
+     
+                channel.BasicPublish(
+                    exchange: "",
+                    routingKey: "task_queue",
+                    basicProperties: properties,
+                    body: body);
+     
+                Console.WriteLine(" [x] Sent {0}", message);
+            }
+     
+            Console.WriteLine(" Press [enter] to exit.");
+            Console.ReadLine();
+        }
+     
+        private static string GetMessage(string[] args)
+        {
+            return ((args.Length > 0) ? string.Join(" ", args) : "Hello World!");
+        }
+    }
+    ```

@@ -33,7 +33,7 @@
         - ***rabbitmq.4.lib***
     - *rabbitmq.4.dll 복사*
         - from: ***D:\Projects\RabbitMQ-C\librabbitmq\$(Configuration)***
-        - to: ***$(SolutionDir)$(Platform)\$(Configuration)\ ***
+        - to: ***$(SolutionDir)$(Platform)\$(Configuration)\\***
 
 
 

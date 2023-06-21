@@ -213,7 +213,7 @@
     - ACK 응답 타임아웃
         - 30 minutes by default
         - You can increase this timeout as described in [***Delivery Acknowledgement Timeout***](https://www.rabbitmq.com/consumers.html#acknowledgement-timeout)
-- **코드 업데이트 - *Worker.cs* **
+- **코드 업데이트 - _Worker.cs_ **
     - After the existing WriteLine, add a call to ***BasicAck*** and update BasicConsume with ***autoAck:false***
         ```
             Console.WriteLine(" [x] Done");

@@ -91,7 +91,6 @@
 　
 
 ## # Summary
-
     ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/python-six.png)
 
 - **Our RPC will work like this**

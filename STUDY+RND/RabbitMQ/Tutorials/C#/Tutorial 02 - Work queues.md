@@ -292,7 +292,7 @@
     - Worker에게 한 번에 하나 이상의 메시지를 주지 않도록 한다.
     - 즉, ACK를 받기 전까지 이 Worker에게 메시지 디스패치 안 됨.
     - 대신 아직 사용 중이 아닌 다음 작업자에게 전달.
-- **코드 업데이트 - *Worker.cs* **
+- **코드 업데이트** - *Worker.cs*
     - After the existing QueueDeclare in Worker.cs add the call to BasicQos:
         ```
         channel.QueueDeclare(

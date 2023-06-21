@@ -1,7 +1,7 @@
 ## Tutorial.1 - "Hello World!"
 > *The simplest thing that does something*
 >
-> *https://github.com/icoder/C-RabbitMQ/-/tree/master/Tutorials/C%2BHelloWorld*
+> *https://github.com/icodes-studio/wiki/tree/main/STUDY%2BRND/RabbitMQ/A/Tutorials/C%2BHelloWorld*
 
 　
 
@@ -40,7 +40,7 @@
 
 ## # Final code
 
-- ***HelloWorld.cpp -*** [***Final code***](https://github.com/icoder/C-RabbitMQ/-/blob/master/Tutorials/C%2BHelloWorld/HelloWorld.cpp)
+- ***HelloWorld.cpp -*** [***Final code***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/A/Tutorials/C%2BHelloWorld/HelloWorld.cpp)
     ```
     #include <stdio.h>
     #include <stdlib.h>

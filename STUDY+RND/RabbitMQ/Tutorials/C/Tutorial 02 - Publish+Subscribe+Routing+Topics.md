@@ -2,9 +2,9 @@
 
 > *Receiving messages selectively*
 >
-> [*https://github.com/icoder/C-RabbitMQ/-/tree/master/Tutorials/C%2BListen*](https://github.com/icoder/C-RabbitMQ/-/tree/master/Tutorials/C%2BListen)
+> *https://github.com/icodes-studio/wiki/tree/main/STUDY%2BRND/RabbitMQ/A/Tutorials/C%2BListen*
 >
-> [*https://github.com/icoder/C-RabbitMQ/-/tree/master/Tutorials/C%2BSend*](https://github.com/icoder/C-RabbitMQ/-/tree/master/Tutorials/C%2BSend)
+> *https://github.com/icodes-studio/wiki/tree/main/STUDY%2BRND/RabbitMQ/A/Tutorials/C%2BSend*
 
 　
 
@@ -30,15 +30,15 @@
 ## # Setup
 
 - **프로젝트 생성**
-    - [***Listen***](https://github.com/icoder/C-RabbitMQ/-/tree/master/Tutorials/C%2BListen)
+    - [***Listen***](https://github.com/icodes-studio/wiki/tree/main/STUDY%2BRND/RabbitMQ/A/Tutorials/C%2BListen)
         - Console App
         - 컨슈머(Consumer)
         - 큐와 익스체인지를 특정 키로 바인딩 하고 수신 대기.
-    - [***Send***](https://github.com/icoder/C-RabbitMQ/-/tree/master/Tutorials/C%2BSend)
+    - [***Send***](https://github.com/icodes-studio/wiki/tree/main/STUDY%2BRND/RabbitMQ/A/Tutorials/C%2BSend)
         - Console App
         - 퍼블리셔(Publisher)
         - 지정한 익스체인지로 메시지 발행
-    - [***Common***](https://github.com/icoder/C-RabbitMQ/-/tree/master/Tutorials/C%2BCommon)
+    - [***Common***](https://github.com/icodes-studio/wiki/tree/main/STUDY%2BRND/RabbitMQ/A/Tutorials/C%2BCommon)
         - Static library (.lib)
         - 튜토리얼에서 사용하는 공용 유틸리티 헬퍼
     - ***프로젝트 설정은...***
@@ -49,7 +49,7 @@
 
 ## # Final code
 
-- ***Listen.cpp -*** [***Final code***](https://github.com/icoder/C-RabbitMQ/-/blob/master/Tutorials/C%2BListen/Listen.cpp)
+- ***Listen.cpp -*** [***Final code***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/A/Tutorials/C%2BListen/Listen.cpp)
     - 컨슈머(Consumer)
     - 큐와 익스체인지를 특정 키로 바인딩 하고 수신 대기.
         ```
@@ -230,7 +230,7 @@
             return 0;
         }
         ```
-- ***Send.cpp -*** [***Final code***](https://github.com/icoder/C-RabbitMQ/-/blob/master/Tutorials/C%2BSend/Send.cpp)
+- ***Send.cpp -*** [***Final code***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/A/Tutorials/C%2BSend/Send.cpp)
     - 퍼블리셔(Publisher)
     - 지정한 익스체인지로 메시지 발행
         ```
@@ -340,7 +340,7 @@
             return 0;
         }
         ```
-- ***Common.cpp -*** [***Final code***](https://github.com/icoder/study/-/blob/master/RabbitMQ/Tutorials%2BC/Common/Common.cpp)
+- ***Common.cpp -*** [***Final code***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/A/Tutorials/C%2BCommon/Common.cpp)
     - 튜토리얼에서 사용하는 공용 유틸리티 헬퍼
         ```
         #include <ctype.h>

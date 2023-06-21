@@ -9,7 +9,7 @@
 
 - **GitHub**
     - [*GitHub - alanxz/SimpleAmqpClient: Simple C++ Interface to rabbitmq-c*](https://github.com/alanxz/SimpleAmqpClient)
-    - ***D:\Projects\RabbitMQ-C++\\*** *위치로 받았다고 가정*
+    - ***...\Projects\RabbitMQ-C++\\*** *위치로 받았다고 가정*
 - **Pre-requisites**
     - [***boost-1.47.0***](http://www.boost.org/) ***or newer*** *(uses chrono, system internally in addition to other header based libraries such as sharedptr and noncopyable)*
     - [***rabbitmq-c***](http://github.com/alanxz/rabbitmq-c) *you'll need version 0.8.0 or better.*
@@ -18,11 +18,11 @@
     - [***Doxygen***](http://www.stack.nl/~dimitri/doxygen/) *OPTIONAL only necessary to generate API documentation*
 - **CMake**
     - **CMake** 셋업 과정은 [***RabbitMQ C by alanxz***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Tutorials/C/Tutorial%2000%20-%20Setup.md) 참고
-    - the source code location: ***D:/Projects/RabbitMQ-C++***
-    - the binaries location: ***D:/Projects/RabbitMQ-C++***
-    - Boost_INCLUDE_DIR: ***C:/boost_1_76_0***
-    - Rabbitmqc_INCLUDE_DIR: ***D:/Projects/RabbitMQ-C/include***
-    - Rabbitmqc_LIBRARY: ***D:/Projects/RabbitMQ-C/librabbitmq/Debug/rabbitmq.4.lib***
+    - the source code location: ***.../Projects/RabbitMQ-C++***
+    - the binaries location: ***.../Projects/RabbitMQ-C++***
+    - Boost_INCLUDE_DIR: ***.../boost_1_76_0***
+    - Rabbitmqc_INCLUDE_DIR: ***.../Projects/RabbitMQ-C/include***
+    - Rabbitmqc_LIBRARY: ***.../Projects/RabbitMQ-C/librabbitmq/Debug/rabbitmq.4.lib***
     - ENABLE_SSL_SUPPORT: ***unchecked***
     - ENABLE_TESTING: ***checked***
         > - *하위 **/third-party/** 폴더에* [***googletest***](https://github.com/google/googletest) *받아놔야 한다.*

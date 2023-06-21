@@ -13,13 +13,13 @@
     - 게시하려는 우편물을 우체통에 넣으면 편지 배달부가 결국 우편물을 받는 사람에게 배달할 것이라고 확신할 수 있다.
     - 가장 큰 차이점은 종이 대신 이진 데이터를 다룬 다는 것.
 - **전문용어**
-    - _**Producing**_
+    - ***Producing***
         - 메시지 보내기.
         - 메시지를 보내는 프로그램은 _Producer_
 
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/producer.png)
 
-    - _**A queue**_
+    - ***A queue***
         - RabbitMQ 내부에 있는 우편함의 이름.
         - 메시지는 큐 내부에만 저장할 수 있다.
         - 큐는 호스트의 메모리 및 디스크 크기에 의해서만 제한되므로, 본질적으로 큰 메시지 버퍼이다.
@@ -27,7 +27,7 @@
 
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/queue.png)
 
-    - _**Consuming**_
+    - ***Consuming***
         - Consumer는 메시지 수신을 기다리는 프로그램.
 
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/consumer.png)
@@ -40,9 +40,9 @@
 
 ## # "Hello World"
 - 두 개의 프로그램을 작성
-    - 하나의 메시지를 보내는 - _**Producer**_
-    - 메시지를 받아 출력하는 - _**Consumer**_
-    - 메시지 - _**"Hello World"**_
+    - 하나의 메시지를 보내는 - ***Producer***
+    - 메시지를 받아 출력하는 - ***Consumer***
+    - 메시지 - ***"Hello World"***
 
     ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/python-one.png)
 
@@ -51,7 +51,7 @@
     - RabbitMQ에서 제공하는 .NET 클라이언트를 사용.
     - 클라이언트는 .NET Core 및 .NET Framework 4.5.1 이상을 지원.
     - 여기서는 RabbitMQ .NET 클라이언트 5.0 및 .NET Core를 사용.
-    - Windows에서 _**Powershell**_을 사용하고 있다고 가정.
+    - Windows에서 ***Powershell***을 사용하고 있다고 가정.
 
 
 　
@@ -88,7 +88,7 @@
 
     ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/sending.png)
 
-- _**Send.cs -**_ [_**Final code**_](https://github.com/rabbitmq/rabbitmq-tutorials/blob/main/dotnet/Send/Send.cs "‌")
+- ***Send.cs -*** [***Final code***](https://github.com/rabbitmq/rabbitmq-tutorials/blob/main/dotnet/Send/Send.cs)
     - 필요한 namespace 추가
     ```
     using System;
@@ -171,7 +171,7 @@
 
     ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/receiving.png)
   ‌
-- _**Receive.cs -**_ [_**Final code**_](https://github.com/rabbitmq/rabbitmq-tutorials/blob/main/dotnet/Receive/Receive.cs "‌")
+- ***Receive.cs -*** [***Final code***](https://github.com/rabbitmq/rabbitmq-tutorials/blob/main/dotnet/Receive/Receive.cs)
     - 필요한 namespace 추가
     ```
     using System;

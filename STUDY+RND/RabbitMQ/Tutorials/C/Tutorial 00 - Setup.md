@@ -71,7 +71,7 @@
     - 예제만 따로 모아 놓은 프로젝트가 있다.
     - 라이브러리 솔루션 만들 때 ***BUILD_EXAMPLES*** 필드를 체크하고 만들었다면 라이브러리 솔루션에 자동으로 포함되어 있을 것이다.
     - 여기서는 EXAMPLES 솔루션을 별도로 생성할 때 발생하는 문제와 해결책을 설명 함.
-    - [_rabbitmq-c/examples at master · alanxz/rabbitmq-c_](https://github.com/alanxz/rabbitmq-c/tree/master/examples)
+    - [*rabbitmq-c/examples at master · alanxz/rabbitmq-c*](https://github.com/alanxz/rabbitmq-c/tree/master/examples)
 - **CMake**
     - cmake-gui 실행
     - Where is the source code: ***...\\Projects\\RabbitMQ-C\\examples***
@@ -79,9 +79,12 @@
     - ***Configure*** 실행
     - 이런 저런 에러는 걍 무시
     - ***Generate*** 실행하고 솔루션 생성
+
+        ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/rabbitmq-c-examples.png)
+
     - ***Project.sln*** 비쥬얼 스튜디오 오픈
 - **Build**
-    - _ALL_BUILD > Rebuild_
+    - *ALL_BUILD > Rebuild*
 - **빌드 실패**
     - 각 프로젝트에 추가 환경 설정 필요.
     - **examples-common**

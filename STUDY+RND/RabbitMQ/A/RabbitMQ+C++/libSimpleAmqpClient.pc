@@ -1,0 +1,12 @@
+prefix=C:/Program Files (x86)/SimpleAmqpClient
+exec_prefix=${prefix}
+libdir=lib
+includedir=${prefix}/include
+
+Name: SimpleAmqpClient
+Description: C++ wrapper of rabbitmq-c AMQP client library
+Version: 2.6.0
+Requires.private: librabbitmq
+Libs: -L${libdir} -lSimpleAmqpClient
+Libs.private:  -L -loptimized -LD:/Projects/C-RabbitMQ/ThirdParty/boost_1_76_0/lib64-msvc-14.2 -lboost_chrono-vc142-mt-x64-1_76 -L -ldebug -LD:/Projects/C-RabbitMQ/ThirdParty/boost_1_76_0/lib64-msvc-14.2 -lboost_chrono-vc142-mt-gd-x64-1_76 -L -loptimized -LD:/Projects/C-RabbitMQ/ThirdParty/boost_1_76_0/lib64-msvc-14.2 -lboost_system-vc142-mt-x64-1_76 -L -ldebug -LD:/Projects/C-RabbitMQ/ThirdParty/boost_1_76_0/lib64-msvc-14.2 -lboost_system-vc142-mt-gd-x64-1_76
+CFlags: -I${includedir}

@@ -1,0 +1,19 @@
+Start testing: Nov 03 15:05 ╞eCN易I▽易 C﹠A赤卦A
+----------------------------------------------------------
+Unable to find executable: test_api
+1/1 Testing: test_api
+1/1 Test: test_api
+Command: ""
+Directory: D:/Projects/C-RabbitMQ/Alanxz+RabbitMQ+C++/testing
+"test_api" start time: 
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"test_api" end time: Nov 03 15:05 ╞eCN易I▽易 C﹠A赤卦A
+"test_api" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 03 15:05 ╞eCN易I▽易 C﹠A赤卦A

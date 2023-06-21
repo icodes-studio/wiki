@@ -1,4 +1,4 @@
-## Tutorial.2 - Publish/Subscribe
+## Tutorial.2 - Publish/Subscribe/Routing/Topics
 
 > *Receiving messages selectively*
 >

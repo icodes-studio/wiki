@@ -16,11 +16,11 @@
     - **Configure 실행**
 
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/cmake.png)
-        - Where is the source code: ***...\\Projects\\RabbitMQ-C\\***
-        - Where to build the binaries: ***...\\Projects\\RabbitMQ-C\\***
-        - Configure 클릭
-        - Visual Studio 버전 선택
-        - Finish 클릭
+        > - Where is the source code: ***...\\Projects\\RabbitMQ-C\\***
+        > - Where to build the binaries: ***...\\Projects\\RabbitMQ-C\\***
+        > - Configure 클릭
+        > - Visual Studio 버전 선택
+        > - Finish 클릭
     - **Error 발생**
 
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/cmake1.png)
@@ -46,20 +46,20 @@
     - *Configuration Type:* ***Dynamic Library (.dll)***
     - *Target Name:* ***rabbitmq.4***
     - *Output:* ***$(SolutionDir)\\librabbitmq\\$(Configuration)***
-        - *rabbitmq.4.dll*
-        - *rabbitmq.4.lib*
-        - *rabbitmq.4.pdb*
+        > - *rabbitmq.4.dll*
+        > - *rabbitmq.4.lib*
+        > - *rabbitmq.4.pdb*
 - **rabbitmq-static**
     - *Configuration Type:* ***Static Library (.lib)***
     - *Target Name:* ***librabbitmq.4***
     - *Output:* ***$(SolutionDir)\\librabbitmq\\$(Configuration)***
-        - *librabbitmq.4.lib*
+        > - *librabbitmq.4.lib*
 - **test_basic**
     - *Configuration Type:* ***Application (.exe)***
     - *Target Name:* ***test_basic***
     - *Output:* ***$(SolutionDir)\\tests\\$(Configuration)***
-        - *test_basic.exe*
-        - *test_basic.pdb*
+        > - *test_basic.exe*
+        > - *test_basic.pdb*
     - *Description: **rabbitmap-static** 라이브러리를 사용하는 **Basic Publish/Consume** 테스트*
 
 
@@ -88,20 +88,20 @@
 - **빌드 실패**
     - 각 프로젝트에 추가 환경 설정 필요.
     - **examples-common**
-        - *C/C++ > General > Additional Include Directories*
-            > ***../include 추가***
+        > - *C/C++ > General > Additional Include Directories*
+            ***../include 추가***
     - **그 외 모든 프로젝트**
-        - *C/C++ > General > Additional Include Directories*
-            > ***../include 추가***
-        - *Linker > General > Additional Library Directories*
-            > ***../librabbitmq/$(Configuration) 추가***
-        - *Linker > Input*
-            > ***rabbitmq.4.lib 추가***
+        > - *C/C++ > General > Additional Include Directories*
+            ***../include 추가***
+        > - *Linker > General > Additional Library Directories*
+            ***../librabbitmq/$(Configuration) 추가***
+        > - *Linker > Input*
+            ***rabbitmq.4.lib 추가***
 - **실행 실패**
     - rabbitmq.4.dll 없음
     - rabbitmq.4.dll 준비
-        - ***...\\Projects\\RabbitMQ-C\\librabbitmq\\$(Configuration)\\rabbitmq.4.dll*** 파일을
-        - ***...\\Projects\\RabbitMQ-C\\examples\\$(Configuration)\\*** 위치에 복사
+        > - ***...\\Projects\\RabbitMQ-C\\librabbitmq\\$(Configuration)\\rabbitmq.4.dll*** 파일을
+        > - ***...\\Projects\\RabbitMQ-C\\examples\\$(Configuration)\\*** 위치에 복사
 - **프로젝트 간략 설명**
     - ***amqp_bind***
         > - 큐 바인딩 예제

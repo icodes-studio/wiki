@@ -57,12 +57,12 @@
     - 하지만 다음을 제외하고 대부분의 속성은 거의 사용되지 않는다.
         - **Persistent**
             - 메시지 persistent 유무 지정
-            - [_두 번째 튜토리얼 참고_](https://nwiki.neowiz.com/pages/viewpage.action?pageId=143443037)
+            - [*두 번째 튜토리얼 참고*](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Tutorials/C%23/Tutorial%2002%20-%20Work%20queues.md)
         - **DeliveryMode**
             - Persistent 속성과 같은 것을 처리한다.
         - **ContentType**
             - 인코딩의 mime-type을 기술한다.
-            - _eg. application/json_
+            - *eg. application/json*
         - **ReplyTo**
             - 콜백 큐 이름을 지정하는 데 사용된다.
         - **CorrelationId**

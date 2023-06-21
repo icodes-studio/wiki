@@ -23,7 +23,7 @@
         > - Visual Studio 버전 선택
         > - Finish 클릭
 
-    - **Error 해결**
+    - **Error**
 
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/cmake1.png)
         - 위 그림처럼 에러가 발생할 거임.
@@ -87,7 +87,7 @@
     - ***Project.sln*** 비쥬얼 스튜디오 오픈
 - **Build**
     - *ALL_BUILD > Rebuild*
-- **빌드 실패 해결**
+- **빌드 실패**
     - 각 프로젝트에 추가 환경 설정 필요.
     - **examples-common**
         > - *C/C++ > General > Additional Include Directories* > ***../include 추가***
@@ -95,7 +95,7 @@
         > - *C/C++ > General > Additional Include Directories* > ***../include 추가***
         > - *Linker > General > Additional Library Directories* > ***../librabbitmq/$(Configuration) 추가***
         > - *Linker > Input* > ***rabbitmq.4.lib 추가***
-- **실행 실패 해결**
+- **실행 실패**
     - rabbitmq.4.dll 없음
     - rabbitmq.4.dll 준비
         > - ***...\\Projects\\RabbitMQ-C\\librabbitmq\\$(Configuration)\\rabbitmq.4.dll*** 파일을

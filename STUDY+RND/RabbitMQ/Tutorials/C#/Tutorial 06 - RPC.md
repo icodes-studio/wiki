@@ -1,7 +1,7 @@
 ## Tutorial.6 - RPC
 > *Request/reply pattern example*
 >
-> [*RabbitMQ tutorial - RPC — RabbitMQ*](https://www.rabbitmq.com/tutorials/tutorial-six-dotnet.html)
+> ![](https://www.rabbitmq.com/favicon.ico) [*RabbitMQ tutorial - RPC — RabbitMQ*](https://www.rabbitmq.com/tutorials/tutorial-six-dotnet.html)
 
 　
 

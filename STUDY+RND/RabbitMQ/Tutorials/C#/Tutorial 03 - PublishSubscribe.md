@@ -99,186 +99,175 @@
 
 ‌
 
-## **# Temporary queues**
-
----
-
+## # Temporary queues
 - **Logger의 Queue**
-  - 이전 튜토리얼에서는 큐에 이름을 지정하여 생성했고...
-  - Producer와 Consumer가 동일한 큐 이름을 가리키도록 했다.
-  - Producer와 Consumer간에 큐를 공유하려면 이름을 지정하는 것이 중요.
-  - 하지만, 로거는 일부가 아닌 모든 로그 메시지를 수신해야 한다.
-  - 또한, 이전 메시지가 아닌 현재 flowing 메시지에만 관심이 있다.
+    - 이전 튜토리얼에서는 큐에 이름을 지정하여 생성했고...
+    - Producer와 Consumer가 동일한 큐 이름을 가리키도록 했다.
+    - Producer와 Consumer간에 큐를 공유하려면 이름을 지정하는 것이 중요.
+    - 하지만, 로거는 일부가 아닌 모든 로그 메시지를 수신해야 한다.
+    - 또한, 이전 메시지가 아닌 현재 flowing 메시지에만 관심이 있다.
 - **To solve that we need...**
-  - RabbitMQ에 접속할 때마다 새로운 빈 큐가 필요.
-  - 그러기 위해, 랜덤한 이름을 가지는 큐를 생성.
-  - Consumer 연결을 끊으면 Queue가 자동으로 삭제되어야 한다.
+    - RabbitMQ에 접속할 때마다 새로운 빈 큐가 필요.
+    - 그러기 위해, 랜덤한 이름을 가지는 큐를 생성.
+    - Consumer 연결을 끊으면 Queue가 자동으로 삭제되어야 한다.
 - **when we supply no parameters to QueueDeclare()**
-  - we create a...
-  - **non-durable**
-  - **exclusive**
-  - **autodelete**
-  - queue with a generated name:
-    ```
-    var queueName = channel.QueueDeclare().QueueName;
-    ```
-  - eg. queueName = _**amq.gen-JzTY20BRgKO-HjmUJj0wLg**_
+    - we create a...
+    - **non-durable**
+    - **exclusive**
+    - **autodelete**
+    - queue with a generated name:
+        ```
+        var queueName = channel.QueueDeclare().QueueName;
+        ```
+    - eg. queueName = ***amq.gen-JzTY20BRgKO-HjmUJj0wLg***
 
 ‌
+　
 
-## **# Bindings**
+## # Bindings
 
----
-
-![bindings.png?version=1&modificationDate=1670579516887&api=v2](https://nwiki.neowiz.com/download/attachments/146261826/bindings.png?version=1&modificationDate=1670579516887&api=v2)
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/bindings.png)
 
 - **QueueBind()**
-  - We've already created a fanout exchange and a queue.
-  - Now we need to tell the exchange to send messages to our queue.
-  - That relationship between exchange and a queue is called a binding.
-    ```
-    channel.QueueBind(
-        queue: queueName,
-        exchange: "logs",
-        routingKey: "");
-    ```
-  - From now on the logs exchange will append messages to our queue.
+    - We've already created a fanout exchange and a queue.
+    - Now we need to tell the exchange to send messages to our queue.
+    - That relationship between exchange and a queue is called a binding.
+        ```
+        channel.QueueBind(
+            queue: queueName,
+            exchange: "logs",
+            routingKey: "");
+        ```
+    - From now on the logs exchange will append messages to our queue.
 - **Listing bindings**
-  - You can list existing bindings using, you guessed it,
-    ```
-    rabbitmqctl.bat list_bindings
-    ```
-  - Management UI에서도 확인 가능
+    - You can list existing bindings using, you guessed it,
+        ```
+        rabbitmqctl.bat list_bindings
+        ```
+    - Management UI에서도 확인 가능
 
-![list\_bindings.png](https://trello.com/1/cards/634ce1ca92552c015f731999/attachments/634e1c5bf7cd4a04ac89d0ea/download/list_bindings.png)
-
-‌
-
-## **# Final code**
-
----
-
-![python-three-overall.png?version=1&modificationDate=1670579516865&api=v2](https://nwiki.neowiz.com/download/attachments/146261826/python-three-overall.png?version=1&modificationDate=1670579516865&api=v2)
-
-- _**EmitLog.cs -**_ [_**Final code**_](https://github.com/rabbitmq/rabbitmq-tutorials/blob/main/dotnet/EmitLog/EmitLog.cs "‌")
-  - We now want to publish messages to our _"logs"_ exchange.
-  - A routingKey value is ignored for fanout exchanges.
-    ```
-    using System;
-    using System.Text;
-    using RabbitMQ.Client;
-     
-    class EmitLog
-    {
-        public static void Main(string[] args)
-        {
-            var factory = new ConnectionFactory() { HostName = "localhost" };
-            using (var connection = factory.CreateConnection())
-            using (var channel = connection.CreateModel())
-            {
-                channel.ExchangeDeclare(exchange: "logs", type: ExchangeType.Fanout);
-     
-                var message = GetMessage(args);
-                var body = Encoding.UTF8.GetBytes(message);
-     
-                channel.BasicPublish(
-                    exchange: "logs",
-                    routingKey: "",
-                    basicProperties: null,
-                    body: body);
-     
-                Console.WriteLine(" [x] Sent {0}", message);
-            }
-     
-            Console.WriteLine(" Press [enter] to exit.");
-            Console.ReadLine();
-        }
-     
-        private static string GetMessage(string[] args)
-        {
-            return ((args.Length > 0) ? string.Join(" ", args) : "info: Hello World!");
-        }
-    }
-    ```
-    ```
-    ‌
-    ```
-- _**ReceiveLogs.cs -**_ [_**Final code**_](https://github.com/rabbitmq/rabbitmq-tutorials/blob/main/dotnet/ReceiveLogs/ReceiveLogs.cs "‌")
-  - 익스체인지에 바인딩된 큐가 없으면 메시지는 손실된다.
-  - 즉, 컨슈머가 없으면 메시지는 안전하게 지워진다.
-    ```
-    using System;
-    using System.Text;
-    using RabbitMQ.Client;
-    using RabbitMQ.Client.Events;
-     
-    class ReceiveLogs
-    {
-        public static void Main()
-        {
-            var factory = new ConnectionFactory() { HostName = "localhost" };
-            using (var connection = factory.CreateConnection())
-            using (var channel = connection.CreateModel())
-            {
-                channel.ExchangeDeclare(exchange: "logs", type: ExchangeType.Fanout);
-     
-                var queueName = channel.QueueDeclare().QueueName;
-                channel.QueueBind(
-                    queue: queueName,
-                    exchange: "logs",
-                    routingKey: "");
-     
-                Console.WriteLine(" [*] Waiting for logs.");
-     
-                var consumer = new EventingBasicConsumer(channel);
-                consumer.Received += (model, ea) =>
-                {
-                    byte[] body = ea.Body.ToArray();
-                    var message = Encoding.UTF8.GetString(body);
-                    Console.WriteLine(" [x] {0}", message);
-                };
-     
-                channel.BasicConsume(
-                    queue: queueName,
-                    autoAck: true,
-                    consumer: consumer);
-     
-                Console.WriteLine(" Press [enter] to exit.");
-                Console.ReadLine();
-            }
-        }
-    }
-    ```
-    ```
-    ‌
-    ```
+        ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/list_bindings.png)
 
 ‌
+　
 
-## **# Putting it all together**
+## # Final code
 
----
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/python-three-overall.png)
+
+- ***EmitLog.cs -*** [***Final code***](https://github.com/rabbitmq/rabbitmq-tutorials/blob/main/dotnet/EmitLog/EmitLog.cs)
+    - We now want to publish messages to our _"logs"_ exchange.
+    - A routingKey value is ignored for fanout exchanges.
+        ```
+        using System;
+        using System.Text;
+        using RabbitMQ.Client;
+         
+        class EmitLog
+        {
+            public static void Main(string[] args)
+            {
+                var factory = new ConnectionFactory() { HostName = "localhost" };
+                using (var connection = factory.CreateConnection())
+                using (var channel = connection.CreateModel())
+                {
+                    channel.ExchangeDeclare(exchange: "logs", type: ExchangeType.Fanout);
+         
+                    var message = GetMessage(args);
+                    var body = Encoding.UTF8.GetBytes(message);
+         
+                    channel.BasicPublish(
+                        exchange: "logs",
+                        routingKey: "",
+                        basicProperties: null,
+                        body: body);
+         
+                    Console.WriteLine(" [x] Sent {0}", message);
+                }
+         
+                Console.WriteLine(" Press [enter] to exit.");
+                Console.ReadLine();
+            }
+         
+            private static string GetMessage(string[] args)
+            {
+                return ((args.Length > 0) ? string.Join(" ", args) : "info: Hello World!");
+            }
+        }
+        ```
+
+- ***ReceiveLogs.cs -*** [***Final code***](https://github.com/rabbitmq/rabbitmq-tutorials/blob/main/dotnet/ReceiveLogs/ReceiveLogs.cs)
+    - 익스체인지에 바인딩된 큐가 없으면 메시지는 손실된다.
+    - 즉, 컨슈머가 없으면 메시지는 안전하게 지워진다.
+        ```
+        using System;
+        using System.Text;
+        using RabbitMQ.Client;
+        using RabbitMQ.Client.Events;
+         
+        class ReceiveLogs
+        {
+            public static void Main()
+            {
+                var factory = new ConnectionFactory() { HostName = "localhost" };
+                using (var connection = factory.CreateConnection())
+                using (var channel = connection.CreateModel())
+                {
+                    channel.ExchangeDeclare(exchange: "logs", type: ExchangeType.Fanout);
+         
+                    var queueName = channel.QueueDeclare().QueueName;
+                    channel.QueueBind(
+                        queue: queueName,
+                        exchange: "logs",
+                        routingKey: "");
+         
+                    Console.WriteLine(" [*] Waiting for logs.");
+         
+                    var consumer = new EventingBasicConsumer(channel);
+                    consumer.Received += (model, ea) =>
+                    {
+                        byte[] body = ea.Body.ToArray();
+                        var message = Encoding.UTF8.GetString(body);
+                        Console.WriteLine(" [x] {0}", message);
+                    };
+         
+                    channel.BasicConsume(
+                        queue: queueName,
+                        autoAck: true,
+                        consumer: consumer);
+         
+                    Console.WriteLine(" Press [enter] to exit.");
+                    Console.ReadLine();
+                }
+            }
+        }
+        ```
+
+
+　‌
+
+## # Putting it all together
 
 - If you want to save logs to a file, just open a console and type:
-  ```
-  cd ReceiveLogs
-  dotnet run > logs_from_rabbit.log
-  ```
+    ```
+    cd ReceiveLogs
+    dotnet run > logs_from_rabbit.log
+    ```
 - If you wish to see the logs on your screen, spawn a new terminal and run:
-  ```
-  cd ReceiveLogs
-  dotnet run
-  ```
+    ```
+    cd ReceiveLogs
+    dotnet run
+    ```
 - And of course, to emit logs type:
-  ```
-  cd EmitLog
-  dotnet run
-  ```
+    ```
+    cd EmitLog
+    dotnet run
+    ```
 - Using rabbitmqctl list_bindings you can verify that the code actually creates bindings and queues as we want. With two ReceiveLogs.cs programs running you should see something like:
-  ```
-  rabbitmqctl.bat list_bindings
-  # => Listing bindings ...
-  # => logs    exchange        amq.gen-JzTY20BRgKO-HjmUJj0wLg  queue           []
-  # => logs    exchange        amq.gen-vso0PVvyiRIL2WoV3i48Yg  queue           []
-  # => ...done.
-  ```
+    ```
+    rabbitmqctl.bat list_bindings
+    # => Listing bindings ...
+    # => logs    exchange        amq.gen-JzTY20BRgKO-HjmUJj0wLg  queue           []
+    # => logs    exchange        amq.gen-vso0PVvyiRIL2WoV3i48Yg  queue           []
+    # => ...done.
+    ```

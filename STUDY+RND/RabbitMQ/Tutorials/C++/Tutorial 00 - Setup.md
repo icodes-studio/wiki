@@ -79,10 +79,10 @@
 - **Pre-requisites**
     - [***RabbitMQ C 라이브러리 빌드***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Tutorials/C/Tutorial%2000%20-%20Setup.md)
     - **설명을 위해**
-        - ***boost*** 라이브러리는 ***C:\boost_1_76_0***에 설치 되었다고 가정
-        - ***RabbitMQ C*** 소스 루트는 ***D:\Projects\RabbitMQ+C***에 준비 되었다고 가정
-        - ***RabbitMQ C++*** 소스 루트는 ***D:\Projects\RabbitMQ+C++***에 준비 되었다고 가정
-        - 이 튜토리얼 프로젝트는 ***D:\Projects\Tutorials+C++\Consume***에 준비한다고 가정
+        - ***boost*** 라이브러리는 ***C:\boost_1_76_0*** 위치에 설치 되었다고 가정
+        - ***RabbitMQ C*** 소스는 ***D:\Projects\RabbitMQ+C*** 위치에 준비 되었다고 가정
+        - ***RabbitMQ C++*** 소스는 ***D:\Projects\RabbitMQ+C++*** 위치에 준비 되었다고 가정
+        - 이 튜토리얼 프로젝트는 ***D:\Projects\Tutorials+C++\Consume*** 위치에 준비한다고 가정
 - **프로젝트 속성**
   - *C/C++ > General > Additional Include Directories*
     - ***C:\boost_1_76_0***

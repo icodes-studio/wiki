@@ -36,20 +36,22 @@
     - 애플리케이션은 Producer와 Consumer 모두가 될 수도 있다.
 
 
-
 　
 
 ## # "Hello World"
 - 두 개의 프로그램을 작성
-  - 하나의 메시지를 보내는 - _**Producer**_
-  - 메시지를 받아 출력하는 - _**Consumer**_
-  - 메시지 - _**"Hello World"**_
+    - 하나의 메시지를 보내는 - _**Producer**_
+    - 메시지를 받아 출력하는 - _**Consumer**_
+    - 메시지 - _**"Hello World"**_
+
+    ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/python-one.png)
+
 - **The .NET client library**
-  - 메시징을 위한 개방형 범용 프로토콜인 _**AMQP 0-9-1 **_을 사용.
-  - RabbitMQ에서 제공하는 .NET 클라이언트를 사용.
-  - 클라이언트는 .NET Core 및 .NET Framework 4.5.1 이상을 지원.
-  - 여기서는 RabbitMQ .NET 클라이언트 5.0 및 .NET Core를 사용.
-  - Windows에서 _**Powershell **_을 사용하고 있다고 가정.
+    - 메시징을 위한 개방형 범용 프로토콜인 _**AMQP 0-9-1 **_을 사용.
+    - RabbitMQ에서 제공하는 .NET 클라이언트를 사용.
+    - 클라이언트는 .NET Core 및 .NET Framework 4.5.1 이상을 지원.
+    - 여기서는 RabbitMQ .NET 클라이언트 5.0 및 .NET Core를 사용.
+    - Windows에서 _**Powershell **_을 사용하고 있다고 가정.
 
 ![python-one.png?version=1&modificationDate=1670579506021&api=v2](https://nwiki.neowiz.com/download/attachments/146261815/python-one.png?version=1&modificationDate=1670579506021&api=v2)
 

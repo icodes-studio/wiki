@@ -2,6 +2,7 @@
 > *Sending messages to many consumers at once*
 >
 > ![](https://www.rabbitmq.com/favicon.ico) [*RabbitMQ tutorial - Publish/Subscribe — RabbitMQ*](https://www.rabbitmq.com/tutorials/tutorial-three-dotnet.html)
+>
 >　
 
 ‌　

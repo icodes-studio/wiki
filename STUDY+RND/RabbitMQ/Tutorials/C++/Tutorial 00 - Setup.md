@@ -1,7 +1,7 @@
 ## RabbitMQ C++ by alanxz
 > [*GitHub - alanxz/SimpleAmqpClient: Simple C++ Interface to rabbitmq-c*](https://github.com/alanxz/SimpleAmqpClient)
 >
-> ‌
+>　
 
 　
 

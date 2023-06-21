@@ -2,7 +2,7 @@
 > *Receiving messages based on a pattern*
 >
 > ![](https://www.rabbitmq.com/favicon.ico) [*RabbitMQ tutorial - Topics — RabbitMQ*](https://www.rabbitmq.com/tutorials/tutorial-five-dotnet.html)
->
+>　
 
 　
 

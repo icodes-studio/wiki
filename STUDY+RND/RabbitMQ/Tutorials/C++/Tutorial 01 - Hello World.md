@@ -2,7 +2,7 @@
 > *The simplest thing that does something*
 >
 > [*RabbitMQ tutorial - "Hello World!" — RabbitMQ*](https://www.rabbitmq.com/tutorials/tutorial-one-dotnet.html)
->
+>　
 
 　
 

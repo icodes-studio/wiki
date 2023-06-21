@@ -16,6 +16,7 @@
     - **Configure 실행**
 
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/cmake.png)
+        
             > - Where is the source code: ***...\\Projects\\RabbitMQ-C\\***
             > - Where to build the binaries: ***...\\Projects\\RabbitMQ-C\\***
             > - Configure 클릭

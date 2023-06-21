@@ -13,9 +13,9 @@
 ## # Overview
 
 - **공식 튜토리얼 중 이 예제가 커버하는 영역**
-  - [*3. Publish/Subscribe (using fanout)*](https://nwiki.neowiz.com/pages/viewpage.action?pageId=143443039)
-  - [*4. Routing (using direct)*](https://nwiki.neowiz.com/pages/viewpage.action?pageId=143443041)
-  - [*5. Topics*](https://nwiki.neowiz.com/pages/viewpage.action?pageId=143443043)
+  - [*3. Publish/Subscribe (using fanout)*](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Tutorials/C%23/Tutorial%2003%20-%20PublishSubscribe.md)
+  - [*4. Routing (using direct)*](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Tutorials/C%23/Tutorial%2004%20-%20Routing.md)
+  - [*5. Topics*](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Tutorials/C%23/Tutorial%2005%20-%20Topics.md)
 
 - **참고**
   - [*rabbitmq-c/amqp_listen.c at master · alanxz/rabbitmq-c*](https://github.com/alanxz/rabbitmq-c/blob/master/examples/amqp_listen.c)

@@ -2,8 +2,7 @@
 > *Distributing tasks among workers*
 >
 > [*RabbitMQ tutorial - Work Queues — RabbitMQ*](https://www.rabbitmq.com/tutorials/tutorial-two-dotnet.html)
-
-　
+>
 
 　
 

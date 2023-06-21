@@ -1,12 +1,10 @@
 ## Tutorial.2 - Publish/Subscribe/Routing/Topics
-
 > *Receiving messages selectively*
 >
 > *https://github.com/icodes-studio/wiki/tree/main/STUDY%2BRND/RabbitMQ/A/Tutorials/C%2BListen*
 >
 > *https://github.com/icodes-studio/wiki/tree/main/STUDY%2BRND/RabbitMQ/A/Tutorials/C%2BSend*
-
-　
+>
 
 　
 

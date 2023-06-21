@@ -1,9 +1,8 @@
 ## Tutorial.1 - "Hello World!"
 > *The simplest thing that does something*
->
+> 
 > *https://github.com/icodes-studio/wiki/tree/main/STUDY%2BRND/RabbitMQ/A/Tutorials/C%2BHelloWorld*
->
->
+> 
 
 
 　

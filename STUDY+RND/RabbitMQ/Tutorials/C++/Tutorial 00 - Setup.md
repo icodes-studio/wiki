@@ -39,13 +39,13 @@
     - **해결방법**
         > - 간단히 #warning 구문을 지우던가...
         > - ***#pragma message***를 사용 하던가...
-
-            #ifdef _MSC_VER
-            #pragma message("amqp.h is deprecated, use rabbitmq-c/amqp.h instead.")
-            #else
-            #warning "amqp.h is deprecated, use rabbitmq-c/amqp.h instead."
-            #endif
-
+        ```
+        #ifdef _MSC_VER
+        #pragma message("amqp.h is deprecated, use rabbitmq-c/amqp.h instead.")
+        #else
+        #warning "amqp.h is deprecated, use rabbitmq-c/amqp.h instead."
+        #endif
+        ```
         > - ***[[deprecated]]*** *attributes*를 사용 하던가...
         > - ***__declspec(deprecated)***를 사용 하던가...
 

@@ -85,6 +85,7 @@
 
 ## # Sending
 - Publisher는 RabbitMQ에 접속하고 메시지 보낸 후 종료
+
     ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/sending.png)
 
 - _**Send.cs -**_ [_**Final code**_](https://github.com/rabbitmq/rabbitmq-tutorials/blob/main/dotnet/Send/Send.cs "‌")
@@ -167,6 +168,7 @@
 
 ## # Receiving
 - Publisher는 메시지 보낸 후 종료했었지만, Consumer는 계속 실행하여 메시지 수신하고 출력
+
     ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/receiving.png)
   ‌
 - _**Receive.cs -**_ [_**Final code**_](https://github.com/rabbitmq/rabbitmq-tutorials/blob/main/dotnet/Receive/Receive.cs "‌")

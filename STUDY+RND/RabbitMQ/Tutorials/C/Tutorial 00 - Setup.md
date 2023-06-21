@@ -1,11 +1,11 @@
-## RabbitMQ C by alanxz
+## **RabbitMQ C by alanxz**
 > [*GitHub - alanxz/rabbitmq-c: RabbitMQ C client*](https://github.com/alanxz/rabbitmq-c)
 
 　
 
 　
 
-## # Setup & Build
+## **# Setup & Build**
 
 - **GitHub**
     - [*GitHub - alanxz/rabbitmq-c: RabbitMQ C client*](https://github.com/alanxz/rabbitmq-c)
@@ -42,7 +42,7 @@
 
 　
 
-## # 주요 프로젝트
+## **# 주요 프로젝트**
 
 - **rabbitmq**
     - *Configuration Type:* ***Dynamic Library (.dll)***
@@ -57,17 +57,17 @@
     - *Output:* ***$(SolutionDir)\\librabbitmq\\$(Configuration)***
         > - *librabbitmq.4.lib*
 - **test_basic**
+    - ****rabbitmap-static*** *라이브러리를 사용하는 **Basic Publish/Consume** 테스트*
     - *Configuration Type:* ***Application (.exe)***
     - *Target Name:* ***test_basic***
     - *Output:* ***$(SolutionDir)\\tests\\$(Configuration)***
         > - *test_basic.exe*
         > - *test_basic.pdb*
-    - *Description: **rabbitmap-static** 라이브러리를 사용하는 **Basic Publish/Consume** 테스트*
 
 
 　
 
-## # Running the examples
+## **# Running the examples**
 
 - **GitHub**
     - 예제만 따로 모아 놓은 프로젝트가 있다.

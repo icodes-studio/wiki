@@ -1,7 +1,7 @@
 ## Tutorial.5 - Topics
 > *Receiving messages based on a pattern*
 >
-> [*RabbitMQ tutorial - Topics — RabbitMQ*](https://www.rabbitmq.com/tutorials/tutorial-five-dotnet.html)
+> ![](https://www.rabbitmq.com/favicon.ico) [*RabbitMQ tutorial - Topics — RabbitMQ*](https://www.rabbitmq.com/tutorials/tutorial-five-dotnet.html)
 
 　
 

@@ -1,7 +1,7 @@
 ## Tutorial.4 - Routing
 > *Receiving messages selectively*
 >
-> [*RabbitMQ tutorial - Routing — RabbitMQ*](https://www.rabbitmq.com/tutorials/tutorial-four-dotnet.html)
+> ![](https://www.rabbitmq.com/favicon.ico) [*RabbitMQ tutorial - Routing — RabbitMQ*](https://www.rabbitmq.com/tutorials/tutorial-four-dotnet.html)
 
 　‌
 

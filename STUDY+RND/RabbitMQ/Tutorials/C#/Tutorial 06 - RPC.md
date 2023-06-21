@@ -13,7 +13,6 @@
     - 원격 컴퓨터에서 기능(function)을 실행하고 결과를 기다려야 하는 경우.
     - 이러한 패턴은 Remote procedure call (RPC)로 알려져 있다.
     - 피보나치 수를 반환하는 RPC 시스템을 구축해 보자.
-
 - **클라이언트 인터페이스 설계**
     - RPC 요청을 보내고 응답이 수신될 때까지 대기 후 결과 반환.
         ```
@@ -58,7 +57,7 @@
     - 하지만 다음을 제외하고 대부분의 속성은 거의 사용되지 않는다.
         - **Persistent**
             - 메시지 persistent 유무 지정
-            - [_두 번째 튜토리얼 참고_](https://nwiki.neowiz.com/pages/viewpage.action?pageId=143443037 "‌")
+            - [_두 번째 튜토리얼 참고_](https://nwiki.neowiz.com/pages/viewpage.action?pageId=143443037)
         - **DeliveryMode**
             - Persistent 속성과 같은 것을 처리한다.
         - **ContentType**

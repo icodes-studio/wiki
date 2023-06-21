@@ -14,7 +14,6 @@
     - 로그 레벨(severity)뿐만 아니라 로그가 발생된 소스 위치를 기반으로 로그를 구독할 수 있도록 업그레이드.
     - You might know this concept from the ***syslog unix tool***, which routes logs based on both severity (info/warn/crit...) and facility (auth/cron/kern...).
     - We need to learn about a more complex ***topic exchange***.
-
 - **Topic exchange**
     - 점으로 구분된 단어 목록을 라우팅 키로 사용한다.
     - *eg. "stock.usd.nyse", "nyse.vmw", "quick.orange.rabbit"*
@@ -23,7 +22,6 @@
     - **키 매칭에 와일드 문자 사용 - 패턴매칭**
         - \*(star)는 정확히 한 단어를 대체.
         - \#(hash)는 0개 이상의 단어를 대체.
-
 - **예를 들어...**
 
     ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/python-five.png)
@@ -40,7 +38,6 @@
         - ***"orange"*** - 삭제
         - ***"quick.orange.male.rabbit"*** - 삭제.
         - ***"lazy.orange.male.rabbit"*** - Q2에 전달
-
 - **Topic exchange can behave like other exchanges**
     - 바인딩 키로 "#"(hash)만 사용되면 **Fanout** 처럼 동작.
     - 바인딩 키로 "*"(star)와 "#"(hash)가 사용되지 않으면 **Direct** 처럼 동작.

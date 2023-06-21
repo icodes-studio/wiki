@@ -13,7 +13,6 @@
     - 지금까지 한 Task가 한 Worker에게 전달되는 것을 알아봄.
     - 여기서는 여러 Consumer들에게 메시지가 전달되는 것을 알아본다.
     - 이러한 패턴을 ***"Publish/Subscribe"*** 라고 한다.
-
 - **Simple Logging System**
     - 패턴을 설명하기 위해 간단한 로깅 시스템을 구축할 거임.
     - 동일한 로그 메시지를 수신하는 Receiver Program(Consumer) 두 개.

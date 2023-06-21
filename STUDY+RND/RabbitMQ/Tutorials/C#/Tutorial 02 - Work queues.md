@@ -13,13 +13,11 @@
     - 분산처리 시스템을 구축하기 위해 사용.
     - 여러 작업자(worker)로 분산하는 데 사용할 큐를 생성.
     - This concept is especially useful in web applications where it's impossible to handle a complex task during a short HTTP request window.
-
 - **Program overview**
     - 점이 찍힌 복잡한 작업을 나타내는 문자열을 보냄.
     - 문자열을 받으면 점 하나에 1초 Thread.Sleep() 호출
     - 예를 들어 Hello...로 보낸 작업은 3초 딜레이.
     - 작업자가 바쁜 경우 어떻게 효율적으로 분산처리 시킬지 알아보기 위한 간단한 시뮬레이션.
-
 - **Generate two projects**
     - Like tutorial one we need to generate two projects.
         ```
@@ -32,7 +30,6 @@
         cd ../Worker
         dotnet add package RabbitMQ.Client
         ```
-
 - **NewTask.cs**
     - 일단 아래 코드로 업데이트 (완성된 전체코드 아님)
         ```
@@ -77,11 +74,9 @@
             }
         }
         ```
-
     - 이전 튜토리얼 Send.cs와 다른 부분
         - *큐 이름 변경 - task_queue*
         - *프로그램 아규먼트로 메시지를 입력받음.*
-
 - **Workers.cs**
     - 일단 아래 코드로 업데이트 (완성된 전체코드 아님)
         ```
@@ -131,7 +126,6 @@
             }
         }
         ```
-
     - 이전 튜토리얼 Rceive.cs와 다른 부분
         - *큐 이름 변경 - task_queue*
         - *메시지 중 도트(.) 갯수만큼 1초 딜레이*

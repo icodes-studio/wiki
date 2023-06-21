@@ -14,7 +14,6 @@
     - 메시지의 일부만 선택적으로 구독하는 시스템.
     - 모든 로그 메시지를 구독하여 화면에 출력하는 로거
     - 디스크 절약을 위해 중요한 오류 메시지만 파일에 저장하는 로거
-
 - **선택적 바인딩**
     - 이전 튜토리얼에서는 큐를 익스체인지에 바인딩 할때 ***routingKey*** 인자를 사용하지 않았다.
         ```
@@ -43,13 +42,11 @@
     - 이전 로깅 시스템은 모든 메시지를 모든 컨슈머에게 브로드캐스트.
     - 로그 레벨(severity)에 따라 메시지를 필터링할 수 있도록 확장해보자.
     - For example we may want the script which is writing log messages to the disk to only receive ***critical errors*** , and ***not waste disk space*** on warning or info log messages.
-
 - **Fanout vs Direct**
     - Fanout 방식은 그저 생각없이 브로드캐스팅만 한다.
     - 확장성 없음.
     - 여기서는 ***"Direct"*** 방식을 사용할 거임.
     - 메시지는 라우팅 키와 바인딩 키가 정확히 일치하는 큐로 이동.
-
 - **To illustrate that, consider the following setup**
     - Q1은 ***"orange"*** 키로 바인딩.
     - Q2는 ***"black"*** 그리고 ***"green"*** 두 키로 바인딩

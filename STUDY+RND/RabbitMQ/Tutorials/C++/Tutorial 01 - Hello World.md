@@ -8,7 +8,6 @@
 ## # Introduction
 
 - **공식 C# 튜토리얼 중 이 예제가 커버하는 영역**
-  - *https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Tutorials/C%23/Tutorial%2001%20-%20Hello%20World.md*
   - *https://www.rabbitmq.com/tutorials/tutorial-one-dotnet.html*
   ‌
 - **C++ 프로젝트 세팅은 아래 문서 참고**

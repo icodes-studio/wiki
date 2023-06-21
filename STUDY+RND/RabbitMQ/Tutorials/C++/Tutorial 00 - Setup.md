@@ -11,7 +11,7 @@
     - [*GitHub - alanxz/SimpleAmqpClient: Simple C++ Interface to rabbitmq-c*](https://github.com/alanxz/SimpleAmqpClient)
     - ***D:\Projects\RabbitMQ-C++\\*** *위치로 받았다고 가정*
 - **Pre-requisites**
-    - [***boost-1.47.0 ***](http://www.boost.org/) ***or newer*** *(uses chrono, system internally in addition to other header based libraries such as sharedptr and noncopyable)*
+    - [***boost-1.47.0***](http://www.boost.org/) ***or newer*** *(uses chrono, system internally in addition to other header based libraries such as sharedptr and noncopyable)*
     - [***rabbitmq-c***](http://github.com/alanxz/rabbitmq-c) *you'll need version 0.8.0 or better.*
     - [***cmake 3.5+***](http://www.cmake.org/) *what is needed for the build system*
     - [***google test***](https://github.com/google/googletest) *https://github.com/google/googletest*
@@ -39,13 +39,13 @@
     - **해결방법**
         > - 간단히 #warning 구문을 지우던가...
         > - ***#pragma message***를 사용 하던가...
-        ```
-        #ifdef _MSC_VER
-        #pragma message("amqp.h is deprecated, use rabbitmq-c/amqp.h instead.")
-        #else
-        #warning "amqp.h is deprecated, use rabbitmq-c/amqp.h instead."
-        #endif
-        ```
+            ```
+            #ifdef _MSC_VER
+            #pragma message("amqp.h is deprecated, use rabbitmq-c/amqp.h instead.")
+            #else
+            #warning "amqp.h is deprecated, use rabbitmq-c/amqp.h instead."
+            #endif
+            ```
         > - ***[[deprecated]]*** *attributes*를 사용 하던가...
         > - ***__declspec(deprecated)***를 사용 하던가...
 

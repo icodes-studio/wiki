@@ -16,11 +16,11 @@
     - **Configure 실행**
 
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/cmake.png)
-        > - Where is the source code: ***...\\Projects\\RabbitMQ-C\\***
-        > - Where to build the binaries: ***...\\Projects\\RabbitMQ-C\\***
-        > - Configure 클릭
-        > - Visual Studio 버전 선택
-        > - Finish 클릭
+            > - Where is the source code: ***...\\Projects\\RabbitMQ-C\\***
+            > - Where to build the binaries: ***...\\Projects\\RabbitMQ-C\\***
+            > - Configure 클릭
+            > - Visual Studio 버전 선택
+            > - Finish 클릭
     - **Error 발생**
 
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/cmake1.png)
@@ -73,16 +73,16 @@
     - 여기서는 EXAMPLES 솔루션을 별도로 생성할 때 발생하는 문제와 해결책을 설명 함.
     - [*rabbitmq-c/examples at master · alanxz/rabbitmq-c*](https://github.com/alanxz/rabbitmq-c/tree/master/examples)
 - **CMake**
-    - cmake-gui 실행
-    - Where is the source code: ***...\\Projects\\RabbitMQ-C\\examples***
-    - Where to build the binaries: ***...\\Projects\\RabbitMQ-C\\examples***
-    - ***Configure*** 실행
-    - 이런 저런 에러는 걍 무시
-    - ***Generate*** 실행하고 솔루션 생성
+    > - cmake-gui 실행
+    > - Where is the source code: ***...\\Projects\\RabbitMQ-C\\examples***
+    > - Where to build the binaries: ***...\\Projects\\RabbitMQ-C\\examples***
+    > - ***Configure*** 실행
+    > - 이런 저런 에러는 걍 무시
+    > - ***Generate*** 실행하고 솔루션 생성
 
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/rabbitmq-c-examples.png)
 
-    - ***Project.sln*** 비쥬얼 스튜디오 오픈
+    > - ***Project.sln*** 비쥬얼 스튜디오 오픈
 - **Build**
     - *ALL_BUILD > Rebuild*
 - **빌드 실패**

@@ -1,7 +1,7 @@
 ## Tutorial.1 - "Hello World!"
 > *The simplest thing that does something*
 >
-> https://github.com/icoder/C-RabbitMQ/-/tree/master/Tutorials/C%2BHelloWorld
+> *https://github.com/icoder/C-RabbitMQ/-/tree/master/Tutorials/C%2BHelloWorld*
 
 　
 

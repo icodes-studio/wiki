@@ -91,7 +91,8 @@
 　
 
 ## # Summary
-    ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/python-six.png)
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/python-six.png)
 
 - **Our RPC will work like this**
     - 클라 시작 시 ***anonymous exclusive callback queue*** 생성.

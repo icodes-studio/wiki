@@ -53,53 +53,47 @@
     - 여기서는 RabbitMQ .NET 클라이언트 5.0 및 .NET Core를 사용.
     - Windows에서 _**Powershell **_을 사용하고 있다고 가정.
 
-![python-one.png?version=1&modificationDate=1670579506021&api=v2](https://nwiki.neowiz.com/download/attachments/146261815/python-one.png?version=1&modificationDate=1670579506021&api=v2)
 
 　
 
-## **# Setup**
-
----
-
+## # Setup
 - **.NET Core toolchain PATH 설정 확인**
-  ```
-  dotnet --help
-  ```
-  - 위 명령의 도움말이 잘 나오는지 확인.
+    ```
+    dotnet --help
+    ```
+    - 위 명령의 도움말이 잘 나오는지 확인.
 - **Publisher와 Consumer를 위한 두 개의 콘솔 프로젝트 생성**
-  ```
-  dotnet new console --name Send
-  mv Send/Program.cs Send/Send.cs
-  dotnet new console --name Receive
-  mv Receive/Program.cs Receive/Receive.cs
-  ```
-  - Send와 Receive 이름을 가지는 새로운 디렉토리 생성됨.
-  - CS 파일은 이름 좀 예쁘게 바꿔주고...
+    ```
+    dotnet new console --name Send
+    mv Send/Program.cs Send/Send.cs
+    dotnet new console --name Receive
+    mv Receive/Program.cs Receive/Receive.cs
+    ```
+    - Send와 Receive 이름을 가지는 새로운 디렉토리 생성됨.
+    - CS 파일은 이름 좀 예쁘게 바꿔주고...
 - **RabbitMQ.Client 라이브러리 패키지 추가**
-  ```
-  cd Send
-  dotnet add package RabbitMQ.Client
-  cd ../Receive
-  dotnet add package RabbitMQ.Client
-  ```
-  - 준비 완료
+    ```
+    cd Send
+    dotnet add package RabbitMQ.Client
+    cd ../Receive
+    dotnet add package RabbitMQ.Client
+    ```
+    - 준비 완료
+
 
 　
 
-## **# Sending**
-
----
-
+## # Sending
 - Publisher는 RabbitMQ에 접속하고 메시지 보낸 후 종료
-  ‌
+    ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/sending.png)
 - _**Send.cs -**_ [_**Final code**_](https://github.com/rabbitmq/rabbitmq-tutorials/blob/main/dotnet/Send/Send.cs "‌")
-  - 필요한 namespace 추가
+    - 필요한 namespace 추가
     ```
     using System;
-    using RabbitMQ.Client;
     using System.Text;
+    using RabbitMQ.Client;    
     ```
-  - 클래스 셋업
+    - 클래스 셋업
     ```
     class Send
     {
@@ -109,10 +103,10 @@
         }
     }
     ```
-  - 서버 Connection 생성
-  - 소켓 연결 추상화로 프로토콜 버전 협상 및 인증 등을 처리
-  - 여기서는 로컬 머신의 RabbitMQ 노드에 연결
-  - 작업할 채널(세션)을 만듬.
+    - 서버 Connection 생성
+    - 소켓 연결 추상화로 프로토콜 버전 협상 및 인증 등을 처리
+    - 여기서는 로컬 머신의 RabbitMQ 노드에 연결
+    - 작업할 채널(세션)을 만듬.
     ```
     class Send
     {
@@ -127,9 +121,9 @@
         }
     }
     ```
-  - 메시지를 보내기 위해 큐를 선언 (없으면 생성)
-  - 메시지를 byte array로 인코딩한 후 전송(Publish)
-  - 전송 완료 후 channel과 connection은 dispose 됨.
+    - 메시지를 보내기 위해 큐를 선언 (없으면 생성)
+    - 메시지를 byte array로 인코딩한 후 전송(Publish)
+    - 전송 완료 후 channel과 connection은 dispose 됨.
     ```
     using System;
     using RabbitMQ.Client;
@@ -167,7 +161,6 @@
     }
     ```
 
-![sending.png?version=1&modificationDate=1670579506019&api=v2](https://nwiki.neowiz.com/download/thumbnails/146261815/sending.png?version=1&modificationDate=1670579506019&api=v2)
 
 　
 

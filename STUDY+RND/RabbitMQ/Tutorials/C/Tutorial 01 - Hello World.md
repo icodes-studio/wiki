@@ -31,8 +31,8 @@
     - *Linker > Input > Additional Dependencies*
         - ***rabbitmq.4.lib***
     - *rabbitmq.4.dll 복사*
-        - from: ***...\Projects\RabbitMQ-C\librabbitmq\$(Configuration)***
-        - to: ***$(SolutionDir)$(Platform)\$(Configuration)\\***
+        - *from:* ***...\Projects\RabbitMQ-C\librabbitmq\$(Configuration)***
+        - *to:* ***$(SolutionDir)$(Platform)\$(Configuration)\\***
 
 
 

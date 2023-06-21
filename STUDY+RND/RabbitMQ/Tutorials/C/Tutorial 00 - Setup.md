@@ -14,7 +14,7 @@
     - cmake-gui 실행
     - *eg. C:\Program Files\CMake\bin\cmake-gui.exe*
     - **Configure 실행**
-    
+
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/cmake.png)
         - Where is the source code: ***D:\Projects\RabbitMQ-C\***
         - Where to build the binaries: ***D:\Projects\RabbitMQ-C\***
@@ -24,18 +24,15 @@
     - **Error 발생**
 
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/cmake1.png)
-
         - 위 그림처럼 에러가 발생할 거임.
     - **ENABLE\\_SSL\\_SUPPORT 언체크**
 
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/cmake2.png)
-
         - ENABLE\\_SSL\\_SUPPORT 언체크하고 다시 Configure 실행
         - *or... Optionally install* [*OpenSSL*](http://www.openssl.org/) *v1.1.1+ to enable support for connecting to RabbitMQ over SSL/TLS*
     - **Generate 실행**
 
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/cmake3.png)
-
         - ***솔루션(rabbitmq-c.sln)*** 생성됨
 - **Build**
   - *ALL_BUILD > Rebuild*

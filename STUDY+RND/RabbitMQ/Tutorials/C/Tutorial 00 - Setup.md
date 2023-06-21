@@ -1,6 +1,6 @@
 ## **RabbitMQ C by alanxz**
 > [*GitHub - alanxz/rabbitmq-c: RabbitMQ C client*](https://github.com/alanxz/rabbitmq-c)
-> 
+>
 > 
 
 　

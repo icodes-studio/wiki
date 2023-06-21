@@ -34,7 +34,8 @@
         ```
 
 - **NewTask.cs**
-  - 일단 아래 코드로 업데이트 (완성된 전체코드 아님)
+    - 일단 아래 코드로 업데이트 (완성된 전체코드 아님)
+        ```
         using System;
         using RabbitMQ.Client;
         using System.Text;
@@ -75,6 +76,7 @@
                 return ((args.Length > 0) ? string.Join(" ", args) : "Hello World!");
             }
         }
+        ```
 
     - 이전 튜토리얼 Send.cs와 다른 부분
         - *큐 이름 변경 - task_queue*

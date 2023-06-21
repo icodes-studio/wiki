@@ -1,7 +1,7 @@
 ## Tutorial.1 - "Hello World!"
 > *The simplest thing that does something*
 >
-> ![](https://github.com/fluidicon.png) https://github.com/icoder/C-RabbitMQ/-/tree/master/Tutorials/C%2BHelloWorld
+> https://github.com/icoder/C-RabbitMQ/-/tree/master/Tutorials/C%2BHelloWorld
 
 　
 
@@ -19,6 +19,7 @@
 ## # Setup
 
 - **Console App 프로젝트 생성**
+
     ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/C++ConsoleApp.png)
 
 - **프로젝트 환경설정**

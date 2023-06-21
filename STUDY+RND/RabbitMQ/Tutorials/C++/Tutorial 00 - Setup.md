@@ -25,8 +25,8 @@
     - Rabbitmqc_LIBRARY: ***D:/Projects/RabbitMQ-C/librabbitmq/Debug/rabbitmq.4.lib***
     - ENABLE_SSL_SUPPORT: ***unchecked***
     - ENABLE_TESTING: ***checked***
-        - *하위 **/third-party/** 폴더에* [***googletest***](https://github.com/google/googletest) *받아놔야 한다.*
-        - *컴팔 링킹 에러가 발생하는데... 아직 확인 중...*
+        > - *하위 **/third-party/** 폴더에* [***googletest***](https://github.com/google/googletest) *받아놔야 한다.*
+        > - *컴팔 링킹 에러가 발생하는데... 아직 확인 중...*
 - **Build**
     - *솔루션 **SimpleAmqpClient.sln** 오픈*
     - *ALL_BUILD > Rebuild*
@@ -37,8 +37,8 @@
         ```
     - 원인: ***#warning*** *preprocessor directives* 인식 실패
     - **해결방법**
-        - 간단히 #warning 구문을 지우던가...
-        - ***#pragma message***를 사용 하던가...
+        > - 간단히 #warning 구문을 지우던가...
+        > - ***#pragma message***를 사용 하던가...
         ```
         #ifdef _MSC_VER
         #pragma message("amqp.h is deprecated, use rabbitmq-c/amqp.h instead.")
@@ -46,8 +46,8 @@
         #warning "amqp.h is deprecated, use rabbitmq-c/amqp.h instead."
         #endif
         ```
-        - ***[[deprecated]]*** *attributes*를 사용 하던가...
-        - ***__declspec(deprecated)***를 사용 하던가...
+        > - ***[[deprecated]]*** *attributes*를 사용 하던가...
+        > - ***__declspec(deprecated)***를 사용 하던가...
 
 
 　
@@ -58,15 +58,15 @@
     - *Configuration Type:* ***Dynamic Library (.dll)***
     - *Target Name:* ***SimpleAmqpClient.7***
     - *Output Directory:* ***$(SolutionDir)\\$(Configuration)***
-        - *SimpleAmqpClient.7.dll*
-        - *SimpleAmqpClient.7.lib*
-        - *SimpleAmqpClient.7.pdb*
+        > - *SimpleAmqpClient.7.dll*
+        > - *SimpleAmqpClient.7.lib*
+        > - *SimpleAmqpClient.7.pdb*
 - **test_api**
     - *Configuration Type:* ***Application (.exe)***
     - *Target Name:* ***test_api***
     - *Output Directory:* ***$(SolutionDir)\\testing\\$(Configuration)***
     - ***Description:***
-        - [***googletest***](https://github.com/google/googletest) *외부 라이브러리를 사용하는 유닛 테스트*
-        - ***/third-party/*** *폴더에* ***googletest*** *받고 CMake 돌리면 되는데...*
-        - *컴팔 링킹 에러가 발생하고 있다.*
-        - *아직 확인 중...*
+        > - [***googletest***](https://github.com/google/googletest) *외부 라이브러리를 사용하는 유닛 테스트*
+        > - ***/third-party/*** *폴더에* ***googletest*** *받고 CMake 돌리면 되는데...*
+        > - *컴팔 링킹 에러가 발생하고 있다.*
+        > - *아직 확인 중...*

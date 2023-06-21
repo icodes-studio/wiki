@@ -42,7 +42,7 @@
         - Static library (.lib)
         - 튜토리얼에서 사용하는 공용 유틸리티 헬퍼
     - ***프로젝트 설정은...***
-        - [***C Tutorial.1 - "Hello World!" 참고***](https://nwiki.neowiz.com/pages/viewpage.action?pageId=143443061)
+        - [***C Tutorial.1 - "Hello World!" 참고***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Tutorials/C/Tutorial%2001%20-%20Hello%20World.md)
 
 
 　

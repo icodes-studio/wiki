@@ -17,11 +17,11 @@
 
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/Assets/cmake.png)
 
-            > - Where is the source code: ***...\\Projects\\RabbitMQ-C\\***
-            > - Where to build the binaries: ***...\\Projects\\RabbitMQ-C\\***
-            > - Configure 클릭
-            > - Visual Studio 버전 선택
-            > - Finish 클릭
+        > - Where is the source code: ***...\\Projects\\RabbitMQ-C\\***
+        > - Where to build the binaries: ***...\\Projects\\RabbitMQ-C\\***
+        > - Configure 클릭
+        > - Visual Studio 버전 선택
+        > - Finish 클릭
 
     - **Error 발생**
 

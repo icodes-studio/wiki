@@ -91,78 +91,78 @@
 
 - ***Send.cs -*** [***Final code***](https://github.com/rabbitmq/rabbitmq-tutorials/blob/main/dotnet/Send/Send.cs)
     - 필요한 namespace 추가
-    ```
-    using System;
-    using System.Text;
-    using RabbitMQ.Client;    
-    ```
+        ```
+        using System;
+        using System.Text;
+        using RabbitMQ.Client;    
+        ```
     - 클래스 셋업
-    ```
-    class Send
-    {
-        public static void Main()
-        {
-            ...
-        }
-    }
-    ```
+        ```
+        class Send
+        {
+            public static void Main()
+            {
+                ...
+            }
+        }
+        ```
     - 서버 Connection 생성
     - 소켓 연결 추상화로 프로토콜 버전 협상 및 인증 등을 처리
     - 여기서는 로컬 머신의 RabbitMQ 노드에 연결
     - 작업할 채널(세션)을 만듬.
-    ```
-    class Send
-    {
-        public static void Main()
-        {
-            var factory = new ConnectionFactory() { HostName = "localhost" };
-            using (var connection = factory.CreateConnection())
-            using (var channel = connection.CreateModel())
-            {
-                ...
-            }
-        }
-    }
-    ```
+        ```
+        class Send
+        {
+            public static void Main()
+            {
+                var factory = new ConnectionFactory() { HostName = "localhost" };
+                using (var connection = factory.CreateConnection())
+                using (var channel = connection.CreateModel())
+                {
+                    ...
+                }
+            }
+        }
+        ```
     - 메시지를 보내기 위해 큐를 선언 (없으면 생성)
     - 메시지를 byte array로 인코딩한 후 전송(Publish)
     - 전송 완료 후 channel과 connection은 dispose 됨.
-    ```
-    using System;
-    using RabbitMQ.Client;
-    using System.Text;
-    　
-    class Send
-    {
-        public static void Main()
-        {
-            var factory = new ConnectionFactory() { HostName = "localhost" };
-            using(var connection = factory.CreateConnection())
-            using(var channel = connection.CreateModel())
-            {
-                channel.QueueDeclare(
-                    queue: "hello",
-                    durable: false,
-                    exclusive: false,
-                    autoDelete: false,
-                    arguments: null);
-    　
-                string message = "Hello World!";
-                var body = Encoding.UTF8.GetBytes(message);
-    　
-                channel.BasicPublish(
-                    exchange: "",
-                    routingKey: "hello",
-                    basicProperties: null,
-                    body: body);
-                Console.WriteLine(" [x] Sent {0}", message);
-            }
-    　
-            Console.WriteLine(" Press [enter] to exit.");
-            Console.ReadLine();
-        }
-    }
-    ```
+        ```
+        using System;
+        using RabbitMQ.Client;
+        using System.Text;
+        　
+        class Send
+        {
+            public static void Main()
+            {
+                var factory = new ConnectionFactory() { HostName = "localhost" };
+                using(var connection = factory.CreateConnection())
+                using(var channel = connection.CreateModel())
+                {
+                    channel.QueueDeclare(
+                        queue: "hello",
+                        durable: false,
+                        exclusive: false,
+                        autoDelete: false,
+                        arguments: null);
+        　
+                    string message = "Hello World!";
+                    var body = Encoding.UTF8.GetBytes(message);
+        　
+                    channel.BasicPublish(
+                        exchange: "",
+                        routingKey: "hello",
+                        basicProperties: null,
+                        body: body);
+                    Console.WriteLine(" [x] Sent {0}", message);
+                }
+        　
+                Console.WriteLine(" Press [enter] to exit.");
+                Console.ReadLine();
+            }
+        }
+        ```
 
 
 　
@@ -174,72 +174,72 @@
   ‌
 - ***Receive.cs -*** [***Final code***](https://github.com/rabbitmq/rabbitmq-tutorials/blob/main/dotnet/Receive/Receive.cs)
     - 필요한 namespace 추가
-    ```
-    using System;
-    using System.Text;
-    using RabbitMQ.Client;
-    using RabbitMQ.Client.Events;
-    ```
+        ```
+        using System;
+        using System.Text;
+        using RabbitMQ.Client;
+        using RabbitMQ.Client.Events;
+        ```
     - 클랫스 셋업은 publisher와 동일함.
-    ```
-    class Receive
-    {
-        public static void Main()
-        {
-            var factory = new ConnectionFactory() { HostName = "localhost" };
-            using (var connection = factory.CreateConnection())
-            using (var channel = connection.CreateModel())
-            {
-                channel.QueueDeclare(
-                    queue: "hello",
-                    durable: false,
-                    exclusive: false,
-                    autoDelete: false,
-                    arguments: null);
-                ...
-            }
-        }
-    }
-    ```
+        ```
+        class Receive
+        {
+            public static void Main()
+            {
+                var factory = new ConnectionFactory() { HostName = "localhost" };
+                using (var connection = factory.CreateConnection())
+                using (var channel = connection.CreateModel())
+                {
+                    channel.QueueDeclare(
+                        queue: "hello",
+                        durable: false,
+                        exclusive: false,
+                        autoDelete: false,
+                        arguments: null);
+                    ...
+                }
+            }
+        }
+        ```
 - 큐에서 메시지 전달받기
-    ```
-    using RabbitMQ.Client;using RabbitMQ.Client.Events;
-    using System;
-    using System.Text;
-    　
-    class Receive
-    {
-        public static void Main()
-        {
-            var factory = new ConnectionFactory() { HostName = "localhost" };
-            using(var connection = factory.CreateConnection())
-            using(var channel = connection.CreateModel())
-            {
-                channel.QueueDeclare(
-                    queue: "hello",
-                    durable: false,
-                    exclusive: false,
-                    autoDelete: false,
-                    arguments: null);
-    　
-                var consumer = new EventingBasicConsumer(channel);
-                consumer.Received += (model, ea) =>
-                {
-                    var body = ea.Body.ToArray();
-                    var message = Encoding.UTF8.GetString(body);
-                    Console.WriteLine(" [x] Received {0}", message);
-                };
-                channel.BasicConsume(
-                    queue: "hello",
-                    autoAck: true,
-                    consumer: consumer);
-    　
-                Console.WriteLine(" Press [enter] to exit.");
-                Console.ReadLine();
-            }
-        }
-    }
-    ```
+        ```
+        using RabbitMQ.Client;using RabbitMQ.Client.Events;
+        using System;
+        using System.Text;
+        　
+        class Receive
+        {
+            public static void Main()
+            {
+                var factory = new ConnectionFactory() { HostName = "localhost" };
+                using(var connection = factory.CreateConnection())
+                using(var channel = connection.CreateModel())
+                {
+                    channel.QueueDeclare(
+                        queue: "hello",
+                        durable: false,
+                        exclusive: false,
+                        autoDelete: false,
+                        arguments: null);
+        　
+                    var consumer = new EventingBasicConsumer(channel);
+                    consumer.Received += (model, ea) =>
+                    {
+                        var body = ea.Body.ToArray();
+                        var message = Encoding.UTF8.GetString(body);
+                        Console.WriteLine(" [x] Received {0}", message);
+                    };
+                    channel.BasicConsume(
+                        queue: "hello",
+                        autoAck: true,
+                        consumer: consumer);
+        　
+                    Console.WriteLine(" Press [enter] to exit.");
+                    Console.ReadLine();
+                }
+            }
+        }
+        ```
 
 
 　

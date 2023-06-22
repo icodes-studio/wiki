@@ -19,13 +19,13 @@
     - 씬 에디터에서 바로 UI 요소의 크기를 조절하는 툴.
     - 씬 에디터에서 바로 Rect Transform을 수정할 수 있다.
 
-    ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/rect_tool.png)
+        ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/rect_tool.png)
 
     - 각 꼭짓점마다 하나씩 네 개의 컨트롤 포인트가 나타나며, 이 포인트를 조작하여 피벗 포인트를 기준으로 UI의 크기를 조정.
     - \<Shift\> 버튼을 누른 채로 가장자리 컨트롤 포인트를 움직이면 종횡비를 그대로 유지하면서 크기 조정 가능.
     - 꼭짓점 바깥 부근을 조작하여 회전 가능.
 
-    ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/recttool-scene.png)
+        ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/recttool-scene.png)
 
 
 　
@@ -34,7 +34,7 @@
     - 버튼을 누르면 모드가 토글 된다.
     - 평소 UI를 조작할 때는 Pivot 과 Local 을 설정하면 좋다.
 
-    ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/GUI_Pivot_Local_Buttons.png)
+        ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/GUI_Pivot_Local_Buttons.png)
 
     - Center
         - 선택 영역의 중앙이 피벗 포인트 역할을 한다.

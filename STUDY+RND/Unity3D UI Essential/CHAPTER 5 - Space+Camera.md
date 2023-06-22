@@ -52,109 +52,115 @@
 　
 
 - **렌더링 카메라**
-  - **Screen Space - Camera** 모드는 UI를 렌더링 하는 카메라가 필요하다.
-  - Main Camera 같은 다른 카메라와는 완전히 독립적이다.
-  - UI의 렌더링 설정값을 결정한다.
-  - **Camera Options**
-  - **Clear flags**
+    - **Screen Space - Camera** 모드는 UI를 렌더링 하는 카메라가 필요하다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/render-camera.png)
+    - Main Camera 같은 다른 카메라와는 완전히 독립적이다.
+    - UI의 렌더링 설정값을 결정한다.
+
+- **Camera Options**
+    > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/camera-options.png)
+
+- **Clear flags**
     - 카메라 렌더링 패스 중 어느 부분을 클리어할지 결정.
     - 결국 배경 빈 공간은 이 Clear flags에 따라 초기화된다.
-    - _**<책의 Don't clear 설명이 이상하다!>**_
+    - ***책의 Don't clear 설명이 이상하다!***
     - Skybox
-      - 배경이 Skybox로 클리어한다.
+        - 배경이 Skybox로 클리어한다.
     - Solid Color
-      - 배경이 지정한 단색으로 클리어한다.
+        - 배경이 지정한 단색으로 클리어한다.
     - **Depth only**
-      - 배경을 갱신 않고 이전 화면 위에 그리는데...
-      - Depth 렌더링 순서에 따라 오브젝트를 그린다.
-      - 그러므로 **오브젝트의 Z 깊이는 무시**된다.
-      - 예를 들어 벽을 렌더링 하는 카메라와 사람을 렌더링 하는 카메라가 별도로 있을 때, 벽 안에 사람이 있다 하더라도 사람 렌더링 카메라의 Depth only 옵션이 켜지면 사람이 보인다는 말이다. **투시기능**을 구현할 때 유용하겠다.
-      - 아래 그림에서 큐브는 모두 같은 크기, 맨 왼쪽 큐브는 별도 카메라에서 렌더링 되며 Depth가 우선.
-      - UI도 거리무시, 다른 카메라 오브젝트 위에 그려짐.
+        - 배경을 갱신 않고 이전 화면 위에 그리는데...
+        - Depth 렌더링 순서에 따라 오브젝트를 그린다.
+        - 그러므로 **오브젝트의 Z 깊이는 무시**된다.
+        - 예를 들어 벽을 렌더링 하는 카메라와 사람을 렌더링 하는 카메라가 별도로 있을 때, 벽 안에 사람이 있다 하더라도 사람 렌더링 카메라의 Depth only 옵션이 켜지면 사람이 보인다는 말이다. **투시기능**을 구현할 때 유용하겠다.
+        - 아래 그림에서 큐브는 모두 같은 크기, 맨 왼쪽 큐브는 별도 카메라에서 렌더링 되며 Depth가 우선.
+            > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/cube.gif)
+        - UI도 거리무시, 다른 카메라 오브젝트 위에 그려짐.
     - **Don't Clear**
-      - 배경을 갱신 않고 이전 화면 위에 그린다.
-      - 다른 카메라의 오브젝트 Z 깊이는 유지된다.
-      - UI도 거리유효, 다른 카메라 오브젝트 뒤에 그려짐.
-  - **Culling Mask**
+        - 배경을 갱신 않고 이전 화면 위에 그린다.
+        - 다른 카메라의 오브젝트 Z 깊이는 유지된다.
+            > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/cube2.gif)
+        - UI도 거리유효, 다른 카메라 오브젝트 뒤에 그려짐.
+
+- **Culling Mask**
     - 카메라 시야 안에 어떤 엘리먼트를 그릴 것인지 설정한다.
     - 기본 값은 UI만 그리도록 설정되어 있지만...
     - 경우에 따라 3D 오브젝트를 UI 앞에 그릴 필요도 있다.
-    - _**<책에서 이 설정을 건드리지 말라는 코멘트는 뭘까?>**_
-  - **Projection**
+
+- **Projection**
     - Perspective
-      - 3D 원근법 카메라
-      - UI가 원근감 있게 표현된다.
+        > - 3D 원근법 카메라
+        > - UI가 원근감 있게 표현된다.
     - Orthographic
-      - 2D 평면 카메라
-      - Screen Space - Overlay 뷰와 동일한 모습.
-      - 카메라 렌더링이 필요한 특수한 경우 사용.
-  - **Field of View (FOV)**
+        > - 2D 평면 카메라
+        > - Screen Space - Overlay 뷰와 동일한 모습.
+        > - 카메라 렌더링이 필요한 특수한 경우 사용.
+
+- **Field of View (FOV)**
     - Projection 옵션이 Perspective 일 때 활성화.
     - 카메라의 화각을 결정한다. 보통 60 권장
     - 화각이 넓을수록 면은 더 휘어지게 된다.
-  - **Physical Camera**
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/Dolly-Zoom-Animation.gif)
+
+- **Physical Camera**
     - 이건 설명하자면 길어지니 일단 스킵
     - [유니티 매뉴얼 참고](https://docs.unity3d.com/2021.1/Documentation/Manual/PhysicalCameras.html)
-  - **Clipping Planes**
+
+- **Clipping Planes**
     - 시작 평면과 끝 평면을 정해놓고 그 안의 것만 렌더링.
     - 카메라가 표현하는 최소(Near), 최대(Far) 거리 포인트 지정
-  - **Viewport Rect**
+
+- **Viewport Rect**
     - 카메라의 뷰포인트 크기를 조정한다.
     - 화면의 왼쪽, 아래쪽이 0, 오른쪽, 위쪽이 1.
     - X, Y는 시작 지점, W는 너비, H는 높이.
     - 디폴트는 X=0, Y=0, W=1, H=1로 되어 있어 화면에 꽉 참.
     - X=0, W=0.5, Y=0, H=0.5로 바꿔보면...
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/viewport-1.jpg)
     - X=0.5, W=0.5, Y=0.5, H=0.5로 바꿔보면...
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/viewport-2.jpg)
     - 응용하면 VR 컨텐츠를 만들거나
-    - 미니맵을 만들거나 할 수 있으려나?
-  - **Depth**
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/viewport-3.jpg)
+    - 미니맵을 만들거나 할 수 있으려나?\
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/minimap.png)
+
+- **Depth**
     - 카메라 드로우 순서로 값이 작은 카메라를 먼저 그림.
     - 즉, 값이 큰 카메라는 값이 작은 카메라 위에 그려진다.
     - 다만, 카메라 Clear flags 옵션을 Don't Clear로 지정하면 Z 깊이에 따라 앞뒤가 결정된다.
-  - **Rendering Path**
+
+- **Rendering Path**
     - 렌더링 패스를 지정 - 설명 스킵.
     - [유니티 매뉴얼](https://docs.unity3d.com/2021.1/Documentation/Manual/RenderingPaths.html) 참고
-  - **Target Texture**
+
+- **Target Texture**
     - 카메라 화면을 Render Texture에 실시간으로 그린다.
     - Render Texture가 지정되면 화면에는 그려지지 않는다.
     - 복잡하거나 렌더링 비용이 큰 컨텐츠를 Render Texture에 그려놓고 활용하는 경우가 많다. (eg. 캐릭터)
-  - **Occlusion Culling**
+
+- **Occlusion Culling**
     - 어떤 오브젝트가 다른 오브젝트에 의해 가려져서 카메라에 보이지 않을 때 보이지 않게 되는 오브젝트의 렌더링을 비활성화하는 최적화 기능.
     - 웬만하면 이 기능은 사용한다.
-  - **HDR**
+
+- **HDR**
     - **H**igh **D**ynamic **R**ange 렌더링을 켜거나 끈다.
     - 자세한 내용은 [유니티 문서](https://docs.unity3d.com/2021.1/Documentation/Manual/HDR.html) 참고
-  - **MSAA**
+
+- **MSAA**
     - 메시 테두리에 **M**ulti **S**ample **A**nti**A**liasing 기능을 켜거나 끔.
     - 기능을 킨 경우 Graphics Settings 설정에 따른다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/aacomparison.png)
     - 자세한 내용은 [유니티 매뉴얼](https://docs.unity3d.com/kr/2019.4/Manual/PostProcessing-Antialiasing.html), [관련 포스트](https://vallista.tistory.com/entry/Unity3D-AntiAliasing-Anisotropic-Filtering-%EC%95%88%ED%8B%B0-%EC%97%90%EC%9D%BC%EB%A6%AC%EC%96%B4%EC%8B%B1-%EC%9D%B4%EB%B0%A9%EC%84%B1-%ED%95%84%ED%84%B0%EB%A7%81-%EC%A0%81%EC%9A%A9) 참고
-  - **Allow Dynamic Resolution**
+
+- **Allow Dynamic Resolution**
     - Dynamic Resolution 렌더링 기능을 켜거나 끈다.
     - 자세한 내용은 [유니티 문서](https://docs.unity3d.com/2021.1/Documentation/Manual/DynamicResolution.html) 참고
-  - **Target Display**
+
+- **Target Display**
     - Defines which external device to render to. Between 1 & 8.
     - A camera has up to 8 target display settings. The camera can be controlled to render to one of up to 8 monitors. This is supported only on PC, Mac and Linux. In Game View the chosen display in the Camera Inspector will be shown.
 
-![aacomparison.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/603a371ed59d930570881bf6/2a75510321e8438a1c0c5460f55589e4/aacomparison.png)
-
-![minimap.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/603a371ed59d930570881bf6/cfab531f29e1f09546c26b445686c12e/minimap.png)
-
-![viewport-3.jpg](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/603a371ed59d930570881bf6/08de76c4a9211f53829e7d1e95ace4e7/viewport-3.jpg)
-
-![viewport-2.jpg](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/603a371ed59d930570881bf6/a8032030686a256902816ff64be66025/viewport-2.jpg)
-
-![viewport-1.jpg](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/603a371ed59d930570881bf6/8ef566c7d1dfe40894b12666f1b2f7fb/viewport-1.jpg)
-
-![Dolly-Zoom-Animation.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/603a371ed59d930570881bf6/2f7159ef239784ee555d69dba6466b92/Dolly-Zoom-Animation.gif)
-
-![%ED%8C%8C%EC%9D%BC\_000\_\(1\).gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/603a371ed59d930570881bf6/c9f1547d43b2e634b8384c7a1f25674b/%ED%8C%8C%EC%9D%BC_000_(1).gif)
-
-![%ED%8C%8C%EC%9D%BC\_000.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/603a371ed59d930570881bf6/4e1b4a3ed297718abbb648158363a0d9/%ED%8C%8C%EC%9D%BC_000.gif)
-
-![camera-options.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/603a371ed59d930570881bf6/87210c9b376542587fb49cf4d773f714/camera-options.png)
-
-![render-camera.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/603a371ed59d930570881bf6/5317b7ca04a65d9ca16d5b05d2dd1508/render-camera.png)
-
+　
 　
 
 - **이벤트 카메라**

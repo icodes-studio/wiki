@@ -308,9 +308,12 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
         > - 스프라이트에 Border 값을 주는 경우 패턴이 잘 연결될 수 있도록 주의가 필요하다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/titled.gif)
         > - **Pixels Per Unit Multiplier**
-        > - 　\> 유닛 당 픽셀 수 설정.
-        > - 　\> Sprite의 Pixels Per Unit에 이 값이 곱해진다.
-        > - 　\> 해상도, 스케일을 변경할 수 있다. (새 기능)
+        >
+        >  　유닛 당 픽셀 수 설정.
+        >
+        >  　Sprite의 Pixels Per Unit에 이 값이 곱해진다.
+        >
+        >  　해상도, 스케일을 변경할 수 있다. (새 기능)
     - **Image Type : Filled**
         - 게이지 같은 연출을 표현할 때 주로 사용된다.
         - **Fill Method**

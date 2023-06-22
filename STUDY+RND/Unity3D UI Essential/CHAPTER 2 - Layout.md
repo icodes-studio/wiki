@@ -446,145 +446,128 @@
 　
 
 - **CONTENT SIZE FITTER**
-  - 자체 레이아웃 요소의 크기를 제어하는 기능을 수행.
-  - 크기는 게임 오브젝트 레이아웃 요소 컴포넌트의 min 또는 preferred 크기에 따라 결정된다. 즉, 레이아웃 요소는 ILayoutElement 인터페이스를 상속받는 Image 또는 Text 컴포넌트이거나, 레이아웃 그룹이거나, Layout Element 컴포넌트일 수 있다.
-  - Content Size Fitter
-  - Unconstrained
-    - 아무것도 하지 않음.
-  - MinSize
-    - 너비 또는 높이를 하위 컨텐츠의 최소값으로 제한.
-  - PreferredSize
-    - 너비 또는 높이를 하위 컨텐츠의 Preferred 값으로 제한.
-  - **레이아웃 그룹과 함께 사용하는 경우의 예**
-    - 1) 씬에 Canvas 추가
-    - 2) Canvas에 UI/Image 추가 - 배경으로 사용
-    - 3) Image 하위로 UI/Text 세 개 추가
-    - 4) Image 오브젝트에 Vertical Layout Group 추가
-    - 5) Vertical Layout Group 컴포넌트에 Control Child Size 필드의 Width 항목 체크
-    - 6) Image 오브젝트에 Content Size Fitter 추가
-    - 7) Content Size Fitter의 Horizontal Fit 필드 값을 Preferred Size로 설정.
-  - **작동원리(추측)**
-    - Text UI에 텍스트가 입력되면 자체 Preferred Size가 변경.
-    - Vertical Layout Group의 Control Child Size 옵션이 켜져 있기 때문에 하위 레이아웃 엘리먼트의 Preferred Size가 바뀌었으므로 크기 조절을 위해 계산 - 레이아웃 그룹 자체 Preferred Size도 변경됨.
-    - Content Size Fitter가 변경된 레이아웃 그룹의 Preferred Size를 감지하고 자체 Transform 크기 변경.
-    - 결국 배경 이미지 크기가 변경됨.
-    - 뭐, 이런 느낌?
-  - **Text UI 컨트롤과 함께 사용하는 경우의 예**
-    - Text 컴포넌트만 단독으로 사용한 경우, 텍스트 내용이 UI의 사이즈보다 커지면 옵션에 따라...
-    - 뒷부분이 잘리거나 - Truncate
-    - 영역을 넘어간다 - Overflow
-    - Content Size Fitter를 사용하면 Transform 사이즈가 텍스트의 내용에 따라 자동으로 변하는 것을 확인할 수 있다.
-  - **피벗을 활용하는 예제**
-    - 콘텐츠 사이즈 피터로 인해 Rect Transform의 크기가 변경될 때는 UI의 피벗을 중심으로 조정되기 때문에, 피벗을 사용해서 UI의 크기가 조정되는 방향을 조절할 수 있다.
-    - 위 예제는 피벗이 중심에 있어서 양 방향으로 리사이징 됨.
-    - 아래 이미지를 보면 X Pivot을 0으로 변경해서 UI의 피벗을 가장 좌측으로 옮긴 결과, UI의 트랜스폼이 왼쪽에서 오른쪽으로 확장되는 것을 볼 수 있다.
-  - **콘텐츠 사이즈 피터를 활용한 스크롤 뷰 예제**
-    - 음... 잠시 대기...
-    - 가변버튼, 센터얼라인아이콘+텍스트, 다이아배경(최소유지+가변), 텍스트+버튼(이미지)
+    - 자체 레이아웃 요소의 크기를 제어하는 기능을 수행.
+    - 크기는 게임 오브젝트 레이아웃 요소 컴포넌트의 min 또는 preferred 크기에 따라 결정된다. 즉, 레이아웃 요소는 ILayoutElement 인터페이스를 상속받는 Image 또는 Text 컴포넌트이거나, 레이아웃 그룹이거나, Layout Element 컴포넌트일 수 있다.
+    - Content Size Fitter
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/UI_ContentSizeFitterInspector.png)
+    - Unconstrained
+        > - 아무것도 하지 않음.
+    - MinSize
+        > - 너비 또는 높이를 하위 컨텐츠의 최소값으로 제한.
+    - PreferredSize
+        > - 너비 또는 높이를 하위 컨텐츠의 Preferred 값으로 제한.
+    - **레이아웃 그룹과 함께 사용하는 경우의 예**
+        > - 1) 씬에 Canvas 추가
+        > - 2) Canvas에 UI/Image 추가 - 배경으로 사용
+        > - 3) Image 하위로 UI/Text 세 개 추가
+        > - 4) Image 오브젝트에 Vertical Layout Group 추가
+        > - 5) Vertical Layout Group 컴포넌트에 Control Child Size 필드의 Width 항목 체크
+        > - 6) Image 오브젝트에 Content Size Fitter 추가
+        > - 7) Content Size Fitter의 Horizontal Fit 필드 값을 Preferred Size로 설정.
+    - **작동원리(추측)**
+        > - Text UI에 텍스트가 입력되면 자체 Preferred Size가 변경.
+        > - Vertical Layout Group의 Control Child Size 옵션이 켜져 있기 때문에 하위 레이아웃 엘리먼트의 Preferred Size가 바뀌었으므로 크기 조절을 위해 계산 - 레이아웃 그룹 자체 Preferred Size도 변경됨.
+        > - Content Size Fitter가 변경된 레이아웃 그룹의 Preferred Size를 감지하고 자체 Transform 크기 변경.
+        > - 결국 배경 이미지 크기가 변경됨.
+        > - 뭐, 이런 느낌?
+    - **Text UI 컨트롤과 함께 사용하는 경우의 예**
+        > - Text 컴포넌트만 단독으로 사용한 경우, 텍스트 내용이 UI의 사이즈보다 커지면 옵션에 따라...
+        > - 뒷부분이 잘리거나 - Truncate
+        > - 영역을 넘어간다 - Overflow
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/TextUI.gif)
+        > - Content Size Fitter를 사용하면 Transform 사이즈가 텍스트의 내용에 따라 자동으로 변하는 것을 확인할 수 있다.
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/TextUIContentSizeFitter.gif)
+    - **피벗을 활용하는 예제**
+        > - 콘텐츠 사이즈 피터로 인해 Rect Transform의 크기가 변경될 때는 UI의 피벗을 중심으로 조정되기 때문에, 피벗을 사용해서 UI의 크기가 조정되는 방향을 조절할 수 있다.
+        > - 위 예제는 피벗이 중심에 있어서 양 방향으로 리사이징 됨.
+        > - 아래 이미지를 보면 X Pivot을 0으로 변경해서 UI의 피벗을 가장 좌측으로 옮긴 결과, UI의 트랜스폼이 왼쪽에서 오른쪽으로 확장되는 것을 볼 수 있다.
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/TextUIPivot.gif)
+    - **콘텐츠 사이즈 피터를 활용한 스크롤 뷰 예제**
+        > - 음... 잠시 대기...
+        > - 가변버튼, 센터얼라인아이콘+텍스트, 다이아배경(최소유지+가변), 텍스트+버튼(이미지)
 
-![TextUIPivot.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/602b4ca63ce3a8326605cb9a/6e36b1a4a98c174b842faf3bfe5abb1b/TextUIPivot.gif)
-
-![TextUIContentSizeFitter.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/602b4ca63ce3a8326605cb9a/8f6f49adfd18f33ad521559d84b3610a/TextUIContentSizeFitter.gif)
-
-![TextUI.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/602b4ca63ce3a8326605cb9a/80252838ebe43ce963706faa38f3beb4/TextUI.gif)
-
-![UI\_ContentSizeFitterInspector.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/a82e6e135ec47c7251a2c56c554e808f/UI_ContentSizeFitterInspector.png)
 
 　
 
 - **ASPECT RATIO FITTER**
-  - Aspect Ratio(종횡비) 값에 따라서 UI를 리사이즈 한다.
-  - 화면 해상도 얘기가 아님. Rect Transform 리사이즈 얘기다.
-  - 최소 및 선호 크기와 같은 레이아웃 정보를 고려하지 않는다.
-  - **Options**
-  - **Aspect Mode**
-    - None
-      - 종횡비 맞추지 않음
-    - Width Controls Height
-      - 너비에 따라 높이가 조정된다.
-      - 즉, Height = Width * Aspect Ratio
-    - Height Controls Width
-      - 높이에 따라 너비가 조정된다.
-      - 즉, Width = Height * Aspect Ratio
-    - Fit In Parent
-      - 종횡비를 유지하면서 영역이 부모 영역 안에 들어가도록 너비, 높이, 포지션 및 앵커를 자동으로 조정한다. 부모 영역 안에 이 영역이 덮지 않는 공간이 있을 수 있다.
-    - Envelope Parent
-      - 종횡비를 유지하면서 영역이 부모의 전체 영역을 덮도록 너비, 높이, 포지션 및 앵커를 자동으로 조정합니다. 이 영역은 부모 영역 밖으로 나올 수 있습니다.
-  - **Aspect Ratio**
-    - 적용할 종횡비(너비 / 높이)
-  - **적용 예**
+    - Aspect Ratio(종횡비) 값에 따라서 UI를 리사이즈 한다.
+    - 화면 해상도 얘기가 아님. Rect Transform 리사이즈 얘기다.
+    - 최소 및 선호 크기와 같은 레이아웃 정보를 고려하지 않는다.
+    - **Options**
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/UI_AspectRatioFitterInspector.png)
+    - **Aspect Mode**
+        > - None: 종횡비 맞추지 않음
+        > - Width Controls Height: 너비에 따라 높이가 조정된다. 즉, Height = Width * Aspect Ratio
+        > - Height Controls Width: 높이에 따라 너비가 조정된다. 즉, Width = Height * Aspect Ratio
+        > - Fit In Parent: 종횡비를 유지하면서 영역이 부모 영역 안에 들어가도록 너비, 높이, 포지션 및 앵커를 자동으로 조정한다. 부모 영역 안에 이 영역이 덮지 않는 공간이 있을 수 있다.
+        > - Envelope Parent: 종횡비를 유지하면서 영역이 부모의 전체 영역을 덮도록 너비, 높이, 포지션 및 앵커를 자동으로 조정합니다. 이 영역은 부모 영역 밖으로 나올 수 있습니다.
+    - **Aspect Ratio**
+        > - 적용할 종횡비(너비 / 높이)
+    - **적용 예**
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/aspectratiofitter.png)
 
-![1.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/602b4ca63ce3a8326605cb9a/c04c45ead36ffa50ca8d9d56d663712b/1.png)
-
-![UI\_AspectRatioFitterInspector.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/602b4ca63ce3a8326605cb9a/1057f481fe0f3d7c5202a999b190320f/UI_AspectRatioFitterInspector.png)
 
 　
 
 - **SCROLL RECT**
-  - 레이아웃 그룹 내 컨텐츠를 스크롤 할 때 사용.
-  - 꼭 레이아웃 그룹일 필요는 없으며 스크롤 가능한 UI 컨트롤이면 상관없다. 그나저나 이게 왜 이 시점에 등장하는지... ٩(๑´0`๑)۶
-  - _**3장 '컨트롤 배우기' **_에서 좀 더 복잡한 예를 살펴볼 예정.
-  - 닥치고 예제
-    - 1) 씬에 Canvas 추가.
-    - 2) Canvas 하위로 빈 게임 오브젝트 추가하고,
-    - 3) 이 오브젝트 이름을 "ScrollRectArea"로 변경.
-    - 4) "ScrollRectArea"의 Width 값을 300으로 설정.
-    - 5) 이 오브젝트에 Scroll Rect 컴포넌트 추가.
-    - 6) 이 오브젝트 하위에 빈 게임 오브젝트 추가하고,
-    - 7) 이름을 "Content"로 변경
-    - 8) "Content"의 Width를 1000으로 설정.
-    - 9) "Content" 게임 오브젝트를 선택한 후 Horizontal Layout Group 컴포넌트를 추가.
-    - 10) "Content" 하위에 Image 컴포넌트를 몇 개 추가.
-    - 11) "ScrollRectArea" 게임 오브젝트에 바인딩 되어있는 Scroll Rect 컴포넌트의 Content 속성으로 "Content" 게임 오브젝트를 할당합니다.
-  - **Options**
-  - **Content**
-    - Scroll Rect 안의 컨텐츠를 포함하는 Rect Transform을 지정.
-  - **Horizontal / Vertical**
-    - 컨텐츠 영역의 스크롤 방향.
-  - **Movement Type**
-    - 스크롤 움직임 스타일을 지정한다.
-    - **Unrestricted**
-      - 제약 없이 움직인다. 심지어 화면이 스크롤 영역을 벗어나도 움직일 수 있다.
-    - **Elastic**
-      - 영역을 벗어난 경우 튕겨서 제자리로 돌아옴.
-      - Elasticity 값을 변경하여 탄성 조절 가능.
-    - **Clamped**
-      - 스크롤 영역 안에서 고정된 움직임을 보임.
-      - 영역을 벗어나면 바로 멈춤.
-  - **Inertia**
-    - 스크롤 움직임에 관성 물리법칙을 적용할지 말지.
-    - Deceleration Rate 값으로 감속량 조절 가능.
-  - **Scroll Sensitivity**
-    - 사용자 스크롤 액션에 대한 스크롤 감도 조정.
-  - **Viewport**
-    - 표시하고자 하는 콘텐츠가 보여질 곳.
-    - 컨텐츠의 부모 뷰포트 Rect Transform.
-  - **Horizontal/Vertical Scrollbar**
-    - 가로/세로 스크롤바 UI 지정
-    - Visibility
-      - 스크롤바를 계속 보이게 할지
-      - 필요 없을 때 자동으로 스크롤바를 숨길지
-      - 선택적으로 뷰포트도 확장할지 말지.
-    - Spacing
-      - 스크롤바와 뷰포트 간의 공간.
+    - 레이아웃 그룹 내 컨텐츠를 스크롤 할 때 사용.
+    - 꼭 레이아웃 그룹일 필요는 없으며 스크롤 가능한 UI 컨트롤이면 상관없다. 그나저나 이게 왜 이 시점에 등장하는지... ٩(๑´0`๑)۶
+    - ***3장 '컨트롤 배우기'*** 에서 좀 더 복잡한 예를 살펴볼 예정.
+    - 닥치고 예제
+        > - 1) 씬에 Canvas 추가.
+        > - 2) Canvas 하위로 빈 게임 오브젝트 추가하고,
+        > - 3) 이 오브젝트 이름을 "ScrollRectArea"로 변경.
+        > - 4) "ScrollRectArea"의 Width 값을 300으로 설정.
+        > - 5) 이 오브젝트에 Scroll Rect 컴포넌트 추가.
+        > - 6) 이 오브젝트 하위에 빈 게임 오브젝트 추가하고,
+        > - 7) 이름을 "Content"로 변경
+        > - 8) "Content"의 Width를 1000으로 설정.
+        > - 9) "Content" 게임 오브젝트를 선택한 후 Horizontal Layout Group 컴포넌트를 추가.
+        > - 10) "Content" 하위에 Image 컴포넌트를 몇 개 추가.
+        > - 11) "ScrollRectArea" 게임 오브젝트에 바인딩 되어있는 Scroll Rect 컴포넌트의 Content 속성으로 "Content" 게임 오브젝트를 할당합니다.
+    - **Options**
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/scrollrect.png)
+    - **Content**
+        > - Scroll Rect 안의 컨텐츠를 포함하는 Rect Transform을 지정.
+    - **Horizontal / Vertical**
+        > - 컨텐츠 영역의 스크롤 방향.
+    - **Movement Type**
+        > - 스크롤 움직임 스타일을 지정한다.
+        > - **Unrestricted**: 제약 없이 움직인다. 심지어 화면이 스크롤 영역을 벗어나도 움직일 수 있다.
+        > - **Elastic**: 영역을 벗어난 경우 튕겨서 제자리로 돌아옴. Elasticity 값을 변경하여 탄성 조절 가능.
+        > - **Clamped**: 스크롤 영역 안에서 고정된 움직임을 보임. 영역을 벗어나면 바로 멈춤.
+    - **Inertia**
+        > - 스크롤 움직임에 관성 물리법칙을 적용할지 말지.
+        > - Deceleration Rate 값으로 감속량 조절 가능.
+    - **Scroll Sensitivity**
+        > - 사용자 스크롤 액션에 대한 스크롤 감도 조정.
+    - **Viewport**
+        > - 표시하고자 하는 콘텐츠가 보여질 곳.
+        > - 컨텐츠의 부모 뷰포트 Rect Transform.
+    - **Horizontal/Vertical Scrollbar**
+        > - 가로/세로 스크롤바 UI 지정
+        > - **Visibility**: 스크롤바를 계속 보이게 할지. 필요 없을 때 자동으로 스크롤바를 숨길지. 선택적으로 뷰포트도 확장할지 말지.
+        > - **Spacing**: 스크롤바와 뷰포트 간의 공간.
 
-![scrollrect.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/602b4ca63ce3a8326605cb9a/2cdb26f4ac8ccfa25e93a519cb80c0f2/scrollrect.png)
 
 　
 
 - **MASK**
-  - 하위 컴포넌트가 보여지는 영역을 지정한다.
-  - 단독으로 사용했을 때는 아무 의미 없고 Image 등의 Graphic 컴포넌트와 함께 사용해서 마스킹 영역을 지정해야 한다.
-  - 앞의 예제에서...
-    - "ScrollRectArea" 오브젝트에 Mask 컴포넌트 추가.
-    - Image 컴포넌트 소스 이미지의 알파값으로 마스킹 됨.
-    - Image 컴포넌트에 이미지가 없으면 RT 영역만 뚫림.
-  - 아래 그림처럼 "ScrollRectArea" 영역만 보여짐
+    - 하위 컴포넌트가 보여지는 영역을 지정한다.
+    - 단독으로 사용했을 때는 아무 의미 없고 Image 등의 Graphic 컴포넌트와 함께 사용해서 마스킹 영역을 지정해야 한다.
+    - 앞의 예제에서...
+        > - "ScrollRectArea" 오브젝트에 Mask 컴포넌트 추가.
+        > - Image 컴포넌트 소스 이미지의 알파값으로 마스킹 됨.
+        > - Image 컴포넌트에 이미지가 없으면 RT 영역만 뚫림.
+    - 아래 그림처럼 "ScrollRectArea" 영역만 보여짐
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/mask.png)
 
-![mask.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/602b4ca63ce3a8326605cb9a/00b3aa6ea436f132e04c78c6334af7f5/mask.png)
 
 　
 
 - **RECTMASK2D**
-  - _<잠시대기>_
+    - *잠시대기*
   

@@ -145,29 +145,17 @@
 　
 
 - **RENDER MODE: World Space**
-        > - 공식문서에 있는 아래 그림은 설명하기 좀 애매해.
-        > - 캔버스가 씬에서 오브젝트처럼 동작한다.
-        > - UI 요소는 오브젝트 배치에 따라 앞면 혹은 뒷면에 그려짐.
-        > - 3D 월드에 속하는 인터페이스 UI의 일부로써 유용하다.
-        > - AKA, ***"Diegetic Interface"***
-        > - Event Camera
+    - 캔버스가 씬에서 오브젝트처럼 동작한다.
+    - UI 요소는 오브젝트 배치에 따라 앞면 혹은 뒷면에 그려짐.
+    - 3D 월드에 속하는 인터페이스 UI의 일부로써 유용하다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/CanvasWorldSpace.png)
+    - AKA, ***"Diegetic Interface"***
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/canvas-worldspace.png)
+    - Event Camera
         > - UI 이벤트를 처리하는 데 사용할 카메라
         > - 즉, EventSystem이 어떤 카메라를 사용할지 결정.
         > - 지정하지 않으면 Main Camera가 디폴트로 사용.
 
-![canvas-worldspace.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/78dc3ea9434e395440cc539c1ab77758/canvas-worldspace.png)
-
-![CanvasWorldSpace.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/4c06b9f252ff0d9f7bbb5ff5f1a0fa99/CanvasWorldSpace.png)
-
-![canvas-camera.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/58ec7a3a75d37eedf7aeab6b4118cf60/canvas-camera.png)
-
-![CanvasCamera.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/5720a40bee89b9c3e09cb9dbc35d1a26/CanvasCamera.png)
-
-![%ED%8C%8C%EC%9D%BC\_000.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/8145f7ecb7565830f8483af5a36e91a1/%ED%8C%8C%EC%9D%BC_000.gif)
-
-![canvas-overlay.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/0c6ec86e5023dc1a7ed4277bfab0503a/canvas-overlay.png)
-
-![CanvasOverlay.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/6cbae767662208b2aa8fc658235c0ab1/CanvasOverlay.png)
 
 　
 
@@ -175,88 +163,100 @@
   - UI 요소의 전체적인 **스케일과 픽셀 밀도**를 제어하는 데 사용.
   - 글꼴 크기와 이미지 경계 등 캔버스 아래의 모든 요소에 영향 미침.
 
+
 　
 
 - **CANVAS SCALER - UI SCALE MODE**
   - 캔버스에서 UI 요소가 스케일 되는 방법을 결정한다.
-  - **Constant Pixel Size**
+
+
+　
+
+- **UI SCALE MODE: Constant Pixel Size**
     - 화면 크기에 관계없이 동일한 픽셀 크기로 유지된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/constantphysicalsize.gif)
     - **Options**
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/constantpixelsize.png)
     - **Scale Factor**
-      - 모든 UI 요소를 이 배율로 스케일 한다.
-      - 화면 중앙을 중심으로 스케일 됨.
+        > - 모든 UI 요소를 이 배율로 스케일 한다.
+        > - 화면 중앙을 중심으로 스케일 됨.
     - **Reference Pixels Per Unit**
-      - 스프라이트에 이 ‘Pixels Per Unit’ 설정값이 적용된 경우 스프라이트 1픽셀이 UI 유닛 하나에 해당.
-      - Set Native Size 눌러보면 느낌 팍 옴.
-      - <Sprite's> / <Canvas Scaler's> = Pixels Per Unit
-      - 뭐, 요런 느낌이랄까...
-  - **Scale With Screen Size**
+        > - 스프라이트에 이 ‘Pixels Per Unit’ 설정값이 적용된 경우 스프라이트 1픽셀이 UI 유닛 하나에 해당.
+        > - Set Native Size 눌러보면 느낌 팍 옴.
+        > - \<Sprite's\> / \<Canvas Scaler's\> = Pixels Per Unit
+        > - 뭐, 요런 느낌이랄까...
+
+
+　
+
+- **UI SCALE MODE: Scale With Screen Size**
     - 해상도에 따라 UI 요소가 작아지거나 커진다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/ScaleWithScreenSize.gif)
     - **Options**
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/scalewithscreensize.png)
     - **Reference Resolution**
-      - UI 레이아웃에 적합한 해상도를 지정.
-      - UI가 커지고 작아질 기준 해상도
-      - 이 해상도 기준으로 아트웍 리소스 작업 추천.
+        > - UI 레이아웃에 적합한 해상도를 지정.
+        > - UI가 커지고 작아질 기준 해상도
+        > - 이 해상도 기준으로 아트웍 리소스 작업 추천.
     - **Screen Match Mode**
-      - 해상도의 종횡비가 레퍼런스 해상도에 맞지 않는 경우 캔버스 영역을 스케일 하는 데 사용.
-      - **Match Width or Height**
-        - 캔버스 영역의 너비 또는 높이 또는 그 사이 어딘가를 기준으로 캔버스를 스케일.
-        - 캔버스가 레퍼런스보다 커지면 레터박스.
-        - 캔버스가 레퍼런스보다 작아지면 잘림.
-        - **Match**
-          기준점 설정 (너비, 높이 or 그 사이)
-      - **Expand**
-        - 캔버스 크기가 레퍼런스보다 더 작아지지 않도록 캔버스를 수평 또는 수직 확장.
-        - 레터박스는 생겨도 잘리진 않는다.
-      - **Shrink**
-        - 캔버스 크기가 레퍼런스보다 커지지 않도록 캔버스를 수평 또는 수직으로 자른다.
-        - 잘리긴 해도 레터박스는 생기지 않는다.
+        > - 해상도의 종횡비가 레퍼런스 해상도에 맞지 않는 경우 캔버스 영역을 스케일 하는 데 사용.
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/screenmatchmode.gif)
+    - ***Screen Match Mode: Match Width or Height**
+        > - 캔버스 영역의 너비 또는 높이 또는 그 사이 어딘가를 기준으로 캔버스를 스케일.
+        > - 캔버스가 레퍼런스보다 커지면 레터박스.
+        > - 캔버스가 레퍼런스보다 작아지면 잘림.
+        > - **Match**: 기준점 설정 (너비, 높이 or 그 사이)
+    - **Screen Match Mode: Expand**
+        > - 캔버스 크기가 레퍼런스보다 더 작아지지 않도록 캔버스를 수평 또는 수직 확장.
+        > - 레터박스는 생겨도 잘리진 않는다.
+    - **Screen Match Mode: Shrink**
+        > - 캔버스 크기가 레퍼런스보다 커지지 않도록 캔버스를 수평 또는 수직으로 자른다.
+        > - 잘리긴 해도 레터박스는 생기지 않는다.
     - **Reference Pixels Per Unit**
-      - 스프라이트에 이 ‘Pixels Per Unit’ 설정값이 적용된 경우 스프라이트 1픽셀이 UI 유닛 하나에 해당.
-  - **Constant Physical Size**
+        > - 스프라이트에 이 ‘Pixels Per Unit’ 설정값이 적용된 경우 스프라이트 1픽셀이 UI 유닛 하나에 해당.
+
+
+　
+
+- **UI SCALE MODE: Constant Physical Size**
     - 화면 크기에 관계없이 UI가 동일한 물리적인 크기로 유지.
     - 포지션과 크기가 포인트 등의 물리적인 단위로 지정된다.
     - 그러려면 기기의 화면 DPI가 정확하게 보고되어야 한다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/constantphysicalsize.png)
     - **Physical Unit**
-      - 포지션 및 크기를 지정하는 물리적 단위.
-      - [_**참고#1 **_](https://spoqa.github.io/2012/07/06/pixel-and-point.html "‌"), [_**참고#2**_](https://chpofo.tistory.com/30 "‌")
-        - Centimeters
-        - Millimeters
-        - Inches
-        - Points
-        - Picas
+        > - 포지션 및 크기를 지정하는 물리적 단위.
+        > - [***참고: 픽셀과 포인트***](https://spoqa.github.io/2012/07/06/pixel-and-point.html)
+        > - [***참고: CSS 크기단위***](https://chpofo.tistory.com/30)
+        > - Centimeters
+        > - Millimeters
+        > - Inches
+        > - Points
+        > - Picas
     - **Fallback Screen DPI**
-      - 화면 DPI를 알 수 없는 경우 가정되는 DPI ???
+        > - 화면 DPI를 알 수 없는 경우 가정되는 DPI ???
     - **Default Sprite DPI**
-      - ‘Pixels Per Unit’ 설정이 ‘Reference Pixels Per Unit’ 설정과 일치하는 스프라이트에 사용할 DPI
+        > - ‘Pixels Per Unit’ 설정이 ‘Reference Pixels Per Unit’ 설정과 일치하는 스프라이트에 사용할 DPI
     - **Reference Pixels Per Unit**
-      - 스프라이트에 이 ‘Pixels Per Unit’ 설정값이 적용된 경우 DPI는 ‘Default Sprite DPI’ 설정과 일치.
-  - **World**
-    - 캔버스가 World Space로 설정된 경우의 UI 스케일 모드.
-    - **Dynamic Pixels Per Unit**
-      - UI에서 동적으로 생성되는 비트맵(예: 텍스트)에 사용할 유닛당 픽셀의 양.
-      - 변경하면서 Text UI 크기와 선명도 보면 느낌 팍 옴.
-    - **Reference Pixels Per Unit**
-      - 스프라이트에 이 ‘Pixels Per Unit’ 설정이 있는 경우 스프라이트의 픽셀 하나가 월드의 유닛 하나에 해당합니다. ’Reference Pixels Per Unit’을 1로 설정하면 스프라이트의 ‘Pixels Per Unit’ 설정이 그대로 사용된다.
-      - Set Native Size 눌러보면 느낌 팍 옴.
-      - <Sprite's> / <Canvas Scaler's> = Pixels Per Unit
-      - 뭐, 요런 느낌이랄까...
+        > - 스프라이트에 이 ‘Pixels Per Unit’ 설정값이 적용된 경우 DPI는 ‘Default Sprite DPI’ 설정과 일치.
 
-![canvasscaler-world.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/4b0fa87e0184d531bb121fea7d986afb/canvasscaler-world.png)
-
-![constantphysicalsize.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/2874df818cca7ea036a39b90de25bbd4/constantphysicalsize.png)
-
-![screenmatchmode.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/a72ce0e68cd13c6a3e857474378e8370/screenmatchmode.gif)
-
-![scalewithscreensize.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/d01a35be78221c086df704536f9c15a6/scalewithscreensize.png)
-
-![ScaleWithScreenSize.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/bc6824f9542182a9a314b9b548327873/ScaleWithScreenSize.gif)
-
-![constantpixelsize.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/38e9e78f1ba2e8a4186a683593620ee2/constantpixelsize.png)
-
-![constantphysicalsize.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/d11e2d866f62ea39ee108fe8fa9054d8/constantphysicalsize.gif)
 
 　
+
+- **UI SCALE MODE: World**
+    - 캔버스가 World Space로 설정된 경우의 UI 스케일 모드.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/canvasscaler-world.png)
+    - **Dynamic Pixels Per Unit**
+        > - UI에서 동적으로 생성되는 비트맵(예: 텍스트)에 사용할 유닛당 픽셀의 양.
+        > - 변경하면서 Text UI 크기와 선명도 보면 느낌 팍 옴.
+    - **Reference Pixels Per Unit**
+        > - 스프라이트에 이 ‘Pixels Per Unit’ 설정이 있는 경우 스프라이트의 픽셀 하나가 월드의 유닛 하나에 해당합니다. ’Reference Pixels Per Unit’을 1로 설정하면 스프라이트의 ‘Pixels Per Unit’ 설정이 그대로 사용된다.
+        > - Set Native Size 눌러보면 느낌 팍 옴.
+        > - <Sprite's> / <Canvas Scaler's> = Pixels Per Unit
+        > - 뭐, 요런 느낌이랄까...
+
+
+　　
 
 - **GRAPHIC RAYCASTER**
   - 캔버스에 있는 그래픽을 감시하고 어떤 그래픽에 충돌했는지 결정.

@@ -308,70 +308,45 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
         > - 스프라이트에 Border 값을 주는 경우 패턴이 잘 연결될 수 있도록 주의가 필요하다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/titled.gif)
         > - **Pixels Per Unit Multiplier**
-        > - 　　● 유닛 당 픽셀 수 설정.
-        > - 　　● Sprite의 Pixels Per Unit에 이 값이 곱해진다.
-        > - 　　● 해상도, 스케일을 변경할 수 있다. (새 기능)
+        > - 　　유닛 당 픽셀 수 설정.
+        > - 　　Sprite의 Pixels Per Unit에 이 값이 곱해진다.
+        > - 　　해상도, 스케일을 변경할 수 있다. (새 기능)
     - **Image Type : Filled**
         - 게이지 같은 연출을 표현할 때 주로 사용된다.
-        - **Fill Method**
-        - Radial 360
-        - Radial 180
-        - Radial 90
-        - Vertical
-        - Horizontal
-        - **Fill Origin**
-        - (게이지가) 차오르는 시작점
-        - Fill Method가 Radial 360 일 때
-            - Top, Bottom, Left, Right
-        - Fill Method가 Radial 180 일 때
-            - Top, Bottom, Left, Right
-        - Fill Method가 Radial 90 일 때
-            - Bottom Left
-            - Bottom Right
-            - Top Left
-            - Top Right
-        - Fill Method가 Vertical 일 때
-            - Top, Bottom
-        - Fill Method가 Horizontal 일 때
-            - Left, Right
-        - **Fill Amount**
-        - 이미지를 어느 비율로 채울지 결정.
-        - 0과 1 범위 내에서 조정한다.
-        - **Clockwise**
-        - 채워지는 방향이 시계방향인지 반대인지 설정.
-        - Fill Method가 Radial 계열일 때만 작동
+    - **Filled - Fill Method**
+        > - Radial 360
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/radial360.gif)
+        > - Radial 180
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/radial180.gif)
+        > - Radial 90
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/radial90.gif)
+        > - Vertical
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/vertical.gif)
+        > - Horizontal
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/horizontal.gif)
+    - **Filled - Fill Origin**
+        > - (게이지가) 차오르는 시작점
+        > - Fill Method가 Radial 360 일 때
+        > 　　Top, Bottom, Left, Right
+        > - Fill Method가 Radial 180 일 때
+        > 　　Top, Bottom, Left, Right
+        > - Fill Method가 Radial 90 일 때
+        > 　　Bottom Left
+        > 　　Bottom Right
+        > 　　Top Left
+        > 　　Top Right
+        > - Fill Method가 Vertical 일 때
+        > 　　Top, Bottom
+        > - Fill Method가 Horizontal 일 때
+        > 　　Left, Right
+    - **Filled - Fill Amount**
+        > - 이미지를 어느 비율로 채울지 결정.
+        > - 0과 1 범위 내에서 조정한다.
+    - **Filled - Clockwise**
+        > - 채워지는 방향이 시계방향인지 반대인지 설정.
+        > - Fill Method가 Radial 계열일 때만 작동
 
-![horizontal.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6032634ce953c34f08919df1/6cd71814552a031f560edaf99616c5cb/horizontal.gif)
-
-![vertical.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6032634ce953c34f08919df1/215f321469822bd6342c0f9d07d06088/vertical.gif)
-
-![radial90.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6032634ce953c34f08919df1/a2578b770ec37aebbff42d185b25c79c/radial90.gif)
-
-![radial180.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6032634ce953c34f08919df1/573851d043d9b818fc5c2baa62e9067f/radial180.gif)
-
-![radial360.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6032634ce953c34f08919df1/307e15a9181658511d76fbb61c081106/radial360.gif)
-
-![titled.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6032634ce953c34f08919df1/94f7eb6ab40eb0c2e4fd3f8fad8f41eb/titled.gif)
-
-![9slicing-result.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6032634ce953c34f08919df1/c4c7229fe8580ff4df6d1540e560b206/9slicing-result.png)
-
-![9slicing.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6032634ce953c34f08919df1/0674fa02243d1ea4d7409788db1134ca/9slicing.gif)
-
-![spriteeditor-button.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6032634ce953c34f08919df1/f027deba7e2e22e729433ad6f166b64d/spriteeditor-button.png)
-
-![preserve.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6032634ce953c34f08919df1/9d78dba43be6a28b5e26ae7950979343/preserve.gif)
-
-![image-inspector.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6032634ce953c34f08919df1/e341551d828faf524acd8a1186e231a3/image-inspector.png)
-
-![sprite2D.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6032634ce953c34f08919df1/a5fe8b0c2efafe3ddec5970947cb9b67/sprite2D.png)
-
-![texturetype.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6032634ce953c34f08919df1/308a37728ce5ec1026ef17d3b5e34863/texturetype.png)
-
-![2dsprite.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6032634ce953c34f08919df1/818c9b7593bf1bfa235b93ceded18525/2dsprite.png)
-
-![allpackages.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6032634ce953c34f08919df1/9554e7497f900ab2d8dd33649c388137/allpackages.png)
-
-![package\_manager.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6032634ce953c34f08919df1/6a7cc14cd80ef5dfa316f6837d0f22f8/package_manager.png)
+　
 
 　
 

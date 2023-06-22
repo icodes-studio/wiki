@@ -47,7 +47,7 @@
 
 - **RECT TRANSFORM 컴포넌트**
     - Unity UI 전용 Transform 컴포넌트
-        >![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/rect_transform.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/rect_transform.png)
     - 컴포넌트에는 Width, Height, Anchors, Pivot, 등등의 속성이 있다.
         > - Width : UI의 넓이
         > - Height : UI의 높이
@@ -85,9 +85,9 @@
         > - x=0 : 오브젝트의 맨 좌측, x=1 : 오브젝트의 맨 우측.
         > - y=0 : 오브젝트의 최하단, y=1 : 오브젝트의 최상단.
         > - **피벗이 (0.5, 0.5)일 경우 스케일 & 회전**
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/centerpivot.gif)
+        > - ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/centerpivot.gif)
         > - **피벗이 (0, 0.5)일 경우 스케일 & 회전**
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/leftpivot.gif)
+        > - ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/leftpivot.gif)
 
 
 　

@@ -237,7 +237,8 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
 - **SPRITE 무엇?**
     - 이미지 리소스를 텍스쳐(Texture)라고 부른다.
     - 이 텍스쳐 중에서도 Image 컴포넌트나 스프라이트 렌더러에서 사용되는 리소스들을 스프라이트(Sprite)라고 한다.
-    - 보통 유니티 프로젝트에 임포트 되는 텍스쳐들은 자동으로 Texture Type이 Default로 정해진다. Default는 주로 3D 모델 오브젝트의 텍스쳐로 사용되는 타입이다.
+    - 보통 유니티 프로젝트에 임포트 되는 텍스쳐들은 자동으로 Texture Type이 Default로 정해진다.
+    - Default 타입은 주로 3D 모델 오브젝트의 텍스쳐로 사용되는 타입이다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/texturetype.png)
     - UI에 사용하기 위해서는 Texture Type을 Sprite로 변경해야 한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/sprite2D.png)
@@ -269,7 +270,8 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
         > - 쉽게 말해 클릭 or 터치 대상으로 삼을지 말지.
     - **Preserve Aspect**
         > - Source Image의 원본 비율을 지켜서 그릴 것인지.
-        > - 보통은 Image 컴포넌트가 부착된 게임 오브젝트의 너비와 높이에 따라서 그림의 비율이 변형되어서 화면에 그려지지만 Preserve Aspect를 체크하면 비율을 지킨 상태로 화면에 그려지게 할 수 있다.
+        > - 보통은 Image 컴포넌트가 부착된 게임 오브젝트의 너비와 높이에 따라서 그림의 비율이 변형되어서 화면에 그려진다.
+        > - 하지만 Preserve Aspect를 체크하면 비율을 지킨 상태로 화면에 그려지게 할 수 있다.
         > - Image Type이 Simple 이거나 Filled 일 때만 사용됨.
     - **Set Native Size**
         > - 게임 오브젝트의 Width와 Height를 Source Image 해상도와 같게 만들어준다.
@@ -280,7 +282,7 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
     - **Image Type : Simple**
         > - 원본 이미지 소스 그대로 출력.
     - **Image Type : Simple - Use Sprite Mesh**
-        > - 그리는 영역을 지정할 때, 그냥 사각형 영역으로 그릴지 아니면 이미지의 알파 영역을 무시해서 오버드로우 안되게 최적화 할지.
+        > - 그리는 영역을 지정할 때, 그냥 사각형 영역으로 그릴지 아니면 알파 영역을 무시해서 오버드로우 안되게 최적화 할지.
         > - 구멍 숭숭 뚫린 큰 이미지 최적화 할 때 유용하다.
         > - 스프라이트의 Mesh Type이 "Tight" 여야 한다.
         > - Sprite Editor에서 Custom Outline 직접 조정 가능.
@@ -300,8 +302,12 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
         > - 이미지가 크기에 따라 늘어지지 않는다.
         >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/9slicing-result.png)
-        > - **Fill Center**: 가운데 영역을 Color 색상으로 채울지 말지.
-        > - **Pixels Per Unit Multiplier**: 유닛 당 픽셀 수 설정. Sprite의 Pixels Per Unit에 이 값이 곱해진다. (모서리) 해상도를 조절하는데 매우 유용하다.
+        > - **Fill Center**
+        > - 　　가운데 영역을 Color 색상으로 채울지 말지.
+        > - **Pixels Per Unit Multiplier**
+        > - 　　유닛 당 픽셀 수 설정.
+        > - 　　Sprite의 Pixels Per Unit에 이 값이 곱해진다.
+        > - 　　(모서리) 해상도를 조절하는데 매우 유용하다.
     - **Image Type : Tiled**
         > - 이미지를 반복으로 그려주는 타입.
         > - 스프라이트에 Border 값을 주는 경우 패턴이 잘 연결될 수 있도록 주의가 필요하다.

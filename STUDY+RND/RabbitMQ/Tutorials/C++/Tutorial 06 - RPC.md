@@ -105,11 +105,11 @@
         ```
 
 - [***RPCClient.cs - Final code***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/RabbitMQ/A/Tutorials/C%2B%2BRPCClient/RPCClient.cpp)
-  - 응답에 대한 ***exclusive*** 콜백 큐 선언 및 구독.
-  - 유니크한 ***CorrelationId*** 키 생성 및 로컬 콜백 목록에 작업 Task와 함께 저장.
-  - ***ReplyTo*** 및 ***CorrelationId*** 속성을 가지고 메시지 게시.
-  - ***Call*** 메소드는 실제 RPC 요청 수행.
-  - 응답시 ***CorrelationId***를 로컬 콜백 목록에서 룩업하여 일치하는 경우만 결과 반환.
+    - 응답에 대한 ***exclusive*** 콜백 큐 선언 및 구독.
+    - 유니크한 ***CorrelationId*** 키 생성 및 로컬 콜백 목록에 작업 Task와 함께 저장.
+    - ***ReplyTo*** 및 ***CorrelationId*** 속성을 가지고 메시지 게시.
+    - ***Call*** 메소드는 실제 RPC 요청 수행.
+    - 응답시 ***CorrelationId***를 로컬 콜백 목록에서 룩업하여 일치하는 경우만 결과 반환.
         ```
         #include <SimpleAmqpClient/SimpleAmqpClient.h>
         #include <stdio.h>

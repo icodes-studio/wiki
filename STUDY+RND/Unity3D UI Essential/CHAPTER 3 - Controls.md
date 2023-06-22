@@ -330,18 +330,18 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/horizontal.gif)
     - **Filled - Fill Origin**
         > - (게이지가) 차오르는 시작점
-        > - Fill Method가 Radial 360 일 때
+        > - **Fill Method가 Radial 360 일 때**
         > - 　　Top, Bottom, Left, Right
-        > - Fill Method가 Radial 180 일 때
+        > - **Fill Method가 Radial 180 일 때**
         > - 　　Top, Bottom, Left, Right
-        > - Fill Method가 Radial 90 일 때
+        > - **Fill Method가 Radial 90 일 때**
         > - 　　Bottom Left
         > - 　　Bottom Right
         > - 　　Top Left
         > - 　　Top Right
-        > - Fill Method가 Vertical 일 때
+        > - **Fill Method가 Vertical 일 때**
         > - 　　Top, Bottom
-        > - Fill Method가 Horizontal 일 때
+        > - **Fill Method가 Horizontal 일 때**
         > - 　　Left, Right
     - **Filled - Fill Amount**
         > - 이미지를 어느 비율로 채울지 결정.

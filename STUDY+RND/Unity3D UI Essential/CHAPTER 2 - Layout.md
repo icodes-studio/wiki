@@ -89,6 +89,7 @@
         > - **피벗이 (0, 0.5)일 경우 스케일 & 회전**
         > - ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/leftpivot.gif)
 
+　
 
 　
 
@@ -102,42 +103,45 @@
 　
 
 - **CANVAS - RENDER MODE**
-  - _**"Chapter 5. 화면 공간, 월드 공간, 카메라" **_에서 좀 더 자세히...
-  - **Screen Space - Overlay**
-    - 카메라 독립적으로 UI를 최상위에 오버레이 하는 방식.
-    - 해상도 변경 시 스크린에 일치하도록 자동으로 크기 변경됨.
-    - Pixel Perfect
-      - UI 엘리먼트에 대해 [_**픽셀 퍼펙트 **_](https://docs.unity3d.com/ScriptReference/Canvas-pixelPerfect.html "‌")렌더링을 수행.
-      - 퍼포먼스 부분에서 손해를 보는 부분이 있다.
-    - Sort Order
-      - 여러 개 Overlay 캔버스가 있는 경우, 그리는 순서
-      - 낮은 순서의 캔버스는 아래에 그려진다.
-  - **Screen Space - Camera**
-    - 공식문서에 있는 아래 그림은 설명하기 좀 애매해.
-    - 캔버스가 그려질 카메라를 선택하여 UI를 렌더링 한다.
-    - 게임 오브젝트를 UI 앞이나 뒤에 배치할 수 있다.
-    - 3D 원근법으로 UI를 그릴 때 유리하다.
-    - 해상도 변경 또는 카메라의 frustum을 변경한 경우, 캔버스도 자동으로 일치하도록 크기 변경됨.
-    - Render Camera
-      - 캔버스가 그려질 카메라.
-      - 지정하지 않으면 Overlay 모드처럼 동작.
-    - Plane Distance
-      - 캔버스가 카메라로부터 떨어진 거리.
-    - Sorting Layer
-      - 캔버스가 다른 캔버스 또는 스프라이트 렌더링 컴포넌트와 함께 씬에 사용되는 경우(eg. Sprite Renderer), 캔버스가 어떤 스프라이트 소팅 레이어에 렌더링 될 것인지 설정.
-    - Order in Layer
-      - 선택된 소팅 레이어에서 캔버스가 그려지는 순서.
-      - 낮은 순서의 캔버스는 아래에 그려진다.
-  - **World Space**
-    - 공식문서에 있는 아래 그림은 설명하기 좀 애매해.
-    - 캔버스가 씬에서 오브젝트처럼 동작한다.
-    - UI 요소는 오브젝트 배치에 따라 앞면 혹은 뒷면에 그려짐.
-    - 3D 월드에 속하는 인터페이스 UI의 일부로써 유용하다.
-    - AKA, _**"Diegetic Interface"**_
-    - Event Camera
-      - UI 이벤트를 처리하는 데 사용할 카메라
-      - 즉, EventSystem이 어떤 카메라를 사용할지 결정.
-      - 지정하지 않으면 Main Camera가 디폴트로 사용.
+    - ***"Chapter 5. 화면 공간, 월드 공간, 카메라"*** 에서 좀 더 자세히...
+    - **Screen Space - Overlay**
+        > - ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/CanvasOverlay.png)
+        > - 카메라 독립적으로 UI를 최상위에 오버레이 하는 방식.
+        > - 해상도 변경 시 스크린에 일치하도록 자동으로 크기 변경됨.
+        > - ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/canvas-overlay.png)
+        > - Pixel Perfect
+        > > - UI 엘리먼트에 대해 [***픽셀 퍼펙트***](https://docs.unity3d.com/ScriptReference/Canvas-pixelPerfect.html)렌더링을 수행.
+        > > - ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/pixelperfect.gif)
+        > > - 퍼포먼스 부분에서 손해를 보는 부분이 있다.
+        > - Sort Order
+        > > - 여러 개 Overlay 캔버스가 있는 경우, 그리는 순서
+        > > - 낮은 순서의 캔버스는 아래에 그려진다.
+    - **Screen Space - Camera**
+        > - 공식문서에 있는 아래 그림은 설명하기 좀 애매해.
+        > - 캔버스가 그려질 카메라를 선택하여 UI를 렌더링 한다.
+        > - 게임 오브젝트를 UI 앞이나 뒤에 배치할 수 있다.
+        > - 3D 원근법으로 UI를 그릴 때 유리하다.
+        > - 해상도 변경 또는 카메라의 frustum을 변경한 경우, 캔버스도 자동으로 일치하도록 크기 변경됨.
+        > - Render Camera
+        > - 캔버스가 그려질 카메라.
+        > - 지정하지 않으면 Overlay 모드처럼 동작.
+        > - Plane Distance
+        > - 캔버스가 카메라로부터 떨어진 거리.
+        > - Sorting Layer
+        > - 캔버스가 다른 캔버스 또는 스프라이트 렌더링 컴포넌트와 함께 씬에 사용되는 경우(eg. Sprite Renderer), 캔버스가 어떤 스프라이트 소팅 레이어에 렌더링 될 것인지 설정.
+        > - Order in Layer
+        > - 선택된 소팅 레이어에서 캔버스가 그려지는 순서.
+        > - 낮은 순서의 캔버스는 아래에 그려진다.
+    - **World Space**
+        > - 공식문서에 있는 아래 그림은 설명하기 좀 애매해.
+        > - 캔버스가 씬에서 오브젝트처럼 동작한다.
+        > - UI 요소는 오브젝트 배치에 따라 앞면 혹은 뒷면에 그려짐.
+        > - 3D 월드에 속하는 인터페이스 UI의 일부로써 유용하다.
+        > - AKA, ***"Diegetic Interface"***
+        > - Event Camera
+        > - UI 이벤트를 처리하는 데 사용할 카메라
+        > - 즉, EventSystem이 어떤 카메라를 사용할지 결정.
+        > - 지정하지 않으면 Main Camera가 디폴트로 사용.
 
 ![canvas-worldspace.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/78dc3ea9434e395440cc539c1ab77758/canvas-worldspace.png)
 

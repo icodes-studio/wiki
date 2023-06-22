@@ -105,7 +105,7 @@
 - **CANVAS - RENDER MODE**
     - ***"Chapter 5. 화면 공간, 월드 공간, 카메라"*** 에서 좀 더 자세히...
     - **Screen Space - Overlay**
-        > - ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/CanvasOverlay.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/CanvasOverlay.png)
         > - 카메라 독립적으로 UI를 최상위에 오버레이 하는 방식.
         > - 해상도 변경 시 스크린에 일치하도록 자동으로 크기 변경됨.
         > - ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/canvas-overlay.png)

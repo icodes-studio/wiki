@@ -17,76 +17,74 @@
 　
 
 - **PIVOT 리마인드**
-  - 피벗은 선택한 UI의 위치를 정하는 기준점이다.
-  - 피벗을 에디터 씬 뷰에서 수정하려면 툴의 기준점을 Pivot으로 설정.
-  - 마우스로 피벗 위치를 바꿀 수 있다.
-  - 피벗 위치를 바꾸면 기존 자리를 지키기 위해 위치가 자동 조절된다.
-  - 꽤 유용하지만 경우에 따라 거슬리는 경우가 있다.
-  - 그럴 때는 "Raw edit mode"를 키면 위치를 자동 조절하지 않는다.
-  - TIP : 씬 뷰에서 피벗 위치를 바꾸는 경우는 이 모드가 적용 안됨.
+    - 피벗은 선택한 UI의 위치를 정하는 기준점이다.
+    - 피벗을 에디터 씬 뷰에서 수정하려면 툴의 기준점을 Pivot으로 설정.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/pivot.png)
+    - 마우스로 피벗 위치를 바꿀 수 있다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/pivot.gif)
+    - 피벗 위치를 바꾸면 기존 자리를 지키기 위해 위치가 자동 조절된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/pivot-position.png)
+    - 꽤 유용하지만 경우에 따라 거슬리는 경우가 있다.
+    - 그럴 때는 "Raw edit mode"를 키면 위치를 자동 조절하지 않는다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/raweditmode-on.png)
+    - TIP : 씬 뷰에서 피벗 위치를 바꾸는 경우는 이 모드가 적용 안됨.
+
+
+　
+
 - **앵커 프리셋**
-  - 빨간색 십자선 사각형 이미지를 선택하면 앵커 프리셋 창이 뜬다.
-  - 자주 쓰이는 앵커 패턴을 제공해 주는 프리셋.
-  - 너비 앵커에는 left, center, right, stretch를 제공한다.
-  - 높이 앵커에는 top, middle, bottom, stretch를 제공한다.
-  - 이들 옵션은 부모 영역에서의 내 위치 기준을 의미. (기준점은 Pivot)
-  - 반면 **stretch** 옵션은 의미가 조금 다른데, 너비, 높이 앵커 프리셋을 둘 다 stretch로 변경하면 원래는 Pos X, Pos Y, Width, Height이던 렉트 트랜스폼의 프로퍼티가 **Left, Top, Right, Bottom**으로 변경된다.
-  - 이것은 부모 영역의 경계선으로부터의 거리. 즉 마진을 의미한다.
-  - 이는 부모 영역의 너비와 높이의 변화에 영향을 받는다는 것이다.
+    - 빨간색 십자선 사각형 이미지를 선택하면 앵커 프리셋 창이 뜬다.
+    - 자주 쓰이는 앵커 패턴을 제공해 주는 프리셋.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/anchor-preset.png)
+    - 너비 앵커에는 left, center, right, stretch를 제공한다.
+    - 높이 앵커에는 top, middle, bottom, stretch를 제공한다.
+    - 이들 옵션은 부모 영역에서의 내 위치 기준을 의미. (기준점은 Pivot)
+    - 반면 **stretch** 옵션은 의미가 조금 다른데, 너비, 높이 앵커 프리셋을 둘 다 stretch로 변경하면 원래는 Pos X, Pos Y, Width, Height이던 렉트 트랜스폼의 프로퍼티가 **Left, Top, Right, Bottom**으로 변경된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/stretch.png)
+    - 이것은 부모 영역의 경계선으로부터의 거리. 즉 마진을 의미한다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/stretch1.png)
+    - 이는 부모 영역의 너비와 높이의 변화에 영향을 받는다는 것이다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/stretch2.png)
+
+
+　
+
 - **앵커 이해하기 - 예시#1**
-  - 빨간 이미지 UI를 항상 화면 왼쪽 상단에 위치 시키고 싶은데,
-  - 앵커가 middle, center인 상태에서 아래와 같이 배치한다면...
-  - 해상도 종횡비가 변경되면 노답. (화면에서 벗어난다)
-  - 앵커를 top, left로 설정해 주고 위치값을 적절하게 잡아주면 해결.
+    - 빨간 이미지 UI를 항상 화면 왼쪽 상단에 위치 시키고 싶은데,
+    - 앵커가 middle, center인 상태에서 아래와 같이 배치한다면...
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/anchor-example1.png)
+    - 해상도 종횡비가 변경되면 노답. (화면에서 벗어난다)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/anchor-example2.png)
+    - 앵커를 top, left로 설정해 주고 위치값을 적절하게 잡아주면 해결.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/anchor-example.gif)
+
+
+　
+
 - **앵커 이해하기 - 예시#2**
-  - 화면 상단에 항상 아래와 같은 상단 바를 띄우고 싶은데,
-  - 앵커가 middle center인 상태에서 아래와 같이 배치하면...
-  - 해상도 종횡비가 변경되면 이렇게 병신이 된다.
-  - 이때는 앵커를 top, stretch로 설정해 주고 위치를 잡아주면 된다.
-  - 문제 해결!
+    - 화면 상단에 항상 아래와 같은 상단 바를 띄우고 싶은데,
+    - 앵커가 middle center인 상태에서 아래와 같이 배치하면...
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/understand1.png)
+    - 해상도 종횡비가 변경되면 이렇게 병신이 된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/understand.gif)
+    - 이때는 앵커를 top, stretch로 설정해 주고 위치를 잡아주면 된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/understand2.png)
+    - 문제 해결!
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/understand3.gif)
+
+
+　
+
 - **Tips**
-  - 앵커 프리셋을 선택할 때...
-  - <ALT> 키를 누르면 컨트롤의 위치가 적절히 이동.
-  - <SHIFT> 키를 누르면 Pivot(기준점) 위치가 적절히 이동.
-  - 그리고 당연한 얘기지만... 앵커는 커스텀 하게 변경이 가능하다.
+    - 앵커 프리셋을 선택할 때...
+    - \<ALT\> 키를 누르면 컨트롤의 위치가 적절히 이동.
+    - \<SHIFT\> 키를 누르면 Pivot(기준점) 위치가 적절히 이동.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/shortcut.png)
+    - 그리고 당연한 얘기지만... 앵커는 커스텀 하게 변경이 가능하다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/25.gif)
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/26.gif)
 
-![26.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/3f8d0124f270d6e49a32cd45b344d200/26.gif)
-
-![25.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/55c3650040fe1ed6b1771f427cd98035/25.gif)
-
-![%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/4363ae1ad3a4a3e45a3658ee9f177b89/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png)
-
-![99EB46335DB0219012.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/901a84413b962def498e8b91038d2971/99EB46335DB0219012.gif)
-
-![99A7D5435DB0214A04.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/cdb0c81a319b78530dc90a2738ba999b/99A7D5435DB0214A04.png)
-
-![99E250475DB020F40E.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/68adfdde931ce3b5866f9e08fc1eee76/99E250475DB020F40E.gif)
-
-![99BFB14F5DB0203711.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/a6e910c7ecccbae94849a82cf094a5f7/99BFB14F5DB0203711.png)
-
-![99C172455DB01FB20F.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/bea79a22aa0a33a7b30764554368a511/99C172455DB01FB20F.gif)
-
-![99AC47475DB01ECB0E.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/8312854a4ca8aa51509c40bc1098dd5d/99AC47475DB01ECB0E.png)
-
-![99C537485DB01E2A0F.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/a868add316938c62d3a7ffc5b939f754/99C537485DB01E2A0F.png)
-
-![stretch2.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/4b18dcd8c1eda7ebf227e138665eadca/stretch2.png)
-
-![stretch1.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/5e67475480d9813cfcb035a187fe0b31/stretch1.png)
-
-![99C911455DB01A4C07.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/a738056eaa5641c7cfd15882fcad857e/99C911455DB01A4C07.png)
-
-![99A7C83A5DB0153E02.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/8300785e94b600aa59712d388479e707/99A7C83A5DB0153E02.png)
-
-![raweditmode-on.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/1498f6fc47ef1770acc89cf5b8c1bbb9/raweditmode-on.png)
-
-![pivot-position.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/446516e90d601e57275ea16d2c9bb2a8/pivot-position.png)
-
-![%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/653b1e243da28ebf090cbbd26080db11/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.gif)
-
-![pivot.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/0ffbfb49547f1e3a8b84658160055d04/pivot.png)
-
-![rect-transform-anchor.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/fbbffde62686b88f10d82e897eb2b251/rect-transform-anchor.png)
 
 　
 

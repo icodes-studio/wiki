@@ -58,29 +58,32 @@
     - UI의 렌더링 설정값을 결정한다.
 
 - **Camera Options**
-    > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/camera-options.png)
+    - 　
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/camera-options.png)
 
 - **Clear flags**
     - 카메라 렌더링 패스 중 어느 부분을 클리어할지 결정.
     - 결국 배경 빈 공간은 이 Clear flags에 따라 초기화된다.
     - ***책의 Don't clear 설명이 이상하다!***
     - Skybox
-        - 배경이 Skybox로 클리어한다.
+        > - 배경이 Skybox로 클리어한다.
     - Solid Color
-        - 배경이 지정한 단색으로 클리어한다.
+        > - 배경이 지정한 단색으로 클리어한다.
     - **Depth only**
-        - 배경을 갱신 않고 이전 화면 위에 그리는데...
-        - Depth 렌더링 순서에 따라 오브젝트를 그린다.
-        - 그러므로 **오브젝트의 Z 깊이는 무시**된다.
-        - 예를 들어 벽을 렌더링 하는 카메라와 사람을 렌더링 하는 카메라가 별도로 있을 때, 벽 안에 사람이 있다 하더라도 사람 렌더링 카메라의 Depth only 옵션이 켜지면 사람이 보인다는 말이다. **투시기능**을 구현할 때 유용하겠다.
-        - 아래 그림에서 큐브는 모두 같은 크기, 맨 왼쪽 큐브는 별도 카메라에서 렌더링 되며 Depth가 우선.
-            > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/cube.gif)
-        - UI도 거리무시, 다른 카메라 오브젝트 위에 그려짐.
+        > - 배경을 갱신 않고 이전 화면 위에 그리는데...
+        > - Depth 렌더링 순서에 따라 오브젝트를 그린다.
+        > - 그러므로 **오브젝트의 Z 깊이는 무시**된다.
+        > - 예를 들어 벽을 렌더링 하는 카메라와 사람을 렌더링 하는 카메라가 별도로 있을 때, 벽 안에 사람이 있다 하더라도 사람 렌더링 카메라의 Depth only 옵션이 켜지면 사람이 보인다는 말이다. **투시기능**을 구현할 때 유용하겠다.
+        > - 아래 그림에서 큐브는 모두 같은 크기, 맨 왼쪽 큐브는 별도 카메라에서 렌더링 되며 Depth가 우선.
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/cube.gif)
+        > - UI도 거리무시, 다른 카메라 오브젝트 위에 그려짐.
     - **Don't Clear**
-        - 배경을 갱신 않고 이전 화면 위에 그린다.
-        - 다른 카메라의 오브젝트 Z 깊이는 유지된다.
-            > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/cube2.gif)
-        - UI도 거리유효, 다른 카메라 오브젝트 뒤에 그려짐.
+        > - 배경을 갱신 않고 이전 화면 위에 그린다.
+        > - 다른 카메라의 오브젝트 Z 깊이는 유지된다.
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/cube2.gif)
+        > - UI도 거리유효, 다른 카메라 오브젝트 뒤에 그려짐.
 
 - **Culling Mask**
     - 카메라 시야 안에 어떤 엘리먼트를 그릴 것인지 설정한다.

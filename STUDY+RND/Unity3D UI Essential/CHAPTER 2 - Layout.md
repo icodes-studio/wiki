@@ -29,9 +29,7 @@
 - **피벗 모드와 공간 모드**
     - 버튼을 누르면 모드가 토글 된다.
     - 평소 UI를 조작할 때는 Pivot 과 Local 을 설정하면 좋다.
-
-        ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/GUI_Pivot_Local_Buttons.png)
-
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/GUI_Pivot_Local_Buttons.png)
     - Center
         - 선택 영역의 중앙이 피벗 포인트 역할을 한다.
         - Rect Transform 컴포넌트의 Pivot 값 기준으로 회전 또는 스케일 편집되는 것이 아니라 강제로 중앙을 기준으로 회전 또는 스케일 편집이 된다.

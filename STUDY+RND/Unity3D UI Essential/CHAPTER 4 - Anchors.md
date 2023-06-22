@@ -143,7 +143,7 @@
     - 디폴트(Match:0)로 현재 해상도의 너비를 캔버스 스케일러의 너비와 비교하고, 그 결과가 모든 것을 스케일 하는 스케일 팩터로 사용된다. 가로 해상도인 960 x 640은 세로 캔버스 스케일러의 레퍼런스 640 x 960보다 너비가 1.5배 크므로 이 레이아웃은 1.5배 확대되는 것이다.
     - Canvas Scaler의 Match 옵션을 0.5로 설정해서 균형을 맞추면...
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/UI_MultiResAllResolutions.png)
-    - 가로 해상도는 1.5배 넓지만 높이가 1.5배 작기 때문에 이 두 팩터는 서로 상쇄되어 최종 스케일 팩터가 1이 되므로 버튼 크기가 유지된다.
+    - 가로 해상도는 1.5배 넓지만 높이가 1.5배 작기 때문에 이 두 팩터는 서로 상쇄되어 최종 스케일 팩터가 1이 되므로 버튼 크기가 유지.
 
 　
 
@@ -200,21 +200,21 @@
 - **근본적 해결을 위해 단위 바꾸기**
     - 포지션과 크기를 물리적인 단위로 지정해야 한다.
     - Constant Physical Size 모드로 바꾸어 보자.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/ConstantPhysicalsize.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/constantphysicalsize.png)
     - 스크린 크기가 작아져도 물리적인 크기가 유지된다.
     - 얼추 보기엔 Constant Pixel Size 모드와 같아 보이지만 다른 개념임.
     - Constant Pixel Size 모드는 해상도과 관련이 있는 것이고
     - Constant Physical Size 모드는 스크린 크기와 관련이 있다.
     - 암튼, 아래 그림을 보면 마진이 너무 크게 잡혀있다.
-        > ![](constant-physical-size-1.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/constant-physical-size-1.png)
     - Constant Pixel Size 모드 때처럼 금방 찌그러졌다.
-        > ![](constant-physical-size-2.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/constant-physical-size-2.png)
     - 아예 화면에서 안 보이기까지...
-        > ![](constant-physical-size-3.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/constant-physical-size-3.png)
     - 이유는 위치 및 마진을 측정하는 방식이 완전히 달라졌기 때문.
     - Canvas Scaler에 대해 단위를 바꿨으니 다시 계산해야 한다.
     - 게이지 슬라이더의 Left, Right 값을 100으로 변경하자.
-        > ![](constant-physical-size-4.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/constant-physical-size-4.png)
 
 
 　

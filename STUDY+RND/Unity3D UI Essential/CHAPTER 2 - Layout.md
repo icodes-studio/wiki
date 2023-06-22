@@ -46,53 +46,49 @@
 　
 
 - **RECT TRANSFORM 컴포넌트**
-  - Unity UI 전용 Transform 컴포넌트
-  - 컴포넌트에는 Width, Height, Anchors, Pivot, 등등의 속성이 있다.
-    - Width : UI의 넓이
-    - Height : UI의 높이
-    - 등등등...
-    - 이들 위치와 크기 필드의 종류는 앵커 값에 따라 달라진다.
-  - Rotation, Scale 필드는 기존 Transform 컴포넌트와 같은 값 사용.
-  - **Pos X, Pos Y, Pos Z**
-    - 고정 크기 모드인 경우 활성화 된다.
-    - Rect Transform Pivot 포인트의 X, Y, Z 위치.
-  - **Width, Height**
-    - 고정 크기 모드인 경우 활성화된다.
-    - Rect Transform의 너비와 높이.
-  - **Left, Top, Right, Bottom**
-    - 가변 크기 모드인 경우 활성화된다.
-    - 상위 하이어러키 Rect Transform의 모서리 기준으로 영역 포인트의 오프셋 값을 의미한다.
-  - **Blueprint mode**
-    - 회전에 상관없이 선택영역이 고정된 상태로 크기 조절 가능
-  - **Raw edit mode**
-    - 앵커 또는 피벗 필드의 값을 변경하면 사각형이 포지션을 유지하도록 하기 위해 일반적으로 포지션 값이 자동조정 된다. 이를 원하지 않는다면 인스펙터에 있는 **R 버튼**을 클릭하여 Raw edit mode를 사용할 수 있다.
-  - Raw edit mode **OFF** - Pos X 값 보정 됨
-  - Raw edit mode **ON** - Pos X 값 보정 안 되고 위치 이동.
-  - **Anchors**
-    - Rect Transform의 레이아웃을 제어합니다.
-    - _**"Chapter 4. 앵커를 찾아서" **_에서 좀 더 자세히...
-  - **Anchor Presets**
-    - Rect Transform의 앵커 포인트를 변경하는 시각적인 방법.
-    - _**"Chapter 4. 앵커를 찾아서" **_에서 좀 더 자세히...
-  - **Pivot**
-    - UI의 중심을 나타낸다.
-    - 피벗을 기준으로 UI의 위치, 크기, 회전이 변경된다.
-    - x=0 : 오브젝트의 맨 좌측, x=1 : 오브젝트의 맨 우측.
-    - y=0 : 오브젝트의 최하단, y=1 : 오브젝트의 최상단.
-    - **피벗이 (0.5, 0.5)일 경우 스케일 & 회전**
-    - **피벗이 (0, 0.5)일 경우 스케일 & 회전**
+    - Unity UI 전용 Transform 컴포넌트
+        >![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/rect_transform.png)
+    - 컴포넌트에는 Width, Height, Anchors, Pivot, 등등의 속성이 있다.
+        > - Width : UI의 넓이
+        > - Height : UI의 높이
+        > - 등등등...
+        > - 이들 위치와 크기 필드의 종류는 앵커 값에 따라 달라진다.
+        > - Rotation, Scale 필드는 기존 Transform 컴포넌트와 같은 값 사용.
+    - **Pos X, Pos Y, Pos Z**
+        > - 고정 크기 모드인 경우 활성화 된다.
+        > - Rect Transform Pivot 포인트의 X, Y, Z 위치.
+    - **Width, Height**
+        > - 고정 크기 모드인 경우 활성화된다.
+        > - Rect Transform의 너비와 높이.
+    - **Left, Top, Right, Bottom**
+        > - 가변 크기 모드인 경우 활성화된다.
+        > - 상위 하이어러키 Rect Transform의 모서리 기준으로 영역 포인트의 오프셋 값을 의미한다.
+    - **Blueprint mode**
+        > - 회전에 상관없이 선택영역이 고정된 상태로 크기 조절 가능
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/blueprintmode.png)
+    - **Raw edit mode**
+        > - 앵커 또는 피벗 필드의 값을 변경하면 사각형이 포지션을 유지하도록 하기 위해 일반적으로 포지션 값이 자동조정 된다.
+        > - 이를 원하지 않는다면 인스펙터에 있는 **R 버튼**을 클릭하여 Raw edit mode를 사용할 수 있다.
+    - Raw edit mode **OFF** - Pos X 값 보정 됨
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/raweditmode-off.png)
+    - Raw edit mode **ON** - Pos X 값 보정 안 되고 위치 이동.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/raweditmode-on.png)
+    - **Anchors**
+        > - Rect Transform의 레이아웃을 제어합니다.
+        > - ***"Chapter 4. 앵커를 찾아서"*** 에서 좀 더 자세히...
+    - **Anchor Presets**
+        > - Rect Transform의 앵커 포인트를 변경하는 시각적인 방법.
+        > - ***"Chapter 4. 앵커를 찾아서"*** 에서 좀 더 자세히...
+    - **Pivot**
+        > - UI의 중심을 나타낸다.
+        > - 피벗을 기준으로 UI의 위치, 크기, 회전이 변경된다.
+        > - x=0 : 오브젝트의 맨 좌측, x=1 : 오브젝트의 맨 우측.
+        > - y=0 : 오브젝트의 최하단, y=1 : 오브젝트의 최상단.
+        > - **피벗이 (0.5, 0.5)일 경우 스케일 & 회전**
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/centerpivot.gif)
+        > - **피벗이 (0, 0.5)일 경우 스케일 & 회전**
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/leftpivot.gif)
 
-![leftpivot.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/150c9447c21cd35ab1285f4879749a42/leftpivot.gif)
-
-![centerpivot.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/55fac7b495f838ce93e1f504ae9fbe76/centerpivot.gif)
-
-![raweditmode-on.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/1498f6fc47ef1770acc89cf5b8c1bbb9/raweditmode-on.png)
-
-![raweditmode-off.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/575d4b0542151fb5a66b0c8f9a3c0b4d/raweditmode-off.png)
-
-![blueprintmode.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/eb43cad600e3758de5c4e43cf4ccf98f/blueprintmode.png)
-
-![rect\_transform.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/2f3d3595043672c501b58fce07bbf0d2/rect_transform.png)
 
 　
 

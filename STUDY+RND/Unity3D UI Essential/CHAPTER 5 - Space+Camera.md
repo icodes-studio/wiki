@@ -197,28 +197,33 @@
     - 각 UI 엘리먼트의 Pos Z 값 0으로 다시 초기화.
     - Image의 Rotation Y 값을 10으로 변경.
     - 게임 뷰로 전환하고 UICamera의 FOV 값을 바꿔서 넣어보자.
-        > ![](FOV2.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/FOV2.png)
     - UI가 원근감 있게 표현되고 있다.
 
+　
 
 　
 
 - **World Space 예제**
-  - Screen Space - Camera 모드는 UI를 3D 공간상에 배치한다.
-  - 그리하여 3D 원근감과 각종 공간 효과를 사용할 수 있게 한다.
-  - 하지만 카메라로부터 일정 거리 떨어진 곳에 UI를 표현하는 방식.
-  - 데드 스페이스 시리즈의 3D 인벤토리 같은 것은 이런 방식으로 구현할 수 없고 **World Space** 모드를 사용하여 캔버스가 씬에서 오브젝트처럼 동작하게 해야 한다.
-  - 책의 예제는 배보다 배꼽이 더 커 보인다.
-  - Unity에서 제공하는 **Standard Assets Example Project**를 활용하자.
+    - Screen Space - Camera 모드는 UI를 3D 공간상에 배치한다.
+    - 그리하여 3D 원근감과 각종 공간 효과를 사용할 수 있게 한다.
+    - 하지만 카메라로부터 일정 거리 떨어진 곳에 UI를 표현하는 방식.
+    - 데드 스페이스 시리즈의 3D 인벤토리 같은 것은 이런 방식으로 구현할 수 없고 **World Space** 모드를 사용하여 캔버스가 씬에서 오브젝트처럼 동작하게 해야 한다.
+    - 책의 예제는 배보다 배꼽이 더 커 보인다.
+    - Unity에서 제공하는 **Standard Assets Example Project**를 활용하자.
+
 - **Standard Assets Example Project 활용**
-  - Standard Assets Example Project를 유니티에서 오픈.
-  - /Assets/SampleScenes/Scenes/Car 씬 오픈.
-  - 하이어러키 루트에 Canvas 추가
-  - Canvas의 Render Mode를 World Space로 변경
-  - Canvas의 스케일을 (0.1, 0.1, 0.1) 변경
-  - Canvas의 위치를 (0, 4, 10) 변경
-  - Button UI 추가
-  - 끝!
+    - Standard Assets Example Project를 유니티에서 오픈.
+    - /Assets/SampleScenes/Scenes/Car 씬 오픈.
+    - 하이어러키 루트에 Canvas 추가
+    - Canvas의 Render Mode를 World Space로 변경
+    - Canvas의 스케일을 (0.1, 0.1, 0.1) 변경
+    - Canvas의 위치를 (0, 4, 10) 변경
+    - Button UI 추가
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/world-space-game.gif)
+    - 끝!
+
 - **최적화**
   - 텍스쳐 최적화 이슈
   - 폰트 최적화 이슈
+  

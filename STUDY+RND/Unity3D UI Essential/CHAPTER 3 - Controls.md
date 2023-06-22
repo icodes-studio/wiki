@@ -661,99 +661,113 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
 　
 
 ## DROPDOWN 컨트롤
+    ● 사용자가 리스트에서 옵션을 선택할 수 있다.
+    ● 컨트롤은 현재 선택된 옵션을 보여준다.
+    ● 클릭하면 리스트가 나타나 새로운 옵션을 선택할 수 있게 된다.
+    ● 이후 리스트는 닫히며, 컨트롤에는 새로 선택된 옵션이 표시된다.
+    ● 리스트는 사용자가 컨트롤을 클릭하거나 캔버스의 아무 곳이나 클릭하는 경우에도 닫힌다.
 
-> 사용자가 리스트에서 옵션을 선택할 수 있다.컨트롤은 현재 선택된 옵션을 보여준다.클릭하면 리스트가 나타나 새로운 옵션을 선택할 수 있게 된다.이후 리스트는 닫히며, 컨트롤에는 새로 선택된 옵션이 표시된다.리스트는 사용자가 컨트롤을 클릭하거나 캔버스의 아무 곳이나 클릭하는 경우에도 닫힌다.
 
-![UI\_DropdownExampleOpen.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/60360feb1a0a7378aad15a1c/a8ea0c3f7b384de4874d2fd980549a0c/UI_DropdownExampleOpen.png)
-
-![UI\_DropdownExample.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/60360feb1a0a7378aad15a1c/579f7288369541219ecf0cb051a12c7f/UI_DropdownExample.png)
-
----
+　
 
 - **컨트롤 추가 및 하이어러키**
-  - / UI / Dropdown 메뉴로 컨트롤 추가.
-  - 옵션 리스트는 인스펙터에서 지정하거나 코드에서 넣을 수 있다.
-  - 각 옵션에는 텍스트 문자열이나 이미지를 지정할 수 있다.
-  - 리스트에서 아이템을 클릭하면 On Value Changed 이벤트 발생.
-  - 선택한 옵션의 zero-base 인덱스가 이벤트 인자로 전달된다.
-  - **Template**
-    - 드롭다운 리스트 탬플릿
-  - **Caption Text**
-    - 선택된 옵션의 텍스트를 유지하는 Text 컴포넌트
-  - **Caption Image**
-    - 선택된 옵션의 이미지를 유지하는 Image 컴포넌트
-  - **Item Text**
-    - 아이템 텍스트를 유지하는 Text 컴포넌트
-  - **Item Image**
-    - 아이템 이미지를 유지하는 Image 컴포넌트
-  - **Value**
-    - 선택된 옵션의 zero-based 식별 번호.
-  - **Options**
-    - 사용 가능한 옵션의 리스트.
-    - 각 옵션별로 텍스트 문자열과 이미지를 지정할 수 있다.
+    - / UI / Dropdown 메뉴로 컨트롤 추가.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/dropdown.png)
+    - 옵션 리스트는 인스펙터에서 지정하거나 코드에서 넣을 수 있다.
+    - 각 옵션에는 텍스트 문자열이나 이미지를 지정할 수 있다.
+    - 리스트에서 아이템을 클릭하면 On Value Changed 이벤트 발생.
+    - 선택한 옵션의 zero-base 인덱스가 이벤트 인자로 전달된다.
+    - **Template**
+        > - 드롭다운 리스트 탬플릿
+    - **Caption Text**
+        > - 선택된 옵션의 텍스트를 유지하는 Text 컴포넌트
+    - **Caption Image**
+        > - 선택된 옵션의 이미지를 유지하는 Image 컴포넌트
+    - **Item Text**
+        > - 아이템 텍스트를 유지하는 Text 컴포넌트
+    - **Item Image**
+        > - 아이템 이미지를 유지하는 Image 컴포넌트
+    - **Value**
+        > - 선택된 옵션의 zero-based 식별 번호.
+    - **Options**
+        > - 사용 가능한 옵션의 리스트.
+        > - 각 옵션별로 텍스트 문자열과 이미지를 지정할 수 있다.
+
+
+　
+
 - **템플릿 시스템**
-  - 클릭할 때 나타나는 드롭다운 리스트를 구성하기 위한 템플릿을 자식 게임 오브젝트로 가진다.
-  - 템플릿은 기본적으로 비활성화 상태이다.
-  - Dropdown 컴포넌트의 Template 속성에 이 템플릿이 지정되어 있다.
-  - 템플릿은 한 개의 Toggle 컨트롤 아이템이 있어야 한다.
-  - 클릭하여 실제 드랍다운 리스트가 생성되면 이 토글 아이템은 리스트 내에 여러 개 복제된다. 아이템의 부모는 자동으로 크기가 조절되어 모든 항목이 안에 꼭 맞게 들어간다.
-  - 간단한 드롭다운 설정 템플릿.
-  - 스크롤뷰를 지원하는 더 복잡한 드롭다운 템플릿.
+    - 클릭할 때 나타나는 드롭다운 리스트를 구성하기 위한 템플릿을 자식 게임 오브젝트로 가진다.
+    - 템플릿은 기본적으로 비활성화 상태이다.
+    - Dropdown 컴포넌트의 Template 속성에 이 템플릿이 지정되어 있다.
+    - 템플릿은 한 개의 Toggle 컨트롤 아이템이 있어야 한다.
+    - 클릭하여 실제 드랍다운 리스트가 생성되면 이 토글 아이템은 리스트 내에 여러 개 복제된다. 아이템의 부모는 자동으로 크기가 조절되어 모든 항목이 안에 꼭 맞게 들어간다.
+    - 간단한 드롭다운 설정 템플릿.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/UI_DropdownHierarchySimple.png)
+    - 스크롤뷰를 지원하는 더 복잡한 드롭다운 템플릿.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/UI_DropdownHierarchyScrolling.png)
+
+
+　
+
 - **텍스트와 이미지 지원 셋업**
-  - 드롭다운의 옵션 당 한 개의 텍스트와 이미지가 지원된다.
-  - 드랍다운에서 셋업 되어야 사용할 수 있다.
-  - Caption Text는 현재 선택된 옵션 텍스트를 유지하는 컴포넌트이다.
-  - Item Text는 각각의 옵션 텍스트를 유지하는 컴포넌트이다.
-  - Caption Image와 Item Image 속성이 둘 다 셋업 된 경우 이미지 드랍다운이 지원된다. 기본적으로는 설정되어 있지 않다.
+    - 드롭다운의 옵션 당 한 개의 텍스트와 이미지가 지원된다.
+    - 드랍다운에서 셋업 되어야 사용할 수 있다.
+    - Caption Text는 현재 선택된 옵션 텍스트를 유지하는 컴포넌트이다.
+    - Item Text는 각각의 옵션 텍스트를 유지하는 컴포넌트이다.
+    - Caption Image와 Item Image 속성이 둘 다 셋업 된 경우 이미지 드랍다운이 지원된다. 기본적으로는 설정되어 있지 않다.
+
+
+ 　
+
 - **드랍다운 리스트 배치**
-  - 리스트 배치는 템플릿 Rect Transform 앵커 및 피벗에 의해 결정된다.
-  - 리스트는 아래로 펼쳐지므로 템플릿의 피벗은 Y가 1이어야 한다.
-  - 드랍다운 할 캔버스 공간이 부족하면 드랍업 된다.
+    - 리스트 배치는 템플릿 Rect Transform 앵커 및 피벗에 의해 결정된다.
+    - 리스트는 아래로 펼쳐지므로 템플릿의 피벗은 Y가 1이어야 한다.
+    - 드랍다운 할 캔버스 공간이 부족하면 드랍업 된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/dropup.png)
 
-![dropup.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/60360feb1a0a7378aad15a1c/766228788c162226c594472f2980fdbf/dropup.png)
-
-![UI\_DropdownHierarchyScrolling.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/60360feb1a0a7378aad15a1c/d985cdca7d0bffde4dd8f54417eaaafc/UI_DropdownHierarchyScrolling.png)
-
-![UI\_DropdownHierarchySimple.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/60360feb1a0a7378aad15a1c/e40c1f4bf48484589688e36459a7a1fd/UI_DropdownHierarchySimple.png)
-
-![dropdown.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/60360feb1a0a7378aad15a1c/afcbb1df992a53eb649270f2959d82b5/dropdown.png)
+　
 
 　
 
 ## 컨트롤 내비게이션
+    ● 방향키를 통해 컨트롤에서 컨트롤로 포커스를 옮겨가는 기능.
 
-> 방향키를 통해 컨트롤에서 컨트롤로 포커스를 옮겨가는 기능.
 
-![navigation.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/60360feb1a0a7378aad15a1c/95f14da5a512acc44b534f0ac196f31b/navigation.png)
-
----
+　
 
 - **NAVIGATION 옵션**
-  - UI 요소 내비게이션이 어떻게 제어될지 결정한다.
-  - 내비게이션 기능은 Selectable 컨트롤에만 적용된다.
-  - **None**
-    - 키보드 내비게이션을 사용하지 않는다.
-    - 클릭이나 탭으로부터도 포커스를 받지 않도록 한다.
-  - **Horizontal**
-    - 수평으로 이동한다.
-  - **Vertical**
-    - 수직으로 이동한다.
-  - **Automatic**
-    - 사용자가 입력한 방향(상하좌우)에서 가장 가까운 컨트롤로 포커스를 옮겨가도록 한다.
-  - **Explicit**
-    - 컨트롤의 이동 방향을 명시적으로 지정한다.
-    - Selectable 컨트롤만 지정 가능하다.
+    - UI 요소 내비게이션이 어떻게 제어될지 결정한다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/navigation.png)
+    - 내비게이션 기능은 Selectable 컨트롤에만 적용된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/UI_SelectableNavigation.png)
+    - **None**
+        > - 키보드 내비게이션을 사용하지 않는다.
+        > - 클릭이나 탭으로부터도 포커스를 받지 않도록 한다.
+    - **Horizontal**
+        > - 수평으로 이동한다.
+    - **Vertical**
+        > - 수직으로 이동한다.
+    - **Automatic**
+        > - 사용자가 입력한 방향(상하좌우)에서 가장 가까운 컨트롤로 포커스를 옮겨가도록 한다.
+    - **Explicit**
+        > - 컨트롤의 이동 방향을 명시적으로 지정한다.
+        > - Selectable 컨트롤만 지정 가능하다.
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/explicit.png)
+
+
+　
+
 - **VISUALIZE 버튼**
-  - 에디터 씬 뷰에서 내비게이션 흐름을 시각적으로 표시한다.
+    - 에디터 씬 뷰에서 내비게이션 흐름을 시각적으로 표시한다.
+    > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/GUIVisualizeNavigation.png)
 
-![GUIVisualizeNavigation.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/60360feb1a0a7378aad15a1c/c28a5e5a27dc0ca45bad39e65ec7a818/GUIVisualizeNavigation.png)
-
-![explicit.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/60360feb1a0a7378aad15a1c/3234383b69679b895d27cad66bc13bc0/explicit.png)
-
-![UI\_SelectableNavigation.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/60360feb1a0a7378aad15a1c/c2565fa83eb86371578be68d1e9c321a/UI_SelectableNavigation.png)
+　
 
 　
 
 ## 셰이더에 대해...
-
-> 모든 UI 컨트롤에는 Material 속성이 있다.이 속성에 셰이더를 재질 값으로 지정하면 셰이더 적용 가능이건 따로 세션을 만들어 설명하자.
+    ● 모든 UI 컨트롤에는 Material 속성이 있다.
+    ● 이 속성에 셰이더를 재질 값으로 지정하면 셰이더 적용 가능.
+    ● 이건 따로 세션을 만들어 설명하자.

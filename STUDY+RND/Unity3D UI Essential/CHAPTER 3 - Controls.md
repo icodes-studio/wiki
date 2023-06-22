@@ -116,9 +116,7 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
 　
 
 - **TEXT FIELD COMPONENT**
-
-    ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/UI_InputFieldInspector.png)    
-
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/UI_InputFieldInspector.png)    
     - **Interactable**
         > - 입력 필드가 상호작용 가능한지 여부.
         > - 언체크 되면 컨트롤이 비활성화 된다.

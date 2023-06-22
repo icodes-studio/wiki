@@ -103,6 +103,7 @@
     ● 각 UI를 3D 공간에서 서로 나누어 배치할 수도 있다.
 *https://docs.unity3d.com/kr/2021.1/Manual/UICanvas.html*
 
+
 　
 
 - **RENDER MODE: Screen Space - Overlay**
@@ -118,6 +119,9 @@
     - Sort Order
         > - 여러 개 Overlay 캔버스가 있는 경우, 그리는 순서
         > - 낮은 순서의 캔버스는 아래에 그려진다.
+
+
+　
 
 - **RENDER MODE: Screen Space - Camera**
     - 캔버스가 그려질 카메라를 선택하여 UI를 렌더링 한다.
@@ -136,7 +140,9 @@
     - Order in Layer
         > - 선택된 소팅 레이어에서 캔버스가 그려지는 순서.
         > - 낮은 순서의 캔버스는 아래에 그려진다.
- 
+
+
+　
 
 - **RENDER MODE: World Space**
         > - 공식문서에 있는 아래 그림은 설명하기 좀 애매해.

@@ -303,140 +303,145 @@
         > - 상위 그룹의 설정을 무시할지 설정.
         > - 언체크 하면 속성은 상속됨. Alpha 값은 중첩(MUL) 표현됨.
 
+　
 
 　
 
 ## 자동 레이아웃 그룹
+    ● 수평, 수직, 그리드 그룹의 세 종류가 있다.
+    ● 이 그룹을 통해 UI를 자동 얼라인하여 배치할 수 있다.
+    ● 그룹은 하이어러키상 중첩해서 사용할 수 있다.
 
-> 수평, 수직, 그리드 그룹의 세 종류가 있다.이 그룹을 통해 UI를 자동 얼라인하여 배치할 수 있다.그룹은 하이어러키상 중첩해서 사용할 수 있다.
 
----
+　
 
 - **HORIZONTAL LAYOUT GROUP**
-  - 하위 게임 오브젝트를 자동으로 한 행에 배열한다.
-  - eg. 인앱 결제 상점 아이템
-  - Usage...
-    - 1) 씬 안에 Canvas를 생성한다.
-    - 2) Canvas에 우 클릭하여 빈 게임 오브젝트 생성
-    - 3) 오브젝트의 이름을 "HorizontalLayoutGroup"로 변경
-    - 4) 여기에 Horizontal Layout Group 컴포넌트 추가
-    - 5) "HorizontalLayoutGroup" 오브젝트 Width 값을 300으로
-    - 6) 이 오브젝트의 하위로 세 개의 UI/Image 추가.
-    - 7) Image 컴포넌트에 Source Image를 원하는 Sprite로 설정.
-  - Image 오브젝트가 가로로 예쁘게 얼라인 되었다.
-  - 인스펙터 창에서 Horizontal Layout Group은 아래와 같다.
-  - **Padding**
-    - 그룹의 마진(left, top, right, bottom)을 설정.
-  - **Spacing**
-    - 하위 엘리먼트들 사이의 간격을 일괄 설정.
-  - **Child Alignment**
-    - 하위 엘리먼트들을 레이아웃 그룹 내에서 어느 위치를 중심으로 정렬할 것인지 지정.
-  - **Control Child Size**
-    - 하위 엘리먼트의 너비, 높이를 리사이징 할지 여부.
-    - Child Force Expand 옵션이나 Layout Element 컴포넌트 등과 조합되어 사용됐을 때 좀 더 의미가 있을 듯.
-    - 단독 사용하면 원본 이미지보다 작게 리사이징만 된다.
-  - **Use Child Scale**
-    - 하위 엘리먼트의 스케일 값도 고려해서 배열한다.
-    - 2019 버전부터 사용 가능
-  - **Child Force Expand**
-    - 각 하위 엘리먼트가 그룹 영역 안에서 최대한으로 넓은 공간을 차지하도록 간격을 띄워서 배열한다.
-    - 엘리먼트 간의 간격은 균일하게 조정됨.
-    - Control Child Size 옵션과 같이 사용되면 그룹 영역의 공간을 모두 차지하도록 컨트롤이 리사이징되어 배열된다.
-  - **사용 예**
+    - 하위 게임 오브젝트를 자동으로 한 행에 배열한다.
+    - eg. 인앱 결제 상점 아이템
+    - Usage...
+        > - 1) 씬 안에 Canvas를 생성한다.
+        > - 2) Canvas에 우 클릭하여 빈 게임 오브젝트 생성
+        > - 3) 오브젝트의 이름을 "HorizontalLayoutGroup"로 변경
+        > - 4) 여기에 Horizontal Layout Group 컴포넌트 추가
+        > - 5) "HorizontalLayoutGroup" 오브젝트 Width 값을 300으로
+        > - 6) 이 오브젝트의 하위로 세 개의 UI/Image 추가.
+        > - 7) Image 컴포넌트에 Source Image를 원하는 Sprite로 설정.
+    - Image 오브젝트가 가로로 예쁘게 얼라인 되었다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/horizontallayoutgroup-100.png)
+    - Horizontal Layout Group 컴포넌트
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/horizontallayoutgroup.png)
+    - **Padding**
+        > - 그룹의 마진(left, top, right, bottom)을 설정.
+    - **Spacing**
+        > - 하위 엘리먼트들 사이의 간격을 일괄 설정.
+    - **Child Alignment**
+        > - 하위 엘리먼트들을 레이아웃 그룹 내에서 어느 위치를 중심으로 정렬할 것인지 지정.
+    - **Control Child Size**
+        > - 하위 엘리먼트의 너비, 높이를 리사이징 할지 여부.
+        > - Child Force Expand 옵션이나 Layout Element 컴포넌트 등과 조합되어 사용됐을 때 좀 더 의미가 있을 듯.
+        > - 단독 사용하면 원본 이미지보다 작게 리사이징만 된다.
+    - **Use Child Scale**
+        > - 하위 엘리먼트의 스케일 값도 고려해서 배열한다.
+        > - 2019 버전부터 사용 가능
+    - **Child Force Expand**
+        > - 각 하위 엘리먼트가 그룹 영역 안에서 최대한으로 넓은 공간을 차지하도록 간격을 띄워서 배열한다.
+        > - 엘리먼트 간의 간격은 균일하게 조정됨.
+        > - Control Child Size 옵션과 같이 사용되면 그룹 영역의 공간을 모두 차지하도록 컨트롤이 리사이징되어 배열된다.
+    - **사용 예**
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/ChildControlsSize.gif)
 
-![ChildControlsSize.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/93fd4d603cca9a0b7019cf23e8a350b2/ChildControlsSize.gif)
-
-![horizontallayoutgroup.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/b77098f0ce27864bfe508f780c761b47/horizontallayoutgroup.png)
-
-![horizontallayoutgroup-100.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/4216536c64e8974f11e010a74f21d5ea/horizontallayoutgroup-100.png)
 
 　
 
 - **VERTICAL LAYOUT GROUP**
-  - 하위 게임 오브젝트를 자동으로 한 **열(Vertical)**에 배열한다.
-  - Horizontal Layout Group과 비교해 사용법은 같다.
+    - 하위 게임 오브젝트를 자동으로 한 **열(Vertical)**에 배열한다.
+    - Horizontal Layout Group과 비교해 사용법은 같다.
+
 
 　
 
 - **GRID LAYOUT GROUP**
-  - 하위 엘리먼트의 배열을 그리드 구조 안에서 배열한다.
-  - 사용법은 수평, 수직 레이아웃 그룹과 거의 동일
-  - "GridLayoutGroup" 게임 오브젝트의 Width, Height를 200 설정
-  - 하위로 세 개 말고 네 개의 UI/ImageI 추가해봐.
-  - 그러면 아래와 같은 모습이 될 거야.
-  - **Rect Transform**
-    - 레이아웃의 영역 지정
-  - **Padding**
-    - 그룹의 마진(left, top, right, bottom)을 설정.
-  - **Cell Size**
-    - 하위 엘리먼트의 내부 셀 크기를 정의한다.
-    - 최대한 많은 엘리먼트가 들어갈 수 있도록 자동 리사이즈됨?
-    - 셀이 더 들어갈 수 없는 상황이라면 리사이즈는 취소됨?
-  - **Spacing**
-    - 하위 엘리먼트들 사이의 간격을 일괄 설정.
-    - X축, Y축 별도 설정.
-  - **Start Corner**
-    - 첫 번째 셀이 그리드 어디에서부터 그려질지 결정.
-      - Upper Left
-      - Upper Right
-      - Lower Left
-      - Lower Right
-  - **Start Axis**
-    - Start Corner를 시작으로 어떤 방향으로 그려질지 설정.
-    - Horizontal
-    - Vertical
-  - **Child Alignment**
-    - 하위 엘리먼트들의 앵커 모드 설정.
-  - **Constraint**
-    - Fixed Row Count
-      - 행의 최대 개수를 제한
-    - Fixed Column Count
-      - 열의 최대 개수를 제한
-    - Flexible
-      - 개수에 제한을 걸지 않음
+    - 하위 엘리먼트의 배열을 그리드 구조 안에서 배열한다.
+    - 사용법은 수평, 수직 레이아웃 그룹과 거의 동일
+    - "GridLayoutGroup" 게임 오브젝트의 Width, Height를 200 설정
+    - 하위로 세 개 말고 네 개의 UI/ImageI 추가해봐.
+    - 그러면 아래와 같은 모습이 될 거야.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/gridlayoutgroup.png)
+    - **Rect Transform**
+        > - 레이아웃의 영역 지정
+    - **Padding**
+        > - 그룹의 마진(left, top, right, bottom)을 설정.
+    - **Cell Size**
+        > - 하위 엘리먼트의 내부 셀 크기를 정의한다.
+        > - 최대한 많은 엘리먼트가 들어갈 수 있도록 자동 리사이즈됨?
+        > - 셀이 더 들어갈 수 없는 상황이라면 리사이즈는 취소됨?
+    - **Spacing**
+        > - 하위 엘리먼트들 사이의 간격을 일괄 설정.
+        > - X축, Y축 별도 설정.
+    - **Start Corner**
+        > - 첫 번째 셀이 그리드 어디에서부터 그려질지 결정.
+        > - Upper Left
+        > - Upper Right
+        > - Lower Left
+        > - Lower Right
+    - **Start Axis**
+        > - Start Corner를 시작으로 어떤 방향으로 그려질지 설정.
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/grid-axis.png)
+        > - Horizontal
+        > - Vertical
+    - **Child Alignment**
+        > - 하위 엘리먼트들의 앵커 모드 설정.
+    - **Constraint**
+        > - Fixed Row Count: 행의 최대 개수를 제한
+        > - Fixed Column Count: 열의 최대 개수를 제한
+        > - Flexible: 개수에 제한을 걸지 않음
 
-![grid-axis.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/e84378f10211fe844718216f63aca222/grid-axis.png)
 
-![gridlayoutgroup.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/4fdcb5b5a1e89618aac67313e3f08fec/gridlayoutgroup.png)
+　
 
 　
 
 ## 레이아웃 옵션
+    ● 세밀하게 레이아웃을 제어하기 위해 별도 컴포넌트가 제공된다.
+    ● 이들 컴포넌트들은 앞서 설명한 레이아웃 그룹 컴포넌트의 일부 기능을 무시하거나 재정의 하므로 사용에 유의가 필요하다.
+    ● Layout Element
+    ● Content Size Fitter
+    ● Aspect Ratio Fitter
+    ● Scroll RectsMasks
 
-> 레이아웃 그룹 컴포넌트는 잘 동작하지만 디테일이 떨어져.세밀한 부분까지 제어하기 위해 아래 컴포넌트가 제공됨.이들 컴포넌트들은 앞서 설명한 레이아웃 그룹 컴포넌트의 일부 기능을 무시하거나 재정의 하므로 사용에 유의가 필요하다.Layout ElementContent Size FitterAspect Ratio FitterScroll RectsMasks
 
----
+　
 
 - **LAYOUT ELEMENT**
-  - 레이아웃 그룹 하위 요소들에 Layout Element 컴포넌트 추가.
-  - 레이아웃 그룹의 리사이징 기본 기능을 커스터마이징 한다.
-  - 사실 좀 더 정확히 말하자면, 레이아웃 그룹이 하위 엘리먼트들을 리사이징하기 위해서 각 하위 UI 컨트롤들이 가지고 있는 최소, 선호 또는 가변 크기 값(대부분의 UI 컨트롤은 내부적으로 Layout Element 속성을 포함)을 가지고 계산하는데, 이 Layout Element 컴포넌트는 이들 값을 변경하는 역할을 한다. 다시 말해, 부모의 레이아웃 그룹은 Control Child Size 옵션이 켜져 있고 Child Force Expand 옵션이 꺼져 있어야 이 컴포넌트의 의미가 있겠다.
-  - **Ignore Layout**
-    - 체크하면 레이아웃 그룹으로 정렬을 하지 않는다.
-    - 스크립트에서 직접 수치를 지정할 때 사용.
-  - **Min Width**
-    - 자동 리사이징 될 때의 최소 가로크기
-  - **Min Height**
-    - 자동 리사이징 될 때의 최소 세로크기
-  - **Preferred Width, Height**
-    - 자동 리사이징 될 때의 최대(선호) 크기
-    - 말 그대로 이 크기를 선호하면서 정렬되게 한다는 것이지, 꼭 이 길이로 설정된다는 것은 아님. Min을 우선적으로 하고 그룹 크기 내에서 될 수 있으면 Preferred 크기에 최대한 가깝게 되게끔 한다.
-    - 부모 레이아웃 그룹의 Child Force Expand 옵션이 켜져 있으면 의미가 없다. 걍 최대 리사이즈 됨.
-  - **Flexible Width, Height**
-    - 책에서는 엘리먼트가 어느 비율만큼 차지할지를 지정?
-    - 레퍼런스 문서에서는 레이아웃 요소가 형제 레이아웃에 상대적으로 채워야 하는 (추가 사용 가능한) 너비의 상대적 크기. 즉 남는 여백을 얼만큼 차지하는지 지정한다고 하는데... 0과 0이 아닌 값의 느낌으로 동작한다.
-    - 유니티 버그인지 내가 병신인 건지... 잘 모르겠다.
-    - 좀 더 찾아보자!
-  - **Layout Priority**
-    - 레이아웃 속성 중첩 사용 시 의미 있음.
-    - UI 컨트롤이 디폴트로 가지고 있는 Layout Priority는 0
-    - Layout Priority가 가장 높은 컴포넌트 속성 값을 사용.
-    - Priority가 같으면 각 속성 값 중 가장 큰 값 사용.
-  - **사용 예**
+    - 레이아웃 그룹 하위 요소들에 Layout Element 컴포넌트 추가.
+    - 레이아웃 그룹의 리사이징 기본 기능을 커스터마이징 한다.
+    - 사실 좀 더 정확히 말하자면, 레이아웃 그룹이 하위 엘리먼트들을 리사이징하기 위해서 각 하위 UI 컨트롤들이 가지고 있는 최소, 선호 또는 가변 크기 값(대부분의 UI 컨트롤은 내부적으로 Layout Element 속성을 포함)을 가지고 계산하는데, 이 Layout Element 컴포넌트는 이들 값을 변경하는 역할을 한다. 다시 말해, 부모의 레이아웃 그룹은 Control Child Size 옵션이 켜져 있고 Child Force Expand 옵션이 꺼져 있어야 이 컴포넌트의 의미가 있겠다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/verticallayoutgroup-layoutelement.png)
+    - **Ignore Layout**
+        > - 체크하면 레이아웃 그룹으로 정렬을 하지 않는다.
+        > - 스크립트에서 직접 수치를 지정할 때 사용.
+    - **Min Width**
+        > - 자동 리사이징 될 때의 최소 가로크기
+    - **Min Height**
+        > - 자동 리사이징 될 때의 최소 세로크기
+    - **Preferred Width, Height**
+        > - 자동 리사이징 될 때의 최대(선호) 크기
+        > - 말 그대로 이 크기를 선호하면서 정렬되게 한다는 것이지, 꼭 이 길이로 설정된다는 것은 아님. Min을 우선적으로 하고 그룹 크기 내에서 될 수 있으면 Preferred 크기에 최대한 가깝게 되게끔 한다.
+        > - 부모 레이아웃 그룹의 Child Force Expand 옵션이 켜져 있으면 의미가 없다. 걍 최대 리사이즈 됨.
+    - **Flexible Width, Height**
+        > - 책에서는 엘리먼트가 어느 비율만큼 차지할지를 지정?
+        > - 레퍼런스 문서에서는 레이아웃 요소가 형제 레이아웃에 상대적으로 채워야 하는 (추가 사용 가능한) 너비의 상대적 크기. 즉 남는 여백을 얼만큼 차지하는지 지정한다고 하는데... 0과 0이 아닌 값의 느낌으로 동작한다.
+        > - 유니티 버그인지 내가 병신인 건지... 잘 모르겠다.
+        > - 좀 더 찾아보자!
+    - **Layout Priority**
+        > - 레이아웃 속성 중첩 사용 시 의미 있음.
+        > - UI 컨트롤이 디폴트로 가지고 있는 Layout Priority는 0
+        > - Layout Priority가 가장 높은 컴포넌트 속성 값을 사용.
+        > - Priority가 같으면 각 속성 값 중 가장 큰 값 사용.
+    - **사용 예**
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/LayoutElement.gif)
 
-![LayoutElement.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/5b8e1e56eb6404b680697401fe976f98/LayoutElement.gif)
-
-![verticallayoutgroup-layoutelement.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/2cc142c6357cf8bca073df942a4f0031/verticallayoutgroup-layoutelement.png)
 
 　
 

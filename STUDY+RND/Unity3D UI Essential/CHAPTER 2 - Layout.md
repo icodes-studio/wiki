@@ -252,61 +252,59 @@
     - **Reference Pixels Per Unit**
         > - 스프라이트에 이 ‘Pixels Per Unit’ 설정이 있는 경우 스프라이트의 픽셀 하나가 월드의 유닛 하나에 해당합니다. ’Reference Pixels Per Unit’을 1로 설정하면 스프라이트의 ‘Pixels Per Unit’ 설정이 그대로 사용된다.
         > - Set Native Size 눌러보면 느낌 팍 옴.
-        > - <Sprite's> / <Canvas Scaler's> = Pixels Per Unit
+        > - \<Sprite's\> / \<Canvas Scaler's\> = Pixels Per Unit
         > - 뭐, 요런 느낌이랄까...
 
 
 　　
 
 - **GRAPHIC RAYCASTER**
-  - 캔버스에 있는 그래픽을 감시하고 어떤 그래픽에 충돌했는지 결정.
-  - Ignore Reversed Graphics
-    - UI가 카메라 방향에 뒤집혀 있을 때 충돌 처리를 할지 말지.
-  - Blocking Objects
-    - 레이캐스트가 블락킹 될 오브젝트(컬라이더)의 종류
-    - 2D, 3D, Everything, None(블락킹될 오브젝트 없음)
-  - Blocking Mask
-    - 레이캐스트가 블락킹 될 렌더링 레이어 지정
+    - 캔버스에 있는 그래픽을 감시하고 어떤 그래픽에 충돌했는지 결정.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/graphicraycaster.png)
+    - Ignore Reversed Graphics
+        > - UI가 카메라 방향에 뒤집혀 있을 때 충돌 처리를 할지 말지.
+    - Blocking Objects
+        > - 레이캐스트가 블락킹 될 오브젝트(컬라이더)의 종류
+        > - 2D, 3D, Everything, None(블락킹될 오브젝트 없음)
+    - Blocking Mask
+        > - 레이캐스트가 블락킹 될 렌더링 레이어 지정
 
-![graphicraycaster.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/095f55512e95bee4b43ee86d1245c8b8/graphicraycaster.png)
 
 　
 
 - **CANVAS RENDERER**
-  - 게임 오브젝트를 사용해 캔버스에 시각적인 것을 렌더링 하려면 CanvasRenderer 컴포넌트를 추가해야 한다. 기본적으로 모든 UI 컨트롤에는 이 컴포넌트가 추가되어 있으며 삭제할 수 없다.
-  - Cull Transparent Mesh
-    - 알파값이 0이 되면 렌더링할 때 아예 취급하지 않도록 무시.
-    - 최적화 옵션.
+    - 게임 오브젝트를 사용해 캔버스에 시각적인 것을 렌더링 하려면 CanvasRenderer 컴포넌트를 추가해야 한다.
+    - 기본적으로 모든 UI 컨트롤에는 이 컴포넌트가 추가되어 있으며 삭제할 수 없다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/canvasrenderer.png)
+    - Cull Transparent Mesh
+        > - 알파값이 0이 되면 렌더링할 때 아예 취급하지 않도록 무시.
+        > - 최적화 옵션.
 
-![canvasrenderer.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/475cacda71641c8fdda095fd055f67fa/canvasrenderer.png)
 
 　
 
 - **CANVAS GROUP**
-  - 나와 자식 UI 엘리먼트를 묶은 후 속성을 동시에 수정하는 기능.
-  - Alpha
-    - 그룹 내 모든 UI 엘리먼트들의 투명도 조절
-  - Interactable
-    - 그룹 내 모든 UI 엘리먼트들이 입력 이벤트를 받을지 말지.
-  - Blocks Raycasts
-    - 그룹 내 모든 UI 엘리먼트들이 레이캐스트를 무시할지 여부.
-    - Physics.Raycast에는 적용되지 않는다.
-  - Ignore Parent Groups
-    - 상위 그룹의 설정을 무시할지 설정.
-    - 언체크 하면 속성은 상속됨. Alpha 값은 중첩(MUL) 표현됨.
-  ‌
-  ‌
-  ‌
+    - 나와 자식 UI 엘리먼트를 묶은 후 속성을 동시에 수정하는 기능.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/canvasgroup.png)
+    - Alpha
+        > - 그룹 내 모든 UI 엘리먼트들의 투명도 조절
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/canvasgroupalpha.gif)
+    - Interactable
+        > - 그룹 내 모든 UI 엘리먼트들이 입력 이벤트를 받을지 말지.
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/canvasgroupinteractable.gif)
+    - Blocks Raycasts
+        > - 그룹 내 모든 UI 엘리먼트들이 레이캐스트를 무시할지 여부.
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/blockraycast.gif)
+        > - Physics.Raycast에는 적용되지 않는다.
+    - Ignore Parent Groups
+        > - 상위 그룹의 설정을 무시할지 설정.
+        > - 언체크 하면 속성은 상속됨. Alpha 값은 중첩(MUL) 표현됨.
 
-![99273A4D5D639B3D0C.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/38df5aad7e7d000398d8f58cabea816e/99273A4D5D639B3D0C.gif)
 
-![99DCC53B5D6397C913.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/47cc0bbe9f1109a8ad5ca156451f57df/99DCC53B5D6397C913.gif)
-
-![9970B44B5D63971504.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/58d7ff0d1be13bce90f435872e91168e/9970B44B5D63971504.png)
-
-![99743E385D5E5E5331.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/2328759e3a3dee53f1e2a2229b112fa2/99743E385D5E5E5331.gif)
-
-![canvasgroup.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/601781e04f70403127bd7032/baaadcd5ff33e054d26e6aec2dd5010d/canvasgroup.png)
+　
 
 ## 자동 레이아웃 그룹
 

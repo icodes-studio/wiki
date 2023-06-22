@@ -502,159 +502,161 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
 　
 
 - **동적 이벤트 속성**
-  - 컴포넌트들의 내부 스크립트를 알아야 제대로 이해 및 활용 가능.
-  - 스킵 하려 했으나 어쨌든 유니티 에디터 기능이기에 설명함.
-  - 닥치고, 버튼과 달리 토글은 Boolean 상태를 갖고 있으므로 Dynamic Parameter를 사용할 수 있다. 토글의 상태(true/false)를 동적으로 넘겨 이벤트 디스패치를 할 수 있다는 말이다.
-  - Dynamic bool 카테고리의 SetActive 메소드를 호출하면 토글의 상태 값이 SetActive 메소드의 인자로 자동 전달된다.
-  - Static Parameters 카테고리의 SetActive 메소드를 호출하면 토글의 상태 값은 무시되고 고정된 인자 값을 정의할 수 있다.
-  - Static Parameters 메소드를 이용하는 다른 유용한 예제.
+    - 버튼과 달리 토글은 Boolean 상태를 갖고 있으므로 Dynamic Parameter를 사용할 수 있다.
+    - 토글의 상태(true/false)를 동적으로 넘겨 이벤트 디스패치를 할 수 있다는 말이다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/dynamicparameter.png)
+    - Dynamic bool 카테고리의 SetActive 메소드를 호출하면 토글의 상태 값이 SetActive 메소드의 인자로 자동 전달된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/dynamicparameter-setactive.png)
+    - Static Parameters 카테고리의 SetActive 메소드를 호출하면 토글의 상태 값은 무시되고 고정된 인자 값을 정의할 수 있다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/staticparameters-3.png)
+    - Static Parameters 메소드를 이용하는 다른 유용한 예제.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/staticparameters2.png)
 
-![staticparameters2.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/60360feb1a0a7378aad15a1c/24596c5f9aeebad3f488d2d5bfe1864b/staticparameters2.png)
-
-![staticparameters-3.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/60360feb1a0a7378aad15a1c/2e91b3163716867e8d531b8d94e0da53/staticparameters-3.png)
-
-![dynamicparameter-setactive.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/60360feb1a0a7378aad15a1c/eea4cf92f59756b8d302a0da7053666f/dynamicparameter-setactive.png)
-
-![dynamicparameter.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/60360feb1a0a7378aad15a1c/92f8631698e373ebd7d5f638eb91b810/dynamicparameter.png)
-
-![toggle-group.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/60360feb1a0a7378aad15a1c/97c67349cc92877162d25a713aa2ef59/toggle-group.png)
-
-![UI\_ToggleGroupExample.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/60360feb1a0a7378aad15a1c/da13b0e1315b544550c8531e736f28eb/UI_ToggleGroupExample.png)
-
-![toggle.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/60360feb1a0a7378aad15a1c/17ea5f4193c3026ffdcef4ac4c9a96aa/toggle.png)
+　
 
 　
 
 ## SLIDER 컨트롤
+    ● 마우스를 드래그하여 미리 정해진 범위상 숫자 값을 선택할 수 있다.
+    ● 게임 난이도 설정이나 이미지 에디터 밝기 설정 등에 사용된다.
+    ● 기본 UI 컴포넌트들을 조합해 복잡한 컨트롤을 구축한 대표적 사례.
 
-> 마우스를 드래그하여 미리 정해진 범위상 숫자 값을 선택할 수 있다.게임 난이도 설정이나 이미지 에디터 밝기 설정 등에 사용된다.기본 UI 컴포넌트들을 조합해 복잡한 컨트롤을 구축한 대표적 사례.
 
-![UI\_SliderExample.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/60360feb1a0a7378aad15a1c/5f1730779a22dcd6841b28656279b434/UI_SliderExample.png)
-
----
+　
 
 - **컨트롤 추가 및 하이어러키**
-  - / UI / Slider 메뉴로 컨트롤 추가.
-  - **Slider**
-    - Slider 컴포넌트가 바인딩 된 게임 오브젝트
-    - 딱 봐도, Selectable 컴포넌트를 포함한다.
-    - 전반적인 슬라이더 컨트롤 제어 기능.
-  - **Background**
-    - 전체 컨트롤에 대한 배경 이미지.
-  - **Fill Area**
-    - 슬라이더 채움 영역 이미지가 표현될 영역
-  - **Fill**
-    - 슬라이더 채움 영역 이미지
-    - 슬라이더 Value 값에 따라 이곳 앵커의 Max.X 값을 변경하여 이미지를 늘이거나 줄임.
-  - **Handle Slide Area**
-    - 슬라이더 핸들 이미지가 돌아다닐 영역
-  - **Handle**
-    - 슬라이더 핸들 이미지
-    - 슬라이더 Value 값에 따라 이곳 앵커의 Min.X, Max.X 값을 변경하여 이미지를 이동.
+    - / UI / Slider 메뉴로 컨트롤 추가.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/slider.png)
+    - **Slider**
+        > - Slider 컴포넌트가 바인딩 된 게임 오브젝트
+        > - 딱 봐도, Selectable 컴포넌트를 포함한다.
+        > - 전반적인 슬라이더 컨트롤 제어 기능.
+    - **Background**
+        > - 전체 컨트롤에 대한 배경 이미지.
+    - **Fill Area**
+        > - 슬라이더 채움 영역 이미지가 표현될 영역
+    - **Fill**
+        > - 슬라이더 채움 영역 이미지
+        > - 슬라이더 Value 값에 따라 이곳 앵커의 Max.X 값을 변경하여 이미지를 늘이거나 줄임.
+    - **Handle Slide Area**
+        > - 슬라이더 핸들 이미지가 돌아다닐 영역
+    - **Handle**
+        > - 슬라이더 핸들 이미지
+        > - 슬라이더 Value 값에 따라 이곳 앵커의 Min.X, Max.X 값을 변경하여 이미지를 이동.\
+
+
+　
+
 - **SLIDER 컴포넌트**
-  - Selectable 컴포넌트 부분 설명은 패스
-  - Fill Rect
-    - 컨트롤의 채움 영역에 사용하는 그래픽.
-  - Handle Rect
-    - 컨트롤의 슬라이딩 “핸들” 부분에 사용하는 그래픽.
-  - Direction
-    - 핸들을 드래그할 때 슬라이더의 값이 증가하는 방향.
-    - 속성을 변경하면 배치가 자동 변경된다.
-    - Left To Right
-    - Right To Left
-    - Bottom To Top
-    - Top To Bottom
-  - Min/Max Value
-    - 슬라이더가 움직이거나 가질 수 있는 최대 또는 최솟값.
-  - Whole Number
-    - 슬라이더 Value 값을 정수로 제한할지 여부.
-    - 기본 값은 부동 소수점(실수).
-  - Value
-    - 슬라이더의 위치 값을 설정.
-    - Min, Max 범위 내에서 설정해야 한다.
-  - On Value Changed
-    - 슬라이더 Value 값이 변경되었을 때 발생되는 이벤트
+    - Selectable 컴포넌트 부분 설명은 패스
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/slidercomponent.png)
+    - Fill Rect
+        > - 컨트롤의 채움 영역에 사용하는 그래픽.
+    - Handle Rect
+        > - 컨트롤의 슬라이딩 “핸들” 부분에 사용하는 그래픽.
+    - Direction
+        > - 핸들을 드래그할 때 슬라이더의 값이 증가하는 방향.
+        > - 속성을 변경하면 배치가 자동 변경된다.
+        > - Left To Right
+        > - Right To Left
+        > - Bottom To Top
+        > - Top To Bottom
+    - Min/Max Value
+        > - 슬라이더가 움직이거나 가질 수 있는 최대 또는 최솟값.
+    - Whole Number
+        > - 슬라이더 Value 값을 정수로 제한할지 여부.
+        > - 기본 값은 부동 소수점(실수).
+    - Value
+        > - 슬라이더의 위치 값을 설정.
+        > - Min, Max 범위 내에서 설정해야 한다.
+    - On Value Changed
+        > - 슬라이더 Value 값이 변경되었을 때 발생되는 이벤트
 
-![slidercomponent.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/60360feb1a0a7378aad15a1c/1b9f61ca39b79aa40d971552280c73d4/slidercomponent.png)
-
-![slider.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/60360feb1a0a7378aad15a1c/cd8caa9852128696162393f1020abf13/slider.png)
+　
 
 　
 
 ## SCROLLBAR 컨트롤
+    ● 스크롤바 컨트롤을 통해 사용자가 한 번에 볼 수 없는 이미지나 다른 보기 화면을 스크롤 하여 볼 수 있다.
+    ● 비슷한 슬라이더 컨트롤은 스크롤링이 아니라 수치 값을 선택하는 데 사용한다는 점에 주목해야 한다.
+    ● 텍스트 편집기 측면에 있는 수직 스크롤바나 지도의 일부를 보기 위한 수직 및 수평 스크롤바 등에 활용된다.
 
-> 스크롤바 컨트롤을 통해 사용자가 한 번에 볼 수 없는 이미지나 다른 보기 화면을 스크롤 하여 볼 수 있다. 비슷한 슬라이더 컨트롤은 스크롤링이 아니라 수치 값을 선택하는 데 사용한다는 점에 주목해야 한다. 흔한 예로는 텍스트 편집기 측면에 있는 수직 스크롤바나 큰 이미지나 지도의 일부를 보기 위한 수직 및 수평 스크롤바 등이 있다.
 
-![UI\_ScrollbarExample.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/60360feb1a0a7378aad15a1c/096aaf2385cc5bc6513a54c531481ce8/UI_ScrollbarExample.png)
-
----
+　
 
 - **컨트롤 추가 및 하이어러키**
-  - / UI / Scrollbar 메뉴로 컨트롤 추가.
-  - Scrollbar
-    - Scrollbar 컴포넌트가 바인딩 되어 있다.
-    - 배경 Image 컴포넌트가 바인딩 되어 있다.
-  - Sliding Area
-    - 프로그레스 핸들이 돌아다닐 영역
-  - Handle
-    - 프로그레스 핸들 이미지
-    - 프로그레스의 Value 값 Size 값에 따라 앵커의 Min.X, Max.X 값을 변경하여 이미지를 이동하고 늘이거나 줄임.
+    - / UI / Scrollbar 메뉴로 컨트롤 추가.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/scrollbar.png)
+    - Scrollbar
+        > - Scrollbar 컴포넌트가 바인딩 되어 있다.
+        > - 배경 Image 컴포넌트가 바인딩 되어 있다.
+    - Sliding Area
+        > - 프로그레스 핸들이 돌아다닐 영역
+    - Handle
+        > - 프로그레스 핸들 이미지
+        > - 프로그레스의 Value 값 Size 값에 따라 앵커의 Min.X, Max.X 값을 변경하여 이미지를 이동하고 늘이거나 줄임.
+
+
+　
+
 - **SCROLLBAR 컴포넌트**
-  - Selectable 컴포넌트 부분 설명은 패스
-  - Handle Rect
-    - 컨트롤의 슬라이딩 “핸들” 부분에 사용하는 그래픽.
-  - Direction
-    - 핸들을 드래그할 때 스크롤바의 값이 증가하는 방향.
-    - 속성을 변경하면 배치가 자동 변경된다.
-    - Left To Right
-    - Right To Left
-    - Bottom To Top
-    - Top To Bottom
-  - Value
-    - 프로그레스의 위치 값을 설정.
-    - 슬라이더와 달리 0과 1 범위 사이에서만 설정 가능.
-  - Size
-    - 스크롤바 핸들의 상대적 크기로 범위는 0 ~ 1.
-    - 보통 스크롤바와 연동된 컨텐츠 전체 크기 중 보여지는 영역의 상대적 크기가 이 값이 된다.
-  - Number of Steps
-    - 스크롤바가 허용하는 스크롤 포지션 단계의 개수.
-    - 고정된 간격이나 영역 사이를 움직이고 싶을 때 사용.
-    - 6으로 설정하면 [0, 0.2, 0.4, 0.6, 0.8, 1] 지점만 움직인다.
+    - Selectable 컴포넌트 부분 설명은 패스
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/scrollbar-component.png)
+    - Handle Rect
+        > - 컨트롤의 슬라이딩 “핸들” 부분에 사용하는 그래픽.
+    - Direction
+        > - 핸들을 드래그할 때 스크롤바의 값이 증가하는 방향.
+        > - 속성을 변경하면 배치가 자동 변경된다.
+        > - Left To Right
+        > - Right To Left
+        > - Bottom To Top
+        > - Top To Bottom
+    - Value
+        > - 프로그레스의 위치 값을 설정.
+        > - 슬라이더와 달리 0과 1 범위 사이에서만 설정 가능.
+    - Size
+        > - 스크롤바 핸들의 상대적 크기로 범위는 0 ~ 1.
+        > - 보통 스크롤바와 연동된 컨텐츠 전체 크기 중 보여지는 영역의 상대적 크기가 이 값이 된다.
+    - Number of Steps
+        > - 스크롤바가 허용하는 스크롤 포지션 단계의 개수.
+        > - 고정된 간격이나 영역 사이를 움직이고 싶을 때 사용.
+        > - 6으로 설정하면 [0, 0.2, 0.4, 0.6, 0.8, 1] 지점만 움직인다.
+
+
+　
+
 - **스크롤바 활용하기 실습**
-  - 아래 그림과 같이 스크롤 되는 이미지 뷰어를 만들 거임.
-  - 사실 유니티 Scroll View 컨트롤과 거의 유사하다.
-  - Canvas 아래 **Image** 컨트롤을 추가, 이름을 **"Scroll Border"**로 변경.
-  - "Scroll Border" 오브젝트는 **컨텐츠 배경 테두리**로 쓰일 거임.
-  - Width: 400, Height: 200 변경하고 적당한 이미지 지정
-  - "Scroll Border" 하위로 빈 오브젝트 추가
-  - 이름을 **"Scroll Rect"**로 변경.
-  - 여기에 **Mask** 컴포넌트를 추가.
-  - Image 컴포넌트를 별도로 추가해야 클리핑 되는 거 알지?
-  - 테두리인 "Scroll Border"가 보여야 하니, 살짝 크기 조정.
-  - **"Scroll Rect"** 하위로 **Image** 컨트롤 추가
-  - 소스 이미지에 **큰 이미지** 할당하고 **Set Native Size** 클릭
-  - "Scroll Rect" 오브젝트로 돌아가서...
-  - 여기에 **Scroll Rect** 컴포넌트 추가하고 **Content** 속성에 바로 전에 만든 하위 이미지 오브젝트를 할당.
-  - "Scroll Border" 하위로 **Scrollbar** 컨트롤 추가.
-  - 이름을 **"Horizontal Scrollbar"**로 변경.
-  - 이 컨트롤은 **가로 스크롤바**로 사용될 거임.
-  - 그러므로 **Direction** 속성을 **"Left To Right"**로 변경.
-  - 위치와 크기는 컨텐츠 하단에 적절히 배치
-  - "Scroll Border" 하위로 **Scrollbar** 컨트롤 추가.
-  - 이름을 **"Vertical Scrollbar"**로 변경.
-  - 이 컨트롤은 **세로 스크롤바**로 사용될 거임.
-  - 그러므로 **Direction** 속성을 **"Bottom To Top"**으로 변경.
-  - 위치와 크기는 컨텐츠 오른쪽에 적절히 배치
-  - "Scroll Rect" 오브젝트의 **Scroll Rect** 컴포넌트에서...
-  - **Horizontal Scrollbar** 속성에 **"Horizontal Scrollbar"** 오브젝트 할당.
-  - **Vertical Scrollbar** 속성에 **"Vertical Scrollbar"** 오브젝트 할당.
-  - 참 쉽죠?
+    - 아래 그림과 같이 스크롤 되는 이미지 뷰어를 만들 거임.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/imageviewer.png)
+    - 사실 유니티 Scroll View 컨트롤과 거의 유사하다.
+    - Canvas 아래 **Image** 컨트롤을 추가, 이름을 **"Scroll Border"**로 변경.
+    - "Scroll Border" 오브젝트는 **컨텐츠 배경 테두리**로 쓰일 거임.
+    - Width: 400, Height: 200 변경하고 적당한 이미지 지정
+    - "Scroll Border" 하위로 빈 오브젝트 추가
+    - 이름을 **"Scroll Rect"**로 변경.
+    - 여기에 **Mask** 컴포넌트를 추가.
+    - Image 컴포넌트를 별도로 추가해야 클리핑 되는 거 알지?
+    - 테두리인 "Scroll Border"가 보여야 하니, 살짝 크기 조정.
+    - **"Scroll Rect"** 하위로 **Image** 컨트롤 추가
+    - 소스 이미지에 **큰 이미지** 할당하고 **Set Native Size** 클릭
+    - "Scroll Rect" 오브젝트로 돌아가서...
+    - 여기에 **Scroll Rect** 컴포넌트 추가하고 **Content** 속성에 바로 전에 만든 하위 이미지 오브젝트를 할당.
+    - "Scroll Border" 하위로 **Scrollbar** 컨트롤 추가.
+    - 이름을 **"Horizontal Scrollbar"**로 변경.
+    - 이 컨트롤은 **가로 스크롤바**로 사용될 거임.
+    - 그러므로 **Direction** 속성을 **"Left To Right"**로 변경.
+    - 위치와 크기는 컨텐츠 하단에 적절히 배치
+    - "Scroll Border" 하위로 **Scrollbar** 컨트롤 추가.
+    - 이름을 **"Vertical Scrollbar"**로 변경.
+    - 이 컨트롤은 **세로 스크롤바**로 사용될 거임.
+    - 그러므로 **Direction** 속성을 **"Bottom To Top"**으로 변경.
+    - 위치와 크기는 컨텐츠 오른쪽에 적절히 배치
+    - "Scroll Rect" 오브젝트의 **Scroll Rect** 컴포넌트에서...
+    - **Horizontal Scrollbar** 속성에 **"Horizontal Scrollbar"** 오브젝트 할당.
+    - **Vertical Scrollbar** 속성에 **"Vertical Scrollbar"** 오브젝트 할당.
+    - 참 쉽죠?
 
-![imageviewer.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/60360feb1a0a7378aad15a1c/1c3ce18c0f576339f27acab2f32bdb5c/imageviewer.png)
-
-![scrollbar-component.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/60360feb1a0a7378aad15a1c/9e8251d29d1994a2d825356b747c3680/scrollbar-component.png)
-
-![scrollbar.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/60360feb1a0a7378aad15a1c/2d84efd9e3d5bf2a61086016d54f63a4/scrollbar.png)
+　
 
 　
 

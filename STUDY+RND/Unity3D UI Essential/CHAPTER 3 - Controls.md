@@ -331,18 +331,18 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
     - **Filled - Fill Origin**
         > - (게이지가) 차오르는 시작점
         > - Fill Method가 Radial 360 일 때
-        > 　　Top, Bottom, Left, Right
+        > - 　　Top, Bottom, Left, Right
         > - Fill Method가 Radial 180 일 때
-        > 　　Top, Bottom, Left, Right
+        > - 　　Top, Bottom, Left, Right
         > - Fill Method가 Radial 90 일 때
-        > 　　Bottom Left
-        > 　　Bottom Right
-        > 　　Top Left
-        > 　　Top Right
+        > - 　　Bottom Left
+        > - 　　Bottom Right
+        > - 　　Top Left
+        > - 　　Top Right
         > - Fill Method가 Vertical 일 때
-        > 　　Top, Bottom
+        > - 　　Top, Bottom
         > - Fill Method가 Horizontal 일 때
-        > 　　Left, Right
+        > - 　　Left, Right
     - **Filled - Fill Amount**
         > - 이미지를 어느 비율로 채울지 결정.
         > - 0과 1 범위 내에서 조정한다.

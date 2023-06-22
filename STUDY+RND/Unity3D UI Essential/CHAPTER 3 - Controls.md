@@ -451,41 +451,56 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
     ● 사용자가 옵션을 켜거나 끌 수 있도록 하는 체크박스.
     ● 선택하거나 선택하지 않거나...
 
-    ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/UI_ToggleExample.png)
 
 　
 
 - **컨트롤 추가 및 하이어러키**
-  - / UI / Toggle 메뉴로 컨트롤 추가.
-  - 토글 컨트롤에 포함된 요소들
-    - Toggle 컴포넌트
-    - 배경으로 사용할 Image 컴포넌트(하위 오브젝트)
-    - 체크 마크로 사용할 Image 컴포넌트(하위 오브젝트)
-    - 라벨 텍스트를 표현할 Text 컴포넌트
-  - Toggle 컴포넌트는 Button 컴포넌트와 마찬가지로 **Selectable** 컴포넌트를 상속받는다.
-  - 버튼과 같은 방식으로 이벤트에 대응해 시각적인 액션을 수행.
+    - / UI / Toggle 메뉴로 컨트롤 추가.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/toggle.png)
+    - 토글 컨트롤에 포함된 요소들
+        > - Toggle 컴포넌트
+        > - 배경으로 사용할 Image 컴포넌트(하위 오브젝트)
+        > - 체크 마크로 사용할 Image 컴포넌트(하위 오브젝트)
+        > - 라벨 텍스트를 표현할 Text 컴포넌트
+    - Toggle 컴포넌트는 Button 컴포넌트와 마찬가지로 **Selectable** 컴포넌트를 상속받는다.
+    - 버튼과 같은 방식으로 이벤트에 대응해 시각적인 액션을 수행.
+
+
+　
+
 - **TOGGLE 컴포넌트 전용 옵션**
-  - Is On
-    - Toggle의 초기 상태를 정의한다.
-  - Toggle Transition
-    - 토글을 켜고 끌 때 그래픽이 어떻게 보일지 정의한다.
-    - 걍 깜빡이거나, 페이드 인/아웃 할 수 있다.
-  - Graphic
-    - Toggle을 켜고 끌 때 나타났다 사라지는 이미지
-    - 좀 더 정확히 말하자면 해당 이미지 그래픽의 Canvas Renderer 알파값을 트위닝 해서 나타나거나 사라지게 한다.
-    - 체크 마크 연출의 확장 가능성을 보여준다.
-  - Group
-    - 컨트롤들을 그룹화 시켜서 하나만 체크될 수 있도록 한다.
+    - Is On
+        > - Toggle의 초기 상태를 정의한다.
+    - Toggle Transition
+        > - 토글을 켜고 끌 때 그래픽이 어떻게 보일지 정의한다.
+        > - 걍 깜빡이거나, 페이드 인/아웃 할 수 있다.
+    - Graphic
+        > - Toggle을 켜고 끌 때 나타났다 사라지는 이미지
+        > - 좀 더 정확히 말하자면 해당 이미지 그래픽의 Canvas Renderer 알파값을 트위닝 해서 나타나거나 사라지게 한다.
+        > - 체크 마크 연출의 확장 가능성을 보여준다.
+    - Group
+        > - 컨트롤들을 그룹화 시켜서 하나만 체크될 수 있도록 한다.
+
+
+　
+
 - **TOGGLE GROUP**
-  - 여러 토글을 하나의 그룹으로 묶는다.
-  - 해당 그룹 안에서는 한 번에 하나의 아이템만 체크할 수 있다.
-  - 만드는 방법
-    - 빈 게임 오브젝트를 생성하고 Toggle Group 컴포넌트 추가.
-    - 하위 오브젝트로 토글 컨트롤을 배치한다.
-    - 토글의 **Group** 속성으로 상위 Toggle Group 오브젝트 지정.
-    - 토글의 **Is On** 속성을 끕니다.
-    - 토글을 여러 개 복제한 후 적당한 위치 조정.
-    - 필요에 따라 한 개 토글만 Is On 속성을 켠다.
+    - 여러 토글을 하나의 그룹으로 묶는다.
+    - 해당 그룹 안에서는 한 번에 하나의 아이템만 체크할 수 있다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/UI_ToggleGroupExample.png)
+    - 만드는 방법
+        > - 빈 게임 오브젝트를 생성하고 Toggle Group 컴포넌트 추가.
+        > - 하위 오브젝트로 토글 컨트롤을 배치한다.
+        > - 토글의 **Group** 속성으로 상위 Toggle Group 오브젝트 지정.
+        > - 토글의 **Is On** 속성을 끕니다.
+        > - 토글을 여러 개 복제한 후 적당한 위치 조정.
+        > - 필요에 따라 한 개 토글만 Is On 속성을 켠다.
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/toggle-group.png)
+
+
+　
+
 - **동적 이벤트 속성**
   - 컴포넌트들의 내부 스크립트를 알아야 제대로 이해 및 활용 가능.
   - 스킵 하려 했으나 어쨌든 유니티 에디터 기능이기에 설명함.

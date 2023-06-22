@@ -330,7 +330,7 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/horizontal.gif)
     - **Filled - Fill Origin**
         > - (게이지가) 차오르는 시작점
-        > - **Fill Method가 Radial 360 일 때**
+        > - **Fill Method가 Radial 360 일 때**: 
         > - 　　Top, Bottom, Left, Right
         > - **Fill Method가 Radial 180 일 때**
         > - 　　Top, Bottom, Left, Right
@@ -355,44 +355,52 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
 　
 
 ## BUTTON 컨트롤/컴포넌트
+    ● 상호작용을 구현하기 위해 가장 많이 쓰이는 컨트롤
+    ● 사용자의 클릭에 반응하고, 액션을 시작하거나 확인하는 데 사용.
+    ● Button 컨트롤은 여러 컴포넌트를 하나로 묶어놓은 것에 가깝다.
+    ● 새로운 컨트롤을 만들거나 조합하는데 좋은 레퍼런스가 되겠다.
 
-> 상호작용을 구현하기 위해 가장 많이 쓰이는 컨트롤사용자의 클릭에 반응하고, 액션을 시작하거나 확인하는 데 사용.Button 컨트롤은 여러 컴포넌트를 하나로 묶어놓은 것에 가깝다.새로운 컨트롤을 만들거나 조합하는데 좋은 레퍼런스가 되겠다.
 
----
+　
 
 - **컨트롤 추가**
-  - / UI / Button 메뉴로 컨트롤 추가.
-  - 실제 버튼 컨트롤에 포함된 요소들
-    - Image 컴포넌트
-    - Button 컴포넌트
-    - Text 컴포넌트(하위 오브젝트)
-  - Text 컴포넌트는 버튼 텍스트를 출력하고
-  - Button 컴포넌트는 **Selectable** 컴포넌트를 상속받는다.
-  - Image 컴포넌트는 버튼 이미지를 출력한다.
-  - Image 컴포넌트의 중요한 다른 목적은 Button(Selectable) 컴포넌트가 입력 이벤트를 처리하기 위한 레이캐스터로써 필요하다는 것이다. 꼭 Image 컴포넌트가 아니어도 된다. 현재 레이캐스트 시스템과 상호작용하는 컴포넌트이기만 하면 된다. (eg. Raycast Target)
+    - / UI / Button 메뉴로 컨트롤 추가.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/button.png)
+    - 실제 버튼 컨트롤에 포함된 요소들
+        > - Image 컴포넌트
+        > - Button 컴포넌트
+        > - Text 컴포넌트(하위 오브젝트)
+    - Text 컴포넌트는 버튼 텍스트를 출력하고
+    - Button 컴포넌트는 **Selectable** 컴포넌트를 상속받는다.
+    - Image 컴포넌트는 버튼 이미지를 출력한다.
+    - Image 컴포넌트의 중요한 다른 목적은 Button(Selectable) 컴포넌트가 입력 이벤트를 처리하기 위한 레이캐스터로써 필요하다는 것이다. 꼭 Image 컴포넌트가 아니어도 된다. 현재 레이캐스트 시스템과 상호작용하는 컴포넌트이기만 하면 된다. (eg. Raycast Target)
+
+
+　
+
 - **SELECTABLE COMPONENT**
-  - 버튼, 슬라이더 등 인터랙션 컴포넌트들은 Selectable을 상속받는다.
-  - 실제로 Selectable 컴포넌트의 인스펙터 내용이 동일하다.
-  - Selectable 컴포넌트는 이벤트에 대응해 시각적인 액션을 수행.
-  - Selectable 컴포넌트가 다루는 이벤트
-    - Hover(Highlighted)
-    - Pressed
-  - **Options**
-    - **Transition**
-      - 컨트롤의 상태에 따라 선택한 Graphic의...
-      - Color Tint
-        - 색조를 변경.
-      - Sprite Swap
-        - 스프라이트를 변경
-      - Animation
-        - 애니메이션을 변경
-      - None
-        - 아무것도 안 함.
-    - **Navigation**
-      - 키보드 방향키로 다른 컨트롤 선택하는 방법
-      - 잠시 후 따로 자세히 설명한다.
-    - **Visualize**
-      - 네비게이션 흐름을 씬 뷰에 시각화한다.
+    - 버튼, 슬라이더 등 인터랙션 컴포넌트들은 Selectable을 상속받는다.
+    - 실제로 Selectable 컴포넌트의 인스펙터 내용이 동일하다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/selectable.png)
+    - Selectable 컴포넌트는 이벤트에 대응해 시각적인 액션을 수행.
+    - Selectable 컴포넌트가 다루는 이벤트
+        > - Hover(Highlighted)
+        > - Pressed
+    - **Options - Transition**
+        > - 컨트롤의 상태에 따라 선택한 Graphic의...
+        > - Color Tint: 색조를 변경.
+        > - Sprite Swap: 스프라이트를 변경
+        > - Animation: 애니메이션을 변경
+        > - None: 아무것도 안 함.
+    - **Options - Navigation**
+        > - 키보드 방향키로 다른 컨트롤 선택하는 방법
+        > - 잠시 후 따로 자세히 설명한다.
+    - **Options - Visualize**
+        > - 네비게이션 흐름을 씬 뷰에 시각화한다.
+
+
+　
+
 - **이벤트에 대응하기**
   - 스킵
 - **애니메이션 버튼 만들기 실습**

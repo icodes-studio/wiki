@@ -311,17 +311,22 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
         > - 　　Sprite의 Pixels Per Unit에 이 값이 곱해진다.
         > - 　　해상도, 스케일을 변경할 수 있다. (새 기능)
     - **Image Type : Filled**
-        - 게이지 같은 연출을 표현할 때 주로 사용된다.
+        > - 게이지 같은 연출을 표현할 때 주로 사용된다.
     - **Filled - Fill Method**
         > - Radial 360
+        >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/radial360.gif)
         > - Radial 180
+        >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/radial180.gif)
         > - Radial 90
+        >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/radial90.gif)
         > - Vertical
+        >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/vertical.gif)
         > - Horizontal
+        >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/horizontal.gif)
     - **Filled - Fill Origin**
         > - (게이지가) 차오르는 시작점

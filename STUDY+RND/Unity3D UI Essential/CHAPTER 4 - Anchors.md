@@ -85,125 +85,142 @@
         >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/26.gif)
 
+　
 
 　
 
 ## 여러 해상도의 UI 설계 - 사례 #1
+    ● 게임은 아주 다양한 스크린 해상도를 지원해야 하는 경우가 많다.
+    ● 간단한 사례 연구를 통해 다양한 방법을 살펴보고 비교하자.
 
-> [참고 자료 - UNITY DOCUMENTATION](https://docs.unity3d.com/kr/2021.1/Manual/HOWTO-UIMultiResolution.html "‌")게임은 아주 다양한 스크린 해상도를 지원해야 하는 경우가 많다.간단한 사례 연구를 통해 다양한 방법을 살펴보고 비교하자.아래와 같이 세 개의 버튼이 스크린의 각 코너에 있으며, 목표는 이 레이아웃을 다양한 해상도에 맞게 조정하는 것.네 가지 스크린 해상도에 대해 고민해 보자.세로(640 x 960)가로(960 x 640)세로(320 x 480)가로(480 x 320)
+　
 
-![UI\_MultiResBase.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/09ee56e465dea66ae3be3539422239a1/UI_MultiResBase.png)
+- [**참고 자료 - UNITY DOCUMENTATION**](https://docs.unity3d.com/kr/2021.1/Manual/HOWTO-UIMultiResolution.html)
+    - 아래와 같이 세 개의 버튼이 스크린의 각 코너에 있으며, 목표는 이 레이아웃을 다양한 해상도에 맞게 조정하는 것.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/UI_MultiResBase.png)
+    - 네 가지 스크린 해상도에 대해 고민해 보자.
+        > - 세로(640 x 960)
+        > - 가로(960 x 640)
+        > - 세로(320 x 480)
+        > - 가로(480 x 320)
 
----
+　
 
 - **앵커를 사용하여 여러 종횡비 조정**
-  - UI 요소는 디폴트(middle, center)로 부모 사각형의 중심에 위치.
-  - 즉 중심으로부터 일정한 오프셋을 유지한다.
-  - 이때 해상도가 가로방향 종횡비로 변경되면 버튼이 화면을 벗어남.
-  - 해결 방법은 지금까지 배운 대로...
-  - 왼쪽 상단 버튼의 앵커는 left, top 설정.
-  - 왼쪽 하단 버튼의 앵커는 left, bottom 설정.
-  - 오른쪽 하단 버튼의 앵커는 right, bottom 설정.
-  - 버튼이 해당 코너에 각각 위치한 후에는 다른 종횡비로 해상도를 변경할 때도 고정된다.
-  - 스크린 크기를 더 크거나 작은 해상도로 변경하면?
-  - 버튼 역시 해당 코너에 앵커 된 상태로 남아 있다. 그러나...
-  - 원했던 결과 일 수도 있으나... 버튼 크기가 병신이 되어버림.
-  - 결국, 버튼이 스크린이 작을수록 같은 비율로 작아져야 한다.
-  - **Canvas Scaler** 컴포넌트가 도움이 될 수 있다.
+    - UI 요소는 디폴트(middle, center)로 부모 사각형의 중심에 위치.
+    - 즉 중심으로부터 일정한 오프셋을 유지한다.
+    - 이때 해상도가 가로방향 종횡비로 변경되면 버튼이 화면을 벗어남.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/UI_MultiResCenter.png)
+    - 해결 방법은 지금까지 배운 대로...
+    - 왼쪽 상단 버튼의 앵커는 left, top 설정.
+    - 왼쪽 하단 버튼의 앵커는 left, bottom 설정.
+    - 오른쪽 하단 버튼의 앵커는 right, bottom 설정.
+    - 버튼이 해당 코너에 각각 위치한 후에는 다른 종횡비로 해상도를 변경할 때도 고정된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/UI_MultiResCorners.png)
+    - 스크린 크기를 더 크거나 작은 해상도로 변경하면?
+    - 버튼 역시 해당 코너에 앵커 된 상태로 남아 있다. 그러나...
+    - 원했던 결과 일 수도 있으나... 버튼 크기가 병신이 되어버림.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/UI_MultiResSizeChange.png)
+    - 결국, 버튼이 스크린이 작을수록 같은 비율로 작아져야 한다.
+    - **Canvas Scaler** 컴포넌트가 도움이 될 수 있다.
+
+
+　
+
 - **스크린 크기에 따른 스케일링**
-  - **Canvas** 게임 오브젝트에 **Canvas Scaler** 컴포넌트가 있다.
-  - 모든 UI 요소는 이 게임 오브젝트의 자식이다.
-  - 이 컴포넌트의 **UI Scale Mode**를 **Scale With Screen Size**로 설정.
-  - 이 스케일 모드에서 레퍼런스로 사용할 해상도를 지정.
-  - 현재 스크린 해상도가 이 레퍼런스 해상도보다 더 크거나 작은 경우 캔버스의 스케일 팩터가 적절하게 설정되므로 모든 UI 요소가 스크린 해상도에 맞게 함께 확대 또는 축소된다.
-  - 여기에서는 레퍼런스 해상도를 세로 해상도인 640 x 960 설정
-  - 스크린 해상도를 320 x 480으로 변경하면 아래처럼 예쁘게 나옴.
-  - BUT, 이때 스크린 해상도를 가로 종횡비인 960 x 640으로 변경하면?
-  - 아래 그림처럼 버튼이 다시 병신이 된다.
-  - 가로 종횡비에서 버튼이 더 크다. 이유는...
-  - 디폴트(Match:0)로 현재 해상도의 너비를 캔버스 스케일러의 너비와 비교하고, 그 결과가 모든 것을 스케일 하는 스케일 팩터로 사용된다. 가로 해상도인 960 x 640은 세로 캔버스 스케일러의 레퍼런스 640 x 960보다 너비가 1.5배 크므로 이 레이아웃은 1.5배 확대되는 것이다.
-  - Canvas Scaler의 Match 옵션을 0.5로 설정해서 균형을 맞추면...
-  - 가로 해상도는 1.5배 넓지만 높이가 1.5배 작기 때문에 이 두 팩터는 서로 상쇄되어 최종 스케일 팩터가 1이 되므로 버튼 크기가 유지된다.
-  - 우리네 인생도 이런 균형이 중요하다. ;)
+    - **Canvas** 게임 오브젝트에 **Canvas Scaler** 컴포넌트가 있다.
+    - 모든 UI 요소는 이 게임 오브젝트의 자식이다.
+    - 이 컴포넌트의 **UI Scale Mode**를 **Scale With Screen Size**로 설정.
+    - 이 스케일 모드에서 레퍼런스로 사용할 해상도를 지정.
+    - 현재 스크린 해상도가 이 레퍼런스 해상도보다 더 크거나 작은 경우 캔버스의 스케일 팩터가 적절하게 설정되므로 모든 UI 요소가 스크린 해상도에 맞게 함께 확대 또는 축소된다.
+    - 여기에서는 레퍼런스 해상도를 세로 해상도인 640 x 960 설정
+    - 스크린 해상도를 320 x 480으로 변경하면 아래처럼 예쁘게 나옴.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/UI_MultiResReferenceResolution.png)
+    - BUT, 이때 스크린 해상도를 가로 종횡비인 960 x 640으로 변경하면?
+    - 아래 그림처럼 버튼이 다시 병신이 된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/UI_MultiResLandscapeWrongScaling.png)
+    - 가로 종횡비에서 버튼이 더 크다. 이유는...
+    - 디폴트(Match:0)로 현재 해상도의 너비를 캔버스 스케일러의 너비와 비교하고, 그 결과가 모든 것을 스케일 하는 스케일 팩터로 사용된다. 가로 해상도인 960 x 640은 세로 캔버스 스케일러의 레퍼런스 640 x 960보다 너비가 1.5배 크므로 이 레이아웃은 1.5배 확대되는 것이다.
+    - Canvas Scaler의 Match 옵션을 0.5로 설정해서 균형을 맞추면...
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/UI_MultiResAllResolutions.png)
+    - 가로 해상도는 1.5배 넓지만 높이가 1.5배 작기 때문에 이 두 팩터는 서로 상쇄되어 최종 스케일 팩터가 1이 되므로 버튼 크기가 유지된다.
 
-![UI\_MultiResAllResolutions.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/fb5a8e5b788e8a99c0f1c5ea47da7c18/UI_MultiResAllResolutions.png)
-
-![UI\_MultiResLandscapeWrongScaling.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/1676cffb556a9e15e03f18aaa1724761/UI_MultiResLandscapeWrongScaling.png)
-
-![UI\_MultiResReferenceResolution.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/22830165dc94af674f007465b4fddf9f/UI_MultiResReferenceResolution.png)
-
-![UI\_MultiResSizeChange.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/aa134c5657797b00c995dc07cf51d05a/UI_MultiResSizeChange.png)
-
-![UI\_MultiResCorners.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/bfc8a94b2048605a6d004df2ed7ead19/UI_MultiResCorners.png)
-
-![UI\_MultiResCenter.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/e4f93a522d9983dc776197a6f15c9ae1/UI_MultiResCenter.png)
+　
 
 　
 
 ## 여러 해상도의 UI 설계 - 사례 #2
 
-> 아래 그림과 같은 체력 게이지 컨트롤을 배치한다고 해보자.
+　
 
-![resolution-1.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/1f0019b1b8257ce51dd8ae0a4f875fce/resolution-1.png)
+- 아래 그림과 같은 체력 게이지 컨트롤을 배치한다고 해보자.
+    - 　
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/resolution-1.png)
 
----
+
+　
 
 - **기본 환경**
-  - 체력 게이지는 슬라이더 컨트롤을 이용해 만들었다.
-  - Canvas Scaler 옵션과 슬라이더 Rect Transform 설정은 아래와 같다.
-  - 고정 픽셀 모드에서 stretch 앵커로 left/right 마진을 200 픽셀 주었다.
+    - 체력 게이지는 슬라이더 컨트롤을 이용해 만들었다.
+    - Canvas Scaler 옵션과 슬라이더 Rect Transform 설정은 아래와 같다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/resolution-4.png)
+    - 고정 픽셀 모드에서 stretch 앵커로 left/right 마진을 200 픽셀 주었다.
+
+
+　
+
 - **해상도 변경**
-  - 3:2 종횡비에서의 체력 게이지 모습
-  - 5:4 종횡비에서의 체력 게이지 모습
-  - 사실 종횡비가 포인트가 아니긴 한데...
-  - 암튼 이렇게 되는 걸 원한 건 아니겠지?
-  - 같은 스크린 크기라도 해상도가 낮으면 **왕따시** 문제도...
-  - 문제는 고정 픽셀 크기 모드 - Constant Pixel Size Mode
+    - 3:2 종횡비에서의 체력 게이지 모습
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/resolution-2.png)
+    - 5:4 종횡비에서의 체력 게이지 모습
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/resolution-3.png)
+    - 사실 종횡비가 포인트가 아니긴 한데...
+    - 암튼 이렇게 되는 걸 원한 건 아니겠지?
+    - 같은 스크린 크기라도 해상도가 낮으면 **왕따시** 문제도...
+    - 문제는 고정 픽셀 크기 모드 - Constant Pixel Size Mode
+
+
+　
+
 - **스케일 조정하기**
-  - Scale With Screen Size 모드를 사용해 보자.
-  - 사례 #1에서 설명했으니 자세한 설명은 생략하고 결과 화면을 보자.
-  - 3:2 종횡비에서의 체력 게이지 모습
-  - 5:4 종횡비에서의 체력 게이지 모습
-  - 멋지게 적용되었다. 하지만...
-  - 원하는 해상도에 맞추기 위해 게이지가 전체적으로 쪼그라들었다.
-  - 이 게이지 UI가 가독성이 너무 중요해서 크기를 포기할 수 없다면?
+    - Scale With Screen Size 모드를 사용해 보자.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/scalewithscreensize.png)
+    - 사례 #1에서 설명했으니 자세한 설명은 생략하고 결과 화면을 보자.
+    - 3:2 종횡비에서의 체력 게이지 모습
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/3-2.png)
+    - 5:4 종횡비에서의 체력 게이지 모습
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/5-4.png)
+    - 멋지게 적용되었다. 하지만...
+    - 원하는 해상도에 맞추기 위해 게이지가 전체적으로 쪼그라들었다.
+    - 이 게이지 UI가 가독성이 너무 중요해서 크기를 포기할 수 없다면?
+
+
+　
+
 - **근본적 해결을 위해 단위 바꾸기**
-  - 포지션과 크기를 물리적인 단위로 지정해야 한다.
-  - Constant Physical Size 모드로 바꾸어 보자.
-  - 스크린 크기가 작아져도 물리적인 크기가 유지된다.
-  - 얼추 보기엔 Constant Pixel Size 모드와 같아 보이지만 다른 개념임.
-  - Constant Pixel Size 모드는 해상도과 관련이 있는 것이고
-  - Constant Physical Size 모드는 스크린 크기와 관련이 있다.
-  - 암튼, 아래 그림을 보면 마진이 너무 크게 잡혀있다.
-  - Constant Pixel Size 모드 때처럼 금방 찌그러졌다.
-  - 아예 화면에서 안 보이기까지...
-  - 이유는 위치 및 마진을 측정하는 방식이 완전히 달라졌기 때문.
-  - Canvas Scaler에 대해 단위를 바꿨으니 다시 계산해야 한다.
-  - 게이지 슬라이더의 Left, Right 값을 100으로 변경하자.
+    - 포지션과 크기를 물리적인 단위로 지정해야 한다.
+    - Constant Physical Size 모드로 바꾸어 보자.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/ConstantPhysicalsize.png)
+    - 스크린 크기가 작아져도 물리적인 크기가 유지된다.
+    - 얼추 보기엔 Constant Pixel Size 모드와 같아 보이지만 다른 개념임.
+    - Constant Pixel Size 모드는 해상도과 관련이 있는 것이고
+    - Constant Physical Size 모드는 스크린 크기와 관련이 있다.
+    - 암튼, 아래 그림을 보면 마진이 너무 크게 잡혀있다.
+        > ![](constant-physical-size-1.png)
+    - Constant Pixel Size 모드 때처럼 금방 찌그러졌다.
+        > ![](constant-physical-size-2.png)
+    - 아예 화면에서 안 보이기까지...
+        > ![](constant-physical-size-3.png)
+    - 이유는 위치 및 마진을 측정하는 방식이 완전히 달라졌기 때문.
+    - Canvas Scaler에 대해 단위를 바꿨으니 다시 계산해야 한다.
+    - 게이지 슬라이더의 Left, Right 값을 100으로 변경하자.
+        > ![](constant-physical-size-4.png)
+
+
+　
+
 - **무엇을 선택할 것인가?**
-  - Canvas Scaler 각 모드들은 각기 장단점이 있다.
-  - 보통은 Scale With Screen Size 모드가 좋은 해결책이 된다.
-  - 특수한 목적과 필요에 따라 다른 모드의 캔버스를 별도로 생성해서 대응하는 방식이 좋아 보인다.
-  ‌
-
-![constant-physical-size-4.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/6d1a500b9855831fb11c648b52c1a1bc/constant-physical-size-4.png)
-
-![constant-physical-size-3.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/394c8564a0d5e7f433f7cfd8fb498a84/constant-physical-size-3.png)
-
-![constant-physical-size-2.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/114e9b0efd7dc66f79498e4bef1a3361/constant-physical-size-2.png)
-
-![constant-physical-size-1.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/92e434dfec8d9c2be757516214e83970/constant-physical-size-1.png)
-
-![ConstantPhysicalsize.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/ced97f6e8a1bd4e840f1b9efc7cd4c9e/ConstantPhysicalsize.png)
-
-![5-4.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/2fecdaecb887c1378cb8aada8b43d650/5-4.png)
-
-![3-2.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/3a138f947049aaec70059aef4850d54e/3-2.png)
-
-![scalewithscreensize.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/ad4c541beb9f3d1b05ea5aaedafa17b7/scalewithscreensize.png)
-
-![resolution-3.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/c1fa3be0ae2ea28593e65d3b63c9d8f2/resolution-3.png)
-
-![resolution-2.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/a10a65df9a81c8ec372f598ffcd47d13/resolution-2.png)
-
-![resolution-4.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6037e1e156727f3d6104c30b/a7f9f721e69fdb90496c187c3ea02ee9/resolution-4.png)
+    - Canvas Scaler 각 모드들은 각기 장단점이 있다.
+    - 보통은 Scale With Screen Size 모드가 좋은 해결책이 된다.
+    - 특수한 목적과 필요에 따라 다른 모드의 캔버스를 별도로 생성해서 대응하는 방식이 좋아 보인다.
+  

@@ -97,8 +97,7 @@
     ● 모든 UI 요소는 Canvas 안에 위치해야 한다.
     ● 그려지는 순서는 하이어러키 순서와 동일씬이 2D인지 3D 인지에 상관없이 UI를 배치할 수 있다.
     ● 각 UI를 3D 공간에서 서로 나누어 배치할 수도 있다.
-
-https://docs.unity3d.com/kr/2021.1/Manual/UICanvas.html
+*https://docs.unity3d.com/kr/2021.1/Manual/UICanvas.html*
 
 　
 

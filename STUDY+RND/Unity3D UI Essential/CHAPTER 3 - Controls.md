@@ -16,6 +16,10 @@
         > - Scrollbar와 Slider 컨트롤
     - 이 정도만 이해하고 있어도 기본적인 작업은 모두 가능.
     - 이들을 조합해 새로운 컨트롤들을 만들 수 있다.
+
+
+　
+
 - **드로우 콜 최적화**
     - 성능을 향상을 위해 이미지를 스프라이트 한 장에 합쳐 사용.
     - [Sprite Packer](https://learnandcreate.tistory.com/131)를 사용하는 방법
@@ -42,6 +46,9 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
     - 오브젝트에 컴포넌트 추가하는 방법
         > - 메뉴에서: Component / UI / Text
         > - 인스펙터에서: Add Component / UI / Text
+
+
+　
 
 - **TEXT COMPONENT**
     - 컨트롤을 추가한 화면과 인스펙터
@@ -139,22 +146,23 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
         > - **Pin:** 핀 넘버 입력 모드
         > - **Custom:** Line Type, Input Type, Keyboard Type, Character Validation 속성을 조합하여 입력 모드를 구성한다.
     - **Line Type**
-        - **Single Line:** 한 줄 입력 모드
-        - **Multi Line Submit:** Enter시 onEndEdit 이벤트 발생
-        - **Multi Line Newline:** Enter시 줄 바꿈
+        > - **Single Line:** 한 줄 입력 모드
+        > - **Multi Line Submit:** Enter시 onEndEdit 이벤트 발생
+        > - **Multi Line Newline:** Enter시 줄 바꿈
     - **Placeholder**
-        - 입력받기 전에 표시될 Text 컨트롤
+        > - 입력받기 전에 표시될 Text 컨트롤
     - **Caret Blink Rate**
-        - 캐릿 깜박임 속도
+        > - 캐릿 깜박임 속도
     - **Caret Width**
-        - 캐릿 두께
+        > - 캐릿 두께
     - **Custom Caret Color**
-        - 캐릿 색상
+        > - 캐릿 색상
     - **Selection Color**
-        - 텍스트 선택영역의 배경 색상
+        > - 텍스트 선택영역의 배경 색상
     - **Hide Mobile Input**
-        - 모바일 디바이스의 온스크린 키보드에 붙어있는 네이티브 입력창을 없앤다. 이 속성은 iOS 디바이스에서만 동작한다.
+        > - 모바일 디바이스의 온스크린 키보드에 붙어있는 네이티브 입력창을 없앤다. 이 속성은 iOS 디바이스에서만 동작한다.
 
+　
 
 　
 
@@ -202,115 +210,136 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
     - Use Graphic Alpha
         > - 그래픽 컴포넌트 알파 값과의 혼합 유무.
 
+　
 
 　
 
 ## IMAGE 컨트롤/컴포넌트
+    ● Unity UI에서 텍스쳐를 그리는 가장 기본적인 방법.
+    ● Image 컴포넌트를 제대로 활용하기 위해서는 2D Sprite Package 먼저.
 
-> Unity UI에서 텍스쳐를 그리는 가장 기본적인 방법Image 컴포넌트를 제대로 활용하기 위해서는 2D Sprite Package 먼저.
 
----
+　
 
 - **2D SPRITE PACKAGE**
-  - 별도 설치해야 하는 경우
-  - _**"Menu / Window / Package Manager" **_선택.
-  - 만약 곧바로 2D Sprite Package가 보이지 않으면 왼쪽 상단의 Packages 탭 아래의 [+] 버튼 옆에 있는 버튼을 클릭해서 All Packages를 선택하면 설치 가능한 모든 패키지가 나온다.
-  - 그중에서 2D Sprite를 선택하고 Install 버튼을 클릭한다.
-  - 이제 Sprite Editor를 사용할 수 있다.
-  - 설명하면서 빈번히 Sprite Editor 등장할 거임.
+    - 별도 설치해야 하는 경우
+    - ***"Menu / Window / Package Manager"*** 선택.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/package_manager.png)
+    - 만약 곧바로 2D Sprite Package가 보이지 않으면 왼쪽 상단의 Packages 탭 아래의 [+] 버튼 옆에 있는 버튼을 클릭해서 All Packages를 선택하면 설치 가능한 모든 패키지가 나온다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/allpackages.png)
+    - 그중에서 2D Sprite를 선택하고 Install 버튼을 클릭한다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/2dsprite.png)
+    - 이제 Sprite Editor를 사용할 수 있다.
+    - 설명하면서 빈번히 Sprite Editor 등장할 거임.    
+
+
+　
+
 - **SPRITE 무엇?**
-  - 이미지 리소스를 텍스쳐(Texture)라고 부른다.
-  - 이 텍스쳐 중에서도 Image 컴포넌트나 스프라이트 렌더러에서 사용되는 리소스들을 스프라이트(Sprite)라고 한다.
-  - 보통 유니티 프로젝트에 임포트 되는 텍스쳐들은 자동으로 Texture Type이 Default로 정해진다. Default는 주로 3D 모델 오브젝트의 텍스쳐로 사용되는 타입이다.
-  - UI에 사용하기 위해서는 Texture Type을 Sprite로 변경해야 한다.
+    - 이미지 리소스를 텍스쳐(Texture)라고 부른다.
+    - 이 텍스쳐 중에서도 Image 컴포넌트나 스프라이트 렌더러에서 사용되는 리소스들을 스프라이트(Sprite)라고 한다.
+    - 보통 유니티 프로젝트에 임포트 되는 텍스쳐들은 자동으로 Texture Type이 Default로 정해진다. Default는 주로 3D 모델 오브젝트의 텍스쳐로 사용되는 타입이다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/texturetype.png)
+    - UI에 사용하기 위해서는 Texture Type을 Sprite로 변경해야 한다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/sprite2D.png)
+
+
+　
+
 - **IMAGE CONTROL / COMPONENT**
-  - UI / Image 항목을 선택하여 Image 컨트롤 생성
-  - Image 컴포넌트는 Sprite를 원본 이미지로 사용해야 한다.
-  - Image 컴포넌트는 Raw Image 컴포넌트와 비슷하다.
-  - 반면, Image 컴포넌트는 더 많은 디스플레이 옵션을 가진다.
-  - 반면, Raw Image는 어떤 타입의 텍스쳐라도 사용 가능하다.
-  - 웹에서 내려받은 이미지는 Raw Image를 써야겠지?
-  - **Options**
-  - **Source Image**
-    - 출력할 이미지 스프라이트
-  - **Color**
-    - 이미지에 적용될 색상
-    - 버텍스 컬러로 지정되므로...
-      - 흰색으로 지정하면 원본 이미지 색상으로 출력.
-      - 원본 이미지의 검은색은 영향을 받지 않는다.
-  - **Material**
-    - 이미지를 렌더링 할 때 사용될 재질
-    - 재질을 넣어서 흐리게 보이게 만든다거나 왜곡되어 보이게 하는 것처럼 특별한 효과를 넣고자 할 때 사용된다.
-  - **Raycast Target**
-    - 레이캐스트 타겟으로 이미지를 사용할지 말지 지정
-    - 쉽게 말해 클릭 or 터치 대상으로 삼을지 말지.
-  - **Preserve Aspect**
-    - Source Image의 원본 비율을 지켜서 그릴 것인지.
-    - 보통은 Image 컴포넌트가 부착된 게임 오브젝트의 너비와 높이에 따라서 그림의 비율이 변형되어서 화면에 그려지지만 Preserve Aspect를 체크하면 비율을 지킨 상태로 화면에 그려지게 할 수 있다.
-    - Image Type이 Simple 이거나 Filled 일 때만 사용됨.
-  - **Set Native Size**
-    - 게임 오브젝트의 Width와 Height를 Source Image 해상도와 같게 만들어준다.
-    - Image Type이 Simple 이거나 Filled 일 때만 사용됨.
-  - **Image Type**
-    - 이미지가 그려지는 방식을 결정.
-    - Source Image가 비어 있으면 안 보이니 참고하시고...
-  - **Image Type : Simple**
-    - 원본 이미지 소스 그대로 출력.
-    - **Use Sprite Mesh**
-      - 그리는 영역을 지정할 때, 그냥 사각형 영역으로 그릴지 아니면 이미지의 알파 영역을 무시해서 오버드로우 안되게 최적화 할지.
-      - 구멍 숭숭 뚫린 큰 이미지 최적화 할 때 유용하다.
-      - 스프라이트의 Mesh Type이 "Tight" 여야 한다.
-      - Sprite Editor에서 Custom Outline 직접 조정 가능.
-      - [https://skuld2000.tistory.com/28](https://skuld2000.tistory.com/28 "smartCard-inline")
-      - [https://mentum.tistory.com/293](https://mentum.tistory.com/293 "smartCard-inline")
-  - **Image Type : Sliced**
-    - 9 슬라이스 그리기 모드
-    - 9슬라이싱 하기 위해서는 프로젝트 뷰에서 적용할 스프라이트를 선택하고 인스펙터 뷰에서 **"Sprite Editor"** 버튼 클릭.
-    - 반복 부분을 나눠주고 Apply 버튼 누름.
-    - Border 값을 변경하는 것임.
-    - 이미지가 크기에 따라 늘어지지 않는다.
-    - **Fill Center**
-      - 가운데 영역을 Color 색상으로 채울지 말지.
-    - **Pixels Per Unit Multiplier**
-      - 유닛 당 픽셀 수 설정.
-      - Sprite의 Pixels Per Unit에 이 값이 곱해진다.
-      - (모서리) 해상도를 조절하는데 매우 유용하다.
-  - **Image Type : Tiled**
-    - 이미지를 반복으로 그려주는 타입.
-    - 스프라이트에 Border 값을 주는 경우 패턴이 잘 연결될 수 있도록 주의가 필요하다.
-    - **Pixels Per Unit Multiplier**
-      - 유닛 당 픽셀 수 설정.
-      - Sprite의 Pixels Per Unit에 이 값이 곱해진다.
-      - 해상도, 스케일을 변경할 수 있다. (새 기능)
-  - **Image Type : Filled**
-    - 게이지 같은 연출을 표현할 때 주로 사용된다.
-    - **Fill Method**
-      - Radial 360
-      - Radial 180
-      - Radial 90
-      - Vertical
-      - Horizontal
-    - **Fill Origin**
-      - (게이지가) 차오르는 시작점
-      - Fill Method가 Radial 360 일 때
-        - Top, Bottom, Left, Right
-      - Fill Method가 Radial 180 일 때
-        - Top, Bottom, Left, Right
-      - Fill Method가 Radial 90 일 때
-        - Bottom Left
-        - Bottom Right
-        - Top Left
-        - Top Right
-      - Fill Method가 Vertical 일 때
-        - Top, Bottom
-      - Fill Method가 Horizontal 일 때
-        - Left, Right
-    - **Fill Amount**
-      - 이미지를 어느 비율로 채울지 결정.
-      - 0과 1 범위 내에서 조정한다.
-    - **Clockwise**
-      - 채워지는 방향이 시계방향인지 반대인지 설정.
-      - Fill Method가 Radial 계열일 때만 작동
+    - UI / Image 항목을 선택하여 Image 컨트롤 생성
+    - Image 컴포넌트는 Sprite를 원본 이미지로 사용해야 한다.
+    - Image 컴포넌트는 Raw Image 컴포넌트와 비슷하다.
+    - 반면, Image 컴포넌트는 더 많은 디스플레이 옵션을 가진다.
+    - 반면, Raw Image는 어떤 타입의 텍스쳐라도 사용 가능하다.
+    - 웹에서 내려받은 이미지는 Raw Image를 써야겠지?
+    - **Options**
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/image-inspector.png)
+    - **Source Image**
+        > - 출력할 이미지 스프라이트
+    - **Color**
+        > - 이미지에 적용될 색상
+        > - 버텍스 컬러로 지정되므로...
+        > - 흰색으로 지정하면 원본 이미지 색상으로 출력.
+        > - 원본 이미지의 검은색은 영향을 받지 않는다.
+    - **Material**
+        > - 이미지를 렌더링 할 때 사용될 재질
+        > - 재질을 넣어서 흐리게 보이게 만든다거나 왜곡되어 보이게 하는 것처럼 특별한 효과를 넣고자 할 때 사용된다.
+    - **Raycast Target**
+        > - 레이캐스트 타겟으로 이미지를 사용할지 말지 지정
+        > - 쉽게 말해 클릭 or 터치 대상으로 삼을지 말지.
+    - **Preserve Aspect**
+        > - Source Image의 원본 비율을 지켜서 그릴 것인지.
+        > - 보통은 Image 컴포넌트가 부착된 게임 오브젝트의 너비와 높이에 따라서 그림의 비율이 변형되어서 화면에 그려지지만 Preserve Aspect를 체크하면 비율을 지킨 상태로 화면에 그려지게 할 수 있다.
+        > - Image Type이 Simple 이거나 Filled 일 때만 사용됨.
+    - **Set Native Size**
+        > - 게임 오브젝트의 Width와 Height를 Source Image 해상도와 같게 만들어준다.
+        > - Image Type이 Simple 이거나 Filled 일 때만 사용됨.
+    - **Image Type**
+        > - 이미지가 그려지는 방식을 결정.
+        > - Source Image가 비어 있으면 안 보이니 참고하시고...
+    - **Image Type : Simple**
+        > - 원본 이미지 소스 그대로 출력.
+    - **Image Type : Simple - Use Sprite Mesh**
+        > - 그리는 영역을 지정할 때, 그냥 사각형 영역으로 그릴지 아니면 이미지의 알파 영역을 무시해서 오버드로우 안되게 최적화 할지.
+        > - 구멍 숭숭 뚫린 큰 이미지 최적화 할 때 유용하다.
+        > - 스프라이트의 Mesh Type이 "Tight" 여야 한다.
+        > - Sprite Editor에서 Custom Outline 직접 조정 가능.
+        > - *https://skuld2000.tistory.com/28*
+        > - *https://mentum.tistory.com/293*
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/preserve.gif)
+    - **Image Type : Sliced**
+        > - 9 슬라이스 그리기 모드
+        > - 9슬라이싱 하기 위해서는 프로젝트 뷰에서 적용할 스프라이트를 선택하고 인스펙터 뷰에서 **"Sprite Editor"** 버튼 클릭.
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteeditor-button.png)
+        > - 반복 부분을 나눠주고 Apply 버튼 누름.
+        > - Border 값을 변경하는 것임.
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/9slicing.gif)
+        > - 이미지가 크기에 따라 늘어지지 않는다.
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/9slicing-result.png)
+        > - **Fill Center**: 가운데 영역을 Color 색상으로 채울지 말지.
+        > - **Pixels Per Unit Multiplier**: 유닛 당 픽셀 수 설정. Sprite의 Pixels Per Unit에 이 값이 곱해진다. (모서리) 해상도를 조절하는데 매우 유용하다.
+    - **Image Type : Tiled**
+        > - 이미지를 반복으로 그려주는 타입.
+        > - 스프라이트에 Border 값을 주는 경우 패턴이 잘 연결될 수 있도록 주의가 필요하다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/titled.gif)
+        > - **Pixels Per Unit Multiplier**
+        > - 　\> 유닛 당 픽셀 수 설정.
+        > - 　\> Sprite의 Pixels Per Unit에 이 값이 곱해진다.
+        > - 　\> 해상도, 스케일을 변경할 수 있다. (새 기능)
+    - **Image Type : Filled**
+        - 게이지 같은 연출을 표현할 때 주로 사용된다.
+        - **Fill Method**
+        - Radial 360
+        - Radial 180
+        - Radial 90
+        - Vertical
+        - Horizontal
+        - **Fill Origin**
+        - (게이지가) 차오르는 시작점
+        - Fill Method가 Radial 360 일 때
+            - Top, Bottom, Left, Right
+        - Fill Method가 Radial 180 일 때
+            - Top, Bottom, Left, Right
+        - Fill Method가 Radial 90 일 때
+            - Bottom Left
+            - Bottom Right
+            - Top Left
+            - Top Right
+        - Fill Method가 Vertical 일 때
+            - Top, Bottom
+        - Fill Method가 Horizontal 일 때
+            - Left, Right
+        - **Fill Amount**
+        - 이미지를 어느 비율로 채울지 결정.
+        - 0과 1 범위 내에서 조정한다.
+        - **Clockwise**
+        - 채워지는 방향이 시계방향인지 반대인지 설정.
+        - Fill Method가 Radial 계열일 때만 작동
 
 ![horizontal.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6032634ce953c34f08919df1/6cd71814552a031f560edaf99616c5cb/horizontal.gif)
 

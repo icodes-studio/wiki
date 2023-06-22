@@ -633,7 +633,7 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
         > - "Scroll Border" 오브젝트는 **컨텐츠 배경 테두리**로 쓰일 거임.
         > - Width: 400, Height: 200 변경하고 적당한 이미지 지정
         > - "Scroll Border" 하위로 빈 오브젝트 추가
-        > - 이름을 **"Scroll Rect"**로 변경.
+        > - 이름을 **"Scroll Rect"** 변경.
         > - 여기에 **Mask** 컴포넌트를 추가.
         > - Image 컴포넌트를 별도로 추가해야 클리핑 되는 거 알지?
         > - 테두리인 "Scroll Border"가 보여야 하니, 살짝 크기 조정.
@@ -642,14 +642,14 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
         > - "Scroll Rect" 오브젝트로 돌아가서...
         > - 여기에 **Scroll Rect** 컴포넌트 추가하고 **Content** 속성에 바로 전에 만든 하위 이미지 오브젝트를 할당.
         > - "Scroll Border" 하위로 **Scrollbar** 컨트롤 추가.
-        > - 이름을 **"Horizontal Scrollbar"**로 변경.
+        > - 이름을 **"Horizontal Scrollbar"** 변경.
         > - 이 컨트롤은 **가로 스크롤바**로 사용될 거임.
-        > - 그러므로 **Direction** 속성을 **"Left To Right"**로 변경.
+        > - 그러므로 **Direction** 속성을 **"Left To Right"** 변경.
         > - 위치와 크기는 컨텐츠 하단에 적절히 배치
         > - "Scroll Border" 하위로 **Scrollbar** 컨트롤 추가.
-        > - 이름을 **"Vertical Scrollbar"**로 변경.
+        > - 이름을 **"Vertical Scrollbar"** 변경.
         > - 이 컨트롤은 **세로 스크롤바**로 사용될 거임.
-        > - 그러므로 **Direction** 속성을 **"Bottom To Top"**으로 변경.
+        > - 그러므로 **Direction** 속성을 **"Bottom To Top"** 변경.
         > - 위치와 크기는 컨텐츠 오른쪽에 적절히 배치
         > - "Scroll Rect" 오브젝트의 **Scroll Rect** 컴포넌트에서...
         > - **Horizontal Scrollbar** 속성에 **"Horizontal Scrollbar"** 오브젝트 할당.

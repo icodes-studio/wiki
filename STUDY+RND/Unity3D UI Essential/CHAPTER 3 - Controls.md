@@ -415,53 +415,45 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
 　
 
 - **애니메이션 버튼 만들기 실습**
-    - [UI 리소스팩은 여기](http://opengameart.org/content/ui-pack) 또는 [여기서 다운로드](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6032634ce953c34f08919df1/9a3ec3e10c6214e9b913dac428cba11a/UIpack.zip)
-    - 리소스 팩에서**"/UIpack/Spritesheet/"**폴더 이동
-    - **PNG**파일과**XML**파일 유니티로 가져오기
-    - 리소스 팩에서**/UIpack/Font/"**폴더 이동
-    - **TTF**파일 유니티로 가져오기
-    - 애셋스토어에서**XML Texture Atlas Slicer**설치하기
-    - **PNG**스프라이트의 Sprite Mode를**Multiple**변경 후
-    - **"Assets / Slice Sprite Using XML"**스프라이트 슬라이싱
+    - [UI 리소스팩은 여기](http://opengameart.org/content/ui-pack) 또는 [여기서 다운로드](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/UIpack.zip)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/superawesomegame.png)
+    - 리소스 팩에서 **"/UIpack/Spritesheet/"** 폴더로 이동
+    - **PNG** 파일과 **XML** 파일 유니티로 가져오기
+    - 리소스 팩에서 **/UIpack/Font/"** 폴더로 이동
+    - **TTF** 파일 유니티로 가져오기
+    - 애셋스토어에서 **XML Texture Atlas Slicer** 설치하기
+    - **PNG** 스프라이트의 Sprite Mode를 **Multiple** 변경 후
+    - **"Assets / Slice Sprite Using XML"** 스프라이트 슬라이싱
     - 유니티 하이어러키에 버튼 UI 추가
-    - **"blue_button01.png"**스프라이트를 버튼 Source Image에 할당.
-    - **"kenvector\_future\_thin"**폰트를 버튼 텍스트 Font에 할당.
-    - 버튼 텍스트를**"START GAME"**으로 변경
-    - 버튼의**Transition**속성을**Animation**으로 설정.
-    - 버튼의**Auto Generate Animation**버튼을 클릭해서 기본적인 애니메이션 컨트롤러를 생성.
-    - 버튼 게임 오브젝트에**Animator**컴포넌트가 추가되었음.
-    - 프로젝트 뷰에서 "Button" 애니메이터를 더블클릭하면**Animator 편집창**을 띄울 수 있다.
-    - 하이어러키 뷰에서 버튼 오브젝트를 선택하고**"Windows / Animation / Animation"**항목을 선택하여 Animation 창을 연다. Clips 드랍다운을 열어보면 다섯 개의 클립을 찾을 수 있다.
-    - **Highlighted**클립을 선택한 후**Record**버튼을 눌러 녹화 시작.
-    - 하이어러키 뷰에서 버튼의 Image 컴포넌트 Source Image를**"yellow_button02.png"**로 변경
-    - 이어서 Rect Transform 컴포넌트의**Scale X, Y**를 각각 1.1로 변경
+    - **"blue_button01.png"** 스프라이트를 버튼 Source Image에 할당.
+    - **"kenvector_future_thin"** 폰트를 버튼 텍스트 Font에 할당.
+    - 버튼 텍스트를 **"START GAME"** 으로 변경
+    - 버튼의 **Transition** 속성을 **Animation** 항목으로 설정.
+    - 버튼의 **Auto Generate Animation** 버튼을 클릭해서 기본적인 애니메이션 컨트롤러를 생성.
+    - 버튼 게임 오브젝트에 **Animator** 컴포넌트가 추가되었음.
+    - 프로젝트 뷰에서 "Button" 애니메이터를 더블클릭하면 **Animator 편집창을** 띄울 수 있다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/animatoredit.png)
+    - 하이어러키 뷰에서 버튼 오브젝트를 선택하고 **"Windows / Animation / Animation"** 항목을 선택하여 Animation 창을 연다. Clips 드랍다운을 열어보면 다섯 개의 클립을 찾을 수 있다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/button-animation.png)
+    - **Highlighted** 클립을 선택한 후 **Record** 버튼을 눌러 녹화 시작.
+    - 하이어러키 뷰에서 버튼의 Image 컴포넌트 Source Image를 **"yellow_button02.png"**로 변경
+    - 이어서 Rect Transform 컴포넌트의 **Scale X, Y**를 각각 1.1로 변경
     - Record 버튼을 다시 눌러 녹화 중지.
-    - 애니메이션 클립의 속성에서**Loop Time**언체크.
+    - 애니메이션 클립의 속성에서 **Loop Time** 언체크.
     - 같은 방법으로 각각의 애니메이션 클립을 수정한다.
     - 버튼의 위치와 스케일 등의 값은 이전 상태에 기반을 두기 때문에 애니메이션 클립에서 명시적으로 변경하지 않는 한, 초기값으로 자동 리셋된다.
-  ‌
 
-![button-animation.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6032634ce953c34f08919df1/577c97d0989b66289bb1bdef4946391d/button-animation.png)
-
-![animatoredit.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6032634ce953c34f08919df1/c05a7aa18a7e930457474167a1a07788/animatoredit.png)
-
-![superawesomegame.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6032634ce953c34f08919df1/de0a78bd6dd060ce7348825374434f8c/superawesomegame.png)
-
-![selectable.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6032634ce953c34f08919df1/a555681aecf7f41e29f4e5a2b8581075/selectable.png)
-
-![button.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/6032634ce953c34f08919df1/4c9b3cb53f6ad8d8aa6862decce6cc00/button.png)
-
+　
 ‌
-
+　
 ‌
-
 ## TOGGLE 컨트롤
+    ● 사용자가 옵션을 켜거나 끌 수 있도록 하는 체크박스.
+    ● 선택하거나 선택하지 않거나...
 
-> 사용자가 옵션을 켜거나 끌 수 있도록 하는 체크박스.선택하거나 선택하지 않거나...
+    ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/UI_ToggleExample.png)
 
-![UI\_ToggleExample.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/60360feb1a0a7378aad15a1c/a999865eabb3c55b0f13b0739ea236d8/UI_ToggleExample.png)
-
----
+　
 
 - **컨트롤 추가 및 하이어러키**
   - / UI / Toggle 메뉴로 컨트롤 추가.

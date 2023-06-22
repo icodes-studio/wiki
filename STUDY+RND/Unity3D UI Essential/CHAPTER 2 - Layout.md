@@ -17,7 +17,9 @@
 
 - **앵커 기초 개념**
   - Rect Transform 컴포넌트의 앵커 속성
-  [](rect-transform-anchor.png)
+  
+  ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/rect-transform-anchor.png)
+  
   - Anchor는 상위 오브젝트의 어디를 기준으로 위치할 것인지 설정.
   - Pivot은 자신의 기준점은 어디로 설정하여 위치할 것인지 정하는 것.
 - **PIVOT 리마인드**

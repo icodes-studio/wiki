@@ -319,13 +319,13 @@
     - 하위 게임 오브젝트를 자동으로 한 행에 배열한다.
     - eg. 인앱 결제 상점 아이템
     - Usage...
-        > - 1) 씬 안에 Canvas를 생성한다.
-        > - 2) Canvas에 우 클릭하여 빈 게임 오브젝트 생성
-        > - 3) 오브젝트의 이름을 "HorizontalLayoutGroup"로 변경
-        > - 4) 여기에 Horizontal Layout Group 컴포넌트 추가
-        > - 5) "HorizontalLayoutGroup" 오브젝트 Width 값을 300으로
-        > - 6) 이 오브젝트의 하위로 세 개의 UI/Image 추가.
-        > - 7) Image 컴포넌트에 Source Image를 원하는 Sprite로 설정.
+        > - 1\) 씬 안에 Canvas를 생성한다.
+        > - 2\) Canvas에 우 클릭하여 빈 게임 오브젝트 생성
+        > - 3\) 오브젝트의 이름을 "HorizontalLayoutGroup"로 변경
+        > - 4\) 여기에 Horizontal Layout Group 컴포넌트 추가
+        > - 5\) "HorizontalLayoutGroup" 오브젝트 Width 값을 300으로
+        > - 6\) 이 오브젝트의 하위로 세 개의 UI/Image 추가.
+        > - 7\) Image 컴포넌트에 Source Image를 원하는 Sprite로 설정.
     - Image 오브젝트가 가로로 예쁘게 얼라인 되었다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/horizontallayoutgroup-100.png)
     - Horizontal Layout Group 컴포넌트
@@ -457,13 +457,13 @@
     - PreferredSize
         > - 너비 또는 높이를 하위 컨텐츠의 Preferred 값으로 제한.
     - **레이아웃 그룹과 함께 사용하는 경우의 예**
-        > - 1) 씬에 Canvas 추가
-        > - 2) Canvas에 UI/Image 추가 - 배경으로 사용
-        > - 3) Image 하위로 UI/Text 세 개 추가
-        > - 4) Image 오브젝트에 Vertical Layout Group 추가
-        > - 5) Vertical Layout Group 컴포넌트에 Control Child Size 필드의 Width 항목 체크
-        > - 6) Image 오브젝트에 Content Size Fitter 추가
-        > - 7) Content Size Fitter의 Horizontal Fit 필드 값을 Preferred Size로 설정.
+        > - 1\) 씬에 Canvas 추가
+        > - 2\) Canvas에 UI/Image 추가 - 배경으로 사용
+        > - 3\) Image 하위로 UI/Text 세 개 추가
+        > - 4\) Image 오브젝트에 Vertical Layout Group 추가
+        > - 5\) Vertical Layout Group 컴포넌트에 Control Child Size 필드의 Width 항목 체크
+        > - 6\) Image 오브젝트에 Content Size Fitter 추가
+        > - 7\) Content Size Fitter의 Horizontal Fit 필드 값을 Preferred Size로 설정.
     - **작동원리(추측)**
         > - Text UI에 텍스트가 입력되면 자체 Preferred Size가 변경.
         > - Vertical Layout Group의 Control Child Size 옵션이 켜져 있기 때문에 하위 레이아웃 엘리먼트의 Preferred Size가 바뀌었으므로 크기 조절을 위해 계산 - 레이아웃 그룹 자체 Preferred Size도 변경됨.
@@ -517,17 +517,17 @@
     - 꼭 레이아웃 그룹일 필요는 없으며 스크롤 가능한 UI 컨트롤이면 상관없다. 그나저나 이게 왜 이 시점에 등장하는지... ٩(๑´0`๑)۶
     - ***3장 '컨트롤 배우기'*** 에서 좀 더 복잡한 예를 살펴볼 예정.
     - 닥치고 예제
-        > - 1) 씬에 Canvas 추가.
-        > - 2) Canvas 하위로 빈 게임 오브젝트 추가하고,
-        > - 3) 이 오브젝트 이름을 "ScrollRectArea"로 변경.
-        > - 4) "ScrollRectArea"의 Width 값을 300으로 설정.
-        > - 5) 이 오브젝트에 Scroll Rect 컴포넌트 추가.
-        > - 6) 이 오브젝트 하위에 빈 게임 오브젝트 추가하고,
-        > - 7) 이름을 "Content"로 변경
-        > - 8) "Content"의 Width를 1000으로 설정.
-        > - 9) "Content" 게임 오브젝트를 선택한 후 Horizontal Layout Group 컴포넌트를 추가.
-        > - 10) "Content" 하위에 Image 컴포넌트를 몇 개 추가.
-        > - 11) "ScrollRectArea" 게임 오브젝트에 바인딩 되어있는 Scroll Rect 컴포넌트의 Content 속성으로 "Content" 게임 오브젝트를 할당합니다.
+        > - 1\) 씬에 Canvas 추가.
+        > - 2\) Canvas 하위로 빈 게임 오브젝트 추가하고,
+        > - 3\) 이 오브젝트 이름을 "ScrollRectArea"로 변경.
+        > - 4\) "ScrollRectArea"의 Width 값을 300으로 설정.
+        > - 5\) 이 오브젝트에 Scroll Rect 컴포넌트 추가.
+        > - 6\) 이 오브젝트 하위에 빈 게임 오브젝트 추가하고,
+        > - 7\) 이름을 "Content"로 변경
+        > - 8\) "Content"의 Width를 1000으로 설정.
+        > - 9\) "Content" 게임 오브젝트를 선택한 후 Horizontal Layout Group 컴포넌트를 추가.
+        > - 10\) "Content" 하위에 Image 컴포넌트를 몇 개 추가.
+        > - 11\) "ScrollRectArea" 게임 오브젝트에 바인딩 되어있는 Scroll Rect 컴포넌트의 Content 속성으로 "Content" 게임 오브젝트를 할당합니다.
     - **Options**
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/scrollrect.png)
     - **Content**

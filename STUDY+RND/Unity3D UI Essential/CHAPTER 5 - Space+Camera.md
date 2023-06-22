@@ -164,47 +164,44 @@
     - A camera has up to 8 target display settings. The camera can be controlled to render to one of up to 8 monitors. This is supported only on PC, Mac and Linux. In Game View the chosen display in the Camera Inspector will be shown.
 
 　
+
 　
 
 - **이벤트 카메라**
-  - **World Space** 모드는 UI 이벤트를 처리하는데 사용할 카메라 필요.
-  - 즉, 레이캐스팅 입력을 받기 위해 EventSystem이 어떤 카메라를 사용할지 결정해야 한다.
-  - Event Camera가 지정되지 않으면 디폴트로 Main Camera가 사용됨.
+    - **World Space** 모드는 UI 이벤트를 처리하는데 사용할 카메라 필요.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/eventcamera.png)
+    - 즉, 레이캐스팅 입력을 받기 위해 EventSystem이 어떤 카메라를 사용할지 결정해야 한다.
+    - Event Camera가 지정되지 않으면 디폴트로 Main Camera가 사용됨.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/main-camera.png)
 
-![main-camera.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/603a371ed59d930570881bf6/690213b212343f18adbf999e291d0d47/main-camera.png)
-
-![eventcamera.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/603a371ed59d930570881bf6/22b4fdb54ff7b3346ba6e23521295a26/eventcamera.png)
 
 　
 
 - **Screen Space - Camera FOV 테스트**
-  - 캔버스를 생성하고 Render Mode를 Screen Space - Camera로 설정.
-  - 카메라를 생성하고 이름을 "UICamera"로 변경 후 속성을...
-    - Layer : UI
-    - Clear Flags : Don't Clear
-    - Field of View : 1
-  - Canvas의 Render Camera를 "UICamera"로 설정.
-  - Image를 추가하고 그 자식으로 Button 추가
-  - 각 엘리먼트 트랜스폼의 Pos Z 값을 카메라에 근접 for TEST
-    - Image는 0
-    - Button은 -10
-    - Text는 -20
-  - 게임 뷰로 전환하고 UICamera의 FOV 값을 바꿔서 넣어보자.
-  - Text는 FOV 160에서 사라진다. Near Plane을 지나쳐 그려지지 않음.
-  - **이렇게 Z 깊이를 이용해 다양한 연출이 가능하다.**
-  - 자, 이제 회전을 통한 원근감을 테스트해보자.
-  - 각 UI 엘리먼트의 Pos Z 값 0으로 다시 초기화.
-  - Image의 Rotation Y 값을 10으로 변경.
-  - 게임 뷰로 전환하고 UICamera의 FOV 값을 바꿔서 넣어보자.
-  - UI가 원근감 있게 표현되고 있다.
+    - 캔버스를 생성하고 Render Mode를 Screen Space - Camera로 설정.
+    - 카메라를 생성하고 이름을 "UICamera"로 변경 후 속성을...
+        > - Layer : UI
+        > - Clear Flags : Don't Clear
+        > - Field of View : 1
+    - Canvas의 Render Camera를 "UICamera"로 설정.
+    - Image를 추가하고 그 자식으로 Button 추가
+    - 각 엘리먼트 트랜스폼의 Pos Z 값을 카메라에 근접 for TEST
+        > - Image는 0
+        > - Button은 -10
+        > - Text는 -20
+    - 게임 뷰로 전환하고 UICamera의 FOV 값을 바꿔서 넣어보자.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/FOV.png)
+    - Text는 FOV 160에서 사라진다. Near Plane을 지나쳐 그려지지 않음.
+    - **이렇게 Z 깊이를 이용해 다양한 연출이 가능하다.**
+    - 자, 이제 회전을 통한 원근감을 테스트해보자.
+    - 각 UI 엘리먼트의 Pos Z 값 0으로 다시 초기화.
+    - Image의 Rotation Y 값을 10으로 변경.
+    - 게임 뷰로 전환하고 UICamera의 FOV 값을 바꿔서 넣어보자.
+        > ![](FOV2.png)
+    - UI가 원근감 있게 표현되고 있다.
 
-![FOV2.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/603a371ed59d930570881bf6/83a42fed3eba8006b37bebb516b75a5b/FOV2.png)
-
-![FOV.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/603a371ed59d930570881bf6/a73962ce25d50f9786a23f0597149d7e/FOV.png)
 
 　
-
-![%ED%8C%8C%EC%9D%BC\_000.gif](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/603a371ed59d930570881bf6/436e3469ab20ced66fd8d82debeac12c/%ED%8C%8C%EC%9D%BC_000.gif)
 
 - **World Space 예제**
   - Screen Space - Camera 모드는 UI를 3D 공간상에 배치한다.

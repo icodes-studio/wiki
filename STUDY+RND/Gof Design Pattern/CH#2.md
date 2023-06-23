@@ -80,10 +80,15 @@
     - BUT, 모든 사람들이 충분한 경험을 갖고 있지는 않다.
     - 이런 사람들이 전문가 못지않게 소프트웨어 설계를 잘 하는 방법은?
     - 여러가지 설계 사례나 시니어 전문가들의 경험에 대한 지식과 노하우를 분석하고 공유하는 것.
-    - 하지만 이런 것들은 너무 구체적이거나 너무 일반화된 것이어서 새로운 구체적인 문제에 적용하기 위해서는 또 다른 지식이나 노하우가 필요하기 때문에 한계가 있다.
-    - 너무 일반적이지도, 또 너무 구체적이지도 않은 형태로 소프트웨어 설계를 위한 지식이나 노하우를 공유할 수 있는 방법을 위해 고안된 것이 바로...
+    - 하지만 이런 것들은 너무 구체적이거나 너무 일반화된 것들이다. 
+    - 그래서 새로운 구체적인 문제에 적용하기 위해서는 또 다른 지식이나 노하우가 필요하기 때문에 한계가 있다.
+    - 너무 일반적이지도, 너무 구체적이지도 않은 형태로 소프트웨어 설계를 위한 지식이나 노하우를 공유할 수 있도록 고안된 것이 바로...
     - ***Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides가 쓴 "Design Patterns: Elements of Reusable Object-Oriented Software"(Addison Wesley, 1995)***
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Gof%20Design%20Pattern/Assets/book1.jpg)
     - 라는 책에서 제시한 디자인 패턴이다.
+    - 그런데, 책이 너무 어렵고 예제도 별로 없어서 실무에 활용하는데 어려움을 느낀다.
+    - 그래서 쉽고 실용적인 책이 나왔다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Gof%20Design%20Pattern/Assets/book2.jpg)
   
 
 - **디자인 패턴 이해와 활용을 위한 이 책의 접근 방법**

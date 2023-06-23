@@ -296,7 +296,9 @@
 
 ## 2차 클래스 설계
     - CompilerFactory 클래스를 WindowsCompilerFactory 클래스와 LinuxCompilerFactory 클래스로 구분하여 CompilerFactory 클래스의 하위 클래스로 두고 외부 Client에서는 CompilerFactory 클래스의 자료형과 인터페이스를 사용하게 만든다면, 컴파일러 모듈 내부에 시스템 환경에 따른 비교 문장을 둘 필요가 없어진다. 물론 클라이언트에서는 한 번의 조건 비교로 주어진 환경에 해당하는 팩토리 클래스를 선택하고 각 컴파일러 모듈의 객체를 생성하는데 사용할 수 있다.
+    
     > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Gof%20Design%20Pattern/Assets/abstractfactory.png)
+    
     ```
     using System;
     using System.Runtime.InteropServices;

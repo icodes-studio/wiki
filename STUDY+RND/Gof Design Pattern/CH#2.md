@@ -59,7 +59,7 @@
     - 이를 통해 소프트웨어는 수정이나 관리 및 재사용이 쉬워진다.
     - 아래 그림은 변경의 국지화가 깨뜨려진 예
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Gof%20Design%20Pattern/Assets/bad.png)
-        > - 새로운 상품이 추가되었을 때 변경해야 할 부분(짙은 색)이 산개해 있다
+        > - 새로운 상품(MoneyMkt)이 추가되었을 때 변경해야 할 부분(짙은 색)이 산개해 있다
     - 아래 그림은 변경의 국지화가 잘 된 예
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Gof%20Design%20Pattern/Assets/good.png)
         > - MoneyMktAccount 클래스만 추가하면 된다.

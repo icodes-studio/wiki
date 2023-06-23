@@ -455,11 +455,12 @@
         > - 대가리 싸매고 고민을 해 보는 게 더 중요하다.
 
 - **Abstract Factory 패턴의 일반적인 구조**
-    > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Gof%20Design%20Pattern/Assets/abstractfactory-structure.png)
+    - 다이어그램
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Gof%20Design%20Pattern/Assets/abstractfactory-structure.png)
     - Client가 참조하는 자료형은 상위의 추상 클래스들이다.
-        - AbstractFactory
-        - AbstractProductA
-        - AbstractProductB
+        > - AbstractFactory
+        > - AbstractProductA
+        > - AbstractProductB
     - 물론 실제 만들어지는 객체는 각각의 하위 클래스에 해당하는 것
 
 - **장점**

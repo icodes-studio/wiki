@@ -88,7 +88,7 @@
     - 라는 책에서 제시한 디자인 패턴이다.
     - 그런데, 책이 너무 어렵고 예제도 별로 없어서 실무에 활용하는데 어려움을 느낀다.
     - 그래서 쉽고 실용적인 책이 나왔다.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Gof%20Design%20Pattern/Assets/book2.jpg)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Gof%20Design%20Pattern/Assets/book3.jpg)
   
 
 - **디자인 패턴 이해와 활용을 위한 이 책의 접근 방법**

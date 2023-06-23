@@ -425,12 +425,12 @@
 
 　
 
-## 구현 관련 추가 사항 및 정리
+## 추가 사항 및 정리
 
-- Factory 객체를 하나만 생성, 유지하는 방법.
+- **Factory 객체를 하나만 생성, 유지하는 방법**
     - Singleton 패턴 : CHAPTER 7
 
-- 복제를 통해 제품 객체를 생성하는 방법
+- **복제를 통해 제품 객체를 생성하는 방법**
     - Prototype 패턴 : CHAPTER 6
     
 - **새로운 종류의 제품이 추가되었을 때의 문제**
@@ -454,32 +454,29 @@
         > - CHAPTER 6. Prototype 패턴을 설명할 때 다시 다뤄보자.
         > - 대가리 싸매고 고민을 해 보는 게 더 중요하다.
 
- - **Abstract Factory 패턴 정리**
-  - Abstract Factory 패턴의 일반적인 구조
-  - Client가 참조하는 자료형은 상위의 추상 클래스들이다.
-    - AbstractFactory
-    - AbstractProductA
-    - AbstractProductB
-  - 물론 실제 만들어지는 객체는 각각의 하위 클래스에 해당하는 것
+- **Abstract Factory 패턴의 일반적인 구조**
+    > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Gof%20Design%20Pattern/Assets/abstractfactory-structure.png)
+    - Client가 참조하는 자료형은 상위의 추상 클래스들이다.
+        - AbstractFactory
+        - AbstractProductA
+        - AbstractProductB
+    - 물론 실제 만들어지는 객체는 각각의 하위 클래스에 해당하는 것
+
 - **장점**
-  - 클라이언트가 객체의 생성이나 구성에 독립적이도록 만들 수 있다.
-  - 사용할 제품군을 쉽게 선택할 수 있다.
-  - 제품들에 대한 클래스 라이브러리를 만들어야 하는데 그 인터페이스만 드러내고 구현은 숨기고 싶을 때 유용하다.
-  - 객체가 생성되는 방식이나 과정 및 책임을 클라이언트가 모르도록 은닉하고 클래스들의 인터페이스만을 사용하게 하여 객체가 생성되는 방식이나 과정이 변경되더라도 그 부분이 국지화될 수 있다.
-  - 제품군 간 교체가 쉽다
-  - 생성되는 제품 객체가 항상 같은 제품군에 속하는 것을 확실히 보장.
+    - 클라이언트가 객체의 생성이나 구성에 독립적이도록 만들 수 있다.
+    - 사용할 제품군을 쉽게 선택할 수 있다.
+    - 제품들에 대한 클래스 라이브러리를 만들어야 하는데 그 인터페이스만 드러내고 구현은 숨기고 싶을 때 유용하다.
+    - 객체가 생성되는 방식이나 과정 및 책임을 클라이언트가 모르도록 은닉하고 클래스들의 인터페이스만을 사용하게 하여 객체가 생성되는 방식이나 과정이 변경되더라도 그 부분이 국지화될 수 있다.
+    - 제품군 간 교체가 쉽다
+    - 생성되는 제품 객체가 항상 같은 제품군에 속하는 것을 확실히 보장.
+
 - **단점**
   - 제품군의 개수가 늘어날수록 CreateFactory 클래스의 개수도 늘어나므로 설계가 복잡해지게 된다.
-    - IOS, AOS, OSX, UNIX 추가 지원 가능성
-    - HP, SUN, IBM, AIX, 지원 가능성
-    - x86, x64 빌드를 모두 지원해야 한다면?
-    - ARM Core Processor를 지원해야 한다면?
   - 제품군 내에 새로운 제품이 추가되어야 할 경우 모든 Factory 클래스를 수정해야 한다.
-
-![Figure\_3-4.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/600a609bb16823191e1f65ab/82966d8e82d827f38744de1cd7fae76e/Figure_3-4.png)
-
-![Figure\_3-3.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/600a609bb16823191e1f65ab/f0a68ceccca31feaee5c5ceef177e27e/Figure_3-3.png)
 
 　
 
-_**"여기서 또 한 번 강조하자면, Abstract Factory 패턴은 최선의 해결책이 아니라, 최적의 해결책이라는 사실이다. 따라서 여러분은 문제의 목적이나 상황이 변경되면 그에 맞추어 Abstract Factory 패턴의 설계를 변경, 적용할 수 있는 능력을 키워야 할 것이다."**_
+　
+
+***"여기서 또 한 번 강조하자면, Abstract Factory 패턴은 최선의 해결책이 아니라, 최적의 해결책이라는 사실이다.***
+***"따라서 여러분은 문제의 목적이나 상황이 변경되면 그에 맞추어 Abstract Factory 패턴의 설계를 변경, 적용할 수 있는 능력을 키워야 할 것이다."***

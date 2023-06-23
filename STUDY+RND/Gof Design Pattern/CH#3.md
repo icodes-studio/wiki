@@ -294,9 +294,10 @@
 
 　
 
-## 2차 클래스 설계
+## 2차 클래스 설계 - Abstract Factory
 
 - CompilerFactory 클래스를 WindowsCompilerFactory 클래스와 LinuxCompilerFactory 클래스로 구분하여 CompilerFactory 클래스의 하위 클래스로 두고 외부 Client에서는 CompilerFactory 클래스의 자료형과 인터페이스를 사용하게 만든다면, 컴파일러 모듈 내부에 시스템 환경에 따른 비교 문장을 둘 필요가 없어진다. 물론 클라이언트에서는 한 번의 조건 비교로 주어진 환경에 해당하는 팩토리 클래스를 선택하고 각 컴파일러 모듈의 객체를 생성하는데 사용할 수 있다.
+- 이러한 구조를 Abstract Factory 패턴이라고 한다.
     > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Gof%20Design%20Pattern/Assets/abstractfactory.png)
 
     ```
@@ -422,29 +423,38 @@
 
 　
 
-- **구현 관련 추가 사항**
-  - Factory 객체를 하나만 생성, 유지하는 방법.
+　
+
+## 구현 관련 추가 사항 및 정리
+
+- Factory 객체를 하나만 생성, 유지하는 방법.
     - Singleton 패턴 : CHAPTER 7
-  - 복제를 통해 제품 객체를 생성하는 방법
+
+- 복제를 통해 제품 객체를 생성하는 방법
     - Prototype 패턴 : CHAPTER 6
+    
 - **새로운 종류의 제품이 추가되었을 때의 문제**
-  - Factory 클래스에 의해 생성되는 제품의 종류에 ErrorHandler가 새로 추가되어야 하는 상황이 발생한다면?
-  - 새로운 종류의 제품에 해당하는 클래스 추가
-    - ErrorHandler, WindowsErrorHandler, LinuxErrorHandler
-  - 3개 Factory 클래스들도 각각 수정 - 메소드 추가
-    - CreateErrorHandler()
-  - 결국 아래와 같은 모습이 되시겠다. -_-;
-  - 이런 문제를 해결할 수 있는 방법은 없을까?
-    - 왜 Factory 클래스가 수정되어야 하는가?
-    - 생성할 제품의 종류에 따라 다른 메소드를 가지기 때문.
-    - 그러면 메소드를 하나로 통일하면 되겠네.
-    - CreateProduct(int type) 뭐 이런 걸로...
-    - 바보야! 인자 값에 따라 메소드 내부에서는 조건 비교를 하게 되잖아. 결국 새로운 제품이 추가되면 CreateProduct 메소드 내부를 수정해야 하는 건 바뀌지 않아!
-    - CreateProduct의 인자로 조건 비교를 하지 않고도 제품 객체를 생성할 수 있는 무언가를 넘겨주면 되지 않을까?
-    - 그게 뭔데?
-    - CHAPTER 6. Prototype 패턴을 설명할 때 다시 다뤄보자.
-    - 대가리 싸매고 고민을 해 보는 게 더 중요하다.
-- **Abstract Factory 패턴 정리**
+    - Factory 클래스에 의해 생성되는 제품의 종류에 ErrorHandler가 새로 추가되어야 하는 상황이 발생한다면?
+    - 새로운 종류의 제품에 해당하는 클래스 추가
+        > - ErrorHandler
+        > - WindowsErrorHandler
+        > - LinuxErrorHandler
+    - 3개 Factory 클래스들도 각각 수정 - 메소드 추가
+        > - CreateErrorHandler()
+    - 결국 아래와 같은 모습이 되시겠다. -_-;
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Gof%20Design%20Pattern/Assets/abstractfactory-errorhandler.png)
+    - 이런 문제를 해결할 수 있는 방법은 없을까?
+        > - 왜 Factory 클래스가 수정되어야 하는가?
+        > - 생성할 제품의 종류에 따라 다른 메소드를 가지기 때문.
+        > - 그러면 메소드를 하나로 통일하면 되겠네.
+        > - CreateProduct(int type) 뭐 이런 걸로...
+        > - 바보야! 인자 값에 따라 메소드 내부에서는 조건 비교를 하게 되잖아. 결국 새로운 제품이 추가되면 CreateProduct 메소드 내부를 수정해야 하는 건 바뀌지 않아!
+        > - CreateProduct의 인자로 조건 비교를 하지 않고도 제품 객체를 생성할 수 있는 무언가를 넘겨주면 되지 않을까?
+        > - 그게 뭔데?
+        > - CHAPTER 6. Prototype 패턴을 설명할 때 다시 다뤄보자.
+        > - 대가리 싸매고 고민을 해 보는 게 더 중요하다.
+
+ - **Abstract Factory 패턴 정리**
   - Abstract Factory 패턴의 일반적인 구조
   - Client가 참조하는 자료형은 상위의 추상 클래스들이다.
     - AbstractFactory

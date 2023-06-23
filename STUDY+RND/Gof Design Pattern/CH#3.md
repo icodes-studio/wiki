@@ -296,126 +296,124 @@
 
 ## 2차 클래스 설계
     - CompilerFactory 클래스를 WindowsCompilerFactory 클래스와 LinuxCompilerFactory 클래스로 구분하여 CompilerFactory 클래스의 하위 클래스로 두고 외부 Client에서는 CompilerFactory 클래스의 자료형과 인터페이스를 사용하게 만든다면, 컴파일러 모듈 내부에 시스템 환경에 따른 비교 문장을 둘 필요가 없어진다. 물론 클라이언트에서는 한 번의 조건 비교로 주어진 환경에 해당하는 팩토리 클래스를 선택하고 각 컴파일러 모듈의 객체를 생성하는데 사용할 수 있다.
-    
-    > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Gof%20Design%20Pattern/Assets/abstractfactory.png)
-    
-    ```
-    using System;
-    using System.Runtime.InteropServices;
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Gof%20Design%20Pattern/Assets/abstractfactory.png)
+        ```
+        using System;
+        using System.Runtime.InteropServices;
 
-    namespace Example.Compiler.N2
-    {
-        abstract class Scanner
+        namespace Example.Compiler.N2
         {
-            public abstract void Run();
-        };
-
-        abstract class Parser
-        {
-            public abstract void Run();
-        };
-
-        abstract class CodeGenerator
-        {
-            public abstract void Run();
-        };
-
-        abstract class Optimizer
-        {
-            public abstract void Run();
-        };
-
-        class WindowsScanner : Scanner
-        {
-            public override void Run() => Console.WriteLine(ToString());
-        };
-
-        class WindowsParser : Parser
-        {
-            public override void Run() => Console.WriteLine(ToString());
-        };
-
-        class WindowsCodeGenerator : CodeGenerator
-        {
-            public override void Run() => Console.WriteLine(ToString());
-        };
-
-        class WindowsOptimizer : Optimizer
-        {
-            public override void Run() => Console.WriteLine(ToString());
-        };
-
-        class LinuxScanner : Scanner
-        {
-            public override void Run() => Console.WriteLine(ToString());
-        };
-
-        class LinuxParser : Parser
-        {
-            public override void Run() => Console.WriteLine(ToString());
-        };
-
-        class LinuxCodeGenerator : CodeGenerator
-        {
-            public override void Run() => Console.WriteLine(ToString());
-        };
-
-        class LinuxOptimizer : Optimizer
-        {
-            public override void Run() => Console.WriteLine(ToString());
-        };
-
-        abstract class CompilerFactory
-        {
-            public abstract Scanner CreateScanner();
-            public abstract Parser CreateParser();
-            public abstract CodeGenerator CreateCodeGenerator();
-            public abstract Optimizer CreateOptimizer();
-        }
-
-        class WindowsCompilerFactory : CompilerFactory
-        {
-            public override Scanner CreateScanner() => new WindowsScanner();
-            public override Parser CreateParser() => new WindowsParser();
-            public override CodeGenerator CreateCodeGenerator() => new WindowsCodeGenerator();
-            public override Optimizer CreateOptimizer() => new WindowsOptimizer();
-        }
-
-        class LinuxCompilerFactory : CompilerFactory
-        {
-            public override Scanner CreateScanner() => new LinuxScanner();
-            public override Parser CreateParser() => new LinuxParser();
-            public override CodeGenerator CreateCodeGenerator() => new LinuxCodeGenerator();
-            public override Optimizer CreateOptimizer() => new LinuxOptimizer();
-        }
-
-        class Program
-        {
-            static void Main(string[] args)
+            abstract class Scanner
             {
-                CompilerFactory factory;
-                if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-                {
-                    factory = new WindowsCompilerFactory();
-                }
-                else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
-                {
-                    factory = new LinuxCompilerFactory();
-                }
-                else
-                {
-                    Console.WriteLine(RuntimeInformation.OSDescription + " does not supported");
-                    return;
-                }
+                public abstract void Run();
+            };
 
-                factory.CreateScanner().Run();
-                factory.CreateParser().Run();
-                factory.CreateCodeGenerator().Run();
-                factory.CreateOptimizer().Run();
+            abstract class Parser
+            {
+                public abstract void Run();
+            };
+
+            abstract class CodeGenerator
+            {
+                public abstract void Run();
+            };
+
+            abstract class Optimizer
+            {
+                public abstract void Run();
+            };
+
+            class WindowsScanner : Scanner
+            {
+                public override void Run() => Console.WriteLine(ToString());
+            };
+
+            class WindowsParser : Parser
+            {
+                public override void Run() => Console.WriteLine(ToString());
+            };
+
+            class WindowsCodeGenerator : CodeGenerator
+            {
+                public override void Run() => Console.WriteLine(ToString());
+            };
+
+            class WindowsOptimizer : Optimizer
+            {
+                public override void Run() => Console.WriteLine(ToString());
+            };
+
+            class LinuxScanner : Scanner
+            {
+                public override void Run() => Console.WriteLine(ToString());
+            };
+
+            class LinuxParser : Parser
+            {
+                public override void Run() => Console.WriteLine(ToString());
+            };
+
+            class LinuxCodeGenerator : CodeGenerator
+            {
+                public override void Run() => Console.WriteLine(ToString());
+            };
+
+            class LinuxOptimizer : Optimizer
+            {
+                public override void Run() => Console.WriteLine(ToString());
+            };
+
+            abstract class CompilerFactory
+            {
+                public abstract Scanner CreateScanner();
+                public abstract Parser CreateParser();
+                public abstract CodeGenerator CreateCodeGenerator();
+                public abstract Optimizer CreateOptimizer();
+            }
+
+            class WindowsCompilerFactory : CompilerFactory
+            {
+                public override Scanner CreateScanner() => new WindowsScanner();
+                public override Parser CreateParser() => new WindowsParser();
+                public override CodeGenerator CreateCodeGenerator() => new WindowsCodeGenerator();
+                public override Optimizer CreateOptimizer() => new WindowsOptimizer();
+            }
+
+            class LinuxCompilerFactory : CompilerFactory
+            {
+                public override Scanner CreateScanner() => new LinuxScanner();
+                public override Parser CreateParser() => new LinuxParser();
+                public override CodeGenerator CreateCodeGenerator() => new LinuxCodeGenerator();
+                public override Optimizer CreateOptimizer() => new LinuxOptimizer();
+            }
+
+            class Program
+            {
+                static void Main(string[] args)
+                {
+                    CompilerFactory factory;
+                    if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+                    {
+                        factory = new WindowsCompilerFactory();
+                    }
+                    else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+                    {
+                        factory = new LinuxCompilerFactory();
+                    }
+                    else
+                    {
+                        Console.WriteLine(RuntimeInformation.OSDescription + " does not supported");
+                        return;
+                    }
+
+                    factory.CreateScanner().Run();
+                    factory.CreateParser().Run();
+                    factory.CreateCodeGenerator().Run();
+                    factory.CreateOptimizer().Run();
+                }
             }
         }
-    }
-    ```
+        ```
         > - 클라이언트에 해당하는 Main() 함수에서 어떤 제품군을 생성할 것인지를 결정하기 위해 조건 비교 문장을 사용한다.
         > - 그러나 일단 어떤 제품군을 생성할 지만 결정되면 더 이상의 조건 비교 문장은 사용할 필요가 없다.
         > - OOP 다형성(Polymorphism)을 활용하는 모범적 사례

@@ -256,10 +256,10 @@
 
 - **좀 더 나은 방법: 객체 생성 전담 클래스 활용 방식**
     - 문제의 원인은 변경될 가능성이 많은 프로그램 부분이 전체 프로그램의 곳곳에 퍼져 있다는 것.
-    - **그래서 뭘 할 거야?** \> 객체 생성만 한곳으로 모으자!
-    - **왜?** \> 다양한 환경을 지원해야 하기 때문에 유지보수 이슈가 많아질 거야. 그런데 변경에 소요되는 비용이 커지면 곤란해!
-    - **어떻게 할 거야?** \> 변경 가능성이 많은 정보를 클래스 내부로 숨기자.
-    - **왜?** \> 클래스를 활용하여 이렇게 정보은닉(Information Hiding) 하면 변경 대상폭을 줄여줄 수 있어. 나중에 프로그램에 대한 변경 요청이 있더라도 그 범위를 최소화할 수 있는 장점을 가지게 돼.
+    - **그래서 뭘 할 거야?** - 객체 생성만 한곳으로 모으자!
+    - **왜?** - 다양한 환경을 지원해야 하기 때문에 유지보수 이슈가 많아질 거야. 그런데 변경에 소요되는 비용이 커지면 곤란해!
+    - **어떻게 할 거야?** - 변경 가능성이 많은 정보를 클래스 내부로 숨기자.
+    - **왜?** - 클래스를 활용하여 이렇게 정보은닉(Information Hiding) 하면 변경 대상폭을 줄여줄 수 있어. 나중에 프로그램에 대한 변경 요청이 있더라도 그 범위를 최소화할 수 있는 장점을 가지게 돼.
 
 　
 
@@ -276,156 +276,149 @@
 
 - **문제점**
     - 여전히 컴파일러 모듈 소스코드 내에 여러 비교 문장이 존재
-    - 새로운 조건을 추가해야 하는 경우
-    - 여전히 이전 코드를 면밀히 분석해서 수정해야 함.
+    - 새로운 조건을 추가해야 하는 경우 여전히 이전 코드를 면밀히 분석해서 수정해야 함.
     - 이전 소스코드와는 무관하게 독립적으로 추가할 수 없다.
-    - 모듈이 바이너리로만 존재한다면 문제는 더 심각해진다.
+    - ***모듈이 바이너리로만 존재한다면 문제는 더 심각해진다.***
 
 - **패턴 활용 방법: Abstract Factory 패턴**
-    - WHAT? - 새로운 것을 추가, 확장시키기 위한 방법을 찾아야 해.
-    - WHY? - 이 제품의 주 목적은 유연한 멀티플랫폼 지원 컴파일러야 그런데 좀 전에 말했던 문제점이 있어.
-    - HOW? - 기반 팩토리 클래스에서는 인터페이스만을 제공하고, 이를 상속받아서 각 환경별로 팩토리 클래스를 구현할 거야.
-    - WHY? - 기반 팩토리 클래스를 클라이언트가 참조하게 하고 상속받은 클래스가 객체를 생성하고 반환하면 OOP 다형성을 이용해서 컴파일러 모듈 소스코드를 손대지 않고도 기능을 쉽게 확장할 수 있어.
-    - WHAT? - 생성 인터페이스들만 제공하는 기본 팩토리 클래스를 만들고 이를 상속받아서 각 환경별로 실제 컴파일러 모듈을 생성하고 반환하는 팩토리 클래스를 만들 거야. 그리고 생성 인터페이스 메소드는 오버라이딩 해서 환경에 맞는 컴파일러 구성요소를 생성하고 반환하게 할 거야.
-    - WHY? - 이 컴파일러 모듈은 보안상 소스를 제공하지 않는 게 기본 정책이야. 소스를 제공한다고 해도 쓰는 사람이 모듈 소스코드까지 분석하면서 기능 확장을 할 시간이 없어. 그리고 어쩔 수 없이 새로운 환경을 대응해야 한다고 치자. 컴파일러 모듈에 손을 대면 클라이언트 입장에서 모듈 업데이트 이슈에 대해 버전 관리가 너무 힘들어져.
-    - HOW? - 운영체제 환경은 클라이언트에서 한 번만 조건 비교해서 적합한 환경별 팩토리 클래스를 선택하게 하고 필요에 따라 선택된 팩토리 클래스를 사용해서 컴파일러 구성요소 객체를 생성하고 사용하게 할 거야. 그리고 각 환경 별 팩토리 클래스는 컴파일러 구성요소의 상위 클래스 타입을 반환하게 할 거야.
-    - WHY? - ...
+    - **WHAT?** - 새로운 구성요소를 추가, 확장시키기 위한 좋은 방법을 찾아야 해.
+    - **WHY?** - 이 제품의 주 목적은 유연한 멀티플랫폼 지원 컴파일러야 그런데 좀 전에 말했던 문제점이 있어.
+    - **HOW?** - 기반 팩토리 클래스에서는 인터페이스만을 제공하고, 이를 상속받아서 각 환경별로 팩토리 클래스를 구현할 거야.
+    - **WHY?** - 기반 팩토리 클래스를 클라이언트가 참조하게 하고 상속받은 클래스가 객체를 생성하고 반환하면 OOP 다형성을 이용해서 컴파일러 모듈 소스코드를 손대지 않고도 기능을 쉽게 확장할 수 있어.
+    - **WHAT?** - 생성 인터페이스들만 제공하는 기본 팩토리 클래스를 만들고 이를 상속받아서 각 환경별로 실제 컴파일러 모듈을 생성하고 반환하는 팩토리 클래스를 만들 거야. 그리고 생성 인터페이스 메소드는 오버라이딩 해서 환경에 맞는 컴파일러 구성요소를 생성하고 반환하게 할 거야.
+    - **WHY?** - 이 컴파일러 모듈은 보안상 소스를 제공하지 않는 게 기본 정책이야. 소스를 제공한다고 해도 쓰는 사람이 모듈 소스코드까지 분석하면서 기능 확장을 할 시간이 없어. 그리고 어쩔 수 없이 새로운 환경을 대응해야 한다고 치자. 컴파일러 모듈에 손을 대면 클라이언트 입장에서 모듈 업데이트 이슈에 대해 버전 관리가 너무 힘들어져.
+    - **HOW?** - 운영체제 환경은 클라이언트에서 한 번만 조건 비교해서 적합한 환경별 팩토리 클래스를 선택하게 하고 필요에 따라 선택된 팩토리 클래스를 사용해서 컴파일러 구성요소 객체를 생성하고 사용하게 할 거야. 그리고 각 환경 별 팩토리 클래스는 컴파일러 구성요소의 상위 클래스 타입을 반환하게 할 거야.
+    - **WHY?** - ...
 
 　
 
 　
 
 ## 2차 클래스 설계
-  - CompilerFactory 클래스를 WindowsCompilerFactory 클래스와 LinuxCompilerFactory 클래스로 구분하여 CompilerFactory 클래스의 하위 클래스로 두고 외부 Client에서는 CompilerFactory 클래스의 자료형과 인터페이스를 사용하게 만든다면, 컴파일러 모듈 내부에 시스템 환경에 따른 비교 문장을 둘 필요가 없어진다. 물론 클라이언트에서는 한 번의 조건 비교로 주어진 환경에 해당하는 팩토리 클래스를 선택하고 각 컴파일러 모듈의 객체를 생성하는데 사용할 수 있다.
-- **닥치고 샘플 코드**
-  ```
-  using System;
-  using System.Runtime.InteropServices;
-   
-  namespace Example.Compiler.N2
-  {
-    abstract class Scanner
-    {
-      public abstract void Run();
-    };
-   
-    abstract class Parser
-    {
-      public abstract void Run();
-    };
-   
-    abstract class CodeGenerator
-    {
-      public abstract void Run();
-    };
-   
-    abstract class Optimizer
-    {
-      public abstract void Run();
-    };
-   
-    class WindowsScanner : Scanner
-    {
-      public override void Run() => Console.WriteLine(ToString());
-    };
-   
-    class WindowsParser : Parser
-    {
-      public override void Run() => Console.WriteLine(ToString());
-    };
-   
-    class WindowsCodeGenerator : CodeGenerator
-    {
-      public override void Run() => Console.WriteLine(ToString());
-    };
-   
-    class WindowsOptimizer : Optimizer
-    {
-      public override void Run() => Console.WriteLine(ToString());
-    };
-   
-    class LinuxScanner : Scanner
-    {
-      public override void Run() => Console.WriteLine(ToString());
-    };
-   
-    class LinuxParser : Parser
-    {
-      public override void Run() => Console.WriteLine(ToString());
-    };
-   
-    class LinuxCodeGenerator : CodeGenerator
-    {
-      public override void Run() => Console.WriteLine(ToString());
-    };
-   
-    class LinuxOptimizer : Optimizer
-    {
-      public override void Run() => Console.WriteLine(ToString());
-    };
-   
-    abstract class CompilerFactory
-    {
-      public abstract Scanner CreateScanner();
-      public abstract Parser CreateParser();
-      public abstract CodeGenerator CreateCodeGenerator();
-      public abstract Optimizer CreateOptimizer();
-    }
-   
-    class WindowsCompilerFactory : CompilerFactory
-    {
-      public override Scanner CreateScanner() => new WindowsScanner();
-      public override Parser CreateParser() => new WindowsParser();
-      public override CodeGenerator CreateCodeGenerator() => new WindowsCodeGenerator();
-      public override Optimizer CreateOptimizer() => new WindowsOptimizer();
-    }
-   
-    class LinuxCompilerFactory : CompilerFactory
-    {
-      public override Scanner CreateScanner() => new LinuxScanner();
-      public override Parser CreateParser() => new LinuxParser();
-      public override CodeGenerator CreateCodeGenerator() => new LinuxCodeGenerator();
-      public override Optimizer CreateOptimizer() => new LinuxOptimizer();
-    }
-   
-   
-    class Program
-    {
-      static void Main(string[] args)
-      {
-        CompilerFactory factory;
-        if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-        {
-          factory = new WindowsCompilerFactory();
-        }
-        else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
-        {
-          factory = new LinuxCompilerFactory();
-        }
-        else
-        {
-          Console.WriteLine(RuntimeInformation.OSDescription + " does not supported");
-          return;
-        }
-   
-        factory.CreateScanner().Run();
-        factory.CreateParser().Run();
-        factory.CreateCodeGenerator().Run();
-        factory.CreateOptimizer().Run();
-      }
-    }
-  }
-  ```
+    - CompilerFactory 클래스를 WindowsCompilerFactory 클래스와 LinuxCompilerFactory 클래스로 구분하여 CompilerFactory 클래스의 하위 클래스로 두고 외부 Client에서는 CompilerFactory 클래스의 자료형과 인터페이스를 사용하게 만든다면, 컴파일러 모듈 내부에 시스템 환경에 따른 비교 문장을 둘 필요가 없어진다. 물론 클라이언트에서는 한 번의 조건 비교로 주어진 환경에 해당하는 팩토리 클래스를 선택하고 각 컴파일러 모듈의 객체를 생성하는데 사용할 수 있다.
+    > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Gof%20Design%20Pattern/Assets/abstractfactory.png)
+    ```
+    using System;
+    using System.Runtime.InteropServices;
 
-![Figure\_3-2.png](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/600a609bb16823191e1f65ab/1d5bb064614a3570fd51666977eadb2d/Figure_3-2.png)
+    namespace Example.Compiler.N2
+    {
+        abstract class Scanner
+        {
+            public abstract void Run();
+        };
 
-![111111](https://trello-attachments.s3.amazonaws.com/6015292251f26c2a3ebf6054/600a609bb16823191e1f65ab/cda9bc35bc6f841b8907bb0005715142/Figure_3-1.png)
+        abstract class Parser
+        {
+            public abstract void Run();
+        };
 
-```
-‌
-```
+        abstract class CodeGenerator
+        {
+            public abstract void Run();
+        };
 
-> 클라이언트에 해당하는 Main() 함수에서 어떤 제품군을 생성할 것인지를 결정하기 위해 조건 비교 문장을 사용한다. 그러나 일단 어떤 제품군을 생성할 지만 결정되면 더 이상의 조건 비교 문장은 사용할 필요가 없다.OOP 다형성(Polymorphism)을 활용하는 모범적 사례
+        abstract class Optimizer
+        {
+            public abstract void Run();
+        };
+
+        class WindowsScanner : Scanner
+        {
+            public override void Run() => Console.WriteLine(ToString());
+        };
+
+        class WindowsParser : Parser
+        {
+            public override void Run() => Console.WriteLine(ToString());
+        };
+
+        class WindowsCodeGenerator : CodeGenerator
+        {
+            public override void Run() => Console.WriteLine(ToString());
+        };
+
+        class WindowsOptimizer : Optimizer
+        {
+            public override void Run() => Console.WriteLine(ToString());
+        };
+
+        class LinuxScanner : Scanner
+        {
+            public override void Run() => Console.WriteLine(ToString());
+        };
+
+        class LinuxParser : Parser
+        {
+            public override void Run() => Console.WriteLine(ToString());
+        };
+
+        class LinuxCodeGenerator : CodeGenerator
+        {
+            public override void Run() => Console.WriteLine(ToString());
+        };
+
+        class LinuxOptimizer : Optimizer
+        {
+            public override void Run() => Console.WriteLine(ToString());
+        };
+
+        abstract class CompilerFactory
+        {
+            public abstract Scanner CreateScanner();
+            public abstract Parser CreateParser();
+            public abstract CodeGenerator CreateCodeGenerator();
+            public abstract Optimizer CreateOptimizer();
+        }
+
+        class WindowsCompilerFactory : CompilerFactory
+        {
+            public override Scanner CreateScanner() => new WindowsScanner();
+            public override Parser CreateParser() => new WindowsParser();
+            public override CodeGenerator CreateCodeGenerator() => new WindowsCodeGenerator();
+            public override Optimizer CreateOptimizer() => new WindowsOptimizer();
+        }
+
+        class LinuxCompilerFactory : CompilerFactory
+        {
+            public override Scanner CreateScanner() => new LinuxScanner();
+            public override Parser CreateParser() => new LinuxParser();
+            public override CodeGenerator CreateCodeGenerator() => new LinuxCodeGenerator();
+            public override Optimizer CreateOptimizer() => new LinuxOptimizer();
+        }
+
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                CompilerFactory factory;
+                if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+                {
+                    factory = new WindowsCompilerFactory();
+                }
+                else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+                {
+                    factory = new LinuxCompilerFactory();
+                }
+                else
+                {
+                    Console.WriteLine(RuntimeInformation.OSDescription + " does not supported");
+                    return;
+                }
+
+                factory.CreateScanner().Run();
+                factory.CreateParser().Run();
+                factory.CreateCodeGenerator().Run();
+                factory.CreateOptimizer().Run();
+            }
+        }
+    }
+    ```
+        > - 클라이언트에 해당하는 Main() 함수에서 어떤 제품군을 생성할 것인지를 결정하기 위해 조건 비교 문장을 사용한다.
+        > - 그러나 일단 어떤 제품군을 생성할 지만 결정되면 더 이상의 조건 비교 문장은 사용할 필요가 없다.
+        > - OOP 다형성(Polymorphism)을 활용하는 모범적 사례
+
+　
 
 - **구현 관련 추가 사항**
   - Factory 객체를 하나만 생성, 유지하는 방법.

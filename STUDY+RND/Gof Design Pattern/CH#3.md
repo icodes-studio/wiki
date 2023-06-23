@@ -297,7 +297,7 @@
 ## 2차 클래스 설계 - Abstract Factory
 
 - CompilerFactory 클래스를 WindowsCompilerFactory 클래스와 LinuxCompilerFactory 클래스로 구분하여 CompilerFactory 클래스의 하위 클래스로 두고 외부 Client에서는 CompilerFactory 클래스의 자료형과 인터페이스를 사용하게 만든다면, 컴파일러 모듈 내부에 시스템 환경에 따른 비교 문장을 둘 필요가 없어진다. 물론 클라이언트에서는 한 번의 조건 비교로 주어진 환경에 해당하는 팩토리 클래스를 선택하고 각 컴파일러 모듈의 객체를 생성하는데 사용할 수 있다.
-- 이러한 구조를 Abstract Factory 패턴이라고 한다.
+- 이러한 구조를 ***Abstract Factory*** 패턴이라고 한다.
     > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Gof%20Design%20Pattern/Assets/abstractfactory.png)
 
     ```
@@ -478,7 +478,7 @@
     - 생성되는 제품 객체가 항상 같은 제품군에 속하는 것을 확실히 보장.
 
 - **단점**
-  - 제품군의 개수가 늘어날수록 CreateFactory 클래스의 개수도 늘어나므로 설계가 복잡해지게 된다.
+  - 제품군의 개수가 늘어날수록 Concrete Factory 클래스의 개수도 늘어나므로 설계가 복잡해지게 된다.
   - 제품군 내에 새로운 제품이 추가되어야 할 경우 모든 Factory 클래스를 수정해야 한다.
 
 　

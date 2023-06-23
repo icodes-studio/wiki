@@ -58,13 +58,11 @@
     - 그 수정 범위가 한정되도록 만들어주는 것을 변경의 국지화라고 함.
     - 이를 통해 소프트웨어는 수정이나 관리 및 재사용이 쉬워진다.
     - 아래 그림은 변경의 국지화가 깨뜨려진 예
-        > - 새로운 상품이 추가되었을 때 변경해야 할 부분(짙은 색)이 산개해 있다
-        >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Gof%20Design%20Pattern/Assets/bad.png)
+        > - 새로운 상품이 추가되었을 때 변경해야 할 부분(짙은 색)이 산개해 있다
     - 아래 그림은 변경의 국지화가 잘 된 예
-        > - MoneyMktAccount 클래스만 추가하면 된다.
-        >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Gof%20Design%20Pattern/Assets/good.png)
+        > - MoneyMktAccount 클래스만 추가하면 된다.
 
 - **방법론(Methodology, Method) 및 지침(Guideline)**
     - 소프트웨어의 생성부터 소멸까지 전 과정에서 수행해야 하는 일처리 방법이나 절차 등을 정리해놓은 것 - 문서화

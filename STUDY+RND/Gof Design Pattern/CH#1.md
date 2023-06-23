@@ -40,7 +40,7 @@
 
 - 일반적인 소프트웨어 개발 과정
 
-    ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Design%20Pattern%20(Gof%20C%2B%2B)/Assets/waterfall.png)
+    ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Gof%20Design%20Pattern/Assets/waterfall.png)
 
 - **요구사항 명세 단계**
     - 소프트웨어 개발의 목적을 명확히 이해하고 공유.
@@ -111,7 +111,7 @@
     - 이러한 What-How 생각모델은 해결책은 만들 수 있지만, 최적의 해결책을 만들어 내기는 힘들다고 저자는 생각함.
 
 - ***"WHAT-WHY-HOW 생각 모델"*** 제시.
-    - ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Design%20Pattern%20(Gof%20C%2B%2B)/Assets/what-why-how.png)
+    - ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Gof%20Design%20Pattern/Assets/what-why-how.png)
         > - 무엇(What)을 해야 할 때, 왜(Why) 그것을 해야 하는가?
         > - 어떻게(How) 하려 할 때, 왜(Why) 그렇게 해야 하는가?
         > - ...를 계속 생각하며 검증하는 것.

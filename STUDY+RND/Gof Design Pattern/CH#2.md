@@ -46,7 +46,7 @@
     - 관계가 너무 복잡해지면 이해하기 힘들어지고 유지보수 및 재사용하기 어려워진다. 모듈 간 상호연관관계는 관리 가능한 형태로 구성하는 것이 바람직하다.
     - 그래서 계층화가 중요한 거야!!!
     - 계층화란 비슷한 목적의 모듈들을 같은 계층에 배치하고, 계층과 계층 간은 트리와 유사한 형태로 사용관계를 구성해 주는 것.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Design%20Pattern%20(Gof%20C%2B%2B)/Assets/module.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Gof%20Design%20Pattern/Assets/module.png)
     - 단순히 so 파일이나 dll 바이너리로 빼내는 걸 의미하는 게 아냐!
     - 탑다운 형태의 디펜던시에 주목하자.
 
@@ -57,9 +57,9 @@
     - 그 수정 범위가 한정되도록 만들어주는 것을 변경의 국지화라고 함.
     - 이를 통해 소프트웨어는 수정이나 관리 및 재사용이 쉬워진다.
     - 아래 그림은 변경의 국지화가 깨뜨려진 예
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Design%20Pattern%20(Gof%20C%2B%2B)/Assets/bad.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Gof%20Design%20Pattern/Assets/bad.png)
     - 아래 그림은 변경의 국지화가 잘 된 예
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Design%20Pattern%20(Gof%20C%2B%2B)/Assets/good.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Gof%20Design%20Pattern/Assets/good.png)
 
 - **방법론(Methodology, Method) 및 지침(Guideline)**
     - 소프트웨어의 생성부터 소멸까지 전 과정에서 수행해야 하는 일처리 방법이나 절차 등을 정리해놓은 것 - 문서화

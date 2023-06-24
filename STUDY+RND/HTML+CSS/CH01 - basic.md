@@ -36,12 +36,8 @@
 - 특수 기호 사용하기
     ```
     <body>
-        ★♣♥
-        &lt;
-        &lang;
-        &LeftAngleBracket;
-        &langle;
-        &#x027E8;
+        ★ ♣ ♥
+        &lt; &lang; &langle; &#x027E8;
     </body>
     ```
     - 엔티티 코드 표

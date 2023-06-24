@@ -29,3 +29,25 @@
     - \<body\> ~ \</body\>
         > - 실제 웹브라우저 화면에 나타날 내용.
         > - 앞으로 배울 HTML 태그들은 대부분 여기에 들어간다.
+
+
+　
+
+- 특수 기호 사용하기
+    ```
+    <body>
+        ★♣♥
+        &lt;
+        &lang;
+        &LeftAngleBracket;
+        &langle;
+        &#x027E8;
+    </body>
+    ```
+    - 엔티티 코드 표
+        > - https://dev.w3.org/html5/html-author/charref
+        > - https://html.spec.whatwg.org/multipage/named-characters.html
+    - 윈도우에서 특수 문자 입력하기
+        > - 한글 자음을 누른 후 '한자' 키를 누르면 특수 문자 표시
+        >
+        > ![]()

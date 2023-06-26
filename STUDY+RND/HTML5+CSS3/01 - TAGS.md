@@ -116,3 +116,15 @@
         ```
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-3.png)
 
+
+　
+
+- **텍스트 인용하기**
+    - \<q\> - 인용 내용 표시하기 (따옴표)
+        ```
+        <body>
+            <h1>웹 접근성</h1>
+            <p>웹의 창시자인 팀 버너스 리 (Tim Berners-Lee)의 <q cite="http://www.w3.org/standards/webdesign/accessibility">웹의 힘은 보편성에 있다. 장애에 구애없이 모든 사람이 접근할 수 있는 것이 필수적인 요소이다.</q>라는 말로 웹 접근성을 설명한다. </p>
+        </body>
+        ```
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-4.png)

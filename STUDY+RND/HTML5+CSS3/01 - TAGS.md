@@ -93,3 +93,26 @@
         </body>
         ```
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-2.png)
+
+
+　
+
+　
+
+## 텍스트를 한 줄로 표시하는 태그
+
+- **텍스트 강조하기**
+    - <strong> - 볼드체로 강조
+    - <b> - 볼드체
+    - <em> - 이탤릭체로 강조
+    - <bi> - 이택릭체
+        ```
+        <body>
+            <h2>제주 이색 여행지 - 이중섭 거리</h2>
+            <p><strong>주말</strong>마다 <b>'서귀포문화예술디자인시장'</b>이 열립니다.</p>
+            <p><em>'아트마켓'</em>이라고도 부르는데, <i>문화예술체험</i>이나 <i>공연관람</i>을 할 수도 있고 <br>
+            작가들이 직접 만든 창작예술품 등을 판매하기도 합니다.</p>
+        </body>
+        ```
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-3.png)
+

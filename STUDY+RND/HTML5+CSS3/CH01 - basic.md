@@ -46,4 +46,4 @@
     - 윈도우에서 특수 문자 입력하기
         > - 한글 자음을 누른 후 '한자' 키를 누르면 특수 문자 표시
         >
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML%2BCSS/Assets/ime.gif)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/ime.gif)

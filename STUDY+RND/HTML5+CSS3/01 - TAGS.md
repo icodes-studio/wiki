@@ -73,4 +73,23 @@
         </body>
         ```
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-1.png)
-    
+
+
+　
+
+- **소스 코드 표시하기**
+    - \<pre\> - 입력한 문자 그대로 브라우저 창에 표시하기
+        ```
+        <body>
+            <h3>로컬 스토리지(Local Storage)를 저장하는 함수 :  </h3>
+            <pre>
+            function savetheLocal(){
+                var second = document.getElementById("second");
+                var thevalue = second.value;
+                localStorage.setItem(1, thevalue);
+                gettheLocal();
+            }    
+            </pre>
+        </body>
+        ```
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-2.png)

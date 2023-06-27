@@ -250,6 +250,10 @@
 
 　
 
+　
+
+## # 표를 만드는 태그
+
 - **기본적인 표 만들기**
     - \<table\> - 표 전체 윤곽
     - \<tr\> - 행
@@ -304,7 +308,7 @@
 　
 
 - **표에 제목 붙이기**
-    - \<caption\> 태그 사용하기
+    - **\<caption\> 태그 사용하기**
         > - \<table\> 태그 바로 다음에 사용
         > - 표의 위쪽 중앙에 표시된다.
         ```
@@ -338,7 +342,7 @@
         </body>
         ```
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-12.png)
-    - \<figcaption\> 태그 사용하기
+    - **\<figcaption\> 태그 사용하기**
         > - 표를 \<figure\> 태그로 감싼 후 \<figcaption\> 태그를 이용해 제목을 입력한다.
         > - \<figcaption\> 태그가 위치한 곳에 표시된다.
         ```
@@ -373,3 +377,78 @@
         </body>
         ```
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-13.png)
+
+
+　
+
+- **표 구조화 하기**
+    - \<thead\> - 제목
+    - \<tbody\> - 본문
+    - \<tfoot\> - 요약
+    - 장점
+        > - 화면 낭독기를 통해 표의 구조를 쉽게 이해할 수 있다.
+        > - 표의 제목, 본문, 요약 부분에 각각 다른 스타일을 적용할 수 있다.
+        > - \<thread\>와 \<tfoot\>을 고정시키고 \<tbody\>만 스크롤되도록 만들 수 있다.
+    - 활용 예
+        ```
+        <table>
+            <caption>제주특별자치도 학교현황(2015.4.1 기준)</caption>
+            <thead>
+                <tr>
+                    <th>구분</th>
+                    <th>학교수</th>
+                    <th>학급수</th>
+                    <th>학생수</th>
+                    <th>교원수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>유치원</th>
+                    <td>117</td>
+                    <td>252</td>
+                    <td>5,547</td>
+                    <td>474</td>
+                </tr>
+                <tr>
+                    <th>초등학교</th>
+                    <td>111</td>
+                    <td>1,720</td>
+                    <td>37,686</td>
+                    <td>2,632</td>
+                </tr>
+                <tr>
+                    <th>중학교</th>
+                    <td>44</td>
+                    <td>699</td>
+                    <td>21,274</td>
+                    <td>1,412</td>
+                </tr>
+                <tr>
+                    <th>고등학교</th>
+                    <td>29</td>
+                    <td>676</td>
+                    <td>22,019</td>
+                    <td>1,433</td>
+                </tr>
+                <tr>
+                    <th>특수학교</th>
+                    <td>3</td>
+                    <td>90</td>
+                    <td>428</td>
+                    <td>160</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>합계</th>
+                    <td>300</td>
+                    <td>3,437</td>
+                    <td>86,954</td>
+                    <td>6,111</td>
+                </tr>
+            </tfoot>
+        </table>
+        ```
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-14.png)
+

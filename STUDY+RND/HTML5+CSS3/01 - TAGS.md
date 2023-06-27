@@ -230,19 +230,74 @@
     - \<dl\> : definition list
     - \<dt\> : definition term
     - \<dd\> : definition description
-    ```
-    <body>
-        <h1>제주 올레 </h1>
-        <dl>
-            <dt>올레 1코스</dt>
-            <dd>코스 : 시흥 초등학교 옆 - 광치기 해변</dd>
-            <dd>거리 : 14.6km(4~5시간)</dd>
-            <dd>난이도 : 중</dd>
-            <dt>올레 2코스</dt>
-            <dd>코스 : 광치기 해변 - 온평 포구</dd>
-            <dd>거리 : 14.5km(4~5시간)</dd>
-            <dd>난이도 : 중</dd>
-        </dl>
-    </body>
-    ```
-    > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-10.png)
+        ```
+        <body>
+            <h1>제주 올레 </h1>
+            <dl>
+                <dt>올레 1코스</dt>
+                <dd>코스 : 시흥 초등학교 옆 - 광치기 해변</dd>
+                <dd>거리 : 14.6km(4~5시간)</dd>
+                <dd>난이도 : 중</dd>
+                <dt>올레 2코스</dt>
+                <dd>코스 : 광치기 해변 - 온평 포구</dd>
+                <dd>거리 : 14.5km(4~5시간)</dd>
+                <dd>난이도 : 중</dd>
+            </dl>
+        </body>
+        ```
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-10.png)
+
+
+　
+
+- **기본적인 표 만들기**
+    - <table> - 표 전체 윤곽
+    - <tr> - 행
+    - <td> - 열
+        > - colspan: 컬럼 합치기
+        > - rowspan: 행 합치기
+    - <th> - 제목 셀
+        ```
+        <!DOCTYPE html>
+        <html lang="ko">
+        <head>
+            <meta charset="utf-8">
+            <title>표 만들기</title>
+            <style>
+                table, th, td {
+                    border:1px solid #ccc;
+                }		
+                th {
+                    padding:15px;   /* 셀 테두리와 내용 사이의 간격(패딩) */
+                }
+                tr > td:nth-child(odd) { 
+                    width:120px;  /* 홀수번째 열의 너비 : 120px */
+                }
+                tr > td:nth-child(even) { 
+                    width:300px;  /* 짝수번째 열의 너비 : 120px */
+                }
+            </style>
+        </head>
+        <body>
+            <table>
+                <tr>
+                    <th>이름</th>
+                    <td></td>
+                    <th>연락처</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>주소</th>
+                    <td colspan="3"></td>
+                </tr>		
+                <tr>
+                    <th>자기소개</th>
+                    <td colspan="3"></td>
+                </tr>
+            </table>
+        </body>
+        </html>
+        ```
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-11.png)
+
+

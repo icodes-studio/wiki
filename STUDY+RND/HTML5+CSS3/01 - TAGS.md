@@ -199,7 +199,7 @@
         |I|로마숫자 대문자|
         > - start 속성: 시작 순서 선택
         > - reversed 속성: 항목을 역순으로 표시
-    - <li> - list item
+    - \<li\> - list item
         ```
         <body>
             <h1>1박 2일 가족 여행 코스</h1>

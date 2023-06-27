@@ -177,3 +177,25 @@
     |\<sup\>|위 첨자|\<p\>E = mc\<sup\>2\</sup\>\</p\>|
     |\<s\>|취소선|\<p\>\<s\>34,000원\</s\>\<strong\>19,000원\</strong\>\</p\>|
     |\<u\>|밑줄|\<p\>단순히 밑줄을 긋는다면 \<u\>U 태그\</u\>\</p\>|
+
+
+　
+
+　
+
+　## # 목록을 만드는 태그
+
+- **순서 없는 목록 만들기**
+    - \<ul\> - unordered list
+    - \<li\> - list item
+        ```
+        <body>
+            <p>1330에는 해당 지역의 지도와 관광 가이드북...</p>
+            <ul>
+                <li>일반 전화 : (국번없이) 1330</li>
+                <li>휴대 전화 : 064-1330</li>
+            </ul>
+        </body>
+        ```
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-8.png)
+

@@ -172,5 +172,9 @@
  - 이 외에도 다음과 같은 다양한 태그가 있다.
     |태그|설명|예시|
     |:---|:---|:---|
-    |\<abbr\>|약자 표시.<br>title 속성을 함께 사용할 수 있음|\<p\>\<b\>\<abbr title="Internet of Things"\>IoT\</abbr\>\</b\>란 <br>각종 사물에 센서와 통신 기능을 내장해 인터넷에 연결하는 기술을 의미한다.\</p\><br>　<br>![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-7.png)...|
-    |\<cite\>|웹 문서나 포스트에서 참고 내용 표시|...|
+    |\<abbr\>|약자 표시.<br>title 속성을 함께 사용할 수 있음|\<p\>\<b\>\<abbr title="Internet of Things"\>IoT\</abbr\>\</b\>란 <br>각종 사물에 센서와 통신 기능을 내장해 인터넷에 연결하는 기술을 의미한다.\</p\><br>　<br>![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-7.png)|
+    |\<cite\>|웹 문서나 포스트에서 참고 내용 표시|\<p\>내가 경험한 가장 흥미진진한 일은 누군가를 만나는 일이다 <br>- 영화, \<cite\>'비포선셋'\</cite\> 중\</p\>|
+    |\<code\>|프로그래밍 언어를 나타낼 때 사용<br>\<pre\> 태그와 함께 사용한다.|\<pre\>\<code\> function save(){...}\</code\>\</pre\>|
+    |\<kbd\>|키보드 입력이나 음성 명령 같은<br>사용자 입력 내용|\<p\>웹 화면을 다시 불러오려면 \<kbd\>F5\</kbd\> 키를 누릅니다\</p\>|
+    |\<small\>|부가 정보처럼 작게 표시해도 <br>되는 텍스트|\<p\>가격: 13,000원 \<small\>(부가세 별도)\</small\>\</p\>|
+    |\<sub\>|아래 첨자|\<p\>물의 화학식은 \<b\>H\<sub\>2\</sub\>O\</b\>다\</p\>|

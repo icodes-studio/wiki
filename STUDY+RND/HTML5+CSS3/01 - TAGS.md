@@ -479,6 +479,7 @@
 - **열을 묶어 스타일 지정하기**
     - \<colgroup\>
     - \<col\>
+    - \<col\> 태그와 \<colgroup\> 태그는 \<caption\> 태그 뒤와 \<tr\>, \<td\> 태그 전에 사용해야 한다.
         ```
         <body>
             <table>
@@ -504,3 +505,24 @@
         </body>
         ```
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-15.png)
+
+
+　
+
+　
+
+# # 이미지
+
+- **\<image\> 태그 속성**
+    - src: 이미지 리소스 경로
+    - alt: 이미지를 설명해 주는 대체 텍스트
+    - width, height: 이미지 크기 조정
+        ```
+        <body>
+            <img src="images/gugudan.jpg" alt="바빠구구단">
+            <img src="images/gugudan.jpg" width="250" height="250" alt="바빠구구단">
+        </body>
+        ```
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-16.png)
+
+

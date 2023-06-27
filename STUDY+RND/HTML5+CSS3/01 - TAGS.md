@@ -227,9 +227,9 @@
 　
 
 - **설명 목록 만들기**
-    - <dl> : definition list
-    - <dt> : definition term
-    - <dd> : definition description
+    - \<dl\> : definition list
+    - \<dt\> : definition term
+    - \<dd\> : definition description
     ```
     <body>
         <h1>제주 올레 </h1>

@@ -618,3 +618,27 @@
         |ㅁㅁㅁ|ㅁㅁㅁ|ㅁㅁㅁ|ㅁㅁㅁ|
         |ㅁㅁㅁ|ㅁㅁㅁ|ㅁㅁㅁ|ㅁㅁㅁ|
         |ㅁㅁㅁ|ㅁㅁㅁ|||
+
+
+    |타입|유형|의미|Format 예제|출력|
+    |:---|:---|:---|:---|:---|
+    |숫자형|C|Currency|"{0:C}", -123|-\123|
+    |    |D|Decimal|"{0:D}", -123|-123|
+    |    |E|Exponential|"{0:E}", -123.45f|-1.234500E+002|
+    |    |F|Fixed-point|"{0:F}", -123.45f|-123.45|
+    |    |G|General|"{0:G}", -123|-123|
+    |    |N|Number|"{0:N}", -123|-123.00|
+    |    |P|Percent|"{0:P}", -123.45f|-12,345.00%|
+    |    |R|Round-trip|"{0:R}", -123.45f|-123.45|
+    |    |X|Hexadecimal|"{0:X}", -123|FFFFFF85|
+    |날짜형|var now = DateTime.Now||||
+    |    |d|Short date|"{0:d}", now|2023-05-15|
+    |    |D|Long date|"{0:D}", now|2023년 5월 15일 수요일|
+    |    |t|Short time|"{0:t}", now|오후 1:27|
+    |    |T|Long time|"{0:T}", now|오후 1:27:52|
+    |    |f|Full date/time (short time)|"{0:f}", now|2023년 5월 15일 월요일 오후 1:27|
+    |    |F|Full date/tme (long time)|"{0:F}", now|2023년 5월 15일 월요일 오후 1:27:52|
+    |    |g|General date/time (short time)|"{0:g}", now|2023-02-13 오후 1:27|
+    |    |G|General date/time (long time)|"{0:G}", now|2023-02-13 오후 1:27:52|
+    |    |M|Month/day|"{0:M}", now|2월 13일|
+    |    |Y|Year/month|"{0:Y}", now|2023년 2월|

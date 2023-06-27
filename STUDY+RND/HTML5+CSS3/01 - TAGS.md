@@ -69,7 +69,9 @@
             <p>제주에서 점차 다른 지방으로 보급됐지만 현재 제주에만 건축물이 남아있는데, <br>
             국내 근현대 건축사의 한 페이지를 보여주는 가치를 지닌다고 전문가들은 평가합니다.</p>
             <hr>
-            <blockquote>성이시돌목장은 제주특별자치도 제주시 한림읍 금악리에 있는 목장이다. 특히 이시돌목장은 제주 지역 최초의 전기업목장(全企業牧場)으로 1961년 11월 말 제주시 한림읍 금악리에 세워 양돈 사업을 실시하였으며 면양을 사육하였던 것으로 알려져 있다. 이시돌목장의 특색있는 건축양식으로 테쉬폰도 유명하다. (출처:향토문화전자대전)</blockquote>
+            <blockquote>성이시돌목장은 제주특별자치도 제주시 한림읍 금악리에 있는 목장이다. 특히 이시돌목장은 제주 지역 최초의 
+            전기업목장(全企業牧場)으로 1961년 11월 말 제주시 한림읍 금악리에 세워 양돈 사업을 실시하였으며 면양을 사육하였던 
+            것으로 알려져 있다. 이시돌목장의 특색있는 건축양식으로 테쉬폰도 유명하다. (출처:향토문화전자대전)</blockquote>
         </body>
         ```
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-1.png)
@@ -120,11 +122,29 @@
 　
 
 - **텍스트 인용하기**
-    - \<q\> - 인용 내용 표시하기 (따옴표)
+    - \<q\> - 인용 내용 표시하기 (인라인 따옴표)
         ```
         <body>
             <h1>웹 접근성</h1>
-            <p>웹의 창시자인 팀 버너스 리 (Tim Berners-Lee)의 <q cite="http://www.w3.org/standards/webdesign/accessibility">웹의 힘은 보편성에 있다. 장애에 구애없이 모든 사람이 접근할 수 있는 것이 필수적인 요소이다.</q>라는 말로 웹 접근성을 설명한다. </p>
+            <p>웹의 창시자인 팀 버너스 리 (Tim Berners-Lee)의 
+            <q cite="http://www.w3.org/standards/webdesign/accessibility">웹의 힘은 보편성에 있다. 
+            장애에 구애없이 모든 사람이 접근할 수 있는 것이 필수적인 요소이다.</q>라는 말로 웹 접근성을 설명한다.</p>
         </body>
         ```
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-4.png)
+
+
+　
+
+- **일부 텍스트에만 스타일 적용하기**
+    - \<mark\> - 형광펜 효과 내기
+    - \<span\> - 줄바꿈 없이 영역 묶기
+        ```
+        <body>
+            <h2>야외 텐트를 닮은 건축물 <mark>"테쉬폰"</mark></h2>
+            <p>아일랜드 출신 임피제 신부가 1954년 제주에 오면서 목장 숙소로 짓기 시작한 후 사료공장, 성당으로 활용됐습니다. 
+            제주에서 점차 다른 지방으로 보급됐지만 현재 제주에만 건축물이 남아있으며, 
+            <span style="color:blue;">국내 근현대 건축사의 한 페이지를 보여주는 가치를 지닌다</span>고 전문가들은 평가합니다.</p>
+        </body>
+        ```
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-5.png)

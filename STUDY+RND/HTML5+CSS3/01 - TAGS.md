@@ -606,20 +606,24 @@
     - ***\<map\>*** 태그를 이용해 이미지 맵을 만들고
     - ***\<img\>*** 태그에서 ***usemap*** 속성으로 이미지 맵을 지정한다.
     - 이미지 영역을 표시할 때는 ***\<area\>*** 태그를 사용하는데, 사용할 수 있는 속성은 다음과 같다.
-
-        |속성|설명|||
-        |:---|:---|:---|:---|
-        |ㅁㅁㅁ|ㅁㅁㅁ|||
-        |ㅁㅁㅁ|ㅁㅁㅁ|||
-        |ㅁㅁㅁ|ㅁㅁㅁ|||
-        |ㅁㅁㅁ|ㅁㅁㅁ|||
-        |ㅁㅁㅁ|ㅁㅁㅁ|||
-        |ㅁㅁㅁ|ㅁㅁㅁ|ㅁㅁㅁ|ㅁㅁㅁ|
-        |ㅁㅁㅁ|ㅁㅁㅁ|ㅁㅁㅁ|ㅁㅁㅁ|
-        |ㅁㅁㅁ|ㅁㅁㅁ|ㅁㅁㅁ|ㅁㅁㅁ|
-        |ㅁㅁㅁ|ㅁㅁㅁ|||
-
-
-| Column 1 | Column 2 | Column 3 | Column 4 |
-| -------- | :------: | -------- | -------- |
-| No span  | Span across three columns    |||
+        |속성|설명|
+        |:---|:---|
+        |alt|대체 텍스트를 지정한다.|
+        |coords|링크로 사용할 영역을 시작 좌표와 끝 좌표를 이용해 지정한다.|
+        |download|링크를 클릭했을 때 링크 문서를 다운로드한다.|
+        |href|링크 경로를 지정한다.|
+        |media|링크 문서를 어떤 미디어에 최적화시킬지 지정한다.|
+        |rel|현재 문서와 링크 문서 사이의 관계|
+        |shape|링크로 사용할 영역의 형태를 지정한다.<br>default, rect, circle, poly|
+        |target|링크를 표시할 대상을 지정한다.<br>_blank<br>_parent<br>_self<br>_top<br>프레임이름|
+        |type|링크 문서의 미디어 유형을 지정한다.|
+        ```
+        <body>
+            <img src="images/kids.jpg"  alt="" usemap="#favorites">
+            <map name="favorites">
+                <area shape="rect" coords="10,10,160,200" href="http://cafe.naver.com/doithtml5" target="_blank" alt="do it html5 네이버 카페로 가기">
+                <area shape="rect" coords="220,10,380,200" href="http://www.facebook.com/do.it.html5" target="_blank" alt="do it html5 페이스북 페이지로 가기">
+            </map>
+        </body>
+        ```
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-18.png)

@@ -274,7 +274,7 @@
                     width:120px;  /* 홀수번째 열의 너비 : 120px */
                 }
                 tr > td:nth-child(even) { 
-                    width:300px;  /* 짝수번째 열의 너비 : 120px */
+                    width:300px;  /* 짝수번째 열의 너비 : 300px */
                 }
             </style>
         </head>
@@ -301,3 +301,75 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-11.png)
 
 
+　
+
+- **표에 제목 붙이기**
+    - \<caption\> 태그 사용하기
+        > - \<table\> 태그 바로 다음에 사용
+        > - 표의 위쪽 중앙에 표시된다.
+        ```
+        <body>
+            <table>
+                <caption>
+                    <strong>Modern Browser</strong>
+                    <p>국내에서 자주 사용하는 모던 브라우저</p>
+                </caption>
+                <tr>
+                    <th>브라우저</th>
+                    <th>제조업체</th>
+                    <th>다운로드</th>
+                </tr>
+                <tr>
+                    <th>크롬(Chrome)</th>
+                    <td>Google</td>
+                    <td>https://www.google.com/chrome/ </td>
+                </tr>
+                <tr>
+                    <th>파이어폭스(Firfox)</th>
+                    <td>Mozilla</td>
+                    <td>https://www.mozilla.org/ko/firefox/</td>
+                </tr>
+                <tr>
+                    <th> 엣지(Edge) </th>
+                    <td> Microsoft </td>
+                    <td>https://www.microsoft.com/ko-kr/windows/microsoft-edge</td>
+                </tr>
+            </table>
+        </body>
+        ```
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-12.png)
+    - \<figcaption\> 태그 사용하기
+        > - 표를 \<figure\> 태그로 감싼 후 \<figcaption\> 태그를 이용해 제목을 입력한다.
+        > - \<figcaption\> 태그가 위치한 곳에 표시된다.
+        ```
+        <body>	
+            <figure>
+                <figcaption>
+                    <p>국내에서 자주 사용하는 <b>모던 브라우저</b></p>
+                </figcaption>
+                <table>
+                    <tr>
+                        <th>브라우저</th>
+                        <th>제조업체</th>
+                        <th>다운로드</th>
+                    </tr>
+                    <tr>
+                        <th>크롬(Chrome)</th>
+                        <td>Google</td>
+                        <td>https://www.google.com/chrome/ </td>
+                    </tr>
+                    <tr>
+                        <th>파이어폭스(Firfox)</th>
+                        <td>Mozilla</td>
+                        <td>https://www.mozilla.org/ko/firefox/</td>
+                    </tr>
+                    <tr>
+                        <th> 엣지(Edge) </th>
+                        <td> Microsoft </td>
+                        <td>https://www.microsoft.com/ko-kr/windows/microsoft-edge</td>
+                    </tr>
+                </table>
+            </figure>
+        </body>
+        ```
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-13.png)

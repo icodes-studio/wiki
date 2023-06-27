@@ -513,7 +513,7 @@
 
 # # 이미지
 
-- **\<img\> 태그 속성**
+- **\<img\> 태그 & 속성**
     - src: 이미지 리소스 경로
     - alt: 이미지를 설명해 주는 대체 텍스트
     - width, height: 이미지 크기 조정
@@ -540,3 +540,31 @@
         </body>
         ```
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-17.png)
+
+
+　
+
+　
+
+# # 링크 만들기
+
+- **\<a\> 태그 & 속성**
+    - 텍스트와 함께 사용하면 텍스트 링크가 되고
+    - 이미지와 함께 사용하면 이미지 링크가 된다.
+        |속성|설명|
+        |:---|:---|
+        |href|링크한 문서나 사이트의 주소|
+        |target|링크한 내용이 표시될 위치(현재 창 또는 새 창)를 지정<br>_blank: 새 창으로 열림<br>_self: 현재 화면에서 열림<br>_parent: 부모 프레임에 표시<br>_top:프레임을 사용했을 때, 프레임에서 벗어나 전체 화면에 표시한다.|
+        |download|링크한 내용을 보여 주는 것이 아니라 다운로드 한다.|
+        |rel|현재 문서와 링크한 문서의 관계를 알려준다.|
+        |hreflang|링크한 문서의 언어를 지정|
+        |type|링크한 문서의 파일 유형을 알랴줌|
+        ```
+        <body>
+            <h1>텍스트 링크 만들기</h1>
+            <p><a href="http://www.easyspub.com">이지스퍼블리싱 홈페이지(현재 화면)</a></p>
+            <p><a href="http://www.easyspub.com" target="_blank">이지스퍼블리싱 홈페이지(새 창 또는 새 탭)</a></p>
+        </body>
+        ```
+
+

@@ -473,3 +473,34 @@
         ```
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-14.png)
 
+
+　
+
+- **열을 묶어 스타일 지정하기**
+    - \<colgroup\>
+    - \<col\>
+        ```
+        <body>
+            <table>
+                <caption>colgroup 연습</caption>
+                <colgroup>
+                    <col>
+                    <col span="2" style="background-color:blue;">
+                    <col style="background-color:yellow">
+                </colgroup>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </body>
+        ```
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-15.png)

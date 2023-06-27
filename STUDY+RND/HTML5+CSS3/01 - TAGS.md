@@ -513,7 +513,7 @@
 
 # # 이미지
 
-- **\<image\> 태그 속성**
+- **\<img\> 태그 속성**
     - src: 이미지 리소스 경로
     - alt: 이미지를 설명해 주는 대체 텍스트
     - width, height: 이미지 크기 조정
@@ -526,3 +526,17 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-16.png)
 
 
+　
+
+- **이미지에 설명 글 붙이기**
+    - <figure> 태그로 <img> 태그를 감싸고...
+    - <figcaption> 태그로 설명 표시
+        ```
+        <body>
+            <figure>
+                <img src="images/prod.jpg" alt="예멘 모카 마타리">
+                <figcaption>예멘 모카 마타리(Yemen Mocha Mattari)</figcaption>
+            </figure>  
+        </body>
+        ```
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-17.png)

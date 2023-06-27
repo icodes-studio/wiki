@@ -251,12 +251,12 @@
 　
 
 - **기본적인 표 만들기**
-    - <table> - 표 전체 윤곽
-    - <tr> - 행
-    - <td> - 열
+    - \<table\> - 표 전체 윤곽
+    - \<tr\> - 행
+    - \<td\> - 열
         > - colspan: 컬럼 합치기
         > - rowspan: 행 합치기
-    - <th> - 제목 셀
+    - \<th\> - 제목 셀 (강조)
         ```
         <!DOCTYPE html>
         <html lang="ko">

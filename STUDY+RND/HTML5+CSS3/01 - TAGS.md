@@ -529,8 +529,8 @@
 　
 
 - **이미지에 설명 글 붙이기**
-    - <figure> 태그로 <img> 태그를 감싸고...
-    - <figcaption> 태그로 설명 표시
+    - \<figure\> 태그로 \<img\> 태그를 감싸고...
+    - \<figcaption\> 태그로 설명 표시
         ```
         <body>
             <figure>

@@ -185,17 +185,40 @@
 
 ## # 목록을 만드는 태그
 
-- **순서 없는 목록 만들기**
+- **다양한 형태의 순서 목록 만들기**
     - \<ul\> - unordered list
     - \<li\> - list item
+    - \<ol\> - ordered list
+        > - type 속성: 숫자 불릿의 종류를 선택
+        |속성값|설명|
+        |:---|:---|
+        |1|숫자(기본값)|
+        |a|영문 소문자|
+        |A|영문 대문자|
+        |i|로마숫자 소문자|
+        |I|로마숫자 대문자|
+        > - start 속성: 시작 순서 선택
+        > - reversed 속성: 항목을 역순으로 표시
+    - <li> - list item
         ```
         <body>
-            <p>1330에는 해당 지역의 지도와 관광 가이드북...</p>
+            <h1>1박 2일 가족 여행 코스</h1>
             <ul>
-                <li>일반 전화 : (국번없이) 1330</li>
-                <li>휴대 전화 : 064-1330</li>
+                <li>1일차
+                    <ol type="a">
+                        <li>해녀박물관</li>
+                        <li>낚시체험</li>
+                    </ol>
+                </li>
+                <li>2일차
+                    <ol type="a" start ="3">
+                        <li>용눈이오름</li>
+                        <li>만장굴</li>
+                        <li>카약체험</li>
+                    </ol>
+                </li>
             </ul>
         </body>
         ```
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-8.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-9.png)
 

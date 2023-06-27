@@ -165,11 +165,7 @@
 
 　
 
-　
-
-## # 기타 텍스트 관련 태그들
-
- - 이 외에도 다음과 같은 다양한 태그가 있다.
+ - **이 외에도 다음과 같은 다양한 태그가 있다.**
     |태그|설명|예시|
     |:---|:---|:---|
     |\<abbr\>|약자 표시.<br>title 속성을 함께 사용할 수 있음|\<p\>\<b\>\<abbr title="Internet of Things"\>IoT\</abbr\>\</b\>란 <br>각종 사물에 센서와 통신 기능을 내장해 인터넷에 연결하는 기술을 의미한다.\</p\><br>　<br>![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-7.png)|

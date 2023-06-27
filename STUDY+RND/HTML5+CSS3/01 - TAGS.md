@@ -1,4 +1,4 @@
-## HTML 문서 기본 구조 살펴보기
+## # HTML 문서 기본 구조 살펴보기
 
 - **기본 태그**
     ```
@@ -53,7 +53,7 @@
 
 　
 
-## 텍스트를 덩어리로 묶어 주는 태그
+## # 텍스트를 덩어리로 묶어 주는 태그
 
 - **기본적인 텍스트 입력하기**
     - \<hn\> - 제목 표시하기
@@ -101,7 +101,7 @@
 
 　
 
-## 텍스트를 한 줄로 표시하는 태그
+## # 텍스트를 한 줄로 표시하는 태그
 
 - **텍스트 강조하기**
     - \<strong\> - 볼드체로 강조
@@ -148,3 +148,15 @@
         </body>
         ```
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-5.png)
+
+
+　
+
+- **일본 글자 표시하기**
+    - \<ruby\> - 동아시아 글자 표시하기
+        ```
+        <body>
+            <p>루비(Ruby)는 1995년, 일본의 프로그래머인 마츠모토 유키히로 (<ruby>松本行弘<rt>まつもとゆきひろ</rt></ruby>)가 만든 프로그래밍 언어입니다.</p>
+        </body>	
+        ```
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/HTML5%2BCSS3/Assets/example-6.png)

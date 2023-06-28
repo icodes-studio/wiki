@@ -9,15 +9,15 @@
 　
 
 - **RECT TRANSFORM**
-    - 본디 스프라이트 시스템(에디터)에서 시작됨.
-    - Unity UI를 위한 Rect Transform 컴포넌트로 발전됨.
+    - 본디 스프라이트 시스템(Unity 4.3)에서 2D 영역을 지정하는 기능으로 시작됨.
+    - 이후 Unity 2D UI를 위한 Rect Transform 컴포넌트로 발전됨.
 
 
 　
 
 - **RECT TOOL**
-    - 씬 에디터에서 바로 UI 요소의 크기를 조절하는 툴.
-    - 씬 에디터에서 바로 Rect Transform을 수정할 수 있다.
+    - 씬 뷰에서 바로 UI 요소의 크기를 조절하는 툴.
+    - 씬 뷰에서 바로 Rect Transform을 수정할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/rect_tool.png)
     - 각 꼭짓점마다 하나씩 네 개의 컨트롤 포인트가 나타나며, 이 포인트를 조작하여 피벗 포인트를 기준으로 UI의 크기를 조정.
     - \<Shift\> 버튼을 누른 채로 가장자리 컨트롤 포인트를 움직이면 종횡비를 그대로 유지하면서 크기 조정 가능.

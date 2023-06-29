@@ -67,7 +67,7 @@
         > - 상위 하이어러키 Rect Transform의 모서리 기준으로 영역 포인트의 오프셋 값을 의미한다.
     - **Blueprint mode**
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/blueprintmode.png)
-        > - 회전에 상관없이 선택영역이 고정된 상태로 크기 조절 가능
+        > - 회전에 상관없이 선택 영역이 고정된 상태로 크기 조절 가능
         > - 공간 모드 - Global과 동일하게 동작한다.
     - **Raw edit mode**
         > - 앵커 또는 피벗 필드의 값을 변경하면 사각형이 포지션을 유지하도록 하기 위해 일반적으로 포지션 값이 자동조정 된다.

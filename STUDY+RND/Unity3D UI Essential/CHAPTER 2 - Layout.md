@@ -110,7 +110,7 @@
 
 　
 
-- **RENDER MODE: Screen Space - Overlay**
+- **[RENDER MODE] Screen Space - Overlay**
     - 카메라 독립적으로 UI를 최상위에 오버레이 하는 방식.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/CanvasOverlay.png)
     - 해상도 변경 시 스크린에 일치하도록 자동으로 크기 변경됨.
@@ -127,7 +127,7 @@
 
 　
 
-- **RENDER MODE: Screen Space - Camera**
+- **[RENDER MODE] Screen Space - Camera**
     - 캔버스가 그려질 카메라를 선택하여 UI를 렌더링 한다.
     - 게임 오브젝트를 UI 앞이나 뒤에 배치할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/CanvasCamera.png)
@@ -147,7 +147,7 @@
 
 　
 
-- **RENDER MODE: World Space**
+- **[RENDER MODE] World Space**
     - 캔버스가 씬에서 오브젝트처럼 동작한다.
     - UI 요소는 오브젝트 배치에 따라 앞면 혹은 뒷면에 그려짐.
     - 3D 월드에 속하는 인터페이스 UI의 일부로써 유용하다.
@@ -169,13 +169,13 @@
 
 　
 
-- **CANVAS SCALER - "UI SCALE MODE"**
+- **[CANVAS SCALER] UI Scale Mode**
   - 캔버스에서 UI 요소가 스케일 되는 방법을 결정한다.
 
 
 　
 
-- **UI SCALE MODE: "Constant Pixel Size"**
+- **[UI SCALE MODE] Constant Pixel Size**
     - 화면 크기에 관계없이 동일한 픽셀 크기로 유지된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/constantphysicalsize.gif)
     - **Options**
@@ -192,7 +192,7 @@
 
 　
 
-- **UI SCALE MODE: Scale With Screen Size**
+- **[UI SCALE MODE] Scale With Screen Size**
     - 해상도에 따라 UI 요소가 작아지거나 커진다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/ScaleWithScreenSize.gif)
     - **Options**
@@ -222,7 +222,7 @@
 
 　
 
-- **UI SCALE MODE: Constant Physical Size**
+- **[UI SCALE MODE] Constant Physical Size**
     - 화면 크기에 관계없이 UI가 동일한 물리적인 크기로 유지.
     - 포지션과 크기가 포인트 등의 물리적인 단위로 지정된다.
     - 그러려면 기기의 화면 DPI가 정확하게 보고되어야 한다.
@@ -246,7 +246,7 @@
 
 　
 
-- **UI SCALE MODE: World**
+- **[UI SCALE MODE] World**
     - 캔버스가 World Space로 설정된 경우의 UI 스케일 모드.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/canvasscaler-world.png)
     - **Dynamic Pixels Per Unit**

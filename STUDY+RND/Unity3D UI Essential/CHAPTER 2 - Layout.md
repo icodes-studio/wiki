@@ -187,7 +187,7 @@
         > - 스프라이트에 이 ‘Pixels Per Unit’ 설정값이 적용된 경우 스프라이트 1픽셀이 UI 유닛 하나에 해당.
         > - Set Native Size 눌러보면 느낌 팍 옴.
         > - \<Sprite의 Pixels Per Unit> / \<Canvas Scaler의 Reference Pixels Per Unit\> = Pixels Per Unit
-        > - eg. Sprite의 Pixels Per Unit이 100 이고 Canvas Scaler의 Reference Pixels Per Unit 값이 50이면 2 Pixels Per Unit으로 유닛 하나 공간에 픽셀 2개가 찍히게 되므로 크기가 절반으로 줄어든다.
+        > - 예를 들어 Sprite의 Pixels Per Unit 값이 100 이고 Canvas Scaler의 Reference Pixels Per Unit 값이 50이면 2 Pixels Per Unit으로 유닛 하나 공간에 픽셀 2개가 찍히게 되므로 크기가 절반으로 줄어든다.
 
 
 　
@@ -256,7 +256,7 @@
         > - 스프라이트에 이 ‘Pixels Per Unit’ 설정이 있는 경우 스프라이트의 픽셀 하나가 월드의 유닛 하나에 해당합니다. ’Reference Pixels Per Unit’을 1로 설정하면 스프라이트의 ‘Pixels Per Unit’ 설정이 그대로 사용된다.
         > - Set Native Size 눌러보면 느낌 팍 옴.
         > - \<Sprite의 Pixels Per Unit> / \<Canvas Scaler의 Reference Pixels Per Unit\> = Pixels Per Unit
-        > - eg. Sprite의 Pixels Per Unit이 100 이고 Canvas Scaler의 Reference Pixels Per Unit 값이 50이면 2 Pixels Per Unit으로 유닛 하나 공간에 픽셀 2개가 찍히게 되므로 크기가 절반으로 줄어든다.
+        > - 예를 들어 Sprite의 Pixels Per Unit 값이 100 이고 Canvas Scaler의 Reference Pixels Per Unit 값이 50이면 2 Pixels Per Unit으로 유닛 하나 공간에 픽셀 2개가 찍히게 되므로 크기가 절반으로 줄어든다.
 
 
 　　

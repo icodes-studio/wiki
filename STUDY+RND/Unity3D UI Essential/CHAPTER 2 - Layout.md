@@ -259,10 +259,10 @@
     - Ignore Reversed Graphics
         > - UI가 카메라 방향에 뒤집혀 있을 때 충돌 처리를 할지 말지.
     - Blocking Objects
-        > - 레이캐스트가 블락킹 될 오브젝트(컬라이더)의 종류
-        > - 2D, 3D, Everything, None(블락킹될 오브젝트 없음)
+        > - 레이캐스트가 충돌했을 때 무시할 오브젝트(컬라이더)의 종류
+        > - 2D, 3D, All, None(즉, 모든 물체에 대해 충돌)
     - Blocking Mask
-        > - 레이캐스트가 블락킹 될 렌더링 레이어 지정
+        > - Blocking Objects 기능이 동작할 레이어 지정
 
 
 　

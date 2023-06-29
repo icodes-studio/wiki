@@ -206,18 +206,15 @@
         >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/screenmatchmode.gif)
     - **Screen Match Mode: Match Width or Height**
-        > - 캔버스 영역의 너비 또는 높이 또는 그 사이 어딘가를 기준으로 캔버스를 스케일.
-        > - 캔버스가 레퍼런스보다 커지면 레터박스.
-        > - 캔버스가 레퍼런스보다 작아지면 잘림.
-        > - **Match**: 기준점 설정 (너비, 높이 or 그 사이)
+        > - **Match**로 캔버스 기준(너비, 높이 or 그 사이)을 설정 하고 그 기준으로 캔버스를 스케일 한다.
+        > - 즉, 캔버스 크기가 레퍼런스보다 커지면 레터박스가 생기고 레퍼런스보다 작아지면 잘리게 되므로
+        > - 만약 Width로 Match 기준을 몰빵했다치면 디바이스 해상도에 따라 위 아래로 레터박스가 생기거나 잘리는 상황이 발생한다.
     - **Screen Match Mode: Expand**
         > - 캔버스 크기가 레퍼런스보다 더 작아지지 않도록 캔버스를 수평 또는 수직 확장.
         > - 레터박스는 생겨도 잘리진 않는다.
     - **Screen Match Mode: Shrink**
         > - 캔버스 크기가 레퍼런스보다 커지지 않도록 캔버스를 수평 또는 수직으로 자른다.
         > - 잘리긴 해도 레터박스는 생기지 않는다.
-    - **Reference Pixels Per Unit**
-        > - 스프라이트에 이 ‘Pixels Per Unit’ 설정값이 적용된 경우 스프라이트 1픽셀이 UI 유닛 하나에 해당.
 
 
 　
@@ -252,11 +249,6 @@
     - **Dynamic Pixels Per Unit**
         > - UI에서 동적으로 생성되는 비트맵(예: 텍스트)에 사용할 유닛당 픽셀의 양.
         > - 변경하면서 Text UI 크기와 선명도 보면 느낌 팍 옴.
-    - **Reference Pixels Per Unit**
-        > - 스프라이트에 이 ‘Pixels Per Unit’ 설정이 있는 경우 스프라이트의 픽셀 하나가 월드의 유닛 하나에 해당합니다. ’Reference Pixels Per Unit’을 1로 설정하면 스프라이트의 ‘Pixels Per Unit’ 설정이 그대로 사용된다.
-        > - Set Native Size 눌러보면 느낌 팍 옴.
-        > - \<Sprite의 Pixels Per Unit> / \<Canvas Scaler의 Reference Pixels Per Unit\> = Pixels Per Unit
-        > - 예를 들어 Sprite의 Pixels Per Unit 값이 100 이고 Canvas Scaler의 Reference Pixels Per Unit 값이 50이면 2 Pixels Per Unit으로 유닛 하나 공간에 픽셀 2개가 찍히게 되므로 크기가 절반으로 줄어든다.
 
 
 　　

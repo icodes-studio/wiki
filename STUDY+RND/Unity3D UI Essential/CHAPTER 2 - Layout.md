@@ -305,6 +305,7 @@
     ● 수평, 수직, 그리드 그룹의 세 종류가 있다.
     ● 이 그룹을 통해 UI를 자동 얼라인하여 배치할 수 있다.
     ● 그룹은 하이어러키상 중첩해서 사용할 수 있다.
+*https://docs.unity3d.com/2023.2/Documentation/Manual/UIAutoLayout.html*
 
 
 　

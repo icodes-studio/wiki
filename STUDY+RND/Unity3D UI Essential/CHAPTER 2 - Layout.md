@@ -94,6 +94,7 @@
         >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/leftpivot.gif)
 
+
 　
 
 　
@@ -129,7 +130,6 @@
 - **RENDER MODE: Screen Space - Camera**
     - 캔버스가 그려질 카메라를 선택하여 UI를 렌더링 한다.
     - 게임 오브젝트를 UI 앞이나 뒤에 배치할 수 있다.
-    - 3D 원근법으로 UI를 그릴 때 유리하다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/CanvasCamera.png)
     - 해상도 변경 또는 카메라의 frustum을 변경한 경우, 캔버스도 자동으로 일치하도록 크기 변경됨.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/canvas-camera.png)
@@ -152,10 +152,10 @@
     - UI 요소는 오브젝트 배치에 따라 앞면 혹은 뒷면에 그려짐.
     - 3D 월드에 속하는 인터페이스 UI의 일부로써 유용하다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/CanvasWorldSpace.png)
-    - AKA, ***"Diegetic Interface"***
+    - ***AKA,*** ***"Diegetic Interface"***
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/canvas-worldspace.png)
     - Event Camera
-        > - UI 이벤트를 처리하는 데 사용할 카메라
+        > - 렌더링 및 UI 이벤트를 처리하는 데 사용할 카메라
         > - 즉, EventSystem이 어떤 카메라를 사용할지 결정.
         > - 지정하지 않으면 Main Camera가 디폴트로 사용.
 
@@ -169,13 +169,13 @@
 
 　
 
-- **CANVAS SCALER - UI SCALE MODE**
+- **CANVAS SCALER - "UI SCALE MODE"**
   - 캔버스에서 UI 요소가 스케일 되는 방법을 결정한다.
 
 
 　
 
-- **UI SCALE MODE: Constant Pixel Size**
+- **UI SCALE MODE: "Constant Pixel Size"**
     - 화면 크기에 관계없이 동일한 픽셀 크기로 유지된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/constantphysicalsize.gif)
     - **Options**
@@ -186,8 +186,8 @@
     - **Reference Pixels Per Unit**
         > - 스프라이트에 이 ‘Pixels Per Unit’ 설정값이 적용된 경우 스프라이트 1픽셀이 UI 유닛 하나에 해당.
         > - Set Native Size 눌러보면 느낌 팍 옴.
-        > - \<Sprite's\> / \<Canvas Scaler's\> = Pixels Per Unit
-        > - 뭐, 요런 느낌이랄까...
+        > - \<Sprite의 Pixels Per Unit> / \<Canvas Scaler의 Reference Pixels Per Unit\> = Pixels Per Unit
+        > - eg. Sprite의 Pixels Per Unit이 100 이고 Canvas Scaler의 Reference Pixels Per Unit 값이 50이면 2 Pixels Per Unit으로 유닛 하나 공간에 픽셀 2개가 찍히게 되므로 크기가 절반으로 줄어든다.
 
 
 　
@@ -255,8 +255,8 @@
     - **Reference Pixels Per Unit**
         > - 스프라이트에 이 ‘Pixels Per Unit’ 설정이 있는 경우 스프라이트의 픽셀 하나가 월드의 유닛 하나에 해당합니다. ’Reference Pixels Per Unit’을 1로 설정하면 스프라이트의 ‘Pixels Per Unit’ 설정이 그대로 사용된다.
         > - Set Native Size 눌러보면 느낌 팍 옴.
-        > - \<Sprite's\> / \<Canvas Scaler's\> = Pixels Per Unit
-        > - 뭐, 요런 느낌이랄까...
+        > - \<Sprite의 Pixels Per Unit> / \<Canvas Scaler의 Reference Pixels Per Unit\> = Pixels Per Unit
+        > - eg. Sprite의 Pixels Per Unit이 100 이고 Canvas Scaler의 Reference Pixels Per Unit 값이 50이면 2 Pixels Per Unit으로 유닛 하나 공간에 픽셀 2개가 찍히게 되므로 크기가 절반으로 줄어든다.
 
 
 　　

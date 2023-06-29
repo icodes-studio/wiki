@@ -293,7 +293,6 @@
         > - 그룹 내 모든 UI 엘리먼트들이 레이캐스트를 무시할지 여부.
         >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/blockraycast.gif)
-        > - Physics.Raycast에는 적용되지 않는다.
     - Ignore Parent Groups
         > - 상위 그룹의 설정을 무시할지 설정.
         > - 언체크 하면 속성은 상속됨. Alpha 값은 중첩(MUL) 표현됨.

@@ -4,8 +4,7 @@
     ● 레이아웃과 그룹화 시스템
     ● Unity Event와 새로운 EventSystem
 *https://docs.unity3d.com/2023.2/Documentation/Manual/PositioningGameObjects.html*
-*https://docs.unity3d.com/2023.2/Documentation/Manual/class-RectTransform.html*
-　
+
 
 　
 
@@ -108,8 +107,7 @@
     ● 그려지는 순서는 하이어러키 순서와 동일
     ● 씬이 2D인지 3D 인지에 상관없이 UI를 배치할 수 있다.
     ● 각 UI를 3D 공간에서 서로 나누어 배치할 수도 있다.
-> - *https://docs.unity3d.com/2023.2/Documentation/Manual/UICanvas.html*
-> - *https://docs.unity3d.com/2023.2/Documentation/Manual/comp-CanvasComponents.html*
+*https://docs.unity3d.com/2023.2/Documentation/Manual/UICanvas.html*
 
 
 　
@@ -316,8 +314,6 @@
     ● 그룹은 하이어러키상 중첩해서 사용할 수 있다.
 *https://docs.unity3d.com/2023.2/Documentation/Manual/UIAutoLayout.html*
 
-*https://docs.unity3d.com/2023.2/Documentation/Manual/comp-UIAutoLayout.html*
-
 
 　
 
@@ -419,6 +415,7 @@
     ● Content Size Fitter
     ● Aspect Ratio Fitter
     ● Scroll RectsMasks
+*https://docs.unity3d.com/2023.2/Documentation/Manual/UIAutoLayout.html*
 
 
 　

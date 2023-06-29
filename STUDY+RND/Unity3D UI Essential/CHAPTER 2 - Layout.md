@@ -3,7 +3,7 @@
     ● Unity UI 캔버스
     ● 레이아웃과 그룹화 시스템
     ● Unity Event와 새로운 EventSystem
-
+*https://docs.unity3d.com/2023.2/Documentation/Manual/PositioningGameObjects.html*
 　
 
 　
@@ -86,7 +86,7 @@
         > - UI의 중심을 나타낸다.
         > - 피벗을 기준으로 UI의 위치, 크기, 회전이 변경된다.
         > - x=0 : 오브젝트의 맨 좌측, x=1 : 오브젝트의 맨 우측.
-        > - y=0 : 오브젝트의 최하단, y=1 : 오브젝트의 최상단.
+        > - y=0 : 오브젝트의 최 하단, y=1 : 오브젝트의 최 상단.
         > - **피벗이 (0.5, 0.5)일 경우 스케일 & 회전**
         >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/centerpivot.gif)
@@ -101,9 +101,10 @@
 ## CANVAS
     ● UI를 그리는 일종의 그림판 같은 역할을 한다.
     ● 모든 UI 요소는 Canvas 안에 위치해야 한다.
-    ● 그려지는 순서는 하이어러키 순서와 동일씬이 2D인지 3D 인지에 상관없이 UI를 배치할 수 있다.
+    ● 그려지는 순서는 하이어러키 순서와 동일
+    ● 씬이 2D인지 3D 인지에 상관없이 UI를 배치할 수 있다.
     ● 각 UI를 3D 공간에서 서로 나누어 배치할 수도 있다.
-*https://docs.unity3d.com/kr/2021.1/Manual/UICanvas.html*
+*https://docs.unity3d.com/2023.2/Documentation/Manual/UICanvas.html*
 
 
 　

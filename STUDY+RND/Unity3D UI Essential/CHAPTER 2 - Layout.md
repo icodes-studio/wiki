@@ -4,11 +4,13 @@
     ● 레이아웃과 그룹화 시스템
     ● Unity Event와 새로운 EventSystem
 *https://docs.unity3d.com/2023.2/Documentation/Manual/PositioningGameObjects.html*
+*https://docs.unity3d.com/2023.2/Documentation/Manual/class-RectTransform.html*
 　
 
 　
 
 - **RECT TRANSFORM**
+    - *https://docs.unity3d.com/2023.2/Documentation/Manual/class-RectTransform.html*
     - 본디 스프라이트 시스템(Unity 4.3)에서 2D 영역을 지정하는 기능으로 시작됨.
     - 이후 Unity 2D UI를 위한 Rect Transform 컴포넌트로 발전됨.
 
@@ -48,6 +50,7 @@
 　
 
 - **RECT TRANSFORM 컴포넌트**
+    - *https://docs.unity3d.com/2023.2/Documentation/Manual/class-RectTransform.html*
     - Unity UI 전용 Transform 컴포넌트
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/rect_transform.png)
     - 컴포넌트에는 Width, Height, Anchors, Pivot, 등등의 속성이 있다.

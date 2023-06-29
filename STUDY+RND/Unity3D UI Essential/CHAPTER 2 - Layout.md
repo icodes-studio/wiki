@@ -350,7 +350,7 @@
 　
 
 - **VERTICAL LAYOUT GROUP**
-    - 하위 게임 오브젝트를 자동으로 한 **열(Vertical)**에 배열한다.
+    - 하위 게임 오브젝트를 자동으로 **열(Vertical)** 기준으로 배열한다.
     - Horizontal Layout Group과 비교해 사용법은 같다.
 
 

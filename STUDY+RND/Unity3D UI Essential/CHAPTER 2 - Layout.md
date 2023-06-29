@@ -23,6 +23,7 @@
     - \<Shift\> 버튼을 누른 채로 가장자리 컨트롤 포인트를 움직이면 종횡비를 그대로 유지하면서 크기 조정 가능.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/recttool-scene.png)
 
+
 　
 
 - **피벗 모드와 공간 모드**

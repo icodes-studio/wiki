@@ -205,7 +205,7 @@
         > - 해상도의 종횡비가 레퍼런스 해상도에 맞지 않는 경우 캔버스 영역을 스케일 하는 데 사용.
         >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/screenmatchmode.gif)
-    - ***Screen Match Mode: Match Width or Height**
+    - **Screen Match Mode: Match Width or Height**
         > - 캔버스 영역의 너비 또는 높이 또는 그 사이 어딘가를 기준으로 캔버스를 스케일.
         > - 캔버스가 레퍼런스보다 커지면 레터박스.
         > - 캔버스가 레퍼런스보다 작아지면 잘림.

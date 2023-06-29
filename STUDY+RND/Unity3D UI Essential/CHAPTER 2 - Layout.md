@@ -27,7 +27,6 @@
 　
 
 - **피벗 모드와 공간 모드**
-    - 버튼을 누르면 모드가 토글 된다.
     - 평소 UI를 조작할 때는 Pivot 과 Local 을 설정하면 좋다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/GUI_Pivot_Local_Buttons.png)
     - Center
@@ -68,6 +67,8 @@
         > - 상위 하이어러키 Rect Transform의 모서리 기준으로 영역 포인트의 오프셋 값을 의미한다.
     - **Blueprint mode**
         > - 회전에 상관없이 선택영역이 고정된 상태로 크기 조절 가능
+        > - 공간 모드 - Global과 동일하게 동작한다.
+        > - 
         >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/blueprintmode.png)
     - **Raw edit mode**

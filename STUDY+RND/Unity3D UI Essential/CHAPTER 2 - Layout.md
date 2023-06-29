@@ -36,15 +36,13 @@
         > - 피벗 포인트에서 마우스를 끌면 피벗 포인트 위치 조정.
         > - 피벗 포인트 기준으로 회전이나 스케일 편집이 된다.
     - Global
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/global.png)
         > - 오브젝트가 회전되어 있더라도 선택 영역은 같이 회전하지 않는다.
         > - 즉, 방향 이동 기즈모가 글로벌 기준으로 고정되어 있다.
-        >
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/global.png)
     - Local
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/local.png)
         > - 오브젝트가 회전되었다면 선택 영역도 같이 회전한다.
         > - 결국 방향 이동 기즈모가 회전에 맞게 같이 돌아가므로, 회전에 맞게 이동시키기 편하다.
-        >
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/local.png)
 
 
 　

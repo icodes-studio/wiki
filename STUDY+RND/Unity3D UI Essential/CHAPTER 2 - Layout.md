@@ -4,7 +4,6 @@
     ● 레이아웃과 그룹화 시스템
     ● Unity Event와 새로운 EventSystem
 *https://docs.unity3d.com/2023.2/Documentation/Manual/PositioningGameObjects.html*
-
 *https://docs.unity3d.com/2023.2/Documentation/Manual/class-RectTransform.html*
 　
 

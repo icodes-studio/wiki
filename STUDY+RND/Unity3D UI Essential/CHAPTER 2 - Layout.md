@@ -109,7 +109,6 @@
     ● 씬이 2D인지 3D 인지에 상관없이 UI를 배치할 수 있다.
     ● 각 UI를 3D 공간에서 서로 나누어 배치할 수도 있다.
 *https://docs.unity3d.com/2023.2/Documentation/Manual/UICanvas.html*
-
 *https://docs.unity3d.com/2023.2/Documentation/Manual/comp-CanvasComponents.html*
 
 

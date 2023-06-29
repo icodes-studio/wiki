@@ -21,7 +21,6 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/rect_tool.png)
     - 각 꼭짓점마다 하나씩 네 개의 컨트롤 포인트가 나타나며, 이 포인트를 조작하여 피벗 포인트를 기준으로 UI의 크기를 조정.
     - \<Shift\> 버튼을 누른 채로 가장자리 컨트롤 포인트를 움직이면 종횡비를 그대로 유지하면서 크기 조정 가능.
-    - 꼭짓점 바깥 부근을 조작하여 회전 가능.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/recttool-scene.png)
 
 　
@@ -33,14 +32,19 @@
     - Center
         > - 선택 영역의 중앙이 피벗 포인트 역할을 한다.
         > - Pivot 값 기준으로 회전 또는 스케일 편집되는 것이 아니라 강제로 중앙을 기준으로 회전 또는 스케일 편집이 된다.
-        > - 중앙 위치를 마우스로 끌면 Rect 전체가 화면에서 움직인다.
     - Pivot
         > - 피벗 포인트에서 마우스를 끌면 피벗 포인트 위치 조정.
         > - 피벗 포인트 기준으로 회전이나 스케일 편집이 된다.
     - Global
-        > - Rect가 회전되어 있더라도 선택 영역은 같이 회전하지 않고 오브젝트가 회전한 공간 전체가 선택 영역이 된다.
+        > - 오브젝트가 회전되어 있더라도 선택 영역은 같이 회전하지 않는다.
+        > - 즉, 방향 이동 기즈모가 글로벌 기준으로 고정되어 있다.
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/global.png)
     - Local
-        > - 선택 영역은 항상 오브젝트 크기에 딱 맞게 정의된다. 오브젝트가 회전되었다면 선택 영역도 회전된다.
+        > - 오브젝트가 회전되었다면 선택 영역도 같이 회전한다.
+        > - 결국 방향 이동 기즈모가 회전에 맞게 같이 돌아가므로, 회전에 맞게 이동시키기 편하다.
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/local.png)
 
 
 　

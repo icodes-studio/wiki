@@ -106,11 +106,13 @@
     ● 씬이 2D인지 3D 인지에 상관없이 UI를 배치할 수 있다.
     ● 각 UI를 3D 공간에서 서로 나누어 배치할 수도 있다.
 *https://docs.unity3d.com/2023.2/Documentation/Manual/UICanvas.html*
+*https://docs.unity3d.com/2023.2/Documentation/Manual/comp-CanvasComponents.html*
 
 
 　
 
 - **[RENDER MODE] Screen Space - Overlay**
+    - *https://docs.unity3d.com/2023.2/Documentation/Manual/class-Canvas.html*
     - 카메라 독립적으로 UI를 최상위에 오버레이 하는 방식.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/CanvasOverlay.png)
     - 해상도 변경 시 스크린에 일치하도록 자동으로 크기 변경됨.
@@ -163,14 +165,15 @@
 　
 
 - **CANVAS SCALER**
-  - UI 요소의 전체적인 **스케일과 픽셀 밀도**를 제어하는 데 사용.
-  - 글꼴 크기와 이미지 경계 등 캔버스 아래의 모든 요소에 영향 미침.
+    - *https://docs.unity3d.com/2023.2/Documentation/Manual/script-CanvasScaler.html*
+    - UI 요소의 전체적인 **스케일과 픽셀 밀도**를 제어하는 데 사용.
+    - 글꼴 크기와 이미지 경계 등 캔버스 아래의 모든 요소에 영향 미침.
 
 
 　
 
 - **[CANVAS SCALER] UI Scale Mode**
-  - 캔버스에서 UI 요소가 스케일 되는 방법을 결정한다.
+    - 캔버스에서 UI 요소가 스케일 되는 방법을 결정한다.
 
 
 　
@@ -254,6 +257,7 @@
 　　
 
 - **GRAPHIC RAYCASTER**
+    - *https://docs.unity3d.com/2023.2/Documentation/Manual/script-GraphicRaycaster.html*
     - 캔버스에 있는 그래픽을 감시하고 어떤 그래픽에 충돌했는지 결정.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/graphicraycaster.png)
     - Ignore Reversed Graphics
@@ -268,6 +272,7 @@
 　
 
 - **CANVAS RENDERER**
+    - *https://docs.unity3d.com/2023.2/Documentation/Manual/class-CanvasRenderer.html*
     - 게임 오브젝트를 사용해 캔버스에 시각적인 것을 렌더링 하려면 CanvasRenderer 컴포넌트를 추가해야 한다.
     - 기본적으로 모든 UI 컨트롤에는 이 컴포넌트가 추가되어 있으며 삭제할 수 없다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/canvasrenderer.png)
@@ -279,6 +284,7 @@
 　
 
 - **CANVAS GROUP**
+    - *https://docs.unity3d.com/2023.2/Documentation/Manual/class-CanvasGroup.html*
     - 나와 자식 UI 엘리먼트를 묶은 후 속성을 동시에 수정하는 기능.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/canvasgroup.png)
     - Alpha
@@ -306,11 +312,13 @@
     ● 이 그룹을 통해 UI를 자동 얼라인하여 배치할 수 있다.
     ● 그룹은 하이어러키상 중첩해서 사용할 수 있다.
 *https://docs.unity3d.com/2023.2/Documentation/Manual/UIAutoLayout.html*
+*https://docs.unity3d.com/2023.2/Documentation/Manual/comp-UIAutoLayout.html*
 
 
 　
 
 - **HORIZONTAL LAYOUT GROUP**
+    - *https://docs.unity3d.com/2023.2/Documentation/Manual/script-HorizontalLayoutGroup.html*
     - 하위 게임 오브젝트를 자동으로 한 행에 배열한다.
     - *eg. 상점 아이템*
     - Usage...
@@ -350,13 +358,15 @@
 　
 
 - **VERTICAL LAYOUT GROUP**
-    - 하위 게임 오브젝트를 자동으로 **열(Vertical)** 기준으로 배열한다.
+    - *https://docs.unity3d.com/2023.2/Documentation/Manual/script-VerticalLayoutGroup.html*
+    - 하위 게임 오브젝트를 자동으로 한 열(Vertical)에 배열한다.
     - Horizontal Layout Group과 비교해 사용법은 같다.
 
 
 　
 
 - **GRID LAYOUT GROUP**
+    - *https://docs.unity3d.com/2023.2/Documentation/Manual/script-GridLayoutGroup.html*
     - 하위 엘리먼트의 배열을 그리드 구조 안에서 배열한다.
     - 사용법은 수평, 수직 레이아웃 그룹과 거의 동일
     - "GridLayoutGroup" 게임 오브젝트의 Width, Height를 200 설정

@@ -278,7 +278,8 @@
 　
 
 - **SPRITE EDITOR**
-    - 옛 유니티 버전의 경우는 별도로 설치해야 한다.
+    - *https://docs.unity3d.com/2023.2/Documentation/Manual/SpriteEditor.html*
+    - 별도로 설치하는 경우
     - ***"Menu / Window / Package Manager"*** 선택.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/package_manager.png)
     - 만약 곧바로 2D Sprite Package가 보이지 않으면 왼쪽 상단의 Packages 탭 아래의 [+] 버튼 옆에 있는 버튼을 클릭해서 All Packages를 선택하면 설치 가능한 모든 패키지가 나온다.
@@ -292,7 +293,6 @@
 　
 
 - **SPRITE 무엇?**
-    - *https://wergia.tistory.com/223*
     - 이미지 리소스를 텍스쳐(Texture)라고 부른다.
     - 이 텍스쳐 중에서도 Image 컴포넌트나 스프라이트 렌더러에서 사용되는 리소스들을 스프라이트(Sprite)라고 한다.
     - 보통 유니티 프로젝트에 임포트 되는 텍스쳐들은 자동으로 Texture Type이 Default로 정해진다.
@@ -305,6 +305,7 @@
 　
 
 - **IMAGE CONTROL / COMPONENT**
+    - *https://wergia.tistory.com/223*
     - UI / Image 항목을 선택하여 Image 컨트롤 생성
     - Image 컴포넌트는 Sprite를 원본 이미지로 사용해야 한다.
     - Image 컴포넌트는 Raw Image 컴포넌트와 비슷하다.

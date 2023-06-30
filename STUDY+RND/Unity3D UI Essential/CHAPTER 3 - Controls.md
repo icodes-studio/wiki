@@ -1,9 +1,8 @@
-## CHAPTER 3 - 컨트롤 배우기
+# CHAPTER 3 - 컨트롤 배우기
     ● 새로운 UI 프레임워크의 기본 컨트롤
     ● 새로운 컨트롤을 사용한 예제
     ● 새로운 컨트롤 내비게이션 시스템
 
-　
 
 　
 
@@ -24,16 +23,16 @@
     - 성능을 향상을 위해 이미지를 스프라이트 한 장에 합쳐 사용.
     - [Sprite Packer](https://learnandcreate.tistory.com/131)를 사용하는 방법
     - [Sprite Atlas](https://skuld2000.tistory.com/28)를 사용하는 방법
-    - 기존에는 Sprite Packer를 사용했으나 2019버전 이상에서는 레거시로 사라지고 Sprite Atlas가 사용된다.
+    - 기존에는 Sprite Packer를 사용했으나 2019 이상에서는 레거시로 사라지고 Sprite Atlas가 사용된다.
 
 　
 
 　
 
-## TEXT 컨트롤/컴포넌트
+# # TEXT 컨트롤/컴포넌트
     ● UI 시스템에 텍스트를 표현하고자 할 때 사용.
     ● TextMeshPro를 사용할 수도 있다. 따로 설명하자.
-https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
+https://docs.unity3d.com/2023.2/Documentation/Manual/script-Text.html
 
 
 　
@@ -99,7 +98,7 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
 
 　
 
-## INPUT FIELD 컨트롤/컴포넌트
+# # INPUT FIELD 컨트롤/컴포넌트
     ● 텍스트 입력 컨트롤
 
 
@@ -165,7 +164,7 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
 
 　
 
-## 그림자와 기타 효과
+# # 그림자와 기타 효과
     ● 일반적으로는 셰이더를 사용하면 된다. 근데 진입장벽 있음.
     ● 유니티는 실시간으로 버텍스 수정할 수 있는 방법도 제공.
     ● 이러한 효과는 IVertexModifier 인터페이스에 기반을 두고 있다.
@@ -213,7 +212,7 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
 
 　
 
-## IMAGE 컨트롤/컴포넌트
+# # IMAGE 컨트롤/컴포넌트
     ● Unity UI에서 텍스쳐를 그리는 가장 기본적인 방법.
     ● Image 컴포넌트를 제대로 활용하기 위해서는 2D Sprite Package 먼저.
 
@@ -360,7 +359,7 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
 
 　
 
-## BUTTON 컨트롤/컴포넌트
+# # BUTTON 컨트롤/컴포넌트
     ● 상호작용을 구현하기 위해 가장 많이 쓰이는 컨트롤
     ● 사용자의 클릭에 반응하고, 액션을 시작하거나 확인하는 데 사용.
     ● Button 컨트롤은 여러 컴포넌트를 하나로 묶어놓은 것에 가깝다.
@@ -447,7 +446,7 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
 ‌
 　
 ‌
-## TOGGLE 컨트롤
+# # TOGGLE 컨트롤
     ● 사용자가 옵션을 켜거나 끌 수 있도록 하는 체크박스.
     ● 선택하거나 선택하지 않거나...
 
@@ -516,7 +515,7 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
 
 　
 
-## SLIDER 컨트롤
+# # SLIDER 컨트롤
     ● 마우스를 드래그하여 미리 정해진 범위상 숫자 값을 선택할 수 있다.
     ● 게임 난이도 설정이나 이미지 에디터 밝기 설정 등에 사용된다.
     ● 기본 UI 컴포넌트들을 조합해 복잡한 컨트롤을 구축한 대표적 사례.
@@ -576,7 +575,7 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
 
 　
 
-## SCROLLBAR 컨트롤
+# # SCROLLBAR 컨트롤
     ● 스크롤바 컨트롤을 통해 사용자가 한 번에 볼 수 없는 이미지나 다른 보기 화면을 스크롤 하여 볼 수 있다.
     ● 비슷한 슬라이더 컨트롤은 스크롤링이 아니라 수치 값을 선택하는 데 사용한다는 점에 주목해야 한다.
     ● 텍스트 편집기 측면에 있는 수직 스크롤바나 지도의 일부를 보기 위한 수직 및 수평 스크롤바 등에 활용된다.
@@ -660,7 +659,7 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
 
 　
 
-## DROPDOWN 컨트롤
+# # DROPDOWN 컨트롤
     ● 사용자가 리스트에서 옵션을 선택할 수 있다.
     ● 컨트롤은 현재 선택된 옵션을 보여준다.
     ● 클릭하면 리스트가 나타나 새로운 옵션을 선택할 수 있게 된다.
@@ -730,7 +729,7 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
 
 　
 
-## 컨트롤 내비게이션
+# # 컨트롤 내비게이션
     ● 방향키를 통해 컨트롤에서 컨트롤로 포커스를 옮겨가는 기능.
 
 
@@ -763,11 +762,16 @@ https://docs.unity3d.com/kr/2019.4/Manual/com.unity.textmeshpro.html
     - 에디터 씬 뷰에서 내비게이션 흐름을 시각적으로 표시한다.
     > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/GUIVisualizeNavigation.png)
 
-　
 
 　
 
-## 셰이더에 대해...
-    ● 모든 UI 컨트롤에는 Material 속성이 있다.
-    ● 이 속성에 셰이더를 재질 값으로 지정하면 셰이더 적용 가능.
-    ● 이건 따로 세션을 만들어 설명하자.
+　
+
+# # Sprite Atlas
+...
+
+
+　
+
+# # Font
+...

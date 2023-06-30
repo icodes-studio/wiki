@@ -1,4 +1,4 @@
-## CHAPTER 5 - 화면공간, 월드공간, 카메라
+# CHAPTER 5 - 화면공간, 월드공간, 카메라
     ● 지금까지 살펴본 플랫한 2D UI를 3D 공간으로 확장해보자.
     ● 데드 스페이스 시리즈의 3D 인벤토리는 좋은 예가 될 것이다.
     
@@ -223,7 +223,5 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/world-space-game.gif)
     - 끝!
 
-- **최적화**
-  - 텍스쳐 최적화 이슈
-  - 폰트 최적화 이슈
+
   

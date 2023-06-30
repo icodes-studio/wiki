@@ -515,6 +515,7 @@
 　
 
 - **SCROLL RECT**
+    - *https://docs.unity3d.com/2023.2/Documentation/Manual/script-ScrollRect.html*
     - 레이아웃 그룹 내 컨텐츠를 스크롤 할 때 사용.
     - 사실... 꼭 레이아웃 그룹일 필요는 없으며 스크롤 가능한 UI 컨트롤이면 상관없다.
     - ***3장 '컨트롤 배우기'*** 에서 좀 더 복잡한 예를 살펴볼 예정.

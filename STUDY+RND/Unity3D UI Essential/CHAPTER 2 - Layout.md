@@ -424,7 +424,8 @@
     - *https://docs.unity3d.com/2023.2/Documentation/Manual/script-LayoutElement.html*
     - 레이아웃 그룹 하위 요소들에 Layout Element 컴포넌트 추가.
     - 레이아웃 그룹의 리사이징 기본 기능을 커스터마이징 한다.
-    - 좀 더 정확히 말하자면, 레이아웃 그룹이 하위 엘리먼트들을 리사이징하기 위해서 각 하위 UI 컨트롤들이 가지고 있는 최소, 선호 또는 가변 크기 값(대부분의 UI 컨트롤은 내부적으로 Layout Element 속성을 포함)을 가지고 계산하는데, 이 Layout Element 컴포넌트는 이들 값을 변경하는 역할을 한다. 다시 말해, 부모의 레이아웃 그룹은 Control Child Size 옵션이 켜져 있고 Child Force Expand 옵션이 꺼져 있어야 이 컴포넌트의 의미가 있겠다.
+    - 좀 더 정확히 말하자면, 레이아웃 그룹이 하위 엘리먼트들을 리사이징하기 위해서 각 하위 UI 컨트롤들이 가지고 있는 최소, 선호 또는 가변 크기 값(대부분의 UI 컨트롤은 내부적으로 Layout Element 속성을 포함)을 가지고 계산하는데, 이 Layout Element 컴포넌트는 이들 값을 변경하는 역할을 한다.
+    - ***즉, 부모 레이아웃 그룹의 Control Child Size 옵션이 켜져 있고 Child Force Expand 옵션이 꺼져 있어야 이 컴포넌트의 의미가 있겠다.***
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/verticallayoutgroup-layoutelement.png)
     - **Ignore Layout**
         > - 체크하면 레이아웃 그룹으로 정렬을 하지 않는다.
@@ -436,7 +437,6 @@
     - **Preferred Width, Height**
         > - 자동 리사이징 될 때의 최대(선호) 크기
         > - 말 그대로 이 크기를 선호하면서 정렬되게 한다는 것이지, 꼭 이 길이로 설정된다는 것은 아님. Min을 우선적으로 하고 그룹 크기 내에서 될 수 있으면 Preferred 크기에 최대한 가깝게 되게끔 한다.
-        > - 부모 레이아웃 그룹의 Child Force Expand 옵션이 켜져 있으면 의미가 없다. 걍 최대 리사이즈 됨.
     - **Flexible Width, Height**
         > - 책에서는 엘리먼트가 어느 비율만큼 차지할지를 지정?
         > - 레퍼런스 문서에서는 레이아웃 요소가 형제 레이아웃에 상대적으로 채워야 하는 (추가 사용 가능한) 너비의 상대적 크기. 즉 남는 여백을 얼만큼 차지하는지 지정한다고 하는데... 0과 0이 아닌 값의 느낌으로 동작한다.

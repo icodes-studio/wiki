@@ -461,9 +461,9 @@
     - Unconstrained
         > - 아무것도 하지 않음.
     - MinSize
-        > - 너비 또는 높이를 하위 컨텐츠의 ILayoutElement Min 값으로 제한.
+        > - 너비 또는 높이를 하위 컨텐츠의 Min 값으로 제한.
     - PreferredSize
-        > - 너비 또는 높이를 하위 컨텐츠의 ILayoutElement Preferred 값으로 제한.
+        > - 너비 또는 높이를 하위 컨텐츠의 Preferred 값으로 제한.
     - **레이아웃 그룹과 함께 사용하는 경우의 예**
         > - 1\) 씬에 Canvas 추가
         > - 2\) Canvas에 Image 추가 - 배경으로 사용

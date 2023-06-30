@@ -327,7 +327,7 @@
         > - 3\) 오브젝트의 이름을 "HorizontalLayoutGroup"로 변경
         > - 4\) 여기에 Horizontal Layout Group 컴포넌트 추가
         > - 5\) "HorizontalLayoutGroup" 오브젝트 Width 값을 300으로
-        > - 6\) 이 오브젝트의 하위로 세 개의 UI/Image 추가.
+        > - 6\) 이 오브젝트의 하위로 세 개의 Image 추가.
         > - 7\) Image 컴포넌트에 Source Image를 원하는 Sprite로 설정.
     - Image 오브젝트가 가로로 예쁘게 얼라인 되었다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/horizontallayoutgroup-100.png)
@@ -370,7 +370,7 @@
     - 하위 엘리먼트의 배열을 그리드 구조 안에서 배열한다.
     - 사용법은 수평, 수직 레이아웃 그룹과 거의 동일
     - "GridLayoutGroup" 게임 오브젝트의 Width, Height를 200 설정
-    - 하위로 세 개 말고 네 개의 UI/ImageI 추가해봐.
+    - 하위로 세 개 말고 네 개의 Image 추가해봐.
     - 그러면 아래와 같은 모습이 될 거야.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/gridlayoutgroup.png)
     - **Rect Transform**
@@ -438,10 +438,9 @@
         > - 자동 리사이징 될 때의 최대(선호) 크기
         > - 말 그대로 이 크기를 선호하면서 정렬되게 한다는 것이지, 꼭 이 길이로 설정된다는 것은 아님. Min을 우선적으로 하고 그룹 크기 내에서 될 수 있으면 Preferred 크기에 최대한 가깝게 되게끔 한다.
     - **Flexible Width, Height**
-        > - 책에서는 엘리먼트가 어느 비율만큼 차지할지를 지정?
+        > - 책에서는 엘리먼트가 어느 비율만큼 차지할지를 지정한다 하고...
         > - 레퍼런스 문서에서는 레이아웃 요소가 형제 레이아웃에 상대적으로 채워야 하는 (추가 사용 가능한) 너비의 상대적 크기. 즉 남는 여백을 얼만큼 차지하는지 지정한다고 하는데... 0과 0이 아닌 값의 느낌으로 동작한다.
         > - 유니티 버그인지 내가 병신인 건지... 잘 모르겠다.
-        > - 좀 더 찾아보자!
     - **Layout Priority**
         > - 레이아웃 속성 중첩 사용 시 의미 있음.
         > - UI 컨트롤이 디폴트로 가지고 있는 Layout Priority는 0
@@ -461,23 +460,18 @@
     - Unconstrained
         > - 아무것도 하지 않음.
     - MinSize
-        > - 너비 또는 높이를 하위 컨텐츠의 최소값으로 제한.
+        > - 너비 또는 높이를 하위 컨텐츠의 ILayoutElement Min 값으로 제한.
     - PreferredSize
-        > - 너비 또는 높이를 하위 컨텐츠의 Preferred 값으로 제한.
+        > - 너비 또는 높이를 하위 컨텐츠의 ILayoutElement Preferred 값으로 제한.
     - **레이아웃 그룹과 함께 사용하는 경우의 예**
         > - 1\) 씬에 Canvas 추가
-        > - 2\) Canvas에 UI/Image 추가 - 배경으로 사용
-        > - 3\) Image 하위로 UI/Text 세 개 추가
+        > - 2\) Canvas에 Image 추가 - 배경으로 사용
+        > - 3\) Image 하위로 Text 세 개 추가
         > - 4\) Image 오브젝트에 Vertical Layout Group 추가
         > - 5\) Vertical Layout Group 컴포넌트에 Control Child Size 필드의 Width 항목 체크
         > - 6\) Image 오브젝트에 Content Size Fitter 추가
         > - 7\) Content Size Fitter의 Horizontal Fit 필드 값을 Preferred Size로 설정.
-    - **작동원리(추측)**
-        > - Text UI에 텍스트가 입력되면 자체 Preferred Size가 변경.
-        > - Vertical Layout Group의 Control Child Size 옵션이 켜져 있기 때문에 하위 레이아웃 엘리먼트의 Preferred Size가 바뀌었으므로 크기 조절을 위해 계산 - 레이아웃 그룹 자체 Preferred Size도 변경됨.
-        > - Content Size Fitter가 변경된 레이아웃 그룹의 Preferred Size를 감지하고 자체 Transform 크기 변경.
-        > - 결국 배경 이미지 크기가 변경됨.
-        > - 뭐, 이런 느낌?
+        > - 8\) Text 내용에 따라 배경 Image 가로 크기가 자동으로 변경 됨.
     - **Text UI 컨트롤과 함께 사용하는 경우의 예**
         > - Text 컴포넌트만 단독으로 사용한 경우, 텍스트 내용이 UI의 사이즈보다 커지면 옵션에 따라...
         > - 뒷부분이 잘리거나 - Truncate

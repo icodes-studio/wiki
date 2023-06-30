@@ -154,6 +154,7 @@
 
 # # INPUT FIELD 컨트롤/컴포넌트
     ● 텍스트 입력 컨트롤
+*https://docs.unity3d.com/2023.2/Documentation/Manual/script-InputField.html*
 
 
 　
@@ -169,7 +170,7 @@
 　
 
 - **TEXT FIELD COMPONENT**
-    - 　
+    - 컴포넌트 속성 살펴보기
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/UI_InputFieldInspector.png)    
     - **Interactable**
         > - 입력 필드가 상호작용 가능한지 여부.

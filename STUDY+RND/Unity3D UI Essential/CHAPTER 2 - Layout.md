@@ -342,7 +342,7 @@
     - **Reverse Alignment**
         > - 하위 엘리먼트들의 배치 순서를 반대로 설정.
     - **Control Child Size**
-        > - 하위 엘리먼트의 너비, 높이를 리사이징 할지 여부.
+        > - 하위 엘리먼트의 너비, 높이를 그룹 영역 안에서 최대한 넓은 공간을 차지하도록 리사이징 할지 여부.
         > - Child Force Expand 옵션이나 Layout Element 컴포넌트 등과 조합되어 사용됐을 때 좀 더 의미가 있을 듯.
         > - 단독 사용하면 원본 이미지보다 작게 리사이징만 된다.
     - **Use Child Scale**
@@ -397,7 +397,7 @@
         > - Horizontal
         > - Vertical
     - **Child Alignment**
-        > - 하위 엘리먼트들의 앵커 모드 설정.
+        > - 하위 엘리먼트들을 레이아웃 그룹 내에서 어느 위치를 중심으로 정렬할 것인지 지정.
     - **Constraint**
         > - Fixed Row Count: 행의 최대 개수를 제한
         > - Fixed Column Count: 열의 최대 개수를 제한
@@ -421,9 +421,10 @@
 　
 
 - **LAYOUT ELEMENT**
+    - *https://docs.unity3d.com/2023.2/Documentation/Manual/script-LayoutElement.html*
     - 레이아웃 그룹 하위 요소들에 Layout Element 컴포넌트 추가.
     - 레이아웃 그룹의 리사이징 기본 기능을 커스터마이징 한다.
-    - 사실 좀 더 정확히 말하자면, 레이아웃 그룹이 하위 엘리먼트들을 리사이징하기 위해서 각 하위 UI 컨트롤들이 가지고 있는 최소, 선호 또는 가변 크기 값(대부분의 UI 컨트롤은 내부적으로 Layout Element 속성을 포함)을 가지고 계산하는데, 이 Layout Element 컴포넌트는 이들 값을 변경하는 역할을 한다. 다시 말해, 부모의 레이아웃 그룹은 Control Child Size 옵션이 켜져 있고 Child Force Expand 옵션이 꺼져 있어야 이 컴포넌트의 의미가 있겠다.
+    - 좀 더 정확히 말하자면, 레이아웃 그룹이 하위 엘리먼트들을 리사이징하기 위해서 각 하위 UI 컨트롤들이 가지고 있는 최소, 선호 또는 가변 크기 값(대부분의 UI 컨트롤은 내부적으로 Layout Element 속성을 포함)을 가지고 계산하는데, 이 Layout Element 컴포넌트는 이들 값을 변경하는 역할을 한다. 다시 말해, 부모의 레이아웃 그룹은 Control Child Size 옵션이 켜져 있고 Child Force Expand 옵션이 꺼져 있어야 이 컴포넌트의 의미가 있겠다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/verticallayoutgroup-layoutelement.png)
     - **Ignore Layout**
         > - 체크하면 레이아웃 그룹으로 정렬을 하지 않는다.

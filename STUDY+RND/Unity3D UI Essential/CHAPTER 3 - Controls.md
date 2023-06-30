@@ -276,8 +276,8 @@
 
 　
 
-- **2D SPRITE PACKAGE**
-    - 별도 설치해야 하는 경우
+- **SPRITE EDITOR**
+    - 옛 유니티 버전의 경우는 별도로 설치해야 한다.
     - ***"Menu / Window / Package Manager"*** 선택.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/package_manager.png)
     - 만약 곧바로 2D Sprite Package가 보이지 않으면 왼쪽 상단의 Packages 탭 아래의 [+] 버튼 옆에 있는 버튼을 클릭해서 All Packages를 선택하면 설치 가능한 모든 패키지가 나온다.

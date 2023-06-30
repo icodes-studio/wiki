@@ -315,8 +315,7 @@
         > - 출력할 이미지 스프라이트
     - **Color**
         > - 이미지에 적용될 색상
-        > - 버텍스 컬러로 지정되므로...
-        > - 흰색으로 지정하면 원본 이미지 색상으로 출력.
+        > - 버텍스 컬러로 지정되므로 흰색으로 지정하면 원본 이미지 색상으로 출력.
         > - 원본 이미지의 검은색은 영향을 받지 않는다.
     - **Material**
         > - 이미지를 렌더링 할 때 사용될 재질
@@ -329,6 +328,8 @@
         > - 보통은 Image 컴포넌트가 부착된 게임 오브젝트의 너비와 높이에 따라서 그림의 비율이 변형되어서 화면에 그려진다.
         > - 하지만 Preserve Aspect를 체크하면 비율을 지킨 상태로 화면에 그려지게 할 수 있다.
         > - Image Type이 Simple 이거나 Filled 일 때만 사용됨.
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/preserve.gif)
     - **Set Native Size**
         > - 게임 오브젝트의 Width와 Height를 Source Image 해상도와 같게 만들어준다.
         > - Image Type이 Simple 이거나 Filled 일 때만 사용됨.
@@ -342,10 +343,7 @@
         > - 구멍 숭숭 뚫린 큰 이미지 최적화 할 때 유용하다.
         > - 스프라이트의 Mesh Type이 "Tight" 여야 한다.
         > - Sprite Editor에서 Custom Outline 직접 조정 가능.
-        > - *https://skuld2000.tistory.com/28*
         > - *https://mentum.tistory.com/293*
-        >
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/preserve.gif)
     - **Image Type : Sliced**
         > - 9 슬라이스 그리기 모드
         > - 9슬라이싱 하기 위해서는 프로젝트 뷰에서 적용할 스프라이트를 선택하고 인스펙터 뷰에서 **"Sprite Editor"** 버튼 클릭.

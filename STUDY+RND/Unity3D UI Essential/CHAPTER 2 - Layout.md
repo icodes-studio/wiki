@@ -488,9 +488,6 @@
         > - 아래 이미지를 보면 X Pivot을 0으로 변경해서 UI의 피벗을 가장 좌측으로 옮긴 결과, UI의 트랜스폼이 왼쪽에서 오른쪽으로 확장되는 것을 볼 수 있다.
         >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/TextUIPivot.gif)
-    - **콘텐츠 사이즈 피터를 활용한 스크롤 뷰 예제**
-        > - 음... 잠시 대기...
-        > - 가변버튼, 센터얼라인아이콘+텍스트, 다이아배경(최소유지+가변), 텍스트+버튼(이미지)
 
 
 　

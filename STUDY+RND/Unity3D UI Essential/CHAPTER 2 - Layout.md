@@ -561,6 +561,6 @@
     - 앞의 예제에서...
         > - "ScrollRectArea" 오브젝트에 Mask 컴포넌트와 Image 컴포넌트 추가.
         > - Image 컴포넌트 소스 이미지의 알파값으로 마스킹 됨.
-        > - Image 컴포넌트에 이미지가 없으면 RT 영역만 뚫림.
+        > - 소스 이미지가 없으면 RT 영역만 뚫림.
     - 아래 그림처럼 "ScrollRectArea" 영역만 보여짐
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/mask.png)

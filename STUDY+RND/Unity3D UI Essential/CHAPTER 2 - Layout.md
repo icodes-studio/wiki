@@ -514,7 +514,7 @@
 
 - **SCROLL RECT**
     - 레이아웃 그룹 내 컨텐츠를 스크롤 할 때 사용.
-    - 꼭 레이아웃 그룹일 필요는 없으며 스크롤 가능한 UI 컨트롤이면 상관없다. 그나저나 이게 왜 이 시점에 등장하는지... ٩(๑´0`๑)۶
+    - 사실... 꼭 레이아웃 그룹일 필요는 없으며 스크롤 가능한 UI 컨트롤이면 상관없다.
     - ***3장 '컨트롤 배우기'*** 에서 좀 더 복잡한 예를 살펴볼 예정.
     - 닥치고 예제
         > - 1\) 씬에 Canvas 추가.
@@ -559,15 +559,8 @@
     - 하위 컴포넌트가 보여지는 영역을 지정한다.
     - 단독으로 사용했을 때는 아무 의미 없고 Image 등의 Graphic 컴포넌트와 함께 사용해서 마스킹 영역을 지정해야 한다.
     - 앞의 예제에서...
-        > - "ScrollRectArea" 오브젝트에 Mask 컴포넌트 추가.
+        > - "ScrollRectArea" 오브젝트에 Mask 컴포넌트와 Image 컴포넌트 추가.
         > - Image 컴포넌트 소스 이미지의 알파값으로 마스킹 됨.
         > - Image 컴포넌트에 이미지가 없으면 RT 영역만 뚫림.
     - 아래 그림처럼 "ScrollRectArea" 영역만 보여짐
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/mask.png)
-
-
-　
-
-- **RECTMASK2D**
-    - *잠시대기*
-  

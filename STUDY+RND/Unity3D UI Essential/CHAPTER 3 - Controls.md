@@ -272,6 +272,7 @@
 # # IMAGE 컨트롤/컴포넌트
     ● Unity UI에서 텍스쳐를 그리는 가장 기본적인 방법.
     ● Image 컴포넌트를 제대로 활용하기 위해서는 2D Sprite Package 먼저.
+*https://docs.unity3d.com/2023.2/Documentation/Manual/script-Image.html*
 
 
 　
@@ -291,6 +292,7 @@
 　
 
 - **SPRITE 무엇?**
+    - *https://wergia.tistory.com/223*
     - 이미지 리소스를 텍스쳐(Texture)라고 부른다.
     - 이 텍스쳐 중에서도 Image 컴포넌트나 스프라이트 렌더러에서 사용되는 리소스들을 스프라이트(Sprite)라고 한다.
     - 보통 유니티 프로젝트에 임포트 되는 텍스쳐들은 자동으로 Texture Type이 Default로 정해진다.
@@ -363,7 +365,6 @@
         > - 　　Sprite의 Pixels Per Unit에 이 값이 곱해진다.
         > - 　　(모서리) 해상도를 조절하는데 매우 유용하다.
     - **Image Type : Tiled**
-        > - https://wergia.tistory.com/223
         > - 이미지를 반복으로 그려주는 타입.
         > - 스프라이트에 Border 값을 주는 경우 패턴이 잘 연결될 수 있도록 주의가 필요하다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/titled.gif)

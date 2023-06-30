@@ -453,6 +453,7 @@
 　
 
 - **CONTENT SIZE FITTER**
+    - *https://docs.unity3d.com/2023.2/Documentation/Manual/script-ContentSizeFitter.html*
     - 자체 레이아웃 요소의 크기를 제어하는 기능을 수행.
     - 크기는 게임 오브젝트 레이아웃 요소 컴포넌트의 min 또는 preferred 크기에 따라 결정된다.
     - 즉, 레이아웃 요소는 ILayoutElement 인터페이스를 상속받는 Image 또는 Text 컴포넌트이거나, 레이아웃 그룹이거나, Layout Element 컴포넌트일 수 있다.
@@ -493,6 +494,7 @@
 　
 
 - **ASPECT RATIO FITTER**
+    - *https://docs.unity3d.com/2023.2/Documentation/Manual/script-AspectRatioFitter.html*
     - Aspect Ratio(종횡비) 값에 따라서 UI를 리사이즈 한다.
     - 화면 해상도 얘기가 아님. Rect Transform 리사이즈 얘기다.
     - 최소 및 선호 크기와 같은 레이아웃 정보를 고려하지 않는다.

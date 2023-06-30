@@ -454,7 +454,8 @@
 
 - **CONTENT SIZE FITTER**
     - 자체 레이아웃 요소의 크기를 제어하는 기능을 수행.
-    - 크기는 게임 오브젝트 레이아웃 요소 컴포넌트의 min 또는 preferred 크기에 따라 결정된다. 즉, 레이아웃 요소는 ILayoutElement 인터페이스를 상속받는 Image 또는 Text 컴포넌트이거나, 레이아웃 그룹이거나, Layout Element 컴포넌트일 수 있다.
+    - 크기는 게임 오브젝트 레이아웃 요소 컴포넌트의 min 또는 preferred 크기에 따라 결정된다.
+    - 즉, 레이아웃 요소는 ILayoutElement 인터페이스를 상속받는 Image 또는 Text 컴포넌트이거나, 레이아웃 그룹이거나, Layout Element 컴포넌트일 수 있다.
     - Content Size Fitter
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/UI_ContentSizeFitterInspector.png)
     - Unconstrained

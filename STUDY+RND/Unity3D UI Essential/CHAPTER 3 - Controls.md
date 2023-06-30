@@ -32,7 +32,7 @@
 # # TEXT 컨트롤/컴포넌트
     ● UI 시스템에 텍스트를 표현하고자 할 때 사용.
     ● TextMeshPro를 사용할 수도 있다. 따로 설명하자.
-https://docs.unity3d.com/2023.2/Documentation/Manual/script-Text.html
+*https://docs.unity3d.com/2023.2/Documentation/Manual/script-Text.html*
 
 
 　

@@ -177,10 +177,10 @@
         > - 언체크 되면 컨트롤이 비활성화 된다.
     - **Transition**
         > - 컨트롤 상태 별 전환 효과
-        > - [이거보고 자세히 정리 하자](https://docs.unity3d.com/kr/2021.1/Manual/script-SelectableTransition.html)
+        > - *https://docs.unity3d.com/kr/2021.1/Manual/script-SelectableTransition.html*
     - **Navigation**
         > - UI 요소 내비게이션이 어떻게 제어될지 결정.
-        > - [이거 보고 자세히 정리하자](https://docs.unity3d.com/kr/2021.1/Manual/script-SelectableNavigation.html)
+        > - *https://docs.unity3d.com/kr/2021.1/Manual/script-SelectableNavigation.html*
     - **Text Component**
         > - 입력받은 텍스트를 표시할 Text 컨트롤
     - **Text**
@@ -230,6 +230,7 @@
 　
 
 - **SHADOW COMPONENT**
+    - *https://docs.unity3d.com/2023.2/Documentation/Manual/script-Shadow.html*
     - Text와 Image 같은 그래픽 컴포넌트에 간단한 그림자를 추가한다.
     - 그래픽 컴포넌트와 같은 게임 오브젝트에 위치해야 한다.
     - 효과 적용 전
@@ -249,6 +250,7 @@
 　
 
 - **OUTLINE COMPONENT**
+    - *https://docs.unity3d.com/2023.2/Documentation/Manual/script-Outline.html*
     - Text와 Image 같은 그래픽 컴포넌트에 간단한 테두리를 추가한다.
     - 효과 적용 전
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/outline1.png)

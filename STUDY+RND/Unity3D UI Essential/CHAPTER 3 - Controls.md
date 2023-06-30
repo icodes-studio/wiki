@@ -91,8 +91,63 @@ https://docs.unity3d.com/2023.2/Documentation/Manual/script-Text.html
     - **Material**
         > - 텍스트를 렌더링 할 기본 재질을 설정.
 
-- **간단한 FPS 컨트롤**
-  - 스크립트 제어 부분은 스킵.
+
+　
+
+- **스크립트로 Text UI 제어**
+    - 간단한 FPS 컨트롤
+        ```
+        using UnityEngine;
+        using UnityEngine.UI;
+
+        [RequireComponent(typeof(Text))]
+        public class FPSCounter : MonoBehaviour
+        {
+            private Text textComponent;
+            private int frameCount = 0;
+            private float fps = 0f;
+            private float timeLeft = 0.5f;
+            private float timePassed = 0f;
+            private float updateInterval = 0.9f;
+
+            private void Awake()
+            {
+                textComponent = GetComponent<Text>();
+                if (null == textComponent)
+                {
+                    Debug.LogError("This script needs to be attached to a Text compnent!");
+                    enabled = false;
+                    return;
+                }
+            }
+
+            private void Update()
+            {
+                frameCount += 1;
+                timeLeft -= Time.deltaTime;
+                timePassed += Time.timeScale / Time.deltaTime;
+
+                if (timeLeft <= 0f)
+                {
+                    fps = timePassed / frameCount;
+                    timeLeft = updateInterval;
+                    timePassed = 0f;
+                    frameCount = 0;
+                }
+
+                if (fps < 30)
+                    textComponent.color = Color.red;
+                else if (fps < 60)
+                    textComponent.color = Color.yellow;
+                else
+                    textComponent.color = Color.green;
+
+                textComponent.text = string.Format($"{fps} FPS");
+            }
+        }
+
+        ```
+
 
 　
 

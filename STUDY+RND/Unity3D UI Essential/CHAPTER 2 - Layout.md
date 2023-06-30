@@ -424,8 +424,8 @@
     - *https://docs.unity3d.com/2023.2/Documentation/Manual/script-LayoutElement.html*
     - 레이아웃 그룹 하위 요소들에 Layout Element 컴포넌트 추가.
     - 레이아웃 그룹의 리사이징 기본 기능을 커스터마이징 한다.
+    - ***레이아웃 그룹의 Control Child Size 옵션이 켜져 있고 Child Force Expand 옵션이 꺼져 있어야 이 컴포넌트의 의미가 있겠다.***
     - 좀 더 정확히 말하자면, 레이아웃 그룹이 하위 엘리먼트들을 리사이징하기 위해서 각 하위 UI 컨트롤들이 가지고 있는 최소, 선호 또는 가변 크기 값(대부분의 UI 컨트롤은 내부적으로 Layout Element 속성을 포함)을 가지고 계산하는데, 이 Layout Element 컴포넌트는 이들 값을 변경하는 역할을 한다.
-    - ***즉, 부모 레이아웃 그룹의 Control Child Size 옵션이 켜져 있고 Child Force Expand 옵션이 꺼져 있어야 이 컴포넌트의 의미가 있겠다.***
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/verticallayoutgroup-layoutelement.png)
     - **Ignore Layout**
         > - 체크하면 레이아웃 그룹으로 정렬을 하지 않는다.

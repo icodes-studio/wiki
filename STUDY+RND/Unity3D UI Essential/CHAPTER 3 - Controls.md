@@ -363,6 +363,7 @@
         > - 　　Sprite의 Pixels Per Unit에 이 값이 곱해진다.
         > - 　　(모서리) 해상도를 조절하는데 매우 유용하다.
     - **Image Type : Tiled**
+        > - https://wergia.tistory.com/223
         > - 이미지를 반복으로 그려주는 타입.
         > - 스프라이트에 Border 값을 주는 경우 패턴이 잘 연결될 수 있도록 주의가 필요하다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/titled.gif)

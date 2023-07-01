@@ -21,8 +21,8 @@
 
 - **드로우 콜 최적화**
     - 성능을 향상을 위해 이미지를 스프라이트 한 장에 합쳐 사용.
-    - [***Sprite Packer를 사용하는 방법***](https://learnandcreate.tistory.com/131)
-    - [***Sprite Atlas를 사용하는 방법***](https://skuld2000.tistory.com/28)
+    - ***AS-IS:*** [***Sprite Packer를 사용하는 방법***](https://learnandcreate.tistory.com/131)
+    - ***TO-BE:*** [***Sprite Atlas를 사용하는 방법***](https://skuld2000.tistory.com/28)
     - 기존에는 Sprite Packer를 사용했으나 2019 이상에서는 레거시로 사라지고 Sprite Atlas가 사용된다.
 
 　

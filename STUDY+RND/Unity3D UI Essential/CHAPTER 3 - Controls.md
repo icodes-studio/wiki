@@ -437,16 +437,16 @@
     - Selectable 컴포넌트가 다루는 이벤트
         > - Hover(Highlighted)
         > - Pressed
-    - **Options - Transition**
+    - **Transition**
         > - 컨트롤의 상태에 따라 선택한 Graphic의...
         > - Color Tint: 색조를 변경.
         > - Sprite Swap: 스프라이트를 변경
         > - Animation: 애니메이션을 변경
         > - None: 아무것도 안 함.
-    - **Options - Navigation**
+    - **Navigation**
         > - 키보드 방향키로 다른 컨트롤 선택하는 방법
         > - 잠시 후 따로 자세히 설명한다.
-    - **Options - Visualize**
+    - **Visualize**
         > - 네비게이션 흐름을 씬 뷰에 시각화한다.
 
 

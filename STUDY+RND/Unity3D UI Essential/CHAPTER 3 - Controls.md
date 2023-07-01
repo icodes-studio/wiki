@@ -453,13 +453,20 @@
 　
 
 - **이벤트에 대응하기**
-  - 스킵
-
+    - 버튼 이벤트 핸들러 인터페이스
+        > - IEventSystemHandler
+        > - IPointerClickHandler
+    - 스크립트 코드 없이 이벤트 발생시 게임 오브젝트 변경하기
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/button-onclick.png)
+        > - 1\) Runtime selector: 이벤트를 에디터에서 실행할 것인지 게임에서(런타임) 실행할 것인지 지정한다. 에디터 옵션을 선택하는 대신, 스크립트에서 ***[ExecuteInEditMode]*** 특성을 사용해도 같은 효과가 있다.
+        > - 2\) Object selector: 하이어러키 상에서 클릭시 뭐가를 작업할 대상 게임 오브젝트를 지정.
+        > - 3\) Action selector: 선택한 게임 오브젝트에 대한 실행할 컴포넌트 들의 속성 및 멤버 함수를 지정.
+        > - 4\) Value selector: 수정 가능한 속성이나 매개변수가 있는 스크립트 메서드에 전달할 인자 값.
 
 　
 
 - **애니메이션 버튼 만들기 실습**
-    - [UI 리소스팩은 여기](http://opengameart.org/content/ui-pack) 또는 [여기서 다운로드](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/UIpack.zip)
+    - [***UI 리소스팩은 여기***](http://opengameart.org/content/ui-pack) 또는 [***여기서 다운로드***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/UIpack.zip)
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/superawesomegame.png)
         > - 리소스 팩에서 **"/UIpack/Spritesheet/"** 폴더로 이동
         > - **PNG** 파일과 **XML** 파일 유니티로 가져오기

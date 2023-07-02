@@ -468,10 +468,8 @@
 - **애니메이션 버튼 만들기 실습**
     - [***UI 리소스팩은 여기***](http://opengameart.org/content/ui-pack) 또는 [***여기서 다운로드***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/UIpack.zip)
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/superawesomegame.png)
-        > - 리소스 팩에서 **"/UIpack/Spritesheet/"** 폴더로 이동
-        > - **PNG** 파일과 **XML** 파일 유니티로 가져오기
-        > - 리소스 팩에서 **/UIpack/Font/"** 폴더로 이동
-        > - **TTF** 파일 유니티로 가져오기
+        > - 리소스 팩에서 **"/UIpack/Spritesheet/"** 폴더에 있는 **PNG** 파일과 **XML** 파일 유니티로 가져오기
+        > - 리소스 팩에서 **"/UIpack/Font/"** 폴더에 있는 **TTF** 폰트파일 유니티로 가져오기
         > - 애셋스토어에서 **XML Texture Atlas Slicer** 설치하기
         > - **PNG** 스프라이트의 Sprite Mode를 **Multiple** 변경 후
         > - 스프라이트 선택/우클릭/메뉴 팝업에서 **"Slice Sprite Using XML"** 선택해서 스프라이트 슬라이싱
@@ -482,15 +480,15 @@
         > - 버튼의 **Transition** 속성을 **Animation** 항목으로 설정.
         > - 버튼의 **Auto Generate Animation** 버튼을 클릭해서 기본적인 애니메이션 컨트롤러를 생성.
         > - 버튼 게임 오브젝트에 **Animator** 컴포넌트가 추가되었음.
-        > - 프로젝트 뷰에서 애니메이터를 더블클릭하면 **Animator 편집창을** 띄울 수 있다.
+        > - 프로젝트 뷰에서 추가된 애니메이터를 더블클릭하면 **Animator 편집창을** 띄울 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/animatoredit.png)
         > - 하이어러키 뷰에서 버튼 오브젝트를 선택하고 **"Windows / Animation / Animation"** 항목을 선택하여 Animation 창을 연다. Clips 드랍다운을 열어보면 다섯 개의 클립을 찾을 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/button-animation.png)
         > - **Highlighted** 클립을 선택한 후 **Record** 버튼을 눌러 녹화 시작.
         > - 하이어러키 뷰에서 버튼의 Image 컴포넌트 Source Image를 **"yellow_button02.png"** 스프라이트로 변경
         > - 이어서 Rect Transform 컴포넌트의 **Scale X, Y**를 각각 1.1로 변경
-        > - Record 버튼을 다시 눌러 녹화 중지.
-        > - 애니메이션 클립의 속성에서 **Loop Time** 언체크.
+        > - Record 버튼을 다시 눌러 녹화 완료.
+        > - "Highlighted" 애니메이션 클립의 속성에서 **Loop Time** 언체크.
         > - 같은 방법으로 각각의 애니메이션 클립을 수정한다.
         > - 버튼의 위치와 스케일 등의 값은 이전 상태에 기반을 두기 때문에 애니메이션 클립에서 명시적으로 변경하지 않는 한, 초기값으로 자동 리셋된다.
 

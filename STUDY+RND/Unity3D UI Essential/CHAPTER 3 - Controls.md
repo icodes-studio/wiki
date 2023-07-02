@@ -508,9 +508,9 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/toggle.png)
     - 토글 컨트롤에 포함된 요소들
         > - Toggle 컴포넌트
-        > - 배경으로 사용할 Image 컴포넌트(하위 오브젝트)
-        > - 체크 마크로 사용할 Image 컴포넌트(하위 오브젝트)
-        > - 라벨 텍스트를 표현할 Text 컴포넌트
+        > - 체크 박스 배경으로 사용할 Image 오브젝트 & 컴포넌트
+        > - 체크 마크로 사용할 Image 오브젝트 & 컴포넌트
+        > - 라벨 텍스트를 표현할 Text 오브젝트 & 컴포넌트
     - Toggle 컴포넌트는 Button 컴포넌트와 마찬가지로 **Selectable** 컴포넌트를 상속받는다.
     - 버튼과 같은 방식으로 이벤트에 대응해 시각적인 액션을 수행.
 
@@ -526,7 +526,6 @@
     - Graphic
         > - Toggle을 켜고 끌 때 나타났다 사라지는 이미지
         > - 좀 더 정확히 말하자면 해당 이미지 그래픽의 Canvas Renderer 알파값을 트위닝 해서 나타나거나 사라지게 한다.
-        > - 체크 마크 연출의 확장 가능성을 보여준다.
     - Group
         > - 컨트롤들을 그룹화 시켜서 하나만 체크될 수 있도록 한다.
 

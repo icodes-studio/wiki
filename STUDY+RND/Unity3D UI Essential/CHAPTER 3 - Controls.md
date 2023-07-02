@@ -458,10 +458,10 @@
         > - IPointerClickHandler
     - 스크립트 코드 없이 이벤트 발생시 게임 오브젝트 변경하기
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/button-onclick.png)
-        > - 1\) Runtime selector: 이벤트를 에디터에서 실행할 것인지 게임에서(런타임) 실행할 것인지 지정한다. 에디터 옵션을 선택하는 대신, 스크립트에서 ***[ExecuteInEditMode]*** 특성을 사용해도 같은 효과가 있다.
-        > - 2\) Object selector: 하이어러키 상에서 클릭시 뭐가를 작업할 대상 게임 오브젝트를 지정.
-        > - 3\) Action selector: 선택한 게임 오브젝트에 대한 실행할 컴포넌트 들의 속성 및 멤버 함수를 지정.
-        > - 4\) Value selector: 수정 가능한 속성이나 매개변수가 있는 스크립트 메서드에 전달할 인자 값.
+        > - ***(1) Runtime selector:*** 이벤트를 에디터에서 실행할 것인지 게임에서(런타임) 실행할 것인지 지정한다. 에디터 옵션을 선택하는 대신, 스크립트에서 ***[ExecuteInEditMode]*** 특성을 사용해도 같은 효과가 있다.
+        > - ***(2) Object selector:*** 하이어러키 상에서 뭔가를 변경할 대상 게임 오브젝트를 지정.
+        > - ***(3) Action selector:*** (2)에서 선택한 게임 오브젝트에 바인딩 되어 있는 컴포넌트 들의 속성 및 멤버 함수를 지정.
+        > - ***(4) Value selector:*** (3)에서 선택한 속성이나 멤버 함수의 매개변수 값을 지정.
 
 　
 

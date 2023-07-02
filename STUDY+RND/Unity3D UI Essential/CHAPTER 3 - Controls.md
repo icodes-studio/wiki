@@ -409,6 +409,7 @@
     ● 사용자의 클릭에 반응하고, 액션을 시작하거나 확인하는 데 사용.
     ● Button 컨트롤은 여러 컴포넌트를 하나로 묶어놓은 것에 가깝다.
     ● 새로운 컨트롤을 만들거나 조합하는데 좋은 레퍼런스가 되겠다.
+*https://docs.unity3d.com/2023.2/Documentation/Manual/script-Button.html*
 
 
 　

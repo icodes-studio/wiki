@@ -457,11 +457,11 @@
     - 버튼 이벤트 핸들러 인터페이스
         > - IEventSystemHandler
         > - IPointerClickHandler
-    - 스크립트 코드 없이 이벤트 발생시 게임 오브젝트 변경하기
+    - 이벤트 발생시 게임 오브젝트에 바인딩 되어 있는 컴포넌트 속성 또는 메소드 호출하기
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/button-onclick.png)
         > - ***(1) Runtime selector:*** 이벤트를 에디터에서 실행할 것인지 게임에서(런타임) 실행할 것인지 지정한다. 에디터 옵션을 선택하는 대신, 스크립트에서 ***[ExecuteInEditMode]*** 특성을 사용해도 같은 효과가 있다.
-        > - ***(2) Object selector:*** 하이어러키 상에서 뭔가를 변경할 대상 게임 오브젝트를 지정.
-        > - ***(3) Action selector:*** (2)에서 선택한 게임 오브젝트에 바인딩 되어 있는 컴포넌트 들의 속성 및 멤버 함수를 지정.
+        > - ***(2) Object selector:*** 하이어러키 상에서 대상 게임 오브젝트를 지정.
+        > - ***(3) Action selector:*** (2)에서 선택한 게임 오브젝트에 바인딩 되어 있는 컴포넌트 들의 속성 또는 멤버 함수를 지정.
         > - ***(4) Value selector:*** (3)에서 선택한 속성이나 멤버 함수의 매개변수 값을 지정.
 
 　
@@ -500,6 +500,7 @@
 # # TOGGLE 컨트롤
     ● 사용자가 옵션을 켜거나 끌 수 있도록 하는 체크박스.
     ● 선택하거나 선택하지 않거나...
+*https://docs.unity3d.com/2023.2/Documentation/Manual/script-Toggle.html*
 
 
 　

@@ -474,20 +474,20 @@
         > - **TTF** 파일 유니티로 가져오기
         > - 애셋스토어에서 **XML Texture Atlas Slicer** 설치하기
         > - **PNG** 스프라이트의 Sprite Mode를 **Multiple** 변경 후
-        > - **"Assets / Slice Sprite Using XML"** 스프라이트 슬라이싱
-        > - 유니티 하이어러키에 버튼 UI 추가
+        > - 스프라이트 선택/우클릭/메뉴 팝업에서 **"Slice Sprite Using XML"** 선택해서 스프라이트 슬라이싱
+        > - 하이어러키 뷰에서 버튼 UI 추가
         > - **"blue_button01.png"** 스프라이트를 버튼 Source Image에 할당.
         > - **"kenvector_future_thin"** 폰트를 버튼 텍스트 Font에 할당.
         > - 버튼 텍스트를 **"START GAME"** 으로 변경
         > - 버튼의 **Transition** 속성을 **Animation** 항목으로 설정.
         > - 버튼의 **Auto Generate Animation** 버튼을 클릭해서 기본적인 애니메이션 컨트롤러를 생성.
         > - 버튼 게임 오브젝트에 **Animator** 컴포넌트가 추가되었음.
-        > - 프로젝트 뷰에서 "Button" 애니메이터를 더블클릭하면 **Animator 편집창을** 띄울 수 있다.
+        > - 프로젝트 뷰에서 애니메이터를 더블클릭하면 **Animator 편집창을** 띄울 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/animatoredit.png)
         > - 하이어러키 뷰에서 버튼 오브젝트를 선택하고 **"Windows / Animation / Animation"** 항목을 선택하여 Animation 창을 연다. Clips 드랍다운을 열어보면 다섯 개의 클립을 찾을 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/button-animation.png)
         > - **Highlighted** 클립을 선택한 후 **Record** 버튼을 눌러 녹화 시작.
-        > - 하이어러키 뷰에서 버튼의 Image 컴포넌트 Source Image를 **"yellow_button02.png"**로 변경
+        > - 하이어러키 뷰에서 버튼의 Image 컴포넌트 Source Image를 **"yellow_button02.png"** 스프라이트로 변경
         > - 이어서 Rect Transform 컴포넌트의 **Scale X, Y**를 각각 1.1로 변경
         > - Record 버튼을 다시 눌러 녹화 중지.
         > - 애니메이션 클립의 속성에서 **Loop Time** 언체크.

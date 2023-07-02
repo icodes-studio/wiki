@@ -557,8 +557,7 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/dynamicparameter-setactive.png)
     - Static Parameters 카테고리의 SetActive 메소드를 호출하면 토글의 상태 값은 무시되고 고정된 인자 값을 정의할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/staticparameters-3.png)
-    - Static Parameters 메소드를 이용하는 다른 유용한 예제.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/staticparameters2.png)
+
 
 　
 

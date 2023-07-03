@@ -96,7 +96,6 @@
     - Orthographic
         > - 2D 평면 카메라
         > - Screen Space - Overlay 뷰와 동일한 모습.
-        > - 카메라 렌더링이 필요한 특수한 경우 사용.
 
 - **Field of View (FOV)**
     - Projection 옵션이 Perspective 일 때 활성화.
@@ -105,8 +104,7 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/Dolly-Zoom-Animation.gif)
 
 - **Physical Camera**
-    - 이건 설명하자면 길어지니 일단 스킵
-    - [유니티 매뉴얼 참고](https://docs.unity3d.com/2021.1/Documentation/Manual/PhysicalCameras.html)
+    - *https://docs.unity3d.com/2021.1/Documentation/Manual/PhysicalCameras.html*
 
 - **Clipping Planes**
     - 시작 평면과 끝 평면을 정해놓고 그 안의 것만 렌더링.
@@ -123,7 +121,7 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/viewport-2.jpg)
     - 응용하면 VR 컨텐츠를 만들거나
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/viewport-3.jpg)
-    - 미니맵을 만들거나 할 수 있으려나?\
+    - 미니맵을 만들거나 할 수 있으려나?
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/minimap.png)
 
 - **Depth**
@@ -132,21 +130,19 @@
     - 다만, 카메라 Clear flags 옵션을 Don't Clear로 지정하면 Z 깊이에 따라 앞뒤가 결정된다.
 
 - **Rendering Path**
-    - 렌더링 패스를 지정 - 설명 스킵.
-    - [유니티 매뉴얼](https://docs.unity3d.com/2021.1/Documentation/Manual/RenderingPaths.html) 참고
+    - *https://docs.unity3d.com/2021.1/Documentation/Manual/RenderingPaths.html*
 
 - **Target Texture**
     - 카메라 화면을 Render Texture에 실시간으로 그린다.
     - Render Texture가 지정되면 화면에는 그려지지 않는다.
-    - 복잡하거나 렌더링 비용이 큰 컨텐츠를 Render Texture에 그려놓고 활용하는 경우가 많다. (eg. 캐릭터)
+    - 복잡하거나 렌더링 비용이 큰 컨텐츠를 Render Texture에 그려놓고 활용하는 사례가 있다.
 
 - **Occlusion Culling**
     - 어떤 오브젝트가 다른 오브젝트에 의해 가려져서 카메라에 보이지 않을 때 보이지 않게 되는 오브젝트의 렌더링을 비활성화하는 최적화 기능.
-    - 웬만하면 이 기능은 사용한다.
 
 - **HDR**
     - **H**igh **D**ynamic **R**ange 렌더링을 켜거나 끈다.
-    - 자세한 내용은 [유니티 문서](https://docs.unity3d.com/2021.1/Documentation/Manual/HDR.html) 참고
+    - *https://docs.unity3d.com/2021.1/Documentation/Manual/HDR.html*
 
 - **MSAA**
     - 메시 테두리에 **M**ulti **S**ample **A**nti**A**liasing 기능을 켜거나 끔.
@@ -156,11 +152,12 @@
 
 - **Allow Dynamic Resolution**
     - Dynamic Resolution 렌더링 기능을 켜거나 끈다.
-    - 자세한 내용은 [유니티 문서](https://docs.unity3d.com/2021.1/Documentation/Manual/DynamicResolution.html) 참고
+    - *https://docs.unity3d.com/2021.1/Documentation/Manual/DynamicResolution.html*
 
 - **Target Display**
     - Defines which external device to render to. Between 1 & 8.
     - A camera has up to 8 target display settings. The camera can be controlled to render to one of up to 8 monitors. This is supported only on PC, Mac and Linux. In Game View the chosen display in the Camera Inspector will be shown.
+
 
 　
 

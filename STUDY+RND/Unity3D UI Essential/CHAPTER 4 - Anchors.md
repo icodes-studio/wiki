@@ -176,13 +176,11 @@
 　
 
 - **해상도 변경**
-    - 3:2 종횡비에서의 체력 게이지 모습
+    - 가로 해상도가 낮은 3:2 종횡비에서의 체력 게이지 모습
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/resolution-2.png)
-    - 5:4 종횡비에서의 체력 게이지 모습
+    - 가로 해상도가 더 낮은 5:4 종횡비에서의 체력 게이지 모습
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/resolution-3.png)
-    - 사실 종횡비가 포인트가 아니긴 한데...
-    - 암튼 이렇게 되는 걸 원한 건 아니겠지?
-    - 같은 스크린 크기라도 해상도가 낮으면 **왕따시** 문제도...
+    - 또한 같은 스크린 크기라도 해상도가 낮으면 **왕따시**
     - 문제는 고정 픽셀 크기 모드 - Constant Pixel Size Mode
 
 
@@ -192,13 +190,13 @@
     - Scale With Screen Size 모드를 사용해 보자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/scalewithscreensize.png)
     - 사례 #1에서 설명했으니 자세한 설명은 생략하고 결과 화면을 보자.
-    - 3:2 종횡비에서의 체력 게이지 모습
+    - 가로 해상도가 낮은 3:2 종횡비에서의 체력 게이지 모습
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/3-2.png)
-    - 5:4 종횡비에서의 체력 게이지 모습
+    - 가로 해상도가 더 낮은 5:4 종횡비에서의 체력 게이지 모습
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/5-4.png)
     - 멋지게 적용되었다. 하지만...
-    - 원하는 해상도에 맞추기 위해 게이지가 전체적으로 쪼그라들었다.
-    - 이 게이지 UI가 가독성이 너무 중요해서 크기를 포기할 수 없다면?
+    - 원하는 해상도에 맞추기 위해 게이지가 전체적으로 작아졌다.
+    - 만약 이 게이지 UI가 가독성이 너무 중요해서 크기를 포기할 수 없다면?
 
 
 　
@@ -210,7 +208,7 @@
     - 스크린 크기가 작아져도 물리적인 크기가 유지된다.
     - 얼추 보기엔 Constant Pixel Size 모드와 같아 보이지만 다른 개념임.
     - Constant Pixel Size 모드는 해상도과 관련이 있는 것이고
-    - Constant Physical Size 모드는 스크린 크기와 관련이 있다.
+    - Constant Physical Size 모드는 스크린의 물리적 크기와 관련이 있다.
     - 암튼, 아래 그림을 보면 마진이 너무 크게 잡혀있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/constant-physical-size-1.png)
     - Constant Pixel Size 모드 때처럼 금방 찌그러졌다.

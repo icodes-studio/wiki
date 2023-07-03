@@ -160,14 +160,14 @@
 　
 
 - 아래 그림과 같은 체력 게이지 컨트롤을 배치한다고 해보자.
-    > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/resolution-1.png)
+    - 체력 게이지는 슬라이더 컨트롤을 이용해 만들었다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/resolution-1.png)
 
 
 　
 
 - **기본 환경**
-    - 체력 게이지는 슬라이더 컨트롤을 이용해 만들었다.
-    - Canvas Scaler 옵션과 슬라이더 Rect Transform 설정은 아래와 같다.
+    - Canvas Scaler 옵션과 슬라이더 컨트롤의 Rect Transform 설정은 아래와 같다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/resolution-4.png)
     - 고정 픽셀 모드에서 stretch 앵커로 left/right 마진을 200 픽셀 주었다.
 

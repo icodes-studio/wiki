@@ -199,6 +199,8 @@
     ● Unity에서 제공하는 Standard Assets Example Project를 활용해서 간단하게 만들어보자.
 
 - **Standard Assets Example Project 활용**
+    - *https://github.com/intrepion/standard-assets-example-project*
+    - *Unity 2019.2.10f1 테스트*
     - Standard Assets Example Project를 유니티에서 오픈.
     - /Assets/SampleScenes/Scenes/Car 씬 오픈.
     - 하이어러키 루트에 Canvas 추가

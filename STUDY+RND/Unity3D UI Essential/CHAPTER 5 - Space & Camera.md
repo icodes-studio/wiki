@@ -132,10 +132,11 @@
     - **H**igh **D**ynamic **R**ange 렌더링을 켜거나 끈다.
     - *https://docs.unity3d.com/2021.1/Documentation/Manual/HDR.html*
 - **MSAA**
+    - *https://docs.unity3d.com/kr/2019.4/Manual/PostProcessing-Antialiasing.html*
+    - [*https://vallista.tistory.com*](https://vallista.tistory.com/entry/Unity3D-AntiAliasing-Anisotropic-Filtering-%EC%95%88%ED%8B%B0-%EC%97%90%EC%9D%BC%EB%A6%AC%EC%96%B4%EC%8B%B1-%EC%9D%B4%EB%B0%A9%EC%84%B1-%ED%95%84%ED%84%B0%EB%A7%81-%EC%A0%81%EC%9A%A9)
     - 메시 테두리에 **M**ulti **S**ample **A**nti **A**liasing 기능을 켜거나 끔.
     - 기능을 킨 경우 Graphics Settings 설정에 따른다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/aacomparison.png)
-    - 자세한 내용은 [유니티 매뉴얼](https://docs.unity3d.com/kr/2019.4/Manual/PostProcessing-Antialiasing.html), [관련 포스트](https://vallista.tistory.com/entry/Unity3D-AntiAliasing-Anisotropic-Filtering-%EC%95%88%ED%8B%B0-%EC%97%90%EC%9D%BC%EB%A6%AC%EC%96%B4%EC%8B%B1-%EC%9D%B4%EB%B0%A9%EC%84%B1-%ED%95%84%ED%84%B0%EB%A7%81-%EC%A0%81%EC%9A%A9) 참고
 - **Allow Dynamic Resolution**
     - Dynamic Resolution 렌더링 기능을 켜거나 끈다.
     - *https://docs.unity3d.com/2021.1/Documentation/Manual/DynamicResolution.html*

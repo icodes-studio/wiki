@@ -14,5 +14,10 @@
         > - Manage which Input Module is in use
         > - Manage Raycasting (if required)
         > - Updating all Input Modules as required
-    - ...
 
+
+　
+
+- **Event System Loop**
+    - 이벤트 시스템 루프
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/eventsystemloop.png)

@@ -160,8 +160,7 @@
 　
 
 - 아래 그림과 같은 체력 게이지 컨트롤을 배치한다고 해보자.
-    - 　
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/resolution-1.png)
+    > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/resolution-1.png)
 
 
 　

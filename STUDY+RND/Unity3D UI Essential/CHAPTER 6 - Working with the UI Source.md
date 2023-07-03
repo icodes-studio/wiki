@@ -37,3 +37,20 @@
         > - Physics 2D Raycaster - Used for 2D physics elements
         > - Physics Raycaster - Used for 3D physics elements
 
+
+　
+
+　
+
+# # 이벤트 다루기
+    ● 새로운 UnityEvent 로직
+    ● 델리게이트 활용
+
+
+　
+
+- **이벤트가 발생하면 콘솔에 내용 출력하기**
+    - SimpleEvent.cs
+        ```
+        ...
+        ```

@@ -151,6 +151,7 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/UI_MultiResAllResolutions.png)
     - 가로 해상도는 1.5배 넓지만 높이가 1.5배 작기 때문에 이 두 팩터는 서로 상쇄되어 최종 스케일 팩터가 1이 되므로 버튼 크기가 유지.
 
+
 　
 
 　

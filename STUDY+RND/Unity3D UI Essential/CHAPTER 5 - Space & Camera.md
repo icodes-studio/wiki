@@ -67,7 +67,6 @@
 - **Clear flags**
     - 카메라 렌더링 패스 중 어느 부분을 클리어할지 결정.
     - 결국 배경 빈 공간은 이 Clear flags에 따라 초기화된다.
-    - ***책의 Don't clear 설명이 이상하다!***
     - Skybox
         > - 배경을 Skybox로 클리어한다.
     - Solid Color

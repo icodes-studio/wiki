@@ -117,7 +117,7 @@
     - *https://docs.unity3d.com/2023.2/Documentation/Manual/class-Canvas.html*
     - 카메라 독립적으로 UI를 최상위에 오버레이 하는 방식.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/CanvasOverlay.png)
-    - 해상도 변경 시 스크린에 일치하도록 자동으로 크기 변경됨.
+    - 해상도 변경 시 스크린에 일치하도록 캔버스가 자동으로 크기 변경됨.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/canvas-overlay.png)
     - Pixel Perfect
         > - UI 엘리먼트에 대해 [***픽셀 퍼펙트***](https://docs.unity3d.com/ScriptReference/Canvas-pixelPerfect.html)렌더링을 수행.

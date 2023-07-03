@@ -147,8 +147,6 @@
 
 　
 
-　
-
 - **이벤트 카메라**
     - **World Space** 모드는 UI 이벤트를 처리하는데 사용할 카메라 필요.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/eventcamera.png)

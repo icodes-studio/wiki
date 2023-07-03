@@ -59,11 +59,9 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/render-camera.png)
     - Main Camera 같은 다른 카메라와는 완전히 독립적이다.
     - UI의 렌더링 설정값을 결정한다.
-
 - **Camera Component**
     - Options
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/camera-options.png)
-
 - **Clear flags**
     - 카메라 렌더링 패스 중 어느 부분을 클리어할지 결정.
     - 결국 배경 빈 공간은 이 Clear flags에 따라 초기화된다.
@@ -88,7 +86,6 @@
     - 카메라 시야 안에 어떤 엘리먼트를 그릴 것인지 설정한다.
     - 기본 값은 UI만 그리도록 설정되어 있지만...
     - 경우에 따라 3D 오브젝트를 UI 앞에 그릴 필요도 있다.
-
 - **Projection**
     - Perspective
         > - 3D 원근법 카메라
@@ -96,20 +93,16 @@
     - Orthographic
         > - 2D 평면 카메라
         > - Screen Space - Overlay 뷰와 동일한 모습.
-
 - **Field of View (FOV)**
     - Projection 옵션이 Perspective 일 때 활성화.
     - 카메라의 화각을 결정한다. 보통 60 권장
     - 화각이 넓을수록 면은 더 휘어지게 된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/Dolly-Zoom-Animation.gif)
-
 - **Physical Camera**
     - *https://docs.unity3d.com/2021.1/Documentation/Manual/PhysicalCameras.html*
-
 - **Clipping Planes**
     - 시작 평면과 끝 평면을 정해놓고 그 안의 것만 렌더링.
     - 카메라가 표현하는 최소(Near), 최대(Far) 거리 포인트 지정
-
 - **Viewport Rect**
     - 카메라의 뷰포인트 크기를 조정한다.
     - 화면의 왼쪽, 아래쪽이 0, 오른쪽, 위쪽이 1.
@@ -123,37 +116,29 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/viewport-3.jpg)
     - 미니맵을 만들거나 할 수 있으려나?
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/minimap.png)
-
 - **Depth**
     - 카메라 드로우 순서로 값이 작은 카메라를 먼저 그림.
     - 즉, 값이 큰 카메라는 값이 작은 카메라 위에 그려진다.
     - 다만, 카메라 Clear flags 옵션을 Don't Clear로 지정하면 Z 깊이에 따라 앞뒤가 결정된다.
-
 - **Rendering Path**
     - *https://docs.unity3d.com/2021.1/Documentation/Manual/RenderingPaths.html*
-
 - **Target Texture**
     - 카메라 화면을 Render Texture에 실시간으로 그린다.
     - Render Texture가 지정되면 화면에는 그려지지 않는다.
     - 복잡하거나 렌더링 비용이 큰 컨텐츠를 Render Texture에 그려놓고 활용하는 사례가 있다.
-
 - **Occlusion Culling**
     - 어떤 오브젝트가 다른 오브젝트에 의해 가려져서 카메라에 보이지 않을 때 보이지 않게 되는 오브젝트의 렌더링을 비활성화하는 최적화 기능.
-
 - **HDR**
     - **H**igh **D**ynamic **R**ange 렌더링을 켜거나 끈다.
     - *https://docs.unity3d.com/2021.1/Documentation/Manual/HDR.html*
-
 - **MSAA**
     - 메시 테두리에 **M**ulti **S**ample **A**nti **A**liasing 기능을 켜거나 끔.
     - 기능을 킨 경우 Graphics Settings 설정에 따른다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/aacomparison.png)
     - 자세한 내용은 [유니티 매뉴얼](https://docs.unity3d.com/kr/2019.4/Manual/PostProcessing-Antialiasing.html), [관련 포스트](https://vallista.tistory.com/entry/Unity3D-AntiAliasing-Anisotropic-Filtering-%EC%95%88%ED%8B%B0-%EC%97%90%EC%9D%BC%EB%A6%AC%EC%96%B4%EC%8B%B1-%EC%9D%B4%EB%B0%A9%EC%84%B1-%ED%95%84%ED%84%B0%EB%A7%81-%EC%A0%81%EC%9A%A9) 참고
-
 - **Allow Dynamic Resolution**
     - Dynamic Resolution 렌더링 기능을 켜거나 끈다.
     - *https://docs.unity3d.com/2021.1/Documentation/Manual/DynamicResolution.html*
-
 - **Target Display**
     - Defines which external device to render to. Between 1 & 8.
     - A camera has up to 8 target display settings. The camera can be controlled to render to one of up to 8 monitors. This is supported only on PC, Mac and Linux. In Game View the chosen display in the Camera Inspector will be shown.

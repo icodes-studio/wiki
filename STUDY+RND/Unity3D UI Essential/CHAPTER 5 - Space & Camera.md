@@ -61,7 +61,7 @@
     - UI의 렌더링 설정값을 결정한다.
 
 - **Camera Component**
-    - Camera Options
+    - Options
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/camera-options.png)
 
 - **Clear flags**

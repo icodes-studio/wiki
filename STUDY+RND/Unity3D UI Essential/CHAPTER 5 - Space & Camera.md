@@ -159,7 +159,11 @@
 
 　
 
-# # Screen Space - Camera FOV 테스트
+# # Screen Space 예제
+
+　
+
+- **Camera FOV 테스트**
     - 캔버스를 생성하고 Render Mode를 Screen Space - Camera로 설정.
     - 카메라를 생성하고 이름을 "UICamera"로 변경 후 속성을...
         > - Layer : UI
@@ -188,12 +192,12 @@
 　
 
 # # World Space 예제
-    - Screen Space - Camera 모드는 UI를 3D 공간상에 배치한다.
-    - 그리하여 3D 원근감과 각종 공간 효과를 사용할 수 있게 한다.
-    - 하지만 카메라로부터 일정 거리 떨어진 곳에 UI를 표현하는 방식.
-    - 데드 스페이스 시리즈의 3D 인벤토리 같은 것은 이런 방식으로 구현할 수 없고 **World Space** 모드를 사용하여 캔버스가 씬에서 오브젝트처럼 동작하게 해야 한다.
-    - 책의 예제는 배보다 배꼽이 더 커 보인다.
-    - Unity에서 제공하는 **Standard Assets Example Project**를 활용하자.
+    ● Screen Space - Camera 모드는 UI를 3D 공간상에 배치한다.
+    ● 그리하여 3D 원근감과 각종 공간 효과를 사용할 수 있게 한다.
+    ● 하지만 카메라로부터 일정 거리 떨어진 곳에 UI를 표현하는 방식.
+    ● 데드 스페이스 시리즈의 3D 인벤토리 같은 것은 이런 방식으로 구현할 수 없고 World Space 모드를 사용하여 캔버스가 씬에서 오브젝트처럼 동작하게 해야 한다.
+    ● 책의 예제는 배보다 배꼽이 더 커 보인다.
+    ● Unity에서 제공하는 Standard Assets Example Project를 활용해서 하나 만들어보자.
 
 - **Standard Assets Example Project 활용**
     - Standard Assets Example Project를 유니티에서 오픈.

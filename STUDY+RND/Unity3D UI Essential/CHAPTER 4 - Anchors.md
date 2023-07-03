@@ -3,6 +3,7 @@
     ● UI는 무턱대고 줄이거나 늘리면 안 된다.
     ● 애초에 모든 크기에 들어맞는 UI 라는 게 있을 리 없어.
     ● 앵커 시스템을 사용하면 동적인 반응형 디자인 구현 가능.
+*https://docs.unity3d.com/2023.2/Documentation/Manual/UIBasicLayout.html*
 
 
 　

@@ -822,19 +822,3 @@
 - **VISUALIZE 버튼**
     - 에디터 씬 뷰에서 내비게이션 흐름을 시각적으로 표시한다.
     > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/GUIVisualizeNavigation.png)
-
-
-　
-
-　
-
-# # Sprite Atlas
-...
-
-
-　
-
-　
-
-# # Font
-...

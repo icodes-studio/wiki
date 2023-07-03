@@ -82,6 +82,7 @@
     - 앵커 프리셋을 선택할 때...
     - \<ALT\> 키를 누르면 컨트롤의 위치가 적절히 이동.
     - \<SHIFT\> 키를 누르면 Pivot(기준점) 위치가 적절히 이동.
+    - \<ALT\> 키와 \<SHIFT\> 키를 동시에 누르면 Pivot 위치와 컨트롤 위치가 적절히 이동.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/shortcut.png)
     - 그리고 당연한 얘기지만... 앵커는 커스텀 하게 변경이 가능하다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/25.gif)

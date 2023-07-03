@@ -54,6 +54,16 @@
 
 　
 
+　
+
+# # Camera
+    ● Screen Space - Camera 모드에서는 렌더링 카메라가 필요하다.
+    ● World Space 모드에서는 이벤트 카메라가 필요하다. 
+*https://docs.unity3d.com/2023.2/Documentation/Manual/class-Camera.html*
+
+
+　
+
 - **렌더링 카메라**
     - **Screen Space - Camera** 모드는 UI를 렌더링 하는 카메라가 필요하다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/render-camera.png)

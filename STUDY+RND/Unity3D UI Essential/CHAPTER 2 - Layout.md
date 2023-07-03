@@ -159,7 +159,7 @@
     - ***AKA,*** ***"Diegetic Interface"***
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/canvas-worldspace.png)
     - Event Camera
-        > - 렌더링 및 UI 이벤트를 처리하는 데 사용할 카메라
+        > - UI 이벤트를 처리하는 데 사용할 카메라
         > - 즉, EventSystem이 어떤 카메라를 사용할지 결정.
         > - 지정하지 않으면 Main Camera가 디폴트로 사용.
 

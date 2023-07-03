@@ -8,6 +8,7 @@
 　
 
 - **Screen Space - Overlay**
+    - *https://docs.unity3d.com/2023.2/Documentation/Manual/class-Canvas.html*
     - 카메라에 독립적으로 UI를 오버레이 하는 형식으로 작동.
     - 해상도 변경 시 스크린에 일치하도록 캔버스가 자동으로 크기 변경됨.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/canvas-overlay.png)
@@ -48,6 +49,7 @@
     - Event Camera
         > - UI 이벤트를 처리하는 데 사용할 카메라
         > - 즉, EventSystem이 어떤 카메라를 사용할지 결정.
+        > - 지정하지 않으면 Main Camera가 디폴트로 사용.
 
 
 　
@@ -67,9 +69,9 @@
     - 결국 배경 빈 공간은 이 Clear flags에 따라 초기화된다.
     - ***책의 Don't clear 설명이 이상하다!***
     - Skybox
-        > - 배경이 Skybox로 클리어한다.
+        > - 배경을 Skybox로 클리어한다.
     - Solid Color
-        > - 배경이 지정한 단색으로 클리어한다.
+        > - 배경을 지정한 단색으로 클리어한다.
     - **Depth only**
         > - 배경을 갱신 않고 이전 화면 위에 그리는데...
         > - Depth 렌더링 순서에 따라 오브젝트를 그린다.

@@ -3,8 +3,6 @@
     ● 이벤트와 델리게이트
     ● 다양한 예제
     ● 오픈소스의 정의와 활용 방법
-    
-![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/deadspace2-010.jpg)
 
 
 　

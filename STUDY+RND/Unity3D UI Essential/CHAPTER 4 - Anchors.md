@@ -89,6 +89,7 @@
         >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/26.gif)
 
+
 　
 
 　
@@ -96,6 +97,7 @@
 # # 여러 해상도의 UI 설계 - 사례 #1
     ● 게임은 아주 다양한 스크린 해상도를 지원해야 하는 경우가 많다.
     ● 간단한 사례 연구를 통해 다양한 방법을 살펴보고 비교하자.
+*https://docs.unity3d.com/2023.2/Documentation/Manual/HOWTO-UIMultiResolution.html*
 
 　
 

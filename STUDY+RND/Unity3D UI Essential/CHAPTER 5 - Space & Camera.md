@@ -127,7 +127,7 @@
     - Render Texture가 지정되면 화면에는 그려지지 않는다.
     - 복잡하거나 렌더링 비용이 큰 컨텐츠를 Render Texture에 그려놓고 활용하는 사례가 있다.
 - **Occlusion Culling**
-    - 어떤 오브젝트가 다른 오브젝트에 의해 가려져서 카메라에 보이지 않을 때 보이지 않게 되는 오브젝트의 렌더링을 비활성화하는 최적화 기능.
+    - 한 오브젝트가 다른 오브젝트에 의해 가려져서 카메라에 보이지 않을 때 오브젝트의 렌더링을 비활성화하는 최적화 기능.    
 - **HDR**
     - **H**igh **D**ynamic **R**ange 렌더링을 켜거나 끈다.
     - *https://docs.unity3d.com/2021.1/Documentation/Manual/HDR.html*

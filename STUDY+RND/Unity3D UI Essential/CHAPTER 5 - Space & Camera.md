@@ -60,8 +60,8 @@
     - Main Camera 같은 다른 카메라와는 완전히 독립적이다.
     - UI의 렌더링 설정값을 결정한다.
 
-- **Camera Options**
-    - 　
+- **Camera Component**
+    - Camera Options
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/camera-options.png)
 
 - **Clear flags**
@@ -85,8 +85,6 @@
         > - 다른 카메라의 오브젝트 Z 깊이는 유지된다.
         >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/cube2.gif)
-        > - UI도 거리유효, 다른 카메라 오브젝트 뒤에 그려짐.
-
 - **Culling Mask**
     - 카메라 시야 안에 어떤 엘리먼트를 그릴 것인지 설정한다.
     - 기본 값은 UI만 그리도록 설정되어 있지만...

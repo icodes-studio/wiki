@@ -157,7 +157,9 @@
 
 　
 
-- **Screen Space - Camera FOV 테스트**
+　
+
+# # Screen Space - Camera FOV 테스트
     - 캔버스를 생성하고 Render Mode를 Screen Space - Camera로 설정.
     - 카메라를 생성하고 이름을 "UICamera"로 변경 후 속성을...
         > - Layer : UI
@@ -180,11 +182,12 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/FOV2.png)
     - UI가 원근감 있게 표현되고 있다.
 
-　
 
 　
 
-- **World Space 예제**
+　
+
+# # World Space 예제
     - Screen Space - Camera 모드는 UI를 3D 공간상에 배치한다.
     - 그리하여 3D 원근감과 각종 공간 효과를 사용할 수 있게 한다.
     - 하지만 카메라로부터 일정 거리 떨어진 곳에 UI를 표현하는 방식.
@@ -202,6 +205,3 @@
     - Button UI 추가
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/world-space-game.gif)
     - 끝!
-
-
-  

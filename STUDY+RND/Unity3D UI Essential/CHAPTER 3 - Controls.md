@@ -686,14 +686,14 @@
     - 아래 그림과 같이 스크롤 되는 이미지 뷰어를 만들 거임.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/imageviewer.png)
         > - 사실 유니티 Scroll View 컨트롤과 거의 유사하다.
-        > - Canvas 아래 **Image** 컨트롤을 추가, 이름을 **"Scroll Border"**로 변경.
+        > - Canvas 아래 **Image** 컨트롤을 추가, 이름을 **"Scroll Border"** 변경.
         > - "Scroll Border" 오브젝트는 **컨텐츠 배경 테두리**로 쓰일 거임.
         > - Width: 400, Height: 200 변경하고 적당한 이미지 지정
         > - "Scroll Border" 하위로 빈 오브젝트 추가
         > - 이름을 **"Scroll Rect"** 변경.
         > - 여기에 **Mask** 컴포넌트를 추가.
         > - Image 컴포넌트를 별도로 추가해야 클리핑 되는 거 알지?
-        > - 테두리인 "Scroll Border"가 보여야 하니, 살짝 크기 조정.
+        > - 테두리인 "Scroll Border"가 보여야 하니, Border보다 약간 작게 크기 조정.
         > - **"Scroll Rect"** 하위로 **Image** 컨트롤 추가
         > - 소스 이미지에 **큰 이미지** 할당하고 **Set Native Size** 클릭
         > - "Scroll Rect" 오브젝트로 돌아가서...
@@ -711,7 +711,7 @@
         > - "Scroll Rect" 오브젝트의 **Scroll Rect** 컴포넌트에서...
         > - **Horizontal Scrollbar** 속성에 **"Horizontal Scrollbar"** 오브젝트 할당.
         > - **Vertical Scrollbar** 속성에 **"Vertical Scrollbar"** 오브젝트 할당.
-        > - 참 쉽죠?
+        > - 끝
 
 
 　

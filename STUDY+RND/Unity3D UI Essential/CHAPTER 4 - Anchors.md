@@ -9,7 +9,6 @@
 　
 
 - **앵커 기초 개념**
-    - *https://wergia.tistory.com/184*
     - *https://blog.danggun.net/4431*
     - Rect Transform 컴포넌트의 앵커 속성
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/rect-transform-anchor.png)
@@ -36,6 +35,7 @@
 　
 
 - **앵커 프리셋**
+    - https://wergia.tistory.com/184
     - 빨간색 십자선 사각형 이미지를 선택하면 앵커 프리셋 창이 뜬다.
     - 자주 쓰이는 앵커 패턴을 제공해 주는 프리셋.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/anchor-preset.png)

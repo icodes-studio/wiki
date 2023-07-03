@@ -129,8 +129,8 @@
 - **Occlusion Culling**
     - 한 오브젝트가 다른 오브젝트에 의해 가려져서 카메라에 보이지 않을 때 오브젝트의 렌더링을 비활성화하는 최적화 기능.    
 - **HDR**
-    - **H**igh **D**ynamic **R**ange 렌더링을 켜거나 끈다.
     - *https://docs.unity3d.com/2021.1/Documentation/Manual/HDR.html*
+    - **H**igh **D**ynamic **R**ange 렌더링을 켜거나 끈다.
 - **MSAA**
     - *https://docs.unity3d.com/kr/2019.4/Manual/PostProcessing-Antialiasing.html*
     - [*https://vallista.tistory.com*](https://vallista.tistory.com/entry/Unity3D-AntiAliasing-Anisotropic-Filtering-%EC%95%88%ED%8B%B0-%EC%97%90%EC%9D%BC%EB%A6%AC%EC%96%B4%EC%8B%B1-%EC%9D%B4%EB%B0%A9%EC%84%B1-%ED%95%84%ED%84%B0%EB%A7%81-%EC%A0%81%EC%9A%A9)

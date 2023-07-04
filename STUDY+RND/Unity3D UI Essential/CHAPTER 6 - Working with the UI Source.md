@@ -97,7 +97,7 @@
             public void RunMeFromTheInspector(string arg) => Debug.Log($"{nameof(RunMeFromTheInspector)} - {arg}");
         }
         ```
-    - 이벤트 델리게이트를 아래 그림과 같이 등록.
+    - 이벤트 핸들러를 아래 그림과 같이 등록.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/stringevent1.png)
     - 코드에서 등록한 핸들러와 인스펙터에서 등록한 핸들러가 각기 다른 스트링 인자를 받아 호출되는 모습을 볼 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/stringevent2.png)

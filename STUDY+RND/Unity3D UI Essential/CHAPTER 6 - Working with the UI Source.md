@@ -331,3 +331,51 @@
         ```
     - ***"Alarm"*** Prefab에 스크립트 바인딩
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/alarmpanel.png)
+
+
+　
+
+- **EventSystem 연동**
+    - AlarmScannerModule.cs 스크립트 수정
+        ```
+        using UnityEngine;
+        using UnityEngine.EventSystems;
+
+        public class AlarmScannerModule : BaseInputModule
+        {
+            public GameObject[] alarms;
+            public GameObject[] targets;
+            private Vector3 triggeredCameraLocation;
+            private bool triggered;
+
+            // 활성화된 입력 모듈에서 매 틱마다 실행
+            public override void Process()
+            {
+                if (targets == null || targets.Length == 0)
+                    return;
+
+                if (triggered == true)
+                    return;
+
+                triggeredCameraLocation = Vector3.zero;
+                foreach (var alarm in alarms)
+                {
+                    if (alarm.activeSelf == false)
+                        triggeredCameraLocation = alarm.transform.position;
+                }
+
+                if (triggeredCameraLocation != Vector3.zero)
+                {
+                    triggered = true;
+                    var data = new AlarmEventData(eventSystem, triggeredCameraLocation);
+                    foreach (var target in targets)
+                        ExecuteEvents.Execute(target, data, MyAlarmTriggerEvents.AlaramEventHandler);
+                }
+            }
+        }
+        ```
+    - 씬에 EventSystem을 생성한다.
+    - EventSystem 게임 오브젝트에 AlarmScannerModule 스크립트를 추가한다.
+    - 모든 Pickup을 targets 배열 속성으로 추가한다.
+    - 모든 Alarm을 alarms 배열 속성으로 추가한다.
+        ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/alarmscannermodule.png)

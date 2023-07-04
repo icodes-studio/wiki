@@ -166,5 +166,6 @@
         > - 하얀색 UI 위로 마우스를 가져가면 툴팁이 뜨고, 치우면 사라지도록 만들어보자!
         >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tooltip.png)
-
-
+    - 이 예제에서 사용한 방식은 가장 기본적인 것으로서 `Screen Space - Overlay` 캔버스에서만 작동한다.
+    - `Screen Space - Camera` 또는 `World Space` 캔버스에서 사용하고 싶다면 마우스 위치를 변환해야 한다.
+    - 더 자세한 내용은 ***UIWindowBase*** 예제를 확인하자.

@@ -169,7 +169,6 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tooltip.png)
     - 이 예제에서 사용한 방식은 가장 기본적인 것으로서 `Screen Space - Overlay` 캔버스에서만 작동한다.
     - `Screen Space - Camera` 또는 `World Space` 캔버스에서 사용하고 싶다면 마우스 위치를 변환해야 한다.
-    - 더 자세한 내용은 ***UIWindowBase*** 예제를 확인하자.
 
 
 　
@@ -379,3 +378,24 @@
     - 모든 Pickup을 targets 배열 속성으로 추가한다.
     - 모든 Alarm을 alarms 배열 속성으로 추가한다.
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/alarmscannermodule.png)
+    - 끝!
+
+
+　
+
+　
+
+# # 소스에 접근하기
+
+*https://github.com/Unity-Technologies/uGUI*
+
+- Unity UI 솔루션
+    - **UnityEditor.UI**
+        > - 모든 종류의 UI 컴포넌트에 대한 유니티 속성 드로어()와 커스텀 에디터 창()을 포함한다.
+        > - 새로운 데이터 기능을 확장하거나 추가할 때는 여기서 하면 된다.
+    - **UnityEngine.UI**
+        > - 이벤트 시스템에서 이미지나 토글 같은 컨트롤까지 핵심적인 UI 클래스와 컴포넌트를 담당한다.
+        > - 새로운 컨트롤을 추가하거나 기존의 컨트롤을 수정할 때는 여기서 작업하면 된다.
+    - **UnityEngine.UI-Editor**
+        > - 이전 UI 코드의 에디터 버전
+        > - UnityEngine.UI 프로젝트에서 링크된 파일들만을 포함하고 있다.

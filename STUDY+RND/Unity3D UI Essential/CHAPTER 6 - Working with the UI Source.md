@@ -387,8 +387,9 @@
 
 # # 소스에 접근하기
 
-*https://github.com/Unity-Technologies/uGUI*
+　
 
+- *https://github.com/Unity-Technologies/uGUI*
 - Unity UI 솔루션
     - **UnityEditor.UI**
         > - 모든 종류의 UI 컴포넌트에 대한 유니티 속성 드로어()와 커스텀 에디터 창()을 포함한다.

@@ -77,7 +77,7 @@
         ```
     - 빈 게임 오브젝트 하나 만들고 위 스크립트를 바인딩하면 인스펙터에 아래와 같이 표시된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/simple-event1.png)
-    - 위에서 만든 게임 오브젝트와 메소드를 아래 그림처럼 등록하면,
+    - 위에서 만든 게임 오브젝트와 ***RunMeFromTheInspector*** 메소드를 아래 그림처럼 등록하면,
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/simple-event2.png)
     - 핸들러가 호출되는 모습을 볼 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/event-console.png)

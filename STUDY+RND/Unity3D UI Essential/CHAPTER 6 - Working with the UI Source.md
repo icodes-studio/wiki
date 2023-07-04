@@ -74,6 +74,34 @@
 　
 
 - **매개변수 사용하기**
-    - ...
+    - 먼저 원하는 매개변수 패턴을 사용하여 새로운 클래스 타입을 UnityEvent\<T\> 클래스를 상속받아 정의
+        ```
+        using System;
+        using UnityEngine.Events;
 
+        [Serializable]
+        public class StringUnityEvent : UnityEvent<string>
+        {
+        }
+        ```
+    - 위 타입을 사용하는 컴포넌트 스크립트 작성
+        ```
+        using UnityEngine;
+
+        public class SimpleStringEvent : MonoBehaviour
+        {
+            public StringUnityEvent stringEvent = new ();
+            private void Awake() => stringEvent?.AddListener(OnEventDelegate);
+            private void Start() => stringEvent?.Invoke("Hello World");
+            private void OnEventDelegate(string arg) => Debug.Log($"{nameof(OnEventDelegate)} - {arg}");
+            public void RunMeFromTheInspector(string arg) => Debug.Log($"{nameof(RunMeFromTheInspector)} - {arg}");
+        }
+        ```
+    - 이벤트 델리게이트를 아래 그림과 같이 등록.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/stringevent1.png)
+    - 코드에서 등록한 핸들러와 인스펙터에서 등록한 핸들러가 각기 다른 스트링 인자를 받아 호출되는 모습을 볼 수 있다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/stringevent2.png)
+
+
+　
 

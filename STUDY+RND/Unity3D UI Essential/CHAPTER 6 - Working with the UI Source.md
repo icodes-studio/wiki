@@ -181,8 +181,7 @@
         > - Execute 함수를 포함한 정적 컨테이너 클래스
         > - [옵션] 이벤트를 처리하고 실행하기 위한 입력 모듈(BaseInputModule에서 확장)
         > - 인터페이스를 구현하는 클래스나 게임 오브젝트.
-    - 사용자 정의 이벤트 데이터 구조 만들기
-        > - AlarmSystem.cs
+    - **AlarmSystem.cs**
         ```
         using UnityEngine;
         using UnityEngine.EventSystems;
@@ -214,7 +213,7 @@
             }
         }
         ```
-        > - AlarmScannerModule.cs
+    - **AlarmScannerModule.cs**
         ```
         using UnityEngine;
         using UnityEngine.EventSystems;

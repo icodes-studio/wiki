@@ -259,12 +259,24 @@
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/rollaball.png)
 
-*https://learn.unity.com/project/roll-a-ball-1*
 
-*https://github.com/davidgaroro/unity-3d-roll-a-ball*
+　
+
+- **Roll a Ball 준비**
+    - *튜토리얼: https://learn.unity.com/project/roll-a-ball-1*
+    - *완성본: https://github.com/davidgaroro/unity-3d-roll-a-ball*
 
 
 　
 
-- ****
-    - ...
+- **사용자 정의 이벤트와 핸들러 스크립트 추가**
+    - 좀 전에 만들어 둔 아래 스크립트를 프로젝트에 추가
+        > - AlarmSystem.cs
+        > - AlarmScannerModule.cs
+
+
+　
+
+- **적 드로이드 스크립트**
+    - 어떤 경보(알람)를 받으면 그 지점을 공격하는 경계 로봇 스크립트
+

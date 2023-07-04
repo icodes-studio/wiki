@@ -305,7 +305,7 @@
             }
         }
         ```
-    - ***Pickup*** Prefab에 Droid 컴포넌트 바인딩
+    - ***"Pickup"*** Prefab에 Droid 컴포넌트 바인딩
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/pickup.png)
 
 
@@ -329,5 +329,5 @@
             }
         }
         ```
-    - "Alarm" Prefab에 스크립트 바인딩
+    - ***"Alarm"*** Prefab에 스크립트 바인딩
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/alarmpanel.png)

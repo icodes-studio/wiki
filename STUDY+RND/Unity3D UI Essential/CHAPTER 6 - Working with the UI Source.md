@@ -312,5 +312,22 @@
 　
 
 - **경고 누름판 구현**
-    - 바닥에 일종의 누름판을 추가해 공이 그 위로 지나가면 알람이 발생하도록 하자.
+    - 바닥에 누름판을 추가해 공이 그 위로 지나가면 알람이 발생하도록 하자.
+    - Plane 게임 오브젝트 하나 만들고 이름을 "Alarm"으로 변경
+    - Mesh Collider의 Convex와 Is Trigger 속성 체크
+    - 편하게 작업하기 위해 Prefab으로 등록
+    - 공 주변으로 게임오브젝트 4개 적절히 배치
+    - 공이 충돌했을 때 알람판을 제거하는 스크립트 작성 (Alarm.cs)
+        ```
+        using UnityEngine;
+
+        public class Alarm : MonoBehaviour
+        {
+            void OnTriggerEnter(Collider other)
+            {
+                gameObject.SetActive(false);
+            }
+        }
+        ```
+    - "Alarm" Prefab에 스크립트 바인딩
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/alarmpanel.png)

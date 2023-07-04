@@ -278,8 +278,7 @@
 　
 
 - **적 드로이드 구현**
-    - 어떤 경보(알람)를 받으면 그 지점을 공격하는 경계 로봇 스크립트
-    - Droid.cs
+    - 어떤 경보(알람)를 받으면 그 지점을 공격하는 경계 로봇 스크립트 작성 - *Droid.cs*
         ```
         using System.Collections;
         using UnityEngine;
@@ -317,7 +316,7 @@
     - Mesh Collider의 Convex와 Is Trigger 속성 체크
     - 편하게 작업하기 위해 Prefab으로 등록
     - 공 주변으로 게임오브젝트 4개 적절히 배치
-    - 공이 충돌했을 때 알람판을 제거하는 스크립트 작성 (Alarm.cs)
+    - 공이 충돌했을 때 알람판을 제거하는 스크립트 작성 - *Alarm.cs*
         ```
         using UnityEngine;
 

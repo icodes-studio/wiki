@@ -175,4 +175,89 @@
 　
 
 - **사용자 정의 이벤트와 핸들러 만들기**
-    - 
+    - 이벤트를 새로 만들려면 다음과 같은 정보를 정의해야 한다.
+        > - 사용자 정의 이벤트 데이터 구조 (BaseEventData에서 확장)
+        > - 사용자 정의 이벤트 인터페이스 (IEventSystemHandler에서 확장)
+        > - Execute 함수를 포함한 정적 컨테이너 클래스
+        > - [옵션] 이벤트를 처리하고 실행하기 위한 입력 모듈(BaseInputModule에서 확장)
+        > - 인터페이스를 구현하는 클래스나 게임 오브젝트.
+    - 사용자 정의 이벤트 데이터 구조 만들기
+        > - AlarmSystem.cs
+        ```
+        using UnityEngine;
+        using UnityEngine.EventSystems;
+
+        public class AlarmEventData : BaseEventData
+        {
+            public Vector3 data;
+            public AlarmEventData(EventSystem system, Vector3 data) : base(system)
+            {
+                this.data = data;
+            }
+        }
+
+        public interface IAlarmHandler : IEventSystemHandler
+        {
+            void OnAlarmTrigger(AlarmEventData data);
+        }
+
+        public static class MyAlarmTriggerEvents
+        {
+            private static void Execute(IAlarmHandler handler, BaseEventData data)
+            {
+                handler?.OnAlarmTrigger(ExecuteEvents.ValidateEventData<AlarmEventData>(data));
+            }
+
+            public static ExecuteEvents.EventFunction<IAlarmHandler> AlaramEventHandler
+            {
+                get { return Execute; }
+            }
+        }
+        ```
+        > - AlarmScannerModule.cs
+        ```
+        using UnityEngine;
+        using UnityEngine.EventSystems;
+
+        public class AlarmScannerModule : BaseInputModule
+        {
+            public GameObject[] targets;
+            private Vector3 triggeredCameraLocation;
+            private bool triggered;
+
+            // 활성화된 입력 모듈에서 매 틱마다 실행
+            public override void Process()
+            {
+                if (targets == null || targets.Length == 0)
+                    return;
+
+                if (triggered == true)
+                    return;
+
+                // TODO: 트리거된 알람을 위한 로직을 여기에 추가할 것
+                // TODO: 지금은 일단 그냥 리턴
+                triggeredCameraLocation = Vector3.zero;
+
+                if (triggeredCameraLocation != Vector3.zero)
+                {
+                    triggered = true;
+                    var data = new AlarmEventData(eventSystem, triggeredCameraLocation);
+                    foreach (var target in targets)
+                        ExecuteEvents.Execute(target, data, MyAlarmTriggerEvents.AlaramEventHandler);
+                }
+            }
+        }
+        ```
+
+
+
+
+
+
+
+
+
+
+
+
+https://github.com/davidgaroro/unity-3d-roll-a-ball

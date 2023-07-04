@@ -127,3 +127,44 @@
         > - ***ISubmitHandler:*** Submit 입력을 받았을 때(default. `Enter`키) 발생
         > - ***ICancelHandler:*** Cancel 입력을 받았을 때(default. `Esc`키) 발생
 
+
+　
+
+- **이벤트 실행하기**
+    - UI 엘리먼트에 마우스를 가져갔을 때 툴팁을 띄우는 간단한 스크립트를 생각해 보자.
+        ```
+        using UnityEngine;
+        using UnityEngine.EventSystems;
+
+        public class Tooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+        {
+            private bool displayed = false;
+            public RectTransform item;
+            private Vector3 offset;
+
+            private void Start()
+            {
+                offset = new Vector3(0, item.sizeDelta.y, 0);
+                item.gameObject.SetActive(displayed);
+            }
+
+            public void OnPointerEnter(PointerEventData eventData)
+            {
+                displayed = true;
+                item.transform.position = transform.position + offset;
+                item.gameObject.SetActive(displayed);
+            }
+
+            public void OnPointerExit(PointerEventData eventData)
+            {
+                displayed = false;
+                item.gameObject.SetActive(displayed);
+            }
+        }
+        ```
+    - 코드 보면 대충 사용법은 알겠지?
+        > - 하얀색 UI 위로 마우스를 가져가면 툴팁이 뜨고, 치우면 사라지도록 만들어보자!
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tooltip.png)
+
+

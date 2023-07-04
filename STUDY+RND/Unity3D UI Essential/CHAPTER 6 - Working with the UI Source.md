@@ -106,7 +106,6 @@
 　
 
 - **내장 이벤트 인터페이스**
-    - UI 시스템에서 이벤트의 보조 역할을 하는 ***이벤트 타입과 인터페이스들을*** 프리셋 형식으로 제공하고 있다.
     - ***포인터 이벤트***
         > - ***IPointerEnterHandler:*** 포인터(커서, 마우스 등)가 UI 오브젝트의 Rect Transform 영역에 들어갈 때 발생.
         > - ***IPointerExitHandler:*** 포인터가 UI 오브젝트의 Rect Transform 영역에서 나올 때 발생.

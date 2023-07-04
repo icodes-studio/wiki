@@ -254,17 +254,15 @@
 　
 
 # # Roll a Ball 예제
-    ● Unity 튜토리얼 사이트에서 ㅈ공하는 Roll a Ball 예제 활용
+    ● Unity 튜토리얼 사이트에서 제공하는 Roll a Ball 예제 활용
     ● 경고판을 밟으면 주위의 안드로이드 적들이 달려드는 기능 구현
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/rollaball.png)
-
 *https://learn.unity.com/project/roll-a-ball-1*
-
 *https://github.com/davidgaroro/unity-3d-roll-a-ball*
 
 
 　
 
 - ****
-    - 
+    - ...

@@ -67,5 +67,13 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/simple-event1.png)
     - 위에서 만든 게임 오브젝트와 ***RunMeFromTheInspector*** 메소드를 아래 그림처럼 등록하면,
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/simple-event2.png)
-    - 핸들러가 호출되는 모습을 볼 수 있다.
+    - 코드에서 등록한 핸들러와 인스펙터에서 등록한 핸들러 두 메서드가 호출되는 모습을 볼 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/event-console.png)
+
+
+　
+
+- **매개변수 사용하기**
+    - ...
+
+

@@ -49,7 +49,7 @@
 　
 
 - **UnityEvent 살펴보기**
-    - SimpleEvent.cs
+    - SimpleEvent.cs 이름으로 스크립트 파일을 준비한다.
         ```
         using UnityEngine;
         using UnityEngine.Events;

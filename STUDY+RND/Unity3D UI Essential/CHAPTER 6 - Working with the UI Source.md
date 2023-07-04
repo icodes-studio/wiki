@@ -57,22 +57,10 @@
         public class SimpleEvent : MonoBehaviour
         {
             public UnityEvent unityEvent = new ();
-
-            private void Start()
-            {
-                unityEvent?.AddListener(OnEventDelegate);
-                unityEvent?.Invoke();
-            }
-
-            private void OnEventDelegate()
-            {
-                Debug.Log(nameof(OnEventDelegate));
-            }
-
-            public void RunMeFromTheInspector()
-            {
-                Debug.Log(nameof(RunMeFromTheInspector));
-            }
+            private void Awake() => unityEvent?.AddListener(OnEventDelegate);
+            private void Start() => unityEvent?.Invoke();
+            private void OnEventDelegate() => Debug.Log(nameof(OnEventDelegate));
+            public void RunMeFromTheInspector() => Debug.Log(nameof(RunMeFromTheInspector));
         }
         ```
     - 빈 게임 오브젝트 하나 만들고 위 스크립트를 바인딩하면 인스펙터에 아래와 같이 표시된다.

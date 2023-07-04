@@ -30,7 +30,6 @@
 　
 
 - **Raycasters**
-    - EventSystem은 Raycast를 검사하는 용도로 사용된다.
     - Raycasters are used for figuring out what the pointer is over.
     - There are 3 provided Raycasters that exist by default:
         > - Graphic Raycaster - Used for UI elements
@@ -49,8 +48,36 @@
 
 　
 
-- **이벤트가 발생하면 콘솔에 내용 출력하기**
+- **UnityEvent 살펴보기**
     - SimpleEvent.cs
         ```
-        ...
+        using UnityEngine;
+        using UnityEngine.Events;
+
+        public class SimpleEvent : MonoBehaviour
+        {
+            public UnityEvent unityEvent = new ();
+
+            private void Start()
+            {
+                unityEvent?.AddListener(OnEventDelegate);
+                unityEvent?.Invoke();
+            }
+
+            private void OnEventDelegate()
+            {
+                Debug.Log(nameof(OnEventDelegate));
+            }
+
+            public void RunMeFromTheInspector()
+            {
+                Debug.Log(nameof(RunMeFromTheInspector));
+            }
+        }
         ```
+    - 빈 게임 오브젝트 하나 만들고 위 스크립트를 바인딩하면 인스펙터에 아래와 같이 표시된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/simple-event1.png)
+    - 위에서 만든 게임 오브젝트와 메소드를 아래 그림처럼 등록하면,
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/simple-event2.png)
+    - 핸들러가 호출되는 모습을 볼 수 있다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/event-console.png)

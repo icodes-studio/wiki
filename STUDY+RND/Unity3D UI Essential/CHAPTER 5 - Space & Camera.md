@@ -1,4 +1,4 @@
-# CHAPTER 5 - 화면공간, 월드공간, 카메라
+# CHAPTER 5 - Screen Space, World Space, and the Camera
     ● 지금까지 살펴본 플랫한 2D UI를 3D 공간으로 확장해보자.
     ● 데드 스페이스 시리즈의 3D 인벤토리는 좋은 예가 될 것이다.
     

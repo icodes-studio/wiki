@@ -1,4 +1,4 @@
-# CHAPTER 2 - 레이아웃 만들기
+# CHAPTER 2 - Building Layouts
     ● 새로운 Rect Transform
     ● Unity UI 캔버스
     ● 레이아웃과 그룹화 시스템

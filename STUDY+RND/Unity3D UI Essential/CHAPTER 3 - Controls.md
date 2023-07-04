@@ -1,4 +1,4 @@
-# CHAPTER 3 - 컨트롤 배우기
+# CHAPTER 3 - Control, Control You must Learn Control
     ● 새로운 UI 프레임워크의 기본 컨트롤
     ● 새로운 컨트롤을 사용한 예제
     ● 새로운 컨트롤 내비게이션 시스템

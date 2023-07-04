@@ -1,4 +1,4 @@
-# CHAPTER 6 - UI 소스 다루기
+# CHAPTER 6 - Working with the UI Source
     ● Event System에 대해
     ● 이벤트와 델리게이트
     ● 다양한 예제
@@ -264,6 +264,7 @@
 - **Roll a Ball 준비**
     - *https://learn.unity.com/project/roll-a-ball-1*
     - *https://github.com/davidgaroro/unity-3d-roll-a-ball*
+    - *https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/unity-3d-roll-a-ball-master.zip*
 
 
 　

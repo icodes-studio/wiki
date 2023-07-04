@@ -263,8 +263,8 @@
 　
 
 - **Roll a Ball 준비**
-    - *튜토리얼: https://learn.unity.com/project/roll-a-ball-1*
-    - *완성본: https://github.com/davidgaroro/unity-3d-roll-a-ball*
+    - *https://learn.unity.com/project/roll-a-ball-1*
+    - *https://github.com/davidgaroro/unity-3d-roll-a-ball*
 
 
 　

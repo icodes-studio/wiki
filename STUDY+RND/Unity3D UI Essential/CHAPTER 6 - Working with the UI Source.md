@@ -390,7 +390,6 @@
 　
 
 - *https://github.com/Unity-Technologies/uGUI*
-- Unity UI 솔루션
     - **UnityEditor.UI**
         > - 모든 종류의 UI 컴포넌트에 대한 유니티 속성 드로어()와 커스텀 에디터 창()을 포함한다.
         > - 새로운 데이터 기능을 확장하거나 추가할 때는 여기서 하면 된다.

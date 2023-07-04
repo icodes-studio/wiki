@@ -257,7 +257,7 @@
     ● Unity 튜토리얼 사이트에서 제공하는 Roll a Ball 예제 활용
     ● 사용자 정의 이벤트를 활용하여 경고판을 밟으면 적들이 달려드는 기능 구현
 
-![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/rollaball.png)
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/rollaball.gif)
 
 
 　

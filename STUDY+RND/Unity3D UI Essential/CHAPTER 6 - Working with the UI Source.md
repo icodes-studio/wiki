@@ -74,7 +74,7 @@
 　
 
 - **매개변수 사용하기**
-    - 먼저 원하는 매개변수 패턴을 사용하여 새로운 클래스 타입을 UnityEvent\<T\> 클래스를 상속받아 정의
+    - 먼저 원하는 매개변수 패턴을 사용하여 새로운 클래스 타입을 ***UnityEvent\<T\>*** 클래스를 상속받아 정의
         ```
         using System;
         using UnityEngine.Events;

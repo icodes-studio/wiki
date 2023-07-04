@@ -1,4 +1,4 @@
-[# Introduction to Unity UI – Part 1](https://www.kodeco.com/6570-introduction-to-unity-ui-part-1)
+# [Introduction to Unity UI – Part 1](https://www.kodeco.com/6570-introduction-to-unity-ui-part-1)
     ● https://www.kodeco.com/6570-introduction-to-unity-ui-part-1
     ● In this first part of a three-part tutorial series,
     ● you’ll get acquainted with the Unity UI, enabling you to add custom user interfaces to your games.

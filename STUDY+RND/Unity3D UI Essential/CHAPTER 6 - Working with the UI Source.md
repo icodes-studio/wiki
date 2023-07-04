@@ -105,3 +105,26 @@
 
 　
 
+- **내장 이벤트 인터페이스**
+    - UI 시스템에서 이벤트의 보조 역할을 하는 ***이벤트 타입과 인터페이스들을*** 프리셋 형식으로 제공하고 있다.
+    - ***포인터 이벤트***
+        > - ***IPointerEnterHandler:*** 포인터(커서, 마우스 등)가 UI 오브젝트의 Rect Transform 영역에 들어갈 때 발생.
+        > - ***IPointerExitHandler:*** 포인터가 UI 오브젝트의 Rect Transform 영역에서 나올 때 발생.
+        > - ***IPointerDownHandler:*** 선택 가능한 UI 컨트롤(eg. 버튼)에 키 다운 입력이 들어오면 발생.
+        > - ***IPointerUpHandler:*** 선택 가능한 UI 컨트롤에 키 업 입력이 들어오면 발생.
+        > - ***IPointerClickHandler:*** 선택 가능한 UI 컨트롤을 클릭하면 발생.
+    - ***드래그 핸들러 이벤트***
+        > - ***IInitializePotentialDragHandler:*** 드래그가 시작된 지점을 감지
+        > - ***IBeginDragHandler:*** 드래그 액션이 시작될 때 발생
+        > - ***IDragHandler:*** UI 컴포넌트를 드래그(eg. 누르고 이동)할 때 발생
+        > - ***IEndDragHandler:*** UI 컴포넌트에 대해 드래그가 끝날 때 발생.
+        > - ***IDropHandler:*** IEndDragHandler와 같은 순간에 발생하지만 드래그 데이터를 포함하지는 않는다.
+    - ***그 밖의 핸들러 이벤트***
+        > - ***IScrollHandler:*** 입력 장치에서 스크롤이 감지될 때(eg. 마우스 휠) 발생.
+        > - ***IUpdateSelectedHandler:*** 선택된 UI 컨트롤의 상태가 업데이트 되거나 변화할 때 발생.
+        > - ***ISelectHandler:*** UI 컨트롤이 선택되거나 포커스를 얻을 때 발생.
+        > - ***IDeselectHandler:*** UI 컨트롤의 선택이 해제되거나 포커스를 잃을 때 발생.
+        > - ***IMoveHandler:*** UI 컨트롤이 움직이라는 입력을 받았을 때 발생
+        > - ***ISubmitHandler:*** Submit 입력을 받았을 때(default. `Enter`키) 발생
+        > - ***ICancelHandler:*** Cancel 입력을 받았을 때(default. `Esc`키) 발생
+

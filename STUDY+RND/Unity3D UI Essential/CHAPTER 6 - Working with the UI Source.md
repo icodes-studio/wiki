@@ -269,7 +269,7 @@
 
 　
 
-- **사용자 정의 이벤트와 핸들러 스크립트 추가**
+- **사용자 정의 이벤트와 핸들러**
     - 좀 전에 만들어 둔 아래 스크립트를 프로젝트에 추가
         > - AlarmSystem.cs
         > - AlarmScannerModule.cs
@@ -277,6 +277,40 @@
 
 　
 
-- **적 드로이드 스크립트**
+- **적 드로이드 구현**
     - 어떤 경보(알람)를 받으면 그 지점을 공격하는 경계 로봇 스크립트
+    - Droid.cs
+        ```
+        using System.Collections;
+        using UnityEngine;
 
+        public class Droid : MonoBehaviour, IAlarmHandler
+        {
+            public void OnAlarmTrigger(AlarmEventData data)
+            {
+                // 침입자 발견, 공격!!!
+                StartCoroutine(MoveToPoint(data.data));
+            }
+
+            IEnumerator MoveToPoint(Vector3 target)
+            {
+                float timer = 0f;
+                var startPosition = transform.position;
+                while (target != transform.position)
+                {
+                    transform.position = Vector3.Lerp(startPosition, target, timer);
+                    timer += Time.deltaTime;
+                    yield return new WaitForEndOfFrame();
+                }
+                yield return null;
+            }
+        }
+        ```
+    - ***Pickup*** Prefab에 Droid 컴포넌트 바인딩
+
+
+　
+
+- **경고 누름판 구현**
+    - 바닥에 일종의 누름판을 추가해 공이 그 위로 지나가면 알람이 발생하도록 하자.
+        ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/alarmpanel.png)

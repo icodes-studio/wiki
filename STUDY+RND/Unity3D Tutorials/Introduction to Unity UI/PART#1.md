@@ -241,4 +241,20 @@ Now, turn that white rectangle into an actual image by following these steps:
 
 Now, you’ll work with the **Rect Transform** component to position the image.
 
+　
 
+# Rect Transform, Anchors, Pivot and You
+
+If you’ve worked with Unity before or completed [**other Unity tutorials on this website**](http://www.raywenderlich.com/category/unity?__hstc=149040233.c1ed3c16c256a3843203b44947edda4e.1688513289263.1688513289263.1688513289263.1&__hssc=149040233.46.1688513289263&__hsfp=1152682960), you may have had some exposure to the Transform component. If not, that’s fine. Transform is a tool that can position, rotate and scale objects in a scene. Here’s what it looks like:
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/18.png)
+
+You’ll see the **Transform** component when you select any type of non-UI **GameObject** in your Hierarchy view. However, if you select any UI element, for example, Header, you’ll see a different component named **Rect Transform**.
+
+As you can see, Transform and Rect Transform look different. Additionally, the **Rect Transform** can change the way it looks, depending on its anchor settings. For example, it can look like this:
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/20-612x500.png)
+
+Here, instead of Pos X, Pos Y, Width and Height, you have Left, Top, Right and Bottom.
+
+Are you wondering about the anchor setting that changes the look of **Rect Transform** so dramatically? Keep reading!

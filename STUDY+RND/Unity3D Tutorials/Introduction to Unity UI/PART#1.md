@@ -566,14 +566,15 @@ If you couldn’t quite do it, just follow these steps:
 - 11\) And finally, drag **btn_9slice_pressed** to **Pressed Sprite**.
 - 12\) Double-click on **Color** inside the Image component and check if **A** is set to **255** to remove any transparency.
     ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/settingsButton-514x500.png)
-- Select the nested Text label.
-Change Text to Settings.
-Set Font Size to 24.
-Change Color to White.
-Open the Fonts folder in the Project window and drag the TitanOne-Regular font into the Font field in the Inspector view.
+- 13\) Select the nested **Text** label.
+- 14\) Change **Text** to **Settings**.
+- 15\) Set **Font Size** to **24**.
+- 16\) Change **Color** to **White**.
+- 17\) Open the **Fonts** folder in the Project window and drag the **TitanOne-Regular** font into the **Font** field in the Inspector view.
+    ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/settingsButtonText-479x500.png)
 
 This is what you should see in the Scene view after adding the Settings button:
 
-
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/settingsButtonComplete-650x364.png)
 
 Now Save your scene.

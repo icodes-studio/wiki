@@ -515,7 +515,7 @@ After preparing all your images, drag them to the corresponding fields in the In
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/buttonSettings-483x500.png)
 
 - ***Note:***
-    > - If you encounter this error message, you probably forgot to set the Border in the Sprite Editor in the Import Settings.
+    > - *If you encounter this error message, you probably forgot to set the Border in the Sprite Editor in the Import Settings.*
     >
     > 　　![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/47.png)
 

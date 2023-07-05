@@ -577,4 +577,22 @@ This is what you should see in the Scene view after adding the Settings button:
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/settingsButtonComplete-650x364.png)
 
-Now Save your scene.
+Now **Save** your scene.
+
+　
+
+# # Starting the Game
+
+The final task for this part is to click the **Start Game** button and run the second scene in the game itself.
+
+　
+
+## Adding Scenes to Build
+
+Before you can run different scenes, you need to add them to the **Scenes in Build** list in the Project Settings.
+
+To do this, on the menu select **File ‣ Build Settings**. This will open the **Build Settings** dialog. Then open the **Scenes** folder in the Project browser. First, drag the **MenuScene** and then the **RocketMouse** scene to the **Scenes in Build** list.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/buildSettings.png)
+
+Finally, close the Build Settings dialog.

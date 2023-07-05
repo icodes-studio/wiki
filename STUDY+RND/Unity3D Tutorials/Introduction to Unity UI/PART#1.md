@@ -36,7 +36,8 @@ To satisfy users’ cravings for an engaging UI, you’ll also learn to:
 This tutorial is aimed at those familiar with the Unity Editor. Go check out our Introduction to Unity series if this is your first rodeo. The great news is that as this tutorial focuses on the UI system, it is 95% script free!
 
 ```
-Note: Keep in mind that this tutorial does not cover the creation of the game itself. The goal here is to provide an introduction to Unity’s UI system and familiarize you with its components.
+Note: Keep in mind that this tutorial does not cover the creation of the game itself.
+The goal here is to provide an introduction to Unity’s UI system and familiarize you with its components.
 ```
 
 You’ll need some images for backgrounds, buttons and other UI elements, as well as a few fonts

@@ -390,7 +390,7 @@ As you can see, the pivot also affects how your UI Element resizes.
 
 　
 
-# Placing a Header Image
+# # Placing a Header Image
 
 Phew! That was a lot of information about Rect Transform, Anchors and Pivot. Believe me, you’ll be grateful you spent the time working through the exercise, as these concepts are essential to creating awesome UI in your games.
 
@@ -420,9 +420,9 @@ That’s it! Now, leave the header image alone. It’s a little tired, too. :]
 
 Now that you know about anchors and pivots, go back to the background image. Did you notice that when you added the aspect ratio fitter, some of the floor texture is now cropped off screen? We can use the **Aspect Ratio Fitter** in combination with the pivot to fix this:
 
-- 1) Disable the **Aspect Ratio Fitter**
-- 2) Set the **Pivot** to **(X:0.5, Y:0)**
-- 3) Re-enable the **Aspect Ratio Fitter**
+- 1\) Disable the **Aspect Ratio Fitter**
+- 2\) Set the **Pivot** to **(X:0.5, Y:0)**
+- 3\) Re-enable the **Aspect Ratio Fitter**
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/aspectPivot.gif)
 

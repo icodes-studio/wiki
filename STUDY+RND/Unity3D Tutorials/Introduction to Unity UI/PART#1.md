@@ -292,9 +292,8 @@ Before you start experimenting with different settings, read through the next se
 You can manually move anchors to a custom position. The presets are just for your convenience.
 
 - ***Note:***
-    > - You might find yourself in a situation where the translation gizmo covers the anchor icon, making it impossible to select the anchor.
-    >
-    > - This is where another Unity UI tool comes in handy. If you are familiar with Unity, you’ll know that the keyboard shortcuts Q, W, E and R toggle the Hand, Move, Rotate and Scale tools respectively. With the new UI system, the RectTool was added under the shortcut T. With the RectTool selected, the Gizmo changes to a 2D scale/move box that acts as you would expect from any graphics editing software.
+    > - *You might find yourself in a situation where the translation gizmo covers the anchor icon, making it impossible to select the anchor.*
+    > - *This is where another Unity UI tool comes in handy. If you are familiar with Unity, you’ll know that the keyboard shortcuts Q, W, E and R toggle the Hand, Move, Rotate and Scale tools respectively. With the new UI system, the RectTool was added under the shortcut T. With the RectTool selected, the Gizmo changes to a 2D scale/move box that acts as you would expect from any graphics editing software.*
     >
     > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/rectTool.png)
 
@@ -304,3 +303,34 @@ Now you can grab the anchors and move them around.
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/25.gif)
 
 See how the image moves to the right when you resize the Canvas? It moves only a little in relation to the right edge of the Canvas because these anchors are set to 25% width of the Canvas.
+
+　
+
+## Splitting Anchors
+
+You can split anchors to make them stretch a UI Element horizontally, vertically or both.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/26.gif)
+
+- ***Note:***
+    > - *You’re not actually resizing the Canvas when dragging one if its edges.*
+    > - *In fact, you can’t resize the Canvas this way.*
+    > - *Look for the word Preview next to the cursor when you try to resize it.*
+    > - *Use this technique to experiment and see how your UI elements adapt to different screen sizes.*
+    >
+    > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/27.png)
+
+　
+
+## Rect Transform Depends on the Current Anchors Setting
+
+Depending on the anchors setting, the Rect Transform provides different ways to control the size and position of your UI element.
+
+If you set anchors to a single point without stretching, you’ll see the **Pos X, Pos Y, Width** and **Height** properties.
+
+However, if you set anchors in a way that stretches your UI element, you’ll get **Left** and **Right** instead of Pos X and Width if you set it to stretch horizontally. You’ll get **Top** and **Bottom** instead of Pos Y and Height if you set it to stretch vertically.
+
+In this screenshot, **Header**’s Anchors are set to **middle-stretch**. This means the image stays in the middle of the Canvas vertically and stretches horizontally.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/28-650x236.png)
+

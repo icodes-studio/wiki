@@ -334,3 +334,59 @@ In this screenshot, **Header**’s Anchors are set to **middle-stretch**. This m
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/28-650x236.png)
 
+　
+
+## Pivot
+
+The final property to discuss in the Rect Transform component is **Pivot**.
+
+The pivot is the point around which all transformations are made. In other words, if you change your UI element position, you also change the pivot point position. If you rotate your UI element, it’ll rotate around that point.
+
+The pivot uses normalized coordinates. This means that it goes from 0 to 1 for both height and width, where **(0, 0)** is the bottom left corner and **(1, 1)** is the top right corner.
+
+- ***Note:***
+    > - *You can also set Pivot outside the UI Element bounds.*
+    > - *In this case, Pivot will be outside the (0, 0) – (1, 1) range.*
+    > - *This can be useful. For example, you might want to rotate your object around some point in the scene.*
+    > - *To alter the pivot, you must make sure the Pivot/Center button is toggled to Pivot like so:*
+    >
+    > 　　![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/29.png)
+
+You can change pivot in the Rect Transform component in the Inspector, or you can use the **Rect Tool**.
+
+The following two images demonstrate a UI element with the same Pos X and Pos Y values, yet each shows different placement in the scene.
+
+The first image shows the pivot at its default value of (0.5, 0.5), which is the center of the UI element. The position is set to (0, 0) and the anchors are set to **top-left**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/31-650x216.png)
+
+- ***Note:***
+    > - *It’s important to understand that the position of a UI element is set relative to the anchors.*
+    > - *A (0, 0) position means the distance from anchors, which are set to the top-left corner of the Canvas.*
+
+Now, take a look at the second image. As you can see, the position is still at (0, 0), but since the pivot is set to the bottom-left corner (0, 0) you can see that the image’s bottom corner, and not the center, is now at the Canvas’s top-left.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/32-650x228.png)
+
+It’s harder to show how pivot affects rotation and size using a still image, so here are a few animations:
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/33.gif)
+
+Notice how the image rotates around the pivot point, indicated by a blue circle, which is an element you can freely move.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/34.gif)
+
+- ***Note:*** *Hold down the Option / ALT key while scaling to scale around the pivot point.*
+
+As you can see, the pivot also affects how your UI Element resizes.
+
+- ***Note:***
+    > - When you change the size of a UI element, you don’t change its scale.
+    > - Instead, you change its size using Width and Height or Top, Right, Left, and Bottom paddings.
+    > - Be aware that there are a few differences between size and scale.
+    > - For example, size can’t be negative, but scale can be. Also, using a negative scale value will flip your UI element.
+    > - In most cases, you should only change the size of your UI elements.
+
+
+　
+

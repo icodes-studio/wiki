@@ -2,7 +2,7 @@
     ● In this second part of a three-part tutorial,
     ● you’ll learn how to incorporate animations into your user interfaces. By Ben MacKinnon.
     ● Apr 24 2019, C# 6, Unity 2018.3, Unity
-[*Download materials*](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/Introduction-to-Unity-UI-Part-2.zip)
+[***Download materials***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/Introduction-to-Unity-UI-Part-2.zip)
 
 
 

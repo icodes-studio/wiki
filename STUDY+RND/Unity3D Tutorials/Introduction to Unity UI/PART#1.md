@@ -102,9 +102,9 @@ Select the Image and set its position to **(X:0, Y:0)**. You’ve just discovere
 
 You’ll set the correct position and size in a moment. Right now, there are three things to be aware of. In the Hierarchy, you’ll see three new objects in the scene:
 
-- Image
-- Canvas
-- EventSystem
+- 1. Image
+- 2. Canvas
+- 3. EventSystem
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/07.png)
 

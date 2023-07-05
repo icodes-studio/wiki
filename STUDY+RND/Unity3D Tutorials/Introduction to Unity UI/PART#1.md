@@ -520,3 +520,17 @@ After preparing all your images, drag them to the corresponding fields in the In
     > 　　![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/47.png)
 
 Before running the scene and enjoying your cool buttons, you’re going to change the font used by the nested Text label. This will make the button mega-awesome.
+
+　
+
+# # Setting a Custom Font for the Button
+
+Using a custom font is easy. Remember the **Fonts** folder in the package you downloaded and added to the project? Now it’s time to break it out and use one of those fonts.
+
+Select the **Text** element nested within **StartButton** in the Hierarchy. Then open the **Fonts** folder in the Project window and drag the **TitanOne-Regular** font into the **Font** field. Also set the **Color** to white.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/buttonText-554x500.png)
+
+Now run the scene and enjoy your new mega-awesome button! :]
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/startButtonComplete-650x360.png)

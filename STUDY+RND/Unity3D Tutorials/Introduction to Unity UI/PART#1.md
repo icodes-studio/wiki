@@ -40,8 +40,6 @@ Note: Keep in mind that this tutorial does not cover the creation of the game it
 The goal here is to provide an introduction to Unity’s UI system and familiarize you with its components.
 ```
 
-You’ll need some images for backgrounds, buttons and other UI elements, as well as a few fonts
-
 You’ll need some images for backgrounds, buttons and other UI elements, as well as a few fonts for the labels and buttons. Don’t worry, you won’t have to draw anything yourself or scour the web for the right assets. I’ve prepared a special package that has everything you need. You’re welcome. :]
 
 To get the package, and the starter project files, click on the [**Download Materials**](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/Introduction-to-Unity-UI-Part-1.zip) button at the top or bottom of this tutorial.

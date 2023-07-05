@@ -19,3 +19,12 @@ You will love getting gooey with Unity’s new GUI!
 Do you remember the old Unity UI system? It required you to write all your GUI code in OnGUI. It was slow, inefficient and programmer-centric, going against the visual nature of Unity. Many developers chose instead to use third party tools such as NGUI.
 
 Thankfully, Unity Technologies listened to community feedback and worked out a new system, released in Unity 4.6.
+
+In this three-part series, you’ll explore Unity’s new UI system by adding an interactive UI to a game called Rocket Mouse.
+
+To satisfy users’ cravings for an engaging UI, you’ll also learn to:
+
+- Animate buttons
+- Create a settings dialog that slides into a scene
+- Use more GUI controls like Text, Slider, Panel and Mask
+

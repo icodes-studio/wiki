@@ -648,3 +648,18 @@ Switch back to Unity and follow these steps:
 
 **Save** the scene and then click the **Play** button to run the game. Click the **Start Game** button in the menu. This should open the game scene.
 
+　
+
+# Where to Go From Here?
+
+Stuck on any issues? Feel free to download the completed project for this part using the [**Download materials**](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/Introduction-to-Unity-UI-Part-1.zip) button at the top or bottom of this tutorial.
+
+It might feel like you didn’t do much in this last section, but take another look: You set up the UI, added images and buttons, and even wrote the code that starts the game when you click on the button!
+
+In many games, that’s all that comprises the UI.
+
+You also learned a lot about Rect Transform, Anchors and Pivot. Now that you understand them, you’ll be able to move much faster when you apply these skills to your own projects.
+
+In part two of this series, you’ll learn how to animate UI elements, create dialogs, and use controls like Slider and Toggle. By the end of the series, you’ll have a working menu scene.
+
+If you have any questions or comments please leave them below! See you in [**Part 2**](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/PART%232.md)!

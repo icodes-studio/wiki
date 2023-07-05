@@ -6,7 +6,7 @@
 
 
 
-*Update February 2019: This tutorial was updated to Unity 2018.3 by Ben MacKinnon. Original post by [Kirill Muzykov](https://twitter.com/kmuzykov).*
+*Update February 2019: This tutorial was updated to Unity 2018.3 by Ben MacKinnon. Original post by [**Kirill Muzykov**](https://twitter.com/kmuzykov).*
 
 　
 

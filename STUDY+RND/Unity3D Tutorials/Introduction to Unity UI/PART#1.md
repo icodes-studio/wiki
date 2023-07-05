@@ -442,7 +442,7 @@ Look at the button in the Inspector, and you’ll see it has the same Image comp
 
 Additionally, there’s a Button component. In other words, a button is just an image with a child Text element and an attached button script.
 
-***Note:*** *The Text element is optional, so if you have a button image with text drawn right into the image, you can delete it.*
+- ***Note:*** *The Text element is optional, so if you have a button image with text drawn right into the image, you can delete it.*
 
 　
 
@@ -534,3 +534,46 @@ Select the **Text** element nested within **StartButton** in the Hierarchy. Then
 Now run the scene and enjoy your new mega-awesome button! :]
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/startButtonComplete-650x360.png)
+
+　
+
+# # Adding the Settings Button
+
+There are a few things left to do. First, add the Settings button.
+
+You can probably do this yourself, so you’re only getting the size and position of the button to start. The rest is almost identical to they way you created the Start Game button.
+
+- ***Note:*** *The easiest way is to duplicate the button and adjust some properties, but try creating the button from scratch this time.*
+
+These properties of the Settings button are different:
+- **Name: SettingsButton**
+- **Rect Transform**: Left and Right are 400, Height is **70** and Pos Y is **180**
+- **Text: Settings**
+- **Fontsize: 24**
+
+If you couldn’t quite do it, just follow these steps:
+
+- 1\) From the top bar, select **GameObject ► UI ► Button**. This will create a Button object in the scene.
+- 2\) Select **Button** in the Hierarchy view and **rename it** to **SettingsButton**.
+- 3\) Set the button **Anchors** to **bottom-stretch**. Then update the X to **(Min:0.2, Max:0.8)**
+- 4\) Set the **Pivot** to **(X:0.5, Y:0)**
+- 5\) Set both **Left** and **Right** in **Rect Transform** to **173**.
+- 6\) Set **Height** to **70** and **Pos Y** to **180**.
+- 7\) Set **Transition** in the Button component to **Sprite Swap**.
+- 8\) Make sure to set **Image Type** in the Image component to **Sliced**.
+- 9\) Open the **Menu** folder in the Project Browser and drag **btn_9slice_normal** to **Source Image**.
+- 10\) Then drag **btn_9slice_highlighted** to **Highlighted Sprite**.
+- 11\) And finally, drag **btn_9slice_pressed** to **Pressed Sprite**.
+- 12\) Double-click on **Color** inside the Image component and check if **A** is set to **255** to remove any transparency.
+    ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/settingsButton-514x500.png)
+- Select the nested Text label.
+Change Text to Settings.
+Set Font Size to 24.
+Change Color to White.
+Open the Fonts folder in the Project window and drag the TitanOne-Regular font into the Font field in the Inspector view.
+
+This is what you should see in the Scene view after adding the Settings button:
+
+
+
+Now Save your scene.

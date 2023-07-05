@@ -450,17 +450,17 @@ Additionally, there’s a Button component. In other words, a button is just an 
 
 Now it’s all about positioning and resizing the button. Follow these steps:
 
-- 1\) Select Button in the Hierarchy view and rename it to StartButton.
-- 2\) Set its Anchors to bottom-stretch, since you want it to stretch horizontally if the screen size changes. Tip: Hold Alt/Cmd and Shift when selecting the anchor to also set the position and pivot.
-- 3\) To further customize the anchors, set the X to (Min:0.2, Max:0.8)
-- 4\) Set both Left and Right to 123.
-- 5\) Set the Pivot to (X:0.5, Y:0)
-- 6\) Set Height to 80.
-- 7\) Set Pos Y to 300.
+- 1\) Select **Button** in the Hierarchy view and **rename it** to **StartButton**.
+- 2\) Set its **Anchors** to bottom-stretch, since you want it to stretch horizontally if the screen size changes. Tip: Hold Alt/Cmd and Shift when selecting the anchor to also set the position and pivot.
+- 3\) To further customize the anchors, set the X to **(Min:0.2, Max:0.8)**
+- 4\) Set both **Left** and **Right** to **123**.
+- 5\) Set the **Pivot** to **(X:0.5, Y:0)**
+- 6\) Set **Height** to **80**.
+- 7\) Set **Pos Y** to **300**.
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/40-600x500.png)
 
-Then select the nested Text element and set its Text to Start Game. Change the Font Size to 32 to make the text of the button larger.
+Then select the nested **Text element** and set its **Text** to **Start Game**. Change the **Font Size** to **32** to make the text of the button larger.
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/41-618x500.png)
 

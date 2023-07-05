@@ -258,3 +258,29 @@ As you can see, Transform and Rect Transform look different. Additionally, the *
 Here, instead of Pos X, Pos Y, Width and Height, you have Left, Top, Right and Bottom.
 
 Are you wondering about the anchor setting that changes the look of **Rect Transform** so dramatically? Keep reading!
+
+　
+
+## Anchors
+
+Setting anchors is a simple, elegant and powerful way to control the position and size of your UI elements relative to their parent. It’s especially handy when you have to resize the parents.
+
+When you set anchors, you specify several positions in the parent, usually one in each corner of the parent’s UI element Rect. When this happens, your UI element will try to maintain a uniform distance to the anchor points, forcing it to move or resize along with its parent.
+
+To see different **Anchors Presets**, select **Header** in the Hierarchy and click on the rectangle above the **Anchors** field in the Rect Transform component.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/22-341x500.png)
+
+After clicking, you’ll see various Anchors Presets. These are the most common settings for anchors, but you can customize them. You can also select different horizontal and vertical behavior for your UI element.
+
+This will all make more sense once you work with it. If you look at the next image, which has the background image disabled, you’ll be able to see the Canvas size changes a bit better.
+
+As you can see, the anchors settings control how your UI element adapts to screen size changes.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/23.gif)
+
+The four triangular handles representing anchors resemble a flower. Here’s how it looks with anchors set to the **top-center** preset:
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/24.png)
+
+Before you start experimenting with different settings, read through the next section. It’ll help you understand anchors a little better, and you’ll get more out of your experimentation.

@@ -183,24 +183,24 @@ Change the component mode to **Scale With Screen Size** and set its **Reference 
 
 After making those changes, you’ll see the full background image, even in a small Game view window.
 
-![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/14-650x472.png)
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/14-650x472.png)
 
 Change the Game view resolution to see how your game might look in a different resolution, for example, on iPhone Wide 480×320. You’ll notice it still looks good!
 
 - ***Note:***
     > - If you don’t see any of the iPhone options, chances are you’re building for a different platform.
     > - From the menu bar, select File ‣ Build Settings. In the build settings dialog underneath the platform settings, make sure to select iOS.
-    > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/buildPlatform-529x500.png)
+    > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/buildPlatform-529x500.png)
     > - Unity will reprocess all your assets, and it may take a while.
     > - At the end, you should have access to the various iOS screen sizes.
 
 Now switch to the Scene view, and you’ll see the Canvas’s size doesn’t change when you resize the Scene view. The side edges of the screen are neatly cropped while the central part is fully visible. This is the result of setting **Match Width or Height** to **1**. It works perfectly for your target resolutions.
 
-![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/15.gif)
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/15.gif)
 
 These designs are old! Modern phone screens are much wider in Landscape mode. Switch to iPhoneX Landscape mode and we have a whole new problem.
 
-![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/iphoneX.png)
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/iphoneX.png)
 
 If you change the **Match Width or Height** value back to zero, it works for iPhone 5 and iPhoneX, but appears letterboxed on iPhone 4.
 
@@ -210,7 +210,7 @@ Put the **Canvas Scaler** back to **Match Width or Height** with the value **1**
 
 Now, select the **Background** and add an **Aspect Ratio Fitter** component. It will automatically set the **Aspect Ratio** value to the current ratio of the image’s Rect Transform. Switch the **Aspect Mode** to **Envelope Parent**. The image will automatically resize to once again fill the whole screen.
 
-![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/aspectRatio-650x247.png)
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/aspectRatio-650x247.png)
 
 Phew, that was a lot of work. And we’ve only added the background image! But getting the Canvas Scaler and background set up in the proper way is going to make everything easier going forward. After doing this a couple of times ,you’ll find the setup so fast and easy that you’ll barely have time to blink before you’re done.
 

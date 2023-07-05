@@ -116,3 +116,31 @@ The **Canvas** is the root object for all your UI elements. Remember, Unity crea
 
 The **EventSystem** processes and routes input events to objects within a scene. It’s also responsible for managing raycasting. As with the Canvas, The UI requires the Event System, so Unity automatically adds it.
 
+　
+
+# Setting Up the Menu Background Image
+
+The first thing to do is rename your image. In the Hierarchy, select Image and rename it to Background.
+
+Next, open RW ‣ UI ‣ Menu in the Project window and find the menu_background image. Drag it to the Source Image field of the Image component in Background in the Inspector:
+
+
+
+Now you have a background image instead of the default white image. However, it’s not great! It’s too small and the aspect ratio is incorrect.
+
+To fix this, find the Set Native Size button in the Inspector and click it to set the size to 1136 x 640.
+
+
+
+Now it looks like a proper background.
+
+
+
+Uh-oh. There’s still one problem.
+
+Shrink your Scene view, and you’ll see that the white rectangle of the Canvas covers only part of the image. If you switch to the Game view, you’ll see only a part of the background image, as if the camera is too close to the image to capture it completely.
+
+
+
+Note: The original game design was for iPhones with 3.5- and 4-inch displays. This is why all the game art supports 1136 x 640 and 960 x 640 resolutions. You’ll soon see how the UI can adapt to different game resolutions.
+You’ll tackle this issue by using a Canvas Scaler.

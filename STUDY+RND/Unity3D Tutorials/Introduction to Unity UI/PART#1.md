@@ -547,7 +547,7 @@ You can probably do this yourself, so you’re only getting the size and positio
 
 These properties of the Settings button are different:
 - **Name: SettingsButton**
-- **Rect Transform**: Left and Right are **400**, Height is **70** and Pos Y is **180**
+- **Rect Transform**: Left and Right are **173**, Height is **70** and Pos Y is **180**
 - **Text: Settings**
 - **Fontsize: 24**
 
@@ -596,3 +596,34 @@ To do this, on the menu select **File ‣ Build Settings**. This will open the *
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/buildSettings.png)
 
 Finally, close the Build Settings dialog.
+
+　
+
+## Creating UIManager
+
+Here comes the 5% code part of the tutorial!
+
+When you add an event handler to the button, you need to specify which method to call when you click the button. Since you can’t use static methods, you’ll need to select a public method from a script attached to a GameObject.
+
+From the top bar, choose **GameObject ‣ Create Empty**. Then select **GameObject** in the Hierarchy view and rename it to **UIManager**.
+
+Create a **Scripts** folder inside **RW** and then create a new C# script in it named **UIManager**. Once Unity compiles it, attach it as a component to your **UIManager** GameObject.
+
+This is what you should see in the Hierarchy view and the Inspector view:
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/uiManager-650x265.png)
+
+**Double-click** on the **UIManagerScript** in the Inspector to open the script in MonoDevelop. Once the script loads, remove both `Start()` and `Update()`.
+
+Next add the following statement underneath the previous `using` statements.
+    ```
+    using UnityEngine.SceneManagement;
+    ```
+This allows you to load other scenes. Now, add the following:
+    ```
+    public void StartGame() 
+    {
+        SceneManager.LoadScene("RocketMouse");
+    }
+    ```
+Save the script and move on to the next step:

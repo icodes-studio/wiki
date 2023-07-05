@@ -381,11 +381,11 @@ Notice how the image rotates around the pivot point, indicated by a blue circle,
 As you can see, the pivot also affects how your UI Element resizes.
 
 - ***Note:***
-    > - When you change the size of a UI element, you don’t change its scale.
-    > - Instead, you change its size using Width and Height or Top, Right, Left, and Bottom paddings.
-    > - Be aware that there are a few differences between size and scale.
-    > - For example, size can’t be negative, but scale can be. Also, using a negative scale value will flip your UI element.
-    > - In most cases, you should only change the size of your UI elements.
+    > - *When you change the size of a UI element, you don’t change its scale.*
+    > - *Instead, you change its size using Width and Height or Top, Right, Left, and Bottom paddings.*
+    > - *Be aware that there are a few differences between size and scale.*
+    > - *For example, size can’t be negative, but scale can be. Also, using a negative scale value will flip your UI element.*
+    > - *In most cases, you should only change the size of your UI elements.*
 
 
 　

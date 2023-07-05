@@ -143,9 +143,9 @@ Uh-oh. There’s still one problem.
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/11-650x244.png)
 
 - ***Note:***
-    > - The original game design was for iPhones with 3.5- and 4-inch displays.
-    > - This is why all the game art supports 1136 x 640 and 960 x 640 resolutions.
-    > - You’ll soon see how the UI can adapt to different game resolutions.
+    > - *The original game design was for iPhones with 3.5- and 4-inch displays.*
+    > - *This is why all the game art supports 1136 x 640 and 960 x 640 resolutions.*
+    > - *You’ll soon see how the UI can adapt to different game resolutions.*
 
 You’ll tackle this issue by using a **Canvas Scaler**.
 
@@ -188,13 +188,13 @@ After making those changes, you’ll see the full background image, even in a sm
 Change the Game view resolution to see how your game might look in a different resolution, for example, on iPhone Wide 480×320. You’ll notice it still looks good!
 
 - ***Note:***
-    > - If you don’t see any of the iPhone options, chances are you’re building for a different platform.
-    > - From the menu bar, select File ‣ Build Settings.
-    > - In the build settings dialog underneath the platform settings, make sure to select iOS.
+    > - *If you don’t see any of the iPhone options, chances are you’re building for a different platform.*
+    > - *From the menu bar, select File ‣ Build Settings.*
+    > - *In the build settings dialog underneath the platform settings, make sure to select iOS.*
     >
     > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/buildPlatform-529x500.png)
-    > - Unity will reprocess all your assets, and it may take a while.
-    > - At the end, you should have access to the various iOS screen sizes.
+    > - *Unity will reprocess all your assets, and it may take a while.*
+    > - *At the end, you should have access to the various iOS screen sizes.*
 
 Now switch to the Scene view, and you’ll see the Canvas’s size doesn’t change when you resize the Scene view. The side edges of the screen are neatly cropped while the central part is fully visible. This is the result of setting **Match Width or Height** to **1**. It works perfectly for your target resolutions.
 
@@ -228,8 +228,7 @@ Before moving on to buttons and other UI controls, you’ll add the header image
 
 Open the Scene view, and from the top bar, select **GameObject ‣ UI ‣ Image**. This will add another image as a child of Canvas:
 
-- ***Note:***
-    > - If you can’t see the image in the Scene view, set its Pos X and Pos Y properties to 0 to center it.
+- ***Note:*** *If you can’t see the image in the Scene view, set its Pos X and Pos Y properties to 0 to center it.*
 
 Now, turn that white rectangle into an actual image by following these steps:
 

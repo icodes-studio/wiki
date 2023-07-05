@@ -82,3 +82,37 @@ Once the assets are in the project, check their import settings. Make sure all t
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/import_settings.png)
 
 Woo-hoo! You’ve finished the setup and you’re ready to create your first UI element using the Unity UI system.
+
+　
+
+# Adding Your First UI Element
+
+The first element you’ll make is the background image for the menu scene.
+
+From the top bar, select **GameObject ‣ UI ‣ Image**. This adds an object named **Image** to the scene. You should see it in the Hierarchy as a child of **Canvas**. All elements must be placed on a Canvas. If you don’t have one, Unity will create one for you automatically.
+
+Select the Image and set its position to **(X:0, Y:0)**. You’ve just discovered the **Rect Transform**:
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/06.png)
+
+- ***Note:***
+    > - *The **Rect Transform** is the UI equivalent to Transform.*
+    > - *It positions, rotates and scales UI elements within a Canvas.*
+    > - *You’ll use it often in this tutorial.*
+
+You’ll set the correct position and size in a moment. Right now, there are three things to be aware of. In the Hierarchy, you’ll see three new objects in the scene:
+
+- Image
+- Canvas
+- EventSystem
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/07.png)
+
+The **Image** is a non-interactive control that displays a **sprite**, with many options for customization.
+
+For instance, you can apply color to the image, assign a material to it, control how much of the image displays or even animate it on the screen using a clockwise wipe.
+
+The **Canvas** is the root object for all your UI elements. Remember, Unity creates this for you when you add your first UI element. It has multiple properties that allow you to control how your UI renders.
+
+The **EventSystem** processes and routes input events to objects within a scene. It’s also responsible for managing raycasting. As with the Canvas, The UI requires the Event System, so Unity automatically adds it.
+

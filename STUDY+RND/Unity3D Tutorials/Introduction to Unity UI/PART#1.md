@@ -30,7 +30,7 @@ To satisfy users’ cravings for an engaging UI, you’ll also learn to:
 
 　
 
-# Getting Started
+# # Getting Started
 
 This tutorial is aimed at those familiar with the Unity Editor. Go check out our [**Introduction to Unity**](https://www.raywenderlich.com/772-introduction-to-unity-getting-started-part-1-2?__hstc=149040233.c1ed3c16c256a3843203b44947edda4e.1688513289263.1688513289263.1688513289263.1&__hssc=149040233.46.1688513289263&__hsfp=1152682960) series if this is your first rodeo. The great news is that as this tutorial focuses on the UI system, it is 95% script free!
 
@@ -46,7 +46,7 @@ This is all you need!
 
 　
 
-# Creating MenuScene
+# # Creating MenuScene
 
 **Open** the **Introduction to Unity UI Part 1 Starter** project in Unity.
 
@@ -60,7 +60,7 @@ It’s best to save the scene right away. Open the **Save Scenes** dialog by cho
 
 　
 
-# Importing Images and Fonts
+# # Importing Images and Fonts
 
 First on your to do list is to add assets to the scene, so unpack the UI Assets package in your file explorer. There you’ll find two folders: **Menu** and **Fonts**.
 
@@ -85,7 +85,7 @@ Woo-hoo! You’ve finished the setup and you’re ready to create your first UI 
 
 　
 
-# Adding Your First UI Element
+# # Adding Your First UI Element
 
 The first element you’ll make is the background image for the menu scene.
 
@@ -118,7 +118,7 @@ The **EventSystem** processes and routes input events to objects within a scene.
 
 　
 
-# Setting Up the Menu Background Image
+# # Setting Up the Menu Background Image
 
 The first thing to do is rename your image. In the Hierarchy, select **Image** and rename it to **Background**.
 
@@ -151,7 +151,7 @@ You’ll tackle this issue by using a **Canvas Scaler**.
 
 　
 
-# Using the Canvas Scaler
+# # Using the Canvas Scaler
 
 You’ll use the **Canvas Scaler** to adjust the background image display.
 
@@ -222,7 +222,7 @@ Fortunately, Unity has a feature that will help you sidestep this rookie mistake
 
 　
 
-# Adding a Header Image
+# # Adding a Header Image
 
 Before moving on to buttons and other UI controls, you’ll add the header image. For this exercise, you’ll use a non-fullscreen image to demonstrate a few other important concepts of Unity’s new UI system.
 
@@ -243,7 +243,7 @@ Now, you’ll work with the **Rect Transform** component to position the image.
 
 　
 
-# Rect Transform, Anchors, Pivot and You
+# # Rect Transform, Anchors, Pivot and You
 
 If you’ve worked with Unity before or completed [**other Unity tutorials on this website**](http://www.raywenderlich.com/category/unity?__hstc=149040233.c1ed3c16c256a3843203b44947edda4e.1688513289263.1688513289263.1688513289263.1&__hssc=149040233.46.1688513289263&__hsfp=1152682960), you may have had some exposure to the Transform component. If not, that’s fine. Transform is a tool that can position, rotate and scale objects in a scene. Here’s what it looks like:
 

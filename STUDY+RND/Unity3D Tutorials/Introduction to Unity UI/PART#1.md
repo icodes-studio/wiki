@@ -616,14 +616,18 @@ This is what you should see in the Hierarchy view and the Inspector view:
 **Double-click** on the **UIManagerScript** in the Inspector to open the script in MonoDevelop. Once the script loads, remove both `Start()` and `Update()`.
 
 Next add the following statement underneath the previous `using` statements.
-    ```
-    using UnityEngine.SceneManagement;
-    ```
+
+```
+using UnityEngine.SceneManagement;
+```
+
 This allows you to load other scenes. Now, add the following:
-    ```
-    public void StartGame() 
-    {
-        SceneManager.LoadScene("RocketMouse");
-    }
-    ```
+
+```
+public void StartGame() 
+{
+    SceneManager.LoadScene("RocketMouse");
+}
+```
+
 Save the script and move on to the next step:

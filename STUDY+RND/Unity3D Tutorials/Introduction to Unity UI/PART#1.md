@@ -65,20 +65,20 @@ It’s best to save the scene right away. Open the **Save Scenes** dialog by cho
 First on your to do list is to add assets to the scene, so unpack the UI Assets package in your file explorer. There you’ll find two folders: **Menu** and **Fonts**.
 
 - ***Note:***
-    > - *The Menu folder contains background images, buttons, icons and other game art.*
-    > - *The game art is provided by Game Art Guppy, where you can find a lot of other game art for your practice games.*
-    > - *In addition, two fonts from DaFont. are in the Fonts folder.*
-    > - *You can thank Rodrigo Fuenzalida for the Titan One font and Draghia Cornel for the DCC Dreamer font.*
+    > - *The **Menu** folder contains background images, buttons, icons and other game art.*
+    > - *The game art is provided by [**Game Art Guppy**](http://www.gameartguppy.com/), where you can find a lot of other game art for your practice games.*
+    > - *In addition, two fonts from [**DaFont**](http://dafont.com/). are in the **Fonts** folder.*
+    > - *You can thank Rodrigo Fuenzalida for the [**Titan One**](http://www.dafont.com/titan-one.font) font and Draghia Cornel for the [**DCC Dreamer**](http://www.dafont.com/dcc-dreamer.font) font.*
 
 
-It’s nice to keep a tidy folder structure, so in the Project window, create a new folder inside RW named UI.
+It’s nice to keep a tidy folder structure, so in the **Project window**, create a new folder inside **RW** named **UI**.
 
-From your file explorer, drag the Menu and Fonts folders into the UI folder in the Project window:
+From your file explorer, drag the **Menu** and **Fonts** folders into the **UI** folder in the Project window:
 
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/DragFolders.gif)
 
+Once the assets are in the project, check their import settings. Make sure all the assets in **UI / Menu** are set to the **Sprite (2D and UI)** texture setting.
 
-Once the assets are in the project, check their import settings. Make sure all the assets in UI / Menu are set to the Sprite (2D and UI) texture setting.
-
-
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/import_settings.png)
 
 Woo-hoo! You’ve finished the setup and you’re ready to create your first UI element using the Unity UI system.

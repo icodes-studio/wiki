@@ -28,20 +28,4 @@
 
 　
 
-　
-
-　
-
-*생략...*
-
-　
-
-　
-
-　
-
-- **자료들**
-    - *책 예제코드 내려받기: https://freelec.co.kr*
-    - *책 예제코드 미러링: https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/%EB%8F%84%EC%84%9C%EC%9E%90%EB%A3%8C_%EC%9C%A0%EB%8B%88%ED%8B%B0%203D%20UI%20%EC%97%90%EC%84%BC%EC%85%9C(%EC%98%88%EC%A0%9C%ED%8C%8C%EC%9D%BC)_20160819.zip*
-    - *UI Pack: https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/UIpack.zip*
-    - *Roll a Ball 튜토리얼: https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/unity-3d-roll-a-ball-master.zip*
+...

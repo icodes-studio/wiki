@@ -219,3 +219,27 @@ Phew, that was a lot of work. And we’ve only added the background image! But g
 What about the buttons? What happens when they’re too close to the left or right edge of the screen? You don’t want to crop or hide them.
 
 Fortunately, Unity has a feature that will help you sidestep this rookie mistake. You’ll learn about it soon.
+
+　
+
+# Adding a Header Image
+
+Before moving on to buttons and other UI controls, you’ll add the header image. For this exercise, you’ll use a non-fullscreen image to demonstrate a few other important concepts of Unity’s new UI system.
+
+Open the Scene view, and from the top bar, select **GameObject ‣ UI ‣ Image**. This will add another image as a child of Canvas:
+
+- ***Note:***
+    > - If you can’t see the image in the Scene view, set its Pos X and Pos Y properties to 0 to center it.
+
+Now, turn that white rectangle into an actual image by following these steps:
+
+- 1) Select Image in the Hierarchy and rename it to Header.
+- 2) Open the Menu folder in the Project window and search for the header_label image.
+- 3) Drag the image to the Source Image field on the Inspector.
+- 4) Click Set Native Size in the Inspector.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/17-650x211.png)
+
+Now, you’ll work with the Rect Transform component to position the image.
+
+

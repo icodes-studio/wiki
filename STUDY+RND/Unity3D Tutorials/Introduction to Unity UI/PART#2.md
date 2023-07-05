@@ -44,3 +44,39 @@ Here are the steps to success:
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/022.png)
 
 In addition to creating the animation itself, Unity also adds an **Animator** component to **StartButton** and creates an **Animator Controller**. Ready to get started?
+
+　
+
+## Animating a Button Sliding Out of the Screen
+
+Although you’ll technically make two animations — the button slides out and then back in — you’re a savvy developer! You’ll create one animation and then reverse it.
+
+To create the slide-out animation, follow these steps:
+
+- 1\) Select **StartButton** in the Hierarchy.
+- 2\) Make sure the **Animation view** is visible.
+- 3\) **Click** on the **1:00** mark in the **timeline** and then click the **Record button**.
+- 4\) Change **Anchors** to **top-stretch**.
+- 5\) Change **Pos Y** to **60** in the Inspector.
+- 6\) Stop the recording by clicking the **red circle button**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/buttonAnimationSetup-650x136.png)
+
+Two things happened:
+
+- 1\) A keyframe was inserted automatically at the **0:00** mark. At this point, the button is at its starting position, where you positioned it in the previous tutorial.
+- 2\) Although the anchors’ visual representation didn’t turn red, you can see the numeric values changed and turned red, indicating that you’ve also animated the anchors.
+
+Make both the Animation view and Scene view visible and play the animation. You’ll see something like this:
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/06.gif)
+
+Did you notice the animation on the anchors? You may be wondering why you need to reposition the anchors.
+
+Here’s why: The position of the button is the distance to its anchors. In the case of StartButton, it was the distance from the bottom edge. Right now, you’re only working with vertical movement, so only the bottom edge matters. To make sure the button leaves the screen, move it up until it’s no longer visible.
+
+What if you don’t know the height of the screen? How do you make sure the button stops right after it’s no longer visible?
+
+Answer: Change its anchors.
+
+Setting the anchors to the top edge of the screen means you set the distance from the top edge of the screen. Thus, the button will always be above the edge and independent from the height of the screen, since it’s positioned relative to the screen’s top edge.

@@ -301,6 +301,6 @@ You can manually move anchors to a custom position. The presets are just for you
 
 Now you can grab the anchors and move them around.
 
-![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/25.png)
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/25.gif)
 
 See how the image moves to the right when you resize the Canvas? It moves only a little in relation to the right edge of the Canvas because these anchors are set to 25% width of the Canvas.

@@ -232,10 +232,10 @@ Open the Scene view, and from the top bar, select **GameObject ‣ UI ‣ Image*
 
 Now, turn that white rectangle into an actual image by following these steps:
 
-- 1) Select Image in the Hierarchy and rename it to Header.
-- 2) Open the Menu folder in the Project window and search for the header_label image.
-- 3) Drag the image to the Source Image field on the Inspector.
-- 4) Click Set Native Size in the Inspector.
+- 1\) Select Image in the Hierarchy and rename it to Header.
+- 2\) Open the Menu folder in the Project window and search for the header_label image.
+- 3\) Drag the image to the Source Image field on the Inspector.
+- 4\) Click Set Native Size in the Inspector.
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/17-650x211.png)
 

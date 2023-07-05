@@ -390,3 +390,44 @@ As you can see, the pivot also affects how your UI Element resizes.
 
 　
 
+# Placing a Header Image
+
+Phew! That was a lot of information about Rect Transform, Anchors and Pivot. Believe me, you’ll be grateful you spent the time working through the exercise, as these concepts are essential to creating awesome UI in your games.
+
+Going forward, you’ll concentrate on creating the menu scene. The rest of this tutorial will go by in the blink of an eye!
+
+All those manipulations exhausted the poor little header. It’s time to place it where it should be and leave it alone to recover.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/35.png)
+
+Before you continue, re-enable **Background** if you disabled it to see the Canvas border.
+
+Select **Header** in the Hierarchy and set its properties in the Inspector as follows:
+
+- 1\) Click **Set Native Size** to reset the size, as you probably messed with it while playing around with the pivot.
+- 2\) Set **Anchors** to **top-center**.
+- 3\) Set **Pos X** to **0** and **Pos Y** to **-100**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/36-400x500.png)
+
+You should see something like this in your Scene view:
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/37.png)
+
+That’s it! Now, leave the header image alone. It’s a little tired, too. :]
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/38.png)
+
+Now that you know about anchors and pivots, go back to the background image. Did you notice that when you added the aspect ratio fitter, some of the floor texture is now cropped off screen? We can use the **Aspect Ratio Fitter** in combination with the pivot to fix this:
+
+- 1) Disable the **Aspect Ratio Fitter**
+- 2) Set the **Pivot** to **(X:0.5, Y:0)**
+- 3) Re-enable the **Aspect Ratio Fitter**
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/aspectPivot.gif)
+
+Now, not only does the background always fit the size of the phone, the floor part will always stay in view!
+
+
+
+

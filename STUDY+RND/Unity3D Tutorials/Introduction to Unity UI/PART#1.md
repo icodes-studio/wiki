@@ -650,7 +650,7 @@ Switch back to Unity and follow these steps:
 
 　
 
-# Where to Go From Here?
+# # Where to Go From Here?
 
 Stuck on any issues? Feel free to download the completed project for this part using the [**Download materials**](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/Introduction-to-Unity-UI-Part-1.zip) button at the top or bottom of this tutorial.
 

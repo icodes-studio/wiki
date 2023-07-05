@@ -547,7 +547,7 @@ You can probably do this yourself, so you’re only getting the size and positio
 
 These properties of the Settings button are different:
 - **Name: SettingsButton**
-- **Rect Transform**: Left and Right are 400, Height is **70** and Pos Y is **180**
+- **Rect Transform**: Left and Right are **400**, Height is **70** and Pos Y is **180**
 - **Text: Settings**
 - **Fontsize: 24**
 

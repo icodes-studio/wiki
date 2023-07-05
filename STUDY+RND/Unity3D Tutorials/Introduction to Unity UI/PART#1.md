@@ -428,6 +428,20 @@ Now that you know about anchors and pivots, go back to the background image. Did
 
 Now, not only does the background always fit the size of the phone, the floor part will always stay in view!
 
+　
 
+# # Adding the Start Button
+
+Now, that your game has a nice background with a label, it’s time to add some buttons.
+
+From the top bar, choose **GameObject ‣ UI ‣ Button**. This will add a **Button** object to the scene. You should see it in the Hierarchy. If you expand it in the Hierarchy, you’ll see that the button contains a Text child — you’ll learn about these later.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/39.png)
+
+Look at the button in the Inspector, and you’ll see it has the same Image component you used to add the background and the header label.
+
+Additionally, there’s a Button component. In other words, a button is just an image with a child Text element and an attached button script.
+
+***Note:*** *The Text element is optional, so if you have a button image with text drawn right into the image, you can delete it.*
 
 

@@ -149,4 +149,71 @@ Uh-oh. There’s still one problem.
 
 You’ll tackle this issue by using a **Canvas Scaler**.
 
+　
 
+# Using the Canvas Scaler
+
+You’ll use the **Canvas Scaler** to adjust the background image display.
+
+First, you need to know that the display is not the result of a bug. From Unity’s point of view, you have the Game view — or viewport — set to such a small size that it displays only the portion of the image that fits within the Game view.
+
+If you were to run the game on a device with a large enough resolution or stretch the Game view to fit the whole image, you would see the entire background image.
+
+Although Unity’s settings make sense in most scenarios, there are times when you need different behavior. An example is when you have a small monitor that doesn’t fit your target device’s resolution.
+
+Additionally, many games support only one resolution. Designers use this reference resolution to dictate sizes, positions and other data. When you develop a game based on a single reference resolution, make sure to enter the designer’s specifications without additional calculations so that the user sees everything as intended.
+
+If you’ve ever ignored your designer’s directions, you know there’s a price to pay. The user experience and varying resolutions are important, but try to keep your designer happy, too. :]
+
+**Canvas Scaler** to the rescue! By default, every Canvas includes Canvas Scaler.
+
+Select **Canvas** in the Hierarchy, and in the Inspector, you should see the Canvas Scaler component:
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/12.png)
+
+The Canvas Scaler has three scale modes:
+
+- **Constant Pixel Size:** Makes UI elements retain the same pixel size, regardless of the screen size. This is the default value of the Canvas.
+- **Scale With Screen Size:** Sizes and positions UI elements according to a referenced resolution. If the current resolution is larger than the referenced resolution, the Canvas will maintain the reference resolution, while scaling up the elements to match the target resolution.
+- **Constant Physical Size:** Positions of the UI elements are specified in physical units such as millimeters or points. This requires the correct reporting of the screen DPI.
+
+Change the component mode to **Scale With Screen Size** and set its **Reference Resolution** to **(X:1136, Y:640)**. Also, slide the **Match Width or Height** all the way to the right, or simply enter 1 in the input field.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/13.png)
+
+After making those changes, you’ll see the full background image, even in a small Game view window.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/14-650x472.png)
+
+Change the Game view resolution to see how your game might look in a different resolution, for example, on iPhone Wide 480×320. You’ll notice it still looks good!
+
+- ***Note:***
+    > - If you don’t see any of the iPhone options, chances are you’re building for a different platform.
+    > - From the menu bar, select File ‣ Build Settings. In the build settings dialog underneath the platform settings, make sure to select iOS.
+    > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/buildPlatform-529x500.png)
+    > - Unity will reprocess all your assets, and it may take a while.
+    > - At the end, you should have access to the various iOS screen sizes.
+
+Now switch to the Scene view, and you’ll see the Canvas’s size doesn’t change when you resize the Scene view. The side edges of the screen are neatly cropped while the central part is fully visible. This is the result of setting **Match Width or Height** to **1**. It works perfectly for your target resolutions.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/15.gif)
+
+These designs are old! Modern phone screens are much wider in Landscape mode. Switch to iPhoneX Landscape mode and we have a whole new problem.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/iphoneX.png)
+
+If you change the **Match Width or Height** value back to zero, it works for iPhone 5 and iPhoneX, but appears letterboxed on iPhone 4.
+
+Fortunately, there are other solutions for this. While the **Canvas Scaler** has two other scaling modes, **Expand** and **Shrink**, there’s another useful component that we can use specifically for background images.
+
+Put the **Canvas Scaler** back to **Match Width or Height** with the value **1**, and set the Game view to iPhoneX. It should like the image above again.
+
+Now, select the **Background** and add an **Aspect Ratio Fitter** component. It will automatically set the **Aspect Ratio** value to the current ratio of the image’s Rect Transform. Switch the **Aspect Mode** to **Envelope Parent**. The image will automatically resize to once again fill the whole screen.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/aspectRatio-650x247.png)
+
+Phew, that was a lot of work. And we’ve only added the background image! But getting the Canvas Scaler and background set up in the proper way is going to make everything easier going forward. After doing this a couple of times ,you’ll find the setup so fast and easy that you’ll barely have time to blink before you’re done.
+
+What about the buttons? What happens when they’re too close to the left or right edge of the screen? You don’t want to crop or hide them.
+
+Fortunately, Unity has a feature that will help you sidestep this rookie mistake. You’ll learn about it soon.

@@ -28,7 +28,6 @@ To satisfy users’ cravings for an engaging UI, you’ll also learn to:
 - Create a settings dialog that slides into a scene
 - Use more GUI controls like Text, Slider, Panel and Mask
 
-
 　
 
 # Getting Started
@@ -59,3 +58,24 @@ The RocketMouse game is already set up, and all the assets for it are in its own
 It’s best to save the scene right away. Open the **Save Scenes** dialog by choosing **File ‣ Save Scenes**. Then, enter **MenuScene** as the scene name and save it to the **RW / Scenes** folder, right next to the RocketMouse scene.
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/save_scene.png)
+
+　
+
+# Importing Images and Fonts
+
+First on your to do list is to add assets to the scene, so unpack the UI Assets package in your file explorer. There you’ll find two folders: **Menu** and **Fonts**.
+
+|Note: The Menu folder contains background images, buttons, icons and other game art. The game art is provided by Game Art Guppy, where you can find a lot of other game art for your practice games. In addition, two fonts from DaFont. are in the Fonts folder. You can thank Rodrigo Fuenzalida for the Titan One font and Draghia Cornel for the DCC Dreamer font.|
+|:---|
+
+It’s nice to keep a tidy folder structure, so in the Project window, create a new folder inside RW named UI.
+
+From your file explorer, drag the Menu and Fonts folders into the UI folder in the Project window:
+
+
+
+Once the assets are in the project, check their import settings. Make sure all the assets in UI / Menu are set to the Sprite (2D and UI) texture setting.
+
+
+
+Woo-hoo! You’ve finished the setup and you’re ready to create your first UI element using the Unity UI system.

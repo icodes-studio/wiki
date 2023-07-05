@@ -469,3 +469,54 @@ This is what you should see in the Scene view:
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/startButton-650x402.png)
 
 Now you have a button, but it needs a facelift! To make the button look good, you’ll set an image as its background and then use a fancier font.
+
+　
+
+# # 9-Slice Scaling
+
+You set the image for buttons and images in the same way. After all, they use the same component. However, images rarely scale, especially non-uniformly. Buttons, on the other hand, often come in different sizes.
+
+You could create a background image for every single button size in your game, but why waste all that space? You’ll use a technique called **9-Slice scaling**, which allows you to provide one small image that scales to fit all sizes.
+
+There’s no magic involved here. This technique works by creating different images for each of nine zones, all of which scale differently.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/43.png)
+
+This ensures the image will look good at any scale.
+
+　
+
+# # Preparing Button Images
+
+Before you can use a sliced image, you need to set its nine zones. To do this, open the **Menu** folder in the Project window and select **btn_9slice_normal** image.
+
+In the Inspector’s **Import Settings**, set **Texture Type** to **Sprite (2D and UI)** and apply the change. Next, click on the **Sprite Editor** button to open the Sprite Editor view.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/spriteEditor-433x500.png)
+
+In the **Sprite Editor**, set the **Border** values to **L:14, R:14, B:16, T:16**. Remember to click **Apply**!
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/45-309x500.png)
+
+Repeat the same process for the **btn_9slice_highlighted** and **btn_9slice_pressed** images, which you’ll use for different button states.
+
+　
+
+# # Setting Button Images
+
+After preparing all your images, drag them to the corresponding fields in the Inspector. Select **StartButton** in the Hierarchy and follow these steps:
+
+- 1\) Change **Image Type** to **Sliced** in the Image component.
+- 2\) Change the **Transition** property in the Button component to **SpriteSwap**.
+- 3\) Drag **btn_9slice_normal** to **Source Image** in the Image component.
+- 4\) Drag **btn_9slice_highlighted** to **Highlighted Sprite** in the Button component.
+- 5\) Drag **btn_9slice_pressed** to **Pressed Sprite** in the Button component.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/buttonSettings-483x500.png)
+
+- ***Note:***
+    > - If you encounter this error message, you probably forgot to set the Border in the Sprite Editor in the Import Settings.
+    >
+    > 　　![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/47.png)
+
+Before running the scene and enjoying your cool buttons, you’re going to change the font used by the nested Text label. This will make the button mega-awesome.

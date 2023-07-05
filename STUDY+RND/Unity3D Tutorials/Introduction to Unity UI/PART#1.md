@@ -34,8 +34,8 @@ To satisfy users’ cravings for an engaging UI, you’ll also learn to:
 
 This tutorial is aimed at those familiar with the Unity Editor. Go check out our [**Introduction to Unity**](https://www.raywenderlich.com/772-introduction-to-unity-getting-started-part-1-2?__hstc=149040233.c1ed3c16c256a3843203b44947edda4e.1688513289263.1688513289263.1688513289263.1&__hssc=149040233.46.1688513289263&__hsfp=1152682960) series if this is your first rodeo. The great news is that as this tutorial focuses on the UI system, it is 95% script free!
 
-    > Note: Keep in mind that this tutorial does not cover the creation of the game itself.
-    > The goal here is to provide an introduction to Unity’s UI system and familiarize you with its components.
+    > - Note: Keep in mind that this tutorial does not cover the creation of the game itself.
+    > - The goal here is to provide an introduction to Unity’s UI system and familiarize you with its components.
 
 You’ll need some images for backgrounds, buttons and other UI elements, as well as a few fonts for the labels and buttons. Don’t worry, you won’t have to draw anything yourself or scour the web for the right assets. I’ve prepared a special package that has everything you need. You’re welcome. :]
 
@@ -63,10 +63,10 @@ It’s best to save the scene right away. Open the **Save Scenes** dialog by cho
 
 First on your to do list is to add assets to the scene, so unpack the UI Assets package in your file explorer. There you’ll find two folders: **Menu** and **Fonts**.
 
-    > Note: The Menu folder contains background images, buttons, icons and other game art.
-    > The game art is provided by Game Art Guppy, where you can find a lot of other game art for your practice games.
-    > In addition, two fonts from DaFont. are in the Fonts folder.
-    > You can thank Rodrigo Fuenzalida for the Titan One font and Draghia Cornel for the DCC Dreamer font.
+    > - Note: The Menu folder contains background images, buttons, icons and other game art.
+    > - The game art is provided by Game Art Guppy, where you can find a lot of other game art for your practice games.
+    > - In addition, two fonts from DaFont. are in the Fonts folder.
+    > - You can thank Rodrigo Fuenzalida for the Titan One font and Draghia Cornel for the DCC Dreamer font.
 
 
 It’s nice to keep a tidy folder structure, so in the Project window, create a new folder inside RW named UI.

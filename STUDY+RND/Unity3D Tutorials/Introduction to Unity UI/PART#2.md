@@ -12,7 +12,6 @@ Welcome back! In [**part one**](https://github.com/icodes-studio/wiki/blob/main/
 
 In this tutorial, you’ll spruce up the scene by adding animations, a settings dialog and more UI controls like Slider and Toggle.
 
-
 　
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/featured_image_unityrm.gif)
@@ -22,3 +21,26 @@ In this tutorial, you’ll spruce up the scene by adding animations, a settings 
 You’ll be picking up the project from the end of part one. If you don’t have it already, download the project by clicking the [**Download materials**](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/Introduction-to-Unity-UI-Part-2.zip) button at either the top or bottom of this tutorial.
 
 Open the project in Unity. Open the **MenuScene**, grab an invigorating beverage and start -drinking- thinking UI! :]
+
+　
+
+# # Animating Buttons
+
+You’re going to jump right in by adding some cool animations. Why? First, animations are cool! Second, they’re practical for this project. You need the buttons to exit from the scene so there’ll be enough space to display the new dialog you’ll create later.
+
+　
+
+## Creating Animation and Animator
+
+Animating buttons is just like animating any other Unity object. You’ll need to add an **Animator** component, create a few animations and set up states and transitions between them.
+
+Here are the steps to success:
+
+- 1\) Select **StartButton** in the Hierarchy.
+- 2\) Open the **Animation view** by selecting **Window ▸ Animation ▸ Animation** from the menu.
+- 3\) Click on the **Create** button in the Animation view. This will create the Animator and an animation clip.
+- 4\) Name the animation **StartButtonSlideOut** and save it in **RW ▸ Animations**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/022.png)
+
+In addition to creating the animation itself, Unity also adds an **Animator** component to **StartButton** and creates an **Animator Controller**. Ready to get started?

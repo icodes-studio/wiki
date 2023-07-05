@@ -192,7 +192,7 @@ Change the Game view resolution to see how your game might look in a different r
     > - *From the menu bar, select File ‣ Build Settings.*
     > - *In the build settings dialog underneath the platform settings, make sure to select iOS.*
     >
-    > 　![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/buildPlatform-529x500.png)
+    > 　　![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/buildPlatform-529x500.png)
     > - *Unity will reprocess all your assets, and it may take a while.*
     > - *At the end, you should have access to the various iOS screen sizes.*
 
@@ -295,7 +295,7 @@ You can manually move anchors to a custom position. The presets are just for you
     > - *You might find yourself in a situation where the translation gizmo covers the anchor icon, making it impossible to select the anchor.*
     > - *This is where another Unity UI tool comes in handy. If you are familiar with Unity, you’ll know that the keyboard shortcuts Q, W, E and R toggle the Hand, Move, Rotate and Scale tools respectively. With the new UI system, the RectTool was added under the shortcut T. With the RectTool selected, the Gizmo changes to a 2D scale/move box that acts as you would expect from any graphics editing software.*
     >
-    > 　![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/rectTool.png)
+    > 　　![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/rectTool.png)
 
 
 Now you can grab the anchors and move them around.
@@ -318,7 +318,7 @@ You can split anchors to make them stretch a UI Element horizontally, vertically
     > - *Look for the word Preview next to the cursor when you try to resize it.*
     > - *Use this technique to experiment and see how your UI elements adapt to different screen sizes.*
     >
-    > 　![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/27.png)
+    > 　　![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/27.png)
 
 　
 

@@ -631,3 +631,20 @@ public void StartGame()
 ```
 
 Save the script and move on to the next step:
+
+　
+
+## Calling StartGame When the Button is Clicked
+
+Switch back to Unity and follow these steps:
+
+- 1\) Select **StartButton** in the Hierarchy and scroll down in the Inspector to the **On Click()** list.
+- 2\) Click the + button to add a new item.
+- 3\) Drag **UIManager** from the Hierarchy to the newly added item in the list.
+- 4\) Click on the dropdown to select the function. Right now, it’s set to **No Function**.
+- 5\) In the opened menu, select **UIManagerScript** and the select **StartGame()** in the menu that opens next.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/UIManager.gif)
+
+**Save** the scene and then click the **Play** button to run the game. Click the **Start Game** button in the menu. This should open the game scene.
+

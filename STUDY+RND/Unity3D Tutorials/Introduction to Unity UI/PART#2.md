@@ -580,3 +580,22 @@ Now, set the corresponding image for each part of the slider:
 If you run the scene now and open the Settings dialog, you should see something like this:
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/58.png)
+
+　
+
+## Changing the Volume of the AudioSource Component
+
+Changing the music volume using the slider is similar to what you did with the toggle.
+
+Select **VolumeSlider** in the Hierarchy. In the Inspector, scroll down to see the **On Value Changed (Single)** list and **click +** to add a new item.
+
+Drag **MainCamera** from the Hierarchy to that new item in the list, open the function selection dropdown and select **AudioSource ▸ volume** in the **Dynamic float** section.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/59-444x500.png)
+
+In addition, set the **Slider component‘s Value to 1**. This will set the slider to the same value as the volume of the music when the scene starts.
+
+Select **File ▸ Save** to save your work so far and then run the scene. Open the Settings dialog and change the slider’s value. You should hear the volume go up and down as you drag the slider handle. What a great feature! :]
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/volume.gif)
+

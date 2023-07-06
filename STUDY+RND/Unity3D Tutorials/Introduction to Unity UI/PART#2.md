@@ -389,3 +389,42 @@ Select **UIManager** in the Hierarchy and drag **SettingsDialog** to the **Dialo
 Run the scene. Then click the **Settings** button and see how the buttons slide out as the dialog slides in.
 
 That’s better, but you can’t close the dialog. To fix this, you need to add a close button to the dialog.
+
+　
+
+# # Adding a Close Button
+
+Create a new button as a child of the **SettingsDialog** by right-clicking on it in the Hierarchy and selecting **UI ▸ Button**. Rename this new button to **CloseSettingsButton**. Also, this button won’t have text on it, so remove the **Text object** nested in **CloseSettingsButton**.
+
+This is what you should have in the Hierarchy at this point:
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/391.png)
+
+Now, select **CloseSettingsButton** and follow these steps:
+
+- 1\) Set **Anchors** to **top-right**.
+- 2\) Set both **Pos X** and **Pos Y** to **0**.
+- 3\) Open **RW ‣ UI ‣ Menu** in the Project window and drag **settings_btn_close** to the **Source Image** field in the Inspector.
+- 4\) Click **Set Native Size**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/401-453x500.png)
+
+This is how the dialog should look in the Scene view now:
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/411-650x279.png)
+
+- ***Note:***
+    > - *This time, you’re going to use another method to highlight the button’s image (Transition property, in the Button script) called Color Tint, which is the default transition type.*
+    > - *You’ll do this instead of adding two more images to represent highlighted and pressed button states.*
+
+The button looks great, but it does nothing. Fortunately, you’ve already added the method this button needs to call.
+
+Select **CloseSettingsButton** in the Hierarchy. Scroll down to the **On Click ()** list and **click +**. Drag **UIManager** from the Hierarchy to the new item, and then select **UIManagerScript ▸ CloseSettings ()** method in the dropdown.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/421-352x500.png)
+
+Select **File ▸ Save** to save your work so far and then run the scene. Click the **Settings** button and close the scene by clicking **Close** after the dialog slides into the scene.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/43.gif)
+
+Hey, you’ve done well. That looks nice! :]

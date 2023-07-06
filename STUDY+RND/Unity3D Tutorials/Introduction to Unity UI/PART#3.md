@@ -379,3 +379,47 @@ Select **GameObject ▸ UI ▸ Image** to create a new Image. Select it in the H
 - 7\) Open **RocketMouse ▸ Sprites** in the Project window and drag the **coin** image to the **Source Image** field in the Inspector.
 
 - ***Note:*** *This time, do **not** click Set Native Size. You’re going to reuse the image for coins in the game, which will be a bit bigger than the icon.*
+
+　
+
+## Updating the Points Label
+
+Most of the code of the game lives in the **MouseController.cs** script. You’ll edit this script to update the points label. Until the end of this tutorial, you’ll only work with this script.
+
+Open **RocketMouse ▸ Scripts** in the Project window and double-click on the **MouseController** script to open it in a code editor.
+
+When the script loads, find and remove the following methods, which use the old GUI system:
+
+- `OnGUI`
+- `DisplayCoinsCount`
+- `DisplayRestartButton`
+
+Add the following `using` directive:
+
+```
+using UnityEngine.UI;
+```
+
+After that, add the following instance variable to contain a reference to the label:
+
+```
+public Text coinsLabel;
+```
+
+Finally, add the following line at the end of `CollectCoin`, which is called every time the mouse collects a coin.
+
+```
+coinsLabel.text = coins.ToString();
+```
+
+Save the script file and switch back to Unity.
+
+In Unity, select **Mouse** in the Hierarchy and find the **MouseController** component. Drag **PointsText** to the **Coins Label** field in the Inspector.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/272.png)
+
+Run the scene and send the mouse out to collect a few coins. You should see the label update when he collects a coin.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/281.png)
+
+Everything is looking good, but you might have noticed one embarrassing problem. When you removed the old `OnGUI` method, you also removed the button that displayed when the mouse dies, leaving the player unable to restart the game. Oops!

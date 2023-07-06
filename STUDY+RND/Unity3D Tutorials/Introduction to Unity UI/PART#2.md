@@ -505,3 +505,35 @@ This is what you should see in the Scene view:
     > - *Also, the checked state may still be showing, but when you press play in the editor,*
     > - *the Toggle will refresh its state based on the **Is On** option you set earlier.*
 
+　
+
+## Muting the Music
+
+The good thing about UI elements’ event handlers is that sometimes you can get away without writing any code at all! Instead, you can set the UI element to change the property or directly call a function of the component attached to the object using only Unity’s interface.
+
+Here’s how you can change the **mute** property of the **Audio Source** component attached to MainCamera.
+
+Select **SoundToggle** in the Hierarchy, and in the Inspector, find the **On Value Changed (Boolean)** list. Click + to add a new item.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/511.png)
+
+Drag **MainCamera** from the Hierarchy to the newly added item. Open the function selection dropdown and select **AudioSource ▸ mute** from the **Dynamic bool** section at the top.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/521-482x500.png)
+
+- ***Note:*** *When you look closely at the function selection options, you’ll see two **mute** properties, one in the **Dynamic bool** section and the other in **Static Parameters**.*
+
+The difference is trivial. If you select mute in the Dynamic bool section, its value will be set to the current value of the toggle’s Active property each time you toggle it.
+
+If you select the mute property from the Static Parameters section, a new input field will appear and you’ll be able to set its value in the Inspector to a constant value.
+
+Of course, in the Dynamic bool section, there are only properties and methods that take bool values because Toggle’s active property type is bool. Since you can specify any value as the static parameter, the Static Parameters section contains all public properties and methods.
+
+Hence, when the toggle is active (e.g. active equals true), it sets the mute property of AudioSource to true and mutes the music.
+
+Select **File ▸ Save** to save your work so far and then run the scene. Open the settings dialog and try switching music ON and OFF.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/mute.gif)
+
+　
+

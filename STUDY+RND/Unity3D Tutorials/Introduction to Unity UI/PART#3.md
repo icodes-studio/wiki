@@ -258,3 +258,37 @@ After that, follow these steps:
 - 3\) Click **Set Native Size**.
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/gearImage-650x401.png)
+
+　
+
+## Animating the Gear Image
+
+By now, creating two animation states and a parameter to switch between them is probably second nature. You may be able to create a left-rotating gear and reverse the animation to make a right-rotating gear on your own.
+
+Here are the need-to-know details:
+
+- The **Animation duration** should be identical to the sliding panel animation. All animations in this tutorial are exactly one second long.
+- The gear should rotate **360 degrees** around the **Z axis** (Rotation Z).
+- Use the same name **isHidden** for the parameter name and set its **default value** to true.
+- Remember to disable looping and the Animator component.
+
+If need more detailed directions, open the spoiler below.
+
+Select **GearImage** in the Hierarchy and open the Animation view. Create a new clip by clicking on the **Create** button and name it **GearRotateOpen**. Save it in **RW ‣ Animations**.
+
+Then, click on the **1:00** mark in the **timeline** and enable recording. After that, in the Inspector, change **Rotation Z** to 360.
+
+**Stop recording** by clicking the button with a red circle.
+
+Now, open the **Animations** folder in the Project window and select **GearRotateOpen**. In the Inspector, uncheck **Loop Time**.
+
+Now, set up states. Select **GearImage** in the Hierarchy, open the **Animator view** and do the following:
+
+- 1\) Right-click the Animator and choose **Create State**. Then choose **Empty**.
+- 2\) In the Inspector, name the state **GearIdle**.
+- 3\) Right-click **GearIdle** and select **Set as Layer Default State**.
+- 4\) Duplicate the **GearRotateOpen** state by copying and pasting it.
+- 5\) Rename the duplicate to **GearRotateClose** and change its **Speed** to **-1** in the Inspector.
+- 6\) Add a new **Bool** parameter named **isHidden**, and set its default value to **true**.
+- 7\) Create two transitions between states. Under conditions, set **isHidden** to **true** for the transition from **GearRotateOpen** to **GearRotateClose**, and **isHidden** to **false** for the reverse transition.
+- 8\) Create a transition from **GearIdle** to **GearRotateOpen**. Set the **isHidden** condition to **false**.

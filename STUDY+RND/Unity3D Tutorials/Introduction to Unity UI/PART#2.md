@@ -213,3 +213,29 @@ Select **File ▸ Save** to save your work so far and then run the scene. Wait f
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/20.gif)
 
+　
+
+# Adding the Settings Dialog
+
+Look at all that gorgeous free space you created! That seems like the perfect place for a dialog.
+
+　
+
+## Creating the Panel
+
+Usually, dialogs contain some other controls that appear and move with dialog. For that reason, it’s effective to create the dialog as a panel and set other UI Elements as child objects.
+
+To create a panel, select **GameObject ▸ UI ▸ Panel** in the menu. This will create a full-screen panel that uses a white, semi-transparent image as a background. As a result, you should see some kind of full-screen veil.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/211.png)
+
+However, this dialog won’t be full-screen; in fact, it’ll be relatively small. Follow these steps to set the dialog’s size and position:
+
+- 1\) Select **Panel** in the Hierarchy and rename it to **SettingsDialog**.
+- 2\) Set its **anchors** to **middle-right**, since you’ll position the dialog beyond the right edge and off the screen, so that it’s not visible when you run the scene.
+- 3\) Set **Width** to **400** and **Height** to **150**.
+- 4\) Set **Pos X** to **220** and **Pos Y** to **0**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/221-650x152.png)
+
+You should see a semi-transparent rectangle to the right of the canvas rectangle. All UI elements outside this rectangle are not visible on the screen. This is precisely what you want for the dialog!

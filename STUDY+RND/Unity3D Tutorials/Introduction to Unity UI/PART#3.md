@@ -203,3 +203,37 @@ That’s it! Save your work again. Unfortunately, when you run your game, nothin
 
 　
 
+## Adding Code to Toggle the Menu
+
+Open the **UIManagerScript** in a code editor and add the following instance variable:
+
+```
+public Animator contentPanel;
+```
+
+After that, add the following method:
+
+```
+public void ToggleMenu() 
+{
+    bool isHidden = contentPanel.GetBool("isHidden");
+    contentPanel.SetBool("isHidden", !isHidden);
+}
+```
+
+This enables the animator component when you open the sliding menu and sets the correct `isHidden` parameter value.
+
+Save the script and switch back to Unity. In Unity, select **UIManager** in the Hierarchy and drag **ContentPanel** from the Hierarchy to the **Content Panel** field in the Inspector.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/201.png)
+
+Now, select **SlideMenuButton** in the Hierarchy. In the Inspector, find a list of On Click () event handlers and add a new one by clicking the + button.
+
+After that, drag **UIManager** from the Hierarchy to that new handler. Then, in the function selection dropdown menu, select **UIManagerScript ▸ ToggleMenu ()**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/212-650x337.png)
+
+Save your work, run the scene and relish in your cool sliding menu.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/menuSlide.gif)
+

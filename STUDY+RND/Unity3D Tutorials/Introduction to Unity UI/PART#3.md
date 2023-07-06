@@ -25,3 +25,9 @@ Now you’re going to build on these skills to round out your understanding of U
 
 # # Getting Started
 
+Start by opening the Unity project at the point where you left it at the end of Part 2. If you tinkered with your old project file to a point beyond recognition, you can find the starter project by clicking the [**Download materials**](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/Introduction-to-Unity-UI-Part-3.zip) button at the top or bottom of this tutorial. Open it in Unity.
+
+Strap yourself in. This tutorial is about to get real.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/012.png)
+

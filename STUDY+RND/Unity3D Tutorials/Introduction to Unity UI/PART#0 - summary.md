@@ -103,17 +103,7 @@ Now it looks like a proper background.
 
 ## Using the Canvas Scaler
 
-Select **Canvas** in the Hierarchy, and in the Inspector, you should see the Canvas Scaler component:
-
-![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/12.png)
-
-The Canvas Scaler has three scale modes:
-
-- **Constant Pixel Size:** Makes UI elements retain the same pixel size, regardless of the screen size. This is the default value of the Canvas.
-- **Scale With Screen Size:** Sizes and positions UI elements according to a referenced resolution. If the current resolution is larger than the referenced resolution, the Canvas will maintain the reference resolution, while scaling up the elements to match the target resolution.
-- **Constant Physical Size:** Positions of the UI elements are specified in physical units such as millimeters or points. This requires the correct reporting of the screen DPI.
-
-Change the component mode to **Scale With Screen Size** and set its **Reference Resolution** to **(X:1136, Y:640)**. Also, slide the **Match Width or Height** all the way to the right, or simply enter 1 in the input field.
+Select **Canvas** in the Hierarchy. Change the component mode to **Scale With Screen Size** and set its **Reference Resolution** to **(X:1136, Y:640)**. Also, slide the **Match Width or Height** all the way to the right, or simply enter 1 in the input field.
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/13.png)
 

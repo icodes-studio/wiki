@@ -215,7 +215,7 @@ Select **File ▸ Save** to save your work so far and then run the scene. Wait f
 
 　
 
-# Adding the Settings Dialog
+# # Adding the Settings Dialog
 
 Look at all that gorgeous free space you created! That seems like the perfect place for a dialog.
 

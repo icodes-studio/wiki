@@ -17,7 +17,7 @@ Welcome to the third and final part of this series about Unity’s UI.
 
 In [**Part 1**](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/PART%231.md), you used anchors, pivot and other cool tricks to create a menu scene complete with an adaptive background and neatly controlled graphical elements.
 
-[**Part 3**](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/PART%232.md) was all about animating buttons and actions to make your game uber-interactive.
+[**Part 2**](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/PART%232.md) was all about animating buttons and actions to make your game uber-interactive.
 
 Now you’re going to build on these skills to round out your understanding of Unity’s UI. First, you’ll make a fancy new menu. Then, you’ll migrate the RocketMouse game scene from the old legacy GUI system to the new UI system!
 

@@ -428,3 +428,23 @@ Select **File ▸ Save** to save your work so far and then run the scene. Click 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/43.gif)
 
 Hey, you’ve done well. That looks nice! :]
+
+　
+
+# # Adding Sound Settings
+
+There’s not much sense in keeping a meaningless settings dialog, so it’s time to add some settings to it. In this dialog, the player will have control over the music’s volume in the menu scene.
+
+Music? Yes, what fun is a game without a rockin’ soundtrack?
+
+　
+
+## Adding Music to the Menu Scene
+
+You’re welcome to rummage around your files for a suitable clip, but you don’t have to because the project already contains a snappy music track. All you need to do is to play it.
+
+Select **Main Camera** in the Hierarchy and add the **Audio Source** component. Then, in the Project window, open **RocketMouse ‣ Audio** and drag **Music** to the **Audio Clip** field in the Inspector.
+
+Enable **Play On Awake**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/441.png)

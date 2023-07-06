@@ -448,3 +448,60 @@ Select **Main Camera** in the Hierarchy and add the **Audio Source** component. 
 Enable **Play On Awake**.
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/441.png)
+
+　
+
+## Toggling Music On and Off
+
+To toggle music on and off you’re going to use a — wait for it — toggle control. Right-click on **SettingsDialog** and select **UI ▸ Toggle** to add a toggle UI element as a child of the dialog.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/451.png)
+
+The toggle controls consist of the **root object**, which has a toggle component attached, and several child objects:
+
+- **Background**: An image that is always visible (i.e. in both on and off states)
+- **Checkmark**: An image that is only visible when the toggle is active (ON)
+- **Label**: A label displayed next to the toggle
+
+You don’t need a label this time, so remove the nested **Label**. Then rename **Toggle** to **SoundToggle**. This is what you should see in the Hierarchy after you’re done:
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/461.png)
+
+Select **SoundToggle** in the Hierarchy. Set its **Anchors** to middle-left, **Pos X** to **115** and **Pos Y** to **-10**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/471.png)
+
+- **Note:** 
+    > - *Remember how anchors and position are set relative to the parent?*
+    > - *This is why it’s important to add **SoundToggle** as a child of **SettingsDialog** first before setting its position.*
+
+Keep in mind, changing the Anchors and Pivot won’t change the UI element position. Instead, they update position fields (e.g., Pos X, Pos Y, Left, Right) to values that position the element at the same place by using the new anchors and pivot. Set these first and play with them to set the correct position.
+
+Also, under the **Toggle component**, uncheck the **Is On** checkbox.
+
+Now you need to specify images for the Background and Checkmark child objects. Just as you’ve done with the other images, you will take them from **RW ‣ UI ‣ Menu**, so open that folder in the Project window.
+
+You’re going to need two images:
+
+- **settings_btn_sound** for Background
+- **settings_btn_sound_checkmark** for Checkmark
+
+Select the **Background** child of **SoundToggle** in the Hierarchy and drag **settings_btn_sound** from the Project window to **Source Image** in the Inspector. Then click **Set Native Size**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/481-470x500.png)
+
+Select **Checkmark** and repeat the previous steps, but this time use the **settings_btn_sound_checkmark** image from the Project window.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/49-470x500.png)
+
+This is what you should see in the Scene view:
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/501-650x277.png)
+
+- ***Note:***
+    > - You’ll notice the size of the root object (wide rectangle) doesn’t match the background images.
+    > - You can adjust its size, but it’s not important.
+    > - The rect of the child objects will act as the collider boxes for interaction.
+    > - Also, the checked state may still be showing, but when you press play in the editor, 
+    > - the Toggle will refresh its state based on the **Is On** option you set earlier.
+

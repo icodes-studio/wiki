@@ -292,3 +292,42 @@ Now, set up states. Select **GearImage** in the Hierarchy, open the **Animator v
 - 6\) Add a new **Bool** parameter named **isHidden**, and set its default value to **true**.
 - 7\) Create two transitions between states. Under conditions, set **isHidden** to **true** for the transition from **GearRotateOpen** to **GearRotateClose**, and **isHidden** to **false** for the reverse transition.
 - 8\) Create a transition from **GearIdle** to **GearRotateOpen**. Set the **isHidden** condition to **false**.
+
+　
+
+## Triggering the Gear Animation from Code
+
+To complete the sliding menu control, you need to trigger the gear animation with code, but you only need to write a few lines.
+
+Open the **UIManagerScript** in a code editor and add the following instance variable:
+
+```
+public Animator gearImage;
+```
+
+Then, scroll down and find `ToggleMenu`. Add the following to the bottom of the method’s body:
+
+```
+public void ToggleMenu() 
+{
+    //..skipped..
+
+    gearImage.SetBool("isHidden", !isHidden);
+}
+```
+
+This enables the Animator component and sets its `isHidden` parameter to the same value as the `contentPanel` animator’s `isHidden` parameter.
+
+Save the script file and switch back to Unity.
+
+In Unity, select **UIManager** in the Hierarchy. Drag **GearImage** to the **Gear Image** field in the Inspector.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/231.png)
+
+Save your work, run the scene and enjoy your fancy rotating gear icon.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/24.gif)
+
+Good job! The sliding menu is complete, and your scene is coming together.
+
+For the purposes of this tutorial, you’re not going to handle clicks on the buttons in the menu. You should be familiar with handling UI events, and integrating Game Center would send this tutorial down a rabbit hole. Instead, you’ll update the old GUI-based RocketMouse scene so that it uses the new GUI system.

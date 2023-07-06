@@ -111,21 +111,7 @@ After making those changes, you’ll see the full background image, even in a sm
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/14-650x472.png)
 
-Now switch to the Scene view, and you’ll see the Canvas’s size doesn’t change when you resize the Scene view. The side edges of the screen are neatly cropped while the central part is fully visible. This is the result of setting **Match Width or Height** to **1**. It works perfectly for your target resolutions.
-
-![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/15.gif)
-
-These designs are old! Modern phone screens are much wider in Landscape mode. Switch to iPhoneX Landscape mode and we have a whole new problem.
-
-![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/iphoneX.png)
-
-If you change the **Match Width or Height** value back to zero, it works for iPhone 5 and iPhoneX, but appears letterboxed on iPhone 4.
-
-Fortunately, there are other solutions for this. While the **Canvas Scaler** has two other scaling modes, **Expand** and **Shrink**, there’s another useful component that we can use specifically for background images.
-
-Put the **Canvas Scaler** back to **Match Width or Height** with the value **1**, and set the Game view to iPhoneX. It should like the image above again.
-
-Now, select the **Background** and add an **Aspect Ratio Fitter** component. It will automatically set the **Aspect Ratio** value to the current ratio of the image’s Rect Transform. Switch the **Aspect Mode** to **Envelope Parent**. The image will automatically resize to once again fill the whole screen.
+select the **Background** and add an **Aspect Ratio Fitter** component. It will automatically set the **Aspect Ratio** value to the current ratio of the image’s Rect Transform. Switch the **Aspect Mode** to **Envelope Parent**. The image will automatically resize to once again fill the whole screen.
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/aspectRatio-650x247.png)
 

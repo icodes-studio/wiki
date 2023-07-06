@@ -337,3 +337,55 @@ Select **File ▸ Save** to save your work so far and then run the scene. You’
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/361.png)
 
 This is getting there, but it’s still not what you want. You need to disable the Animator component so it won’t play the animation at the start. You want the dialog to appear on demand, which you’ll do next.
+
+　
+
+## Displaying Dialog on Button Click
+
+Disable the Animator component so it won’t play the animation at the start by setting the default value for the **isHidden** to **true**. Click on some empty space in the Animator window and set **isHidden** to **true**:
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/ishidden-650x207.png)
+
+Now when you run the scene, the dialog doesn’t appear straight away, which is good; however, it won’t show up even when you click the settings button. This is not good.
+
+Open the **UIManagerScript** and add the following instance variable:
+
+```
+public Animator dialog;
+```
+
+Then add the following line to the end of `OpenSettings`:
+
+```
+public void OpenSettings() 
+{
+    //..skipped..
+
+    dialog.SetBool("isHidden", false);
+}
+```
+
+This enables the Animator component and sets the correct value to the `isHidden` parameter.
+
+Finally, add a new method called `CloseSettings`, as follows:
+
+```
+public void CloseSettings() 
+{
+    startButton.SetBool("isHidden", false);
+    settingsButton.SetBool("isHidden", false);
+    dialog.SetBool("isHidden", true);
+}
+```
+
+This returns the buttons and hides the dialog. You’ll add the UI element that calls this method in a moment.
+
+**Save** the **UIManagerScript** and switch back to the Unity editor.
+
+Select **UIManager** in the Hierarchy and drag **SettingsDialog** to the **Dialog** field in the Inspector.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/381.png)
+
+Run the scene. Then click the **Settings** button and see how the buttons slide out as the dialog slides in.
+
+That’s better, but you can’t close the dialog. To fix this, you need to add a close button to the dialog.

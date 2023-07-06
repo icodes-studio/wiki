@@ -331,3 +331,35 @@ Save your work, run the scene and enjoy your fancy rotating gear icon.
 Good job! The sliding menu is complete, and your scene is coming together.
 
 For the purposes of this tutorial, you’re not going to handle clicks on the buttons in the menu. You should be familiar with handling UI events, and integrating Game Center would send this tutorial down a rabbit hole. Instead, you’ll update the old GUI-based RocketMouse scene so that it uses the new GUI system.
+
+　
+
+# # Updating the RocketMouse Scene to use Unity’s UI
+
+In the RocketMouse game, a few UI elements use the old GUI method, both to display the points scored and the button that restarts the game. You’ll replace them with new text and image UI elements, and a dialog that allows you to restart the game or exit to the main menu.
+
+　
+
+## Adding the Points Label
+
+Switch to the RocketMouse scene by opening **RW ▸ Scenes** in the Project window. Double-click on the **RocketMouse** scene to open it.
+
+Choose **GameObject ▸ UI ▸ Text** to create a new **Text** UI element. You’re also going to work with **Canvas** and **EventSystem** while you’re here.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/251.png)
+
+Select **Text** in the Hierarchy and make the following changes in the Inspector:
+
+- 1\) Rename it **PointsText**.
+- 2\) Set **Anchors** to **top-left**.
+- 3\) Set **Pivot** to **(0, 0.5)**.
+- 4\) Set **Pos X** to **50** and **Pos Y** to **-30**.
+- 5\) Change **Text** to **0** since the player starts with zero points.
+- 6\) Open **RW ▸ UI ▸ Fonts** in the Project window and drag **TitanOne-Regular** to the **Font** field in the Inspector.
+- 7\) Set **Font Size** to **24**.
+- 8\) Set **Horizontal Overflow** to **Overflow** to make sure the label can display even the most outrageous scores.
+- 9\) Change the **Color** of the text to white.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/261-644x500.png)
+
+

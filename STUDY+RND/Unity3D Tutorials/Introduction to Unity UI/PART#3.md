@@ -469,3 +469,75 @@ Just kidding. For a step-by-step guide, open the spoiler below.
 　　![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/restartLabel-412x500.png)
 
 - 17\) To create a second button, right-click on **RestartButton** and select **Duplicate**. Name it **ExitButton**. Set its **Pos Y** to **-160**. Then select the nested text element and change its **Text** to **Exit**.
+
+　
+
+## Displaying the Restart Dialog
+
+Instead, of animating the dialog, you’ll hide the dialog at the start and show it when the player loses the game.
+
+Open the **MouseController** script in a code editor and add the following instance variable:
+
+```
+public GameObject restartDialog; 
+```
+
+Then, add the following line of code to `Start` to hide the dialog at the start:
+
+```
+restartDialog.SetActive(false);
+```
+
+Scroll down and add the following line to the end of `HitByLaser`:
+
+```
+restartDialog.SetActive(true);
+```
+
+As you may have guessed, `HitByLaser` is called when the mouse dies. It’s the perfect place to display a restart dialog.
+
+Now you need to handle the buttons on the restart dialog. Add the following two methods to restart and exit the game:
+
+```
+public void RestartGame() 
+{
+    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+}
+
+public void ExitToMenu() 
+{
+    SceneManager.LoadScene("MenuScene");
+}
+```
+
+You’ll link them to the corresponding buttons in a moment.
+
+Save the script file and switch back to Unity.
+
+In Unity, select **Mouse** in the Hierarchy and drag **RestartDialog** to the **Restart Dialog** field in the Inspector.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/362.png)
+
+Then select **RestartButton** in the Hierarchy and scroll down to the **On Click ()** list.
+
+Click + to add a new item. After that, drag **Mouse** from the Hierarchy to the new item. In the function selection dropdown menu, select **MouseController ▸ RestartGame()**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/372-337x500.png)
+
+Now, select **ExitButton**, and repeat the process, but this time select the **MouseController ▸ ExitToMenu()** function.
+
+Save and run the scene and send your mouse into the laser’s line of fire. You should see a dialog appear instantly after he dies. If you press **Restart**, you’ll restart the game. If you press **Exit** you’ll return to the main menu.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/382-1-650x365.png)
+
+　
+
+# # Where to Go From Here?
+
+Congratulations on completing this tutorial! You’re ready to create some cool user interfaces in your games. Please share your handiwork! Post a screenshot, video or GIF animation in the comments to show the world your awesome new skills and inspire a fellow dev or two (or make them jealous). :]
+
+Get the final project by clicking the [**Download materials**](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/Introduction-to-Unity-UI-Part-3.zip) button at the top or bottom of the tutorial.
+
+If you have any questions or comments, please leave them below.
+
+Good luck!

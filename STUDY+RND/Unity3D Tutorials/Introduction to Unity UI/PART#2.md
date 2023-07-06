@@ -499,9 +499,9 @@ This is what you should see in the Scene view:
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/501-650x277.png)
 
 - ***Note:***
-    > - You’ll notice the size of the root object (wide rectangle) doesn’t match the background images.
-    > - You can adjust its size, but it’s not important.
-    > - The rect of the child objects will act as the collider boxes for interaction.
-    > - Also, the checked state may still be showing, but when you press play in the editor, 
-    > - the Toggle will refresh its state based on the **Is On** option you set earlier.
+    > - *You’ll notice the size of the root object (wide rectangle) doesn’t match the background images.*
+    > - *You can adjust its size, but it’s not important.*
+    > - *The rect of the child objects will act as the collider boxes for interaction.*
+    > - *Also, the checked state may still be showing, but when you press play in the editor, *
+    > - *the Toggle will refresh its state based on the **Is On** option you set earlier.*
 

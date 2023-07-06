@@ -423,3 +423,49 @@ Run the scene and send the mouse out to collect a few coins. You should see the 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/281.png)
 
 Everything is looking good, but you might have noticed one embarrassing problem. When you removed the old `OnGUI` method, you also removed the button that displayed when the mouse dies, leaving the player unable to restart the game. Oops!
+
+　
+
+# # Adding a Restart Dialog
+
+Create a 200px * 200px panel with a label and two buttons that looks like this:
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/292.png)
+
+Place it in the center of the canvas.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/302-650x374.png)
+
+Come back when you’re done — you’re on your own, friend!
+
+Just kidding. For a step-by-step guide, open the spoiler below.
+
+- 1\) Create a new **Panel** using **GameObject ▸ UI ▸ Panel** and rename it **RestartDialog**.
+- 2\) Set **Anchors** to **middle-center**.
+- 3\) Set both **Width** and **Height** to **200** and both **Pos X** and **Pos Y** to **0**.
+- 4\) Use the **settings_panel_bg_9slice** image from the **Menu** folder as the **Source Image** for the panel.
+- 5\) Double-click on the **Color** field in the Inspector and set **A** to **1** **(or 255 depending on your range settings)** to remove transparency.
+
+　　![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/RestartDialog.png)
+
+- 6\) Create a **Text** element by right-clicking on **RestartDialog** and selecting **UI ▸ Text**. Rename it to **YouLoseLabel**.
+- 7\) Set its **Anchors** to **top-center**, **Pos X** to **0** and **Pos Y** to **-40**.
+- 8\) Use the **DCC-Dreamer** font from the **Fonts** folder. Set **Font Size** to **30**.
+- 9\) Set **Alignment** to Center Align and **Horizontal Overflow** to Overflow.
+- 10\) Change **Text** to **You Lose :[**
+- 11\) Set the text **Color** to completely white (no transparency).
+
+　　![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/loseLabel-440x500.png)
+
+- 12\) Create a **Button** as a child of **RestartDialog** and rename it **RestartButton**.
+- 13\) Set its **Anchors** to **top-center**, **Pos X** to **0**, **Pos Y** to **-100**.
+- 14\) Set its **Width** to **135** and **Height** to **45**.
+- 15\) Use **btn_9slice_normal** as **Source Image**.
+
+　　![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/restartButton.png)
+
+- 16\) Select the nested **Text** element and set its **Font** to **TitanOne-Regular**, **Font Size** to **18** and **Color** to completely white (no transparency). Set the value of the **Text** field in the Inspector to **Restart**.
+
+　　![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/restartLabel-412x500.png)
+
+- 17\) To create a second button, right-click on **RestartButton** and select **Duplicate**. Name it **ExitButton**. Set its **Pos Y** to **-160**. Then select the nested text element and change its **Text** to **Exit**.

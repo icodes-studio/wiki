@@ -137,6 +137,6 @@ Here’s what it should look like:
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/ButtonStack.png)
 
 - ***Note:***
-    > - The Vertical Layout Group just spaced your buttons evenly in the panel.
-    > - You can edit the way the Vertical Layout Group does this, 
-    > - but the defaults work in your case as the height of the three buttons equals the height of the panel.
+    > - *The Vertical Layout Group just spaced your buttons evenly in the panel.*
+    > - *You can edit the way the Vertical Layout Group does this,*
+    > - *but the defaults work in your case as the height of the three buttons equals the height of the panel.*

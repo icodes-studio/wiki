@@ -475,7 +475,6 @@ Just kidding. For a step-by-step guide, open the spoiler below.
 ## Displaying the Restart Dialog
 
 Instead, of animating the dialog, you’ll hide the dialog at the start and show it when the player loses the game.
-
 Open the **MouseController** script in a code editor and add the following instance variable:
 
 ```
@@ -495,7 +494,6 @@ restartDialog.SetActive(true);
 ```
 
 As you may have guessed, `HitByLaser` is called when the mouse dies. It’s the perfect place to display a restart dialog.
-
 Now you need to handle the buttons on the restart dialog. Add the following two methods to restart and exit the game:
 
 ```
@@ -511,15 +509,12 @@ public void ExitToMenu()
 ```
 
 You’ll link them to the corresponding buttons in a moment.
-
 Save the script file and switch back to Unity.
-
 In Unity, select **Mouse** in the Hierarchy and drag **RestartDialog** to the **Restart Dialog** field in the Inspector.
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/362.png)
 
 Then select **RestartButton** in the Hierarchy and scroll down to the **On Click ()** list.
-
 Click + to add a new item. After that, drag **Mouse** from the Hierarchy to the new item. In the function selection dropdown menu, select **MouseController ▸ RestartGame()**.
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/372-337x500.png)

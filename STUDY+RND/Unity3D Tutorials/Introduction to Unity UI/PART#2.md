@@ -392,7 +392,7 @@ That’s better, but you can’t close the dialog. To fix this, you need to add 
 
 　
 
-# # Adding a Close Button
+## Adding a Close Button
 
 Create a new button as a child of the **SettingsDialog** by right-clicking on it in the Hierarchy and selecting **UI ▸ Button**. Rename this new button to **CloseSettingsButton**. Also, this button won’t have text on it, so remove the **Text object** nested in **CloseSettingsButton**.
 

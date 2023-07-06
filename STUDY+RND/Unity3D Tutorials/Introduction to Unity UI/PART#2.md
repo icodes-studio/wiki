@@ -284,3 +284,56 @@ After that, select **SettingsLabel** in the Hierarchy and make the following cha
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/271-259x500.png)
 
+　
+
+## Animating the Settings Dialog
+
+Now you’ve got a legitimate Settings dialog. The next step is to make it appear when the user clicks the Settings button.
+
+You’re going to use almost exactly the same technique as you did to make the buttons slide in and out, the only difference being that the dialog won’t slide in automatically after the scene starts.
+
+Select **SettingsDialog** in the Hierarchy and open the **Animation** view. Then create a new animation by clicking **Create**.
+
+Name the animation **SettingsDialogSlideIn** and save it in **RW ‣ Animations**.
+
+Then click on the **1:00** mark in the **timeline** and make sure recording is started, or start it manually by clicking the record button.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/newAnimation-650x79.png)
+
+In the Inspector, set **Anchors** to middle-center and **Pos X** to 0.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/311.png)
+
+Stop recording the animation. Open the **Animations** folder in the Project window and select **SettingsDialogSlideIn** in the Inspector. Finally, uncheck **Loop Time**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/33.png)
+
+Select **SettingsDialog** in the Hierarchy and open the **Animator** view. **Copy and paste** the **SettingsDialogSlideIn** state to duplicate it. **Rename** the duplicate to **SettlingsDialogSlideOut**, and set its **Speed** to **-1**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/dialogSlideOut.png)
+
+- ***Note:*** *This time, don’t change the default state! The dialog’s default state should stay `SettingsDialogSlideIn`.*
+
+Click the + button and add a new **bool** parameter named **isHidden**.
+
+**Create two transitions** between the states, just as you did for the buttons. Then add the **isHidden** parameter of type bool.
+
+Change the condition of the **SettingsDialogSlideOut => SettingsDialogSlideIn** transition to be **isHidden** equals **false**. For the **SettingsDialogeSlideIn => SettingsDialogSlideOut** transition, change the condition to **isHidden** equals **true**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/dialogAnimationStates-650x233.png)
+
+Next, right-click in the Animator and select **Create State** and then choose **Empty**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/createEmpty-650x233.png)
+
+In the Inspector, name the state **Idle**. Next, right-click the state and choose **Set as Layer Default State**. Finally, create a **transition** between `Idle` to `SettingsDialogSlideIn`. Set the Condition as **isHidden** is equal to **false**.
+
+It should look as follows:
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/dialogStates.png)
+
+Select **File ▸ Save** to save your work so far and then run the scene. You’ll see the dialog sliding in at the start and overlapping the buttons.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/361.png)
+
+This is getting there, but it’s still not what you want. You need to disable the Animator component so it won’t play the animation at the start. You want the dialog to appear on demand, which you’ll do next.

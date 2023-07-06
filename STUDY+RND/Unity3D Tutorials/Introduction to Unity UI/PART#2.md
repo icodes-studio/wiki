@@ -537,3 +537,46 @@ Select **File ▸ Save** to save your work so far and then run the scene. Open t
 
 　
 
+## Using Slider to Regulate the Volume
+
+It’s really cool that Toggle can synchronize its On and Off states with some other component’s field, but what if you have a range of values? In this case, you can use the Slider UI element.
+
+Again, right-click on **SettingsDialog** to add a child object, but this time add a **UI ▸ Slider**. **Rename** it **VolumeSlider**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/531.png)
+
+Select **VolumeSlider** in the Hierarchy and set its **anchors** to **middle-right**. Then set its **Pivot** to **(1, 0.5)** so that you can position it using the middle point of its right edge.
+
+Finally, set its **RectTransform** to **(Pos X:-20, Pos Y:-10, Width:270, Height:35)**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/541.png)
+
+This is how the Settings dialog should look now:
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/volumeSlider-650x271.png)
+
+The Hierarchy should show that the slider control has more parts than a toggle or button. Here are the main parts:
+
+- **Background**: Image that shows the bounds of the slider and its inner area when it’s not filled (i.e., when the handle is all the way to the left).
+- **Handle**: Image for the handle. You drag it to change the slider’s value.
+- **Fill**: Image that stretches to show the value of the slider.
+
+The fill image is not the only part that can stretch, so normally it’s better to use 9-scale images for all three parts. You have such images! Lucky you! :]
+
+Open **RW ‣ UI ‣ Menu** in the Project window and find three images corresponding to each part of the slider: **slider_background**, **slider_fill** and **slider_handle**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/56.png)
+
+For each image, open the **Sprite editor** in the Inspector and set all values for **Border** to **8**. Click **Apply**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/57-454x500.png)
+
+Now, set the corresponding image for each part of the slider:
+
+- 1\) Select **Background** and drag **slider_background** to **Source Image** in the Inspector.
+- 2\) Select **Fill** (not Fill Area) and drag **slider_fill** to Source Image.
+- 3\) Select **Handle** and drag **slider_handle** to Source image.
+
+If you run the scene now and open the Settings dialog, you should see something like this:
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/58.png)

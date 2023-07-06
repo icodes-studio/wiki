@@ -110,6 +110,33 @@ In the following GIF, you can see both the content panel should look and how the
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/061.gif)
 
 - ***Note:***
-    > - A mask works like a window.
-    > - If someone is walking along a wall, you can only see him when he passes by a window.
-    > - Or, think of it as a cloaking device that only allows a portion of the image to show through.
+    > - *A mask works like a window.*
+    > - *If someone is walking along a wall, you can only see him when he passes by a window.*
+    > - *Or, think of it as a cloaking device that only allows a portion of the image to show through.*
+
+　
+
+## Adding Buttons
+
+Next, you’ll add three buttons to the sliding menu.
+
+To create the first button, select **GameObject ▸ UI ▸ Button**. Rename it to **AboutButton** and delete the **Text** child.
+
+Drag the **AboutButton** button onto **ContentPanel** in the Hierarchy to add it as a child. Open **RW ▸ UI ▸ Menu** in the Project window and drag **slide_menu_btn_about** to the **Source Image** in the Inspector. Click **Set Native Size**. Don’t worry about the position for now.
+
+Right-click on **AboutButton** and select **Duplicate** (Ctrl/Cmd + D) to create another button. rename the duplicate to **AchievementsButton** and use the **slide_menu_btn_achievements** from **RW ▸ UI ▸ Menu** in the Project window as **Source Image**.
+
+After that, duplicate the button again. Name it **LeaderboardsButton** and use **slide_menu_btn_leaderboards** as the source image.
+
+Great! Now, you have three buttons, but what about positioning them? Time to use a shortcut!
+
+**Select ContentPanel** in the Hierarchy. Add a **Vertical Layout Group** component and voilà! You should see three buttons stacked neatly in the space. :]
+
+Here’s what it should look like:
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/ButtonStack.png)
+
+- ***Note:***
+    > - The Vertical Layout Group just spaced your buttons evenly in the panel.
+    > - You can edit the way the Vertical Layout Group does this, 
+    > - but the defaults work in your case as the height of the three buttons equals the height of the panel.

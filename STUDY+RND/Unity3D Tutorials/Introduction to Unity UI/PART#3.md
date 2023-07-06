@@ -140,3 +140,66 @@ Here’s what it should look like:
     > - *The Vertical Layout Group just spaced your buttons evenly in the panel.*
     > - *You can edit the way the Vertical Layout Group does this,*
     > - *but the defaults work in your case as the height of the three buttons equals the height of the panel.*
+
+　
+
+## Making the Panel Slide Up and Down
+
+To make the panel slide up and down, use the same technique you’ve already employed for buttons and the settings dialog.
+
+Follow these steps:
+
+- 1\) Select **ContentPanel** in the Hierarchy and open the **Animation** view.
+- 2\) Create a new clip by clicking on the **Create** button.
+- 3\) Name the animation **SlidingMenuDown** and save it to **RW ▸ Animations**.
+- 4\) Click on the **1:00** mark in the **timeline** and enable recording in the Animation view. Turn it on by pressing the red circle button, and then look for the playback controls to turn red.
+- 5\) Set the **Top** to **192** in the Inspector and then **stop recording**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/PanelAnimation.png)
+
+- 6\) Open **RW ▸ Animations** in Project window and select **SlidingMenuDown**. Uncheck **Loop Time** in the Inspector.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/NoLoop.png)
+
+- 7\) Select **ContentPanel** in the Hierarchy and open the **Animator** view. Copy and paste the **SlidingMenuDown** state to create a duplicate.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/StateCopy.png)
+
+- 8\) Rename the duplicate **SlidingMenuUp** and set its **Speed** to **-1** in the Inspector.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/SlidingUpState.png)
+
+- 9\) **Create two transitions**: one from **SlidingMenuUp** to **SlidingMenuDown**, and one the opposite direction.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/animationTransitions2.png)
+
+- 10\) Add a new **Bool** parameter named **isHidden** and set its default value to **true**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/animationParameter2.png)
+
+- 11\) Select the transition from **SlidingMenuUp** to **SlidingMenuDown**, and in the list of conditions, set **isHidden** to **true**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/transitionCondition.png)
+
+- 12\) Select the transition from **SlidingMenuDown** to **SlidingMenuUp**, and this time set conditions to be **isHidden** equals **false**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/transitionCondition_2.png)
+
+- 13\) Next, right-click in the Animator, select **Create State** and then choose **Empty**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/emptyState.png)
+
+- 14\) In the Inspector, name the state **Idle**. Next, right-click the state and choose **Set as Layer Default State**. Create a transition between **Idle** to **SlidingMenuUp**. Set the condition so that **isHidden** is equal to **false**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/idleAnimationState.png)
+
+- 15\) Select **ContentPanel** in the Hierarchy and open the Animation view. Create a **new animation clip** and call it **Idle**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/newAnimation.png)
+
+- 16\) In the first keyframe, set the **Top** to be **192**. Then stop the recording.
+
+That’s it! Save your work again. Unfortunately, when you run your game, nothing happens. You’ll make things move in code.
+
+　
+

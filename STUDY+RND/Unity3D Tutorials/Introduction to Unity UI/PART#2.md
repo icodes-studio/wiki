@@ -136,3 +136,46 @@ Select **File ▸ Save** to save your work so far and run the scene. You should 
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/play4.gif)
 
+　
+
+# # Animating the Settings Button
+
+The Settings button should slide down the screen to make some space in the center for the dialog.
+
+You can animate the settings button yourself! All you need to know is:
+
+- Offscreen **Pos Y** should be **-50**.
+- You don’t need to change anchors, since the button is already positioned relative to the bottom edge of the screen.
+
+Give it a try on your own. Feel free to sneak a peek into the spoiler below.
+
+To create the slide down and slide up animation, as well as setup Animator states, follow these steps:
+
+- 1\) Select **SettingsButton** in the Hierarchy.
+- 2\) Open the **Animation view**.
+- 3\) Click on the **Create** button.
+- 4\) Name the animation **SettingsButtonSlideOut** and save it in **RW ▸ Animations**. This will also create the Animation Controller and will add the Animator component to the SettingsButton.
+- 5\) In the Animation view, click on the **1:00** mark of the **timeline** and make sure recording is on by clicking on the red circle.
+- 6\) In the Inspector, change `SettingsButton` **Pos Y** to **-80**. You don’t need to change anchors this time.
+- 7\) **Stop recording** by clicking the red circle button again.
+- 8\) Open the **Animations** folder in the Project window. Select **SettingsButtonSlideOut**, and uncheck **Loop Time** in the Inspector.
+- 9\) Select **SettingsButton** in the Hierarchy.
+- 10\) Now open the **Animator** view.
+- 11\) **Copy and paste** the **SettingsButtonSlideOut** state to duplicate it.
+- 12\) **Select the duplicated state**, which should be named `SettingsButtonSlideOut 0`. In the Inspector, change its name to **SettingsButtonSlideIn**, and change its **Speed** to **-1**.
+- 13\) **Right-click** on the **SettingsButtonSlideIn** state and select **Set as Layer Default State**.
+- 14\) **Create a transition** from **SettingsButtonSlideIn to SettingsButtonSlideOut** and then **create a reverse transition**.
+- 15\) Add a new **Bool** parameter named `isHidden`.
+- 16\) Select the transition from **SettingsButtonSlideOut to SettingsButtonSlideIn**, and in the Inspector, change **Conditions** to contain `isHidden` equals **false**.
+- 17\) Select the transition from **SettingsButtonSlideIn to SettingsButtonSlideOut** and change Conditions to contain `isHidden` equals **true**.
+- 18\) Select **File ▸ Save** to save your work so far and **run the scene**.
+
+This is what you should get in the end:
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/settingsfly.gif)
+
+It’s nice to see the Settings button going up and down, but shouldn’t both buttons slide out simultaneously, just as they slide in at the start?
+
+Yes! You’ll make that happen next.
+
+

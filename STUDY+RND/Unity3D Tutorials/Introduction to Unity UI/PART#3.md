@@ -237,3 +237,24 @@ Save your work, run the scene and relish in your cool sliding menu.
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/menuSlide.gif)
 
+　
+
+# # Adding a Rotating Gear Icon
+
+Don’t you think something is missing? Of course! The rotating gear icon on the opening button itself — the one shown in the animated GIF image at the start of this part.
+
+　
+
+## Adding the Gear Image
+
+First, add an image as a child object of SlideMenuButton, and set it to animate during the menu opening and closing animations.
+
+Right-click on **SlideMenuButton** and select **UI ▸ Image** to create a new image as a child object.
+
+After that, follow these steps:
+
+- 1\) Rename the image **GearImage**.
+- 2\) Open **RW ▸ UI ▸ Menu** in the Project window and drag the **slide_menu_gear** image to the **Source Image** field in the Inspector.
+- 3\) Click **Set Native Size**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/gearImage-650x401.png)

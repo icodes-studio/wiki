@@ -64,8 +64,8 @@ To create the slide-out animation, follow these steps:
 
 Two things happened:
 
-- 1\) A keyframe was inserted automatically at the **0:00** mark. At this point, the button is at its starting position, where you positioned it in the previous tutorial.
-- 2\) Although the anchors’ visual representation didn’t turn red, you can see the numeric values changed and turned red, indicating that you’ve also animated the anchors.
+- A keyframe was inserted automatically at the **0:00** mark. At this point, the button is at its starting position, where you positioned it in the previous tutorial.
+- Although the anchors’ visual representation didn’t turn red, you can see the numeric values changed and turned red, indicating that you’ve also animated the anchors.
 
 Make both the Animation view and Scene view visible and play the animation. You’ll see something like this:
 
@@ -80,3 +80,59 @@ What if you don’t know the height of the screen? How do you make sure the butt
 Answer: Change its anchors.
 
 Setting the anchors to the top edge of the screen means you set the distance from the top edge of the screen. Thus, the button will always be above the edge and independent from the height of the screen, since it’s positioned relative to the screen’s top edge.
+
+　
+
+## Animating Button Slide In
+
+Nice work! You have a button that slides out of the screen. Now you need a reverse animation. You’ll use it in two cases:
+
+- When the scene loads, you want the button to slide into position instead of simply appearing.
+- When you close the settings dialog, the buttons should return to their initial positions.
+
+First, disable the animation looping, since the button should move either up or down and then stop instead of moving back and forth.
+
+To disable looping, open **RW ▸ Animations** in the Project window and select the **StartButtonSlideOut** animation. In the Inspector, uncheck **Loop Time**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/071.png)
+
+Then, select **StartButton** in the Hierarchy and open the **Animator view** by selecting **Window ▸ Animation ▸ Animator**. Right-click on the **StartButtonSlideOut** state and select **Copy**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/copyAnimationState.png)
+
+Then right-click anywhere in the free space inside the Animator view and select **Paste**. This duplicates the `StartButtonSlideOut` state.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/pasteAnimationState.png)
+
+Now, select this duplicated state, which should be something like `StartButtonSlideOut 0`, and rename it to **StartButtonSlideIn** in the Inspector. Additionally, set **Speed** to -1.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/buttonSlideIn.png)
+
+Then, inside the Animator view, right-click on **StartButtonSlideIn** and select **Set as Layer Default State**, since you want the button to start its lifecycle by sliding into the screen and not vice-versa.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/setDefaultAnimation.png)
+
+Next, you need a parameter to control the state of the button. In the left-hand column of the Animator window, click the **Parameters** tab. Next, click the + button and add a new **Bool** parameter named **isHidden**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/animationParameter.png)
+
+Finally, add two transitions between the states. To do this, right-click on the **StartButtonSlideOut** state and select **Make Transition**. Click on the **StartButtonSlideIn** to make a transition.
+
+After that, create a reverse transition by right-clicking **StartButtonSlideIn**, selecting **Make Transition** and clicking on the **StartButtonSlideOut**. This is what you should get in the end:
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/animationTransitions.png)
+
+You’re close, but you still need to assign a value to **isHidden** based on which transition is occurring.
+
+Select the transition from `StartButtonSlideOut` to `StartButtonSlideIn`. In the Inspector, click the + in the Conditions panel. Set `isHidden` to **false**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/parameterIn-650x387.png)
+
+Then select the transition that goes in opposite direction, from `StartButtonSlideIn` to `StartButtonSlideOut` and set its **Conditions** to be `isHidden` equals **true**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/parameterOut-650x387.png)
+
+Select **File ▸ Save** to save your work so far and run the scene. You should see your button slide in. Then change `isHidden` manually to make the button slide back.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/play4.gif)
+

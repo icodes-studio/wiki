@@ -236,7 +236,7 @@ Now run the scene and enjoy your new mega-awesome button! :]
 
 　
 
-# # Adding the Settings Button
+## Adding the Settings Button
 
 There are a few things left to do. First, add the Settings button.
 

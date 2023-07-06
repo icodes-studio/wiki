@@ -261,3 +261,26 @@ Select **SettingsDialog** in the Hierarchy and drag **settings_panel_bg_9slice**
 This is what the dialog should look like after you set the background image:
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/25-650x279.png)
+
+　
+
+## Adding the Label
+
+In its present state, it’s difficult to argue that the nondescript, green rectangle is actually a settings dialog, but there’s an easy way to fix this. All you need to do is to write Settings on it. Poof! Magic. :]
+
+Right-click on **SettingsDialog** and choose **UI ▸ Text** to create a new Text UI element as a child of SettingsDialog. Select **Text** in the Hierarchy and rename it to **SettingsLabel**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/26.png)
+
+After that, select **SettingsLabel** in the Hierarchy and make the following changes:
+
+- 1\) Set **Anchors** to **top-center**.
+- 2\) Set **Pos X** to **0** and **Pos Y** to **-40**.
+- 3\) Change **Text** to **Settings**.
+- 4\) Open the **Fonts** folder in the Project window and drag the **DCC – Dreamer** font to the **Font** field in the Inspector.
+- 5\) Set **Font Size** to **30**.
+- 6\) Set **Alignment** to **Center Align**.
+- 7\) Set **Color** to White, with **A** (Alpha) **255** to remove transparency.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/271-259x500.png)
+

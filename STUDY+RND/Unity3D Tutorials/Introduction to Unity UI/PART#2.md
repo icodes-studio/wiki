@@ -599,3 +599,14 @@ Select **File ▸ Save** to save your work so far and then run the scene. Open t
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/volume.gif)
 
+　
+
+# # Where to Go From Here?
+
+As promised in the end of [**Part 1**](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/PART%231.md), in this tutorial, you’ve added more controls, learned how to animate them and made a fully functioning menu scene. You’ve now explored most of the UI controls!
+
+If you’d like to see its final, perfect form, find the final project by using the [**Download materials**](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/Introduction-to-Unity-UI-Part-2.zip) button at the top or bottom of this tutorial.
+
+In [**Part 3**](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/PART%231.md), the final tutorial in this series, you’ll learn advanced techniques, including using the mask component to create a sliding menu. You’ll also create more animations and learn how to migrate legacy GUI code to the Unity UI.
+
+If you have any questions, comments or discoveries to share, please join the conversation below.

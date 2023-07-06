@@ -502,6 +502,6 @@ This is what you should see in the Scene view:
     > - *You’ll notice the size of the root object (wide rectangle) doesn’t match the background images.*
     > - *You can adjust its size, but it’s not important.*
     > - *The rect of the child objects will act as the collider boxes for interaction.*
-    > - *Also, the checked state may still be showing, but when you press play in the editor, *
+    > - *Also, the checked state may still be showing, but when you press play in the editor,*
     > - *the Toggle will refresh its state based on the **Is On** option you set earlier.*
 

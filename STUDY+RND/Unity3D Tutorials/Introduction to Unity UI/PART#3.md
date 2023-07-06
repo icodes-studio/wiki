@@ -21,7 +21,7 @@ In [**Part 1**](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unit
 
 Now you’re going to build on these skills to round out your understanding of Unity’s UI. First, you’ll make a fancy new menu. Then, you’ll migrate the RocketMouse game scene from the old legacy GUI system to the new UI system!
 
-　　
+　
 
 # # Getting Started
 

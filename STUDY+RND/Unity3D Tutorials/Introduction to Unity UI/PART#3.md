@@ -69,14 +69,14 @@ To create this control, you’ll need two panels. One will define the mask, and 
 
 Select **GameObject ▸ UI ▸ Panel** to create the first panel. This will add a **Panel**, which will be the mask, to the Hierarchy. Select it and follow these steps:
 
-- 1\) Rename it MaskPanel.
-- 2\) Drag it over SlideMenuButton to add it as a child object.
-- 3\) Set Anchors to top-center.
-- 4\) Set Pivot to (X:0.5, Y:0)
-- 5\) Set both Pos X and Pos Y to 0.
-- 6\) Set Width to 64 and Height to 192.
-- 7\) Add the mask component by clicking the Add Component button and selecting UI ▸ Mask.
-- 8\) Uncheck Show Mask Graphic inside the mask component dialog.
+- 1\) Rename it **MaskPanel**.
+- 2\) Drag it over **SlideMenuButton** to add it as a child object.
+- 3\) Set **Anchors** to **top-center**.
+- 4\) Set **Pivot** to **(X:0.5, Y:0)**
+- 5\) Set both **Pos X** and **Pos Y** to **0**.
+- 6\) Set **Width** to **64** and **Height** to **192**.
+- 7\) Add the mask component by clicking the **Add Component** button and selecting **UI ▸ Mask**.
+- 8\) Uncheck **Show Mask Graphic** inside the mask component dialog.
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/MaskPanel.png)
 
@@ -88,14 +88,14 @@ Select **GameObject ▸ UI ▸ Panel** to create the first panel. This will add 
 
 Add another panel by selecting **GameObject ▸ UI ▸ Panel** and following these steps:
 
-- 1) Rename it **ContentPanel**.
-- 2) Add it as a child of **MaskPanel**.
+- 1\) Rename it **ContentPanel**.
+- 2\) Add it as a child of **MaskPanel**.
 
 - ***Note:*** *Did you notice you can see only a small portion of the white panel although its size didn’t change? After adding it as a child of the panel with a mask, you now only see the portion of ContentPanel that is inside the rect of MaskPanel.*
 
-- 3) Set the **Anchors** to **stretch-stretch**.
-- 4) Set **Left, Top, Right** and **Bottom** to **0**.
-- 5) Set **Pivot** to **(X:0.5, Y:1)**
+- 3\) Set the **Anchors** to **stretch-stretch**.
+- 4\) Set **Left, Top, Right** and **Bottom** to **0**.
+- 5\) Set **Pivot** to **(X:0.5, Y:1)**
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/ContentPanel.png)
 

@@ -1,7 +1,8 @@
 # [Introduction to Unity UI – Part 2](https://www.kodeco.com/6569-introduction-to-unity-ui-part-2)
     ● In this second part of a three-part tutorial,
-    ● you’ll learn how to incorporate animations into your user interfaces. By Ben MacKinnon.
+    ● you’ll learn how to incorporate animations into your user interfaces.
     ● Apr 24 2019, C# 6, Unity 2018.3, Unity
+    ● By Ben MacKinnon.
 [***Download materials***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/Introduction-to-Unity-UI-Part-2.zip)
 
 
@@ -607,6 +608,6 @@ As promised in the end of [**Part 1**](https://github.com/icodes-studio/wiki/blo
 
 If you’d like to see its final, perfect form, find the final project by using the [**Download materials**](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/Introduction-to-Unity-UI-Part-2.zip) button at the top or bottom of this tutorial.
 
-In [**Part 3**](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/PART%231.md), the final tutorial in this series, you’ll learn advanced techniques, including using the mask component to create a sliding menu. You’ll also create more animations and learn how to migrate legacy GUI code to the Unity UI.
+In [**Part 3**](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/PART%233.md), the final tutorial in this series, you’ll learn advanced techniques, including using the mask component to create a sliding menu. You’ll also create more animations and learn how to migrate legacy GUI code to the Unity UI.
 
 If you have any questions, comments or discoveries to share, please join the conversation below.

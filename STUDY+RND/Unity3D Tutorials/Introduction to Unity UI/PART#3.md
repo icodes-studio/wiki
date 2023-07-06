@@ -31,3 +31,30 @@ Strap yourself in. This tutorial is about to get real.
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/012.png)
 
+　
+
+# # Creating a Sliding Menu
+
+Often, you want to provide users easy access to game options or features without wasting screen space, especially on mobile devices. This is a job for a sliding menu.
+
+You’ve seen these before. They’re a control comprised of a small button that is always visible and a menu that slides out to reveal options. The first step is adding that button.
+
+　
+
+## Adding an Open Button
+
+You learned to add a button during the first two parts of this series, but follow these directions if you need a refresher.
+
+Select **GameObject ▸ UI ▸ Button** in the menu. Rename the newly added button to **SlideMenuButton** and delete the nested **Text** object since the button won’t need a label.
+
+Select **SlideMenuButton** in the Hierarchy. Open **RW ▸ UI ▸ Menu** in the Project window. Drag the **btn_9slice_normal** image to the **Source Image** field in the Inspector.
+
+Set the button position and size as follows:
+
+- 1\) Set **Anchors** to **bottom-left**.
+- 2\) Set both **Pos X** and **Pos Y** to **80**.
+- 3\) Set **Width** and **Height** to **64**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/023-650x208.png)
+
+Nice work! That’s step one.

@@ -58,3 +58,58 @@ Set the button position and size as follows:
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/023-650x208.png)
 
 Nice work! That’s step one.
+
+　
+
+## Adding the Masking Panel
+
+To create this control, you’ll need two panels. One will define the mask, and the other will move within the mask.
+
+- ***Note:*** *If you’re not sure what a mask is, don’t sweat it. Just follow the steps, and you’ll see how it works in real time. You’ll need to have both panels to see it in action.*
+
+Select **GameObject ▸ UI ▸ Panel** to create the first panel. This will add a **Panel**, which will be the mask, to the Hierarchy. Select it and follow these steps:
+
+- 1\) Rename it MaskPanel.
+- 2\) Drag it over SlideMenuButton to add it as a child object.
+- 3\) Set Anchors to top-center.
+- 4\) Set Pivot to (X:0.5, Y:0)
+- 5\) Set both Pos X and Pos Y to 0.
+- 6\) Set Width to 64 and Height to 192.
+- 7\) Add the mask component by clicking the Add Component button and selecting UI ▸ Mask.
+- 8\) Uncheck Show Mask Graphic inside the mask component dialog.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/MaskPanel.png)
+
+- ***Note:*** *You don’t have to add the panel with a mask as a child of the button, but it makes it easier to position when using anchors. It also ensures that when the button moves, the masking panel moves with it.*
+
+　
+
+Adding the Content Panel
+
+Add another panel by selecting **GameObject ▸ UI ▸ Panel** and following these steps:
+
+- 1) Rename it **ContentPanel**.
+- 2) Add it as a child of **MaskPanel**.
+
+- ***Note:*** *Did you notice you can see only a small portion of the white panel although its size didn’t change? After adding it as a child of the panel with a mask, you now only see the portion of ContentPanel that is inside the rect of MaskPanel.*
+
+- 3) Set the **Anchors** to **stretch-stretch**.
+- 4) Set **Left, Top, Right** and **Bottom** to **0**.
+- 5) Set **Pivot** to **(X:0.5, Y:1)**
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/ContentPanel.png)
+
+Now, change the background image for the content panel.
+
+Open **RW ▸ UI ▸ Menu** in the Project window and select the **slide_menu_panel_9slice** image. Open **sprite editor** in the Inspector and set all **border** values to **8**. Click **Apply**!
+
+After that, select **ContentPanel** in the Hierarchy, and then drag **slide_menu_panel_9slice** from the Project window to the **Source Image** field in the Inspector.
+
+In the following GIF, you can see both the content panel should look and how the mask component works. Now you see it, now you don’t!
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/061.gif)
+
+- ***Note:***
+    > - A mask works like a window.
+    > - If someone is walking along a wall, you can only see him when he passes by a window.
+    > - Or, think of it as a cloaking device that only allows a portion of the image to show through.

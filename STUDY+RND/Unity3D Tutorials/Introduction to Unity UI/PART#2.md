@@ -144,7 +144,7 @@ The Settings button should slide down the screen to make some space in the cente
 
 You can animate the settings button yourself! All you need to know is:
 
-- Offscreen **Pos Y** should be **-50**.
+- Offscreen **Pos Y** should be **-80**.
 - You don’t need to change anchors, since the button is already positioned relative to the bottom edge of the screen.
 
 Give it a try on your own. Feel free to sneak a peek into the spoiler below.
@@ -178,4 +178,38 @@ It’s nice to see the Settings button going up and down, but shouldn’t both b
 
 Yes! You’ll make that happen next.
 
+　
+
+# # Triggering Buttons Animation From the Script
+
+Open the **UIManagerScript** that you created in the first tutorial, and add the following instance variables just inside the class definition:
+
+```
+public Animator startButton;
+public Animator settingsButton;
+```
+
+After that, add the following method:
+
+```
+public void OpenSettings() 
+{
+    startButton.SetBool("isHidden", true);
+    settingsButton.SetBool("isHidden", true);
+}
+```
+
+That’s all the code you need. Save the script and switch back to Unity.
+
+In Unity, select **UIManager** in the Hierarchy. Drag **StartButton** from the Hierarchy to the **Start Button** field in the Inspector and drag **SettingsButton** to the **Settings Button** field.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/181.png)
+
+Then select **SettingsButton** in the Hierarchy and click + in the **On Click()** list. Drag **UIManager** from the Hierarchy to the new item in the list. After that, open the function selection menu and select **UIManagerScript ▸ OpenSettings()**.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/191.png)
+
+Select **File ▸ Save** to save your work so far and then run the scene. Wait for the buttons to stop moving and click on the **Settings** button. You should see both buttons move out of the screen in opposite directions simultaneously.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/20.gif)
 

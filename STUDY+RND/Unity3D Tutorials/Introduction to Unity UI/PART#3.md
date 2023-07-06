@@ -376,6 +376,6 @@ Select **GameObject ▸ UI ▸ Image** to create a new Image. Select it in the H
 - 4\) Set **Pivot** to **(1, 0.5)**.
 - 5\) Set both **Width** and **Height** to **32**.
 - 6\) Set **Pos X** to **-5** and **Pos Y** to **0**.
-- 7\) Open **RocketMouse ▸ sprites** in the Project window and drag the **coin** image to the **Source Image** field in the Inspector.
+- 7\) Open **RocketMouse ▸ Sprites** in the Project window and drag the **coin** image to the **Source Image** field in the Inspector.
 
 - ***Note:*** *This time, do **not** click Set Native Size. You’re going to reuse the image for coins in the game, which will be a bit bigger than the icon.*

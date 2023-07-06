@@ -84,7 +84,7 @@ Select **GameObject ▸ UI ▸ Panel** to create the first panel. This will add 
 
 　
 
-Adding the Content Panel
+## Adding the Content Panel
 
 Add another panel by selecting **GameObject ▸ UI ▸ Panel** and following these steps:
 

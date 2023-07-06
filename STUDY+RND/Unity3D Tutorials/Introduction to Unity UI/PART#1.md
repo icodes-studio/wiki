@@ -547,10 +547,10 @@ You can probably do this yourself, so you’re only getting the size and positio
 - ***Note:*** *The easiest way is to duplicate the button and adjust some properties, but try creating the button from scratch this time.*
 
 These properties of the Settings button are different:
-- **Name: SettingsButton**
+- **Name**: **SettingsButton**
 - **Rect Transform**: Left and Right are **173**, Height is **70** and Pos Y is **180**
-- **Text: Settings**
-- **Fontsize: 24**
+- **Text**: **Settings**
+- **Fontsize**: **24**
 
 If you couldn’t quite do it, just follow these steps:
 
@@ -639,7 +639,7 @@ Save the script and move on to the next step:
 
 Switch back to Unity and follow these steps:
 
-- 1\) Select **StartButton** in the Hierarchy and scroll down in the Inspector to the **On Click()** list.
+- 1\) Select **StartButton** in the Hierarchy and scroll down in the Inspector to the **On Click ()** list.
 - 2\) Click the + button to add a new item.
 - 3\) Drag **UIManager** from the Hierarchy to the newly added item in the list.
 - 4\) Click on the dropdown to select the function. Right now, it’s set to **No Function**.

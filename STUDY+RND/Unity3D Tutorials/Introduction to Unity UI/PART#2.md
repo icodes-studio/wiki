@@ -239,3 +239,25 @@ However, this dialog won’t be full-screen; in fact, it’ll be relatively smal
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/221-650x152.png)
 
 You should see a semi-transparent rectangle to the right of the canvas rectangle. All UI elements outside this rectangle are not visible on the screen. This is precisely what you want for the dialog!
+
+　
+
+## Setting the Dialog’s Background Image
+
+You’re going to use a **9-slice image** as the dialog’s background. You need to set the border in the Import Settings first.
+
+Open **RW ‣ UI ‣ Menu** in the Project window and select **settings_panel_bg_9slice**. In the Inspector, click **Sprite Editor** to open the Sprite Editor view.
+
+Set all **Border** values to **20** and click **Apply** at the top.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/23.png)
+
+Now you can use this image as the dialog background.
+
+Select **SettingsDialog** in the Hierarchy and drag **settings_panel_bg_9slice** to the **Source Image** field in the Inspector. Double-click on **Color** next to the **Source Image** field, and set **A** to **255** (or **1** depending on your color picker settings) to remove transparency.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/241-650x395.png)
+
+This is what the dialog should look like after you set the background image:
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/25-650x279.png)

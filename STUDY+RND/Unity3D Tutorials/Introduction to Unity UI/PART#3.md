@@ -362,4 +362,20 @@ Select **Text** in the Hierarchy and make the following changes in the Inspector
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/261-644x500.png)
 
+　
 
+## Adding a Points Icon
+
+Displaying text to show the points isn’t enough. You need to make sure it’s clear what this text means from the moment the player sees it. Add an icon to make the score crisp, clear and well-defined.
+
+Select **GameObject ▸ UI ▸ Image** to create a new Image. Select it in the Hierarchy and follow these steps:
+
+- 1\) Rename it **PointsIcon**.
+- 2\) Drag it over **PointsText** to add it as a child so that when you move the label, the icon moves, too.
+- 3\) Set **Anchors** to **middle-left**.
+- 4\) Set **Pivot** to **(1, 0.5)**.
+- 5\) Set both **Width** and **Height** to **32**.
+- 6\) Set **Pos X** to **-5** and **Pos Y** to **0**.
+- 7\) Open **RocketMouse ▸ sprites** in the Project window and drag the **coin** image to the **Source Image** field in the Inspector.
+
+- ***Note:*** *This time, do **not** click Set Native Size. You’re going to reuse the image for coins in the game, which will be a bit bigger than the icon.*

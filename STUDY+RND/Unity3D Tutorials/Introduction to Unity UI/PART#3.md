@@ -112,9 +112,9 @@ In the following GIF, you can see both the content panel should look and how the
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/061.gif)
 
 - ***Note:***
-    > - *A mask works like a window.*
-    > - *If someone is walking along a wall, you can only see him when he passes by a window.*
-    > - *Or, think of it as a cloaking device that only allows a portion of the image to show through.*
+    - *A mask works like a window.*
+    - *If someone is walking along a wall, you can only see him when he passes by a window.*
+    - *Or, think of it as a cloaking device that only allows a portion of the image to show through.*
 
 　
 
@@ -139,9 +139,9 @@ Here’s what it should look like:
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/ButtonStack.png)
 
 - ***Note:***
-    > - *The Vertical Layout Group just spaced your buttons evenly in the panel.*
-    > - *You can edit the way the Vertical Layout Group does this,*
-    > - *but the defaults work in your case as the height of the three buttons equals the height of the panel.*
+    - *The Vertical Layout Group just spaced your buttons evenly in the panel.*
+    - *You can edit the way the Vertical Layout Group does this,*
+    - *but the defaults work in your case as the height of the three buttons equals the height of the panel.*
 
 　
 

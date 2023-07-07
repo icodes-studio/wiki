@@ -305,12 +305,11 @@ You can split anchors to make them stretch a UI Element horizontally, vertically
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/26.gif)
 
 - ***Note:***
-    > - *You’re not actually resizing the Canvas when dragging one if its edges.*
-    > - *In fact, you can’t resize the Canvas this way.*
-    > - *Look for the word Preview next to the cursor when you try to resize it.*
-    > - *Use this technique to experiment and see how your UI elements adapt to different screen sizes.*
-    >
-    > 　　![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/27.png)
+    - *You’re not actually resizing the Canvas when dragging one if its edges.*
+    - *In fact, you can’t resize the Canvas this way.*
+    - *Look for the word Preview next to the cursor when you try to resize it.*
+    - *Use this technique to experiment and see how your UI elements adapt to different screen sizes.*
+        ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/27.png)
 
 　
 
@@ -337,12 +336,11 @@ The pivot is the point around which all transformations are made. In other words
 The pivot uses normalized coordinates. This means that it goes from 0 to 1 for both height and width, where **(0, 0)** is the bottom left corner and **(1, 1)** is the top right corner.
 
 - ***Note:***
-    > - *You can also set Pivot outside the UI Element bounds.*
-    > - *In this case, Pivot will be outside the (0, 0) – (1, 1) range.*
-    > - *This can be useful. For example, you might want to rotate your object around some point in the scene.*
-    > - *To alter the pivot, you must make sure the Pivot/Center button is toggled to Pivot like so:*
-    >
-    > 　　![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/29.png)
+    - *You can also set Pivot outside the UI Element bounds.*
+    - *In this case, Pivot will be outside the (0, 0) – (1, 1) range.*
+    - *This can be useful. For example, you might want to rotate your object around some point in the scene.*
+    - *To alter the pivot, you must make sure the Pivot/Center button is toggled to Pivot like so:*
+        ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/29.png)
 
 You can change pivot in the Rect Transform component in the Inspector, or you can use the **Rect Tool**.
 
@@ -353,8 +351,8 @@ The first image shows the pivot at its default value of (0.5, 0.5), which is the
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/31-650x216.png)
 
 - ***Note:***
-    > - *It’s important to understand that the position of a UI element is set relative to the anchors.*
-    > - *A (0, 0) position means the distance from anchors, which are set to the top-left corner of the Canvas.*
+    - *It’s important to understand that the position of a UI element is set relative to the anchors.*
+    - *A (0, 0) position means the distance from anchors, which are set to the top-left corner of the Canvas.*
 
 Now, take a look at the second image. As you can see, the position is still at (0, 0), but since the pivot is set to the bottom-left corner (0, 0) you can see that the image’s bottom corner, and not the center, is now at the Canvas’s top-left.
 
@@ -373,11 +371,11 @@ Notice how the image rotates around the pivot point, indicated by a blue circle,
 As you can see, the pivot also affects how your UI Element resizes.
 
 - ***Note:***
-    > - *When you change the size of a UI element, you don’t change its scale.*
-    > - *Instead, you change its size using Width and Height or Top, Right, Left, and Bottom paddings.*
-    > - *Be aware that there are a few differences between size and scale.*
-    > - *For example, size can’t be negative, but scale can be. Also, using a negative scale value will flip your UI element.*
-    > - *In most cases, you should only change the size of your UI elements.*
+    - *When you change the size of a UI element, you don’t change its scale.*
+    - *Instead, you change its size using Width and Height or Top, Right, Left, and Bottom paddings.*
+    - *Be aware that there are a few differences between size and scale.*
+    - *For example, size can’t be negative, but scale can be. Also, using a negative scale value will flip your UI element.*
+    - *In most cases, you should only change the size of your UI elements.*
 
 
 　
@@ -507,9 +505,8 @@ After preparing all your images, drag them to the corresponding fields in the In
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/buttonSettings-483x500.png)
 
 - ***Note:***
-    > - *If you encounter this error message, you probably forgot to set the Border in the Sprite Editor in the Import Settings.*
-    >
-    > 　　![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/47.png)
+    - *If you encounter this error message, you probably forgot to set the Border in the Sprite Editor in the Import Settings.*
+        ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/47.png)
 
 Before running the scene and enjoying your cool buttons, you’re going to change the font used by the nested Text label. This will make the button mega-awesome.
 

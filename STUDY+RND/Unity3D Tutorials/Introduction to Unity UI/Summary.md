@@ -160,9 +160,7 @@ Did you notice that when you added the aspect ratio fitter, some of the floor te
 
 ## Adding the Start Button
 
-Now, that your game has a nice background with a label, it’s time to add some buttons.
-
-From the top bar, choose **GameObject ‣ UI ‣ Button**. This will add a **Button** object to the scene. You should see it in the Hierarchy. If you expand it in the Hierarchy, you’ll see that the button contains a Text child — you’ll learn about these later.
+From the top bar, choose **GameObject ‣ UI ‣ Button**. This will add a **Button** object to the scene. You should see it in the Hierarchy.
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/39.png)
 
@@ -259,8 +257,6 @@ To do this, on the menu select **File ‣ Build Settings**. This will open the *
 　
 
 ## Creating UIManager
-
-When you add an event handler to the button, you need to specify which method to call when you click the button. Since you can’t use static methods, you’ll need to select a public method from a script attached to a GameObject.
 
 From the top bar, choose **GameObject ‣ Create Empty**. Then select **GameObject** in the Hierarchy view and rename it to **UIManager**.
 

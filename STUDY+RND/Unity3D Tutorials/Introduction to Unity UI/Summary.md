@@ -557,8 +557,6 @@ Select **File ▸ Save** to save your work so far and then run the scene. You’
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/361.png)
 
-This is getting there, but it’s still not what you want. You need to disable the Animator component so it won’t play the animation at the start. You want the dialog to appear on demand, which you’ll do next.
-
 　
 
 ## Displaying Dialog on Button Click
@@ -808,10 +806,6 @@ Now, change the background image for the content panel.
 Open **RW ▸ UI ▸ Menu** in the Project window and select the **slide_menu_panel_9slice** image. Open **sprite editor** in the Inspector and set all **border** values to **8**. Click **Apply**!
 
 After that, select **ContentPanel** in the Hierarchy, and then drag **slide_menu_panel_9slice** from the Project window to the **Source Image** field in the Inspector.
-
-In the following GIF, you can see both the content panel should look and how the mask component works. Now you see it, now you don’t!
-
-![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/061.gif)
 
 　
 

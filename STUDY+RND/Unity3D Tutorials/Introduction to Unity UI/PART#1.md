@@ -185,7 +185,7 @@ Change the Game view resolution to see how your game might look in a different r
     - *If you don’t see any of the iPhone options, chances are you’re building for a different platform.*
     - *From the menu bar, select File ‣ Build Settings.*
     - *In the build settings dialog underneath the platform settings, make sure to select iOS.*
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/buildPlatform-529x500.png)
+        ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/buildPlatform-529x500.png)
     - *Unity will reprocess all your assets, and it may take a while.*
     - *At the end, you should have access to the various iOS screen sizes.*
 

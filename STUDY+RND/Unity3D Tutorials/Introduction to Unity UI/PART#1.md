@@ -34,8 +34,8 @@ To satisfy users’ cravings for an engaging UI, you’ll also learn to:
 This tutorial is aimed at those familiar with the Unity Editor. Go check out our [**Introduction to Unity**](https://www.raywenderlich.com/772-introduction-to-unity-getting-started-part-1-2?__hstc=149040233.c1ed3c16c256a3843203b44947edda4e.1688513289263.1688513289263.1688513289263.1&__hssc=149040233.46.1688513289263&__hsfp=1152682960) series if this is your first rodeo. The great news is that as this tutorial focuses on the UI system, it is 95% script free!
 
 - ***Note:***
-    > - *Keep in mind that this tutorial does not cover the creation of the game itself.*
-    > - *The goal here is to provide an introduction to Unity’s UI system and familiarize you with its components.*
+    - *Keep in mind that this tutorial does not cover the creation of the game itself.*
+    - *The goal here is to provide an introduction to Unity’s UI system and familiarize you with its components.*
 
 You’ll need some images for backgrounds, buttons and other UI elements, as well as a few fonts for the labels and buttons. Don’t worry, you won’t have to draw anything yourself or scour the web for the right assets. I’ve prepared a special package that has everything you need. You’re welcome. :]
 

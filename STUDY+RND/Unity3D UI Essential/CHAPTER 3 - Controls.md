@@ -21,7 +21,7 @@
 
 - **드로우 콜 최적화**
     - 성능을 향상을 위해 이미지를 스프라이트 한 장에 합쳐 사용.
-    - 기존에는 [*Sprite Packer*]((https://learnandcreate.tistory.com/131))를 사용했으나 2019 이상에서는 레거시로 사라지고 [***Sprite Atlas***](https://skuld2000.tistory.com/28)가 사용된다.
+    - 기존에는 [*Sprite Packer*](https://learnandcreate.tistory.com/131)를 사용했으나 2019 이상에서는 레거시로 사라지고 [***Sprite Atlas***](https://skuld2000.tistory.com/28)가 사용된다.
 
 
 　

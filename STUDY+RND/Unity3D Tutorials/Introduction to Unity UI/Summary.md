@@ -454,7 +454,7 @@ Select **File ▸ Save** to save your work so far and then run the scene. Wait f
 
 　
 
-# # Adding the Settings Dialog
+## Adding the Settings Dialog
 
 Usually, dialogs contain some other controls that appear and move with dialog. For that reason, it’s effective to create the dialog as a panel and set other UI Elements as child objects.
 
@@ -475,15 +475,11 @@ However, this dialog won’t be full-screen; in fact, it’ll be relatively smal
 
 ## Setting the Dialog’s Background Image
 
-You’re going to use a **9-slice image** as the dialog’s background. You need to set the border in the Import Settings first.
-
 Open **RW ‣ UI ‣ Menu** in the Project window and select **settings_panel_bg_9slice**. In the Inspector, click **Sprite Editor** to open the Sprite Editor view.
 
 Set all **Border** values to **20** and click **Apply** at the top.
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/23.png)
-
-Now you can use this image as the dialog background.
 
 Select **SettingsDialog** in the Hierarchy and drag **settings_panel_bg_9slice** to the **Source Image** field in the Inspector. Double-click on **Color** next to the **Source Image** field, and set **A** to **255** (or **1** depending on your color picker settings) to remove transparency.
 

@@ -94,11 +94,6 @@ Select the Image and set its position to **(X:0, Y:0)**. You’ve just discovere
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/06.png)
 
-- ***Note:***
-    > - *The **Rect Transform** is the UI equivalent to Transform.*
-    > - *It positions, rotates and scales UI elements within a Canvas.*
-    > - *You’ll use it often in this tutorial.*
-
 You’ll set the correct position and size in a moment. Right now, there are three things to be aware of. In the Hierarchy, you’ll see three new objects in the scene:
 
 - 1\) Image

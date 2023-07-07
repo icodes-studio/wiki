@@ -111,15 +111,13 @@ After making those changes, you’ll see the full background image, even in a sm
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/14-650x472.png)
 
-select the **Background** and add an **Aspect Ratio Fitter** component. It will automatically set the **Aspect Ratio** value to the current ratio of the image’s Rect Transform. Switch the **Aspect Mode** to **Envelope Parent**. The image will automatically resize to once again fill the whole screen.
+Now, select the **Background** and add an **Aspect Ratio Fitter** component. It will automatically set the **Aspect Ratio** value to the current ratio of the image’s Rect Transform. Switch the **Aspect Mode** to **Envelope Parent**. The image will automatically resize to once again fill the whole screen.
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/aspectRatio-650x247.png)
 
 　
 
 ## Adding a Header Image
-
-Before moving on to buttons and other UI controls, you’ll add the header image. For this exercise, you’ll use a non-fullscreen image to demonstrate a few other important concepts of Unity’s new UI system.
 
 Open the Scene view, and from the top bar, select **GameObject ‣ UI ‣ Image**. This will add another image as a child of Canvas:
 
@@ -158,8 +156,6 @@ Did you notice that when you added the aspect ratio fitter, some of the floor te
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/aspectPivot.gif)
 
-Now, not only does the background always fit the size of the phone, the floor part will always stay in view!
-
 　
 
 ## Adding the Start Button
@@ -189,8 +185,6 @@ Then select the nested **Text element** and set its **Text** to **Start Game**. 
 This is what you should see in the Scene view:
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/startButton-650x402.png)
-
-Now you have a button, but it needs a facelift! To make the button look good, you’ll set an image as its background and then use a fancier font.
 
 　
 
@@ -238,8 +232,6 @@ Now run the scene and enjoy your new mega-awesome button! :]
 
 ## Adding the Settings Button
 
-There are a few things left to do. First, add the Settings button.
-
 You can probably do this yourself, so you’re only getting the size and position of the button to start. The rest is almost identical to they way you created the Start Game button.
 
 - ***Note:*** *The easiest way is to duplicate the button and adjust some properties, but try creating the button from scratch this time.*
@@ -263,8 +255,6 @@ Before you can run different scenes, you need to add them to the **Scenes in Bui
 To do this, on the menu select **File ‣ Build Settings**. This will open the **Build Settings** dialog. Then open the **Scenes** folder in the Project browser. First, drag the **MenuScene** and then the **RocketMouse** scene to the **Scenes in Build** list.
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/buildSettings.png)
-
-Finally, close the Build Settings dialog.
 
 　
 
@@ -401,14 +391,10 @@ Select **File ▸ Save** to save your work so far and run the scene. You should 
 
 ## Animating the Settings Button
 
-The Settings button should slide down the screen to make some space in the center for the dialog.
-
 You can animate the settings button yourself! All you need to know is:
 
 - Offscreen **Pos Y** should be **-80**.
 - You don’t need to change anchors, since the button is already positioned relative to the bottom edge of the screen.
-
-Give it a try on your own. Feel free to sneak a peek into the spoiler below.
 
 To create the slide down and slide up animation, as well as setup Animator states, follow these steps:
 

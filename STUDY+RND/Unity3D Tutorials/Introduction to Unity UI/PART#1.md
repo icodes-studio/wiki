@@ -64,10 +64,10 @@ It’s best to save the scene right away. Open the **Save Scenes** dialog by cho
 First on your to do list is to add assets to the scene, so unpack the UI Assets package in your file explorer. There you’ll find two folders: **Menu** and **Fonts**.
 
 - ***Note:***
-    > - *The **Menu** folder contains background images, buttons, icons and other game art.*
-    > - *The game art is provided by [**Game Art Guppy**](http://www.gameartguppy.com/), where you can find a lot of other game art for your practice games.*
-    > - *In addition, two fonts from [**DaFont**](http://dafont.com/). are in the **Fonts** folder.*
-    > - *You can thank Rodrigo Fuenzalida for the [**Titan One**](http://www.dafont.com/titan-one.font) font and Draghia Cornel for the [**DCC Dreamer**](http://www.dafont.com/dcc-dreamer.font) font.*
+    - *The **Menu** folder contains background images, buttons, icons and other game art.*
+    - *The game art is provided by [**Game Art Guppy**](http://www.gameartguppy.com/), where you can find a lot of other game art for your practice games.*
+    - *In addition, two fonts from [**DaFont**](http://dafont.com/). are in the **Fonts** folder.*
+    - *You can thank Rodrigo Fuenzalida for the [**Titan One**](http://www.dafont.com/titan-one.font) font and Draghia Cornel for the [**DCC Dreamer**](http://www.dafont.com/dcc-dreamer.font) font.*
 
 
 It’s nice to keep a tidy folder structure, so in the **Project window**, create a new folder inside **RW** named **UI**.
@@ -137,9 +137,9 @@ Uh-oh. There’s still one problem.
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/11-650x244.png)
 
 - ***Note:***
-    > - *The original game design was for iPhones with 3.5- and 4-inch displays.*
-    > - *This is why all the game art supports 1136 x 640 and 960 x 640 resolutions.*
-    > - *You’ll soon see how the UI can adapt to different game resolutions.*
+    - *The original game design was for iPhones with 3.5- and 4-inch displays.*
+    - *This is why all the game art supports 1136 x 640 and 960 x 640 resolutions.*
+    - *You’ll soon see how the UI can adapt to different game resolutions.*
 
 You’ll tackle this issue by using a **Canvas Scaler**.
 
@@ -182,13 +182,12 @@ After making those changes, you’ll see the full background image, even in a sm
 Change the Game view resolution to see how your game might look in a different resolution, for example, on iPhone Wide 480×320. You’ll notice it still looks good!
 
 - ***Note:***
-    > - *If you don’t see any of the iPhone options, chances are you’re building for a different platform.*
-    > - *From the menu bar, select File ‣ Build Settings.*
-    > - *In the build settings dialog underneath the platform settings, make sure to select iOS.*
-    >
-    > 　　![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/buildPlatform-529x500.png)
-    > - *Unity will reprocess all your assets, and it may take a while.*
-    > - *At the end, you should have access to the various iOS screen sizes.*
+    - *If you don’t see any of the iPhone options, chances are you’re building for a different platform.*
+    - *From the menu bar, select File ‣ Build Settings.*
+    - *In the build settings dialog underneath the platform settings, make sure to select iOS.*
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/buildPlatform-529x500.png)
+    - *Unity will reprocess all your assets, and it may take a while.*
+    - *At the end, you should have access to the various iOS screen sizes.*
 
 Now switch to the Scene view, and you’ll see the Canvas’s size doesn’t change when you resize the Scene view. The side edges of the screen are neatly cropped while the central part is fully visible. This is the result of setting **Match Width or Height** to **1**. It works perfectly for your target resolutions.
 

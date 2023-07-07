@@ -285,10 +285,9 @@ Before you start experimenting with different settings, read through the next se
 You can manually move anchors to a custom position. The presets are just for your convenience.
 
 - ***Note:***
-    > - *You might find yourself in a situation where the translation gizmo covers the anchor icon, making it impossible to select the anchor.*
-    > - *This is where another Unity UI tool comes in handy. If you are familiar with Unity, you’ll know that the keyboard shortcuts Q, W, E and R toggle the Hand, Move, Rotate and Scale tools respectively. With the new UI system, the RectTool was added under the shortcut T. With the RectTool selected, the Gizmo changes to a 2D scale/move box that acts as you would expect from any graphics editing software.*
-    >
-    > 　　![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/rectTool.png)
+    - *You might find yourself in a situation where the translation gizmo covers the anchor icon, making it impossible to select the anchor.*
+    - *This is where another Unity UI tool comes in handy. If you are familiar with Unity, you’ll know that the keyboard shortcuts Q, W, E and R toggle the Hand, Move, Rotate and Scale tools respectively. With the new UI system, the RectTool was added under the shortcut T. With the RectTool selected, the Gizmo changes to a 2D scale/move box that acts as you would expect from any graphics editing software.*
+        ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/rectTool.png)
 
 
 Now you can grab the anchors and move them around.

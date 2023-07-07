@@ -3,11 +3,11 @@
     ● you’ll learn how to incorporate animations into your user interfaces.
     ● Apr 24 2019, C# 6, Unity 2018.3, Unity
     ● By Ben MacKinnon.
+*Update February 2019: This tutorial was updated to Unity 2018.3 by Ben MacKinnon. Original post by [**Kirill Muzykov**](https://twitter.com/kmuzykov).*
+
 [***Download materials***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/Introduction-to-Unity-UI-Part-2.zip)
 
-
-
-*Update February 2019: This tutorial was updated to Unity 2018.3 by Ben MacKinnon. Original post by [**Kirill Muzykov**](https://twitter.com/kmuzykov).*
+　
 
 Welcome back! In [**part one**](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/PART%231.md) of this three-part tutorial series, you created a scene with two buttons. You learned how to use the Image, Button and Text UI controls, and you learned core concepts such as RectTransform, Anchors and Pivots. That’s a lot of skills to learn in one tutorial! However, the scene itself is pretty simple.
 
@@ -206,7 +206,7 @@ In Unity, select **UIManager** in the Hierarchy. Drag **StartButton** from the H
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/181.png)
 
-Then select **SettingsButton** in the Hierarchy and click + in the **On Click()** list. Drag **UIManager** from the Hierarchy to the new item in the list. After that, open the function selection menu and select **UIManagerScript ▸ OpenSettings()**.
+Then select **SettingsButton** in the Hierarchy and click + in the **On Click ()** list. Drag **UIManager** from the Hierarchy to the new item in the list. After that, open the function selection menu and select **UIManagerScript ▸ OpenSettings()**.
 
 ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20Tutorials/Introduction%20to%20Unity%20UI/Assets/191.png)
 

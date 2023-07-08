@@ -40,7 +40,7 @@
 　
 
 - **Project Settings**
-    - **메뉴 > Edit > Project Settings** 창을 열고 **Sprite Packer** 항목을 확인
+    - **메뉴 ‣ Edit ‣ Project Settings** 창을 열고 **Sprite Packer** 항목을 확인
     - **Unity 2019.2.10** 버전을 기준으로 아래의 화면이 보인다.
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-settings.png)
     - **Unity 2022.3.4** 버전을 기준으로 아래의 화면이 보인다.
@@ -69,7 +69,7 @@
 　
 
 - **Creating Sprite-Atlases**
-    - **메뉴 > Asset > Create > 2D > Sprite Atlas** 항목 선택
+    - **메뉴 ‣ Asset ‣ Create ‣ 2D ‣ Sprite Atlas** 항목 선택
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-create.png)
     - 스프라이트 아틀라스를 생성한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-create2.png)
@@ -94,7 +94,7 @@
         > - Sprite Atlas를 패킹할 때 스프라이트가 회전할 수 있도록 허용하는 것으로, Atlas의 공간을 효과적으로 사용할 수 있지만, UI에서 회전한 오브젝트를 사용한 경우 예기치 않은 회전된 이미지가 출력될 수 있습니다. (UI에서는 사용 자제)
     - **Tight Packing**
         > - 기본 직사각형의 패킷 대신, 스프라이트의 아웃라인에 따라 패킹하는 것으로 Atals의 공간을 효과적으로 사용할 수 있지만, 아웃라인이 명확하지 않은 이미지에 대해서는 이미지간의 침범이 발생할 수 있습니다.
-        > - 편집할 이미지 선택 후 Window > 2D > Sprite Editor
+        > - 편집할 이미지 선택 후 Window ‣ 2D ‣ Sprite Editor
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-property3.png)
         > - Custome Outline 선택 시, 스프라이트의 Outline 수정 가능
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-property4.png)
@@ -155,7 +155,7 @@
     - 이렇게 타이트하게 겹친 스프라이트를 실제 사용해보면 알파 영역에 끼어든 텍스쳐들까지 함께 가져와서 출력시켜 버린다.
     - 이를 막기 위해 추가 작업이 필요하다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tightpacking4.png)
-    - 유니티의 Window -> 2D -> Sprite Editor 를 실행해 보자.
+    - 유니티의 Window ‣ 2D ‣ Sprite Editor 를 실행해 보자.
     - 만약 이 Sprite Editor 가 없다면 Package Magnager 에서 2D Sprite 를 Install 해주어야 한다.
     - 그리고 문제가 발생하는 해당 Sprite (Atlas 가 아니다) 를 클릭하면 Sprite Editor 에 그 Sprite 가 뜬다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tightpacking5.png)

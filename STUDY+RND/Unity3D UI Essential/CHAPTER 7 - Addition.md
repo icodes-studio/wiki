@@ -18,7 +18,7 @@
 　
 
 ## Sprite Atlas
-    ● 관련 Project Setting 살펴보기
+    ● Project Setting 살펴보기
     ● Sprite Atlas 생성하기
     ● Sprite Atlas 속성 살펴보기
     ● Tight Packing 자세히 살펴보기

@@ -61,8 +61,8 @@
         > - 에디터의 Play 모드에서 실행해도 아틀라스를 생성, 로드 한다.
         > - 씬 뷰의 일반 에디트 모드에서는 아틀라스를 사용하지 않는다.
     - **Sprite Atlas V2**
-        > - https://docs.unity3d.com/2022.1/Documentation/Manual/SpriteAtlasV2.html
-        > - https://forum.unity.com/threads/sprite-atlas-v2-in-unity-2022-1.1327704/
+        > - *https://docs.unity3d.com/2022.1/Documentation/Manual/SpriteAtlasV2.html*
+        > - *https://forum.unity.com/threads/sprite-atlas-v2-in-unity-2022-1.1327704/*
 
 
 　

@@ -5,7 +5,7 @@
 
 　
 
-## Sprite Atlas - 2019
+## Sprite Atlas
     ● Unity 2019.2.5f1 버전 기준으로 설명
     ● Sprite Atlas 생성하기
     ● Tight Packing
@@ -115,7 +115,7 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tightpacking6.png)
     - 그리고 Generate 버튼을 눌러주면 실제 출력될 공간을 기준으로 폴리곤을 생성해 준다.
     - 이제 Apply 를 눌러서 저장해 준다.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/ightpacking7.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tightpacking7.png)
     - 그리고 해당 UI 가 출력되는 컨트롤에 가서 Use Sprite Mesh 를 체크해 주면 끝.
     - 전체 사각형으로 가져올 떄 침범했던 공간을 이렇게 폴리곤 단위로 잘라서 알파 부분을 피해 그려주기 때문에 더이상 영역 침범 문제가 발생하지 않는다.
     - 단, UI 의 Use Sprite Mesh 체크박스는 Image Type 이 Simple 일 때에만 나오므로 Splite 나 Fill 등의 모드에서는 사용할 수 없다는 점을 유의할 것.

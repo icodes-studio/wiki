@@ -28,10 +28,10 @@
 　
 
 - **Overview**
-    - 렌더링 할 때 텍스쳐 별로 한 번의 ***드로우콜***이 발생하게 된다.
+    - 렌더링 할 때 텍스쳐 별로 한 번의 ***드로우 콜(DrawCall)***이 발생하게 된다.
     - 많은 드로우 콜은 렌더링 성능에 안좋은 영향을 미치는 비싼 작업.
-    - 게임 내 n개의 UI 요소가 각기 다른 텍스쳐 스프라이트를 사용한다면 n번의 드로우콜이 발생.
-    - 이들 각각의 스프라이트들을 ***한장의 텍스쳐에*** 모아놓고 사용한다면 ***드로우콜을 1회로*** 줄일 수 있다.
+    - 게임 내 n개의 UI 요소가 각기 다른 텍스쳐 스프라이트를 사용한다면 n번의 드로우 콜이 발생.
+    - 이들 각각의 스프라이트들을 ***한장의 텍스쳐에*** 모아놓고 사용한다면 ***드로우 콜을 1회로*** 줄일 수 있다.
     - 이렇게 여러 개의 ***스프라이트(Sprite)*** 텍스쳐를 한 장의 큰 텍스쳐에 모아놓은 것을 ***아틀라스(Atlas)*** 라고 한다.
     - 유니티에서는 예전부터 [*Sprite Packer*](https://learnandcreate.tistory.com/131) 라는 툴을 통해 아틀라스를 제작하고 사용할 수 있었다.
     - 하지만 2019 이상부터 레거시라는 꼬리표가 달리고 [***Sprite Atlas***](https://skuld2000.tistory.com/28)가 사용되더니 2020 이상부터는 ***Sprite Atlas***만 사용 가능하다.
@@ -40,28 +40,28 @@
 　
 
 - **Project Settings**
-    - **메뉴 ‣ Edit ‣ Project Settings** 창을 열고 **Sprite Packer** 항목을 확인
-    - **Unity 2019.2.10** 버전을 기준으로 아래의 화면이 보인다.
+    - ***메뉴 ‣ Edit ‣ Project Settings*** 창을 열고 ***Sprite Packer*** 항목을 확인
+    - ***Unity 2019.2.10*** 버전을 기준으로 아래의 화면이 보인다.
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-settings.png)
-    - **Unity 2022.3.4** 버전을 기준으로 아래의 화면이 보인다.
+    - ***Unity 2022.3.4*** 버전을 기준으로 아래의 화면이 보인다.
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-settings2.png)
-    - **Enabled For Builds(Legacy Sprite Packer)**
+    - ***Enabled For Builds(Legacy Sprite Packer)***
         > - 기존 스프라이트 패커를 사용한다.
         > - 빌드 시에만 아틀라스를 생성, 로드 한다.
         > - 에디터의 Play 모드에서 실행하면 아틀라스가 아닌 각각의 스프라이트를 사용한다.
-    - **Always Enabled(Legacy Sprite Packer)**
+    - ***Always Enabled(Legacy Sprite Packer)***
         > - 기존 스프라이트 패커를 사용하여 아틀라스를 생성한다.
         > - 에디터의 Play 모드에서 실행해도 아틀라스를 생성, 로드 한다.
         > - 씬 뷰의 일반 에디트 모드에서는 아틀라스를 사용하지 않는다.
-    - **Enabled For Builds**
+    - ***Enabled For Builds***
         > - 새로운 스프라이트 아틀라스를 사용한다.
         > - 빌드 시에만 아틀라스를 생성, 로드 한다.
         > - 에디터의 Play 모드에서 실행하면 아틀라스가 아닌 각각의 스프라이트를 사용한다.
-    - **Always Enabled**
+    - ***Always Enabled***
         > - 새로운 스프라이트 아틀라스를 사용한다.
         > - 에디터의 Play 모드에서 실행해도 아틀라스를 생성, 로드 한다.
         > - 씬 뷰의 일반 에디트 모드에서는 아틀라스를 사용하지 않는다.
-    - **Sprite Atlas V2**
+    - ***Sprite Atlas V2***
         > - *https://docs.unity3d.com/2022.1/Documentation/Manual/SpriteAtlasV2.html*
         > - *https://forum.unity.com/threads/sprite-atlas-v2-in-unity-2022-1.1327704/*
 

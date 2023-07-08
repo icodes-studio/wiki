@@ -3,7 +3,7 @@
     ● Sprite Atlas vs Sprite Sheet
     ● TextMesh Pro
 
-- ***References***
+### ***References***
     - ***https://docs.unity3d.com/2023.2/Documentation/Manual/class-SpriteAtlas.html***
     - ***https://skuld2000.tistory.com/28***
     - ***https://youtu.be/PEMsZDb3yPs***
@@ -27,7 +27,7 @@
 
 　
 
-- **Overview**
+### **Overview**
     - 렌더링 할 때 텍스쳐 별로 한 번의 ***드로우 콜(DrawCall)***이 발생하게 된다.
     - 많은 드로우 콜은 렌더링 성능에 안좋은 영향을 미치는 비싼 작업.
     - 게임 내 n개의 UI 요소가 각기 다른 텍스쳐 스프라이트를 사용한다면 n번의 드로우 콜이 발생.
@@ -39,7 +39,7 @@
 
 　
 
-- **Project Settings**
+### Project Settings
     - ***메뉴 ‣ Edit ‣ Project Settings*** 창을 열고 ***Sprite Packer*** 항목을 확인
     - ***Unity 2019.2.10*** 버전을 기준으로 아래의 화면이 보인다.
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-settings.png)

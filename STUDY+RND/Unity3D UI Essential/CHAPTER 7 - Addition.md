@@ -5,11 +5,10 @@
 
 　
 
-　
-
 ## Sprite Atlas - 2019
     ● Unity 2019.2.5f1 버전 기준으로 설명
-    ● Sprite Atlas 생성하기 및 스프라이트 등록하기
+    ● Sprite Atlas 생성하기
+    ● Tight Packing
 *https://skuld2000.tistory.com/28*
 
 　
@@ -92,7 +91,7 @@
 
 　
 
-- **Tight Packting 설정**
+- **Tight Packing 설정**
     - 다시 스프라이트 아틀라스를 클릭한 후 Inspector 창을 보자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tightpacking.png)
     - 몇가지 선택 옵션이 있는데 가장 주의할 점은 저 Tight Packing 이다.

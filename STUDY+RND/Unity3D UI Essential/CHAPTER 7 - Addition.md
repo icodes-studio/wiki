@@ -40,7 +40,7 @@
 　
 
 - **Project Settings**
-    - ***메뉴 ‣ Edit ‣ Project Settings*** 창을 열고 ***Sprite Packer*** 항목을 확인
+    - ***메뉴 ‣ Edit ‣ Project Settings*** 창을 열고 ***Edit ‣ Sprite Packer*** 항목을 확인
     - ***Unity 2019.2.10*** 버전을 기준으로 아래의 화면이 보인다.
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-settings.png)
     - ***Unity 2022.3.4*** 버전을 기준으로 아래의 화면이 보인다.
@@ -69,32 +69,32 @@
 　
 
 - **Creating Sprite-Atlases**
-    - **메뉴 ‣ Asset ‣ Create ‣ 2D ‣ Sprite Atlas** 항목 선택
+    - ***메뉴 ‣ Asset ‣ Create ‣ 2D ‣ Sprite Atlas*** 항목 선택
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-create.png)
-    - 스프라이트 아틀라스를 생성한다.
+    - 스프라이트 아틀라스가 생성된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-create2.png)
 
 
 　
 
  - **Sprite Atlas 속성**
-    - 생성된 스프라이트 아틀라스를 인스펙터 창에서 보면 아래와 같다.
+    - 생성된 스프라이트 아틀라스를 인스펙터 창에서 보면 아래의 속성이 보인다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-property.png)
     - **Type**
-        > - Type에는 **Master**와 **Variant** 2가지 모드가 존재
-        > - Master Type은 묶은 스프라이트 아틀라스를 그대로 사용하는 것.
-        > - Variant Type은 Master Type을 기준으로 Atlas를 퀄리티 속성을 변형하여 최적화를 하는 것이다.
+        > - ***Master Type은*** 묶은 스프라이트 아틀라스를 그대로 사용하는 것.
+        > - ***Variant Type은*** Master Type을 기준으로 퀄리티 속성을 변형하여 최적화된 아틀라스를 다시 추출한다.
         > - 예를 들어, 아틀라스 크기를 조절하여 저사양 단말기에서 메모리를 적게 사용할 수 있다.
     - **Including in Build**
-        > - 켠 경우 빌드 시에 스프라이트 아틀라스를 포함하며, 빌드가 실행될 때 자동으로 메모리에 로드된다.
+        > - 켠 경우 빌드 시에 스프라이트 아틀라스가 포함되며, 실행될 때 자동으로 메모리에 로드된다.
         > - 끈 경우 빌드시에 스프라이트 아틀라스가 **Resources** 폴더에 있다면 포함되지만, 에셋번들인 경우 포함되지 않는다.
-    - **Packing - Allow Rotation**
+    - **Allow Rotation**
         > - 패킹할 때, 공간 최적화를 위해 필요하다면, 스프라이트가 회전할 수 있도록 허용한다.
         > - UI에서 회전된 이미지가 출력될 수 있다.
         > - UI에서는 사용 자제. <- `확인 필요`
     - **Tight Packing**
         > - 스프라이트의 아웃라인에 따라 패킹하는 것으로 아틀라스의 공간을 효과적으로 사용할 수 있다.
         > - 아웃라인이 명확하지 않은 경우 렌더링 시 이미지간의 침범이 발생할 수 있다.
+        > 　![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tight-packing-example.png)
     - **Padding**
         > - 스프라이트 사이에 띄어진 공간 픽셀 수를 정의한다.
         > - Padding이 없으면 렌더링 시 이미지간 침범이 발생할 수 있다.

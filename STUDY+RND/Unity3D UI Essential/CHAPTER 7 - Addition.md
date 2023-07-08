@@ -22,8 +22,7 @@
     - 게임 내 n개의 UI 요소가 각기 다른 텍스쳐 스프라이트를 사용한다면 n번의 드로우콜이 발생.
     - 이들 각각의 텍스쳐들을 한장의 텍스쳐에 모아놓고 UI 요소들이 사용한다면 드로우콜을 1회로 줄일 수 있다.
     - 유니티에서는 예전부터 [*Sprite Packer*](https://learnandcreate.tistory.com/131) 라는 툴을 통해 아틀라스를 제작하고 사용할 수 있었다.
-    - 하지만 2019 이상부터 레거시라는 꼬리표가 달리고 [***Sprite Atlas***](https://skuld2000.tistory.com/28)가 사용된다.
-    - 2020 이상부터는 Sprite Atlas만 사용 가능하다.
+    - 하지만 2019 이상부터 레거시라는 꼬리표가 달리고 [***Sprite Atlas***](https://skuld2000.tistory.com/28)가 사용되더니 2020 이상부터는 ***Sprite Atlas***만 사용 가능하다.
 
 
 　

@@ -2,25 +2,36 @@
     ● Sprite Atlas
     ● TextMesh Pro
 
+- ***See Also***
+    - ***https://docs.unity3d.com/2023.2/Documentation/Manual/class-SpriteAtlas.html***
+    - ***https://skuld2000.tistory.com/28***
+    - ***https://hannom.tistory.com/202***
+    - ***https://everyday-devup.tistory.com/62***
+    - ***https://young-94.tistory.com/85***
+    - [***https://maintaining.tistory.com/***](https://maintaining.tistory.com/entry/Unity-%EC%8A%A4%ED%94%84%EB%9D%BC%EC%9D%B4%ED%8A%B8-%EC%95%84%ED%8B%80%EB%9D%BC%EC%8A%A4Sprite-Atlas-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95)
+    - ***https://docs.unity3d.com/2023.1/Documentation/Manual/com.unity.textmeshpro.html***
+    - ***https://www.kodeco.com/22175776-introduction-to-textmesh-pro-in-unity***
+    - ***https://m.blog.naver.com/cdw0424/221641217203***
+
 
 　
 
 ## Sprite Atlas
-    ● 설정
+    ● 관련 Project Setting 살펴보기
     ● Sprite Atlas 생성하기
     ● Sprite Atlas 속성 살펴보기
     ● Tight Packing 자세히 살펴보기
-    ● 스크립트로 아틀라스 사용하기
+    ● 스크립트로 스프라이트 아틀라스 제어 및 사용하기
 
 
 　
 
 - **Overview**
-    - 아틀라스(Atlas)란 여러 개의 스프라이트(Sprite)를 한 장의 큰 텍스쳐에 모아놓은 것.
-    - 렌더링 할 때 텍스쳐 별로 한 번의 드로우콜이 발생하게 된다.
+    - **아틀라스(Atlas)**란 여러 개의 **스프라이트(Sprite)**를 한 장의 큰 텍스쳐에 모아놓은 것.
+    - 렌더링 할 때 텍스쳐 별로 한 번의 **드로우콜**이 발생하게 된다.
     - 드로우 콜은 렌더링 성능에 영향을 미치는 비싼 작업.
     - 게임 내 n개의 UI 요소가 각기 다른 텍스쳐 스프라이트를 사용한다면 n번의 드로우콜이 발생.
-    - 이들 각각의 텍스쳐들을 한장의 텍스쳐에 모아놓고 UI 요소들이 사용한다면 드로우콜을 1회로 줄일 수 있다.
+    - 이들 각각의 텍스쳐들을 한장의 텍스쳐에 모아놓고 UI 요소들이 사용한다면 **드로우콜을 1회**로 줄일 수 있다.
     - 유니티에서는 예전부터 [*Sprite Packer*](https://learnandcreate.tistory.com/131) 라는 툴을 통해 아틀라스를 제작하고 사용할 수 있었다.
     - 하지만 2019 이상부터 레거시라는 꼬리표가 달리고 [***Sprite Atlas***](https://skuld2000.tistory.com/28)가 사용되더니 2020 이상부터는 ***Sprite Atlas***만 사용 가능하다.
 
@@ -206,13 +217,7 @@
 
 　
 
-- ***See Also***
-    - ***https://docs.unity3d.com/2023.2/Documentation/Manual/class-SpriteAtlas.html***
-    - ***https://skuld2000.tistory.com/28***
-    - ***https://hannom.tistory.com/202***
-    - ***https://everyday-devup.tistory.com/62***
-    - ***https://young-94.tistory.com/85***
-    - [***https://maintaining.tistory.com/***](https://maintaining.tistory.com/entry/Unity-%EC%8A%A4%ED%94%84%EB%9D%BC%EC%9D%B4%ED%8A%B8-%EC%95%84%ED%8B%80%EB%9D%BC%EC%8A%A4Sprite-Atlas-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95)
+
 
 
 　
@@ -224,7 +229,3 @@
 - **...**
     - ...
 
-- ***See Also***
-    - ***https://docs.unity3d.com/2023.1/Documentation/Manual/com.unity.textmeshpro.html***
-    - ***https://www.kodeco.com/22175776-introduction-to-textmesh-pro-in-unity***
-    - ***https://m.blog.naver.com/cdw0424/221641217203***

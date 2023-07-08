@@ -73,14 +73,12 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-create.png)
     - 스프라이트 아틀라스를 생성한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-create2.png)
-    - 적당한 위치에 빈 스프라이트 아틀라스를 Create 한다.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-create3.png)
 
 
 　
 
  - **Sprite Atlas 속성**
-    - Inspector Window
+    - 생성된 스프라이트 아틀라스를 인스펙터 창에서 보면 아래와 같다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-property.png)
     - **Type**
         > - Type에는 Master와 Variant 2가지가 존재합니다.

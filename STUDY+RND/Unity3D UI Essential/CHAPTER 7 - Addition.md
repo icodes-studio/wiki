@@ -6,9 +6,11 @@
 　
 
 ## Sprite Atlas
-    ● Unity 2019.2.5f1 버전 기준으로 설명
+    ● 설정
     ● Sprite Atlas 생성하기
-    ● Tight Packing
+    ● Sprite Atlas 속성 살펴보기
+    ● Tight Packing 자세히 살펴보기
+    ● 스크립트로 아틀라스 사용하기
 
 
 　
@@ -27,9 +29,11 @@
 　
 
 - **Settings**
-    - 아틀라스를 사용하려면 먼저 유니티의 Edit > Project Setting 창을 열고 Sprite Packer 항목을 확인
+    - **메뉴 > Edit > Project Setting** 창을 열고 **Sprite Packer** 항목을 확인
     - Unity 2019.2.5f1 버전을 기준으로 아래의 화면이 보인다.
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-settings.png)
+    - Unity 2022.3.4f1 버전을 기준으로 아래의 화면이 보인다.
+        ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-settings2.png)
     - **1. Enabled For Builds(Legacy Sprite Packer)**
         > - 기존의 스프라이트 패커를 사용한다.
         > - 빌드 시에만 아틀라스를 생성, 로드 한다.
@@ -156,7 +160,7 @@
 
 　
 
-- **스크립트로 제어하기**
+- **스크립트로 아틀라스 사용하기**
     - Resource 폴더에 SpriteAtlas 준비
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-script2.png)
     - 오브젝트 생성

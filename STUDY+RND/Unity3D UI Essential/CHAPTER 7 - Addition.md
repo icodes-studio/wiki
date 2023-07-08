@@ -81,31 +81,25 @@
     - 생성된 스프라이트 아틀라스를 인스펙터 창에서 보면 아래와 같다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-property.png)
     - **Type**
-        > - Type에는 Master와 Variant 2가지가 존재합니다.
-        > - Master Type은 단말기 사양에 따라 Atlas를 변형하지 않고 묶은 Sprite Atlas를 사용하는 것입니다.
-        > - Variant Type은 Master Type을 기준 값으로, 단말기 사양에 따라 Atlas를 변형하여 단말기에 따른 최적화를 하는 것입니다. 
-        > - 즉, Sprite Atlas의 Size를 조절하여, 저사양 단말에서 메모리를 적게 사용할 수 있도록 합니다.
-        >
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-property2.png)
+        > - Type에는 **Master**와 **Variant** 2가지 모드가 존재
+        > - Master Type은 묶은 스프라이트 아틀라스를 그대로 사용하는 것.
+        > - Variant Type은 Master Type을 기준으로 Atlas를 퀄리티 속성을 변형하여 최적화를 하는 것이다.
+        > - 예를 들어, 아틀라스 크기를 조절하여 저사양 단말기에서 메모리를 적게 사용할 수 있다.
     - **Including in Build**
-        > - 옵션을 켠 경우 빌드 시에 Sprite Atlas를 포함하며, 빌드가 실행될 때 자동으로 Sprite Atlas가 메모리에 로드 됩니다.
-        > - 옵션을 끈 경우 빌드시에 Sprite Atlas는 Resources 폴더에 있다면 포함되지만, 에셋번들인 경우 포함되지 않습니다. 사용하기 위해서는 Sprite Atlas를 메모리에 코드를 통해 로드한 후에 사용해야 합니다.
+        > - 켠 경우 빌드 시에 스프라이트 아틀라스를 포함하며, 빌드가 실행될 때 자동으로 메모리에 로드된다.
+        > - 끈 경우 빌드시에 스프라이트 아틀라스가 **Resources** 폴더에 있다면 포함되지만, 에셋번들인 경우 포함되지 않는다.
     - **Packing - Allow Rotation**
-        > - Sprite Atlas를 패킹할 때 스프라이트가 회전할 수 있도록 허용하는 것으로, Atlas의 공간을 효과적으로 사용할 수 있지만, UI에서 회전한 오브젝트를 사용한 경우 예기치 않은 회전된 이미지가 출력될 수 있습니다. (UI에서는 사용 자제)
+        > - 패킹할 때, 공간 최적화를 위해 필요하다면, 스프라이트가 회전할 수 있도록 허용한다.
+        > - UI에서 회전된 이미지가 출력될 수 있다.
+        > - UI에서는 사용 자제. <- `확인 필요`
     - **Tight Packing**
-        > - 기본 직사각형의 패킷 대신, 스프라이트의 아웃라인에 따라 패킹하는 것으로 Atals의 공간을 효과적으로 사용할 수 있지만, 아웃라인이 명확하지 않은 이미지에 대해서는 이미지간의 침범이 발생할 수 있습니다.
-        > - 편집할 이미지 선택 후 Window ‣ 2D ‣ Sprite Editor
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-property3.png)
-        > - Custome Outline 선택 시, 스프라이트의 Outline 수정 가능
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-property4.png)
-        > - 아웃 라인 수정
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-property5.png)
-        > - 수정한 Outline이 Sprite Atlas에 적용되는 것을 확인
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-property6.png)
+        > - 스프라이트의 아웃라인에 따라 패킹하는 것으로 아틀라스의 공간을 효과적으로 사용할 수 있다.
+        > - 아웃라인이 명확하지 않은 경우 렌더링 시 이미지간의 침범이 발생할 수 있다.
     - **Padding**
-        > - Sprite Atlas 사이에 픽셀 수를 정의하는 것으로 인접한 이미지 사이의 겹침을 방지합니다.
+        > - 스프라이트 사이에 띄어진 공간 픽셀 수를 정의한다.
+        > - Padding이 없으면 렌더링 시 이미지간 침범이 발생할 수 있다.
     - **Objects For Packing**
-        > - Sprite Atlas를 묶을 이미지를 넣는 곳입니다. 단 Sprite Atlas는 Sprite로 설정된 이미지만 가능합니다.
+        > - 아틀라스로 묶을 스프라이트를 넣는 곳.
 
 
 　
@@ -115,26 +109,6 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlaspacking.png)
     - Asset 폴더 내의 모든 스프라이트와 해당 스프라이트 들이 들어있는 폴더들의 목록이 뜬다.
     - 여기에서 폴더 또는 스프라이트 들을 하나씩 선택해 추가해 줘야 한다.
-
-
-　
-
-- **스프라이트들을 한번에 등록하는 방법**
-    - 아틀라스의 Inspector 뷰에서 우측 상단의 좌물쇠 버튼을 클릭
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlaspacking2.png)
-    - 이후 Project 뷰에서 다른 오브젝트를 선택해도 Inspector 뷰에는 계속 아틀라스만 보인다.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlaspacking3.png)
-    - 이렇게 해놓고 Project 뷰에서 드래그를 하거나 Ctrl 키를 누른채로 선택을 해서 원하는 복수의 스프라이트 들을 선택한 후 마우스로 잡아서 아틀라스 인스펙터 뷰로 드래그 한다.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlaspacking4.png)
-    - 인스펙터 뷰의 Objects for Packing 타이틀이 있는 라인에 끌고 온 스프라이트 들을 놓아주면 아래 리스트에 한번에 주르륵 추가가 된다.
-    - 단, 이 때 타이틀이 아닌 아래 슬롯 위치에서 마우스를 떼면 그중에 한개만 해당 슬롯에 들어가 버리므로 꼭 타이틀 라인에 놓아주어야 한다.
-    - 아무튼 이렇게 원하는 스프라이트 들을 다 등록했다면 아틀라스 인스펙터 뷰 좌하단의 Pack Preview 버튼을 눌러준다.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlaspacking5.png)
-    - 팩킹하는 프로그래스 창이 뜨고 잠시 기다리면
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlaspacking6.png)
-    - 이처럼 등록한 스프라이트들을 아틀라스로 묶어준다.
-    - 만약 설정된 아틀라스 사이즈보다 더 많은 스프라이트가 추가 되었다면 스크린샷의 팝업 과 같이 하나의 아틀라스 파일 안에 다수의 페이지 형태로 나뉘어서 생성된다.
-    - 이렇게 페이지로 나뉜 아틀라스는 비록 하나의 파일에서 관리하지만 엄연히 다른 아틀라스이므로 별도의 드로우콜이 발생되는 점을 유의하자.
 
 
 　

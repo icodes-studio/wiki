@@ -162,6 +162,7 @@
     - 오브젝트 생성
         > - 이미지랑 Sprite를 관리할 SpriteManager 빈 오브젝트와 스크립트를 생성한다.
         > - 물론 SpriteManager 오브젝트 없이 스크립트를 Image에 넣어서 사용해도 된다.
+        >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-script.png)
     - 코드 작성
         ```

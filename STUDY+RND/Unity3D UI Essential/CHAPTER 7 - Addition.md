@@ -33,22 +33,25 @@
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-settings.png)
     - Unity 2022.3.4 버전을 기준으로 아래의 화면이 보인다.
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-settings2.png)
-    - **1. Enabled For Builds(Legacy Sprite Packer)**
+    - **Enabled For Builds(Legacy Sprite Packer)**
         > - 기존 스프라이트 패커를 사용한다.
         > - 빌드 시에만 아틀라스를 생성, 로드 한다.
         > - 에디터의 Play 모드에서 실행하면 아틀라스가 아닌 각각의 스프라이트를 사용한다.
-    - **2. Always Enabled(Legacy Sprite Packer)**
+    - **Always Enabled(Legacy Sprite Packer)**
         > - 기존 스프라이트 패커를 사용하여 아틀라스를 생성한다.
         > - 에디터의 Play 모드에서 실행해도 아틀라스를 생성, 로드 한다.
         > - 씬 뷰의 일반 에디트 모드에서는 아틀라스를 사용하지 않는다.
-    - **3. Enabled For Builds**
+    - **Enabled For Builds**
         > - 새로운 스프라이트 아틀라스를 사용한다.
         > - 빌드 시에만 아틀라스를 생성, 로드 한다.
         > - 에디터의 Play 모드에서 실행하면 아틀라스가 아닌 각각의 스프라이트를 사용한다.
-    - **4. Always Enabled**
+    - **Always Enabled**
         > - 새로운 스프라이트 아틀라스를 사용한다.
         > - 에디터의 Play 모드에서 실행해도 아틀라스를 생성, 로드 한다.
         > - 씬 뷰의 일반 에디트 모드에서는 아틀라스를 사용하지 않는다.
+    - **Sprite Atlas V2**
+        > - https://docs.unity3d.com/2022.1/Documentation/Manual/SpriteAtlasV2.html
+        > - https://forum.unity.com/threads/sprite-atlas-v2-in-unity-2022-1.1327704/
 
 
 　

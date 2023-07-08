@@ -67,7 +67,7 @@
 
 　
 
-- **Sprite Atlas 생성하기**
+- **Creating Sprite-Atlases**
     - 기존 스프라이트 팩커의 경우 각각의 스프라이트에 태그를 입력하면 이 태그를 기준으로 팩커가 스프라이트를 팩킹하는 방식이었으나 
     - 스프라이트 아틀라스는 그와 달리 아틀라스 파일을 생성한 후 여기에 팩킹할 스프라이트 들을 직접 추가하는 방식이다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-create.png)

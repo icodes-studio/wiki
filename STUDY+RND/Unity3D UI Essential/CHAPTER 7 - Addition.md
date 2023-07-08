@@ -3,7 +3,7 @@
     ● Sprite Atlas vs Sprite Sheet
     ● TextMesh Pro
 
-- ***See Also***
+- ***References***
     - ***https://docs.unity3d.com/2023.2/Documentation/Manual/class-SpriteAtlas.html***
     - ***https://skuld2000.tistory.com/28***
     - ***https://youtu.be/PEMsZDb3yPs***
@@ -28,11 +28,11 @@
 　
 
 - **Overview**
-    - **아틀라스**(Atlas)란 여러 개의 **스프라이트**(Sprite)를 한 장의 큰 텍스쳐에 모아놓은 것.
     - 렌더링 할 때 텍스쳐 별로 한 번의 **드로우콜**이 발생하게 된다.
-    - 드로우 콜은 렌더링 성능에 영향을 미치는 비싼 작업.
+    - 많은 드로우 콜은 렌더링 성능에 안좋은 영향을 미치는 비싼 작업.
     - 게임 내 n개의 UI 요소가 각기 다른 텍스쳐 스프라이트를 사용한다면 n번의 드로우콜이 발생.
-    - 이들 각각의 텍스쳐들을 한장의 텍스쳐에 모아놓고 UI 요소들이 사용한다면 **드로우콜을 1회**로 줄일 수 있다.
+    - 이들 각각의 스프라이트들을 한장의 텍스쳐에 모아놓고 사용한다면 **드로우콜을 1회**로 줄일 수 있다.
+    - 이렇게 여러 개의 **스프라이트(Sprite)** 텍스쳐를 한 장의 큰 텍스쳐에 모아놓은 것을 **아틀라스(Atlas)** 라고 한다.
     - 유니티에서는 예전부터 [*Sprite Packer*](https://learnandcreate.tistory.com/131) 라는 툴을 통해 아틀라스를 제작하고 사용할 수 있었다.
     - 하지만 2019 이상부터 레거시라는 꼬리표가 달리고 [***Sprite Atlas***](https://skuld2000.tistory.com/28)가 사용되더니 2020 이상부터는 ***Sprite Atlas***만 사용 가능하다.
 

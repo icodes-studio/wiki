@@ -14,7 +14,8 @@
     - 그런데 이 20개의 각각의 텍스쳐들을 한장의 텍스쳐에 모아놓고 UV 좌표를 조절해 UI 요소들이 사용한다면 드로우콜을 1회로 줄일 수 있다.
     - 게임의 퍼포먼스에 드로우콜이 얼마나 큰 영향을 미치는지 감안한다면 아틀라스의 사용은 선택이 아니라 필수이다.
     - 유니티에서는 예전부터 [*Sprite Packer*](https://learnandcreate.tistory.com/131) 라는 툴을 통해 아틀라스를 제작하고 사용할 수 있었다.
-    - 하지만 2019 이상부터 레거시라는 꼬리표가 달리고 [***Sprite Atlas***](https://skuld2000.tistory.com/28)가 사용된다. 또한 2020 이상부터는 Sprite Atlas만 사용 가능하다.
+    - 하지만 2019 이상부터 레거시라는 꼬리표가 달리고 [***Sprite Atlas***](https://skuld2000.tistory.com/28)가 사용된다.
+    - 2020 이상부터는 Sprite Atlas만 사용 가능하다.
  
 - **Settings**
     - 아틀라스를 사용하려면 먼저 유니티의 Edit > Project Setting 창을 열고 Sprite Packer 항목을 확인

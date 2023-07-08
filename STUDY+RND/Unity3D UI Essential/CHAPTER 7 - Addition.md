@@ -69,10 +69,9 @@
 　
 
 - **Creating Sprite-Atlases**
-    - 기존 스프라이트 팩커의 경우 각각의 스프라이트에 태그를 입력하면 이 태그를 기준으로 팩커가 스프라이트를 팩킹하는 방식이었으나 
-    - 스프라이트 아틀라스는 그와 달리 아틀라스 파일을 생성한 후 여기에 팩킹할 스프라이트 들을 직접 추가하는 방식이다.
+    - **메뉴 > Asset > Create > 2D > Sprite Atlas** 항목 선택
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-create.png)
-        > 
+    - 스프라이트 아틀라스를 생성한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-create2.png)
     - 적당한 위치에 빈 스프라이트 아틀라스를 Create 한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-create3.png)
@@ -82,14 +81,14 @@
 
  - **Sprite Atlas 속성**
     - Inspector Window
-        > ![](spriteatlas-property.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-property.png)
     - **Type**
         > - Type에는 Master와 Variant 2가지가 존재합니다.
         > - Master Type은 단말기 사양에 따라 Atlas를 변형하지 않고 묶은 Sprite Atlas를 사용하는 것입니다.
         > - Variant Type은 Master Type을 기준 값으로, 단말기 사양에 따라 Atlas를 변형하여 단말기에 따른 최적화를 하는 것입니다. 
         > - 즉, Sprite Atlas의 Size를 조절하여, 저사양 단말에서 메모리를 적게 사용할 수 있도록 합니다.
         >
-        > ![](spriteatlas-property2.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-property2.png)
     - **Including in Build**
         > - 옵션을 켠 경우 빌드 시에 Sprite Atlas를 포함하며, 빌드가 실행될 때 자동으로 Sprite Atlas가 메모리에 로드 됩니다.
         > - 옵션을 끈 경우 빌드시에 Sprite Atlas는 Resources 폴더에 있다면 포함되지만, 에셋번들인 경우 포함되지 않습니다. 사용하기 위해서는 Sprite Atlas를 메모리에 코드를 통해 로드한 후에 사용해야 합니다.
@@ -97,14 +96,14 @@
         > - Sprite Atlas를 패킹할 때 스프라이트가 회전할 수 있도록 허용하는 것으로, Atlas의 공간을 효과적으로 사용할 수 있지만, UI에서 회전한 오브젝트를 사용한 경우 예기치 않은 회전된 이미지가 출력될 수 있습니다. (UI에서는 사용 자제)
     - **Tight Packing**
         > - 기본 직사각형의 패킷 대신, 스프라이트의 아웃라인에 따라 패킹하는 것으로 Atals의 공간을 효과적으로 사용할 수 있지만, 아웃라인이 명확하지 않은 이미지에 대해서는 이미지간의 침범이 발생할 수 있습니다.
-        > - 편잡할 이미지 선택 후 Window > 2D > Sprite Editor
-        > ![](spriteatlas-property3.png)
+        > - 편집할 이미지 선택 후 Window > 2D > Sprite Editor
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-property3.png)
         > - Custome Outline 선택 시, 스프라이트의 Outline 수정 가능
-        > ![](spriteatlas-property4.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-property4.png)
         > - 아웃 라인 수정
-        > ![](spriteatlas-property5.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-property5.png)
         > - 수정한 Outline이 Sprite Atlas에 적용되는 것을 확인
-        > ![](spriteatlas-property6.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-property6.png)
     - **Padding**
         > - Sprite Atlas 사이에 픽셀 수를 정의하는 것으로 인접한 이미지 사이의 겹침을 방지합니다.
     - **Objects For Packing**

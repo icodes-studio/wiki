@@ -29,24 +29,23 @@
 
 　
 
-### Getting Started
+### Overview
 
----
-
-- **Sprite Atlas - Overview**
-    - 렌더링 할 때 텍스쳐 별로 한 번의 ***드로우 콜(DrawCall)*** 작업이 발생한다.
-    - 많은 드로우 콜은 렌더링 성능에 안좋은 영향을 미치는 비싼 작업.
-    - 게임 내 n개의 UI 요소가 각기 다른 텍스쳐 스프라이트를 사용한다면 n번의 드로우 콜이 발생.
-    - 이들 각각의 스프라이트들을 ***한장의 텍스쳐에*** 모아놓고 사용한다면 ***드로우 콜을 1회로*** 줄일 수 있다.
-    - 이렇게 여러 개의 ***스프라이트(Sprite)*** 텍스쳐를 한 장의 큰 텍스쳐에 모아놓은 것을 ***아틀라스(Atlas)*** 라고 한다.
-    - 유니티에서는 예전부터 [*Sprite Packer*](https://learnandcreate.tistory.com/131) 라는 툴을 통해 아틀라스를 제작하고 사용할 수 있었다.
-    - 하지만 2019 이상부터 레거시라는 꼬리표가 달리고 [***Sprite Atlas***](https://skuld2000.tistory.com/28)가 사용되더니 2020 이상부터는 ***Sprite Atlas***만 사용 가능하다.
+- 렌더링 할 때 텍스쳐 별로 한 번의 ***드로우 콜(DrawCall)*** 작업이 발생한다.
+- 많은 드로우 콜은 렌더링 성능에 안좋은 영향을 미치는 비싼 작업.
+- 게임 내 n개의 UI 요소가 각기 다른 텍스쳐 스프라이트를 사용한다면 n번의 드로우 콜이 발생.
+- 이들 각각의 스프라이트들을 ***한장의 텍스쳐에*** 모아놓고 사용한다면 ***드로우 콜을 1회로*** 줄일 수 있다.
+- 이렇게 여러 개의 ***스프라이트(Sprite)*** 텍스쳐를 한 장의 큰 텍스쳐에 모아놓은 것을 ***아틀라스(Atlas)*** 라고 한다.
+- 유니티에서는 예전부터 [*Sprite Packer*](https://learnandcreate.tistory.com/131) 라는 툴을 통해 아틀라스를 제작하고 사용할 수 있었다.
+- 하지만 2019 이상부터 레거시라는 꼬리표가 달리고 [***Sprite Atlas***](https://skuld2000.tistory.com/28)가 사용되더니 2020 이상부터는 ***Sprite Atlas***만 사용 가능하다.
 
 
 　
 
-- **Sprite Atlas - Project Settings**
-    - ***메뉴 ‣ Edit ‣ Project Settings*** 창을 열고 ***Edit ‣ Sprite Packer*** 항목을 확인
+### Getting Started
+
+- ***메뉴 ‣ Edit ‣ Project Settings*** 창을 열고 ***Edit ‣ Sprite Packer*** 항목을 확인
+- **Project Settings - Sprite Packer**
     - ***Unity 2019.2.10*** 버전을 기준으로 아래의 화면이 보인다.
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-settings.png)
     - ***Unity 2022.3.4*** 버전을 기준으로 아래의 화면이 보인다.
@@ -88,16 +87,15 @@
     - Asset 폴더 내의 모든 스프라이트와 해당 스프라이트 들이 들어있는 폴더들의 목록이 뜬다.
     - 여기에서 폴더 또는 스프라이트 들을 선택해 추가.
     - 또는 프로젝트 뷰에서 폴더 또는 스프라이트들을 드래그 해서 Objects for Packing 영역으로 드래그.
-    > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-packing.gif)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-packing.gif)
 
 
 　
 
  ### Optimization
 
----
-
- - **Properties**
+- 스프라이트 아틀라스의 패킹 최적화 옵션들
+- **Properties**
     - 생성된 스프라이트 아틀라스의 인스펙터 창 속성
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-property.png)
     - **Type**
@@ -145,8 +143,6 @@
 　
 
 ### Scripting
-
----
 
 - **동적으로 스프라이트 로드하기**
     - Resources 폴더에 SpriteAtlas 준비

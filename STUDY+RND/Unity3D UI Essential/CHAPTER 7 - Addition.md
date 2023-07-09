@@ -122,9 +122,8 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tightpacking2.png)
     - 만약 이들 옵션을 사용하여 팩킹을 하게 되면
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tightpacking3.png)
-    - 스프라이트가 회전되거나 스프라이트의 사각 영역 내에 다른 텍스쳐들이 배치 된 것을 알 수 있다.
-    - 문제는 이렇게 아틀라스를 배치 했으면 실제 사용할 때도 알아서 처리해주면 좋을텐데 그렇지가 못하다는 점이다.
-    - 이렇게 타이트하게 겹친 스프라이트를 실제 사용해보면 알파 영역에 끼어든 텍스쳐들까지 함께 가져와서 출력시켜 버린다.
+    - 스프라이트가 회전되거나 스프라이트의 사각 영역 내에 다른 텍스쳐들이 겹쳐 배치 된 것을 알 수 있다.
+    - 문제는 회전되거나 겹친 스프라이트를 실제 사용해보면 그대로 뒤집히고 겹친 텍스쳐들까지 함께 출력시켜 버린다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tightpacking-error.png)
     - 이러한 현상을 막으려면 해당 UI 가 출력되는 컨트롤에 가서 Use Sprite Mesh 항목을 체크하면 된다.
     - 단, Use Sprite Mesh 기능은 Image Type 이 Simple 일 때에만 가능하다.

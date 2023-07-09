@@ -139,32 +139,32 @@
 - **Sprite Atlas - Scripting**
     - Resources 폴더에 SpriteAtlas 준비
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-script2.png)
-    - 오브젝트 생성
-        > - SpriteManager 빈 오브젝트와 스크립트를 생성한다.
-        >
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-script.png)
-    - 코드 작성
+    - SpriteManager 빈 오브젝트와 SpriteManager.cs 스크립트를 생성하여 서로 바인딩
+    - SpriteManager.cs 코드 작성
         ```
+        using UnityEngine;
+        using UnityEngine.UI;
+        using UnityEngine.U2D;
+
         public class SpriteManager : MonoBehaviour
         {
-            public SpriteAtlas spriteAtlas; 
-
+            public SpriteAtlas spriteAtlas;
             public Image img;
 
             void Start()
             {
-                // public으로 선언 시, 생략하고 드래그앤드롭으로 가능
-                spriteAtlas = Resources.Load<SpriteAtlas>("SpriteAtlas"); 
+                if (spriteAtlas == null)
+                    spriteAtlas = Resources.Load<SpriteAtlas>("SpriteAtlas");
             }
 
             void Update()
             {
-                if (Input.GetMouseButtonDown(0)) 
-                    img.sprite = SpriteReturn("sprite0"); // 좌클릭
-                if (Input.GetMouseButtonDown(1)) 
-                    img.sprite = SpriteReturn("sprite1"); // 우클릭
-                if (Input.GetMouseButtonDown(2)) 
-                    img.sprite = SpriteReturn("sprite2"); // 휠클릭
+                if (Input.GetMouseButtonDown(0))
+                    img.sprite = SpriteReturn("ChomperAttack_00001"); // 좌클릭
+                if (Input.GetMouseButtonDown(1))
+                    img.sprite = SpriteReturn("ChomperAttack_00007"); // 우클릭
+                if (Input.GetMouseButtonDown(2))
+                    img.sprite = SpriteReturn("ChomperAttack_00013"); // 휠클릭
             }
 
             public Sprite SpriteReturn(string spriteName)
@@ -175,11 +175,6 @@
         ```
     - 실행 결과
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-script.gif)
-
-
-　
-
-
 
 
 　

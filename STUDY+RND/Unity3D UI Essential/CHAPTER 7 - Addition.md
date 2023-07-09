@@ -233,15 +233,21 @@
     - Scroll down to ***TextMeshPro*** and select it.
     - With the package selected, click ***Install*** to install the package to your project.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/InstallTMP-650x422.png)
-
 - Import the ***TextMesh Pro Essential Resources*** into your project by selecting ***Window ▸ TextMeshPro ▸ Import TMP Essential Resources***.
 - Finally, import all the files in the Unity Package into your project.
 - You’ll now see a subfolder called TextMesh Pro under Assets.
 
 
+　
 
+## What Is TextMesh Pro?
 
-
+- In the early days of the Unity game engine, one method of adding text to your game was to use ***TextMesh***.
+- TextMesh, which came prepackaged with Unity, used bitmap fonts to display text on the screen.
+- TextMesh offered some basic styling and configuration options, but you were very limited regarding what you could create with it.
+- Because the text was rendered using bitmaps, it began to appear fuzzy when enlarged.
+- Also, the game’s frame rate dropped when you had many TextMesh objects on the screen at once.
+    ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/BitmapVsSDF-650x366.jpg)
 
 
 

@@ -91,8 +91,6 @@
         > - 끈 경우 빌드시에 스프라이트 아틀라스가 **Resources** 폴더에 있다면 포함되지만, 에셋번들인 경우 포함되지 않는다.
     - **Allow Rotation**
         > - 패킹할 때, 공간 최적화를 위해 필요하다면, 스프라이트가 회전할 수 있도록 허용한다.
-        > - UI에서 회전된 이미지가 출력될 수 있다.
-        > - UI에서는 사용 자제. <- `확인 필요`
     - **Tight Packing**
         > - 스프라이트의 아웃라인에 따라 패킹하는 것으로 아틀라스의 공간을 효과적으로 사용할 수 있다.
         > - 아웃라인이 명확하지 않은 경우 렌더링 시 이미지간의 침범이 발생할 수 있다.
@@ -130,7 +128,8 @@
     - 이러한 현상을 막으려면 해당 UI 가 출력되는 컨트롤에 가서 ***Use Sprite Mesh*** 항목을 체크하면 된다.
     - 단, Use Sprite Mesh 기능은 Image Type 이 ***Simple*** 일 때에만 가능하다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tightpacking-fix.png)
-    - Sprite Mesh를 좀 더 커스텀하게 편집하려면 ***Window ‣ 2D ‣ Sprite Editor*** 창에서 ***Custom Outline을*** 수정하면 된다.
+    - Tight Packing 옵션은 스프라이트의 아웃라인에 따라 공간을 계산하여 최적화 패킹을 한다.
+    - 따라서 좀 더 커스텀하게 패킹을 동작시키려면 ***Sprite Editor*** 창에서 ***Custom Outline을*** 수정하면 된다.
         > *https://docs.unity3d.com/kr/2021.1/Manual/SpriteOutlineEditor.html*
         >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/2DCustomOutline_7.png)

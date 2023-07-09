@@ -116,7 +116,7 @@
 　
 
 - **Sprite Atlas - Tight Packing**
-    - Tight Packing 옵션과 Allow Rotation 옵션은 공간의 낭비없이 스프라이트들을 배치하는 기능이다.
+    - ***Tight Packing*** 옵션과 ***Allow Rotation*** 옵션은 공간의 낭비없이 스프라이트들을 배치하는 기능이다.
     - 즉, 필요에 따라 스프라이트를 회전하거나 알파 영역 공간을 침범해서 촘촘하게 스프라이트를 배치한다.
     - 해당 옵션을 끈 상태로 패킹을 하면 자신의 스프라이트 사이즈 만큼의 공간을 확보한 상태로 아틀라스가 만들어진다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tightpacking2.png)

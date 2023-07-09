@@ -8,7 +8,7 @@
 
 　
 
-## # Sprite Atlas
+# # Sprite Atlas
     ● Project Settings 살펴보기
     ● Sprite Atlas 생성하기
     ● Sprite Atlas 속성 살펴보기
@@ -29,7 +29,7 @@
 
 　
 
-### Overview
+## Overview
 
 - 렌더링 할 때 텍스쳐 별로 한 번의 ***드로우 콜(DrawCall)*** 작업이 발생한다.
 - 많은 드로우 콜은 렌더링 성능에 안좋은 영향을 미치는 비싼 작업.
@@ -42,7 +42,7 @@
 
 　
 
-### Getting Started
+## Getting Started
 
 - ***메뉴 ‣ Edit ‣ Project Settings*** 창을 열고 ***Edit ‣ Sprite Packer*** 항목을 확인
 - **Project Settings - Sprite Packer**
@@ -92,7 +92,7 @@
 
 　
 
- ### Optimization
+ ## Optimization
 
 - 스프라이트 아틀라스의 패킹 최적화 옵션들
 - **Properties**
@@ -142,7 +142,7 @@
 
 　
 
-### Scripting
+## Scripting
 
 - **동적으로 스프라이트 로드하기**
     - Resources 폴더에 SpriteAtlas 준비
@@ -189,7 +189,7 @@
 
 　
 
-## # TextMesh Pro
+# # TextMesh Pro
     ● Introduction to TextMesh Pro in Unity
     ● Learn about TextMesh Pro in Unity by creating a spooky text-based adventure game.
     ● Aug 4 2021, C# 7.3, Unity 2020.3, Unity
@@ -218,9 +218,7 @@ By the time you’re done, you’ll see how TextMesh Pro gives your project the 
 
 　
 
-### Getting Started
-
----
+## Getting Started
 
 Download the starter project by clicking the [***Download Materials***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/Using-TextMesh-Pro-Project-Files-2.zip) button at the top or bottom of the tutorial. Open the project in **Unity 2020.3** or later.
 
@@ -240,6 +238,6 @@ Now that you’ve had a look at the project, it’s time to get started with Tex
 
 　
 
-## # 유니티(Unity) - Textmesh Pro(텍스트 메쉬 프로) 한글 사용법 
+# # 유니티(Unity) - Textmesh Pro(텍스트 메쉬 프로) 한글 사용법 
 
 - https://m.blog.naver.com/cdw0424/221641217203

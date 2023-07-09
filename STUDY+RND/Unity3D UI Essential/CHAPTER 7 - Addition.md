@@ -169,14 +169,14 @@
             void Update()
             {
                 if (Input.GetMouseButtonDown(0))
-                    img.sprite = SpriteReturn("ChomperAttack_00001"); // 좌클릭
+                    img.sprite = GetSprite("ChomperAttack_00001"); // 좌클릭
                 if (Input.GetMouseButtonDown(1))
-                    img.sprite = SpriteReturn("ChomperAttack_00007"); // 우클릭
+                    img.sprite = GetSprite("ChomperAttack_00007"); // 우클릭
                 if (Input.GetMouseButtonDown(2))
-                    img.sprite = SpriteReturn("ChomperAttack_00013"); // 휠클릭
+                    img.sprite = GetSprite("ChomperAttack_00013"); // 휠클릭
             }
 
-            public Sprite SpriteReturn(string spriteName)
+            public Sprite GetSprite(string spriteName)
             {
                 return spriteAtlas.GetSprite(spriteName);
             }

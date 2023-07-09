@@ -183,7 +183,7 @@
         }
         ```
     - 대충 Image UI 컨트롤 연결하고 실행하면
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-script2.gif)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-script.gif)
 
 
 　

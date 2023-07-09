@@ -27,7 +27,7 @@
 
 　
 
-- **Overview**
+- **Sprite Atlas - Overview**
     - 렌더링 할 때 텍스쳐 별로 한 번의 ***드로우 콜(DrawCall)***이 발생하게 된다.
     - 많은 드로우 콜은 렌더링 성능에 안좋은 영향을 미치는 비싼 작업.
     - 게임 내 n개의 UI 요소가 각기 다른 텍스쳐 스프라이트를 사용한다면 n번의 드로우 콜이 발생.
@@ -39,7 +39,7 @@
 
 　
 
-- **Project Settings**
+- **Sprite Atlas - Project Settings**
     - ***메뉴 ‣ Edit ‣ Project Settings*** 창을 열고 ***Edit ‣ Sprite Packer*** 항목을 확인
     - ***Unity 2019.2.10*** 버전을 기준으로 아래의 화면이 보인다.
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-settings.png)
@@ -68,7 +68,7 @@
 
 　
 
-- **Creating Sprite-Atlases**
+- **Sprite Atlas - Creating**
     - ***메뉴 ‣ Asset ‣ Create ‣ 2D ‣ Sprite Atlas*** 항목 선택
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-create.png)
     - 스프라이트 아틀라스가 생성된다.
@@ -77,8 +77,8 @@
 
 　
 
- - **Sprite Atlas 속성**
-    - 생성된 스프라이트 아틀라스를 인스펙터 창에서 보면 아래의 속성이 보인다.
+ - **Sprite Atlas - Properties**
+    - 생성된 스프라이트 아틀라스의 인스펙터 창 속성
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-property.png)
     - **Type**
         > - ***Master Type은*** 묶은 스프라이트 아틀라스를 그대로 사용하는 것.
@@ -104,16 +104,18 @@
 
 　
 
-- **Sprite Atlas Packing**
-    - Object for Packing 칸에 있는 + 버튼을 클릭해서 원하는 스프라이트 또는 폴더를 선택한다.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlaspacking.png)
+- **Sprite Atlas - Packing**
+    - Objects for Packing 칸에 있는 + 버튼을 클릭해서 원하는 스프라이트 또는 폴더를 선택한다.
     - Asset 폴더 내의 모든 스프라이트와 해당 스프라이트 들이 들어있는 폴더들의 목록이 뜬다.
-    - 여기에서 폴더 또는 스프라이트 들을 하나씩 선택해 추가해 줘야 한다.
+    - 여기에서 폴더 또는 스프라이트 들을 선택해 추가해 준다.
+    - 또는 스프라이트들을 드래그 해서 Objects for Packing 영역으로 바로 드래그 해도 된다.
+    > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-packing.gif)
+
 
 
 　
 
-- **Tight Packing 설정**
+- **Sprite Atlas - Tight Packing**
     - 다시 스프라이트 아틀라스를 클릭한 후 Inspector 창을 보자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tightpacking.png)
     - 몇가지 선택 옵션이 있는데 가장 주의할 점은 저 Tight Packing 이다.
@@ -145,7 +147,7 @@
 
 　
 
-- **스크립트로 아틀라스 사용하기**
+- **Sprite Atlas - Scripting**
     - Resource 폴더에 SpriteAtlas 준비
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-script2.png)
     - 오브젝트 생성

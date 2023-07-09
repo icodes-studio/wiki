@@ -9,11 +9,11 @@
 　
 
 ## # Sprite Atlas
-    ● Project Setting 살펴보기
+    ● Project Settings 살펴보기
     ● Sprite Atlas 생성하기
     ● Sprite Atlas 속성 살펴보기
     ● Tight Packing 자세히 살펴보기
-    ● 스크립트로 스프라이트 아틀라스 제어 및 사용하기
+    ● 스크립트로 스프라이트 아틀라스 사용하기
 
 
 　

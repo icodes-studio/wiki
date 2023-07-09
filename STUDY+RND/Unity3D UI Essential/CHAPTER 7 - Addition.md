@@ -1,6 +1,7 @@
 # CHAPTER 7 - Addition
-    ● Sprite Atlas
-    ● TextMesh Pro
+
+- ***Sprite Atlas***
+- ***TextMesh Pro***
 
 
 　

@@ -107,8 +107,8 @@
 - **Sprite Atlas - Packing**
     - Objects for Packing 칸에 있는 + 버튼을 클릭해서 원하는 스프라이트 또는 폴더를 선택한다.
     - Asset 폴더 내의 모든 스프라이트와 해당 스프라이트 들이 들어있는 폴더들의 목록이 뜬다.
-    - 여기에서 폴더 또는 스프라이트 들을 선택해 추가해 준다.
-    - 또는 스프라이트들을 드래그 해서 Objects for Packing 영역으로 바로 드래그 해도 된다.
+    - 여기에서 폴더 또는 스프라이트 들을 선택해 추가.
+    - 또는 프로젝트 뷰에서 폴더 또는 스프라이트들을 드래그 해서 Objects for Packing 영역으로 드래그.
     > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-packing.gif)
 
 
@@ -116,33 +116,24 @@
 　
 
 - **Sprite Atlas - Tight Packing**
-    - 다시 스프라이트 아틀라스를 클릭한 후 Inspector 창을 보자.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tightpacking.png)
-    - 몇가지 선택 옵션이 있는데 가장 주의할 점은 저 Tight Packing 이다.
-    - Tight Packing 은 말 그대로 아주 촘촘하게 스프라이트들을 배치해 주는 기능이다.
-    - 해당 옵션을 끈 상태로 팩킹을 하면 자신의 스프라이트 사이즈 만큼의 공간을 확보한 상태로 아틀라스가 만들어진다.
+    - Tight Packing 옵션과 Allow Rotation 옵션은 공간의 낭비없이 스프라이트들을 배치하는 기능이다.
+    - 즉, 필요에 따라 스프라이트를 회전하거나 알파 영역 공간을 침범해서 촘촘하게 스프라이트를 배치한다.
+    - 해당 옵션을 끈 상태로 패킹을 하면 자신의 스프라이트 사이즈 만큼의 공간을 확보한 상태로 아틀라스가 만들어진다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tightpacking2.png)
-    - 만약 이 옵션을 사용하여 팩킹을 하게 되면
+    - 만약 이들 옵션을 사용하여 팩킹을 하게 되면
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tightpacking3.png)
-    - Allow Roatation 옵션이 체크 되어 있어 최적의 배치를 위해 이미지가 회전된 상태이다.
-    - 중요한 것은 그게 아니라 자세히 보면 저 스프라이트의 사각 영역 내에 다른 텍스쳐들이 배치 된 것을 알 수 있다.
-    - 즉, Tight Packing 은 스프라이트의 알파 처리 되어 있는 부분을 체크하여 이 공간도 빈 공간으로 인식, 더 촘촘하게 이미지를 배치하는 기능이다.
+    - 스프라이트가 회전되거나 스프라이트의 사각 영역 내에 다른 텍스쳐들이 배치 된 것을 알 수 있다.
     - 문제는 이렇게 아틀라스를 배치 했으면 실제 사용할 때도 알아서 처리해주면 좋을텐데 그렇지가 못하다는 점이다.
     - 이렇게 타이트하게 겹친 스프라이트를 실제 사용해보면 알파 영역에 끼어든 텍스쳐들까지 함께 가져와서 출력시켜 버린다.
-    - 이를 막기 위해 추가 작업이 필요하다.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tightpacking4.png)
-    - 유니티의 Window ‣ 2D ‣ Sprite Editor 를 실행해 보자.
-    - 만약 이 Sprite Editor 가 없다면 Package Magnager 에서 2D Sprite 를 Install 해주어야 한다.
-    - 그리고 문제가 발생하는 해당 Sprite (Atlas 가 아니다) 를 클릭하면 Sprite Editor 에 그 Sprite 가 뜬다.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tightpacking5.png)
-    - 기본값이 SpriteEditor 로 되어 있는 콤보박스를 클릭해서 Custom Outline 으로 바꿔준다.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tightpacking6.png)
-    - 그리고 Generate 버튼을 눌러주면 실제 출력될 공간을 기준으로 폴리곤을 생성해 준다.
-    - 이제 Apply 를 눌러서 저장해 준다.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tightpacking7.png)
-    - 그리고 해당 UI 가 출력되는 컨트롤에 가서 Use Sprite Mesh 를 체크해 주면 끝.
-    - 전체 사각형으로 가져올 떄 침범했던 공간을 이렇게 폴리곤 단위로 잘라서 알파 부분을 피해 그려주기 때문에 더이상 영역 침범 문제가 발생하지 않는다.
-    - 단, UI 의 Use Sprite Mesh 체크박스는 Image Type 이 Simple 일 때에만 나오므로 Splite 나 Fill 등의 모드에서는 사용할 수 없다는 점을 유의할 것.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tightpacking-error.png)
+    - 이러한 현상을 막으려면 해당 UI 가 출력되는 컨트롤에 가서 Use Sprite Mesh 항목을 체크하면 된다.
+    - 단, Use Sprite Mesh 기능은 Image Type 이 Simple 일 때에만 가능하다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tightpacking-fix.png)
+
+    - 자동으로 생성된 Sprite Mesh를 편집하려면 ***Window ‣ 2D ‣ Sprite Editor*** 창에서 Custom Outline을 수정하면 된다.
+        > *https://docs.unity3d.com/kr/2021.1/Manual/SpriteOutlineEditor.html*
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/2DCustomOutline_7.png)
 
 
 　

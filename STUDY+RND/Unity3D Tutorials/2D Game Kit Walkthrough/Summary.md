@@ -1,1 +1,1 @@
-https://learn.unity.com/tutorial/video-2d-game-kit-walkthrough#61260858edbc2a54df077069
+https://learn.unity.com/tutorial/dongyeongsang-2d-geim-kiteu-seolmyeong?uv=2020.3

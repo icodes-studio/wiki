@@ -128,7 +128,7 @@
     - 이러한 현상을 막으려면 해당 UI 가 출력되는 컨트롤에 가서 Use Sprite Mesh 항목을 체크하면 된다.
     - 단, Use Sprite Mesh 기능은 Image Type 이 Simple 일 때에만 가능하다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tightpacking-fix.png)
-    - 자동으로 생성된 Sprite Mesh를 편집하려면 ***Window ‣ 2D ‣ Sprite Editor*** 창에서 Custom Outline을 수정하면 된다.
+    - Sprite Mesh를 좀 더 커스텀하게 편집하려면 ***Window ‣ 2D ‣ Sprite Editor*** 창에서 Custom Outline을 수정하면 된다.
         > *https://docs.unity3d.com/kr/2021.1/Manual/SpriteOutlineEditor.html*
         >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/2DCustomOutline_7.png)

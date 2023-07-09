@@ -105,7 +105,7 @@
         > - 예를 들어, 아틀라스 크기를 조절하여 저사양 단말기에서 메모리를 적게 사용할 수 있다.
     - **Including in Build**
         > - 켠 경우 빌드 시에 스프라이트 아틀라스가 포함되며, 실행될 때 자동으로 메모리에 로드된다.
-        > - 끈 경우 빌드시에 스프라이트 아틀라스가 **Resources** 폴더에 있다면 포함되지만, 에셋번들인 경우 포함되지 않는다.
+        > - 끈 경우 빌드시에 스프라이트 아틀라스가 ***Resources*** 폴더에 있다면 포함되지만, 에셋번들인 경우 포함되지 않는다.
     - **Allow Rotation**
         > - 패킹할 때, 공간 최적화를 위해 필요하다면, 스프라이트가 회전할 수 있도록 허용한다.
     - **Tight Packing**
@@ -203,9 +203,9 @@ Have you ever looked at the UI in your Unity project and thought to yourself, �
 If you want a solution to bland-looking text, look no further than TextMesh Pro. In this tutorial, you’ll create a spooky text-based adventure game where the text style and format change based on what’s happening in the story. As you go on this adventure, you’ll learn about:
 
 - TextMesh Pro’s basic use and styling options.
-- Using **Rich Text** tags.
-- How to create **Font Assets**.
-- How to customize **Material Presets**.
+- Using ***Rich Text*** tags.
+- How to create ***Font Assets***.
+- How to customize ***Material Presets***.
 
 By the time you’re done, you’ll see how TextMesh Pro gives your project the best-looking text, no matter what style you’re aiming for.
 
@@ -221,15 +221,15 @@ By the time you’re done, you’ll see how TextMesh Pro gives your project the 
 
 ## Getting Started
 
-Download the starter project by clicking the [***Download Materials***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/Using-TextMesh-Pro-Project-Files-2.zip) button at the top or bottom of the tutorial. Open the project in **Unity 2020.3** or later.
+Download the starter project by clicking the [***Download Materials***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/Using-TextMesh-Pro-Project-Files-2.zip) button at the top or bottom of the tutorial. Open the project in ***Unity 2020.3*** or later.
 
 Browse **Assets/RW** to find the assets used in this project. The subfolders contain the following:
 
-- **Fonts:** Standard font files, TextMesh Pro Font Assets and Font Presets.
-- **Scenes:** Starter scene for the text-based adventure game.
-- **Scripts:** Helper script to advance the screens in the text-based adventure game.
-- **Sprites:** Images and an icon used in the text-based adventure game.
-- **Textures:** A cardboard texture you’ll apply to a font in the tutorial.
+- ***Fonts:*** Standard font files, TextMesh Pro Font Assets and Font Presets.
+- ***Scenes:*** Starter scene for the text-based adventure game.
+- ***Scripts:*** Helper script to advance the screens in the text-based adventure game.
+- ***Sprites:*** Images and an icon used in the text-based adventure game.
+- ***Textures:*** A cardboard texture you’ll apply to a font in the tutorial.
 
 Now that you’ve had a look at the project, it’s time to get started with TextMesh Pro.
 

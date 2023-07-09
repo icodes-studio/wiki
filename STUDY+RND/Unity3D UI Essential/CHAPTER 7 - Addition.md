@@ -196,6 +196,7 @@
     ● Aug 4 2021, C# 7.3, Unity 2020.3, Unity
 *https://www.kodeco.com/22175776-introduction-to-textmesh-pro-in-unity*
 
+
 　
 
 ## In this tutorial...
@@ -221,11 +222,41 @@
     - ***Sprites:*** Images and an icon used in the text-based adventure game.
     - ***Textures:*** A cardboard texture you’ll apply to a font in the tutorial.
 
-Now that you’ve had a look at the project, it’s time to get started with TextMesh Pro.
-
-
 
 　
+
+## Installing TextMesh Pro
+
+- If you don’t see the TextMesh Pro tools and components, try enabling the package in the Package Manager.
+- To do this, navigate to ***Window ▸ Package Manager*** and follow these steps:
+    - On the ***Packages*** drop-down, select ***Unity Registry***.
+    - Scroll down to ***TextMeshPro*** and select it.
+    - With the package selected, click ***Install*** to install the package to your project.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/InstallTMP-650x422.png)
+
+- Import the ***TextMesh Pro Essential Resources*** into your project by selecting ***Window ▸ TextMeshPro ▸ Import TMP Essential Resources***.
+- Finally, import all the files in the Unity Package into your project.
+- You’ll now see a subfolder called TextMesh Pro under Assets.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 　
 

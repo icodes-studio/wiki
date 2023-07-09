@@ -184,9 +184,9 @@
 
 ## # TextMesh Pro
     ● Introduction to TextMesh Pro in Unity
-    ● Learn about TextMesh Pro in Unity by creating a spooky text-based adventure game where the style of the text changes based on what happens in the story. By Johnny Thompson.
+    ● Learn about TextMesh Pro in Unity by creating a spooky text-based adventure game.
     ● Aug 4 2021, C# 7.3, Unity 2020.3, Unity
-- *https://www.kodeco.com/22175776-introduction-to-textmesh-pro-in-unity*
+*https://www.kodeco.com/22175776-introduction-to-textmesh-pro-in-unity*
 
 　
 

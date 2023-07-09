@@ -98,7 +98,7 @@
     - **Padding**
         > - 스프라이트 사이에 띄어진 공간 픽셀 수를 정의한다.
         > - Padding이 없으면 렌더링 시 이미지간 침범이 발생할 수 있다.
-    - **Objects For Packing**
+    - **Objects for Packing**
         > - 아틀라스로 묶을 스프라이트를 넣는 곳.
 
 

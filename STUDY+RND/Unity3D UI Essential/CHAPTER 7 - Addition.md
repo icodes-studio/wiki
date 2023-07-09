@@ -242,13 +242,18 @@
 
 ## What Is TextMesh Pro?
 
-- In the early days of the Unity game engine, one method of adding text to your game was to use ***TextMesh***.
-- TextMesh, which came prepackaged with Unity, used bitmap fonts to display text on the screen.
-- TextMesh offered some basic styling and configuration options, but you were very limited regarding what you could create with it.
-- Because the text was rendered using bitmaps, it began to appear fuzzy when enlarged.
-- Also, the game’s frame rate dropped when you had many TextMesh objects on the screen at once.
-    ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/BitmapVsSDF-650x366.jpg)
+- AS-IS: ***TextMesh***
+    - Used bitmap fonts to display text on the screen.
+    - Basic styling and configuration options.
+    - Very limited regarding what you could create with it.
+    - It began to appear fuzzy when enlarged.
+    - The game’s frame rate dropped when you had many TextMesh objects on the screen at once.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/BitmapVsSDF-650x366.jpg)
 
+- There are many reasons to use TextMesh Pro. The top three are:
+    - ***It looks great:*** The text looks good at any size.
+    - ***It’s infinitely configurable:*** You can make your text look exactly how you want it to.
+    - ***It’s easy to use:*** TextMesh Pro is built right into the Unity game engine. The styling options are intuitive, so you can learn them quickly.
 
 
 

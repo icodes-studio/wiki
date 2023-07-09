@@ -45,7 +45,7 @@
 ## Getting Started
 
 - ***메뉴 ‣ Edit ‣ Project Settings*** 창을 열고 ***Edit ‣ Sprite Packer*** 항목을 확인
-- **Project Settings - Sprite Packer**
+- ***Project Settings - Sprite Packer***
     - ***Unity 2019.2.10*** 버전을 기준으로 아래의 화면이 보인다.
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-settings.png)
     - ***Unity 2022.3.4*** 버전을 기준으로 아래의 화면이 보인다.

@@ -120,15 +120,15 @@
     - 즉, 필요에 따라 스프라이트를 회전하거나 알파 영역 공간을 침범해서 촘촘하게 스프라이트를 배치한다.
     - 해당 옵션을 끈 상태로 패킹을 하면 자신의 스프라이트 사이즈 만큼의 공간을 확보한 상태로 아틀라스가 만들어진다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tightpacking2.png)
-    - 만약 이들 옵션을 사용하여 팩킹을 하게 되면
+    - 만약 이들 옵션을 사용하여 패킹을 하게 되면
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tightpacking3.png)
     - 스프라이트가 회전되거나 스프라이트의 사각 영역 내에 다른 텍스쳐들이 겹쳐 배치 된 것을 알 수 있다.
-    - 문제는 회전되거나 겹친 스프라이트를 실제 사용해보면 그대로 뒤집히고 겹친 텍스쳐들까지 함께 출력시켜 버린다.
+    - 문제는 회전되거나 겹친 스프라이트를 사용 해보면, 그대로 뒤집히고 겹친 텍스쳐들까지 함께 출력시켜 버린다는 것이다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tightpacking-error.png)
     - 이러한 현상을 막으려면 해당 UI 가 출력되는 컨트롤에 가서 ***Use Sprite Mesh*** 항목을 체크하면 된다.
     - 단, Use Sprite Mesh 기능은 Image Type 이 ***Simple*** 일 때에만 가능하다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tightpacking-fix.png)
-    - Sprite Mesh를 좀 더 커스텀하게 편집하려면 ***Window ‣ 2D ‣ Sprite Editor*** 창에서 Custom Outline을 수정하면 된다.
+    - Sprite Mesh를 좀 더 커스텀하게 편집하려면 ***Window ‣ 2D ‣ Sprite Editor*** 창에서 ***Custom Outline을*** 수정하면 된다.
         > *https://docs.unity3d.com/kr/2021.1/Manual/SpriteOutlineEditor.html*
         >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/2DCustomOutline_7.png)
@@ -137,11 +137,10 @@
 　
 
 - **Sprite Atlas - Scripting**
-    - Resource 폴더에 SpriteAtlas 준비
+    - Resources 폴더에 SpriteAtlas 준비
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-script2.png)
     - 오브젝트 생성
-        > - 이미지랑 Sprite를 관리할 SpriteManager 빈 오브젝트와 스크립트를 생성한다.
-        > - 물론 SpriteManager 오브젝트 없이 스크립트를 Image에 넣어서 사용해도 된다.
+        > - SpriteManager 빈 오브젝트와 스크립트를 생성한다.
         >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-script.png)
     - 코드 작성

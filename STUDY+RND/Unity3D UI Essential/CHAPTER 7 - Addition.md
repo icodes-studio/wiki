@@ -29,6 +29,8 @@
 
 　
 
+### Getting Started
+
 - **Sprite Atlas - Overview**
     - 렌더링 할 때 텍스쳐 별로 한 번의 ***드로우 콜(DrawCall)*** 작업이 발생한다.
     - 많은 드로우 콜은 렌더링 성능에 안좋은 영향을 미치는 비싼 작업.
@@ -79,7 +81,19 @@
 
 　
 
- - **Sprite Atlas - Properties**
+- **Packing**
+    - Objects for Packing 칸에 있는 + 버튼을 클릭해서 원하는 스프라이트 또는 폴더를 선택한다.
+    - Asset 폴더 내의 모든 스프라이트와 해당 스프라이트 들이 들어있는 폴더들의 목록이 뜬다.
+    - 여기에서 폴더 또는 스프라이트 들을 선택해 추가.
+    - 또는 프로젝트 뷰에서 폴더 또는 스프라이트들을 드래그 해서 Objects for Packing 영역으로 드래그.
+    > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-packing.gif)
+
+
+　
+
+ ### Optimization
+
+ - **Properties**
     - 생성된 스프라이트 아틀라스의 인스펙터 창 속성
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-property.png)
     - **Type**
@@ -104,18 +118,7 @@
 
 　
 
-- **Sprite Atlas - Packing**
-    - Objects for Packing 칸에 있는 + 버튼을 클릭해서 원하는 스프라이트 또는 폴더를 선택한다.
-    - Asset 폴더 내의 모든 스프라이트와 해당 스프라이트 들이 들어있는 폴더들의 목록이 뜬다.
-    - 여기에서 폴더 또는 스프라이트 들을 선택해 추가.
-    - 또는 프로젝트 뷰에서 폴더 또는 스프라이트들을 드래그 해서 Objects for Packing 영역으로 드래그.
-    > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-packing.gif)
-
-
-
-　
-
-- **Sprite Atlas - Tight Packing**
+- **Tight Packing**
     - ***Tight Packing*** 옵션과 ***Allow Rotation*** 옵션은 공간의 낭비없이 스프라이트들을 배치하는 기능이다.
     - 즉, 필요에 따라 스프라이트를 회전하거나 알파 영역 공간을 침범해서 촘촘하게 스프라이트를 배치한다.
     - 해당 옵션을 끈 상태로 패킹을 하면 자신의 스프라이트 사이즈 만큼의 공간을 확보한 상태로 아틀라스가 만들어진다.
@@ -137,7 +140,9 @@
 
 　
 
-- **Sprite Atlas - Scripting**
+### Scripting
+
+- **동적으로 스프라이트 로드하기**
     - Resources 폴더에 SpriteAtlas 준비
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-script2.png)
     - SpriteManager 빈 오브젝트와 SpriteManager.cs 스크립트를 생성하여 서로 바인딩

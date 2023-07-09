@@ -198,7 +198,8 @@
 
 　
 
-- In this tutorial, you’ll create a spooky text-based adventure game where the text style and format change based on what’s happening in the story.
+## In this tutorial...
+- You’ll create a spooky text-based adventure game where the text style and format change based on what’s happening in the story.
 - As you go on this adventure, you’ll learn about:
     - TextMesh Pro’s basic use and styling options.
     - Using ***Rich Text*** tags.

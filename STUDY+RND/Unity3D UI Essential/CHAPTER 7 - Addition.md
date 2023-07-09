@@ -1,19 +1,9 @@
 # CHAPTER 7 - Addition
     ● Sprite Atlas
-    ● Sprite Atlas vs Sprite Sheet
     ● TextMesh Pro
 
-- ***References***
-    - ***https://docs.unity3d.com/2023.2/Documentation/Manual/class-SpriteAtlas.html***
-    - ***https://skuld2000.tistory.com/28***
-    - ***https://youtu.be/PEMsZDb3yPs***
-    - ***https://everyday-devup.tistory.com/62***
-    - ***https://young-94.tistory.com/85***
-    - [***https://maintaining.tistory.com/***](https://maintaining.tistory.com/entry/Unity-%EC%8A%A4%ED%94%84%EB%9D%BC%EC%9D%B4%ED%8A%B8-%EC%95%84%ED%8B%80%EB%9D%BC%EC%8A%A4Sprite-Atlas-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95)
-    - ***https://docs.unity3d.com/2023.1/Documentation/Manual/com.unity.textmeshpro.html***
-    - ***https://www.kodeco.com/22175776-introduction-to-textmesh-pro-in-unity***
-    - ***https://m.blog.naver.com/cdw0424/221641217203***
 
+　
 
 　
 
@@ -23,6 +13,17 @@
     ● Sprite Atlas 속성 살펴보기
     ● Tight Packing 자세히 살펴보기
     ● 스크립트로 스프라이트 아틀라스 제어 및 사용하기
+
+
+　
+
+- ***References***    
+    - ***https://docs.unity3d.com/2023.2/Documentation/Manual/class-SpriteAtlas.html***
+    - ***https://skuld2000.tistory.com/28***
+    - ***https://youtu.be/PEMsZDb3yPs***
+    - ***https://everyday-devup.tistory.com/62***
+    - ***https://young-94.tistory.com/85***
+    - [***https://maintaining.tistory.com/***](https://maintaining.tistory.com/entry/Unity-%EC%8A%A4%ED%94%84%EB%9D%BC%EC%9D%B4%ED%8A%B8-%EC%95%84%ED%8B%80%EB%9D%BC%EC%8A%A4Sprite-Atlas-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95)
 
 
 　
@@ -182,7 +183,10 @@
 　
 
 ## TextMesh Pro
+    ● Introduction to TextMesh Pro in Unity
+    ● Learn about TextMesh Pro in Unity by creating a spooky text-based adventure game where the style of the text changes based on what happens in the story. By Johnny Thompson.
+    ● Aug 4 2021, C# 7.3, Unity 2020.3, Unity
+- *https://www.kodeco.com/22175776-introduction-to-textmesh-pro-in-unity*
 
-- **...**
-    - ...
+　
 

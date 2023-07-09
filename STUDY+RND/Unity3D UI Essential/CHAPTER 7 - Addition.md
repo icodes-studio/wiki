@@ -1,7 +1,7 @@
 # CHAPTER 7 - Addition
 
-- ***Sprite Atlas***
-- ***TextMesh Pro***
+- [***Sprite Atlas***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/CHAPTER%207%20-%20Addition.md#sprite-atlas)
+- [***TextMesh Pro***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/CHAPTER%207%20-%20Addition.md#textmesh-pro)
 
 
 　

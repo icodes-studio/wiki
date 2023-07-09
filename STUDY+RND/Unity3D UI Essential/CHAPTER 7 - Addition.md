@@ -87,6 +87,7 @@
     - Asset 폴더 내의 모든 스프라이트와 해당 스프라이트 들이 들어있는 폴더들의 목록이 뜬다.
     - 여기에서 폴더 또는 스프라이트 들을 선택해 추가.
     - 또는 프로젝트 뷰에서 폴더 또는 스프라이트들을 ***드래그*** 해서 Objects for Packing 영역으로 드래그.
+    - 인스펙터 창의 우측 상단의 ***자물쇠를*** 풀어줘야 동작한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-packing.gif)
 
 

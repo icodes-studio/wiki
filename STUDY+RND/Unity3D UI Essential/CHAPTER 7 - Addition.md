@@ -8,7 +8,7 @@
 
 　
 
-## Sprite Atlas
+## # Sprite Atlas
     ● Project Setting 살펴보기
     ● Sprite Atlas 생성하기
     ● Sprite Atlas 속성 살펴보기
@@ -183,7 +183,7 @@
 
 　
 
-## TextMesh Pro
+## # TextMesh Pro
     ● Introduction to TextMesh Pro in Unity
     ● Learn about TextMesh Pro in Unity by creating a spooky text-based adventure game where the style of the text changes based on what happens in the story. By Johnny Thompson.
     ● Aug 4 2021, C# 7.3, Unity 2020.3, Unity

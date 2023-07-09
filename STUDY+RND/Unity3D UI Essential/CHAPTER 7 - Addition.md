@@ -195,9 +195,9 @@ Have you ever looked at the UI in your Unity project and thought to yourself, �
 If you want a solution to bland-looking text, look no further than TextMesh Pro. In this tutorial, you’ll create a spooky text-based adventure game where the text style and format change based on what’s happening in the story. As you go on this adventure, you’ll learn about:
 
 - TextMesh Pro’s basic use and styling options.
-- Using Rich Text tags.
-- How to create Font Assets.
-- How to customize Material Presets.
+- Using **Rich Text** tags.
+- How to create **Font Assets**.
+- How to customize **Material Presets**.
 
 By the time you’re done, you’ll see how TextMesh Pro gives your project the best-looking text, no matter what style you’re aiming for.
 
@@ -225,3 +225,12 @@ Browse **Assets/RW** to find the assets used in this project. The subfolders con
 
 Now that you’ve had a look at the project, it’s time to get started with TextMesh Pro.
 
+
+
+　
+
+　
+
+## # 유니티(Unity) - Textmesh Pro(텍스트 메쉬 프로) 한글 사용법 
+
+- https://m.blog.naver.com/cdw0424/221641217203

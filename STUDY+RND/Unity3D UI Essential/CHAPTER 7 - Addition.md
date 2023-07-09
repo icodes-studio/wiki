@@ -31,6 +31,8 @@
 
 ### Getting Started
 
+---
+
 - **Sprite Atlas - Overview**
     - 렌더링 할 때 텍스쳐 별로 한 번의 ***드로우 콜(DrawCall)*** 작업이 발생한다.
     - 많은 드로우 콜은 렌더링 성능에 안좋은 영향을 미치는 비싼 작업.
@@ -93,6 +95,8 @@
 
  ### Optimization
 
+---
+
  - **Properties**
     - 생성된 스프라이트 아틀라스의 인스펙터 창 속성
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/spriteatlas-property.png)
@@ -141,6 +145,8 @@
 　
 
 ### Scripting
+
+---
 
 - **동적으로 스프라이트 로드하기**
     - Resources 폴더에 SpriteAtlas 준비
@@ -217,6 +223,8 @@ By the time you’re done, you’ll see how TextMesh Pro gives your project the 
 　
 
 ### Getting Started
+
+---
 
 Download the starter project by clicking the [***Download Materials***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/Using-TextMesh-Pro-Project-Files-2.zip) button at the top or bottom of the tutorial. Open the project in **Unity 2020.3** or later.
 

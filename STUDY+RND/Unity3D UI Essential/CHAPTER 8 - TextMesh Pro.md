@@ -292,10 +292,33 @@
 - Once you’ve set these properties, click ***Generate Font Atlas***
     - You’ll see a preview of the Font Atlas.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/FontAtlasFull-650x468.png)
+- ***SP/PD Ratio***
+    - The generator calculates this by dividing the Sampling Point Size by the Padding Value.
+    - For best results, this value should be under 10%.
+    - If it’s above 10%, either increase the Atlas Resolution or decrease the Padding value, then regenerate the font until the value is below 10%.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/FontOutput-423x320.png)
+- ***It's time to use***
+    - Click ***Save as…*** and save the Font Asset to ***Assets/RW/Fonts/Font Assets***.
+    - Activate screen ***21-UpHere***, 
+    - Select ***Text (TMP)*** and set ***Font Asset*** to ***DelaGothicOne-Regular SDF***.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/ChangeFont.gif)
 
 
+　
 
+## Customizing TextMesh Pro Font Assets
 
+By now, you can see how much power you have to create beautiful fonts by creating Font Assets and using Rich Text tags in TextMesh Pro. However, using TextMesh Pro Material lets you customize your text even more.
+
+Customizing the TextMesh Pro Material gives you granular control over the text face, outline, shadow, bevel, texture and lighting properties. With these effects, you can make your text look more professional — or even go in-depth to turn your text into a piece of art.
+
+Set screen 22-Crawl as the active screen in the sample project.
+
+On this screen are two separate text objects that will demonstrate an important characteristic of TextMesh Pro Materials. Select Text (TMP) Top and Text (TMP) Bottom and set Font Asset to DelaGothicOne-Regular SDF.
+
+Now, select only Text (TMP) Top and scroll down to its Material settings.
+
+Go to the Outline section and use the slider to increase the Thickness. You’ll see that a black outline begins to form around the text. But something else interesting is happening.
 
 
 

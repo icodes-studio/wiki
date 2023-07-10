@@ -244,9 +244,54 @@
 
 ## Using Additional Rich Text Tags
 
-The next few dialog screens use some handy Rich Text tags.
+- ***The align tag***
+    - On screen ***14-Knock***, 
+    - use the align tag to align each line left, center, and right. 
+    - Each new tag overrides the previous one, so you don’t need any closing tags.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/AlignTag-597x500.png)
+- ***Strike & Underline***
+    - On screen ***15-WhosThere***,
+    - Use the `<s>` tag to strike through and `<u>` tag to underline the text.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/StrikethroughUnderline-604x500.png)
+- ***Uppercase & Smallcaps***
+    - On screen ***17-Investigate***,
+    - Use the `<uppercase>` tag to make all the letters uppercase. 
+    - Use the `<smallcaps>` tag to make everything uppercase, but the letters that were previously in lowercase will be a bit smaller.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/Caps-603x500.png)
+- ***Offset***
+    - On screen ***19-Climb***, 
+    - Use the `<voffset>` tag to set a vertical offset. 
+    - The numerical value you set is in font units and the closing tag ends all vertical offset.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/VerticalOffset-610x500.png)
+- ***See Also***
+    - These are just a few of the Rich Text tags you can use with TextMesh Pro.
+    - Be sure to check out the [***TextMesh Pro documentation***](http://digitalnativestudios.com/textmeshpro/docs/rich-text/) for the full list of over 30 available Rich Text tags.
 
-On screen 14-Knock, use the align tag to align each line left, center, and right. Each new tag overrides the previous one, so you don’t need any closing tags.
+
+　
+
+## Creating Font Assets
+
+- Create a new Font Asset at ***Window ▸ TextMeshPro ▸ Font Asset Creator***. 
+- Set the ***Source Font File*** to ***DelaGothicOne-Regular***.
+- To get the best results from your Font Asset, pay attention to these properties:
+    - ***Padding:***
+        > - The spacing between each character in the Font Atlas Texture.
+        > - A value of 5 will give you great results for most text in your project.
+        > - Here, though, you need large and detailed title text, so set ***Padding*** to ***7***.
+    - ***Atlas Resolution:***
+        > - The pixel size of the Font Atlas Texture that you’re generating.
+        > - For most English character sets, a size of 512×512 is plenty, but you can increase it for higher resolution results.
+        > - Set the ***Atlas Resolution*** to ***1024×1024*** for this font.
+    - ***Character Set:***
+        > - Set to ***ASCII***, unless you’re using another character set.
+    - ***Redner Mode:***
+        > - For most applications, the default of ***SDFAA*** (Signed Distance Field Anti-Aliasing) will give you the best results.
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/FontSettings.png)
+- Once you’ve set these properties, click ***Generate Font Atlas***
+    - You’ll see a preview of the Font Atlas.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/FontAtlasFull-650x468.png)
 
 
 

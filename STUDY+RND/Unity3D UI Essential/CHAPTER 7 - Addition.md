@@ -200,6 +200,7 @@
 　
 
 ## In this tutorial...
+
 - You’ll create a spooky text-based adventure game where the text style and format change based on what’s happening in the story.
 - As you go on this adventure, you’ll learn about:
     - TextMesh Pro’s basic use and styling options.
@@ -281,6 +282,29 @@
     - There are no differences between the two types of components — they share the same configuration options.
 - In this tutorial, you’ll learn how to create and work with the ***TextMeshProUGUI*** component.
 - You can find information about using the TextMeshPro component in Unity’s [***TextMesh Pro User Guide***](https://docs.unity3d.com/Packages/com.unity.textmeshpro@3.0/manual/index.html).
+
+
+　
+
+## Setting up the Starter Project
+
+- Open the starter scene at ***Assets/RW/Scenes/IntoTheAttic-Starter***.
+- Change the aspect ratio of the ***Game View*** to ***9:16***. 
+    - Enter a width of 9 and height of 16
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/PortraitAspectRatio.gif)
+
+- The sample project, ***Into the Attic***...
+    - Text-based adventure game.
+    - Each screen of dialog has a ***TextMeshProUGUI*** component to display the text and a button to advance to the next screen.
+    - These screens are child objects of the ***Screens**** GameObject in the scene.
+    - The screens’ names have incrementing numbers indicating the order they appear in the story.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/ChangeScreens2.gif)
+
+
+
+
+
+
 
 
 

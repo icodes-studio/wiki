@@ -306,12 +306,19 @@
 
 - Switch from the Game view to the Scene view so you can see the Text and RectTransform areas on your screen.
 - Set ***2-Intro*** as the active screen.
-- To add a new TextMeshProUGUI object, right-click ***2-Intro*** and select ***UI ▸ Text – TextMeshPro***.
-- This gives ***2-Intro*** a child object called ***Text (TMP)***.
-
-![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/AddTMPUGUI.gif)
-
-
+- To add a new ***TextMeshProUGUI*** object
+    - Right-click ***2-Intro*** and select ***UI ▸ Text – TextMeshPro***.
+    - This gives ***2-Intro*** a child object called ***Text (TMP)***.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/AddTMPUGUI.gif)
+- Select ***Text (TMP)*** and make the text area larger
+    - Changing the ***Anchor Presets*** on the ***Rect Transform*** component to stretch ***horizontally*** and ***vertically***.
+    - Set ***left, right*** and ***top*** to ***50***, then ***bottom*** to ***350***.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/TMPTransform.gif)
+- To add text to the TextMeshProUGUI component, 
+    - You need to type in the ***Text Input*** field. 
+    - Add some introduction text to set the scene for the game: “One rainy night in the middle of January…”
+    - The text now displays in the text area in the scene.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/PlainText.png)
 
 
 

@@ -331,12 +331,17 @@
 - Select Create Material Preset to create a new Material Preset in the directory of the current Font Asset.
 - Set the Outline Thickness to 0.25 for a subtle outline that makes the text stand out from the background.
     ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/CreatePreset.gif)
-
 - The final important step to take is to name the new Material Preset properly. Not only do descriptive names help you identify Material Presets, but incorrectly named Material Presets won’t appear in the list of available Material Presets for that font.
-When you create a Material Preset, it has the same name as the Font Asset it applies to. You must keep the full Font Asset name as the prefix for the Material Preset name. You can append any details to the name after that prefix.
-Name this Material Preset DelaGothicOne-Regular SDF — Black Outline because it’s a simple black outline for the Dela Gothic One font.
-Now, select Text (TMP) Bottom and create a new Material Preset for it. Set the Face Color to brown and the Outline Color to light gray with a Thickness of 0.25 to make the text look like dusty boxes.
-Name the Material Preset DelaGothicOne-Regular SDF — Dusty Boxes.
+- When you create a Material Preset, it has the same name as the Font Asset it applies to. You must keep the full Font Asset name as the prefix for the Material Preset name. You can append any details to the name after that prefix.
+- Name this Material Preset DelaGothicOne-Regular SDF — Black Outline because it’s a simple black outline for the Dela Gothic One font.
+- Now, select Text (TMP) Bottom and create a new Material Preset for it. Set the Face Color to brown and the Outline Color to light gray with a Thickness of 0.25 to make the text look like dusty boxes.
+- Name the Material Preset DelaGothicOne-Regular SDF — Dusty Boxes.
+
+
+
+
+
+
 　
 
 　

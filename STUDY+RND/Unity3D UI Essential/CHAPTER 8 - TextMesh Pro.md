@@ -352,7 +352,7 @@
 
 - Set screen ***24-LargeBox*** as the active screen.
     - Select ***Text (TMP)*** and set ***Font Asset*** to ***DelaGothicOne-Regular SDF***.
-    - Then set ***Horizontal*** and ***Vertical Mapping*** to ***Paragraph***.
+    - Set ***Horizontal*** and ***Vertical Mapping*** to ***Paragraph***.
     - This stretches the texture across all the characters in each paragraph of text.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/CardboardFontSettings-332x500.png)
 
@@ -372,7 +372,7 @@
 
 - Start by setting ***26-Stopped*** as the active screen.
     - Select ***Text (TMP)*** and set ***Font Asset*** to ***DelaGothicOne-Regular SDF***.
-    - Then create a new Material Preset named ***Dela Gothic One-Regular SDF – Stopped***.
+    - Create a new Material Preset named ***Dela Gothic One-Regular SDF – Stopped***.
     - Set the ***Face*** color to ***red***.
     - In the ***Underlay*** section, set ***Offset X*** to ***1***, ***Offset Y*** to ***-1***, and ***Dilate*** to ***1***.
     - In the ***Lighting*** section, under ***Bevel***, set ***Amount*** to ***1*** and ***Width*** to ***0.5***.
@@ -382,13 +382,24 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/StoppedResult-650x464.png)
 
 
+　
 
+## Using Glow Presets
 
-
-
-
-
-
+- Start by setting ***28-Skull*** as the active screen.
+    - Now, on your own, recreate the glowing outline effect.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/GoldTextResult-398x500.png)
+    - Select ***Text (TMP)*** and set ***Font Asset*** to ***DelaGothicOne-Regular SDF***.
+    - Create a new Material Preset named ***Dela Gothic One-Regular SDF – Golden***.
+    - In the ***Face*** section, set the ***Color*** to a nice gold and ***Dilate*** to ***-0.75***.
+    - Check the ***Glow*** section and set the ***Color*** to a similar gold, the ***Offset*** to ***1***, and ***Outer*** to ***0.25***.
+    - Also note the ***Face Dilate*** setting can be turned down to shrink the text.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/GoldTextSolution-467x500.png)
+    - You can use the image below as a reference for the colors of the Face and the Glow.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/ColourSwatches-1-419x500.png)
+    - Now, finish the story by adding the Font Assets and Material Preset to the remaining screens.
+    - Then click Play and enjoy your very own text-based adventure game!
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/TheEnd-282x500.png)
 
 
 　

@@ -338,9 +338,39 @@
     - Set the ***Face Color*** to ***brown*** and the ***Outline Color*** to ***light gray*** with a ***Thickness*** of ***0.25*** to make the text look like dusty boxes.
     - Name the Material Preset ***DelaGothicOne-Regular SDF — Dusty Boxes***.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/DustyBoxes-594x500.png)
+    - You can toggle between them and the ***Default Material*** using the Material Preset drop-down on the ***TextMeshProUGUI*** component.
+        >![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/CyclePresets.gif)
 - ***Note:***
+    - *If the Material Preset’s name doesn’t have the Font Asset as a prefix, it won’t show up in this list.*
     - *You must keep the full Font Asset name as the prefix for the Material Preset name.*
     - *You can append any details to the name after that prefix.*
+
+
+　
+
+## Using Cardboard Presets
+
+- ***Setting up the TextMeshProUGUI component***
+    - Set screen ***24-LargeBox*** as the active screen.
+    - Select ***Text (TMP)*** and set ***Font Asset*** to ***DelaGothicOne-Regular SDF***.
+    - Then set ***Horizontal*** and ***Vertical Mapping*** to ***Paragraph***.
+    - This stretches the texture across all the characters in each paragraph of text.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/CardboardFontSettings-332x500.png)
+
+- Create a new Material Preset named ***Dela Gothic One-Regular SDF – Cardboard*** and set:
+    - ***Face Texture*** to ***Assets/RW/Textures/Cardboard***.
+    - ***Speed X*** to ***0.1***.
+    - ***Outline Color*** to ***Brown***.
+    - ***Outline Thickness*** to ***0.15***.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/CardboardMaterialPreset-405x500.png)
+- Now, enter Play Mode and preview the effect.
+    > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/Move2.gif)
+
+
+
+
+
+
 
 
 

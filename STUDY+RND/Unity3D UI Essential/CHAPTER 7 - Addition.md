@@ -292,7 +292,6 @@
 - Change the aspect ratio of the ***Game View*** to ***9:16***. 
     - Enter a width of 9 and height of 16
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/PortraitAspectRatio.gif)
-
 - The sample project, ***Into the Attic***...
     - Text-based adventure game.
     - Each screen of dialog has a ***TextMeshProUGUI*** component to display the text and a button to advance to the next screen.

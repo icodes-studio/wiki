@@ -242,31 +242,60 @@
 
 ## What Is TextMesh Pro?
 
-- AS-IS: ***TextMesh***
+- **AS-IS: TextMesh**
     - Used bitmap fonts to display text on the screen.
     - Basic styling and configuration options.
     - Very limited regarding what you could create with it.
     - It began to appear fuzzy when enlarged.
     - The game’s frame rate dropped when you had many TextMesh objects on the screen at once.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/BitmapVsSDF-650x366.jpg)
-- There are many reasons to use TextMesh Pro. The top three are:
+- **TO-BE: TextMesh Pro**
     - ***It looks great:*** The text looks good at any size.
     - ***It’s infinitely configurable:*** You can make your text look exactly how you want it to.
     - ***It’s easy to use:*** TextMesh Pro is built right into the Unity game engine. The styling options are intuitive, so you can learn them quickly.
 
 
+　
+
+## How Does TextMesh Pro Work?
+
+- **Font Asset**
+    - At the core of TextMesh Pro is the ***Font Asset***.
+    - You create a Font Asset from a standard font file.
+    - All TextMesh Pro objects using that font will reference that Font Asset.
+
+- **Texture Atlas**    
+    - Each Font Asset generates a ***Texture Atlas*** that contains all the characters in each font.
+    - ***Material Presets*** you create and text you draw to the screen both reference the single ***Texture Atlas***.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/FontAtlasFull-650x468.png)
+
+- **Signed Distance Field**
+    - TextMesh Pro uses a ***Signed Distance Field*** to render text on the screen.
+    - Text appears sharp regardless of its relative size and distance from the camera.
+    - Traditional bitmap textures appear blurry at close draw distances and large sizes.
+
+- One last thing to note before you get started with TextMesh Pro is...
+    - There are two types of TextMesh Pro components, TextMeshPro and TextMeshProUGUI.
+    - ***TextMeshPro*** works with the ***MeshRenderer***. 
+    - It’s best used with text that should exist in world space, like an in-game sign that could be added to a scene.
+    - ***TextMeshProUGUI*** works with the ***CanvasRenderer*** and the ***Canvas*** system, and is best for text that exists in screen space.
+    - It replaces the built-in Unity UI.Text component.
+    - There are no differences between the two types of components — they share the same configuration options.
+
+- **TextMeshProUGUI**
+    - In this tutorial, you’ll learn how to create and work with the ***TextMeshProUGUI*** component.
+    - You can find information about using the TextMeshPro component in Unity’s [***TextMesh Pro User Guide***](https://docs.unity3d.com/Packages/com.unity.textmeshpro@3.0/manual/index.html).
 
 
 
 
 
 
+　
 
+　
 
-
-
-
-
+　
 
 　
 

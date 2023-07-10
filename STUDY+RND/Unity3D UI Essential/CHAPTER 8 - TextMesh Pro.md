@@ -159,17 +159,28 @@
 
 ## Adding Rich Text in TextMesh Pro
 
-So far, the styling options you’ve worked with all apply to the entire text block. However, there are many cases where you only need to apply styling to a portion of the text. Maybe you need one sentence, word, or even character to look different than the rest. To do this, you can use Rich Text tags.
+- **Italic**
+    - Test this out on screen ***6-Crash***.
+    - Place an italic opening tag `\<i\>` before the word ***sharp*** and a closing tag `\</i\>` after the word ***crash***.
+    - The words ***sharp crash*** are now italicized, putting emphasis on those words.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/ItalicTag-618x500.png)
+- **Color** 
+    - On screen ***7-Broken***, 
+    - Make the words ***need to see*** red by adding the `\<color=red\>`` and `\</color\>`` tags around those words.
+    - Rich Text tags is that they support nesting.
+    - Try this out by putting the bold <b> </b> tags around the word ***need***. 
+    - Once complete, your text should look like this:
+        ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/BoldColor-624x500.png)
+- ***Note:*** *You can also specify the color by hex code. For example, red would use \<color=#ff0000\> or \<color=#ff0000ff\> to specify the alpha value.*
 
-Rich Text tags work like HTML tags. Angle brackets — <> — indicate an opening tag. Angle brackets with a forward slash </> indicate a closing tag. The tag affects all text between the opening and closing brackets.
 
-A common use of Rich Text tags is to italicize a portion of text. Test this out on screen 6-Crash.
+　
 
-In the Text Input field, place an italic opening tag <i> before the word sharp and a closing tag </i> after the word crash. The words sharp crash are now italicized, putting emphasis on those words.
+## Indenting Lines
 
+Activate screen 8-DownTheHall.
 
-
-
+Put the <line-indent=15%> tag at the beginning of the text. This will indent each line by 15% of the width of the text area. In this case, you don’t need a closing tag because you want to indent both lines.
 
 
 　

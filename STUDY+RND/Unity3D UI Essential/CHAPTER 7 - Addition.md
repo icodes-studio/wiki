@@ -263,17 +263,14 @@
     - At the core of TextMesh Pro is the ***Font Asset***.
     - You create a Font Asset from a standard font file.
     - All TextMesh Pro objects using that font will reference that Font Asset.
-
 - **Texture Atlas**    
     - Each Font Asset generates a ***Texture Atlas*** that contains all the characters in each font.
     - ***Material Presets*** you create and text you draw to the screen both reference the single ***Texture Atlas***.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/FontAtlasFull-650x468.png)
-
 - **Signed Distance Field**
     - TextMesh Pro uses a ***Signed Distance Field*** to render text on the screen.
     - Text appears sharp regardless of its relative size and distance from the camera.
     - Traditional bitmap textures appear blurry at close draw distances and large sizes.
-
 - **TextMeshProUGUI**
     - There are two types of TextMesh Pro components, TextMeshPro and TextMeshProUGUI.
     - ***TextMeshPro*** works with the ***MeshRenderer***. 

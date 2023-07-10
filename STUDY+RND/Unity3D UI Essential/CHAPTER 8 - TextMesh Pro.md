@@ -310,34 +310,27 @@
 
 - ***Using TextMesh Pro Material***
     - Set screen ***22-Crawl*** as the active screen in the sample project.
-    - On this screen are two separate text objects that will demonstrate an important characteristic of TextMesh Pro Materials.
     - Select ***Text (TMP) Top*** and ***Text (TMP) Bottom*** and set Font Asset to ***DelaGothicOne-Regular SDF***.
     - Now, select only ***Text (TMP) Top*** and scroll down to its ***Material*** settings.
     - Go to the ***Outline*** section and use the slider to increase the Thickness.
-    - You’ll see that a black outline begins to form around the text. But something else interesting is happening.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/DefaultOutline.gif)
-
-    - Did you notice it?
-    - Although you only modified the Material Properties for Text (TMP) Top, the effect also applies to Text (TMP) Bottom.
-    - That’s because both objects reference the Default Material.
-    - When you change the Default Material, the changes occur on all other objects that reference it.
-    - Go all the way back to screen 21-UpHere and you’ll see that the same outline applies to the text.
-    - Because of that, it’s not a good idea to modify the Default Material.
-    - Instead, you’ll create separate Material Presets for each of the text effects you want.
-    - Now, reset the Default Material to its original settings.
-    - You’ll learn how to create Material Presets in the next section.
+- ***But something else interesting is happening.***
+    - Although you only modified the Material Properties for ***Text (TMP) Top***, the effect also applies to ***Text (TMP) Bottom***.
+    - That’s because both objects reference the ***Default Material***.
+    - It’s not a good idea to modify the Default Material.
+    - Instead, you’ll create separate ***Material Presets*** for each of the text effects you want.
 
 
 　
 
 ## Creating Material Presets
 
-    - Material Presets store settings for a TextMesh Pro Material. 
-    - They’re associated with one font, and you can easily swap between any Material Presets you create for that font.
-    - To create a Material Preset, select the TextMesh Pro object you want to apply the Material Preset to. In this case, select Text (TMP) Top.
-    - Click the three vertical dots icon on the Material, then select Create Material Preset to create a new Material Preset in the directory of the current Font Asset.
-    - It automatically applies to the selected TextMesh Pro object.
-    - Set the Outline Thickness to 0.25 for a subtle outline that makes the text stand out from the background.
+- Material Presets store settings for a TextMesh Pro Material. 
+- They’re associated with one font, and you can easily swap between any Material Presets you create for that font.
+- To create a Material Preset, select the TextMesh Pro object you want to apply the Material Preset to. In this case, select Text (TMP) Top.
+- Click the three vertical dots icon on the Material, then select Create Material Preset to create a new Material Preset in the directory of the current Font Asset.
+- It automatically applies to the selected TextMesh Pro object.
+- Set the Outline Thickness to 0.25 for a subtle outline that makes the text stand out from the background.
 
     ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/CreatePreset.gif)
 

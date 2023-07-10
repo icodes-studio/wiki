@@ -325,7 +325,7 @@
 
 ## Creating Material Presets
 
-- Material Presets store settings for a TextMesh Pro Material. 
+- Material Presets store settings for a TextMesh Pro Material.
 - They’re associated with one font, and you can easily swap between any Material Presets you create for that font.
 - To create a Material Preset, select the TextMesh Pro object you want to apply the Material Preset to. In this case, select Text (TMP) Top.
 - Click the three vertical dots icon on the Material, then select Create Material Preset to create a new Material Preset in the directory of the current Font Asset.

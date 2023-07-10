@@ -138,12 +138,39 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/FormattedText-588x500_v2.png)
 
 
+　
 
+## Setting Font Color and Gradient
 
-
+- Moving on, disable ***2-Intro***, then enable ***3-Bang***.
+- Select the child ***Text (TMP)*** and make the text stand out by:
+    - Changing the ***Font Style*** to ***bold*** and ***uppercase***.
+    - Increasing ***Font Size*** to ***300***.
+    - Changing ***Vertex Color*** to ***yellow*** by clicking the field and choosing yellow in the color selector window.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/Bang_v2-591x500.png)
+- Next, set ***5-Wind*** as the active screen.
+    - Select ***Text (TMP)*** and make the text feel cold by adding a color gradient. 
+    - Check ***Color Gradient***, then change ***Color Mode*** to ***Four Corners Gradient***.
+    - Set the top two corners to ***white***, the bottom left to ***cyan***, and the bottom right to ***blue***.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/Gradient-650x486.png)
 
 
 　
+
+## Adding Rich Text in TextMesh Pro
+
+So far, the styling options you’ve worked with all apply to the entire text block. However, there are many cases where you only need to apply styling to a portion of the text. Maybe you need one sentence, word, or even character to look different than the rest. To do this, you can use Rich Text tags.
+
+Rich Text tags work like HTML tags. Angle brackets — <> — indicate an opening tag. Angle brackets with a forward slash </> indicate a closing tag. The tag affects all text between the opening and closing brackets.
+
+A common use of Rich Text tags is to italicize a portion of text. Test this out on screen 6-Crash.
+
+In the Text Input field, place an italic opening tag <i> before the word sharp and a closing tag </i> after the word crash. The words sharp crash are now italicized, putting emphasis on those words.
+
+
+
+
+
 
 　
 

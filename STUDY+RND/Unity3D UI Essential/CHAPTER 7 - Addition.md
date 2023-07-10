@@ -275,6 +275,7 @@
     - There are two types of TextMesh Pro components, TextMeshPro and TextMeshProUGUI.
     - ***TextMeshPro*** works with the ***MeshRenderer***. 
     - It’s best used with text that should exist in world space, like an in-game sign that could be added to a scene.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/TextMeshProSurfaceOptimized.gif)
     - ***TextMeshProUGUI*** works with the ***CanvasRenderer*** and the ***Canvas*** system, and is best for text that exists in screen space.
     - It replaces the built-in Unity UI.Text component.
     - There are no differences between the two types of components — they share the same configuration options.

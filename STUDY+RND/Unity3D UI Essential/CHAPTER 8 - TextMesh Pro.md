@@ -170,7 +170,7 @@
     - Rich Text tags is that they support nesting.
     - Try this out by putting the bold <b> </b> tags around the word ***need***. 
     - Once complete, your text should look like this:
-        ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/BoldColor-624x500.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/BoldColor-624x500.png)
 - ***Note:*** 
     - *You can also specify the color by hex code.*
     - *For example, red would use `<color=#ff0000>` or `<color=#ff0000ff>` to specify the alpha value.*
@@ -180,9 +180,33 @@
 
 ## Indenting Lines
 
-Activate screen 8-DownTheHall.
+- ***Line-indent***
+    - Activate screen 8-DownTheHall.
+    - Put the `<line-indent=15%>`` tag at the beginning of the text.
+    - This will indent each line by 15% of the width of the text area.
+    - In this case, you don’t need a closing tag because you want to indent both lines.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/LineIndent-615x500.png)
 
-Put the <line-indent=15%> tag at the beginning of the text. This will indent each line by 15% of the width of the text area. In this case, you don’t need a closing tag because you want to indent both lines.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 　

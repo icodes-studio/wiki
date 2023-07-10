@@ -295,11 +295,21 @@
 - The sample project, ***Into the Attic***...
     - Text-based adventure game.
     - Each screen of dialog has a ***TextMeshProUGUI*** component to display the text and a button to advance to the next screen.
-    - These screens are child objects of the ***Screens**** GameObject in the scene.
+    - These screens are child objects of the ***Screens*** GameObject in the scene.
     - The screens’ names have incrementing numbers indicating the order they appear in the story.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/ChangeScreens2.gif)
 
 
+　
+
+## Getting Started With TextMesh Pro
+
+- Switch from the Game view to the Scene view so you can see the Text and RectTransform areas on your screen.
+- Set ***2-Intro*** as the active screen.
+- To add a new TextMeshProUGUI object, right-click ***2-Intro*** and select ***UI ▸ Text – TextMeshPro***.
+- This gives ***2-Intro*** a child object called ***Text (TMP)***.
+
+![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/AddTMPUGUI.gif)
 
 
 

@@ -210,8 +210,22 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/OverflowFinal-281x500.png)
 
 
+　
 
+## Adding Inline Images to Text
 
+- ***To add an icon of a flashlight after the word flashlight.***
+    - Start by setting ***13-Stumble*** as the active screen, 
+    - then select the icon at ***Assets/RW/Sprites/FlashlightIcon.png***.
+    - In Import Settings, change ***Texture Type*** to ***Sprite (2D and UI)***.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/FlashlightImportSettings-367x500.png)
+    - Right-click on ***FlashlightIcon.png*** and select ***Create ▸ TextMeshPro ▸ Sprite Asset*** to create a ***Sprite Asset*** in the same folder.
+    - Select ***Text (TMP)** and click the ***Extra Settings*** header to expand the additional settings.
+    - Drag the ***FlashlightIcon Sprite Asset*** into the ***Sprite Asset*** field.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/SpriteAsset-608x500.png)
+    - Insert the `<sprite index=0>` tag after the word flashlight in Text Input. 
+    - The flashlight icon now displays inline.
+- ***Note:*** *When you use a sprite sheet with multiple sprites, set the index value in the tag to the index of the sprite you want to reference.*
 
 
 

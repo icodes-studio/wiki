@@ -249,7 +249,6 @@
     - It began to appear fuzzy when enlarged.
     - The game’s frame rate dropped when you had many TextMesh objects on the screen at once.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/BitmapVsSDF-650x366.jpg)
-
 - There are many reasons to use TextMesh Pro. The top three are:
     - ***It looks great:*** The text looks good at any size.
     - ***It’s infinitely configurable:*** You can make your text look exactly how you want it to.

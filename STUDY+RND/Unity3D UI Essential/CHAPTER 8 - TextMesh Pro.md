@@ -161,17 +161,17 @@
 
 - **Italic**
     - Test this out on screen ***6-Crash***.
-    - Place an italic opening tag `\<i\>` before the word ***sharp*** and a closing tag `\</i\>` after the word ***crash***.
+    - Place an italic opening tag `<i>` before the word ***sharp*** and a closing tag `</i>` after the word ***crash***.
     - The words ***sharp crash*** are now italicized, putting emphasis on those words.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/ItalicTag-618x500.png)
 - **Color** 
     - On screen ***7-Broken***, 
-    - Make the words ***need to see*** red by adding the `\<color=red\>` and `\</color\>` tags around those words.
+    - Make the words ***need to see*** red by adding the `<color=red>` and `</color>` tags around those words.
     - Rich Text tags is that they support nesting.
     - Try this out by putting the bold <b> </b> tags around the word ***need***. 
     - Once complete, your text should look like this:
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/BoldColor-624x500.png)
-- ***Note:*** *You can also specify the color by hex code. For example, red would use `\<color=#ff0000\>` or `\<color=#ff0000ff\>` to specify the alpha value.*
+- ***Note:*** *You can also specify the color by hex code. For example, red would use `<color=#ff0000>` or `<color=#ff0000ff>` to specify the alpha value.*
 
 
 　

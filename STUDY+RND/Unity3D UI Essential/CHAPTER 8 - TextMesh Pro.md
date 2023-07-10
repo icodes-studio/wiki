@@ -181,15 +181,33 @@
 ## Indenting Lines
 
 - ***Line-indent***
-    - Activate screen 8-DownTheHall.
+    - Activate screen ***8-DownTheHall***.
     - Put the `<line-indent=15%>`` tag at the beginning of the text.
     - This will indent each line by 15% of the width of the text area.
     - In this case, you don’t need a closing tag because you want to indent both lines.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/LineIndent-615x500.png)
 
 
+　
 
+## Using Overflow Settings
 
+- ***Wrapping & Overflow***
+    - Activate screen ***9-Vase***.
+    - The ***Overflow*** setting is set to ***Overflow***.
+    - The ***Wrapping*** is set to ***Enabled***.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/OverflowDefault-650x492.png)
+- ***Linked***
+    - This mode overflows extra text into a second ***TextMeshProUGUI*** component.
+    - Right-click ***Text (TMP)*** and select duplicate.
+    - Select the new object and name it ***Text (TMP) Overflow***.
+    - Set ***Top*** to ***1200*** and ***Bottom*** to ***350*** on the ***Rect Transform***.
+    - Clear the Text Input field.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/Duplicate2.gif)
+    - Select the original ***Text (TMP)***, set ***Overflow*** to ***Linked*** and drag the new ***Text (TMP) Overflow*** into the open field.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/OverflowText.gif)
+    - The text will now overflow from the top ***Text (TMP)*** to the lower ***Text (TMP) Overflow***.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/OverflowFinal-281x500.png)
 
 
 

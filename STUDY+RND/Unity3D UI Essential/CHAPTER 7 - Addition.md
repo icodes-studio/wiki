@@ -319,7 +319,15 @@
     - Add some introduction text to set the scene for the game: “One rainy night in the middle of January…”
     - The text now displays in the text area in the scene.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/PlainText.png)
-
+- To Change the standard styling options in ***Main Settings***.
+    - Change the font by clicking the ***bullseye*** icon next to the existing Font Asset.
+    - Select ***NewTegomin-Regular SDF***.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/ChangeFontAsset.gif)
+- Next, perform the following steps:
+    - Make the text larger by changing ***Font Size*** to ***150***.
+    - Set ***Line Spacing*** to ***-50*** to decrease the spacing between each line.
+    - Finally, center the text by selecting the ***Center*** and ***Middle*** alignment options.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/FormattedText-588x500_v2.png)
 
 
 

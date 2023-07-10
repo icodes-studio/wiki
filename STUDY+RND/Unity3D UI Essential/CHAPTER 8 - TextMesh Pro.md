@@ -228,11 +228,25 @@
 - ***Note:*** *When you use a sprite sheet with multiple sprites, set the index value in the tag to the index of the sprite you want to reference.*
 
 
+　
+
+## Adding Color to Inline Sprites
+
+- ***To color the word “flashlight” and the flashlight icon yellow***
+    - Place the `<color=#FFEB04>` tag before the word ***flashlight*** and the `</color>` tag after the flashlight icon tag.
+    - You’ll see that the word flashlight is yellow, but the icon is still white.
+    - Update the sprite tag to `<sprite index=0 color=#FFEB04>`.
+    - The sprite now displays a yellow color.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/ColoredFlashlight-602x500.png)
 
 
+　
 
+## Using Additional Rich Text Tags
 
+The next few dialog screens use some handy Rich Text tags.
 
+On screen 14-Knock, use the align tag to align each line left, center, and right. Each new tag overrides the previous one, so you don’t need any closing tags.
 
 
 

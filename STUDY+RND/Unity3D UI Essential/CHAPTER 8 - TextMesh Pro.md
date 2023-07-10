@@ -350,8 +350,7 @@
 
 ## Using Cardboard Presets
 
-- ***Setting up the TextMeshProUGUI component***
-    - Set screen ***24-LargeBox*** as the active screen.
+- Set screen ***24-LargeBox*** as the active screen.
     - Select ***Text (TMP)*** and set ***Font Asset*** to ***DelaGothicOne-Regular SDF***.
     - Then set ***Horizontal*** and ***Vertical Mapping*** to ***Paragraph***.
     - This stretches the texture across all the characters in each paragraph of text.
@@ -363,8 +362,24 @@
     - ***Outline Color*** to ***Brown***.
     - ***Outline Thickness*** to ***0.15***.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/CardboardMaterialPreset-405x500.png)
-- Now, enter Play Mode and preview the effect.
-    > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/Move2.gif)
+    - Now, enter Play Mode and preview the effect.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/Move2.gif)
+
+
+　
+
+## Using Bevel Presets
+
+- Start by setting ***26-Stopped*** as the active screen.
+    - Select ***Text (TMP)*** and set ***Font Asset*** to ***DelaGothicOne-Regular SDF***.
+    - Then create a new Material Preset named ***Dela Gothic One-Regular SDF – Stopped***.
+    - Set the ***Face*** color to ***red***.
+    - In the ***Underlay*** section, set ***Offset X*** to ***1***, ***Offset Y*** to ***-1***, and ***Dilate*** to ***1***.
+    - In the ***Lighting*** section, under ***Bevel***, set ***Amount*** to ***1*** and ***Width*** to ***0.5***.
+    - Tweak the values under ***Local Lighting*** to your artistic liking.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/StoppedSolution-251x500.png)
+    - Well done!
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/StoppedResult-650x464.png)
 
 
 

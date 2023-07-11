@@ -21,8 +21,8 @@
 
 - **드로우 콜 최적화**
     - 성능을 향상을 위해 이미지를 스프라이트 한 장에 합쳐 사용.
-    - 기존에는 [*Sprite Packer*](https://learnandcreate.tistory.com/131)를 사용했으나 2019 이상부터는 레거시라는 꼬리표가 달리고 [***Sprite Atlas***](https://skuld2000.tistory.com/28)가 사용된다.
-    - 2020 이상부터는 Sprite Atlas만 사용 가능하다.
+    - 기존에는 [*Sprite Packer*](https://docs.unity3d.com/Manual/SpritePacker.html)를 사용했으나 2019 이상부터는 레거시라는 꼬리표가 달리고 [***Sprite Atlas***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/CHAPTER%207%20-%20Sprite%20Atlas.md)가 사용된다.
+    - Unity 2020 버전 이상부터는 Sprite Atlas만 사용 가능하다.
 
 
 　
@@ -145,6 +145,14 @@
         }
     }
     ```
+
+
+　
+
+- **TextMesh Pro**
+    - Unity 2022 버전부터 기존 Text 컨트롤에 Legacy라는 꼬리표가 달리고
+    - [***TextMesh Pro***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/CHAPTER%208%20-%20TextMesh%20Pro.md) 컨트롤이 그 자리를 대신하고 있다.
+    - 따로 정리하고 있으니 위 링크 문서 참고하자.
 
 
 　

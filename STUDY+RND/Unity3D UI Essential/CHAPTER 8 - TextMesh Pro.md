@@ -106,6 +106,9 @@
     - Each screen of dialog has a ***TextMeshProUGUI*** component to display the text and a button to advance to the next screen.
     - These screens are child objects of the ***Screens*** GameObject in the scene.
     - The screens’ names have incrementing numbers indicating the order they appear in the story.
+- On each screen, you’ll learn a new way to style text.
+    - To edit another screen, disable the current one then enable the desired screen.
+    - Make sure you leave both ScreenFader and Background active.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/ChangeScreens2.gif)
 
 

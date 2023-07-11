@@ -443,9 +443,10 @@
 
 ## Font Asset Creator 속성 살펴보기
 
-![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator-property1.png)
-
 - **Font Settings**
+
+    ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator-property1.png)
+    
     - ***Sampling Point Size***
         > - 한 글자당 차지할 이미지 크기이다.
         > - 총 이미지 크기는 Atlas Resolution에서 정해주는데 위 그림에는 2048x2048 픽셀짜리 이미지에

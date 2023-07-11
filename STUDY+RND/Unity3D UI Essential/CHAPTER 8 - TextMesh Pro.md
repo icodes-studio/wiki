@@ -421,7 +421,7 @@
     - 한글 전체 문자는 1만 자가 넘어가는데 보통 일상에서 쓰는 문자는 2000개 정도 되므로 그 정도만 있어도 사실상 크게 문제될 건 없다.
     - 암튼, 여기 [***상용한글 2350자 다운로드***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/Hangul2350.txt) 항목을 클릭해서 TXT 파일을 받아두자.
 - ***폰트 애셋 만들고 적용하기***
-    - ***Window - TextMeshPro - Font Asset Creator*** 항목을 선택해서 ***Font Asset Creator*** 창을 열어보자
+    - ***Window ▸ TextMeshPro ▸ Font Asset Creator*** 항목을 선택해서 ***Font Asset Creator*** 창을 열어보자
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator.png)
     - 여기서 중요한 건 아래 네 가지이다.
     - 1번 ***Character Set*** 항목을 ***Custom Characters*** 항목으로 변경하면 2, 3번이 생긴다.
@@ -452,6 +452,24 @@
 
 ## 한글 폰트 애셋 만들기 - using Dynamic Atlas Population Mode
 
+- 가장 간단하게 TMP 폰트 생성하는 법
+    - 먼저 원하는 폰트를 임포트 한다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tmp-dynamic1.png)
+    - 폰트 우 클릭 Create - Textmeshpro - FontAsset 클릭
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tmp-dynamic2.png)
+    - 폰트 생성됨.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tmp-dynamic3.png)
+    - 인스펙터 창에서 ***Generation Settings ▸ Atlas Population*** 모드를 ***Dynamic*** 선택
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tmp-dynamic4.png)
+    - 폰트 적용 후 내용 입력할 때마다 동시에 이미지로 생성됨
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tmp-dynamic5.png)
+    - ***Atlas Population*** 모드가 ***Static*** 이면...
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tmp-dynamic6.png)
+    - 이미지 생성 안됨 - SDF 같은 용도는 입력 후 ***Static** 모드로 변경하는 것을 추천
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tmp-dynamic7.png)
+    - 왜냐하면 썼다 지워도 이미 생성된 이미지는 그대로 남아 있기 때문
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tmp-dynamic8.png)
+
 
 　
 
@@ -478,4 +496,4 @@
         > - ***RASTER_HINTED:*** 힌팅만하고 안티앨리어싱이 안된 글꼴 렌더링.
         > - ***RASTER:*** 힌팅도 안티앨리어싱도 안된 글꼴 렌더링.
         > - ***SDF(Signed distance field):*** 위의 비트맵 방식과는 다르게 거리에 따라 선명도를 계산하여 보여주는 방식.
-            
+

@@ -416,11 +416,11 @@
 
 ## 한글 폰트 애셋 만들기
 
-- **한글 문자셋 준비**
+- ***한글 문자셋 준비***
     - 폰트 애셋 아틀라스를 만드는데 사용할 한글 문자셋 데이터가 필요한다.
     - 한글 전체 문자는 1만 자가 넘어가는데 보통 일상에서 쓰는 문자는 2000개 정도 되므로 그 정도만 있어도 사실상 크게 문제될 건 없다.
     - 암튼, 여기 [***상용한글 2350자 다운로드***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/Hangul2350.txt) 항목을 클릭해서 TXT 파일을 받아두자.
-- **폰트 애셋 만들고 적용하기**
+- ***폰트 애셋 만들고 적용하기***
     - ***Window - TextMeshPro - Font Asset Creator*** 항목을 선택해서 ***Font Asset Creator*** 창을 열어보자
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator.png)
     - 여기서 중요한 건 아래 네 가지이다.
@@ -438,3 +438,21 @@
     - 필요한 TMP 컴포넌트의 ***Font Asset*** 필드에 넣어주면 된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator6.png)
 
+
+　
+
+## Font Asset Creator 속성 살펴보기
+
+- **Font Settings**
+    ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator-property1.png)
+    - ***Sampling Point Size***
+        > - 한 글자당 차지할 이미지 크기이다.
+        > - 총 이미지 크기는 Atlas Resolution에서 정해주는데 위 그림에는 2048x2048 픽셀짜리 이미지에
+        > - 한 글자당 50픽셀을 넣어주겠다는 얘기다.
+        > - 만약 커스텀 사이즈가 아니라 오토 사이즈를 선택했다면
+        > - 설정한 이미지 크기를 글자 수만큼 거의 n 등분한 값이 각각의 텍스트 크기로 정해진다.
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator-property2.png)
+        > - 이를테면 이런 식으로 말이다.
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator-property3.png)

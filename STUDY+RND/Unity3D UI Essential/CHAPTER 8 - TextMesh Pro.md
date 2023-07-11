@@ -448,12 +448,9 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator-property1.png)
     - ***Sampling Point Size***
         > - 한 글자당 차지할 이미지 크기이다.
-        > - 총 이미지 크기는 Atlas Resolution에서 정해주는데 위 그림에는 2048x2048 픽셀짜리 이미지에
-        > - 한 글자당 50픽셀을 넣어주겠다는 얘기다.
-        > - 만약 커스텀 사이즈가 아니라 오토 사이즈를 선택했다면
-        > - 설정한 이미지 크기를 글자 수만큼 거의 n 등분한 값이 각각의 텍스트 크기로 정해진다.
+        > - 총 이미지 크기는 ***Atlas Resolution** 필드에서 정해주는데, 2048x2048 픽셀짜리 이미지에 한 글자당 50픽셀을 넣어주겠다는 얘기다.
         >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator-property2.png)
-        > - 이를테면 이런 식으로 말이다.
+        > - 만약 Custom Size가 아니라 ***Auto Sizing*** 모드를 선택했다면, 글자 수만큼 거의 n 등분한 값이 각각의 텍스트 크기로 정해진다.
         >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator-property3.png)

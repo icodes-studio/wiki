@@ -443,8 +443,8 @@
 
 ## Font Asset Creator 속성 살펴보기
 
-- **Font Settings**
-    - 　
+- **Font Asset Creator**
+    - **Font Settings**
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator-property1.png)
 
     - ***Sampling Point Size***

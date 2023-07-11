@@ -1,6 +1,7 @@
 # # CHAPTER 8 - TextMesh Pro
     ● Introduction to TextMesh Pro in Unity
     ● Learn about TextMesh Pro in Unity by creating a spooky text-based adventure game.
+    ● 한글 사용법
     ● Aug 4 2021, C# 7.3, Unity 2020.3, Unity
 *https://www.kodeco.com/22175776-introduction-to-textmesh-pro-in-unity*
 
@@ -411,12 +412,16 @@
 *https://m.blog.naver.com/cdw0424/221641217203*
 
 
+　
+
+## 한글 폰트 애셋 만들기
+
 - [***상용한글 2350자 다운로드***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/Hangul2350.txt)
     - 먼저 필요한 건 한글로 만들 수 있는 문자를 TXT로 정리해둔 데이터가 필요하다.
     - 사용 하고자 하는 폰트를 가져와서 원하는 글자를 폰트 애셋으로 만들어야 하기 때문
     - 실제 한글은 1만 자가 넘어가는데 보통 일상에서 쓰는 문자는 2000개 정도 되므로 그 정도만 있어도 사실상 크게 문제될 건 없다.
 
-- 폰트 애셋 만들기
+- 폰트 애셋 만들고 적용하기
     - ***Window - TextMeshPro - Font Asset Creator** 항목을 선택해서 ***Font Asset Creator*** 창을 열어보자
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator.png)
     - 여기서 중요한 건 아래 네 가지이다.

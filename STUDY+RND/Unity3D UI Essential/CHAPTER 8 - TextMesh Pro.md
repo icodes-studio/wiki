@@ -447,8 +447,8 @@
     - **Font Settings**
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator-property1.png)
     - ***Sampling Point Size***
-        > - 한 글자당 차지할 이미지 크기이다.
-        > - 총 이미지 크기는 ***Atlas Resolution** 필드에서 정해주는데, 2048x2048 픽셀짜리 이미지에 한 글자당 50픽셀을 넣어주겠다는 얘기다.
+        > - 아틀라스 텍스쳐에서 한 글자가 차지할 크기이다.
+        > - 아래 그림은, 2048x2048 아틀라스 텍스쳐에서 한 글자당 50픽셀을 사용한다는 의미.
         >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator-property2.png)
         > - 만약 Custom Size가 아니라 ***Auto Sizing*** 모드를 선택했다면, 글자 수만큼 거의 n 등분한 값이 각각의 텍스트 크기로 정해진다.

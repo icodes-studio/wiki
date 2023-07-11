@@ -465,7 +465,7 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tmp-dynamic5.png)
     - ***Atlas Population*** 모드가 ***Static*** 이면...
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tmp-dynamic6.png)
-    - 이미지 생성 안됨 - SDF 같은 용도는 입력 후 ***Static** 모드로 변경하는 것을 추천
+    - 이미지 생성 안됨 - SDF 같은 용도는 입력 후 ***Static*** 모드로 변경하는 것을 추천
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tmp-dynamic7.png)
     - 왜냐하면 썼다 지워도 이미 생성된 이미지는 그대로 남아 있기 때문
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tmp-dynamic8.png)

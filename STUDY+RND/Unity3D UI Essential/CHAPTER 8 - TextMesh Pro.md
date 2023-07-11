@@ -420,7 +420,6 @@
     - 폰트 애셋 아틀라스를 만드는데 사용할 한글 문자셋 데이터가 필요한다.
     - 한글 전체 문자는 1만 자가 넘어가는데 보통 일상에서 쓰는 문자는 2000개 정도 되므로 그 정도만 있어도 사실상 크게 문제될 건 없다.
     - 암튼, 여기 [***상용한글 2350자 다운로드***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/Hangul2350.txt) 항목을 클릭해서 TXT 파일을 받아두자.
-
 - **폰트 애셋 만들고 적용하기**
     - ***Window - TextMeshPro - Font Asset Creator*** 항목을 선택해서 ***Font Asset Creator*** 창을 열어보자
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator.png)

@@ -406,6 +406,30 @@
 
 　
 
-# # 유니티(Unity) - Textmesh Pro(텍스트 메쉬 프로) 한글 사용법 
+# # 한글 사용법
+    ● 텍스트 메쉬 프로 한글 사용법
+*https://m.blog.naver.com/cdw0424/221641217203*
 
-- https://m.blog.naver.com/cdw0424/221641217203
+
+- [***상용한글 2350자 다운로드***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/Hangul2350.txt)
+    - 먼저 필요한 건 한글로 만들 수 있는 문자를 TXT로 정리해둔 데이터가 필요하다.
+    - 사용 하고자 하는 폰트를 가져와서 원하는 글자를 폰트 애셋으로 만들어야 하기 때문
+    - 실제 한글은 1만 자가 넘어가는데 보통 일상에서 쓰는 문자는 2000개 정도 되므로 그 정도만 있어도 사실상 크게 문제될 건 없다.
+
+- 폰트 애셋 만들기
+    - ***Window - TextMeshPro - Font Asset Creator** 항목을 선택해서 ***Font Asset Creator*** 창을 열어보자
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator.png)
+    - 여기서 중요한 건 아래 네 가지이다.
+    - 1번 ***Character Set*** 항목을 ***Custom Characters*** 항목으로 변경하면 2, 3번이 생긴다.
+    - 2번은 사용하지 않는다. 그냥 비워두면 된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator2.png)
+    - 이제 3번에 아까 다운로드한 파일을 열어서 텍스트를 복사하고 붙여 넣는다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator3.png)
+    - 나머지는 파일 사이즈, 해상도 등에 관한 내용이라 필요에 따라 알아서 입력하고...
+    - 4번 ***Generate Font Atlas*** 버튼을 클릭하면...
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator4.png)
+    - 파일이 완성되고, 완성된 파일을 저장하고
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator5.png)
+    - 필요한 TMP 컴포넌트의 ***Font Asset*** 필드에 넣어주면 된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator6.png)
+

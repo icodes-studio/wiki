@@ -427,7 +427,7 @@
     - 1번 ***Character Set*** 항목을 ***Custom Characters*** 항목으로 변경하면 2, 3번이 생긴다.
     - 2번은 여기서 사용하지 않는다. 그냥 비워두자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator2.png)
-    - 이제 3번에 아까 다운로드한 파일을 열어서 텍스트를 복사하고 붙여 넣는다.
+    - 3번 ***Custom Character List*** 항목에 아까 다운로드한 파일을 열어서 텍스트를 복사하고 붙여 넣는다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator3.png)
     - 나머지는 파일 사이즈, 해상도 등에 관한 내용이라 필요에 따라 알아서 입력하고...
     - 4번 ***Generate Font Atlas*** 버튼을 클릭하면...

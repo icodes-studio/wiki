@@ -454,3 +454,4 @@
         > - 만약 Custom Size가 아니라 ***Auto Sizing*** 모드를 선택했다면, 글자 수만큼 거의 n 등분한 값이 각각의 텍스트 크기로 정해진다.
         >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator-property3.png)
+

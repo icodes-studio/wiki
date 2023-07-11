@@ -432,8 +432,9 @@
     - 나머지는 파일 사이즈, 해상도 등에 관한 내용이라 필요에 따라 알아서 입력하고...
     - 4번 ***Generate Font Atlas*** 버튼을 클릭해서 아틀라스를 생성한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator4.png)
-    - ***Save*** 버튼을 클릭해서 완성된 아틀라스를 파일로 저장하면 폰트 애셋 완성!
+    - ***Save*** 버튼을 클릭해서 완성된 아틀라스를 파일로 저장한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator5.png)
+    - 폰트 애셋 완성!
     - 필요한 TMP 컴포넌트의 ***Font Asset*** 필드에 넣어주면 된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator6.png)
 

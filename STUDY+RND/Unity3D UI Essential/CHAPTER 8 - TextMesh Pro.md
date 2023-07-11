@@ -108,7 +108,7 @@
     - The screens’ names have incrementing numbers indicating the order they appear in the story.
 - On each screen, you’ll learn a new way to style text.
     - To edit another screen, disable the current one then enable the desired screen.
-    - Make sure you leave both ScreenFader and Background active.
+    - Make sure you leave both ***ScreenFader*** and ***Background*** active.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/ChangeScreens2.gif)
 
 

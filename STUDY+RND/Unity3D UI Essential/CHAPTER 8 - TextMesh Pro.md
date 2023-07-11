@@ -414,7 +414,7 @@
 
 　
 
-## 한글 폰트 애셋 만들기
+## 한글 폰트 애셋 만들기 - using Custom Characters
 
 - ***한글 문자셋 준비***
     - 폰트 애셋 아틀라스를 만드는데 사용할 한글 문자셋 데이터가 필요한다.
@@ -441,6 +441,20 @@
 
 　
 
+## 한글 폰트 애셋 만들기 - using Custom Range
+
+- Character Set 필드를 Custom Range 모드로 선택
+    - 44032-55203 내용을 입력하면 한글이 모두 적용된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator7.png)
+
+
+　
+
+## 한글 폰트 애셋 만들기 - using Dynamic Atlas Population Mode
+
+
+　
+
 ## Font Asset Creator 속성 살펴보기
 
 - **Font Asset Creator**
@@ -454,4 +468,14 @@
         > - 만약 Custom Size가 아니라 ***Auto Sizing*** 모드를 선택했다면, 글자 수만큼 거의 n 등분한 값이 각각의 텍스트 크기로 정해진다.
         >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator-property3.png)
-
+    - ***Packing Method***
+        > - 빠르게 만들 것인지 (이 방식을 추천하지만 중복된 글자가 패키징 됨)
+        > - 그냥 좀 걸리더라도 최적화할 것인지 선택한다.
+    - ***Render Mode***
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator-property4.png)
+        > - ***SMOOTH_HINTED:*** 힌팅, 안티 앨리어싱이 된 글꼴 렌더링. 
+        > - ***SMOOTH:*** 힌팅없이 안티 앨리어싱된 글꼴 렌더링.
+        > - ***RASTER_HINTED:*** 힌팅만하고 안티앨리어싱이 안된 글꼴 렌더링.
+        > - ***RASTER:*** 힌팅도 안티앨리어싱도 안된 글꼴 렌더링.
+        > - ***SDF(Signed distance field):*** 위의 비트맵 방식과는 다르게 거리에 따라 선명도를 계산하여 보여주는 방식.
+            

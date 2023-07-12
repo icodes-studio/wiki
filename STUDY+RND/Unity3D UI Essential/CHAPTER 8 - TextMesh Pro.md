@@ -224,7 +224,7 @@
     - In Import Settings, change ***Texture Type*** to ***Sprite (2D and UI)***.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/FlashlightImportSettings-367x500.png)
     - Right-click on ***FlashlightIcon.png*** and select ***Create ▸ TextMeshPro ▸ Sprite Asset*** to create a ***Sprite Asset*** in the same folder.
-    - Select ***Text (TMP)** and click the ***Extra Settings*** header to expand the additional settings.
+    - Select ***Text (TMP)*** and click the ***Extra Settings*** header to expand the additional settings.
     - Drag the ***FlashlightIcon Sprite Asset*** into the ***Sprite Asset*** field.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/SpriteAsset-608x500.png)
     - Insert the `<sprite index=0>` tag after the word flashlight in Text Input. 

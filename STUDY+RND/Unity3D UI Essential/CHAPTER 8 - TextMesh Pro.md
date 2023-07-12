@@ -425,7 +425,7 @@
 - ***폰트 애셋 만들고 적용하기***
     - ***Window ▸ TextMeshPro ▸ Font Asset Creator*** 항목을 선택해서 ***Font Asset Creator*** 창을 열어보자
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator.png)
-    - 여기서 중요한 건 아래 네 가지이다.
+    - ***Source Font File*** 필드에 원본 폰트를 할당한다.
     - 1번 ***Character Set*** 항목을 ***Custom Characters*** 항목으로 변경하면 2, 3번이 생긴다.
     - 2번은 여기서 사용하지 않는다. 그냥 비워두자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator2.png)

@@ -360,10 +360,10 @@
     - This stretches the texture across all the characters in each paragraph of text.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/CardboardFontSettings-332x500.png)
 - Create a new Material Preset named ***Dela Gothic One-Regular SDF – Cardboard*** and set:
-    - ***Face Texture*** to ***Assets/RW/Textures/Cardboard***.
-    - ***Speed X*** to ***0.1***.
-    - ***Outline Color*** to ***Brown***.
-    - ***Outline Thickness*** to ***0.15***.
+    - 1\) ***Face Texture*** to ***Assets/RW/Textures/Cardboard***.
+    - 2\) ***Speed X*** to ***0.1***.
+    - 3\) ***Outline Color*** to ***Brown***.
+    - 4\) ***Outline Thickness*** to ***0.15***.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/CardboardMaterialPreset-405x500.png)
     - Now, enter Play Mode and preview the effect.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/Move2.gif)

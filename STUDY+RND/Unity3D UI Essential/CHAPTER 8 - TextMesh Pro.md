@@ -455,7 +455,7 @@
 ## 한글 폰트 애셋 만들기 - using Dynamic Atlas Population Mode
 
 - 가장 간단하게 TMP 폰트 생성하는 법
-    - 먼저 원하는 폰트를 임포트 한다.
+    - 먼저 원본 폰트를 준비하고...
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tmp-dynamic1.png)
     - 폰트 우 클릭 Create - Textmeshpro - FontAsset 클릭
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tmp-dynamic2.png)

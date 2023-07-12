@@ -201,7 +201,7 @@
     - The ***Overflow*** setting is set to ***Overflow***.
     - The ***Wrapping*** is set to ***Enabled***.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/OverflowDefault-650x492.png)
-- ***Linked***
+- ***Linked*** *mode*
     - This mode overflows extra text into a second ***TextMeshProUGUI*** component.
     - Right-click ***Text (TMP)*** and select duplicate.
     - Select the new object and name it ***Text (TMP) Overflow***.

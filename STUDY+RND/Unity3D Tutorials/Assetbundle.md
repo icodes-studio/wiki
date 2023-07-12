@@ -6,6 +6,11 @@
 
 　
 
+- [Official: 어드레서블 에셋 시스템](https://blog.unity.com/kr/games/addressable-asset-system)
+- [Official: Addressables-Sample](https://github.com/Unity-Technologies/Addressables-Sample)
+
+　
+
 　
 
 - https://www.youtube.com/playlist?list=PLmRK0lH8TNCo7K4xmLpEov4llbVTwf29s
@@ -37,5 +42,30 @@
 - [어드레서블 동기식 표현 지원](https://blog.naver.com/cdw0424/222431929501)
 - [유니티(Unity) - Addressable(어드레서블) DownloadDependenciesAsync 경로](https://blog.naver.com/cdw0424/222593119206)
 
+
+
+　
+
+　
+
+　
+
+　
+
+　
+
+　
+
+　
+
+　
+
+　
+
+　
+
+　
+
+　
 
 - [사원수 공부 자료](https://blog.naver.com/cdw0424/221787035761)

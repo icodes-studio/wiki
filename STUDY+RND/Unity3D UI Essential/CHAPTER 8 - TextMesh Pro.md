@@ -186,7 +186,7 @@
 
 - ***Line-indent***
     - Activate screen ***8-DownTheHall***.
-    - Put the `<line-indent=15%>`` tag at the beginning of the text.
+    - Put the `<line-indent=15%>` tag at the beginning of the text.
     - This will indent each line by 15% of the width of the text area.
     - In this case, you don’t need a closing tag because you want to indent both lines.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/LineIndent-615x500.png)

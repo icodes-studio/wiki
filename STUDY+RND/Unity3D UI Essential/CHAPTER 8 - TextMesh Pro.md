@@ -359,7 +359,6 @@
     - Set ***Horizontal*** and ***Vertical Mapping*** to ***Paragraph***.
     - This stretches the texture across all the characters in each paragraph of text.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/CardboardFontSettings-332x500.png)
-
 - Create a new Material Preset named ***Dela Gothic One-Regular SDF – Cardboard*** and set:
     - ***Face Texture*** to ***Assets/RW/Textures/Cardboard***.
     - ***Speed X*** to ***0.1***.

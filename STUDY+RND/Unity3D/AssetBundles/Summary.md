@@ -196,7 +196,7 @@
     - 위와 같은 상황을 실제로 테스트 해보면 각 번들의 크기는 각각 ***383KB***와 ***377KB***이다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundleDuplicate.png)
     - 반면, 머티리얼 등과 같은 공통 애셋을 별도 애셋번들로 만들고 빌드하면,
-    - 공용 머티리얼이 포함된 별도의 modulematerials AssetBundle(359KB)이 새로 포함되고 각 번들의 크기는 약 380KB에서 약 20KB로 감소.
+    - 공용 번들인 modulematerials AssetBundle(359KB)이 새로 포함되고 각 번들의 크기는 약 380KB에서 약 20KB로 감소.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundleSeparate.png)
 - ***Runtime loading***
     - 공용 애셋을 단일 애셋번들로 만드는 경우 종속성에 주의하세요.

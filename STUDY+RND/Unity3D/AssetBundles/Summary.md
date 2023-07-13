@@ -1,35 +1,113 @@
-## AssetBundles
+## Overview
+
+　
+- ***AssetBundles***
+    - 플랫폼별 비코드 에셋(예: 모델, 텍스처, 프리팹, 오디오 클립, 씬 전체)이 들어 있는 아카이브 파일이며 런타임 시점에 로드할 수 있다.
+    - 서로 종속성을 표시할 수 있다. 예를 들어 한 에셋 번들의 머티리얼이 다른 에셋 번들의 텍스처를 참조할 수 있다.
+    - 효율적인 네트워크 전송을 위해 빌트인 알고리즘을(LZMA 및 LZ4) 사용하여 압축할 수 있다.
+    - 초기 설치 크기를 줄이고, 런타임 메모리의 압박이 줄어든다.
+
 
 　
 
-에셋 번들은 플랫폼별 비코드 에셋(예: 모델, 텍스처, 프리팹, 오디오 클립, 씬 전체)이 들어 있는 아카이브 파일이며 런타임 시점에 로드할 수 있습니다.
-에셋 번들에는 서로 종속성을 표시할 수 있습니다.
-예를 들어 한 에셋 번들의 머티리얼이 다른 에셋 번들의 텍스처를 참조할 수 있습니다.
-효율적인 네트워크 전송을 위해 에셋 번들은 사용 요구 사항(LZMA 및 LZ4)에 따라 빌트인 알고리즘을 사용하여 압축할 수 있습니다.
-에셋 번들은 다운로드 가능 콘텐츠(DLC)에 유용합니다.
-초기 설치 크기를 줄이고, 최종 사용자 플랫폼용으로 에셋 로딩이 최적화되고, 런타임 메모리의 압박이 줄어듭니다.
-
-***참고:***
-    - 에셋 번들은 ScriptableObject처럼 코드 오브젝트 인스턴스의 직렬화된 데이터를 포함할 수 있습니다.
-    - 하지만 클래스 정의 자체가 프로젝트 어셈블리 하나로 컴파일됩니다.
-    - 에셋 번들에 직렬화된 오브젝트를 로드하면 Unity는 일치하는 클래스 정의를 찾고 그 인스턴스를 생성하고 직렬화된 값을 사용하여 해당 인스턴스 필드를 설정합니다.
-    - 즉 아이템이 클래스 정의에 어떤 변화도 주지 않는 한 에셋 번들에서 게임에 새로운 아이템을 사용할 수 있습니다.
+## AssetBundle workflow
 
 　
 
-## What's in an AssetBundle?
-
-ㄱ
-
-“에셋 번들”은 서로 다르지만 관련 있는 두 가지를 의미할 수 있습니다.
-
-첫 번째는 디스크상의 실제 파일입니다. 이 파일은 에셋 번들 아카이브라고 불립니다. 에셋 번들 아카이브는 폴더와 같은 컨테이너이며 안에 추가 파일을 보관합니다. 이러한 추가 파일들은 다음의 두 타입으로 나뉩니다.
-
-직렬화된 파일 - 개별 오브젝트로 이루어져 있고 이 단일 파일에 작성되는 에셋을 보관합니다.
-리소스 파일 - 특정 에셋(텍스처 및 오디오)에 대해 개별적으로 저장되는 바이너리 데이터 조각으로, Unity가 다른 스레드의 디스크에서 효율적으로 로드하도록 도와줍니다.
-또한 “에셋 번들”은 특정 에셋 번들 아카이브에서 에셋을 로드하기 위해 코드를 통해 상호작용하는 실제 에셋 번들 오브젝트를 나타낼 수도 있습니다. 이 오브젝트에는 이 아카이브에 추가한 에셋의 모든 파일 경로 맵이 들어 있습니다.
+- ***Note:***
+    - *이 센션에서는 빌트인 BuildPipeline.BuildAssetBundles() API를 사용하여 애셋번들을 생성하는 방법을 설명한다.*
+    - *권장되는 방법은 [**어드레서블 패키지(Addressables package)**](https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/index.html)를 사용하는 것이다.*
 
 
+　
+
+- ***Assigning Assets to AssetBundles***
+    - 프로젝트 뷰에서 번들에 할당할 에셋을 선택.
+    - 인스펙터 하단에 왼쪽 드롭다운을 사용하여 에셋 번들을 할당하고, 오른쪽 드롭다운을 사용하여 배리언트(Variant)를 할당한다.
+    - 새 애셋번들을 생성 하려면 New 버튼을 클릭하고 원하는 애셋번들 이름을 입력한다.
+    - 하위 폴더를 추가하려면 /를 이용해 폴더 이름을 구분한다.
+
+
+　
+
+- ***Variant?***
+    - 별도로 설명하자.
+
+
+　
+
+- **에셋 번들 빌드**
+    - Assets 폴더에서 Editor 폴더를 생성하고, 폴더에 다음과 같은 콘텐츠의 스크립트를 입력합니다.
+        ```
+        using UnityEditor;
+        using System.IO;
+
+        public class CreateAssetBundles
+        {
+            [MenuItem("Assets/Build AssetBundles")]
+            static void BuildAllAssetBundles()
+            {
+                string assetBundleDirectory = "Assets/AssetBundles";
+                if(!Directory.Exists(assetBundleDirectory))
+                {
+                    Directory.CreateDirectory(assetBundleDirectory);
+                }
+                BuildPipeline.BuildAssetBundles(assetBundleDirectory, 
+                                                BuildAssetBundleOptions.None, 
+                                                BuildTarget.StandaloneWindows);
+            }
+        }
+        ```
+    - 이 스크립트는 해당 태그와 관련된 함수에서 코드를 실행하는 Build AssetBundles 라는 에셋 메뉴의 하단에 메뉴 아이템을 생성합니다.
+    - Build AssetBundles 를 클릭하면 빌드 다이얼로그와 함께 진행 표시줄이 표시됩니다.
+    - 이렇게 하면 에셋 번들 이름으로 레이블이 지정된 모든 에셋을 가져와서 assetBundleDirectory에 정의된 경로의 폴더에 배치합니다.
+
+
+　
+
+
+Note: You can also define the content of AssetBundles programmatically instead of using the Inspector-based method described above. This is available by using a signature of BuildPipeline.BuildAssetBundles that accepts an array of AssetBundleBuild structures. In that case the list of desired Assets for each bundle are passed in, and any assignment to AssetBundles made in the Inspector is ignored.
+
+이에 관한 자세한 내용은 에셋 번들 빌드 문서를 참조하십시오.
+
+에셋 번들 및 에셋 로딩
+로컬 스토리지에서 로드하려는 경우 다음과 같은 AssetBundles.LoadFromFile API를 사용하십시오.
+
+public class LoadFromFileExample : MonoBehaviour {
+    void Start() {
+        var myLoadedAssetBundle 
+            = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, "myassetBundle"));
+        if (myLoadedAssetBundle == null) {
+            Debug.Log("Failed to load AssetBundle!");
+            return;
+        }
+        var prefab = myLoadedAssetBundle.LoadAsset<GameObject>("MyObject");
+        Instantiate(prefab);
+    }
+}
+LoadFromFile은 번들 파일의 경로를 가져옵니다.
+
+If your AssetBundles are hosted online, or you are running on a platform that does not support direct file system access, then use the UnityWebRequestAssetBundle API. Here’s an example:
+
+IEnumerator InstantiateObject()
+{
+    string url = "file:///" + Application.dataPath + "/AssetBundles/" + assetBundleName;        
+    var request 
+        = UnityEngine.Networking.UnityWebRequestAssetBundle.GetAssetBundle(url, 0);
+    yield return request.Send();
+    AssetBundle bundle = UnityEngine.Networking.DownloadHandlerAssetBundle.GetContent(request);
+    GameObject cube = bundle.LoadAsset<GameObject>("Cube");
+    GameObject sprite = bundle.LoadAsset<GameObject>("Sprite");
+    Instantiate(cube);
+    Instantiate(sprite);
+}
+GetAssetBundle(string, int) takes the URL of the location of the AssetBundle and the version of the bundle you want to download. This example points to a local file, but string url could point to any URL you have your AssetBundles hosted at.
+
+UnityWebRequestAssetBundle 클래스에는 요청 시 에셋 번들을 가져오는 에셋 번들인 DownloadHandlerAssetBundle을 처리하는 특별한 방법이 있습니다.
+
+사용하는 메서드에 관계없이 이제 에셋 번들 오브젝트에 액세스할 수 있습니다. 오브젝트에서 LoadAsset<T> (string)을 사용하면 로드하려는 에셋의 타입 T와 오브젝트의 이름을 번들 안에 있는 문자열로 가져오게 됩니다. 이렇게 되면 에셋 번들에서 로드하는 오브젝트는 모두 반환됩니다. 이 반환된 오브젝트는 Unity의 모든 오브젝트와 마찬가지로 사용할 수 있습니다. 예를 들어, 씬에서 게임 오브젝트를 만들려는 경우 Instantiate(gameObjectFromAssetBundle)를 호출하면 됩니다.
+
+에셋 번들을 로드하는 API에 대한 자세한 내용을 보려면 에셋 번들의 전문적인 활용을 참조하십시오.
 
 
 
@@ -49,11 +127,40 @@
 
 
 
+
+
+
+
+
+
+　
+
+　
+
+　
+
+　
+
+　
 
 
 - https://docs.unity3d.com/Manual/AssetBundlesIntro.html
 - https://medium.com/dreamarofficial/using-assetbundles-in-your-next-game-or-application-9899251a998e
 - https://planek.tistory.com/22
+
+
+　
+
+- https://young-94.tistory.com/11
+- https://kukuta.tistory.com/192
+
+　
+
+　
+
+- Unity Blog Addressable 소개 : https://blogs.unity3d.com/kr/2019/07/15/addressable-asset-system/
+- Unity Addressable 1.13 메뉴얼 : https://docs.unity3d.com/Packages/com.unity.addressables@1.13/manual/index.html
+- Unity Addressable Tutorial : https://learn.unity.com/tutorials/?k=%5B%22lang%3Aen%22%2C%22lang%3Ako%22%2C%22q%3Aaddressable%22%5D&ob=starts
 
 　
 

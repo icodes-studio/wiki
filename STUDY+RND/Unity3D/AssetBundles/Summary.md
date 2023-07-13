@@ -85,7 +85,7 @@
             }
         }
         ```
-    - 원격지로부터 로드하거나 로컬 파일에 바로 접근할 수 없는 플랫폼(eg. 안드로이드)의 경우 UnityWebRequestAssetBundle API를 사용한다.
+    - 원격지로부터 로드하거나 로컬 파일에 바로 접근할 수 없는 플랫폼의 경우 UnityWebRequestAssetBundle API를 사용한다.
         ```
         IEnumerator InstantiateObject()
         {

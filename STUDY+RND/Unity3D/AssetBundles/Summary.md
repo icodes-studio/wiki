@@ -50,7 +50,10 @@
                 if (Directory.Exists(assetBundleDirectory) == false)
                     Directory.CreateDirectory(assetBundleDirectory);
 
-                BuildPipeline.BuildAssetBundles(assetBundleDirectory, BuildAssetBundleOptions.None, BuildTarget.StandaloneWindows);
+                BuildPipeline.BuildAssetBundles(
+                    assetBundleDirectory,
+                    BuildAssetBundleOptions.None,
+                    BuildTarget.StandaloneWindows);
             }
         }
         ```
@@ -69,7 +72,9 @@
         {
             void Start()
             {
-                var myLoadedAssetBundle = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, "myassetBundle"));
+                var myLoadedAssetBundle = AssetBundle.LoadFromFile(
+                    Path.Combine(Application.streamingAssetsPath, "myassetBundle"));
+
                 if (myLoadedAssetBundle == null)
                 {
                     Debug.Log("Failed to load AssetBundle!");
@@ -84,7 +89,6 @@
         ```
         IEnumerator InstantiateObject()
         {
-            // This example points to a local file, but string url could point to any URL you have your AssetBundles hosted at.
             string url = "file:///" + Application.dataPath + "/AssetBundles/" + assetBundleName;
             var request = UnityEngine.Networking.UnityWebRequestAssetBundle.GetAssetBundle(url, 0);
             yield return request.Send();

@@ -236,7 +236,7 @@
     - [***UnityWebRequestAssetBundle***](https://docs.unity3d.com/ScriptReference/Networking.UnityWebRequestAssetBundle.html?_ga=1.259297550.563709772.1479226228)의 [***DownloadHandlerAssetBundle(Unity 5.3 이상)***](https://docs.unity3d.com/ScriptReference/Networking.DownloadHandlerAssetBundle.html?_ga=1.264500235.563709772.1479226228)
 
 
-- ***AssetBundle.LoadFromMemoryAsync***
+- [***AssetBundle.LoadFromMemoryAsync***](https://docs.unity3d.com/ScriptReference/AssetBundle.LoadFromMemoryAsync.html?_ga=1.226802969.563709772.1479226228)
     - 애셋번들 데이터가 포함된 바이트 배열을 사용한다.
     - 번들이 LZMA로 압축된 경우 애셋번들 로드 중에 압축을 해제. LZ4로 압축된 번들은 압축된 상태로 로드.
         ```
@@ -256,7 +256,7 @@
             }
         }
         ```
-- ***AssetBundle.LoadFromFile***
+- [***AssetBundle.LoadFromFile***](https://docs.unity3d.com/ScriptReference/AssetBundle.LoadFromFile.html?_ga=1.259297550.563709772.1479226228)
     - 이 API는 로컬 스토리지에서 압축되지 않은 번들을 로드할 때 매우 효율적이다.
     - LoadFromFile은 번들이 압축되지 않았거나 청크(LZ4) 압축된 경우 번들을 디스크에서 직접 로드한다.
     - 전체가 압축된(LZMA) 번들을 이 메서드로 로드하면 번들을 메모리에 로드하기 전에 압축이 해제된다.
@@ -279,7 +279,7 @@
             }
         }
         ```
-- ***UnityWebRequestAssetBundle***
+- [***UnityWebRequestAssetBundle***](https://docs.unity3d.com/ScriptReference/Networking.UnityWebRequestAssetBundle.html?_ga=1.259297550.563709772.1479226228)
     - 애셋번들을 처리하는 전용 API.
         ```
         using UnityEngine.Networking;
@@ -322,34 +322,33 @@
         yield return request;
         var loadedAssets = request.allAssets;
         ```
+- ***Loading AssetBundle Manifests***
+    - 애셋번들의 종속성을 다루는 경우에 애셋번들 매니페스트를 로드하면 매우 유용할 수 있다.
+        ```
+        AssetBundle assetBundle = AssetBundle.LoadFromFile(manifestFilePath);
+        AssetBundleManifest manifest = assetBundle.LoadAsset<AssetBundleManifest>("AssetBundleManifest");
+        ```
+- 매니페스트 오브젝트를 통해 ***AssetBundleManifest*** API를 호출하여 애셋번들에 대한 정보를 얻을 수 있다.
+- 이 정보에는 에셋 번들에 대한 종속성 데이터, 해시 데이터 및 배리언트 데이터가 포함된다.
+- 아래 코드에서는 이름이 ***“assetBundle”***인 애셋번들의 종속성을 모두 로드한다고 가정하자.
+    ```
+    AssetBundle assetBundle = AssetBundle.LoadFromFile(manifestFilePath);
+    AssetBundleManifest manifest = assetBundle.LoadAsset<AssetBundleManifest>("AssetBundleManifest");
+    string[] dependencies = manifest.GetAllDependencies("assetBundle");
+    foreach(string dependency in dependencies)
+    {
+        AssetBundle.LoadFromFile(Path.Combine(assetBundlePath, dependency));
+    }    
+    ```
 
 
+　
+
+## # Managing Loaded AssetBundles
 
 
-Loading AssetBundle Manifests
-Loading AssetBundle manifests can be incredibly useful. Especially when dealing with AssetBundle dependencies.
-
-To get a useable AssetBundleManifest object, you’ll need to load that additional AssetBundle (the one that’s named the same thing as the folder it’s in) and load an object of type AssetBundleManifest from it.
-
-Loading the manifest itself is done exactly the same as any other Asset from an AssetBundle:
-
-AssetBundle assetBundle = AssetBundle.LoadFromFile(manifestFilePath);
-AssetBundleManifest manifest = assetBundle.LoadAsset<AssetBundleManifest>("AssetBundleManifest");
-Now you have access to the AssetBundleManifest API calls through the manifest object from the above example. From here you can use the manifest to get information about the AssetBundles you built. This information includes dependency data, hash data, and variant data for the AssetBundles.
-
-Remember in the earlier section when we discussed AssetBundle Dependencies and how, if a bundle had a dependency on another bundle, those bundles would need to be loaded in before loading any Assets from the original bundle? The manifest object makes dynamically finding a loading dependencies possible. Let’s say we want to load all the dependencies for an AssetBundle named “assetBundle”.
-
-AssetBundle assetBundle = AssetBundle.LoadFromFile(manifestFilePath);
-AssetBundleManifest manifest = assetBundle.LoadAsset<AssetBundleManifest>("AssetBundleManifest");
-string[] dependencies = manifest.GetAllDependencies("assetBundle"); //Pass the name of the bundle you want the dependencies for.
-foreach(string dependency in dependencies)
-{
-    AssetBundle.LoadFromFile(Path.Combine(assetBundlePath, dependency));
-}
-Now that you’re loading AssetBundles, AssetBundle dependencies, and Assets, it’s time to talk about managing all of these loaded AssetBundles.
-
-
-
+- ***Note:*** *애셋번들을 직접 관리하기보다 [**어드레서블 애셋**](https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/index.html) 사용을 권장합니다.*
+- ***See also:*** *Unity 학습 튜토리얼 참고 - [**Managing Loaded AssetBundles**](https://learn.unity.com/tutorial/assets-resources-and-assetbundles#Managing_Loaded_Assets)*
 
 
 

@@ -198,18 +198,64 @@
     - Unity 엔진은 종속성을 자동으로 로딩하지 않는다.
 
 - ***Consider the following example, a Material in Bundle 1 references a Texture in Bundle 2:***
-    - 번들 1에 있는 ***머티리얼을 로딩하기 전에*** 번들 2를 메모리에 로딩해야 한다. 
+    - 번들 1에 있는 머티리얼을 로딩하기 전에 번들 2를 메모리에 로딩해야 한다. 
     - 번들 1과 번들 2를 로딩하는 순서는 중요하지 않다.
-    - 중요한 것은 번들 1 의 ***머티리얼이 로딩되기 이전에*** 번들 2 가 로딩되어야만 한다는 것이다.
+    - 중요한 것은 번들 1 의 머티리얼이 로딩되기 이전에 번들 2 가 로딩되어야만 한다는 것이다.
 
 - ***Duplicated information across AssetBundles***
     - 기본적으로 Unity는 애셋번들 간의 중복 정보를 최적화하지 않는다.
     - 즉 프로젝트의 여러 애셋번들에 동일한 정보(예: 여러 프리팹에서 사용되는 머티리얼)가 포함될 수 있음을 의미한다.
-    - 여러 애셋번들에서 사용되는 에셋을 공통 에셋이라고 한다.
-    - 공통 에셋은 메모리 리소스와 로딩 시간에 영향을 미칠 수 있다.
-    - 여기서는 Unity가 에셋 번들 간의 중복 정보를 관리하는 방법과 최적화를 적용하는 방법에 대해 설명한다.
+    - 이러한 공통 애셋은 메모리 리소스와 로딩 시간에 영향을 미칠 수 있다.
+    - 여기서는 Unity가 애셋번들 간의 중복 정보를 관리하는 방법과 최적화를 적용하는 방법에 대해 설명한다.
 
+- ***Editor setup***
+    - 기본적으로 Unity는 중복 정보를 저장하는 데 필요한 메모리를 줄이거나 최소화하기 위해 최적화를 수행하지 않는다.
+    - 빌드 생성 중에 Unity는 애셋번들 내에서 암시적으로 참조된 애셋 복제본을 빌드한다.
+    - 이러한 중복을 방지하려면 머티리얼 등과 같은 공통 애셋을 자체 애셋번들에 할당해야한다.
+    - 예를 들어 자체 애셋번들에 할당된 두 개의 프리팹이 있는 애플리케이션이 있을 수 있다.
+    - 이 두 프리팹은 모두 애셋번들에 할당되지 않은 동일한 머티리얼을 공유한다. 
+    - 이 머티리얼은 애셋번들에 할당되지 않은 텍스처를 참조한다.
+    - CreateAssetBundles 예제를 사용하여 애셋번들을 빌드하면, 생성된 각 애셋번들에 머티리얼(해당 셰이더, 참조된 텍스처 포함)이 포함된다.
+    - 아래 이미지에서 보이듯, 프리팹 파일의 크기는 각각 ***383KB***와 ***377KB***이다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundleDuplicate.png)
+    - 프로젝트에 더 많은 수의 Prefab이 포함된 경우 이 동작은 최종 설치 프로그램 크기와 두 AssetBundle이 로드될 때 런타임 메모리 공간에 영향을 미칩니다.
+    - Unity는 동일한 머티리얼의 각 복사본을 고유한 머티리얼로 간주하기 때문에 에셋번들 간의 데이터 중복은 일괄 처리에도 영향을 미칩니다.
+    - 데이터 중복을 방지하려면 머티리얼 및 참조된 자산을 자체 모듈 머티리얼 AssetBundle에 할당하십시오.
+    - 텍스처 종속성은 빌드 프로세스 중에 자동으로 AssetBundle에 포함되기 때문에 Material에만 태그를 지정하면 됩니다.
+    - 이제 AssetBundle을 다시 빌드하면 생성된 출력에 Material 및 관련 Texture가 포함된 별도의 modulematerials AssetBundle(359KB)이 포함됩니다.
+    - 이렇게 하면 Prefab에 대한 다른 AssetBundle의 크기가 크게 줄어듭니다(이전 반복의 약 380KB에서 약 20KB로 감소).
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundleSeparate.png)
 
+- ***Runtime loading***
+    - 공용 애셋을 단일 애셋번들로 만드는 경우 종속성에 주의하세요.
+    - 특히 프리팹을 사용하여 모듈을 인스턴스화하면 머티리얼이 로드되지 않습니다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/MaterialNotLoaded.png)
+    - 이 문제를 해결하려면 모듈에 속한 에셋 번들을 로드하기 전에 머티리얼 에셋 번들을 메모리에 로드하십시오.
+        ```
+        using System.IO;
+        using UnityEngine;
+
+        public class InstantiateAssetBundles : MonoBehaviour
+        {
+            void Start()
+            {
+                var materialsAB = AssetBundle.LoadFromFile(
+                    Path.Combine(Application.dataPath, Path.Combine("AssetBundles", "modulesmaterials")));
+
+                var moduleAB = AssetBundle.LoadFromFile(
+                    Path.Combine(Application.dataPath, Path.Combine("AssetBundles", "example-prefab")));
+
+                if (moduleAB == null)
+                {
+                    Debug.Log("Failed to load AssetBundle!");
+                    return;
+                }
+                var prefab = moduleAB.LoadAsset<GameObject>("example-prefab");
+                Instantiate(prefab);
+            }
+        }
+        ```
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/MaterialLoaded.png)
 
 
 

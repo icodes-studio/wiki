@@ -268,7 +268,9 @@
         {
             void Start()
             {
-                var myLoadedAssetBundle = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, "myassetBundle"));
+                var myLoadedAssetBundle = AssetBundle.LoadFromFile(
+                    Path.Combine(Application.streamingAssetsPath, "myassetBundle"));
+
                 if (myLoadedAssetBundle == null)
                 {
                     Debug.Log("Failed to load AssetBundle!");
@@ -346,18 +348,38 @@
 
 ## # Managing Loaded AssetBundles
 
-
 - ***Note:*** *애셋번들을 직접 관리하기보다 [**어드레서블 애셋**](https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/index.html) 사용을 권장합니다.*
 - ***See also:*** *Unity 학습 튜토리얼 참고 - [**Managing Loaded AssetBundles**](https://learn.unity.com/tutorial/assets-resources-and-assetbundles#Managing_Loaded_Assets)*
 
-
-
-
-
-
-
-
-
+- ***AssetBundle.Unload***
+    - Unity에서는 오브젝트가 액티브 씬에서 제거될 경우 자동으로 언로드되지 않습니다.
+    - 에셋 정리는 특정 시간에 실행되고, 수동으로 실행할 수도 있습니다.
+    - 에셋 번들을 로드하고 언로드할 시기를 아는 것은 중요합니다.
+    - 에셋 번들을 잘못 언로드하면 메모리에 오브젝트가 중복으로 저장되거나 텍스처가 누락되는 등의 바람직하지 않은 상황이 발생할 수 있습니다.
+    - 에셋 번들 관리에 대해 알아야 하는 가장 중요한 것은 AssetBundle.Unload(bool) 또는 AssetBundle.UnloadAsync(bool)을 호출해야 하는 시기입니다.
+    - 그리고 true 또는 false를 함수 호출에 전달해야 하는지 여부도 중요합니다.
+    - 언로드는 에셋 번들을 언로드하는 함수로, 정적이지 않습니다.
+    - 이 API는 호출되는 에셋 번들의 헤더 정보를 언로드합니다.
+    - 인수는 에셋 번들에서 인스턴스화하는 모든 오브젝트도 언로드해야 하는지 나타냅니다.
+    - AssetBundle.Unload(true)는 AssetBundle에서 로드된 모든 게임 오브젝트 및 해당 종속성을 언로드합니다.
+    - 복사된 게임 오브젝트(예: 인스턴스화된 게임 오브젝트)는 더 이상 AssetBundle에 속하지 않기 때문에 여기에 포함되지 않습니다.
+    - 이러한 경우가 발생하면 해당 AssetBundle에서 로드되고 여기에 여전히 속해 있는 텍스처가 씬의 게임 오브젝트에서 사라지고 Unity에서 누락 텍스처로 취급됩니다.
+    - 아래 그림과 같이 머티리얼 M이 에셋 번들 AB에서 로드되어 프리팹 P에서 사용된다고 가정해 보겠습니다.
+    - AB.Unload(true)가 호출될 경우 액티브 씬에 있는 M의 모든 인스턴스도 언로드되고 제거됩니다.
+    - AB.Unload(false)를 대신 호출할 경우 M과 AB의 현재 인스턴스 체인이 끊어집니다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundles-Native-1.png)
+    - 나중에 AB가 다시 로드되고 AB.LoadAsset()이 호출될 경우, Unity는 M의 기존 복사본을 새로 로드된 머티리얼에 다시 연결하지 않습니다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundles-Native-2.png)
+    - 프리팹 P의 다른 인스턴스를 생성한 경우 M의 기존 복사본을 사용하지 않습니다. 대신 M 복사본 두 개가 로드됩니다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundles-Native-3.png)
+    - AssetBundle.Unload(false)를 사용하면 일반적으로 이상적인 상황으로 이어지지 않습니다.
+    - 대부분의 프로젝트에서는 AssetBundle.Unload(true)를 사용하고 오브젝트가 중복되지 않도록 하는 메서드를 채택해야 합니다.
+    - 일반적으로 다음 두 가지 메서드가 사용됩니다.
+        - 애플리케이션 수명 중에 임시 에셋 번들이 언로드되는 시점(예: 레벨 간 또는 화면 로딩 중)을 분명히 정의하는 방법
+        - 개별 오브젝트에 대해 레퍼런스 카운트를 유지하고 모든 구성 오브젝트가 사용되지 않을 때만 에셋 번들을 언로드하는 방법. 이 방법을 사용하면 애플리케이션이 메모리 중복 없이 개별 오브젝트를 언로드하고 다시 로드할 수 있습니다.
+    - 애플리케이션이 AssetBundle.Unload(false)를 사용해야 하는 경우 개별 오브젝트를 다음 두 가지 방법으로만 언로드할 수 있습니다.
+        - 원치 않는 오브젝트에 대한 모든 레퍼런스를 씬과 코드에서 모두 제거하는 방법. 이 작업을 수행한 후 Resources.UnloadUnusedAssets를 호출합니다.
+        - 씬을 추가하지 않고 로드하는 방법. 이 방법을 사용하면 현재 씬의 모든 오브젝트가 제거되고 Resources.UnloadUnusedAssets이 자동으로 호출됩니다.
 
 
 

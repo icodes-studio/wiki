@@ -127,10 +127,10 @@
         - ***LZMA*** 압축을 사용하는 것은 파일 크기가 작기 때문에 외부 호스트에서 AssetBundle을 다운로드하는 경우만 권장된다.
         - ***LZMA*** 애셋번들이 로드되어 압축 해제되면 이어서 자동으로 ***LZ4*** 압축으로 다시 압축되고 로컬 파일 시스템에 캐시된다.
     - ***BuildAssetBundleOptions.UncompressedAssetBundle***
-        - 전혀 압축되지 않는 방식으로 번들을 빌드한다. 
+        - 압축되지 않는 방식으로 번들을 빌드한다. 
         - 다운로드할 파일 크기가 크다는 단점이 있지만, 다운로드된 파일을 로드하는 속도는 빠르다.
     - ***BuildAssetBundleOptions.ChunkBasedCompression***
-        - 이 번들 옵션은 LZ4 압축 메서드를 사용한다.
+        - ***LZ4*** 압축 메서드를 사용한다.
         - LZMA 압축 포맷보다 압축된 파일 크기가 크지만 애셋을 사용하기 전에 모든 번들의 압축을 풀 필요가 없어 좀 더 빠르다.
         - 또한 압축되지 않은 번들과 비슷한 로드 속도를 가지게 되지만 디스크의 용량은 적게 차지한다.
 - [***BuildTarget***](https://docs.unity3d.com/kr/2022.3/ScriptReference/BuildTarget.html)

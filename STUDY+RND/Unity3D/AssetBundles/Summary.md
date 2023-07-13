@@ -199,10 +199,9 @@
     - 공용 번들인 modulematerials AssetBundle(359KB)이 새로 포함되고 각 번들의 크기는 약 380KB에서 약 20KB로 감소.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundleSeparate.png)
 - ***Runtime loading***
-    - 공용 애셋을 단일 애셋번들로 만드는 경우 종속성에 주의하세요.
-    - 특히 프리팹을 사용하여 모듈을 인스턴스화하면 머티리얼이 로드되지 않습니다.
+    - 공용 애셋을 단일 애셋번들로 만들어 사용하는 경우 종속성에 주의해서 로드해야 한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/MaterialNotLoaded.png)
-    - 이 문제를 해결하려면 모듈에 속한 에셋 번들을 로드하기 전에 머티리얼 에셋 번들을 메모리에 로드하십시오.
+    - 이 문제를 해결하려면 모듈 애셋번들을 로드하기 전에 머티리얼 에셋 번들을 로드해야 한다.
         ```
         using System.IO;
         using UnityEngine;

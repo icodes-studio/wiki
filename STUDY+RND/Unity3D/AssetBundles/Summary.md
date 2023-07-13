@@ -14,7 +14,7 @@
 ## # AssetBundle workflow
 
 - ***Note:***
-    - *여기서는 빌트인 BuildPipeline.BuildAssetBundles() API를 사용하여 애셋번들을 생성하는 방법을 설명한다.*
+    - *여기서는 빌트인 **BuildPipeline.BuildAssetBundles()** API를 사용하여 애셋번들을 생성하는 방법을 설명한다.*
     - *권장되는 방법은 [**어드레서블 패키지(Addressables package)**](https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/index.html)를 사용하는 것이다.*
 
 

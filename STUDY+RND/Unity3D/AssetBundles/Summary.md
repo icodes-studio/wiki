@@ -326,6 +326,34 @@
 
 
 
+Loading AssetBundle Manifests
+Loading AssetBundle manifests can be incredibly useful. Especially when dealing with AssetBundle dependencies.
+
+To get a useable AssetBundleManifest object, you’ll need to load that additional AssetBundle (the one that’s named the same thing as the folder it’s in) and load an object of type AssetBundleManifest from it.
+
+Loading the manifest itself is done exactly the same as any other Asset from an AssetBundle:
+
+AssetBundle assetBundle = AssetBundle.LoadFromFile(manifestFilePath);
+AssetBundleManifest manifest = assetBundle.LoadAsset<AssetBundleManifest>("AssetBundleManifest");
+Now you have access to the AssetBundleManifest API calls through the manifest object from the above example. From here you can use the manifest to get information about the AssetBundles you built. This information includes dependency data, hash data, and variant data for the AssetBundles.
+
+Remember in the earlier section when we discussed AssetBundle Dependencies and how, if a bundle had a dependency on another bundle, those bundles would need to be loaded in before loading any Assets from the original bundle? The manifest object makes dynamically finding a loading dependencies possible. Let’s say we want to load all the dependencies for an AssetBundle named “assetBundle”.
+
+AssetBundle assetBundle = AssetBundle.LoadFromFile(manifestFilePath);
+AssetBundleManifest manifest = assetBundle.LoadAsset<AssetBundleManifest>("AssetBundleManifest");
+string[] dependencies = manifest.GetAllDependencies("assetBundle"); //Pass the name of the bundle you want the dependencies for.
+foreach(string dependency in dependencies)
+{
+    AssetBundle.LoadFromFile(Path.Combine(assetBundlePath, dependency));
+}
+Now that you’re loading AssetBundles, AssetBundle dependencies, and Assets, it’s time to talk about managing all of these loaded AssetBundles.
+
+
+
+
+
+
+
 
 
 

@@ -154,7 +154,7 @@
 - ***The AssetBundle File***
     - 이 파일은 .manifest 확장자가 없는 파일로서 에셋을 로드하기 위해 런타임 시점에 로드해야 하는 파일이다.
     - 에셋 번들 파일은 다수의 파일을 내부적으로 포함하는 아카이브이다. 
-        > ![](AssetBundles-Building-0.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundles-Building-0.png)
 
 - ***The Manifest File***
     - 번들에 대한 CRC(Cyclic Redundancy Check) 데이터 및 종속성 데이터와 같은 정보가 포함된다. 

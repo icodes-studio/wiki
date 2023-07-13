@@ -297,36 +297,32 @@
         }
         ```
 - **Loading Assets from AssetBundles**
-    - 이제 애셋번들을 성공적으로 다운로드했으므로, 마침내 애셋을 여러 개 로드할 수 있습니다.
-    - 일반 코드 스니핏:
+    - 애셋번들로부터 애셋 로드하기
         ```
         T objectFromBundle = bundleObject.LoadAsset<T>(assetName);
         ```
-    - T는 로드하려는 애셋 타입입니다.
-    - 애셋 로드 방법을 결정할 때 선택할 수 있는 몇 가지 옵션이 있습니다. LoadAsset 및 LoadAllAssets와 각각에 Async를 추가한 LoadAssetAsync 또는 LoadAllAssetsAsync를 선택할 수 있습니다.
-    - 애셋번들에서 애셋을 동기식으로 로드하는 방법은 다음과 같습니다.
-    - 단일 게임 오브젝트를 로드하려면 다음을 사용합니다.
+    - ***LoadAsset*** 및 ***LoadAllAssets*** 각각에 Async를 추가한 ***LoadAssetAsync*** 또는 ***LoadAllAssetsAsync***를 선택할 수 있다.
+    - 동기 방식으로 애셋 하나 로드하기
         ```
         GameObject gameObject = loadedAssetBundle.LoadAsset<GameObject>(assetName);
         ```
-    - 모든 애셋을 로드하려면 다음을 사용합니다.
+    - 동기 방식으로 모든 애셋 로드하기
         ```
         Unity.Object[] objectArray = loadedAssetBundle.LoadAllAssets();
         ```
-    - 이전에 학습한 메서드에서는 로드 중인 오브젝트의 타입이나 오브젝트의 배열을 반환하지만, 비동기식 방법에서는 AssetBundleRequest를 반환합니다.
-    - 애셋에 액세스하고자 할 경우 이 작업이 완료될 때까지 기다려야 합니다. 애셋을 로드하려면 다음을 사용합니다.
+    - 비동기 방식으로 애셋 하나 로드하기
         ```
         AssetBundleRequest request = loadedAssetBundleObject.LoadAssetAsync<GameObject>(assetName);
         yield return request;
         var loadedAsset = request.asset;
         ```
-        And
+    - 비동기 방식으로 모든 애셋 로드하기
         ```
         AssetBundleRequest request = loadedAssetBundle.LoadAllAssetsAsync();
         yield return request;
         var loadedAssets = request.allAssets;
         ```
-    - 애셋을 다운로드한 후 곧바로 시작할 수 있습니다! 로드된 오브젝트는 Unity의 다른 모든 오브젝트처럼 사용할 수 있습니다.
+
 
 
 

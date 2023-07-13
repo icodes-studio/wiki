@@ -197,7 +197,7 @@
 - ***Runtime loading***
     - 공용 애셋을 단일 애셋번들로 만들어 사용하는 경우 종속성에 주의해서 로드해야 한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/MaterialNotLoaded.png)
-    - 이 문제를 해결하려면 모듈 애셋번들을 로드하기 전에 머티리얼 에셋 번들을 로드해야 한다.
+    - 이 문제를 해결하려면 모듈 애셋번들을 로드하기 전에 머티리얼 애셋번들을 로드해야 한다.
         ```
         using System.IO;
         using UnityEngine;
@@ -229,7 +229,114 @@
 
 ## # Using AssetBundles Natively
 
-- ***...***
+- ***애셋 번들 로드 API***
+    - [***AssetBundle.LoadFromMemoryAsync***](https://docs.unity3d.com/ScriptReference/AssetBundle.LoadFromMemoryAsync.html?_ga=1.226802969.563709772.1479226228)
+    - [***AssetBundle.LoadFromFile***](https://docs.unity3d.com/ScriptReference/AssetBundle.LoadFromFile.html?_ga=1.259297550.563709772.1479226228)
+    - [***WWW.LoadfromCacheOrDownload***](https://docs.unity3d.com/ScriptReference/WWW.LoadFromCacheOrDownload.html?_ga=1.226802969.563709772.1479226228)
+    - [***UnityWebRequestAssetBundle***](https://docs.unity3d.com/ScriptReference/Networking.UnityWebRequestAssetBundle.html?_ga=1.259297550.563709772.1479226228)의 [***DownloadHandlerAssetBundle(Unity 5.3 이상)***](https://docs.unity3d.com/ScriptReference/Networking.DownloadHandlerAssetBundle.html?_ga=1.264500235.563709772.1479226228)
+
+
+- ***AssetBundle.LoadFromMemoryAsync***
+    - 애셋번들 데이터가 포함된 바이트 배열을 사용한다.
+    - 번들이 LZMA로 압축된 경우 애셋번들 로드 중에 압축을 해제. LZ4로 압축된 번들은 압축된 상태로 로드.
+        ```
+        using UnityEngine;
+        using System.Collections;
+        using System.IO;
+
+        public class Example : MonoBehaviour
+        {
+            IEnumerator LoadFromMemoryAsync(string path)
+            {
+                AssetBundleCreateRequest createRequest = AssetBundle.LoadFromMemoryAsync(File.ReadAllBytes(path));
+                yield return createRequest;
+                AssetBundle bundle = createRequest.assetBundle;
+                var prefab = bundle.LoadAsset<GameObject>("MyObject");
+                Instantiate(prefab);
+            }
+        }
+        ```
+- ***AssetBundle.LoadFromFile***
+    - 이 API는 로컬 스토리지에서 압축되지 않은 번들을 로드할 때 매우 효율적이다.
+    - LoadFromFile은 번들이 압축되지 않았거나 청크(LZ4) 압축된 경우 번들을 디스크에서 직접 로드한다.
+    - 전체가 압축된(LZMA) 번들을 이 메서드로 로드하면 번들을 메모리에 로드하기 전에 압축이 해제된다.
+        ```
+        using System.IO;
+        using UnityEngine;
+
+        public class LoadFromFileExample : MonoBehaviour
+        {
+            void Start()
+            {
+                var myLoadedAssetBundle = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, "myassetBundle"));
+                if (myLoadedAssetBundle == null)
+                {
+                    Debug.Log("Failed to load AssetBundle!");
+                    return;
+                }
+                var prefab = myLoadedAssetBundle.LoadAsset<GameObject>("MyObject");
+                Instantiate(prefab);
+            }
+        }
+        ```
+- ***UnityWebRequestAssetBundle***
+    - 애셋번들을 처리하는 전용 API.
+        ```
+        using UnityEngine.Networking;
+
+        IEnumerator InstantiateObject()
+        {
+            string uri = "file:///" + Application.dataPath + "/AssetBundles/" + assetBundleName; 
+            UnityWebRequestAssetBundle request = UnityWebRequestAssetBundle.GetAssetBundle(uri, 0);
+            yield return request.SendWebRequest();
+            AssetBundle bundle = DownloadHandlerAssetBundle.GetContent(request);
+            GameObject cube = bundle.LoadAsset<GameObject>("Cube");
+            GameObject sprite = bundle.LoadAsset<GameObject>("Sprite");
+            Instantiate(cube);
+            Instantiate(sprite);
+        }
+        ```
+- **Loading Assets from AssetBundles**
+    - 이제 애셋번들을 성공적으로 다운로드했으므로, 마침내 애셋을 여러 개 로드할 수 있습니다.
+    - 일반 코드 스니핏:
+        ```
+        T objectFromBundle = bundleObject.LoadAsset<T>(assetName);
+        ```
+    - T는 로드하려는 애셋 타입입니다.
+    - 애셋 로드 방법을 결정할 때 선택할 수 있는 몇 가지 옵션이 있습니다. LoadAsset 및 LoadAllAssets와 각각에 Async를 추가한 LoadAssetAsync 또는 LoadAllAssetsAsync를 선택할 수 있습니다.
+    - 애셋번들에서 애셋을 동기식으로 로드하는 방법은 다음과 같습니다.
+    - 단일 게임 오브젝트를 로드하려면 다음을 사용합니다.
+        ```
+        GameObject gameObject = loadedAssetBundle.LoadAsset<GameObject>(assetName);
+        ```
+    - 모든 애셋을 로드하려면 다음을 사용합니다.
+        ```
+        Unity.Object[] objectArray = loadedAssetBundle.LoadAllAssets();
+        ```
+    - 이전에 학습한 메서드에서는 로드 중인 오브젝트의 타입이나 오브젝트의 배열을 반환하지만, 비동기식 방법에서는 AssetBundleRequest를 반환합니다.
+    - 애셋에 액세스하고자 할 경우 이 작업이 완료될 때까지 기다려야 합니다. 애셋을 로드하려면 다음을 사용합니다.
+        ```
+        AssetBundleRequest request = loadedAssetBundleObject.LoadAssetAsync<GameObject>(assetName);
+        yield return request;
+        var loadedAsset = request.asset;
+        ```
+        And
+        ```
+        AssetBundleRequest request = loadedAssetBundle.LoadAllAssetsAsync();
+        yield return request;
+        var loadedAssets = request.allAssets;
+        ```
+    - 애셋을 다운로드한 후 곧바로 시작할 수 있습니다! 로드된 오브젝트는 Unity의 다른 모든 오브젝트처럼 사용할 수 있습니다.
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -267,7 +374,7 @@
 
 　
 
-- [Official: 어드레서블 에셋 시스템](https://blog.unity.com/kr/games/addressable-asset-system)
+- [Official: 어드레서블 애셋 시스템](https://blog.unity.com/kr/games/addressable-asset-system)
 - [Official: Addressables-Sample](https://github.com/Unity-Technologies/Addressables-Sample)
 
 　
@@ -277,9 +384,9 @@
 - https://www.youtube.com/playlist?list=PLmRK0lH8TNCo7K4xmLpEov4llbVTwf29s
 
 - [유니티(Unity) - Addressable(어드레서블) 사용법(1). 설치 및 준비](https://blog.naver.com/cdw0424/221636733877)
-- [유니티(Unity) - Addressable(어드레서블) 사용법(2). 에셋 로드](https://blog.naver.com/cdw0424/221636783259)
+- [유니티(Unity) - Addressable(어드레서블) 사용법(2). 애셋 로드](https://blog.naver.com/cdw0424/221636783259)
 - [유니티(Unity) - Addressable(어드레서블) 사용법(3). 프로파일러와 디버깅](https://blog.naver.com/cdw0424/221636822258)
-- [유니티(Unity) - Addressable(어드레서블) 사용법(4). 에셋 언로드](https://blog.naver.com/cdw0424/221637349195)
+- [유니티(Unity) - Addressable(어드레서블) 사용법(4). 애셋 언로드](https://blog.naver.com/cdw0424/221637349195)
 - [유니티(Unity) - Addressable(어드레서블) 사용법(5). 씬 로드와 언로드](https://blog.naver.com/cdw0424/221637763395)
 - [유니티(Unity) - Addressable(어드레서블) 사용법(6). 빌드 후 실제 사용](https://blog.naver.com/cdw0424/221638017138)
 - [유니티(Unity) - Addressable(어드레서블) 사용법(7). 서버에서 다운로드하기 1편](https://blog.naver.com/cdw0424/221755856111)
@@ -289,9 +396,9 @@
 
 　
 
-- [유니티(Unity) - Addressables(어드레서블) 에셋](https://blog.naver.com/cdw0424/221630503021)
+- [유니티(Unity) - Addressables(어드레서블) 애셋](https://blog.naver.com/cdw0424/221630503021)
 - [유니티(Unity) - Addressables.MergeMode](https://blog.naver.com/cdw0424/221637975547)
-- [유니티(Unity) - Addressables.DownloadDependenciesAsync(오브젝트에 종속된 에셋들 가져오기)](https://blog.naver.com/cdw0424/221651296509)
+- [유니티(Unity) - Addressables.DownloadDependenciesAsync(오브젝트에 종속된 애셋들 가져오기)](https://blog.naver.com/cdw0424/221651296509)
 - [유니티(Unity) - 어드레서블(Addressables)로 게임시작시 콘텐츠 다운로드 하는 법](https://blog.naver.com/cdw0424/221715381599)
 - [유니티(Unity) - 어드레서블 소개 영상보기](https://blog.naver.com/cdw0424/221721464836)
 - [유니티(Unity) - 어드레서블 LoadAssetAsync() 사용법 영상보기](https://blog.naver.com/cdw0424/221725042422)

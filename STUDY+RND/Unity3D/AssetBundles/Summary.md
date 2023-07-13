@@ -36,7 +36,7 @@
 　
 
 - ***Build the AssetBundles***
-    - Assets 폴더에서 Editor 폴더를 생성하고, 폴더에 다음과 같은 콘텐츠의 스크립트를 입력합니다.
+    - ***Assets*** 폴더에서 ***Editor*** 폴더를 생성하고, 폴더에 다음과 같은 콘텐츠의 스크립트를 입력합니다.
         ```
         using UnityEditor;
         using System.IO;
@@ -60,7 +60,6 @@
     - 이 스크립트는 Assets 메뉴 하단에 작성한 코드를 실행하는 ***Build AssetBundles*** 메뉴 아이템을 생성한다.
     - Build AssetBundles 항목을 클릭하면 빌드 다이얼로그와 함께 진행 표시줄이 표시된다.
     - 이렇게 하면 에셋번들 이름으로 레이블이 지정된 모든 에셋을 가져와서 assetBundleDirectory에 정의된 경로의 폴더에 배치한다.
-    - For more details about this, see documentation on Building AssetBundles.
 
 
 　
@@ -85,7 +84,7 @@
             }
         }
         ```
-    - 원격지로부터 로드하거나 로컬 파일에 바로 접근할 수 없는 플랫폼의 경우 UnityWebRequestAssetBundle API를 사용한다.
+    - 원격지로부터 로드하거나 로컬 파일에 바로 접근할 수 없는 플랫폼의 경우 ***UnityWebRequestAssetBundle*** API를 사용한다.
         ```
         IEnumerator InstantiateObject()
         {
@@ -101,10 +100,38 @@
         ```
 
 
+　
 
+## # Preparing Assets for AssetBundles
+    ● There are certain strategies to consider when setting up your bundles.
+    ● These grouping strategies are meant to be used however you see fit for your specific project.
+    ● Feel free to mix and match these strategies as you see fit.
 
+- ***Logical Entity Grouping***
+    - 프로젝트 관점에서, 애셋의 기능적인 부분에 따라 애셋번들을 그룹핑 하는 방법.
+    - 여기에는 사용자 인터페이스, 캐릭터, 환경, 그리고 애플리케이션 라이프 사이클 내내 자주 나타날 수 있는 모든 것이 포함된다.
+    - 모든 것이 컨텐츠에 따라 논리적으로 구분되어 있으므로 DLC(DownLoadable Content)에 적합하다.
+    - 번들을 만드는 개발자가 프로젝트와 컨텐츠의 구현에 대해(애셋이 사용되는 시기와 위치) 정확히 알고 있어야 한다.
+    - ***Examples***
+        > - 사용자 인터페이스 화면의 모든 텍스처 및 레이아웃 데이터 번들링
+        > - 캐릭터에 대한 모든 모델 및 애니메이션 번들링
+        > - 게임 레벨 스테이지 간에 공통으로 사용되는 배경에 대한 텍스쳐 및 모델 데이터 번틀링
 
+- ***Type Grouping***
+    - 오디오 트랙이나 언어팩 파일 등 타입이 비슷한 에셋을 하나의 에셋 번들에 할당한다.
+    - 여러 플랫폼에서 사용될 에셋 번들을 빌드하는 데 상대적으로 효과적인 전략 중 하나이다.
 
+- ***Concurrent Content Grouping***
+    - 동시에 로드되고 사용될 에셋을 하나의 번들로 묶는 개념. 가장 일반적인 이용 사례는 씬 기반 번들.
+    - 애셋번들 내 한 애셋이 해당 번들의 다른 애셋에 동시에 사용된다는 것을 확신하는 경우.
+    - 번들에 포함된 애셋 하나에 종속성이 있으면 로드 시간이 크게 증가한다.
+
+- ***어떤 전략을 따르든 관계없이, 아래의 추가 팁을 항상 염두에 두는 것이 좋다.***
+    - 자주 업데이트되는 오브젝트는 변경 빈도가 낮은 오브젝트와 별개의 애셋번들로 나누어라.
+    - 동시에 로드될 가능성이 큰 오브젝트(모델, 텍스처 및 애니메이션 등)를 그룹화하라.
+    - 애셋번들 간에 공통으로 사용하는 애셋은 별도의 공용 에셋 번들로 종속성을 옮겨라.
+    - SD 또는 HD 에셋처럼 두 오브젝트 집합이 동시에 로드될 가능성이 거의 없는 경우 각기 다른 애셋번들로 나누어라.
+    - 오브젝트 그룹이 단순히 같은 오브젝트의 다른 버전에 불과할 경우, 애셋번들 배리언트(Variant)를 고려하라.
 
 
 

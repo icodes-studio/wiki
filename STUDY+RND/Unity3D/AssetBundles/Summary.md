@@ -181,10 +181,9 @@
 ## # AssetBundle Dependencies
 
 - ***Note***
-    - UnityEngine.Objects 중 하나 이상이 다른 번들에 있는 UnityEngine.Object에 대한 참조를 포함하는 경우 해당 애셋번들은 다른 애셋번들에 종속성이 생긴다.
-    - 하지만, UnityEngine.Object가 애셋번들에 포함되지 않은 UnityEngine.Object에 대한 참조를 포함하는 경우는 종속성이 발생하지 않는다. 이 경우 번들이 의존하는 오브젝트의 복사본은 애셋번들을 빌드할 때 복사된다.
-    - 애셋번들이 종속성을 포함하는 경우, 인스턴스화하는 오브젝트가 로딩되기 이전에 종속성을 가지는 번들이 로딩되도록 해야 한다.
-    - Unity 엔진은 종속성을 자동으로 로딩하지 않는다.
+    - Objects 중 하나 이상이 다른 번들에 있는 Object에 대한 참조를 포함하는 경우 해당 애셋번들은 다른 애셋번들에 종속성이 생긴다.
+    - 하지만, 애셋번들에 포함되지 않은 Object에 대한 참조를 하는 경우는 종속성이 발생하지 않는다. 단순 복사된다.
+    - Unity 엔진은 이러한 애셋번들 간의 종속성을 자동으로 로딩하지 않는다.
 - ***Consider the following example, a Material in Bundle 1 references a Texture in Bundle 2:***
     - 번들 1에 있는 머티리얼을 로딩하기 전에 번들 2를 메모리에 로딩해야 한다. 
     - 번들 1과 번들 2를 로딩하는 순서는 중요하지 않다.
@@ -193,19 +192,11 @@
     - 기본적으로 Unity는 애셋번들 간의 중복 정보를 최적화하지 않는다.
     - 즉 프로젝트의 여러 애셋번들에 동일한 정보(예: 여러 프리팹에서 사용되는 머티리얼)가 포함될 수 있음을 의미한다.
     - 이러한 공통 애셋은 메모리 리소스와 로딩 시간에 영향을 미칠 수 있다.
-    - 여기서는 Unity가 애셋번들 간의 중복 정보를 관리하는 방법과 최적화를 적용하는 방법에 대해 설명한다.
 - ***Editor setup***
-    - 기본적으로 Unity는 중복 정보를 저장하는 데 필요한 메모리를 줄이거나 최소화하기 위해 최적화를 수행하지 않는다.
-    - 예를 들어, 애셋번들로 만든 두 개의 프리팹이 애셋번들에 할당되지 않은 동일한 머티리얼을 공유하고
-    - 이 머티리얼은 애셋번들에 할당되지 않은 텍스처를 참조한다면,
-    - 각 애셋번들에 머티리얼(해당 셰이더, 참조된 텍스처 포함)이 포함된다.
-    - 즉, 아래 이미지에서 보이듯, 프리팹 파일의 크기는 각각 ***383KB***와 ***377KB***이다.
+    - 위와 같은 상황을 실제로 테스트 해보면 각 번들의 크기는 각각 ***383KB***와 ***377KB***이다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundleDuplicate.png)
-    - 이러한 중복을 방지하려면 머티리얼 등과 같은 공통 애셋을 별도 애셋번들에 할당해야한다.
-    - 텍스처 종속성은 빌드 프로세스 중에 자동으로 AssetBundle에 포함되기 때문에 머티리얼에만 태그를 지정하면 된다.
-    - 이렇게 해서 다시 빌드하면, 생성된 출력에 Material 및 관련 Texture가 포함된 별도의 modulematerials AssetBundle(359KB)이 포함된다.
-    - 또한 Prefab에 대한 다른 AssetBundle의 크기가 크게 줄어든다.
-    - 이전 반복의 약 380KB에서 약 20KB로 감소.
+    - 반면, 머티리얼 등과 같은 공통 애셋을 별도 애셋번들로 만들고 빌드하면,
+    - 공용 머티리얼이 포함된 별도의 modulematerials AssetBundle(359KB)이 새로 포함되고 각 번들의 크기는 약 380KB에서 약 20KB로 감소.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundleSeparate.png)
 - ***Runtime loading***
     - 공용 애셋을 단일 애셋번들로 만드는 경우 종속성에 주의하세요.

@@ -22,8 +22,8 @@
 
 - ***Assigning Assets to AssetBundles***
     - 프로젝트 뷰에서 번들에 할당할 에셋을 선택.
-    - 인스펙터 하단에 왼쪽 드롭다운을 사용하여 에셋 번들을 할당하고, 오른쪽 드롭다운을 사용하여 배리언트(Variant)를 할당한다.
-    - 새 애셋번들을 생성 하려면 New 버튼을 클릭하고 원하는 애셋번들 이름을 입력한다.
+    - 인스펙터 하단에 왼쪽 드롭다운을 사용하여 에셋번들 이름을 할당하고, 오른쪽 드롭다운을 사용하여 배리언트(Variant)를 할당한다.
+    - 새 애셋번들 이름을 생성 하려면 New 버튼 클릭하고 이름 입력.
     - 하위 폴더를 추가하려면 /를 이용해 폴더 이름을 구분한다.
 
 
@@ -35,7 +35,7 @@
 
 　
 
-- **에셋 번들 빌드**
+- ***Build the AssetBundles***
     - Assets 폴더에서 Editor 폴더를 생성하고, 폴더에 다음과 같은 콘텐츠의 스크립트를 입력합니다.
         ```
         using UnityEditor;
@@ -47,66 +47,55 @@
             static void BuildAllAssetBundles()
             {
                 string assetBundleDirectory = "Assets/AssetBundles";
-                if(!Directory.Exists(assetBundleDirectory))
-                {
+                if (Directory.Exists(assetBundleDirectory) == false)
                     Directory.CreateDirectory(assetBundleDirectory);
-                }
-                BuildPipeline.BuildAssetBundles(assetBundleDirectory, 
-                                                BuildAssetBundleOptions.None, 
-                                                BuildTarget.StandaloneWindows);
+
+                BuildPipeline.BuildAssetBundles(assetBundleDirectory, BuildAssetBundleOptions.None, BuildTarget.StandaloneWindows);
             }
         }
         ```
-    - 이 스크립트는 해당 태그와 관련된 함수에서 코드를 실행하는 Build AssetBundles 라는 에셋 메뉴의 하단에 메뉴 아이템을 생성합니다.
-    - Build AssetBundles 를 클릭하면 빌드 다이얼로그와 함께 진행 표시줄이 표시됩니다.
-    - 이렇게 하면 에셋 번들 이름으로 레이블이 지정된 모든 에셋을 가져와서 assetBundleDirectory에 정의된 경로의 폴더에 배치합니다.
+    - 이 스크립트는 Assets 메뉴 하단에 작성한 코드를 실행하는 ***Build AssetBundles*** 메뉴 아이템을 생성한다.
+    - Build AssetBundles 항목을 클릭하면 빌드 다이얼로그와 함께 진행 표시줄이 표시된다.
+    - 이렇게 하면 에셋번들 이름으로 레이블이 지정된 모든 에셋을 가져와서 assetBundleDirectory에 정의된 경로의 폴더에 배치한다.
+    - For more details about this, see documentation on Building AssetBundles.
 
 
 　
 
-
-Note: You can also define the content of AssetBundles programmatically instead of using the Inspector-based method described above. This is available by using a signature of BuildPipeline.BuildAssetBundles that accepts an array of AssetBundleBuild structures. In that case the list of desired Assets for each bundle are passed in, and any assignment to AssetBundles made in the Inspector is ignored.
-
-이에 관한 자세한 내용은 에셋 번들 빌드 문서를 참조하십시오.
-
-에셋 번들 및 에셋 로딩
-로컬 스토리지에서 로드하려는 경우 다음과 같은 AssetBundles.LoadFromFile API를 사용하십시오.
-
-public class LoadFromFileExample : MonoBehaviour {
-    void Start() {
-        var myLoadedAssetBundle 
-            = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, "myassetBundle"));
-        if (myLoadedAssetBundle == null) {
-            Debug.Log("Failed to load AssetBundle!");
-            return;
+- ***Loading AssetBundles and Assets***
+    - 로컬 스토리지에서 로드하려는 경우 ***AssetBundles.LoadFromFile*** API를 사용한다.
+        ```
+        public class LoadFromFileExample : MonoBehaviour
+        {
+            void Start()
+            {
+                var myLoadedAssetBundle = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, "myassetBundle"));
+                if (myLoadedAssetBundle == null)
+                {
+                    Debug.Log("Failed to load AssetBundle!");
+                    return;
+                }
+                var prefab = myLoadedAssetBundle.LoadAsset<GameObject>("MyObject");
+                Instantiate(prefab);
+            }
         }
-        var prefab = myLoadedAssetBundle.LoadAsset<GameObject>("MyObject");
-        Instantiate(prefab);
-    }
-}
-LoadFromFile은 번들 파일의 경로를 가져옵니다.
+        ```
+    - 원격지로부터 로드하거나 로컬 파일에 바로 접근할 수 없는 플랫폼(eg. 안드로이드)의 경우 UnityWebRequestAssetBundle API를 사용한다.
+        ```
+        IEnumerator InstantiateObject()
+        {
+            // This example points to a local file, but string url could point to any URL you have your AssetBundles hosted at.
+            string url = "file:///" + Application.dataPath + "/AssetBundles/" + assetBundleName;
+            var request = UnityEngine.Networking.UnityWebRequestAssetBundle.GetAssetBundle(url, 0);
+            yield return request.Send();
+            AssetBundle bundle = UnityEngine.Networking.DownloadHandlerAssetBundle.GetContent(request);
+            GameObject cube = bundle.LoadAsset<GameObject>("Cube");
+            GameObject sprite = bundle.LoadAsset<GameObject>("Sprite");
+            Instantiate(cube);
+            Instantiate(sprite);
+        }
+        ```
 
-If your AssetBundles are hosted online, or you are running on a platform that does not support direct file system access, then use the UnityWebRequestAssetBundle API. Here’s an example:
-
-IEnumerator InstantiateObject()
-{
-    string url = "file:///" + Application.dataPath + "/AssetBundles/" + assetBundleName;        
-    var request 
-        = UnityEngine.Networking.UnityWebRequestAssetBundle.GetAssetBundle(url, 0);
-    yield return request.Send();
-    AssetBundle bundle = UnityEngine.Networking.DownloadHandlerAssetBundle.GetContent(request);
-    GameObject cube = bundle.LoadAsset<GameObject>("Cube");
-    GameObject sprite = bundle.LoadAsset<GameObject>("Sprite");
-    Instantiate(cube);
-    Instantiate(sprite);
-}
-GetAssetBundle(string, int) takes the URL of the location of the AssetBundle and the version of the bundle you want to download. This example points to a local file, but string url could point to any URL you have your AssetBundles hosted at.
-
-UnityWebRequestAssetBundle 클래스에는 요청 시 에셋 번들을 가져오는 에셋 번들인 DownloadHandlerAssetBundle을 처리하는 특별한 방법이 있습니다.
-
-사용하는 메서드에 관계없이 이제 에셋 번들 오브젝트에 액세스할 수 있습니다. 오브젝트에서 LoadAsset<T> (string)을 사용하면 로드하려는 에셋의 타입 T와 오브젝트의 이름을 번들 안에 있는 문자열로 가져오게 됩니다. 이렇게 되면 에셋 번들에서 로드하는 오브젝트는 모두 반환됩니다. 이 반환된 오브젝트는 Unity의 모든 오브젝트와 마찬가지로 사용할 수 있습니다. 예를 들어, 씬에서 게임 오브젝트를 만들려는 경우 Instantiate(gameObjectFromAssetBundle)를 호출하면 됩니다.
-
-에셋 번들을 로드하는 API에 대한 자세한 내용을 보려면 에셋 번들의 전문적인 활용을 참조하십시오.
 
 
 

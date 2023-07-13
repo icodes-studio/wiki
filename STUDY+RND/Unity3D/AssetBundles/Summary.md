@@ -14,13 +14,11 @@
 - ***Note***
     - 여기서는 빌트인 ***BuildPipeline.BuildAssetBundles()*** API를 사용하여 애셋번들을 생성하는 방법을 설명한다.
     - 권장되는 방법은 [***어드레서블 패키지(Addressables package)***](https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/index.html)를 사용하는 것이다.
-
 - ***Assigning Assets to AssetBundles***
     - 프로젝트 뷰에서 번들에 할당할 애셋을 선택.
     - 인스펙터 하단에 왼쪽 드롭다운을 사용하여 ***애셋번들 이름을*** 지정하고, 오른쪽 드롭다운을 사용하여 ***배리언트(Variant)***를 지정.
     - 새 애셋번들 이름을 생성 하려면 ***New*** 버튼 클릭하고 이름 입력.
     - 하위 폴더를 추가하려면 /를 이용해 폴더 이름을 구분한다.
-
 - ***Build the AssetBundles***
     - ***Assets*** 폴더에서 ***Editor*** 폴더를 생성하고, 폴더에 다음과 같은 콘텐츠의 스크립트를 입력합니다.
         ```
@@ -46,7 +44,6 @@
     - 이 스크립트는 Assets 메뉴 하단에 작성한 코드를 실행하는 ***Build AssetBundles*** 메뉴 아이템을 생성한다.
     - Build AssetBundles 항목을 클릭하면 빌드 다이얼로그와 함께 진행 표시줄이 표시된다.
     - 이렇게 하면 애셋번들 이름으로 레이블이 지정된 모든 애셋을 가져와서 assetBundleDirectory에 정의된 경로의 폴더에 배치한다.
-
 - ***Loading AssetBundles and Assets***
     - 로컬 스토리지에서 로드하려는 경우 ***AssetBundles.LoadFromFile*** API를 사용한다.
         ```
@@ -91,7 +88,6 @@
     - There are certain strategies to consider when setting up your bundles.
     - These grouping strategies are meant to be used however you see fit for your specific project.
     - Feel free to mix and match these strategies as you see fit.
-
 - ***Logical Entity Grouping***
     - 프로젝트 관점에서, 애셋의 기능적인 부분에 따라 애셋번들을 그룹핑 하는 방법.
     - 여기에는 사용자 인터페이스, 캐릭터, 환경, 그리고 애플리케이션 라이프 사이클 내내 자주 나타날 수 있는 모든 것이 포함된다.
@@ -101,16 +97,13 @@
         - 사용자 인터페이스 화면의 모든 텍스처 및 레이아웃 데이터 번들링
         - 캐릭터에 대한 모든 모델 및 애니메이션 번들링
         - 게임 레벨 스테이지 간에 공통으로 사용되는 배경에 대한 텍스쳐 및 모델 데이터 번틀링
-
 - ***Type Grouping***
     - 오디오 트랙이나 언어팩 파일 등 타입이 비슷한 애셋을 하나의 애셋번들에 할당한다.
     - 여러 플랫폼에서 사용될 애셋번들을 빌드하는 데 상대적으로 효과적인 전략 중 하나이다.
-
 - ***Concurrent Content Grouping***
     - 동시에 로드되고 사용될 애셋을 하나의 번들로 묶는 개념. 가장 일반적인 이용 사례는 씬 기반 번들.
     - 애셋번들 내 한 애셋이 해당 번들의 다른 애셋에 동시에 사용된다는 것을 확신하는 경우.
     - 번들에 포함된 애셋 하나에 종속성이 있으면 로드 시간이 크게 증가한다.
-
 - ***Here are some additional tips that are good to keep in mind across the board:***
     - 자주 업데이트되는 오브젝트는 변경 빈도가 낮은 오브젝트와 별개의 애셋번들로 나누어라.
     - 동시에 로드될 가능성이 큰 오브젝트(모델, 텍스처 및 애니메이션 등)를 그룹화하라.
@@ -126,7 +119,6 @@
 - ***Note***
     - This section describes the creation of AssetBundles using the built-in ***BuildPipeline.BuildAssetBundles()*** API.
     - A recommended, and more user friendly, alternative is to use the ***[Addressables](http://docs.unity3d.com/Packages/com.unity.addressables@latest/index.html)*** package.
-
 - ***[BuildAssetBundleOptions](https://docs.unity3d.com/kr/2022.3/ScriptReference/BuildAssetBundleOptions.html)***
     - ***BuildAssetBundleOptions.None***
         - 이 번들 옵션은 LZMA 압축 포맷을 사용한다.
@@ -141,7 +133,6 @@
         - 이 번들 옵션은 LZ4 압축 메서드를 사용한다.
         - LZMA 압축 포맷보다 압축된 파일 크기가 크지만 애셋을 사용하기 전에 모든 번들의 압축을 풀 필요가 없어 좀 더 빠르다.
         - 또한 압축되지 않은 번들과 비슷한 로드 속도를 가지게 되지만 디스크의 용량은 적게 차지한다.
-
 - ***BuildTarget***
     - 애셋번들을 사용할 타겟 플랫폼이 무엇인지 빌드 파이프라인에 알려준다.
     - 빌드 타겟의 리스트는 [***BuildTarget***](https://docs.unity3d.com/kr/2022.3/ScriptReference/BuildTarget.html)을 참조.
@@ -149,12 +140,10 @@
     - 위의 스크립트 예제를 따른 경우 ***Assets > Build AssetBundles*** 을 클릭하여 프로세스를 시작한다.
     - 애셋번들마다 애셋번들의 이름으로된 파일과 애셋번들 이름 + “.manifest”로 된 파일이 생성된다.
     - To learn more about how to use this bundle and the manifest object, see documentation on [***Using AssetBundles Natively***](https://docs.unity3d.com/kr/2022.3/Manual/AssetBundles-Native.html).
-
 - ***The AssetBundle File***
     - .manifest 확장자가 없는 파일로서 애셋을 로드하기 위해 런타임 시점에 로드해야 하는 파일이다.
     - 애셋번들 파일은 다수의 파일을 내부적으로 포함하는 아카이브.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundles-Building-0.png)
-
 - ***The Manifest File***
     - 번들에 대한 CRC(Cyclic Redundancy Check) 데이터 및 종속성 데이터와 같은 정보가 포함된다. 
         ```
@@ -196,18 +185,15 @@
     - 하지만, UnityEngine.Object가 애셋번들에 포함되지 않은 UnityEngine.Object에 대한 참조를 포함하는 경우는 종속성이 발생하지 않는다. 이 경우 번들이 의존하는 오브젝트의 복사본은 애셋번들을 빌드할 때 복사된다.
     - 애셋번들이 종속성을 포함하는 경우, 인스턴스화하는 오브젝트가 로딩되기 이전에 종속성을 가지는 번들이 로딩되도록 해야 한다.
     - Unity 엔진은 종속성을 자동으로 로딩하지 않는다.
-
 - ***Consider the following example, a Material in Bundle 1 references a Texture in Bundle 2:***
     - 번들 1에 있는 머티리얼을 로딩하기 전에 번들 2를 메모리에 로딩해야 한다. 
     - 번들 1과 번들 2를 로딩하는 순서는 중요하지 않다.
     - 중요한 것은 번들 1 의 머티리얼이 로딩되기 이전에 번들 2 가 로딩되어야만 한다는 것이다.
-
 - ***Duplicated information across AssetBundles***
     - 기본적으로 Unity는 애셋번들 간의 중복 정보를 최적화하지 않는다.
     - 즉 프로젝트의 여러 애셋번들에 동일한 정보(예: 여러 프리팹에서 사용되는 머티리얼)가 포함될 수 있음을 의미한다.
     - 이러한 공통 애셋은 메모리 리소스와 로딩 시간에 영향을 미칠 수 있다.
     - 여기서는 Unity가 애셋번들 간의 중복 정보를 관리하는 방법과 최적화를 적용하는 방법에 대해 설명한다.
-
 - ***Editor setup***
     - 기본적으로 Unity는 중복 정보를 저장하는 데 필요한 메모리를 줄이거나 최소화하기 위해 최적화를 수행하지 않는다.
     - 빌드 생성 중에 Unity는 애셋번들 내에서 암시적으로 참조된 애셋 복제본을 빌드한다.
@@ -225,7 +211,6 @@
     - 이제 AssetBundle을 다시 빌드하면 생성된 출력에 Material 및 관련 Texture가 포함된 별도의 modulematerials AssetBundle(359KB)이 포함됩니다.
     - 이렇게 하면 Prefab에 대한 다른 AssetBundle의 크기가 크게 줄어듭니다(이전 반복의 약 380KB에서 약 20KB로 감소).
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundleSeparate.png)
-
 - ***Runtime loading***
     - 공용 애셋을 단일 애셋번들로 만드는 경우 종속성에 주의하세요.
     - 특히 프리팹을 사용하여 모듈을 인스턴스화하면 머티리얼이 로드되지 않습니다.

@@ -121,7 +121,7 @@
     - A recommended, and more user friendly, alternative is to use the ***[Addressables](http://docs.unity3d.com/Packages/com.unity.addressables@latest/index.html)*** package.
 - ***[BuildAssetBundleOptions](https://docs.unity3d.com/kr/2022.3/ScriptReference/BuildAssetBundleOptions.html)***
     - ***BuildAssetBundleOptions.None***
-        - 이 번들 옵션은 LZMA 압축 포맷을 사용한다.
+        - LZMA 압축 포맷을 사용한다.
         - LZMA 압축된 번들을 사용하기 위해서는 먼저 전체 번들의 압축을 해제해야 한다. 
         - 따라서 파일 크기는 가장 작아지지만, 압축 해제 때문에 로드 시간이 조금 길어지게 된다. 
         - LZMA 압축을 사용하는 것은 파일 크기가 작기 때문에 외부 호스트에서 AssetBundle을 다운로드하는 경우만 권장된다.
@@ -133,15 +133,11 @@
         - 이 번들 옵션은 LZ4 압축 메서드를 사용한다.
         - LZMA 압축 포맷보다 압축된 파일 크기가 크지만 애셋을 사용하기 전에 모든 번들의 압축을 풀 필요가 없어 좀 더 빠르다.
         - 또한 압축되지 않은 번들과 비슷한 로드 속도를 가지게 되지만 디스크의 용량은 적게 차지한다.
-- ***BuildTarget***
+- [***BuildTarget***](https://docs.unity3d.com/kr/2022.3/ScriptReference/BuildTarget.html)
     - 애셋번들을 사용할 타겟 플랫폼이 무엇인지 빌드 파이프라인에 알려준다.
-    - 빌드 타겟의 리스트는 [***BuildTarget***](https://docs.unity3d.com/kr/2022.3/ScriptReference/BuildTarget.html)을 참조.
-    - 빌드 타겟에 하드 코딩을 하기를 원치 않는다면 `EditorUserBuildSettings.activeBuildTarget` 옵션 사용.
-    - 위의 스크립트 예제를 따른 경우 ***Assets > Build AssetBundles*** 을 클릭하여 프로세스를 시작한다.
     - 애셋번들마다 애셋번들의 이름으로된 파일과 애셋번들 이름 + “.manifest”로 된 파일이 생성된다.
     - To learn more about how to use this bundle and the manifest object, see documentation on [***Using AssetBundles Natively***](https://docs.unity3d.com/kr/2022.3/Manual/AssetBundles-Native.html).
 - ***The AssetBundle File***
-    - .manifest 확장자가 없는 파일로서 애셋을 로드하기 위해 런타임 시점에 로드해야 하는 파일이다.
     - 애셋번들 파일은 다수의 파일을 내부적으로 포함하는 아카이브.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundles-Building-0.png)
 - ***The Manifest File***

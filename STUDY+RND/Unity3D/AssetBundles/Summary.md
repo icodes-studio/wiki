@@ -9,25 +9,17 @@
 
 　
 
-　
-
 ## # AssetBundle workflow
 
-- ***Note:***
-    - *여기서는 빌트인 **BuildPipeline.BuildAssetBundles()** API를 사용하여 애셋번들을 생성하는 방법을 설명한다.*
-    - *권장되는 방법은 [**어드레서블 패키지(Addressables package)**](https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/index.html)를 사용하는 것이다.*
-
-
-　
+- ***Note***
+    - 여기서는 빌트인 ***BuildPipeline.BuildAssetBundles()*** API를 사용하여 애셋번들을 생성하는 방법을 설명한다.
+    - 권장되는 방법은 [***어드레서블 패키지(Addressables package)***](https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/index.html)를 사용하는 것이다.
 
 - ***Assigning Assets to AssetBundles***
     - 프로젝트 뷰에서 번들에 할당할 에셋을 선택.
     - 인스펙터 하단에 왼쪽 드롭다운을 사용하여 ***에셋번들 이름을*** 지정하고, 오른쪽 드롭다운을 사용하여 ***배리언트(Variant)***를 지정.
     - 새 애셋번들 이름을 생성 하려면 ***New*** 버튼 클릭하고 이름 입력.
     - 하위 폴더를 추가하려면 /를 이용해 폴더 이름을 구분한다.
-
-
-　
 
 - ***Build the AssetBundles***
     - ***Assets*** 폴더에서 ***Editor*** 폴더를 생성하고, 폴더에 다음과 같은 콘텐츠의 스크립트를 입력합니다.
@@ -54,9 +46,6 @@
     - 이 스크립트는 Assets 메뉴 하단에 작성한 코드를 실행하는 ***Build AssetBundles*** 메뉴 아이템을 생성한다.
     - Build AssetBundles 항목을 클릭하면 빌드 다이얼로그와 함께 진행 표시줄이 표시된다.
     - 이렇게 하면 에셋번들 이름으로 레이블이 지정된 모든 에셋을 가져와서 assetBundleDirectory에 정의된 경로의 폴더에 배치한다.
-
-
-　
 
 - ***Loading AssetBundles and Assets***
     - 로컬 스토리지에서 로드하려는 경우 ***AssetBundles.LoadFromFile*** API를 사용한다.
@@ -97,9 +86,11 @@
 　
 
 ## # Preparing Assets for AssetBundles
-    ● There are certain strategies to consider when setting up your bundles.
-    ● These grouping strategies are meant to be used however you see fit for your specific project.
-    ● Feel free to mix and match these strategies as you see fit.
+
+- ***Note***
+    - There are certain strategies to consider when setting up your bundles.
+    - These grouping strategies are meant to be used however you see fit for your specific project.
+    - Feel free to mix and match these strategies as you see fit.
 
 - ***Logical Entity Grouping***
     - 프로젝트 관점에서, 애셋의 기능적인 부분에 따라 애셋번들을 그룹핑 하는 방법.
@@ -127,6 +118,81 @@
     - SD 또는 HD 에셋처럼 두 오브젝트 집합이 동시에 로드될 가능성이 거의 없는 경우 각기 다른 애셋번들로 나누어라.
     - 오브젝트 그룹이 단순히 같은 오브젝트의 다른 버전에 불과할 경우, 애셋번들 배리언트(Variant)를 고려하라.
 
+
+　
+
+## # Building AssetBundles
+
+- ***Note***
+    - This section describes the creation of AssetBundles using the built-in ***BuildPipeline.BuildAssetBundles()*** API.
+    - A recommended, and more user friendly, alternative is to use the ***[Addressables](http://docs.unity3d.com/Packages/com.unity.addressables@latest/index.html)*** package.
+
+- ***[BuildAssetBundleOptions](https://docs.unity3d.com/kr/2022.3/ScriptReference/BuildAssetBundleOptions.html)***
+    - ***BuildAssetBundleOptions.None***
+        - 이 번들 옵션은 LZMA 압축 포맷을 사용한다.
+        - LZMA 압축된 번들을 사용하기 위해서는 먼저 전체 번들의 압축을 해제해야 한다. 
+        - 따라서 파일 크기는 가장 작아지지만, 압축 해제 때문에 로드 시간이 조금 길어지게 된다. 
+        - LZMA 압축을 사용하는 것은 파일 크기가 작기 때문에 외부 호스트에서 AssetBundle을 다운로드하는 경우만 권장된다.
+        - UnityWebRequestAssetBundle을 통해 로드된 LZMA 압축 에셋 번들은 자동으로 LZ4 압축으로 다시 압축되고 로컬 파일 시스템에 캐시된다.
+    - ***BuildAssetBundleOptions.UncompressedAssetBundle**
+        - 전혀 압축되지 않는 방식으로 번들을 빌드한다. 
+        - 다운로드할 파일 크기가 크다는 단점이 있지만, 다운로드된 파일을 로드하는 속도는 빠르다.
+    - ***BuildAssetBundleOptions.ChunkBasedCompression***
+        - 이 번들 옵션은 LZ4 압축 메서드를 사용한다.
+        - LZMA 압축 포맷보다 압축된 파일 크기가 크지만 애셋을 사용하기 전에 모든 번들의 압축을 풀 필요가 없어 좀 더 빠르다.
+        - 또한 압축되지 않은 번들과 비슷한 로드 속도를 가지게 되지만 디스크의 용량은 적게 차지한다.
+
+- ***BuildTarget***
+    - 에셋 번들을 사용할 타겟 플랫폼이 무엇인지 빌드 파이프라인에 알려준다.
+    - 빌드 타겟의 리스트는 [***BuildTarget***](https://docs.unity3d.com/kr/2022.3/ScriptReference/BuildTarget.html)을 참조.
+    - 빌드 타겟에 하드 코딩을 하기를 원치 않는다면 `EditorUserBuildSettings.activeBuildTarget` 옵션 사용.
+    - 위의 스크립트 예제를 따른 경우 ***Assets > Build AssetBundles*** 을 클릭하여 프로세스를 시작한다.
+    - 애셋번들마다 애셋번들의 이름으로된 파일과 애셋번들 이름 + “.manifest”로 된 파일이 생성된다.
+    - To learn more about how to use this bundle and the manifest object, see documentation on [***Using AssetBundles Natively***](https://docs.unity3d.com/kr/2022.3/Manual/AssetBundles-Native.html).
+
+
+- ***The AssetBundle File***
+    - 이 파일은 .manifest 확장자가 없는 파일로서 에셋을 로드하기 위해 런타임 시점에 로드해야 하는 파일이다.
+    - 에셋 번들 파일은 다수의 파일을 내부적으로 포함하는 아카이브이다. 
+        > ![](AssetBundles-Building-0.png)
+
+- ***The Manifest File***
+    - 번들에 대한 CRC(Cyclic Redundancy Check) 데이터 및 종속성 데이터와 같은 정보가 포함된다. 
+        ```
+        ManifestFileVersion: 0
+        CRC: 2422268106
+        Hashes:
+        AssetFileHash:
+            serializedVersion: 2
+            Hash: 8b6db55a2344f068cf8a9be0a662ba15
+        TypeTreeHash:
+            serializedVersion: 2
+            Hash: 37ad974993dbaa77485dd2a0c38f347a
+        HashAppended: 0
+        ClassTypes:
+        - Class: 91
+        Script: {instanceID: 0}
+        Assets:
+        Asset_0: Assets/Mecanim/StateMachine.controller
+        Dependencies: {}
+        ```
+    - A manifest file is also generated for the Manifest Bundle.
+    - This file records how AssetBundles relate, and what their dependencies are.
+        ```
+        ManifestFileVersion: 0
+        AssetBundleManifest:
+        AssetBundleInfos:
+            Info_0:
+            Name: scene1assetbundle
+            Dependencies: {}
+        ```
+
+
+　
+
+## # AssetBundle Dependencies
+
+- ***Note***
 
 
 

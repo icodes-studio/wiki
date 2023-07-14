@@ -19,6 +19,17 @@
     - 인스펙터 하단에 왼쪽 드롭다운을 사용하여 ***애셋번들 이름을*** 지정하고, 오른쪽 드롭다운을 사용하여 ***배리언트(Variant)***를 지정.
     - 새 애셋번들 이름을 생성 하려면 ***New*** 버튼 클릭하고 이름 입력.
     - 하위 폴더를 추가하려면 /를 이용해 폴더 이름을 구분한다.
+- ***Variants***
+    - 애셋번들 베리언트는 타겟 디바이스나 로컬라이징, 유저 설정에 따라 다양한 애셋번들중 특정 버젼을 쉽게 로딩 할수 있도록 도와 준다.
+    - 예를 들어 애플리케이션이 한국에서 실행 되느냐 미국에서 실행 되느냐에 따라 메뉴가 한글이 될수도 있고 영어가 될수 있다.
+    - 이런 경우 모든 언어에 대응하는 텍스트 애셋번들을 만들고 배포하는 것이 아니라 한글버전 애셋번들과 영어버전 애셋번들을 만들고 애셋번들 베리언트를 이용해 구분하여 필요한 국가의 언어팩만 로드 할 수 있다.
+    - 어셋번들 베리언트를 이용하기 위해서는 :
+        > - ***Asset Bundle Name***은 동일해야 한다
+        > - 유일하게 달라야 할 부분은 Asset Bundle Variant 부분.
+        > - 애셋번들 베리언트를 이용한 애셋번들간에 호환성을 가지려면 애셋번들에 포함 되는 컨텐츠의 폴더와 모든 애셋들은 같은 이름과 같은 계층구조를 가져야 한다.
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/variant1.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/variant2.png)
 - ***Build the AssetBundles***
     - ***Assets*** 폴더에서 ***Editor*** 폴더를 생성하고, 폴더에 다음과 같은 콘텐츠의 스크립트를 입력합니다.
         ```
@@ -352,131 +363,10 @@
 - ***See also:*** *Unity 학습 튜토리얼 참고 - [**Managing Loaded AssetBundles**](https://learn.unity.com/tutorial/assets-resources-and-assetbundles#Managing_Loaded_Assets)*
 
 - ***AssetBundle.Unload***
-    - Unity에서는 오브젝트가 액티브 씬에서 제거될 경우 자동으로 언로드되지 않습니다.
-    - 에셋 정리는 특정 시간에 실행되고, 수동으로 실행할 수도 있습니다.
-    - 에셋 번들을 로드하고 언로드할 시기를 아는 것은 중요합니다.
-    - 에셋 번들을 잘못 언로드하면 메모리에 오브젝트가 중복으로 저장되거나 텍스처가 누락되는 등의 바람직하지 않은 상황이 발생할 수 있습니다.
-    - 에셋 번들 관리에 대해 알아야 하는 가장 중요한 것은 AssetBundle.Unload(bool) 또는 AssetBundle.UnloadAsync(bool)을 호출해야 하는 시기입니다.
-    - 그리고 true 또는 false를 함수 호출에 전달해야 하는지 여부도 중요합니다.
-    - 언로드는 에셋 번들을 언로드하는 함수로, 정적이지 않습니다.
-    - 이 API는 호출되는 에셋 번들의 헤더 정보를 언로드합니다.
-    - 인수는 에셋 번들에서 인스턴스화하는 모든 오브젝트도 언로드해야 하는지 나타냅니다.
-    - AssetBundle.Unload(true)는 AssetBundle에서 로드된 모든 게임 오브젝트 및 해당 종속성을 언로드합니다.
-    - 복사된 게임 오브젝트(예: 인스턴스화된 게임 오브젝트)는 더 이상 AssetBundle에 속하지 않기 때문에 여기에 포함되지 않습니다.
-    - 이러한 경우가 발생하면 해당 AssetBundle에서 로드되고 여기에 여전히 속해 있는 텍스처가 씬의 게임 오브젝트에서 사라지고 Unity에서 누락 텍스처로 취급됩니다.
-    - 아래 그림과 같이 머티리얼 M이 에셋 번들 AB에서 로드되어 프리팹 P에서 사용된다고 가정해 보겠습니다.
-    - AB.Unload(true)가 호출될 경우 액티브 씬에 있는 M의 모든 인스턴스도 언로드되고 제거됩니다.
-    - AB.Unload(false)를 대신 호출할 경우 M과 AB의 현재 인스턴스 체인이 끊어집니다.
+    - AssetBundle.Unload(false)
+        > - 애셋번들은 언로드 되지만 이 애셋번들에 의해 로드된 GameObject는 그대로 유지한다.
+        > 
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundles-Native-1.png)
-    - 나중에 AB가 다시 로드되고 AB.LoadAsset()이 호출될 경우, Unity는 M의 기존 복사본을 새로 로드된 머티리얼에 다시 연결하지 않습니다.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundles-Native-2.png)
-    - 프리팹 P의 다른 인스턴스를 생성한 경우 M의 기존 복사본을 사용하지 않습니다. 대신 M 복사본 두 개가 로드됩니다.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundles-Native-3.png)
-    - AssetBundle.Unload(false)를 사용하면 일반적으로 이상적인 상황으로 이어지지 않습니다.
-    - 대부분의 프로젝트에서는 AssetBundle.Unload(true)를 사용하고 오브젝트가 중복되지 않도록 하는 메서드를 채택해야 합니다.
-    - 일반적으로 다음 두 가지 메서드가 사용됩니다.
-        - 애플리케이션 수명 중에 임시 에셋 번들이 언로드되는 시점(예: 레벨 간 또는 화면 로딩 중)을 분명히 정의하는 방법
-        - 개별 오브젝트에 대해 레퍼런스 카운트를 유지하고 모든 구성 오브젝트가 사용되지 않을 때만 에셋 번들을 언로드하는 방법. 이 방법을 사용하면 애플리케이션이 메모리 중복 없이 개별 오브젝트를 언로드하고 다시 로드할 수 있습니다.
-    - 애플리케이션이 AssetBundle.Unload(false)를 사용해야 하는 경우 개별 오브젝트를 다음 두 가지 방법으로만 언로드할 수 있습니다.
-        - 원치 않는 오브젝트에 대한 모든 레퍼런스를 씬과 코드에서 모두 제거하는 방법. 이 작업을 수행한 후 Resources.UnloadUnusedAssets를 호출합니다.
-        - 씬을 추가하지 않고 로드하는 방법. 이 방법을 사용하면 현재 씬의 모든 오브젝트가 제거되고 Resources.UnloadUnusedAssets이 자동으로 호출됩니다.
-
-
-
-
-
-
-
-
-　
-
-　
-
-　
-
-　
-
-　
-
-- https://docs.unity3d.com/Manual/AssetBundlesIntro.html
-- https://medium.com/dreamarofficial/using-assetbundles-in-your-next-game-or-application-9899251a998e
-- https://planek.tistory.com/22
-
-　
-
-- https://young-94.tistory.com/11
-- https://kukuta.tistory.com/192
-
-　
-
-　
-
-- Unity Blog Addressable 소개 : https://blogs.unity3d.com/kr/2019/07/15/addressable-asset-system/
-- Unity Addressable 1.13 메뉴얼 : https://docs.unity3d.com/Packages/com.unity.addressables@1.13/manual/index.html
-- Unity Addressable Tutorial : https://learn.unity.com/tutorials/?k=%5B%22lang%3Aen%22%2C%22lang%3Ako%22%2C%22q%3Aaddressable%22%5D&ob=starts
-
-　
-
-　
-
-- [Official: 어드레서블 애셋 시스템](https://blog.unity.com/kr/games/addressable-asset-system)
-- [Official: Addressables-Sample](https://github.com/Unity-Technologies/Addressables-Sample)
-
-　
-
-　
-
-- https://www.youtube.com/playlist?list=PLmRK0lH8TNCo7K4xmLpEov4llbVTwf29s
-
-- [유니티(Unity) - Addressable(어드레서블) 사용법(1). 설치 및 준비](https://blog.naver.com/cdw0424/221636733877)
-- [유니티(Unity) - Addressable(어드레서블) 사용법(2). 애셋 로드](https://blog.naver.com/cdw0424/221636783259)
-- [유니티(Unity) - Addressable(어드레서블) 사용법(3). 프로파일러와 디버깅](https://blog.naver.com/cdw0424/221636822258)
-- [유니티(Unity) - Addressable(어드레서블) 사용법(4). 애셋 언로드](https://blog.naver.com/cdw0424/221637349195)
-- [유니티(Unity) - Addressable(어드레서블) 사용법(5). 씬 로드와 언로드](https://blog.naver.com/cdw0424/221637763395)
-- [유니티(Unity) - Addressable(어드레서블) 사용법(6). 빌드 후 실제 사용](https://blog.naver.com/cdw0424/221638017138)
-- [유니티(Unity) - Addressable(어드레서블) 사용법(7). 서버에서 다운로드하기 1편](https://blog.naver.com/cdw0424/221755856111)
-- [유니티(Unity) - Addressable(어드레서블) 사용법(8). 서버에서 다운로드하기 2편 - Catalog 이해](https://blog.naver.com/cdw0424/221756844361)
-- [유니티 엔진 유니티(Unity) - Addressable(어드레서블) 사용법(9). 서버에서 다운로드하기 3편](https://blog.naver.com/cdw0424/221764918184)
-- [유니티 엔진 유니티(Unity) - Addressable(어드레서블) 사용법(10). 외부 서버 없이 서버 기능 테스트하기.](https://blog.naver.com/cdw0424/222090659316)
-
-　
-
-- [유니티(Unity) - Addressables(어드레서블) 애셋](https://blog.naver.com/cdw0424/221630503021)
-- [유니티(Unity) - Addressables.MergeMode](https://blog.naver.com/cdw0424/221637975547)
-- [유니티(Unity) - Addressables.DownloadDependenciesAsync(오브젝트에 종속된 애셋들 가져오기)](https://blog.naver.com/cdw0424/221651296509)
-- [유니티(Unity) - 어드레서블(Addressables)로 게임시작시 콘텐츠 다운로드 하는 법](https://blog.naver.com/cdw0424/221715381599)
-- [유니티(Unity) - 어드레서블 소개 영상보기](https://blog.naver.com/cdw0424/221721464836)
-- [유니티(Unity) - 어드레서블 LoadAssetAsync() 사용법 영상보기](https://blog.naver.com/cdw0424/221725042422)
-- [유니티(Unity) - 어드레서블(2) InstantiateAsync() 사용법 영상보기](https://blog.naver.com/cdw0424/221748882936)
-- [유니티(Unity) - 어드레서블(3) ReleaseInstance()사용법 영상 보기](https://blog.naver.com/cdw0424/221751617965)
-- [유니티(Unity) - 어드레서블 안드로이드 머티리얼 문제 발생 시](https://blog.naver.com/cdw0424/221754866636)
-- [유니티(Unity) - 어드레서블(4) 서버와 함께 사용하기! (영상 보기)](https://blog.naver.com/cdw0424/221782318097)
-- [유니티(Unity) - 어드레서블 보라색 머티리얼 문제](https://blog.naver.com/cdw0424/222102502420)
-- [어드레서블 동기식 표현 지원](https://blog.naver.com/cdw0424/222431929501)
-- [유니티(Unity) - Addressable(어드레서블) DownloadDependenciesAsync 경로](https://blog.naver.com/cdw0424/222593119206)
-
-　
-
-　
-
-　
-
-　
-
-　
-
-　
-
-　
-
-　
-
-　
-
-　
-
-　
-
-　
-
-- [사원수 공부 자료](https://blog.naver.com/cdw0424/221787035761)
+    - AssetBundle.Unload(trye)
+        - 애셋번들 뿐만아니라 애셋번들에의해 로드된 모든 GameObject를 포함하여 언로드한다.
+        - 단, 복사된 게임 오브젝트(Instantiate)는 더 이상 AssetBundle에 속하지 않기 때문에 여기에 포함되지 않는다.

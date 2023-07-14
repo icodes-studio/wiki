@@ -150,12 +150,11 @@
 - [***BuildTarget***](https://docs.unity3d.com/kr/2022.3/ScriptReference/BuildTarget.html)
     - 애셋번들을 사용할 타겟 플랫폼이 무엇인지 빌드 파이프라인에 알려준다.
     - 애셋번들마다 애셋번들의 이름으로된 파일과 애셋번들 이름 + “.manifest”로 된 파일이 생성된다.
-    - To learn more about how to use this bundle and the manifest object, see documentation on [***Using AssetBundles Natively***](https://docs.unity3d.com/kr/2022.3/Manual/AssetBundles-Native.html).
 - ***The AssetBundle File***
     - 애셋번들 파일은 다수의 파일을 내부적으로 포함하는 아카이브.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundles-Building-0.png)
 - ***The Manifest File***
-    - 번들에 대한 CRC(Cyclic Redundancy Check) 데이터 및 종속성 데이터와 같은 정보가 포함된다. 
+    - 번들에 대한 CRC(Cyclic Redundancy Check) 및 종속성 데이터와 같은 정보가 포함된다.
         ```
         ManifestFileVersion: 0
         CRC: 2422268106
@@ -194,10 +193,10 @@
     - Objects 중 하나 이상이 다른 번들에 있는 Object에 대한 참조를 포함하는 경우 해당 애셋번들은 다른 애셋번들에 종속성이 생긴다.
     - 하지만, 애셋번들에 포함되지 않은 Object에 대한 참조를 하는 경우는 종속성이 발생하지 않는다. 단순 복사된다.
     - Unity 엔진은 이러한 애셋번들 간의 종속성을 자동으로 로딩하지 않는다.
-- ***Consider the following example, a Material in Bundle 1 references a Texture in Bundle 2:***
-    - 번들 1에 있는 머티리얼을 로딩하기 전에 번들 2를 메모리에 로딩해야 한다. 
-    - 번들 1과 번들 2를 로딩하는 순서는 중요하지 않다.
-    - 중요한 것은 번들 1 의 머티리얼이 로딩되기 이전에 번들 2 가 로딩되어야만 한다는 것이다.
+- ***Consider the following example...***
+    - 번들 1에 머티리얼이 번들 2에 있는 텍스쳐를 참조하는 경우,
+    - 번들 1에 참조하는 텍스쳐가 복사되어 들어가지 않는다. 종속성이 생기게 된다.
+    - 즉, 번들 1에 있는 머티리얼을 로딩하기 전에 번들 2를 메모리에 로딩해야 한다.
 - ***Duplicated information across AssetBundles***
     - 기본적으로 Unity는 애셋번들 간의 중복 정보를 최적화하지 않는다.
     - 즉 프로젝트의 여러 애셋번들에 동일한 정보(예: 여러 프리팹에서 사용되는 머티리얼)가 포함될 수 있음을 의미한다.

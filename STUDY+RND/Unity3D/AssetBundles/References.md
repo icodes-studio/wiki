@@ -4,8 +4,8 @@
 
 　
 
-- https://young-94.tistory.com/11
-- https://kukuta.tistory.com/192
+- [Unity AssetBundle 기본 개념](https://young-94.tistory.com/11)
+- [Asset Bundle feat Variant](https://kukuta.tistory.com/192)
 
 　
 
@@ -54,6 +54,11 @@
 - [유니티(Unity) - 어드레서블 보라색 머티리얼 문제](https://blog.naver.com/cdw0424/222102502420)
 - [어드레서블 동기식 표현 지원](https://blog.naver.com/cdw0424/222431929501)
 - [유니티(Unity) - Addressable(어드레서블) DownloadDependenciesAsync 경로](https://blog.naver.com/cdw0424/222593119206)
+
+
+
+
+
 
 　
 

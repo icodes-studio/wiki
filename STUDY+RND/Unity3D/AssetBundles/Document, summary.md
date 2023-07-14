@@ -1,4 +1,12 @@
-*https://docs.unity3d.com/2022.3/Documentation/Manual/AssetBundlesIntro.html*
+# AssetBundles
+
+- ***References***
+    - *https://docs.unity3d.com/2022.3/Documentation/Manual/AssetBundlesIntro.html*
+    - *https://youtu.be/Lx61ZEKEvnQ*
+    - *https://youtu.be/Z9LrkQUDzJw*
+
+
+　
 
 　
 

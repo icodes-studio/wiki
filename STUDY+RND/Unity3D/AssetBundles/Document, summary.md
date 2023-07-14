@@ -361,7 +361,6 @@
 
 - ***Note:*** *애셋번들을 직접 관리하기보다 [**어드레서블 애셋**](https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/index.html) 사용을 권장합니다.*
 - ***See also:*** *Unity 학습 튜토리얼 참고 - [**Managing Loaded AssetBundles**](https://learn.unity.com/tutorial/assets-resources-and-assetbundles#Managing_Loaded_Assets)*
-
 - ***AssetBundle.Unload***
     - AssetBundle.Unload(false)
         > - 애셋번들은 언로드 되지만 이 애셋번들에 의해 로드된 GameObject는 그대로 유지한다.

@@ -248,7 +248,7 @@
     - [***WWW.LoadfromCacheOrDownload***](https://docs.unity3d.com/ScriptReference/WWW.LoadFromCacheOrDownload.html?_ga=1.226802969.563709772.1479226228)
     - [***UnityWebRequestAssetBundle***](https://docs.unity3d.com/ScriptReference/Networking.UnityWebRequestAssetBundle.html?_ga=1.259297550.563709772.1479226228)의 [***DownloadHandlerAssetBundle(Unity 5.3 이상)***](https://docs.unity3d.com/ScriptReference/Networking.DownloadHandlerAssetBundle.html?_ga=1.264500235.563709772.1479226228)
 - [***AssetBundle.LoadFromMemoryAsync***](https://docs.unity3d.com/ScriptReference/AssetBundle.LoadFromMemoryAsync.html?_ga=1.226802969.563709772.1479226228)
-    - 애셋번들 데이터가 포함된 바이트 배열을 사용한다.
+    - 애셋번들 데이터가 포함된 바이트 배열을 사용하여 로드한다.
     - 번들이 LZMA로 압축된 경우 애셋번들 로드 중에 압축을 해제. LZ4로 압축된 번들은 압축된 상태로 로드.
         ```
         using UnityEngine;
@@ -293,7 +293,7 @@
         }
         ```
 - [***UnityWebRequestAssetBundle***](https://docs.unity3d.com/ScriptReference/Networking.UnityWebRequestAssetBundle.html?_ga=1.259297550.563709772.1479226228)
-    - 애셋번들을 처리하는 전용 API.
+    - 원격지에 있는 애셋번들을 다루는 전용 API.
         ```
         using UnityEngine.Networking;
 
@@ -343,7 +343,7 @@
         ```
     - 매니페스트 오브젝트를 통해 ***AssetBundleManifest*** API를 호출하여 애셋번들에 대한 정보를 얻을 수 있다.
     - 이 정보에는 에셋 번들에 대한 종속성 데이터, 해시 데이터 및 배리언트 데이터가 포함된다.
-    - 아래 코드에서는 이름이 ***“assetBundle”***인 애셋번들의 종속성을 모두 로드한다고 가정하자.
+    - 아래 코드에서는 이름이 ***assetBundle***인 애셋번들의 종속성을 모두 로드한다고 가정하자.
         ```
         AssetBundle assetBundle = AssetBundle.LoadFromFile(manifestFilePath);
         AssetBundleManifest manifest = assetBundle.LoadAsset<AssetBundleManifest>("AssetBundleManifest");

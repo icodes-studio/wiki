@@ -22,9 +22,7 @@
 - ***Variants(Optional)***
     - 타겟 디바이스나 로컬라이징, 유저 설정에 따라 다양한 애셋번들중 특정 버젼을 쉽게 로딩 할수 있도록 도와 준다.
     - 예를 들어 한글버전, 영어버전 애셋번들을 각각 만들고 애셋번들 베리언트를 이용해 구분하여 필요한 국가의 언어팩만 로드 할 수 있다.
-    - 애셋번들 베리언트를 이용하기 위해서는...
-        > - 애셋번들간에 호환성을 가지려면, 포함되는 컨텐츠의 폴더와 모든 애셋들은 같은 이름과 같은 계층구조를 가져야 한다.
-        >
+    - 애셋번들간에 호환성을 가지려면, 포함되는 컨텐츠의 폴더와 모든 애셋들은 같은 이름과 같은 계층구조를 가져야 한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/variant1.png)
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/variant2.png)
 - ***Build the AssetBundles***

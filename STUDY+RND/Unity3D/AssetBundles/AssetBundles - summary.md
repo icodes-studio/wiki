@@ -199,18 +199,18 @@
     - 즉, 번들 1에 있는 머티리얼을 로딩하기 전에 번들 2를 메모리에 로딩해야 한다.
 - ***Duplicated information across AssetBundles***
     - 기본적으로 Unity는 애셋번들 간의 중복 정보를 최적화하지 않는다.
-    - 즉 프로젝트의 여러 애셋번들에 동일한 정보(예: 여러 프리팹에서 사용되는 머티리얼)가 포함될 수 있음을 의미한다.
+    - 즉, 여러 애셋번들에 동일한 정보(예: 여러 프리팹에서 사용되는 머티리얼)가 포함될 수 있음을 의미한다.
     - 이러한 공통 애셋은 메모리 리소스와 로딩 시간에 영향을 미칠 수 있다.
 - ***Editor setup***
     - 위와 같은 상황을 실제로 테스트 해보면 각 번들의 크기는 각각 ***383KB***와 ***377KB***이다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundleDuplicate.png)
     - 반면, 머티리얼 등과 같은 공통 애셋을 별도 애셋번들로 만들고 빌드하면,
-    - 공용 번들인 modulematerials AssetBundle(359KB)이 새로 포함되고 각 번들의 크기는 약 380KB에서 약 20KB로 감소.
+    - 공용 번들인 modulematerials(359KB)이 새로 포함되고 각 번들의 크기는 약 380KB에서 약 20KB로 감소.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundleSeparate.png)
 - ***Runtime loading***
     - 공용 애셋을 단일 애셋번들로 만들어 사용하는 경우 종속성에 주의해서 로드해야 한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/MaterialNotLoaded.png)
-    - 이 문제를 해결하려면 모듈 애셋번들을 로드하기 전에 머티리얼 애셋번들을 로드해야 한다.
+    - 위 문제를 해결하려면 모듈 애셋번들을 로드하기 전에 머티리얼 애셋번들을 로드해야 한다.
         ```
         using System.IO;
         using UnityEngine;

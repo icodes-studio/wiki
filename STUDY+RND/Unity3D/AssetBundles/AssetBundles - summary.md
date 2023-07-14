@@ -368,10 +368,12 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundles-Native-1.png)
         > - 이 경우, 애셋번들을 리로드하고 머티리얼을 로드해도 기존에 로드했던 머티리얼과는 전혀 다른 오브젝트이다.
         >
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundles-Native-1.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundles-Native-3.png)
     - AssetBundle.Unload(***true***)
         > - 애셋번들 뿐만아니라 애셋번들에의해 로드된 모든 GameObject를 포함하여 언로드한다.
         > - 단, 복사된 게임 오브젝트(Instantiate)는 더 이상 AssetBundle에 속하지 않기 때문에 여기에 포함되지 않는다.
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundles-Native-4.png)
 - ***See Also***
     - *https://www.youtube.com/watch?v=Lx61ZEKEvnQ&t=3120s*
     - *https://www.youtube.com/watch?v=Z9LrkQUDzJw&t=1730s*

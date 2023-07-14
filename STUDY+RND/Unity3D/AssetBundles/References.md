@@ -1,13 +1,3 @@
-https://docs.unity3d.com/Manual/AssetBundlesIntro.html
-- [Unity AssetBundle 기본 개념](https://young-94.tistory.com/11)
-- [Asset Bundle feat Variant](https://kukuta.tistory.com/192)
-
-
-
-
-
-## GitHub
-
 - https://github.com/SadPandaStudios/AssetBundleManager/tree/master
 - https://github.com/yucchiy/unity-assetbundle-demo
 
@@ -15,12 +5,11 @@ https://docs.unity3d.com/Manual/AssetBundlesIntro.html
 
 
 
-- 
+
+
 - https://medium.com/dreamarofficial/using-assetbundles-in-your-next-game-or-application-9899251a998e
 - https://planek.tistory.com/22
 - https://ssabi.tistory.com/13
-
-　　
 
 　
 
@@ -30,12 +19,8 @@ https://docs.unity3d.com/Manual/AssetBundlesIntro.html
 
 　
 
-　
-
 - [Official: 어드레서블 애셋 시스템](https://blog.unity.com/kr/games/addressable-asset-system)
 - [Official: Addressables-Sample](https://github.com/Unity-Technologies/Addressables-Sample)
-
-　
 
 　
 

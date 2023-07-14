@@ -359,7 +359,7 @@
 
 ## # Managing Loaded AssetBundles
 
-- ***Note:*** *애셋번들을 직접 관리하기보다 [**어드레서블 애셋**](https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/index.html) 사용을 권장합니다.*
+- ***Note:*** *유니티는 애셋번들을 직접 관리하기보다 [**어드레서블 애셋**](https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/index.html) 사용을 권장한다.*
 - ***See also:*** *Unity 학습 튜토리얼 참고 - [**Managing Loaded AssetBundles**](https://learn.unity.com/tutorial/assets-resources-and-assetbundles#Managing_Loaded_Assets)*
 - ***AssetBundle.Unload***
     - ***AssetBundle.Unload(false)***

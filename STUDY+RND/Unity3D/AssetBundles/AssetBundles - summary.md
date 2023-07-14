@@ -38,7 +38,7 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/variant1.png)
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/variant2.png)
 - ***Build the AssetBundles***
-    - ***Assets*** 폴더에서 ***Editor*** 폴더를 생성하고, 폴더에 다음과 같은 콘텐츠의 스크립트를 입력합니다.
+    - ***Assets*** 폴더에서 ***Editor*** 폴더를 생성하고, 아래 스크립트 입력.
         ```
         using UnityEditor;
         using System.IO;
@@ -102,10 +102,6 @@
 
 ## # Preparing Assets for AssetBundles
 
-- ***Note***
-    - There are certain strategies to consider when setting up your bundles.
-    - These grouping strategies are meant to be used however you see fit for your specific project.
-    - Feel free to mix and match these strategies as you see fit.
 - ***Logical Entity Grouping***
     - 프로젝트 관점에서, 애셋의 기능적인 부분에 따라 애셋번들을 그룹핑 하는 방법.
     - 여기에는 사용자 인터페이스, 캐릭터, 환경, 그리고 애플리케이션 라이프 사이클 내내 자주 나타날 수 있는 모든 것이 포함된다.
@@ -127,7 +123,7 @@
     - 동시에 로드될 가능성이 큰 오브젝트(모델, 텍스처 및 애니메이션 등)를 그룹화하라.
     - 애셋번들 간에 공통으로 사용하는 애셋은 별도의 공용 애셋번들로 종속성을 옮겨라.
     - SD 또는 HD 애셋처럼 두 오브젝트 집합이 동시에 로드될 가능성이 거의 없는 경우 각기 다른 애셋번들로 나누어라.
-    - 오브젝트 그룹이 단순히 같은 오브젝트의 다른 버전에 불과할 경우, 애셋번들 배리언트(Variant)를 고려하라.
+    - 오브젝트 그룹이 단순히 같은 오브젝트의 다른 버전에 불과할 경우, 배리언트(Variants)를 고려하라.
 
 
 　
@@ -135,8 +131,8 @@
 ## # Building AssetBundles
 
 - ***Note***
-    - This section describes the creation of AssetBundles using the built-in ***BuildPipeline.BuildAssetBundles()*** API.
-    - A recommended, and more user friendly, alternative is to use the ***[Addressables](http://docs.unity3d.com/Packages/com.unity.addressables@latest/index.html)*** package.
+    - 여기서는 ***BuildPipeline.BuildAssetBundles()*** API를 사용하여 애셋번들 만드는 방법을 설명한다.
+    - 다만, 유니티가 권장하는 방법은 [***어드레서블 패키지(Addressables package)***](https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/index.html)를 사용하는 것이다.
 - ***[BuildAssetBundleOptions](https://docs.unity3d.com/kr/2022.3/ScriptReference/BuildAssetBundleOptions.html)***
     - ***BuildAssetBundleOptions.None***
         - ***LZMA*** 압축 포맷을 사용한다.

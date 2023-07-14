@@ -362,10 +362,10 @@
 - ***Note:*** *유니티는 애셋번들을 직접 관리하기보다 [**어드레서블 애셋**](https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/index.html) 사용을 권장한다.*
 - ***See also:*** *Unity 학습 튜토리얼 참고 - [**Managing Loaded AssetBundles**](https://learn.unity.com/tutorial/assets-resources-and-assetbundles#Managing_Loaded_Assets)*
 - ***AssetBundle.Unload***
-    - ***AssetBundle.Unload(false)***
+    - AssetBundle.Unload(***false***)
         > - 애셋번들은 언로드 되지만 이 애셋번들에 의해 로드된 GameObject는 그대로 유지한다.
         > 
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundles-Native-1.png)
-    - ***AssetBundle.Unload(true)***
+    - AssetBundle.Unload(***true***)
         - 애셋번들 뿐만아니라 애셋번들에의해 로드된 모든 GameObject를 포함하여 언로드한다.
         - 단, 복사된 게임 오브젝트(Instantiate)는 더 이상 AssetBundle에 속하지 않기 때문에 여기에 포함되지 않는다.

@@ -343,7 +343,7 @@
         ```
     - 매니페스트 오브젝트를 통해 ***AssetBundleManifest*** API를 호출하여 애셋번들에 대한 정보를 얻을 수 있다.
     - 이 정보에는 에셋 번들에 대한 종속성 데이터, 해시 데이터 및 배리언트 데이터가 포함된다.
-    - 아래 코드에서는 이름이 ***assetBundle***인 애셋번들의 종속성을 모두 로드한다고 가정하자.
+    - 아래 코드에서는 이름이 ***assetBundle***인 애셋번들의 종속성을 모두 로드한다.
         ```
         AssetBundle assetBundle = AssetBundle.LoadFromFile(manifestFilePath);
         AssetBundleManifest manifest = assetBundle.LoadAsset<AssetBundleManifest>("AssetBundleManifest");

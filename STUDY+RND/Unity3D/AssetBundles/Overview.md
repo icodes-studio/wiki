@@ -6,13 +6,7 @@
     - *https://youtu.be/Z9LrkQUDzJw*
     - *https://young-94.tistory.com/11*
     - *https://kukuta.tistory.com/192*
-
-
-　
-
-## # Overview
-
-- ***AssetBundles***
+- ***What is it***
     - 플랫폼별 비코드 애셋(예: 모델, 텍스처, 프리팹, 오디오 클립, 씬 전체)이 들어 있는 아카이브 파일이며 런타임 시점에 로드할 수 있다.
     - 서로 종속성을 가질 수 있다. 예를 들어 한 애셋번들의 머티리얼이 다른 애셋번들의 텍스처를 참조할 수 있다.
     - 효율적인 네트워크 전송을 위해 빌트인 알고리즘을(LZMA 및 LZ4) 사용하여 압축할 수 있다.

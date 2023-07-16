@@ -291,7 +291,7 @@
         }
         ```
 - [***UnityWebRequestAssetBundle***](https://docs.unity3d.com/ScriptReference/Networking.UnityWebRequestAssetBundle.html?_ga=1.259297550.563709772.1479226228)
-    - 원격지에 있는 애셋번들을 다루는 전용 API.
+    - 원격지에 있는 애셋번들을 다운로드 하거나 파일을 직접 접근하지 못하는 플랫폼에서 사용하는 전용 API.
         ```
         using UnityEngine.Networking;
 

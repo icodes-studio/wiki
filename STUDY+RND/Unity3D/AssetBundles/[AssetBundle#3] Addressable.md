@@ -66,3 +66,5 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr11.png)
     - 필요에 따라 로드와 생성을 분리시킬 수도 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr12.png)
+    - 이름을 하드코딩하지 않고 AssetReference 필드를 인스펙터로 바인딩해서 사용하는 방법이 좀 더 세련되시겠다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr13.png)

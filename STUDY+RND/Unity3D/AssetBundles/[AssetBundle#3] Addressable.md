@@ -35,7 +35,7 @@
 
 　
 
-# # 설치 및 준비
+## # 설치 및 준비
 - ***Settingup***
     - 패키지 매니저에서 어드레서블 패키지를 설치한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr1.png)
@@ -52,7 +52,7 @@
 
 　
 
-# # 애셋 로드
+## # 애셋 로드
 - ***Loading***
     - 애셋을 어드레서블로 로드하기 위해서는 해당 애셋의 인스펙터에서 Addressable 체크박스를 선택해야 한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr7.png)

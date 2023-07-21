@@ -38,7 +38,7 @@
 - ***설치 및 준비***
     - 패키지 매니저에서 어드레서블 패키지를 설치한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr1.png)
-    - 메뉴 ***Window > Asset Management > Addressables*** 항목을 선택한다.
+    - 메뉴 ***Window > Asset Management > Addressables > Groups*** 항목을 선택한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr2.png)
     - Create Addressables Settings 버튼 클릭
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr3.png)
@@ -47,3 +47,20 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr5.png)
     - 아까 열었던 Addressables 윈도우는 이렇게 바뀐다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr6.png)
+
+
+　
+
+- ***애셋 로드***
+    - 애셋을 어드레서블로 로드하기 위해서는 해당 애셋의 인스펙터에서 Addressable 체크박스를 선택해야 한다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr7.png)
+    - 체크를 해주면 바로 옆에 어드레스가 자동으로 생성되는데 우리는 이 값으로 파일을 로드 해 올 것이다. 일종의 닉네임 정도로 생각해두자.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr8.png)
+    - 우리가 알아보기 편하게 다른 어드레스와 겹치지만 않는다면 원하는 대로 수정할 수 있다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr9.png)
+    - 이제 이 큐브 프리팹을 생성하는 버튼과 그 스크립트를 만들어서 넣어주자.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr10.png)
+    - 버튼을 클릭하니 정상적으로 큐브가 생성되는 걸 볼 수 있다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr11.png)
+    - 필요에 따라 로드와 생성을 분리시킬 수도 있다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr12.png)

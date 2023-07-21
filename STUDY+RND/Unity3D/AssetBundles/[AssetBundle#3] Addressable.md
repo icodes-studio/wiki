@@ -53,6 +53,7 @@
 　
 
 ## # 애셋 로드
+
 - ***Loading***
     - 애셋을 어드레서블로 로드하기 위해서는 해당 애셋의 인스펙터에서 Addressable 체크박스를 선택해야 한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr7.png)
@@ -72,3 +73,14 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr14.png)
     - 두 번째 표시처럼 함수를 사용해주면 이때까지와 같은 결과를 확인할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr15.png)
+
+
+　
+
+## # 프로파일러와 디버깅
+
+- ***Profiling***
+    - 어드레서블이 정말 좋은 건 이렇게 따로 어드레서블전용 프로파일러 툴을 제공한다는 것이다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr16.png)
+    - 프로파일러는 위의 사진과 같은 경로에 있다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr17.png)

@@ -35,7 +35,7 @@
 
 　
 
-- ***What is it***
+- ***설치 및 준비***
     - 패키지 매니저에서 어드레서블 패키지를 설치한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr1.png)
     - 메뉴 ***Window > Asset Management > Addressables*** 항목을 선택한다.

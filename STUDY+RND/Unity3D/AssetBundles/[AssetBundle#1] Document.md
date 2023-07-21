@@ -6,6 +6,7 @@
     - *https://youtu.be/Z9LrkQUDzJw*
     - *https://young-94.tistory.com/11*
     - *https://kukuta.tistory.com/192*
+    - *https://ssabi.tistory.com/13*
 
 
 　

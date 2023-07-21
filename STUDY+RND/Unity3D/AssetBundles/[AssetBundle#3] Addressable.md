@@ -82,5 +82,24 @@
 - ***Profiling***
     - 어드레서블이 정말 좋은 건 이렇게 따로 어드레서블전용 프로파일러 툴을 제공한다는 것이다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr16.png)
-    - 프로파일러는 위의 사진과 같은 경로에 있다.
+    - 프로파일러는 아래 사진과 같은 경로에 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr17.png)
+    - 프로파일러를 사용하려면 ***AddressableAssetSettings*** 인스펙터에서 Send Profiler Events를 체크해주어야 한다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr18.png)
+    - 체크를 했다면 플레이하고 어드레서블 프로파일러를 보자.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr19.png)
+    - 아무런 변화가 없다! 클리어 버튼을 눌러도 변화가 없다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr20.png)
+    - 그 이유는 이 프로파일러는 어드레서블에셋을 하나라도 로드하기 시작한 시점부터 시작되기 때문이다.
+    - 큐브 생성 버튼을 누르고 다시 클리어 버튼을 눌러주면 
+    - 어드레서블 에셋을 로드하기 시작하면 해당 씬의 모든 어드레서블에대해서 프로파일링을 시작한다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr21.png)
+    - 큐브 생성 버튼을 한번 눌렀을 때의 프로파일러 모습인데 
+    - 맨 아랫줄에 보면 생성시킨 리소스의 정보와 옆에 그래픽 중간에 1이라는 숫자가 보인다.
+    - 이 숫자는 해당 오브젝트의 개수가 되겠다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr22.png)
+    - 12번 더 눌렀더니 총 13개가 된 모습을  볼 수 있다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr23.png)
+    - 외에도, 프레임, 모노의 힙 정보, 생성된 시점 등 성능에 관해 중요한 주요 정보들을 볼 수 있다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr24.png)
+

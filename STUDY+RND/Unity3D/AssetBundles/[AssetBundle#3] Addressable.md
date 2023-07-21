@@ -66,5 +66,7 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr11.png)
     - 필요에 따라 로드와 생성을 분리시킬 수도 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr12.png)
-    - 이름을 하드코딩하지 않고 AssetReference 필드를 인스펙터로 바인딩해서 사용하는 방법이 좀 더 세련되시겠다.
+    - 참고로, 이름을 하드코딩하지 말고 ***AssetReference*** 필드를 인스펙터로 바인딩해서 사용하는 방법이 좀 더 세련되시겠다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr13.png)
+    - 인스펙터 필드를 만드니, 이런 드롭아웃 버튼이 생기고 선택 가능한 어드레서블에셋들이 나열된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr14.png)

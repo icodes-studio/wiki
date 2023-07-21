@@ -35,7 +35,8 @@
 
 　
 
-- ***설치 및 준비***
+# # 설치 및 준비
+- ***Settingup***
     - 패키지 매니저에서 어드레서블 패키지를 설치한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr1.png)
     - 메뉴 ***Window > Asset Management > Addressables > Groups*** 항목을 선택한다.
@@ -51,7 +52,8 @@
 
 　
 
-- ***애셋 로드***
+# # 애셋 로드
+- ***Loading***
     - 애셋을 어드레서블로 로드하기 위해서는 해당 애셋의 인스펙터에서 Addressable 체크박스를 선택해야 한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr7.png)
     - 체크를 해주면 바로 옆에 어드레스가 자동으로 생성되는데 우리는 이 값으로 파일을 로드 해 올 것이다. 일종의 닉네임 정도로 생각해두자.

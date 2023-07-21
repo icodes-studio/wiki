@@ -37,4 +37,4 @@
 
 - ***What is it***
     - 패키지 매니저에서 어드레서블 패키지를 설치한다.
-        > ![](addr1.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr1.png)

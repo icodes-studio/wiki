@@ -7,7 +7,8 @@
     - [*Unity Addressable Tutorial*](https://learn.unity.com/tutorials/?k=%5B%22lang%3Aen%22%2C%22lang%3Ako%22%2C%22q%3Aaddressable%22%5D&ob=starts)
     - [*Official: 어드레서블 애셋 시스템*](https://blog.unity.com/kr/games/addressable-asset-system)
     - [*Official: Addressables-Sample*](https://github.com/Unity-Technologies/Addressables-Sample)
-    - [*YouTube 동영상*](https://www.youtube.com/playlist?list=PLmRK0lH8TNCo7K4xmLpEov4llbVTwf29s)
+    - [*YouTube 동영상- Unite Seoul 2019*](https://youtu.be/yoBzTpJYN44)
+    - [*YouTube 동영상 - 감귤오렌지*](https://www.youtube.com/playlist?list=PLmRK0lH8TNCo7K4xmLpEov4llbVTwf29s)
     - [*유니티(Unity) - Addressable(어드레서블) 사용법(1). 설치 및 준비*](https://blog.naver.com/cdw0424/221636733877)
     - [*유니티(Unity) - Addressable(어드레서블) 사용법(2). 애셋 로드*](https://blog.naver.com/cdw0424/221636783259)
     - [*유니티(Unity) - Addressable(어드레서블) 사용법(3). 프로파일러와 디버깅*](https://blog.naver.com/cdw0424/221636822258)
@@ -103,3 +104,18 @@
     - 외에도, 프레임, 모노의 힙 정보, 생성된 시점 등 성능에 관해 중요한 주요 정보들을 볼 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr24.png)
 
+
+　
+
+## # 에셋 언로드
+
+- ***Unloading***
+    - 다 사용한 자원들은 메모리에서 내려주는 게 중요하다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr25.png)
+        > *https://youtu.be/yoBzTpJYN44*
+    - 어드레서블 1.1.10 버전인 현재 ReleaseAsset이라는 함수는 보이지 않는다. 아마 Release로 이름이 바뀐듯...
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr26.png)
+    - 인스턴티에이트로 생성한 경우는 ReleaseInstance로 해제한다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr27.png)
+    - 해제를 해주니 카운트가 줄어드는 모습을 확인할 수 있다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr28.png)

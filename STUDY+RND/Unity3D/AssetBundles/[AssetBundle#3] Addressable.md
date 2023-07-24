@@ -268,12 +268,45 @@
     - 새로 만든 그룹으로 옮겨주자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr50.png)
     - 이제 프로필을 새로 만들어주자
-    - 프로필은 어떤 식으로 설정했는지 저장하는 용도인데
-좀 쉽게 말하자면 테스트 버전, 서버 있는 버전, 서버 없는 버전 뭐 이런 상황이 있다며
-버전마다 어드레서블 설정이 모두 다를 것이다.
-이 설정을 상황에 따라 매번 다시 설정하는 것보다.
-그냥 버전마다 나눠놓으면 번거롭게 매번 설정할 필요가 없이 원하는 프로필만 선택하면 된다.
-설명은 이쯤하고
+        > - 프로필은 어떤 식으로 설정했는지 저장하는 용도인데
+        > - 좀 쉽게 말하자면 테스트 버전, 서버 있는 버전, 서버 없는 버전 뭐 이런 상황이 있다며
+        > - 버전마다 어드레서블 설정이 모두 다를 것이다.
+        > - 이 설정을 상황에 따라 매번 다시 설정하는 것보다.
+        > - 그냥 버전마다 나눠놓으면 번거롭게 매번 설정할 필요가 없이 원하는 프로필만 선택하면 된다.
+    - 프로필을 눌러 Manage Profiles를 클릭하고
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr51.png)
+    - 창이 뜨면...
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr52.png)
+    - Create를 눌러서 Profile을 선택하자
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr53.png)
+    - 프로필이 생성되었다면 이름을 적당하게 바꿔준 뒤
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr54.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr55.png)
+    - 다시 어드레서블 그룹 창으로 가서 프로필을 방금 만든 걸로 바꿔주자
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr56.png)
+    - 이제 Tools 드롭 다운을 눌러 Inspect System Settings를 누르거나
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr57.png)
+    - 위 파일을 그냥 클릭하면
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr58.png)
+    - 인스펙터에 이런 창이 뜬다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr59.png)
+    - 혹시나 프로필이 안 바뀌었는지 확인해보고
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr60.png)
+    - 카탈로그의 Build Remote Catalog를 체크해 준다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr61.png)
+    - 그러면 이렇게 바뀌게 된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr62.png)
+    - 카탈로그가 뭐냐면...
+    - 빌드 된 번들의 위치 정보나 또 어떤 식으로 가져올 것인지에 대한 설정들의 묶음이다.
+    - 그래서 우리는 remote로도 사용할 것이기 때문에 Build Remote Catalog를 체크해 주었다.
+    - 그리고 각 Path는 앞에 remote가 붙어있는 놈으로 선택해주자.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr63.png)
+    - 로컬과 차이를 간단하게 설명하자면
+    - 로컬 패스는 프로젝트 내부에 번들이 생성되고 내부에서 불러오지만
+    - 리모트 패스는 기본 경로가 이렇게 프로젝트(에셋 폴더 또는 라이브러리 폴더)밖에 ServerData라는 폴더로 설정이 되어있다..
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr64.png)
+    - 그 안엔 실제로 빌드 시 이렇게 번들이 들어 가있다. 나중에 이걸 서버에 넣어주면 된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr65.png)
 
-​
-        
+
+

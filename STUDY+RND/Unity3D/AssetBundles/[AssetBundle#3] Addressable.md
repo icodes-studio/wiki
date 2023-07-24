@@ -307,6 +307,78 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr64.png)
     - 그 안엔 실제로 빌드 시 이렇게 번들이 들어 가있다. 나중에 이걸 서버에 넣어주면 된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr65.png)
-
-
-
+- ***2편***
+    - 카탈로그(Catalog)는 각 어드레스와 자산을 매핑(연결) 하며, 원한다면 매핑을 변경하여 불러올 번들의 위치와 로드 방법 등을 설정할 수 있다.
+    - 그러기 위해선 이렇게 Build Remote Catalog를 활성화해주어야 한다.
+    - 이것을 체크해 주면 리모트 서버에 저장하기 위한 카탈로그 사본을 생성한다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr66.png)
+    - 직접 빌드 해보기 위해 플레이 모드를 Existing으로 바꾼 뒤
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr67.png)
+    - 체크한 채로 어드레서블 빌드를 하면 이런 식으로 catalog json, hash 파일이 생성된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr68.png)
+        > - 번들이 없는 이유는 아직 번들은 이 폴더에 빌드 하겠다고 설정을 안 했기 때문. 나중에 할 거임.
+    - json 파일을 열어서 그중 m_Keys 부분만 보면
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr69.png)
+        > - 이렇게 번들과, 어드레스 정보가 있는 것을 확인할 수 있다.
+        > - 그렇기 때문에 나중에 우리는 번들과 함께 이 카탈로그 사본도 함께 서버에 넣어 주어야 한다.
+    - Disable Catalog Update 옵션을 키면 카탈로그가 초기화될 타이밍에 버전 체크를 하지 않는다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr70.png)
+    - 카탈로그의 버전 관리를 할 수 있고
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr71.png)
+    - 예를 들어 1이라고 버전을 지정해준 채로 빌드 했을 때
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr72.png)
+    - 이렇게 기존과 다른 파일이 생기는데...
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr73.png)
+    - 1버전을 입력한 채로 한 번 더 빌드 하면, 이렇게 같은 버전의 파일을 덮어쓴다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr74.png)
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr75.png)
+    - 그러면 궁금증이 들 수 있는데 버전이 아예 없으면 안 덮어쓰나? 다시 이렇게 비워두고 빌드를 하면...
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr76.png)
+    - 그렇다! 안 덮어쓰고 새로 생긴다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr77.png)
+    - 때문에 지저분하게 파일을 계속 생성하지 않고도 
+    - 버전 관리할 때 유용하게 쓰일 수 있는 기능이다.
+    - 당연히 숫자뿐만 아니라 
+    - Android, IOS, WIndow 등 플랫폼 단위로 나누어서 관리할 수도 있다.
+    - 실제로 숫자보단 대부분의 경우 플랫폼 단위로 버전 관리를 하게 될 것이다.(이건 뇌피셜임)
+    - 아래와 같이 생성된 카탈로그들을 식별하는 것이 바로 "addressables_content_state.bin" 파일이다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr78.png)
+    - 열어보면 대충 이런 식으로 적혀있는데 
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr79.png)
+    - 카탈로그 정보가 들어있는 것을 확인할 수 있다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr80.png)
+        > 
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr81.png)
+    - ​확실하게 하기 위해 버전을 수정해 보았다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr82.png)
+    - 역시나 같은 결과를 확인할 수 있었다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr83.png)
+    - 아래 이미지처럼 각 플랫폼마다 "addressables_content_state.bin"을 두어서 해당하는 원하는 버전의 카탈로그만 따로 식별이 가능하기 때문에, 여러 플랫폼에서 하나의 빌드로 충돌 없이 각각 여러 버전을 함께 넣는 것이 가능한 것이다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr84.png)
+        > 
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr85.png)
+    - 말이 조금 복잡한데, 배포한 앱을 다시 빌드 및 배포하지 않고 수정한 에셋을 바로 적용시키는 예시를 들어보자면
+    - 윈도우에서 Product 버전 카탈로그로 빌드 해서 배포한 경우를 가정했을 때
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr86.png)
+    - 윈도우 환경에서 해당 앱은 Product 버전의 카탈로그만 식별을 할 것이기 때문에 product 버전 카탈로그에 등록된 위치의 번들이기만 하면 정상 작동한다.
+    - 그렇기 때문에 에셋을 수정하고 product 버전의 카탈로그와 함께 번들을 빌드 하면 되는데
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr87.png)
+    - 우리가 일일이 addressables_content_state.bin 파일을 열어서 버전을 확인하고
+    - 해당 버전으로 카탈로그를 수정해서 빌드 하는 것은 비효율적이니
+    - 배포 직후 번들을 다시 빌드 하지 않았다는 가정하에
+    - (카탈로그 버전을 수정하고 번들을 빌드 하면 addressables_content_state.bin 정보가 바뀌기 때문) 
+    - 아래 버튼을 눌러서 
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr88.png)
+    - addressables_content_state.bin 파일을 열러주면 해당 정보를 토대로  번들만 생성해 준다.
+    - (addressables_content_state.bin에 있는 카탈로그 정보를 기준으로 생성하기 때문에 다시 카탈로그를 생성할 이유가 없기 때문)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr89.png)
+    - 그리고 새로 빌드 한 번들을 서버에서 이전의 번들과 교체하기만 하면 
+    - 수정된 에셋을 따로 앱 빌드 없이 바로바로 적용이 가능해진다.
+    - 자 여기까지 어드레서블의 카탈로그에 대해서 이야기를 해보았다.
+    - 그냥 한 줄로만 정리하자면
+    - "귀찮게 매번 빌드 및 배포하지 않고도 에셋을 수정해서 적용시킬 수 있는데 그 중심에 카탈로그가 있다"
+    - 라는 말이다.
+    - 몰라도 사용하는 데는 당장 사용하는데 문제가 없겠지만
+    - 상용 프로젝트에 사용하려면 반드시 알아야 한다고 생각한다.
+    - 내 생각엔 이 카탈로그가 어드레서블 에셋 시스템의 핵심이지 않을까 싶다.

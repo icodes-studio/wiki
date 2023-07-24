@@ -147,7 +147,76 @@
         ```
     - OnSceneLoaded() 함수를 보자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr34.png)
-    - Succeeded면 m_LoadedScene 필드에 결과를 저장해준다.
+    - Succeeded면 m_LoadedScene 필드에 결과를 저장해준다. 이때 저장해둔 값은 나중에 언로드 할 때 쓰인다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr35.png)
+    - 언로드의 경우 m_LoadedScene 변수를 비워줘야 하는데 new를 통해 새로운 객체를 넣어줬다. null을 안 넣은 이유는 SceneInstance 형식이 구조체(Struct)라 적당한 값으로 초기화해준 것이다. <- default 사용을 고려하라
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr36.png)
+    - 코드전문
+        ```
+        using System.Collections;
+        using System.Collections.Generic;
+        using UnityEngine;
+        using UnityEngine.UI;
+        using UnityEngine.AddressableAssets;
+        using UnityEngine.SceneManagement;
+        using UnityEngine.ResourceManagement.AsyncOperations;
+        using UnityEngine.ResourceManagement.ResourceProviders;
 
+        public class LoadSubScene : MonoBehaviour
+        {
+            Button Btn;
+            [SerializeField] Text text;
+            bool m_ReadyToLoad = true;//로드 가능한 상태인가를 체크.
+            SceneInstance m_LoadedScene;// 불러온 씬의 인스턴스를 저장해두는변수.
+
+            // Start is called before the first frame update
+            void Start()
+            {
+                Btn = GetComponent<Button>();
+
+                Btn.onClick.AddListener(loadSubSceneFn);
+            }
+
+            void loadSubSceneFn()
+            {
+
+                if (m_ReadyToLoad)
+                    Addressables.LoadSceneAsync("5Cube", LoadSceneMode.Additive).Completed += OnSceneLoaded;
+                else
+                {
+                    Addressables.UnloadSceneAsync(m_LoadedScene).Completed += OnSceneUnloaded;
+                }
+
+            }
+
+            void OnSceneLoaded(AsyncOperationHandle<SceneInstance> obj)
+            {
+                if (obj.Status == AsyncOperationStatus.Succeeded)
+                {
+                    text.text = "언로드 5Cube";
+                    m_LoadedScene = obj.Result;
+                    m_ReadyToLoad = false;
+                }
+                else
+                {
+                    Debug.LogError("로드 실패");
+                }
+            }
+
+            void OnSceneUnloaded(AsyncOperationHandle<SceneInstance> obj)
+            {
+                if (obj.Status == AsyncOperationStatus.Succeeded)
+                {
+                    text.text = "다시 로드 하기";
+                    m_ReadyToLoad = true;
+                    m_LoadedScene = new SceneInstance();
+                }
+                else
+                {
+                    Debug.LogError("언로드 실패");
+                }
+            }
+
+        }
+        ```
 

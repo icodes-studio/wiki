@@ -40,14 +40,13 @@
 - ***Settingup***
     - ***Package Manager***에서 ***Addressables*** 패키지를 설치한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr1.png)
-    - 메뉴 ***Window ‣ Asset Management ‣ Addressables ‣ Groups*** 항목을 선택한다.
+    - 메뉴 ***Window ‣ Asset Management ‣ Addressables ‣ Groups*** 항목을 선택하여 ***Addressables Groups*** 창을 연다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr2.png)
-    - Create Addressables Settings 버튼 클릭
+    - ***Create Addressables Settings*** 버튼 클릭.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr3.png)
-    - ***AddressableAssetsData*** 라는 폴더가 생기고,
+    - 프로젝트뷰에 보면 ***AddressableAssetsData*** 라는 폴더가 생겼다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr4.png)
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr5.png)
-    - 아까 열었던 Addressables 윈도우는 이렇게 바뀐다.
+    - ***Addressables Group*** 윈도우는 이렇게 바뀌었다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr6.png)
 
 

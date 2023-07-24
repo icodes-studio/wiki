@@ -616,3 +616,61 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr122.png)
 
 
+　
+
+## # 외부 서버 없이 서버 기능 테스트하기.
+
+- 유니티 로컬 Hosting 서비스
+    - 로컬 서버를 이용해서 테스트하는 워크플로우
+    - 아래 이미지와 같은 경로를 통해 호스팅 창을 열고
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr123.png)
+    - 좌측 상단에 위치한 Create 버튼을 눌러서 Local Hosting을 클릭해 주자.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr124.png)
+    - 그러면 오른쪽에 이런 화면이 나오는데
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr125.jpg)
+    - 아무것도 건드리지 말고 그저 Enable만 체크해 주면 된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr126.png)
+    - 그러면 이렇게 ip 주소와 포트 번호가 나오는데
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr127.png)
+    - 아이피와 포트 번호 각각 앞에 있는 변수에 우 클릭을 하고 키를 복사한 뒤 메모장에다가 붙여넣기를 하자.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr128.png)
+        > - [PrivateIpAddress]
+        > - [HostingServicePort]
+        > - 그럼 위와 같은 뒤 변수가 복사되는데
+        > - 이걸 http://[PrivateIpAddress]:[HostingServicePort] 이렇게 작성해 주면 된다.
+    - 프로필 설정 창을 열고
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr129.png)
+    - 프로필을 하나 추가해준다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr130.png)
+    - 그리고 이름을 적당하게 바꿔준 뒤 remotepath들을 수정해 주자.
+    - 빌드 패스는 원래 적혀있던 ServerData를 HostedData라고 고쳐주고
+    - 로드 패스는 http://[PrivateIpAddress]:[HostingServicePort]를 넣어주면 된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr131.png)
+    - 그런 다음 어드레서블 인스펙터창을 열고
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr132.png)
+    - 기존 프로필을
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr133.png)
+    - 방금 만들어준 프로필로 설정해 주자.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr134.png)
+    - 다른 서버 관련 설정들은 이전에 한대로...
+    - 이렇게 해주고 번들을 빌드 한 뒤 게임을 빌드하고 나서 
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr135.png)
+    - 게임 실행 후 다운로드할 번들 사이즈를 가져오면 잘 가져오는 것을 확인할 수 있다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr136.png)
+    - 이때 다운로드를 하고 나서, 가져올 사이즈가 0인 걸 확인하고 번들 정보만 변경시켰을 경우 다시 다운로드할 수 있는지 확인해보자.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr137.png)
+    - 우선 혹시나 쓸데없는 캐시가 덮어써지는 것을 방지하기 위해 빌드 캐시를 먼저 clean시켜주고
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr138.png)
+    - 2번 번들에서 펭수를 빼보았다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr139.png)
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr140.png)
+    - 빌드 업데이트를 클릭하고
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr141.png)
+    - state가 담긴 bin 파일을 기준으로 하여 번들을 업데이트해 주었다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr142.png)
+    - 그리고 앱 빌드 없이 바로 아까 빌드 해 놓은 게임을 연 뒤 다시 사이즈를 가져 와보면
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr143.png)
+    - 정보가 변경된 두 번째 번들만 다시 다운로드해 오는 것을 확인할 수 있다. 
+    - 이로써 앱을 다시 빌드 하지 않고도 콘텐츠를 수정할 수 있었으며
+    - 따로 아마존과 같은 서버를 이용하지 않고도 서버 테스트를 할 수 있는 것을 확인해보았다.

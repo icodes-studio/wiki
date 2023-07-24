@@ -37,6 +37,7 @@
 　
 
 ## # 설치 및 준비
+
 - ***Settingup***
     - ***Package Manager***에서 ***Addressables*** 패키지를 설치한다.
         ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr1.png)

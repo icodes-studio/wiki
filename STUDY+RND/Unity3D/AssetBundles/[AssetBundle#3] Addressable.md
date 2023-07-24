@@ -382,3 +382,237 @@
     - 몰라도 사용하는 데는 당장 사용하는데 문제가 없겠지만
     - 상용 프로젝트에 사용하려면 반드시 알아야 한다고 생각한다.
     - 내 생각엔 이 카탈로그가 어드레서블 에셋 시스템의 핵심이지 않을까 싶다.
+- ***3편***
+    - 아래 예제는 스폰 버튼을 누르면 캐릭터를 생성하는데
+    - 서버에서 내가 부르려는 어드레드 또는 레이블과 의존성을 가지는 모든 번들들을 통째로 다운받아 사용하는 방법과
+    - 필요한 에셋만 하나가 포함된 번들만 다운받아 사용하는 방법을 보여준다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr90.png)
+    - 먼저 작성한 코드를 보자
+    - 아래 코드는 우리가 이때까지 사용해온 방식으로 오브젝트를 생성하는 방식이다. (필요한 거 하나씩 다운로드하는 방법)
+        ```
+        using UnityEngine;
+        using UnityEngine.AddressableAssets;
+        using UnityEngine.ResourceManagement.AsyncOperations;
+
+        public class Spawner : MonoBehaviour
+        {
+            private GameObject Character = null;
+
+            [Header("캐릭터의 어드레스를 입력해 주세요!")]
+            [SerializeField] private string CharacterAddress = string.Empty;
+
+            private void Start()
+            {
+                Character = null;
+            }
+
+            public void _ClickSpawn()
+            {
+
+                //Character가 null포인터가 아니라면
+                //해당 인스턴스를 제거.
+
+                if (!ReferenceEquals(Character, null))
+                {
+                    ReleaseObj();
+                }
+
+
+                //캐릭터를 스폰 한다.
+                Spawn();
+
+            }
+
+            void Spawn()
+            {
+                Addressables.InstantiateAsync(CharacterAddress, new Vector3(Random.Range(-2f, 2f), 5, 0), Quaternion.identity).Completed +=
+                    (AsyncOperationHandle<GameObject> obj) =>
+                    {
+                        Character = obj.Result;
+                    };
+
+            }
+
+            void ReleaseObj()
+            {
+                //객체가 삭제될 때 메모리 해제를 위해 레퍼런스 카운트 -1 및 오브젝트인스턴스 제거.
+                Addressables.ReleaseInstance(Character);
+            }
+
+        }
+        ```
+    - 아래 코드는 번들을 한방에 다운받는 방법이다. DownloadDependenciesAsync("레이블")로 다운로드할 수 있고, GetDownloadSizeAsync("레이블")로 미리 사이즈를 확인할 수도 있다.
+        ```
+        using UnityEngine;
+        using UnityEngine.UI;
+        using UnityEngine.AddressableAssets;
+        using UnityEngine.ResourceManagement.AsyncOperations;
+
+        public class BundleDown : MonoBehaviour
+        {
+            [SerializeField] Text SizeText;
+
+            [Space]
+            [Header("다운로드를 원하는 번들 또는 번들들에 포함된 레이블중 아무거나 입력해주세요.")]
+            [SerializeField] string LableForBundleDown = string.Empty;
+
+            public void _Click_BundleDown()
+            {
+                Addressables.DownloadDependenciesAsync(LableForBundleDown).Completed +=
+                    (AsyncOperationHandle Handle) =>
+                    {
+                        //DownloadPercent프로퍼티로 다운로드 정도를 확인할 수 있음.
+                        //ex) float DownloadPercent = Handle.PercentComplete;
+
+                        Debug.Log("다운로드 완료!");
+
+                        //다운로드가 끝나면 메모리 해제.
+                        Addressables.Release(Handle);
+
+                    };
+            }
+
+            public void _Click_CheckTheDownloadFileSize()
+            {
+                //크기를 확인할 번들 또는 번들들에 포함된 레이블을 인자로 주면 됨.
+                //long타입으로 반환되는게 특징임.
+                Addressables.GetDownloadSizeAsync(LableForBundleDown).Completed +=
+                    (AsyncOperationHandle<long> SizeHandle) =>
+                    {
+                        string sizeText = string.Concat(SizeHandle.Result, " byte");
+
+                        SizeText.text = sizeText;
+
+                        //메모리 해제.
+                        Addressables.Release(SizeHandle);
+                    };
+
+
+            }
+        }
+        ```
+- ***4편(서버 업로드)***
+    - 이제 실제로 사용해 보도록 하겠다. 우선 서버가 있어야 하는데 "아마존 S3"를 사용하기로 했다.
+        > *https://aws.amazon.com/ko/s3/*
+    - s3의 콘솔에 로그인하고 버킷을 만들자 버킷 이름은 중복이 안되므로 자신만의 고유한 이름으로 작명하면 된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr91.png)
+    - 다른 건 중요하지 않고 원활한 진행을 위해 이 부분(모든 퍼블릭 액세스 차단) 항목을 체크 해제하자
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr92.png)
+    - 그 뒤엔 전부 다음을 눌러 버킷을 생성하자.
+    - 버킷이 생성되었다면 아무 파일이나 하나 올려보자
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr93.png)
+    - 그럼 이렇게 파일이 올라가고, 파일을 눌러보면 이렇게 주소가 나오는데
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr94.png)
+    - 맨 마지막 파일 이름 대신 [BuildTarget]를 추가해서 복사해 두자.
+    - 그리고 위 파일은 주소를 알아내기 위해 넣은 의미 없는 파일이니 지워주도록 한다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr95.png)
+    - 어드레서블창을 키고 프로파일을 수정하기 위해 Manage Profiles를 찾아서 클릭하자
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr96.png)
+    - 이게 버전마다 위치가 다른 경우가 많은데 창에서 못 찾으면 아래 이미지처럼 어드레서블 세팅에도 있으니 확인해 보길 바란다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr97.png)
+    - 창이 뜨면 빨간 동그라미가 있는 RemoteLoadPath에다가 기존 값을 지우고 아까 복사한 주소를 넣어주자.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr98.png)
+    - 그런 다음 다시 그룹창으로 가서 그룹을 하나 만들어주고
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr99.png)
+    - 우 클릭을 통해 그룹 설정을 열어주자
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr100.png)
+    - 인스펙터를 확인해보면 설정이 열려있는 걸 확인할 수 있다.
+    - 그리고 이 그룹은 리모트 즉 서버용으로 사용할 거니까 빌드와 로드 패스를 각각 리모트 빌드와 리모트 로드로 바꿔주면 된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr101.png)
+    - 이제 이 그룹으로 에셋을 넣어준 뒤 번들 식별을 위해 Character라는 레이블을 달아두도록 하자.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr102.png)
+    - 그리고 처음 나온 두 스크립트를 아무 오브젝트에 넣은 뒤 값을 설정해준 다음
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr103.png)
+    - 어드레서블 설정으로 가서 카탈로그를 설정해주면 모든 준비가 끝난다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr104.png)
+    - 이제 번들을 빌드 해보자. 플레이 모드를 Use Existing Build로 수정하고 
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr105.png)
+    - 빌드 하면
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr106.png)
+    - 프로젝트 폴더 안에 ServerData라는 폴더가 생기고
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr107.png)
+    - 그 안에 빌드 한 플랫폼에 해당하는 폴더가 있으며 
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr108.png)
+    - 또 그 안에 카탈로그와 번들이 빌드 된 걸 확인할 수 있다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr109.png)
+    - 이전 경로로 다시 돌아온 뒤
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr110.png)
+    - 플랫폼 폴더를 통째로 서버에 업로드해주자.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr111.png)
+    - 마지막으로 작업을 눌러서 퍼블릭 설정을 해주면 된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr112.png)
+    - 모든 준비가 끝났으니 프로젝트를 빌드 해서 실행해보자.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr113.png)
+    - 스폰 버튼을 누르면 캐릭터가 잘 나오는 것을 확인할 수 있다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr114.png)
+    - 앱을 종료하고 다시 에디터로 가서 바꾸고 초록머리 캐릭터를 빨간 머리 캐릭터로 바꾸기 위해
+    - 빨간 머리 에셋의 어드레스를 이전 초록머리의 어드레스랑 같은 이름으로 만들어 준 뒤
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr115.png)
+    - 초록머리 어드레스를 지우고 
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr116.png)
+    - 빨간 머리 캐릭터를 리모트 그룹으로 옮겨 주고 레이블도 다시 지정해준 뒤 번들을 빌드 한다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr117.png)
+    - 서버에서 기존 파일을 지우고 방금 새로 만든 번들과 카탈로그 파일들을 넣어주자.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr118.png)
+    - 이때 유저는 앱을 다시 새로 다운로드하지 않았고 기존의 앱을 다시 실행한다. 
+    - 다시 스폰을 눌러주면 캐릭터가 바뀐 것을 확인할 수 있다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr119.png)
+    - 다운로드 사이즈를 받아오는 것도 문제가 없다. 이렇게 앱을 재배포하지 않고서도 콘텐츠를 수정할 수 있으니 매우 편리하고 합리적이다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr120.png)
+- ***이제 마지막으로 다운로드에 대한 개념을 정리해보자.***
+    - 어드레서블의 서버에서 로드한다는 말은 결국 번들을 다운받는다는 말과 같다.
+        > - 예를 들어 
+        > - "과일"이라는 번들에서 "사과"만 로드하더라도
+        > - 나는 "과일"이라는 번들을 다운받은것이다.
+        > - 때문에 이 다음번에 인터넷이 연결되어 있지 않아도
+        > - 이미 로드한 "사과"에셋 또는 "과일"번들에 포함된 에셋들을 사용할 수 있다.
+        > - (하나의 에셋만 로드한 직후 인터넷을 모두 끈상태로 같은 번들에 포함된 다른 에셋을 로드한 결과 로드됨)
+    - 다운로드에는 번들 하나만 다운로드하는 방법과 여러개를 한방에 다운로드하는 방법이 있다.
+        > - 하나씩 : LoadAsset, Inastantate 등등
+        > - 한방에 : DownloadDependenciesAsync
+    - DownloadDependenciesAsync(레이블)에서 레이블이라는 값을 가지는 번들을 모두 다운로드한다.
+        > - 예를 들어 
+        > - "과일"번들에 "망고"라는 에셋이 있고 "동남아 음식"이라는 레이블이 지정되어 있으며,
+        > - "곡식"번들, "쌀"에셋, "동남아 음식"레이블이 있고,
+        > - "과자"번들,"빠다코코낫"에셋,"한국 과자"레이블이 있을 때
+        > - DownloadDependenciesAsync(동남아 음식)이라고 작성하면
+        > - "과일","곡식"번들만 다운로드한다.
+    - LoadAssets(레이블)을 사용할 땐 레이블이 지정된 에셋을 모두 가져온다.
+        > - 우선
+        > - LoadAsset과 LoadAssets가 다른 점을 인식하자.
+        > - LoadAsset는 하나의 에셋만 리턴하고
+        > - LoadAssets는 같은 레이블이 지정된 에셋들을 배열에 담아 리턴한다.
+        > - 예를 들어
+        > - "EBS 캐릭터"번들, "펭수"에셋, "펭귄"
+        > - "EBS 캐릭터"번들, "뚝딱이"에셋, "도깨비"
+        > - "EBS 캐릭터"번들, "뽀로로"에셋, "펭귄"
+        > - 일 때
+        > - LoadAssets(펭귄)을 사용하면
+        > - 펭수, 뽀로로 에셋이 리턴된다.
+    - 이미 다운로드한 번들이라도 서버에 해당 번들이 수정되어 있다면 다시 변경된 에셋a만 다운로드하는게 아니라 번들을 통째로 지우고 다시 다운받는다.
+        > - 예를 들어
+        > - "펭귄"어드레스를 가진 
+        > - "뽀로로" 에셋을 "펭수"에셋으로 바꾸고 
+        > - 그렇게 빌드 한 번들을 서버에 올리면
+        > - 사용자는 기존의 번들 대신 교체된 새로운 번들을 통째로 다시 다운받아온다.
+    - 인터넷이 연결된 상태라면 앱 실행 후 최초 로드할 때마다 번들 변경사항을 검토한다.(뇌피셜)
+        > - 예를 들어
+        > - 앱 사용 중간에 펭귄 번들의 "뽀로로"를 "펭수"로 바꿔도 앱 사용 중간엔 바뀌지 않는다.
+        > - (사실 중간에 바뀌면 유저가 혼란해하기 때문에 바뀌게 할 수 있어도 안 바뀌는 게 맞음)
+        > - 앱을 종료 후 다시 실행하고 처음 번들에 접근할 때 변경사항을 검토하고 
+        > - 해당되는 에셋은 변경된 에셋을 다운로드한다.
+    - GetDownloadSizeAsync()는 한번 받은적이 있으면 0을 반환한다.
+        > - 공식문서의 GetDownloadSizeAsync() 설명 부분을 보면
+        > - If you wish to ask the user for consent prior to download, use Addressables.GetDownloadSize() to return how much space is needed to download the content from a given address or label. Note that this takes into account any previously downloaded bundles that are still in Unity's asset bundle cache.
+        > - 라고 적혀 있는데, 이미 다운 받은 경우 새로운 내용이 없다면 0을 반환 한다는 이야기로 추정된다.
+        > - 실험 해본 결과 한번 다운받은 뒤 번들이 변경되지 않았다면 다운받지 않는다.
+    - 여러개의 번들 중 하나의 번들을 수정하였다면 그 번들만 다시 다운받을수있다.
+        > - DownloadDependenciesAsync(레이블)에 영향을 받는 번들이 5개있고
+        > - 그 중 1개의 번들만 수정되었다면 그 1개만 다시 다운받는다.
+- ***추가***
+    - 퍼센트 출력 방법
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr121.png)
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr122.png)
+
+

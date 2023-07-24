@@ -60,7 +60,7 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr7.png)
     - 선택하면 바로 옆에 어드레스가 자동으로 생성되는데, 이 값으로 파일을 로드 해 올 것이다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr8.png)
-    - 우리가 알아보기 편하게 다른 어드레스와 겹치지만 않는다면 원하는 대로 수정할 수 있다.
+    - 이 값은 다른 어드레스와 겹치지만 않는다면 원하는 대로 수정할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr9.png)
     - 이제 이 큐브 프리팹을 생성하는 버튼과 그 스크립트를 만들어서 넣어주자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr10.png)

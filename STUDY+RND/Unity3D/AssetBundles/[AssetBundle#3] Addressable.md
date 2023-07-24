@@ -220,3 +220,60 @@
         }
         ```
 
+
+　
+
+## # 빌드 후 실제 사용.
+
+- ***Play Mode***
+    - 지금까지 내용은 에디터에서만 작동을 할 것이다.
+    - 어드레서블 윈도우의 상단부에 위치한 플레이 모드를 보면 Fast Mode라고 되어있을 건데
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr37.png)
+    - 각각의 모드를 설명해 보자면 아래와 같다.
+        > - Fast Mode: 패키징 되지 않은(= 번들로 만들지 않은 = 그룹으로 묶기만 하고 빌드를 하지 않아서 따로 파일이 존재하지 않을 때) 상태에서도 바로바로 플레이가 가능한 모드이다. 작업 중인 컴퓨터의 에셋 데이터베이스에서 바로바로 정보를 가져오기 때문에 실제로 어드레서블에셋들이 그룹화되어있지 않다. 
+        > - Virtual Mode: 플레이를 누르면 사전 빌드 단계를 거쳐서 그룹화된 번들 파일들을 생성한 후 플레이 된다. 따라서 실제 그룹화가 되어있고, 그 정보에서 데이터를 불러온다. 그래서 프로파일링 할 때 유용하다. 하지만 데이터가 계속해서 활성화되어 있기 때문에 실제 빌드 시 작동은 하지만 메모리에 이점이 전혀 없다.
+        > - Packed Play Mode: 실제 빌드를 통해 그룹화된 파일을 생성해야만 이 모드로 플레이(재생)가 된다. 실제 빌드 시 사용하며 평소에 자주자주 빌드 파일을 업데이트해주는 습관을 들이는 게 좋다.
+    - 빌드를 하면...
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr38.png)
+    - 빌드 내용이 담긴 bin 파일이 생긴다. (번들아님)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr39.png)
+    - 이 빈 파일이 생기고 나서 Packed Play Mode로 플레이를 해보면 정상적으로 플레이가 가능해지고
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr40.png)
+    - 프로파일러를 열어보면 자동으로 생성된 번들 파일에서 데이터를 가져오는 걸 확인할 수 있다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr41.png)
+    - 참고로 어드레서블 시스템은 기존 에셋번들 시스템을 더 사용하기 편하게 제공하기 위해 래핑 된 것이다. 에셋 번들 위에서 돌고 있는 게 어드레서블 시스템이라는 말이다. 그러니 에셋 번들 시스템이 없어지는가 하는 등의 걱정은 하지 않아도 될 것 같다.
+        > *https://youtu.be/iauWgEXjkEY*
+
+
+　
+
+## # 서버에서 다운로드하기
+
+- ***1편***
+    - Groups를 선택하고...
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr42.png)
+    - 어드레서블 세팅을 생성해주자.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr43.png)
+    - 여기까지 잘 왔는가?
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr44.png)
+    - 이제 서버에 넣을 번들과 로컬에서 사용할 번들을 구분해보자. 우 클릭을 통해 그룹을 새로 생성할 수 있고, 이렇게 생성된 그룹은 각각의 에셋 번들로 빌드 된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr45.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr46.png)
+    - 방금 만든 그룹의 이름을 RemoteAssets라고 지어 줬다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr47.png)
+    - 이제 각 그룹에 에셋을 추가시켜주자. 우선 각 에셋에 어드레서블 체크를 해주고
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr48.png)
+    - 디폴트 그룹에 들어간 에셋들을
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr49.png)
+    - 새로 만든 그룹으로 옮겨주자.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr50.png)
+    - 이제 프로필을 새로 만들어주자
+    - 프로필은 어떤 식으로 설정했는지 저장하는 용도인데
+좀 쉽게 말하자면 테스트 버전, 서버 있는 버전, 서버 없는 버전 뭐 이런 상황이 있다며
+버전마다 어드레서블 설정이 모두 다를 것이다.
+이 설정을 상황에 따라 매번 다시 설정하는 것보다.
+그냥 버전마다 나눠놓으면 번거롭게 매번 설정할 필요가 없이 원하는 프로필만 선택하면 된다.
+설명은 이쯤하고
+
+​
+        

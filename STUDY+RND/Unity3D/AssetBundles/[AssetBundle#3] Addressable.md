@@ -111,11 +111,43 @@
 
 - ***Unloading***
     - 다 사용한 자원들은 메모리에서 내려주는 게 중요하다.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr25.png)
         > *https://youtu.be/yoBzTpJYN44*
+        >
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr25.png)
     - 어드레서블 1.1.10 버전인 현재 ReleaseAsset이라는 함수는 보이지 않는다. 아마 Release로 이름이 바뀐듯...
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr26.png)
     - 인스턴티에이트로 생성한 경우는 ReleaseInstance로 해제한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr27.png)
     - 해제를 해주니 카운트가 줄어드는 모습을 확인할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr28.png)
+
+
+　
+
+## # 씬 로드와 언로드
+
+- ***Scene Loading & Unloading***
+    - 적당히 씬을 하나 만들어주고
+        >![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr29.png)
+    - 어드레서블 체크 후 이름을 정해 줬다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr30.png)
+    - 씬을 로드할 때는 LoadSceneAsync이라는 함수가 따로 있어서 사용하면 된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr31.png)
+- ***Subscene Loading***
+    - 기존 씬에 합쳐서 씬을 로드하는 경우
+    - 먼저 씬을 로딩하는 스크립트를 만들어주고,
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr32.png)
+    - SceneInstance를 쓰는 이유는 Addressables.UnloadSceneAsync()함수가 매개변수로 SceneInstance를 받기 때문이다. 
+    - 버튼을 클릭하면 loadSubSceneFn() 함수를 실행하게 추가해주었다.
+    - "5Cube"라는 어드레스를 가진 씬을 LoadSceneMode.Additive라는 매개변수를 이용해 본래 씬에다가 합쳐 준다.    
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr33.png)
+    - 로드가 완료될 때 이벤트를 등록해서 OnSceneLoaded() 함수를 실행한다.
+        ```
+        Addressables.LoadSceneAsync("5Cube", LoadSceneMode.Additive).Completed += OnSceneLoaded
+        ```
+    - OnSceneLoaded() 함수를 보자.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr34.png)
+    - Succeeded면 m_LoadedScene 필드에 결과를 저장해준다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr35.png)
+
+

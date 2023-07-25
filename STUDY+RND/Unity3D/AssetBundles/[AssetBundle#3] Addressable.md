@@ -85,7 +85,7 @@
             }
         }
         ```
-    - 버튼을 클릭하니 정상적으로 큐브가 생성되는 걸 볼 수 있다.
+    - 버튼을 클릭하면 큐브가 생성되는 것을 볼 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr11.png)
     - 필요에 따라 로드와 생성을 분리시킬 수도 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr12.png)

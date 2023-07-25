@@ -58,11 +58,11 @@
 - ***Settingup***
     - 애셋을 어드레서블로 로드하기 위해서는 인스펙터에서 ***Addressable*** 항목을 선택해야 한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr7.png)
-    - ***Addressable*** 항목을 선택하면 바로 옆에 어드레스가 자동으로 생성되는데, 이 값으로 파일을 로드 해 올 것이다.
+    - ***Addressable*** 항목을 선택하면 바로 옆에 어드레스가 자동으로 생성되는데, 이 값으로 큐브 프리팹을 로드할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr8.png)
     - 이 값은 다른 어드레스와 겹치지만 않는다면 원하는 대로 수정할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr9.png)
-    - 이 큐브 프리팹을 생성하는 버튼과 스크립트를 만들어서 넣어주자.
+    - 큐브 프리팹을 생성하는 스크립트를 만들어서 버튼 오브젝트에 바인딩 해주자.
         ```
         using UnityEngine;
         using UnityEngine.UI;

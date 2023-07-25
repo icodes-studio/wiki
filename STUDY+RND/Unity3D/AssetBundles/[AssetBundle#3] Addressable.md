@@ -179,8 +179,8 @@
 - ***Addressable, AssetReference 클래스 각각에 언로드 함수 존재***
     - *Addressables.Release*
     - *Addressables.ReleaseInstance*
-    - *Addressables.Release*
-    - *Addressables.ReleaseInstance*
+    - *AssetReference.Release*
+    - *AssetReference.ReleaseInstance*
 - ***동작확인***
     - 큐브 오브젝트를 생성하는 스크립트를 만들어서 버튼 오브젝트에 바인딩.
         ```

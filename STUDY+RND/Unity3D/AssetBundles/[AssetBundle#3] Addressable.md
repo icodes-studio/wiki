@@ -286,29 +286,10 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr30.png)
     - 버튼을 클릭하여 씬 로딩 동작을 확인할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr31.png)
-
-- ***LoadSceneMode.Additive***
-    - 기존 씬에 합쳐서 씬을 로드하는 경우
-    - 먼저 씬을 로딩하는 스크립트를 만들어주고,
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr32.png)
-    - SceneInstance를 쓰는 이유는 Addressables.UnloadSceneAsync()함수가 매개변수로 SceneInstance를 받기 때문이다. 
-    - 버튼을 클릭하면 loadSubSceneFn() 함수를 실행하게 추가해주었다.
-    - "5Cube"라는 어드레스를 가진 씬을 LoadSceneMode.Additive라는 매개변수를 이용해 본래 씬에다가 합쳐 준다.    
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr33.png)
-    - 로드가 완료될 때 이벤트를 등록해서 OnSceneLoaded() 함수를 실행한다.
+- ***UnloadSceneAsync***
+    - ***LoadSceneMode.Additive*** 옵션으로 중복 씬을 로드할 수 있다.
+    - 아래 코드를 작성하고 버튼 오브젝트에 바인딩하여 테스트 해보자.
         ```
-        Addressables.LoadSceneAsync("5Cube", LoadSceneMode.Additive).Completed += OnSceneLoaded
-        ```
-    - OnSceneLoaded() 함수를 보자.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr34.png)
-    - Succeeded면 m_LoadedScene 필드에 결과를 저장해준다. 이때 저장해둔 값은 나중에 언로드 할 때 쓰인다.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr35.png)
-    - 언로드의 경우 m_LoadedScene 변수를 비워줘야 하는데 new를 통해 새로운 객체를 넣어줬다. null을 안 넣은 이유는 SceneInstance 형식이 구조체(Struct)라 적당한 값으로 초기화해준 것이다. <- default 사용을 고려하라
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr36.png)
-    - 코드전문
-        ```
-        using System.Collections;
-        using System.Collections.Generic;
         using UnityEngine;
         using UnityEngine.UI;
         using UnityEngine.AddressableAssets;
@@ -318,29 +299,24 @@
 
         public class LoadSubScene : MonoBehaviour
         {
-            Button Btn;
             [SerializeField] Text text;
-            bool m_ReadyToLoad = true;//로드 가능한 상태인가를 체크.
-            SceneInstance m_LoadedScene;// 불러온 씬의 인스턴스를 저장해두는변수.
 
-            // Start is called before the first frame update
+            Button button;
+            bool readyToLoad = true;
+            SceneInstance loadedScene;
+
             void Start()
             {
-                Btn = GetComponent<Button>();
-
-                Btn.onClick.AddListener(loadSubSceneFn);
+                button = GetComponent<Button>();
+                button.onClick.AddListener(OnLoadSubScene);
             }
 
-            void loadSubSceneFn()
+            void OnLoadSubScene()
             {
-
-                if (m_ReadyToLoad)
+                if (readyToLoad)
                     Addressables.LoadSceneAsync("5Cube", LoadSceneMode.Additive).Completed += OnSceneLoaded;
                 else
-                {
-                    Addressables.UnloadSceneAsync(m_LoadedScene).Completed += OnSceneUnloaded;
-                }
-
+                    Addressables.UnloadSceneAsync(loadedScene).Completed += OnSceneUnloaded;
             }
 
             void OnSceneLoaded(AsyncOperationHandle<SceneInstance> obj)
@@ -348,8 +324,8 @@
                 if (obj.Status == AsyncOperationStatus.Succeeded)
                 {
                     text.text = "언로드 5Cube";
-                    m_LoadedScene = obj.Result;
-                    m_ReadyToLoad = false;
+                    loadedScene = obj.Result;
+                    readyToLoad = false;
                 }
                 else
                 {
@@ -362,15 +338,14 @@
                 if (obj.Status == AsyncOperationStatus.Succeeded)
                 {
                     text.text = "다시 로드 하기";
-                    m_ReadyToLoad = true;
-                    m_LoadedScene = new SceneInstance();
+                    readyToLoad = true;
+                    loadedScene = default;
                 }
                 else
                 {
                     Debug.LogError("언로드 실패");
                 }
             }
-
         }
         ```
 

@@ -160,7 +160,7 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr16.png)
     - 메뉴 ***Window ‣ Asset Management ‣ Addressables ‣ Event Viewer*** 항목을 선택하여 이벤트 뷰어를 띄울 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr17.png)
-    - 이벤트 뷰어를 사용하려면 ***AddressableAssetSettings*** 인스펙터에서 Send Profiler Events를 체크해주어야 한다.
+    - 이벤트 뷰어를 사용하려면 ***AddressableAssetSettings*** 인스펙터에서 ***Send Profiler Events*** 필드를 선택해야 한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr18.png)
     - 체크를 했다면 플레이하고 어드레서블 프로파일러를 보자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr19.png)

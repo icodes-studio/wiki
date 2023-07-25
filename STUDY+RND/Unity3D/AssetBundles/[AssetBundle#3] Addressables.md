@@ -326,24 +326,25 @@
 
 ## # 빌드 후 실제 사용.
 
-- ***Play Mode***
-    - 지금까지 내용은 에디터에서만 작동을 할 것이다.
-    - 어드레서블 윈도우의 상단부에 위치한 플레이 모드를 보면 Fast Mode라고 되어있을 건데
+- ***Play Mode Script***
+    - ***Addressables Groups*** 윈도우의 상단부에 위치한 ***Play Mode Script*** 항목을 보면 아래와 같다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr37.png)
-    - 각각의 모드를 설명해 보자면 아래와 같다.
-        > - Fast Mode: 패키징 되지 않은(= 번들로 만들지 않은 = 그룹으로 묶기만 하고 빌드를 하지 않아서 따로 파일이 존재하지 않을 때) 상태에서도 바로바로 플레이가 가능한 모드이다. 작업 중인 컴퓨터의 에셋 데이터베이스에서 바로바로 정보를 가져오기 때문에 실제로 어드레서블에셋들이 그룹화되어있지 않다. 
-        > - Virtual Mode: 플레이를 누르면 사전 빌드 단계를 거쳐서 그룹화된 번들 파일들을 생성한 후 플레이 된다. 따라서 실제 그룹화가 되어있고, 그 정보에서 데이터를 불러온다. 그래서 프로파일링 할 때 유용하다. 하지만 데이터가 계속해서 활성화되어 있기 때문에 실제 빌드 시 작동은 하지만 메모리에 이점이 전혀 없다.
-        > - Packed Play Mode: 실제 빌드를 통해 그룹화된 파일을 생성해야만 이 모드로 플레이(재생)가 된다. 실제 빌드 시 사용하며 평소에 자주자주 빌드 파일을 업데이트해주는 습관을 들이는 게 좋다.
-    - 빌드를 하면...
+    - ***Use Asset Database (fastest)***
+        > - 애셋번들을 빌드하지 않고 애셋 데이터 베이스를 사용하여 바로 플레이가 가능한 모드
+        > - 에디터에서 테스트할 때만 이용 가능하다.
+    - ***Simulate Groups (advanced)***
+        > - 가상의 번들을 빌드해 해당 번들을 확인하는데 사용한다.
+        > - 프로파일링 할 때 유용하다.
+    - ***Use Existing Build (requires built groups)*** 
+        > - 실제 애셋번들 빌드를 통해 그룹화된 파일을 생성해야만 이 모드로 플레이가 된다.
+        > - 즉, 번들에 기재된 프로필의 경로에서 로드하여 사용하는 설정.
+    - 빌드를 하면,
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr38.png)
     - 빌드 내용이 담긴 bin 파일이 생긴다. (번들아님)
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr39.png)
-    - 이 빈 파일이 생기고 나서 Packed Play Mode로 플레이를 해보면 정상적으로 플레이가 가능해지고
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr40.png)
-    - 프로파일러를 열어보면 자동으로 생성된 번들 파일에서 데이터를 가져오는 걸 확인할 수 있다.
+    - ***Use Existing Build*** 모드로 플레이 하면, 자동으로 생성된 번들 파일에서 데이터를 가져오는 걸 확인할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr41.png)
-    - 참고로 어드레서블 시스템은 기존 에셋번들 시스템을 더 사용하기 편하게 제공하기 위해 래핑 된 것이다. 에셋 번들 위에서 돌고 있는 게 어드레서블 시스템이라는 말이다. 그러니 에셋 번들 시스템이 없어지는가 하는 등의 걱정은 하지 않아도 될 것 같다.
-        > *https://youtu.be/iauWgEXjkEY*
+
 
 
 　

@@ -171,15 +171,28 @@
 ## # 에셋 언로드
 
 - ***Unloading***
-    - 다 사용한 자원들은 메모리에서 내려주는 게 중요하다.
-        > *https://youtu.be/yoBzTpJYN44*
-        >
+    - LoadAssetAsync로 로드한 애셋은 Release()로 해제
+    - InstantiateAsync로 로드 및 생성한 오브젝트는 ReleaseInstance()로 해제
+    - 아래 스크립트를 만들어 Cube 프리팹에 바인딩하고,
+        ```
+        using UnityEngine;
+        using UnityEngine.AddressableAssets;
+
+        public class Destructer : MonoBehaviour
+        {
+            void Start()
+            {
+                Invoke("ReleaseObj", 1f);
+            }
+
+            void ReleaseObj()
+            {
+                Addressables.ReleaseInstance(gameObject);
+            }
+        }
+        ```
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr25.png)
-    - 어드레서블 1.1.10 버전인 현재 ReleaseAsset이라는 함수는 보이지 않는다. 아마 Release로 이름이 바뀐듯...
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr26.png)
-    - 인스턴티에이트로 생성한 경우는 ReleaseInstance로 해제한다.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr27.png)
-    - 해제를 해주니 카운트가 줄어드는 모습을 확인할 수 있다.
+    - 프로파일러를 확인하면 카운트가 줄어드는 모습을 확인할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr28.png)
 
 

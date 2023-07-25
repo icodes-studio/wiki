@@ -256,7 +256,7 @@
 
 ## # 씬 로드와 언로드
 
-- ***Scene Loading & Unloading***
+- ***LoadSceneAsync***
     - 씬을 하나 만들고 어드레서블 체크 후 이름을 정해 주자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr29.png)
     - 씬을 로드하는 ***LoadSceneAsync*** 함수가 따로 준비되어 있다.

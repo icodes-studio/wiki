@@ -210,9 +210,35 @@
 
 - ***Scene Loading & Unloading***
     - 씬을 하나 만들고 어드레서블 체크 후 이름을 정해 주자.
-        >![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr29.png)
-    - 씬을 로드할 때는 LoadSceneAsync이라는 함수가 따로 있어서 사용하면 된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr29.png)
+    - 씬을 로드하는 스크립트를 만든다.
+        ```
+        using UnityEngine;
+        using UnityEngine.UI;
+        using UnityEngine.AddressableAssets;
+
+        public class NextScene : MonoBehaviour
+        {
+            public string nextSceneAddress;
+            Button nextButton;
+
+            void Start()
+            {
+                nextButton = GetComponent<Button>();
+                nextButton.onClick.AddListener(OnClickButton);
+            }
+
+            void OnClickButton()
+            {
+                Addressables.LoadSceneAsync(nextSceneAddress);
+            }
+        }
+        ```
+    - 버튼에 스크립트를 바인딩 시킨다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr30.png)
+    - 버튼을 클릭하면 씬을 로드한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr31.png)
+
 - ***LoadSceneMode.Additive***
     - 기존 씬에 합쳐서 씬을 로드하는 경우
     - 먼저 씬을 로딩하는 스크립트를 만들어주고,

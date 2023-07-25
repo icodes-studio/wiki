@@ -342,7 +342,7 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr38.png)
     - 빌드 내용이 담긴 bin 파일이 생긴다. (번들아님)
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr39.png)
-    - ***Use Existing Build*** 모드로 플레이 하면, 자동으로 생성된 번들 파일에서 데이터를 가져오는 걸 확인할 수 있다.
+    - ***Use Existing Build*** 모드로 플레이 하면, 번들 파일에서 데이터를 가져오는 걸 확인할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr41.png)
 
 

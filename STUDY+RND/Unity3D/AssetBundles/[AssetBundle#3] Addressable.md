@@ -143,7 +143,7 @@
         ```
     - 어드레서블 애셋을 입력받을 수 있는 인스펙터 필드가 보인다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr14.png)
-    - 선택 창을 띄워서 큐브를 선택하거나
+    - 창을 띄워서 선택하거나
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr15.png)
     - 프리팹을 드래그하여 바인딩한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr5.png)

@@ -200,7 +200,7 @@
             }
         }
         ```
-    - 프로파일러를 확인하면 카운트가 줄어드는 모습을 확인할 수 있다.
+    - 이벤트 뷰어를 확인하면 카운트가 줄어드는 모습을 확인할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr28.png)
 
 
@@ -209,13 +209,11 @@
 ## # 씬 로드와 언로드
 
 - ***Scene Loading & Unloading***
-    - 적당히 씬을 하나 만들어주고
+    - 씬을 하나 만들고 어드레서블 체크 후 이름을 정해 주자.
         >![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr29.png)
-    - 어드레서블 체크 후 이름을 정해 줬다.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr30.png)
     - 씬을 로드할 때는 LoadSceneAsync이라는 함수가 따로 있어서 사용하면 된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr31.png)
-- ***Subscene Loading***
+- ***LoadSceneMode.Additive***
     - 기존 씬에 합쳐서 씬을 로드하는 경우
     - 먼저 씬을 로딩하는 스크립트를 만들어주고,
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr32.png)

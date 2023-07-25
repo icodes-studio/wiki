@@ -181,7 +181,7 @@
     - *Addressables.ReleaseInstance*
     - *Addressables.Release*
     - *Addressables.ReleaseInstance*
-- ***동작확인***    
+- ***동작확인***
     - 아래 스크립트를 만들어 Cube 프리팹에 바인딩하고,
         ```
         using UnityEngine;
@@ -202,6 +202,32 @@
         ```
     - 이벤트 뷰어를 확인하면 카운트가 줄어드는 모습을 확인할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr28.png)
+    - Addressable.Release 사용하는 예제 하나만 더 살펴보자.
+        ```
+        using System.Collections;
+        using UnityEngine;
+        using UnityEngine.AddressableAssets;
+        using UnityEngine.ResourceManagement.AsyncOperations;
+
+        public class InstantiateCube : MonoBehaviour
+        {
+            AsyncOperationHandle<GameObject> opHandle;
+
+            public IEnumerator Start()
+            {
+                opHandle = Addressables.LoadAssetAsync<GameObject>("Cube");
+                yield return opHandle;
+
+                if (opHandle.Status == AsyncOperationStatus.Succeeded)
+                    Instantiate(opHandle.Result, transform);
+            }
+
+            void OnDestroy()
+            {
+                Addressables.Release(opHandle);
+            }
+        }
+        ```
 
 
 　
@@ -211,7 +237,7 @@
 - ***Scene Loading & Unloading***
     - 씬을 하나 만들고 어드레서블 체크 후 이름을 정해 주자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr29.png)
-    - 씬을 로드하는 스크립트를 만든다.
+    - 씬을 로드하는 ***LoadSceneAsync*** 함수가 따로 준비되어 있다.
         ```
         using UnityEngine;
         using UnityEngine.UI;
@@ -234,9 +260,9 @@
             }
         }
         ```
-    - 버튼에 스크립트를 바인딩 시킨다.
+    - 버튼에 위 스크립트를 바인딩 시킨다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr30.png)
-    - 버튼을 클릭하면 씬을 로드한다.
+    - 버튼을 클릭하여 씬 로딩 동작을 확인할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr31.png)
 
 - ***LoadSceneMode.Additive***

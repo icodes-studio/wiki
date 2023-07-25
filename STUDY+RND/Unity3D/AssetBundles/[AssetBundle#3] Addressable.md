@@ -200,7 +200,6 @@
 
             void OnCreateCube()
             {
-                // 로드와 인스턴스 생성을 동시에 수행
                 Addressables.InstantiateAsync("Cube", new Vector3(0, 0, 0), Quaternion.identity);
             }
         }

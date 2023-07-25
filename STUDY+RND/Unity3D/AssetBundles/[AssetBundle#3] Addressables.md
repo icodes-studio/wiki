@@ -257,8 +257,10 @@
     - 버튼을 클릭하여 씬 로딩 동작을 확인할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr31.png)
 - ***UnloadSceneAsync***
-    - ***LoadSceneMode.Additive*** 옵션으로 중복 씬을 로드할 수도 있다.
-    - 아래 코드를 작성하고 버튼 오브젝트에 바인딩하여 테스트 해보자.
+    - 씬 언로드를 테스트하기 위해 ***LoadSceneMode.Additive*** 옵션으로 중복 씬을 로드하고 제대로 제거가 되는지 살펴보자.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr32.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr33.png)
+    - 아래 코드를 작성하고 버튼 오브젝트에 바인딩하여 테스트.
         ```
         using UnityEngine;
         using UnityEngine.UI;

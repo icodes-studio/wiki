@@ -171,8 +171,8 @@
 ## # 애셋 언로드
 
 - ***References***
-    > *https://www.youtube.com/watch?v=yoBzTpJYN44&t=1972s*
-    > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr25.png)
+    - *https://www.youtube.com/watch?v=yoBzTpJYN44&t=1972s*
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr25.png)
 - ***LoadAssetAsync, InstantiateAsync에 맞게 해제***
     - ***LoadAssetAsync*** 함수로 로드한 애셋은 ***Release*** 함수로 언로드
     - ***InstantiateAsync*** 함수로 로드 및 생성한 오브젝트는 ***ReleaseInstance*** 함수로 언로드

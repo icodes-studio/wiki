@@ -171,8 +171,9 @@
 ## # 에셋 언로드
 
 - ***Unloading***
-    - LoadAssetAsync로 로드한 애셋은 Release()로 해제
-    - InstantiateAsync로 로드 및 생성한 오브젝트는 ReleaseInstance()로 해제
+    - ***LoadAssetAsync*** 함수로 로드한 애셋은 ***Release*** 함수로 해제
+    - ***InstantiateAsync*** 함수로 로드 및 생성한 오브젝트는 ***ReleaseInstance*** 함수로 해제
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr25.png)
 - ***동작확인***    
     - 아래 스크립트를 만들어 Cube 프리팹에 바인딩하고,
         ```

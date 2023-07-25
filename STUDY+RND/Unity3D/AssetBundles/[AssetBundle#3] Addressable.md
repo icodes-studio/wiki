@@ -156,7 +156,7 @@
 ## # 프로파일러와 디버깅
 
 - ***Profiling***
-    - 어드레서블이 정말 좋은 건 이렇게 전용 프로파일러(이벤트뷰어) 툴을 제공한다는 것이다.
+    - 어드레서블 전용 프로파일러(이벤트뷰어) 툴이 제공된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr16.png)
     - 메뉴 ***Window ‣ Asset Management ‣ Addressables ‣ Event Viewer*** 항목을 선택하여 이벤트 뷰어를 띄울 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr17.png)

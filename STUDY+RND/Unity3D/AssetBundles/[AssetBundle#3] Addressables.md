@@ -324,7 +324,7 @@
 
 　
 
-## # 빌드 후 실제 사용.
+## # 빌드 후 번들 사용
 
 - ***Play Mode Script***
     - ***Addressables Groups*** 윈도우의 상단부에 위치한 ***Play Mode Script*** 항목을 보면 아래와 같다.
@@ -337,7 +337,7 @@
         > - 번들 테스트 및 프로파일링 할 때 유용하다.
     - ***Use Existing Build (requires built groups)*** 
         > - 실제 애셋번들 빌드를 통해 그룹화된 파일을 생성해야만 이 모드로 플레이가 된다.
-        > - 즉, 번들에 기재된 프로필의 경로에서 로드하여 사용하는 설정.
+        > - 즉, 물리적으로 존재하는 번들을 직접 참조해서 애셋을 로드하는 방식.
     - 빌드를 하면,
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr38.png)
     - 빌드 내용이 담긴 bin 파일이 생긴다. (번들아님)

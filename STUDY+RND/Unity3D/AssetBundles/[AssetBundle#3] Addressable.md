@@ -224,7 +224,7 @@
         ```
     - 실행하고 이벤트 뷰어를 확인하면 카운트가 줄어드는 모습을 확인할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr28.png)
-    - Addressable.Release 사용하는 예제 하나만 더 살펴보자.
+    - ***Addressable.Release*** 함수를 사용하는 예제 하나만 더 살펴보자.
         ```
         using System.Collections;
         using UnityEngine;

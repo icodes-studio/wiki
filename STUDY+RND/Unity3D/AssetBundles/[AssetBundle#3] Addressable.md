@@ -62,7 +62,7 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr8.png)
     - 이 값은 다른 어드레스와 겹치지만 않는다면 원하는 대로 수정할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr9.png)
-    - 큐브 프리팹을 생성하는 스크립트를 만들어서 버튼 오브젝트에 바인딩 해주자.
+    - 큐브 프리팹을 로드하는 스크립트를 만들어서 버튼 오브젝트에 바인딩 해주자.
         ```
         using UnityEngine;
         using UnityEngine.UI;
@@ -182,7 +182,30 @@
     - *Addressables.Release*
     - *Addressables.ReleaseInstance*
 - ***동작확인***
-    - 아래 스크립트를 만들어 Cube 프리팹에 바인딩하고,
+    - 큐브 오브젝트를 생성하는 스크립트를 만들어서 버튼 오브젝트에 바인딩.
+        ```
+        using UnityEngine;
+        using UnityEngine.UI;
+        using UnityEngine.AddressableAssets;
+
+        public class InstantiateCube : MonoBehaviour
+        {
+            Button button;
+
+            void Start()
+            {
+                button = GetComponent<Button>();
+                button.onClick.AddListener(OnCreateCube);
+            }
+
+            void OnCreateCube()
+            {
+                // 로드와 인스턴스 생성을 동시에 수행
+                Addressables.InstantiateAsync("Cube", new Vector3(0, 0, 0), Quaternion.identity);
+            }
+        }
+        ```
+    -  릴리즈하는 스크립트를 만들어 Cube 프리팹에 바인딩.
         ```
         using UnityEngine;
         using UnityEngine.AddressableAssets;
@@ -200,7 +223,7 @@
             }
         }
         ```
-    - 이벤트 뷰어를 확인하면 카운트가 줄어드는 모습을 확인할 수 있다.
+    - 실행하고 이벤트 뷰어를 확인하면 카운트가 줄어드는 모습을 확인할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr28.png)
     - Addressable.Release 사용하는 예제 하나만 더 살펴보자.
         ```

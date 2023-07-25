@@ -58,12 +58,33 @@
 - ***Settingup***
     - 애셋을 어드레서블로 로드하기 위해서는 인스펙터에서 ***Addressable*** 항목을 선택해야 한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr7.png)
-    - 선택하면 바로 옆에 어드레스가 자동으로 생성되는데, 이 값으로 파일을 로드 해 올 것이다.
+    - ***Addressable*** 항목을 선택하면 바로 옆에 어드레스가 자동으로 생성되는데, 이 값으로 파일을 로드 해 올 것이다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr8.png)
     - 이 값은 다른 어드레스와 겹치지만 않는다면 원하는 대로 수정할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr9.png)
-    - 이제 이 큐브 프리팹을 생성하는 버튼과 그 스크립트를 만들어서 넣어주자.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr10.png)
+    - 이 큐브 프리팹을 생성하는 버튼과 스크립트를 만들어서 넣어주자.
+        ```
+        using UnityEngine;
+        using UnityEngine.UI;
+        using UnityEngine.AddressableAssets;
+
+        public class InstantiateCube : MonoBehaviour
+        {
+            Button button;
+
+            void Start()
+            {
+                button = GetComponent<Button>();
+                button.onClick.AddListener(OnCreateCube);
+            }
+
+            void OnCreateCube()
+            {
+                // 로드와 인스턴스 생성을 동시에 수행
+                Addressables.InstantiateAsync("Cube", new Vector3(0, 0, 0), Quaternion.identity);
+            }
+        }
+        ```
     - 버튼을 클릭하니 정상적으로 큐브가 생성되는 걸 볼 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr11.png)
     - 필요에 따라 로드와 생성을 분리시킬 수도 있다.

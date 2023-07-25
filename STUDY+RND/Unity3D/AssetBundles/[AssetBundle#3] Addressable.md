@@ -118,12 +118,37 @@
             }
         }
         ```
-    - 참고로, 이름을 하드코딩하지 말고 ***AssetReference*** 필드를 인스펙터로 바인딩해서 사용하는 방법이 좀 더 세련되시겠다.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr13.png)
-    - 인스펙터 필드를 만드니, 이런 드랍다운 버튼이 생기고 선택 가능한 어드레서블에셋들이 나열된다. 큐브를 선택하고,
+    - 참고로, 이름을 하드코딩하지 말고 ***AssetReference*** 필드를 사용하는 방법이 좀 더 세련되시겠다.
+        ```
+        using UnityEngine;
+        using UnityEngine.UI;
+        using UnityEngine.AddressableAssets;
+
+        public class InstantiateCube : MonoBehaviour
+        {
+            Button button;
+            [SerializeField] AssetReference assetReference;
+
+            void Start()
+            {
+                button = GetComponent<Button>();
+                button.onClick.AddListener(OnCreateCube);
+            }
+
+            void OnCreateCube()
+            {
+                assetReference.InstantiateAsync(new Vector3(0, 0, 0), Quaternion.identity);
+            }
+        }
+        ```
+    - 어드레서블 애셋을 입력받을 수 있는 인스펙터 필드가 보인다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr14.png)
-    - 두 번째 표시처럼 함수를 사용해주면 이때까지와 같은 결과를 확인할 수 있다.
+    - 선택 창을 띄워서 큐브를 선택하거나
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr15.png)
+    - 프리팹을 드래그하여 바인딩한다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr5.png)
+    - 버튼을 누르면 같은 결과를 볼 수 있다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr11.png)
 
 
 　

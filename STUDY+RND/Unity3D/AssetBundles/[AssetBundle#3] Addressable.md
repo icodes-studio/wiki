@@ -173,6 +173,7 @@
 - ***Unloading***
     - LoadAssetAsync로 로드한 애셋은 Release()로 해제
     - InstantiateAsync로 로드 및 생성한 오브젝트는 ReleaseInstance()로 해제
+- ***동작확인***    
     - 아래 스크립트를 만들어 Cube 프리팹에 바인딩하고,
         ```
         using UnityEngine;
@@ -191,7 +192,6 @@
             }
         }
         ```
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr25.png)
     - 프로파일러를 확인하면 카운트가 줄어드는 모습을 확인할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr28.png)
 

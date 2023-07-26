@@ -135,7 +135,7 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr18.png)
     - 세팅 인스펙터는 ***Window ‣ Asset Management ‣ Addressables ‣ Settings*** 메뉴 항목을 선택해서도 띄울 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr20.png)
-    - 어드레서블 애셋을 로드하기 시작하면 프로파일링을 시작한다. 아래는 큐브를 36개 생성했을 때의 모습니다.
+    - 어드레서블 애셋을 로드하기 시작하면 프로파일링을 시작한다. 아래는 큐브를 36개 생성했을 때의 이벤트 뷰어 모습이다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr19.png)
 
 

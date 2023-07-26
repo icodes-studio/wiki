@@ -131,7 +131,9 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr16.png)
     - 메뉴 ***Window ‣ Asset Management ‣ Addressables ‣ Event Viewer*** 항목을 선택하여 이벤트 뷰어를 띄울 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr17.png)
-    - 이벤트 뷰어를 사용하려면 ***AddressableAssetSettings*** 인스펙터에서 ***Send Profiler Events*** 필드를 선택해야 한다.
+    - 이벤트 뷰어를 사용하려면 ***AddressableAssetSettings*** 인스펙터를 띄우고
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr20.png)
+    - ***Send Profiler Events*** 필드를 선택해야 한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr18.png)
     - 어드레서블 애셋을 로드하기 시작하면 프로파일링을 시작한다. 아래는 큐브를 36개 생성했을 때의 모습니다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr19.png)

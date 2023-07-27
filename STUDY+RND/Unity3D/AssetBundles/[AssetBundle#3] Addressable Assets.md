@@ -466,31 +466,13 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr84.png)
         > 
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr85.png)
-    - 말이 조금 복잡한데, 배포한 앱을 다시 빌드 및 배포하지 않고 수정한 에셋을 바로 적용시키는 예시를 들어보자면
-    - 윈도우에서 Product 버전 카탈로그로 빌드 해서 배포한 경우를 가정했을 때
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr86.png)
-    - 윈도우 환경에서 해당 앱은 Product 버전의 카탈로그만 식별을 할 것이기 때문에 product 버전 카탈로그에 등록된 위치의 번들이기만 하면 정상 작동한다.
-    - 그렇기 때문에 에셋을 수정하고 product 버전의 카탈로그와 함께 번들을 빌드 하면 되는데
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr87.png)
-    - 우리가 일일이 addressables_content_state.bin 파일을 열어서 버전을 확인하고
-    - 해당 버전으로 카탈로그를 수정해서 빌드 하는 것은 비효율적이니
-    - 배포 직후 번들을 다시 빌드 하지 않았다는 가정하에
-    - (카탈로그 버전을 수정하고 번들을 빌드 하면 addressables_content_state.bin 정보가 바뀌기 때문) 
-    - 아래 버튼을 눌러서 
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr88.png)
-    - addressables_content_state.bin 파일을 열러주면 해당 정보를 토대로  번들만 생성해 준다.
-    - (addressables_content_state.bin에 있는 카탈로그 정보를 기준으로 생성하기 때문에 다시 카탈로그를 생성할 이유가 없기 때문)
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr89.png)
-    - 그리고 새로 빌드 한 번들을 서버에서 이전의 번들과 교체하기만 하면 
-    - 수정된 에셋을 따로 앱 빌드 없이 바로바로 적용이 가능해진다.
-    - 자 여기까지 어드레서블의 카탈로그에 대해서 이야기를 해보았다.
-    - 그냥 한 줄로만 정리하자면
-    - "귀찮게 매번 빌드 및 배포하지 않고도 에셋을 수정해서 적용시킬 수 있는데 그 중심에 카탈로그가 있다"
-    - 라는 말이다.
-    - 몰라도 사용하는 데는 당장 사용하는데 문제가 없겠지만
-    - 상용 프로젝트에 사용하려면 반드시 알아야 한다고 생각한다.
-    - 내 생각엔 이 카탈로그가 어드레서블 에셋 시스템의 핵심이지 않을까 싶다.
-- ***3편***
+
+
+　
+
+# 서버에서 다운로드하기 #3
+
+- ***...***
     - 아래 예제는 스폰 버튼을 누르면 캐릭터를 생성하는데
     - 서버에서 내가 부르려는 어드레드 또는 레이블과 의존성을 가지는 모든 번들들을 통째로 다운받아 사용하는 방법과
     - 필요한 에셋만 하나가 포함된 번들만 다운받아 사용하는 방법을 보여준다.

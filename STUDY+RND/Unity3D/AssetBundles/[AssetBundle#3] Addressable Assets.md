@@ -420,7 +420,7 @@
         > - 우리는 원격으로 사용할 것이기 때문에 ***Build Remote Catalog***를 체크해 주었다.
     - ***Build & Load Paths***는 ***Remote***로 선택하자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr63.png)
-    - 로컬 패스는 프로젝트 내부에 번들이 생성되지만, 리모트 패스는 기본 경로가 이렇게 프로젝트밖에 ***ServerData**** 폴더로 설정된다.
+    - 로컬 패스는 프로젝트 내부에 번들이 생성되지만, 리모트 패스는 기본 경로가 이렇게 프로젝트밖의 ***ServerData*** 폴더로 설정된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr64.png)
     - 그 안엔 실제로 빌드 시 이렇게 번들이 들어 가있다. 나중에 이걸 서버에 넣어주면 된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr65.png)

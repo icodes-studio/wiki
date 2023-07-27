@@ -436,9 +436,9 @@
         > - 이것을 체크해 주면 리모트 서버에 저장하기 위한 카탈로그 사본을 생성한다.
         >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr66.png)
-    - 직접 빌드 해보기 위해 플레이 모드를 Existing으로 바꾼 뒤
+    - 직접 빌드 해보기 위해 플레이 모드를 Existing으로 바꾼 뒤,
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr67.png)
-    - 체크한 채로 어드레서블 빌드를 하면 이런 식으로 catalog json, hash 파일이 생성된다.
+    - 빌드를 하면 이런 식으로 catalog json, hash 파일이 생성된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr68.png)
         > - 번들이 없는 이유는 아직 번들은 이 폴더에 빌드 하겠다고 설정을 안 했기 때문. 나중에 할 거임.
     - json 파일을 열어서 그중 m_Keys 부분만 보면

@@ -392,7 +392,7 @@
 
 ## # 서버에서 다운로드하기
 
-- ***준비***
+- ***Settingup***
     - 서버에 넣을 번들과 로컬에서 사용할 번들을 구분해보자. 우선, 우 클릭을 통해 그룹을 새로 생성한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr45.png)
     - 이렇게 생성된 그룹은 각각의 애셋 번들로 빌드 된다.
@@ -403,11 +403,11 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr50.png)
     - 메뉴 ***Window ‣ Asset Management ‣ Addressables ‣ Profiles*** 항목을 선택하여 프로필 윈도우를 띄우자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr51.png)
-    - ***Create ‣ Profile*** 항목을 선택하여 프로필 생성.
+    - ***Create ‣ Profile*** 항목을 선택하여 새 프로필 생성.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr53.png)
-    - 프로필이 생성되었다면 이름을 적당하게 바꿔준 뒤
+    - 프로필이 생성되면 이름을 적당하게 바꿔준다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr55.png)
-    - 다시 어드레서블 그룹 창으로 가서 프로필을 방금 만든 걸로 바꿔주자
+    - 다시 어드레서블 그룹으로 가서 프로필을 방금 만든 걸로 바꿔주자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr56.png)
     - 이제 Tools 드롭 다운을 눌러 Inspect System Settings를 누르거나
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr57.png)

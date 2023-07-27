@@ -459,10 +459,8 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr77.png)
     - 이렇게 생성된 카탈로그들을 식별하는 것이 바로 ***addressables_content_state.bin*** 파일이다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr78.png)
-    - 열어보면 대충 이런 식으로 적혀있는데 
+    - 열어보면 대충 이런 식으로 적혀있는데, 카탈로그 버전 정보가 들어있는 것을 확인할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr80.png)
-    - 카탈로그 정보가 들어있는 것을 확인할 수 있다.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr81.png)
     - 또한, 각 플랫폼마다 ***addressables_content_state.bin*** 파일이 존재하므로 플랫폼 별로 관리가 가능하다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr84.png)
         > 

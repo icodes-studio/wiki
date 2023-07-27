@@ -197,36 +197,6 @@
         ```
     - 실행하고 이벤트 뷰어를 확인하면 카운트가 줄어드는 모습을 확인할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr28.png)
-    - ***Addressable.Release*** 함수를 사용하는 예제 하나만 더 살펴보자.
-        ```
-        using System.Collections;
-        using UnityEngine;
-        using UnityEngine.AddressableAssets;
-        using UnityEngine.ResourceManagement.AsyncOperations;
-
-        public class InstantiateCube : MonoBehaviour
-        {
-            GameObject temp;
-            AsyncOperationHandle<GameObject> opHandle;
-
-            public IEnumerator Start()
-            {
-                opHandle = Addressables.LoadAssetAsync<GameObject>("Cube");
-                yield return opHandle;
-
-                if (opHandle.Status == AsyncOperationStatus.Succeeded)
-                    temp = Instantiate(opHandle.Result);
-
-                Invoke("ReleaseDestroy", 1f);
-            }
-
-            void ReleaseDestroy()
-            {
-                Destroy(temp);
-                Addressables.Release(opHandle);
-            }
-        }
-        ```
     - ***AssetReference.ReleaseInstance*** 함수를 사용하는 예제 하나만 더 살펴보자
         ```
         using UnityEngine;
@@ -259,6 +229,36 @@
             void ReleaseDestroy()
             {
                 assetReference.ReleaseInstance(temp);
+            }
+        }
+        ```
+    - ***Addressable.Release*** 함수를 사용하는 예제 하나만 더 살펴보자.
+        ```
+        using System.Collections;
+        using UnityEngine;
+        using UnityEngine.AddressableAssets;
+        using UnityEngine.ResourceManagement.AsyncOperations;
+
+        public class InstantiateCube : MonoBehaviour
+        {
+            GameObject temp;
+            AsyncOperationHandle<GameObject> opHandle;
+
+            public IEnumerator Start()
+            {
+                opHandle = Addressables.LoadAssetAsync<GameObject>("Cube");
+                yield return opHandle;
+
+                if (opHandle.Status == AsyncOperationStatus.Succeeded)
+                    temp = Instantiate(opHandle.Result);
+
+                Invoke("ReleaseDestroy", 1f);
+            }
+
+            void ReleaseDestroy()
+            {
+                Destroy(temp);
+                Addressables.Release(opHandle);
             }
         }
         ```

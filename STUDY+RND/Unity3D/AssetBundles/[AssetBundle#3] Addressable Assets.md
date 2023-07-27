@@ -397,14 +397,12 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr45.png)
     - 이렇게 생성된 그룹은 각각의 에셋 번들로 빌드 된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr46.png)
-    - 방금 만든 그룹의 이름을 RemoteAssets라고 지어 줬다.
+    - 방금 만든 그룹을 ***RemoteAssets*** 이름으로 변경.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr47.png)
     - 각 어드레서블 애셋들을 새로 만든 그룹으로 옮겨주자.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr48.png)
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr50.png)
     - 디폴트 그룹에 들어간 에셋들을
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr49.png)
-    - ㅇㅇㅇ
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr50.png)
     - 이제 프로필을 새로 만들어주자
         > - 프로필은 어떤 식으로 설정했는지 저장하는 용도인데
         > - 좀 쉽게 말하자면 테스트 버전, 서버 있는 버전, 서버 없는 버전 뭐 이런 상황이 있다며

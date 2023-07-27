@@ -393,7 +393,7 @@
 ## # 서버에서 다운로드하기
 
 - ***1편***
-    - 서버에 넣을 번들과 로컬에서 사용할 번들을 구분해보자. 우 클릭을 통해 그룹을 새로 생성하자.
+    - 서버에 넣을 번들과 로컬에서 사용할 번들을 구분해보자. 우선, 우 클릭을 통해 그룹을 새로 생성한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr45.png)
     - 이렇게 생성된 그룹은 각각의 에셋 번들로 빌드 된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr46.png)

@@ -406,7 +406,6 @@
     - ***Create ‣ Profile*** 항목을 선택하여 프로필 생성.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr53.png)
     - 프로필이 생성되었다면 이름을 적당하게 바꿔준 뒤
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr54.png)
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr55.png)
     - 다시 어드레서블 그룹 창으로 가서 프로필을 방금 만든 걸로 바꿔주자
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr56.png)

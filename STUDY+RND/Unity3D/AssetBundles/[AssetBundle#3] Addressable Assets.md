@@ -393,14 +393,9 @@
 ## # 서버에서 다운로드하기
 
 - ***1편***
-    - Groups를 선택하고...
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr42.png)
-    - 어드레서블 세팅을 생성해주자.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr43.png)
-    - 여기까지 잘 왔는가?
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr44.png)
-    - 이제 서버에 넣을 번들과 로컬에서 사용할 번들을 구분해보자. 우 클릭을 통해 그룹을 새로 생성할 수 있고, 이렇게 생성된 그룹은 각각의 에셋 번들로 빌드 된다.
+    - 서버에 넣을 번들과 로컬에서 사용할 번들을 구분해보자. 우 클릭을 통해 그룹을 새로 생성하자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr45.png)
+    - 이렇게 생성된 그룹은 각각의 에셋 번들로 빌드 된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr46.png)
     - 방금 만든 그룹의 이름을 RemoteAssets라고 지어 줬다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr47.png)

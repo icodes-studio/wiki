@@ -440,8 +440,7 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr67.png)
     - 빌드를 하면 이런 식으로 catalog json, hash 파일이 생성된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr68.png)
-        > - 번들이 없는 이유는 아직 번들은 이 폴더에 빌드 하겠다고 설정을 안 했기 때문. 나중에 할 거임.
-    - json 파일을 열어서 그중 m_Keys 부분만 보면
+    - JSON 파일을 열어서 그 중 m_Keys 부분만 보면,
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr69.png)
         > - 이렇게 번들과, 어드레스 정보가 있는 것을 확인할 수 있다.
         > - 그렇기 때문에 나중에 우리는 번들과 함께 이 카탈로그 사본도 함께 서버에 넣어 주어야 한다.

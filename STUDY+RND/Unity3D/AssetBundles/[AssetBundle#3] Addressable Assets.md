@@ -453,9 +453,9 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr73.png)
     - 이 값을 원래대로 ***[UnityEditor.PlayerSettings.bundleVersion]*** 값으로 돌려놓고, ***Plyaer ‣ Version*** 값을 ***999***로 바꿔보자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr74.png)
-    - 이 상태로 빌드하면 999 버전 값을 가진 파일이 생성된다.
+    - 이 상태로 빌드하면 999 버전 값을 가진 카탈로그 파일이 생성된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr77.png)
-    - 아래와 같이 생성된 카탈로그들을 식별하는 것이 바로 ***addressables_content_state.bin*** 파일이다.
+    - 이렇게 생성된 카탈로그들을 식별하는 것이 바로 ***addressables_content_state.bin*** 파일이다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr78.png)
     - 열어보면 대충 이런 식으로 적혀있는데 
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr80.png)

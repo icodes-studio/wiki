@@ -461,11 +461,7 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr80.png)
     - 카탈로그 정보가 들어있는 것을 확인할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr81.png)
-    - ​확실하게 하기 위해 버전을 수정해 보았다.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr82.png)
-    - 역시나 같은 결과를 확인할 수 있었다.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr83.png)
-    - 아래 이미지처럼 각 플랫폼마다 "addressables_content_state.bin"을 두어서 해당하는 원하는 버전의 카탈로그만 따로 식별이 가능하기 때문에, 여러 플랫폼에서 하나의 빌드로 충돌 없이 각각 여러 버전을 함께 넣는 것이 가능한 것이다.
+    - 또한, 각 플랫폼마다 ***addressables_content_state.bin*** 파일이 존재하므로 플랫폼 별로 관리가 가능하다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr84.png)
         > 
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr85.png)

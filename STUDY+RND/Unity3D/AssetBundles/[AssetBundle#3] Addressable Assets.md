@@ -409,7 +409,7 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr55.png)
     - 다시 어드레서블 그룹으로 가서 프로필을 방금 만든 걸로 바꿔주자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr56.png)
-    - ***AddressableAssetSettings*** 인스펙터를 띄워보자. ***Tools ‣ Inspect System Settings** 메뉴 선택.
+    - ***AddressableAssetSettings*** 인스펙터를 띄워보자. ***Tools ‣ Inspect System Settings*** 메뉴 선택.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr57.png)
     - 프로필이 잘 바뀌었는지 확인하자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr60.png)

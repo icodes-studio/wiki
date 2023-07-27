@@ -436,7 +436,7 @@
         > - 이것을 체크해 주면 리모트 서버에 저장하기 위한 카탈로그 사본을 생성한다.
         >
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr66.png)
-    - 직접 빌드 해보기 위해 플레이 모드를 Existing으로 바꾼 뒤,
+    - 직접 빌드 해보기 위해 플레이 모드를 ***Use Existing Build*** 모드로 바꾼 뒤,
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr67.png)
     - 빌드를 하면 이런 식으로 catalog json, hash 파일이 생성된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr68.png)
@@ -451,7 +451,7 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr71.png)
     - 예를 들어, 이 값을 1이라고 지정한 채로 빌드 하면 1 버전 값을 가진 기존과 다른 파일이 생긴다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr73.png)
-    - 이 값을 원래대로 ***[UnityEditor.PlayerSettings.bundleVersion]*** 값으로 돌려놓고, ***Plyaer ‣ Version*** 값을 999로 바꾸자.
+    - 이 값을 원래대로 ***[UnityEditor.PlayerSettings.bundleVersion]*** 값으로 돌려놓고, ***Plyaer ‣ Version*** 값을 ***999***로 바꿔보자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr74.png)
     - 이 상태로 빌드하면 999 버전 값을 가진 파일이 생성된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr77.png)

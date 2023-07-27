@@ -413,14 +413,12 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr57.png)
     - 프로필이 잘 바뀌었는지 확인하자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr60.png)
-    - 카탈로그의 Build Remote Catalog를 체크해 준다.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr61.png)
-    - 그러면 이렇게 바뀌게 된다.
+    - 다음으로, ***Catalog**의 ***Build Remote Catalog*** 필드를 체크해 준다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr62.png)
     - 카탈로그가 뭐냐면...
-    - 빌드 된 번들의 위치 정보나 또 어떤 식으로 가져올 것인지에 대한 설정들의 묶음이다.
-    - 그래서 우리는 remote로도 사용할 것이기 때문에 Build Remote Catalog를 체크해 주었다.
-    - 그리고 각 Path는 앞에 remote가 붙어있는 놈으로 선택해주자.
+        > - 빌드 된 번들의 위치 정보나 또 어떤 식으로 가져올 것인지에 대한 설정들의 묶음이다.
+        > - 우리는 원격으로 사용할 것이기 때문에 Build Remote Catalog를 체크해 주었다.
+    - Path는 ***Remote***로 선택하자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr63.png)
     - 로컬과 차이를 간단하게 설명하자면
     - 로컬 패스는 프로젝트 내부에 번들이 생성되고 내부에서 불러오지만

@@ -447,19 +447,13 @@
     - ***Only update catalogs manually*** 옵션을 키면 카탈로그가 초기화될 타이밍에 버전 체크를 하지 않는다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr70.png)
         > - ~~아직 이게 무슨말인지 정확히 모르겠다~~
-    - 카탈로그의 버전을 관리를 할 수 있다.
+    - ***Player Version Override*** 필드로 카탈로그의 버전을 관리를 할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr71.png)
-    - 예를 들어 1이라고 버전을 지정해준 채로 빌드 했을 때
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr72.png)
-    - 이렇게 기존과 다른 파일이 생기는데...
+    - 예를 들어 1이라고 버전을 지정해준 채로 빌드 하면 기존과 다른 파일이 생긴다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr73.png)
-    - 1버전을 입력한 채로 한 번 더 빌드 하면, 이렇게 같은 버전의 파일을 덮어쓴다.
+    - 결국 ***[UnityEditor.PlayerSettings.bundleVersion]*** 버전 값을 바꾸면,
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr74.png)
-        >
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr75.png)
-    - 그러면 궁금증이 들 수 있는데 버전이 아예 없으면 안 덮어쓰나? 다시 이렇게 비워두고 빌드를 하면...
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr76.png)
-    - 그렇다! 안 덮어쓰고 새로 생긴다.
+    - 그렇다! Player version 값으로 파일 이름을 지정하고 잇던 것이다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr77.png)
     - 때문에 지저분하게 파일을 계속 생성하지 않고도 
     - 버전 관리할 때 유용하게 쓰일 수 있는 기능이다.

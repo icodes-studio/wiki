@@ -449,17 +449,12 @@
         > - ~~아직 이게 무슨말인지 정확히 모르겠다~~
     - ***Player Version Override*** 필드로 카탈로그의 버전을 관리를 할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr71.png)
-    - 예를 들어 1이라고 버전을 지정해준 채로 빌드 하면 기존과 다른 파일이 생긴다.
+    - 예를 들어, 이 값을 1이라고 지정한 채로 빌드 하면 1 버전 값을 가진 기존과 다른 파일이 생긴다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr73.png)
-    - 결국 ***[UnityEditor.PlayerSettings.bundleVersion]*** 버전 값을 바꾸면,
+    - 이 값을 원래대로 ***[UnityEditor.PlayerSettings.bundleVersion]*** 값으로 돌려놓고, ***Plyaer ‣ Version*** 값을 999로 바꾸자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr74.png)
-    - 그렇다! Player version 값으로 파일 이름을 지정하고 잇던 것이다.
+    - 이 상태로 빌드하면 999 버전 값을 가진 파일이 생성된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr77.png)
-    - 때문에 지저분하게 파일을 계속 생성하지 않고도 
-    - 버전 관리할 때 유용하게 쓰일 수 있는 기능이다.
-    - 당연히 숫자뿐만 아니라 
-    - Android, IOS, WIndow 등 플랫폼 단위로 나누어서 관리할 수도 있다.
-    - 실제로 숫자보단 대부분의 경우 플랫폼 단위로 버전 관리를 하게 될 것이다.(이건 뇌피셜임)
     - 아래와 같이 생성된 카탈로그들을 식별하는 것이 바로 "addressables_content_state.bin" 파일이다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr78.png)
     - 열어보면 대충 이런 식으로 적혀있는데 

@@ -405,7 +405,7 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr51.png)
     - 창이 뜨면...
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr52.png)
-    - Create를 눌러서 Profile을 선택하자
+    - ***Create ‣ Profile*** 항목을 선택하여 프로필 생성
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr53.png)
     - 프로필이 생성되었다면 이름을 적당하게 바꿔준 뒤
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr54.png)

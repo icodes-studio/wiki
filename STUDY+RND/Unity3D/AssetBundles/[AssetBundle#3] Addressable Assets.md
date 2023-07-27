@@ -413,7 +413,7 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr57.png)
     - 프로필이 잘 바뀌었는지 확인하자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr60.png)
-    - 다음으로, ***Catalog**의 ***Build Remote Catalog*** 필드를 체크해 준다.
+    - 다음으로, ***Catalog***의 ***Build Remote Catalog*** 필드를 체크해 준다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr62.png)
     - 카탈로그가 뭐냐면...
         > - 빌드 된 번들의 위치 정보나 또 어떤 식으로 가져올 것인지에 대한 설정들의 묶음이다.

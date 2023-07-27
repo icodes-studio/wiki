@@ -425,6 +425,10 @@
     - 그 안엔 실제로 빌드 시 이렇게 번들이 들어 가있다. 나중에 이걸 서버에 넣어주면 된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr65.png)
     - 지금 위 폴더를 살펴보면 번들이 없는데, 아직 번들을 이 폴더에 빌드 하겠다고 설정을 안 했기 때문이다. 나중에 할 거임.
+
+
+　
+
 - ***Catalog mapping***
     - 카탈로그(Catalog)는 각 어드레스와 자산을 매핑(연결) 하며, 원한다면 매핑을 변경하여 불러올 번들의 위치와 로드 방법 등을 설정할 수 있다.
     - 그러기 위해선 이렇게 Build Remote Catalog를 활성화해주어야 한다.

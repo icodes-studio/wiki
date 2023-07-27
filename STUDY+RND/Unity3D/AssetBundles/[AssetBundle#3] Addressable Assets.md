@@ -446,6 +446,7 @@
         > - 그렇기 때문에 나중에 우리는 번들과 함께 이 카탈로그 사본도 함께 서버에 넣어 주어야 한다.
     - ***Only update catalogs manually*** 옵션을 키면 카탈로그가 초기화될 타이밍에 버전 체크를 하지 않는다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr70.png)
+        > - -아직 이게 무슨말인지 정확히 모르겠다-
     - 카탈로그의 버전을 관리를 할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr71.png)
     - 예를 들어 1이라고 버전을 지정해준 채로 빌드 했을 때

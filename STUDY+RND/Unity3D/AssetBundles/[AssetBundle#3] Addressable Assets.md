@@ -416,11 +416,11 @@
     - 다음으로, ***Catalog***의 ***Build Remote Catalog*** 필드를 체크해 준다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr62.png)
     - 카탈로그가 뭐냐면...
-        > - 빌드 된 번들의 위치 정보나 또 어떤 식으로 가져올 것인지에 대한 설정들의 묶음이다.
+        > - 빌드 된 번들의 위치 정보나, 어떤 식으로 가져올 것인지에 대한 설정들의 묶음이다.
         > - 우리는 원격으로 사용할 것이기 때문에 ***Build Remote Catalog***를 체크해 주었다.
     - ***Build & Load Paths***는 ***Remote***로 선택하자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr63.png)
-    - 로컬 패스는 프로젝트 내부에 번들이 생성되지만, 리모트 패스는 기본 경로가 이렇게 프로젝트밖의 ***ServerData*** 폴더로 설정된다.
+    - 로컬 패스는 프로젝트 내부에 번들이 생성되지만, 리모트 패스는 기본 경로가 이렇게 프로젝트 밖의 ***ServerData*** 폴더로 설정된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr64.png)
     - 그 안엔 실제로 빌드 시 이렇게 번들이 들어가 있다. 나중에 이걸 서버에 넣어주면 된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr65.png)
@@ -432,7 +432,7 @@
 # 서버에서 다운로드하기 #2
 
 - ***Catalog 이해하기***
-    - ***What is it?***
+    - ***Build Remote Catalog***
         > - 각 어드레스와 자산(애셋)을 매핑하며, 원한다면 매핑을 변경하여 불러올 번들의 위치와 로드 방법 등을 설정할 수 있다.
         > - 그러기 위해선 이렇게 ***Build Remote Catalog*** 항목을 활성화해주어야 한다.
         > - 이것을 체크해 주면 리모트 서버에 저장하기 위한 카탈로그 사본을 생성한다.

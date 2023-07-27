@@ -206,6 +206,7 @@
 
         public class InstantiateCube : MonoBehaviour
         {
+            GameObject temp;
             AsyncOperationHandle<GameObject> opHandle;
 
             public IEnumerator Start()
@@ -214,11 +215,14 @@
                 yield return opHandle;
 
                 if (opHandle.Status == AsyncOperationStatus.Succeeded)
-                    Instantiate(opHandle.Result, transform);
+                    temp = Instantiate(opHandle.Result);
+
+                Invoke("ReleaseDestroy", 1f);
             }
 
-            void OnDestroy()
+            void ReleaseDestroy()
             {
+                Destroy(temp);
                 Addressables.Release(opHandle);
             }
         }

@@ -223,6 +223,41 @@
             }
         }
         ```
+    - ***AssetReference.ReleaseInstance*** 함수를 사용하는 예제 하나만 더 살펴보자
+        ```
+        using UnityEngine;
+        using UnityEngine.UI;
+        using UnityEngine.AddressableAssets;
+        using UnityEngine.ResourceManagement.AsyncOperations;
+
+        public class InstantiateCube : MonoBehaviour
+        {
+            Button button;
+            GameObject temp;
+            [SerializeField] AssetReference assetReference;
+
+            void Start()
+            {
+                button = GetComponent<Button>();
+                button.onClick.AddListener(OnCreateCube);
+            }
+
+            void OnCreateCube()
+            {
+                assetReference.InstantiateAsync(new Vector3(0, 0, 0), Quaternion.identity).Completed +=
+                    (AsyncOperationHandle<GameObject> op) =>
+                    {
+                        temp = op.Result;
+                        Invoke("ReleaseDestroy", 3f);
+                    };
+            }
+
+            void ReleaseDestroy()
+            {
+                assetReference.ReleaseInstance(temp);
+            }
+        }
+        ```
 
 
 　

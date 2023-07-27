@@ -442,16 +442,17 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr67.png)
     - 빌드를 하면 이런 식으로 catalog json, hash 파일이 생성된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr68.png)
+        > - *번들이 없는 이유는 아직 번들을 이 폴더에 빌드 하겠다고 설정을 안 했기 때문. 나중에 할 거임.*
     - JSON 파일을 열어서 살펴보면,
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr69.png)
         > - 이렇게 번들과, 어드레스 애셋 정보가 있는 것을 확인할 수 있다.
-        > - 그렇기 때문에 나중에 우리는 번들과 함께 이 카탈로그 사본도 함께 서버에 넣어 주어야 한다.
+        > - 그렇기 때문에 나중에 우리는 번들과 함께 이 카탈로그 사본도 함께 서버(CDN)에 넣어 주어야 한다.
     - ***Only update catalogs manually*** 옵션을 키면 카탈로그가 초기화될 타이밍에 버전 체크를 하지 않는다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr70.png)
         > - ~~아직 이게 무슨말인지 정확히 모르겠다~~
     - ***Player Version Override*** 필드로 카탈로그의 버전을 관리를 할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr71.png)
-    - 예를 들어, 이 값을 1이라고 지정한 채로 빌드 하면 1 버전 값을 가진 기존과 다른 파일이 생긴다.
+    - 예를 들어, 이 값을 1로 지정하고 빌드 하면 1 버전 값을 가진 기존과 다른 파일이 생긴다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr73.png)
     - 이 값을 원래대로 ***[UnityEditor.PlayerSettings.bundleVersion]*** 값으로 돌려놓고, ***Plyaer ‣ Version*** 값을 ***999***로 바꿔보자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr74.png)

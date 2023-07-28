@@ -691,9 +691,7 @@ https://blog.naver.com/cdw0424/221637763395
         > - *[HostingServicePort]*
         > - *그럼 위와 같은 뒤 변수가 복사되는데*
         > - *이걸 http://[PrivateIpAddress]:[HostingServicePort] 이렇게 사용하면 된다.*
-    - 프로필 설정 창을 열고
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr129.png)
-    - 프로필을 하나 추가해준다.
+    - 프로필을 하나 새로 추가하고 
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr130.png)
     - 그리고 이름을 적당하게 바꿔준 뒤 remotepath들을 수정해 주자.
     - 빌드 패스는 원래 적혀있던 ServerData를 HostedData라고 고쳐주고

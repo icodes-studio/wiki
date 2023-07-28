@@ -674,15 +674,6 @@ https://blog.naver.com/cdw0424/221637763395
 
 　
 
-- ***추가***
-    - 퍼센트 출력 방법
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr121.png)
-        >
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr122.png)
-
-
-　
-
 ## # 외부 서버 없이 서버 기능 테스트하기.
 
 *https://blog.naver.com/cdw0424/222090659316*

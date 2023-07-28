@@ -645,13 +645,14 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr116.png)
     - 번들을 빌드 한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr106.png)
-    - 서버에서 기존 파일을 지우고 방금 새로 만든 번들과 카탈로그 파일들을 넣어주자.
+    - 서버에서 기존 파일을 지우고 방금 새로 빌드한 번들과 카탈로그 파일들을 넣어주자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr118.png)
-    - 이때 유저는 앱을 다시 새로 다운로드하지 않았고 기존의 앱을 다시 실행한다. 
-    - 다시 스폰을 눌러주면 캐릭터가 바뀐 것을 확인할 수 있다.
+    - 다시 스폰을 눌러주면 큐브가 바뀐 것을 확인할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr119.png)
-    - 다운로드 사이즈를 받아오는 것도 문제가 없다. 이렇게 앱을 재배포하지 않고서도 콘텐츠를 수정할 수 있으니 매우 편리하고 합리적이다.
+    - 다운로드 사이즈를 받아오는 것도 문제가 없다. 
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr120.png)
+        > - *참고: GetDownloadSizeAsync()는 한번 받은적이 있으면 0을 반환한다.*
+        
 
 
 　

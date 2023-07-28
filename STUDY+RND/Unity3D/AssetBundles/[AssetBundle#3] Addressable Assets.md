@@ -554,7 +554,7 @@
 - ***서버(CDN) 준비***
     - 우선 서버(CDN)가 있어야 하는데 ***Amazon S3***를 사용해보자
         > ![https://aws.amazon.com/ko/s3/](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/amazon-s3-960x504.png)
-        > *https://aws.amazon.com/ko/s3/*        
+        > - *https://aws.amazon.com/ko/s3/*        
     - 콘솔에 로그인하고 S3 버킷을 만들자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr86.png)
     - 버킷 이름은 중복이 안되므로 자신만의 고유한 이름으로 작명하면 된다.

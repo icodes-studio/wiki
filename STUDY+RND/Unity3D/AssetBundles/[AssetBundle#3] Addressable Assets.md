@@ -583,7 +583,7 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr93.png)
     - 그럼 이렇게 파일이 올라가고, 파일을 눌러보면 이렇게 주소가 나오는데
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr94.png)
-    - 맨 마지막 파일 이름 대신 [BuildTarget]를 추가해서 복사해 두자.
+    - 맨 마지막 파일 이름 대신 ***[BuildTarget]*** 문자열을 추가해서 복사해 두자.
         ```
         https://s3.ap-northeast-2.amazonaws.com/버킷이름/[BuildTarget]
         ```

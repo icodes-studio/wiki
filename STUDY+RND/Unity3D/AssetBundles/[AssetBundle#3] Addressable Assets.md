@@ -619,7 +619,9 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr106.png)
     - 프로젝트 폴더 안에 ***ServerData*** 폴더가 생기고
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr107.png)
-    - 그 안에 플랫폼에 해당하는 폴더가 있으며, 또 그 안에 카탈로그와 번들이 빌드 된 걸 확인할 수 있다.
+    - 그 안에 플랫폼에 해당하는 폴더가 있으며, 
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr108.png)
+    - 또 그 안에 카탈로그와 번들이 빌드 된 걸 확인할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr109.png)
     - 이전 경로로 다시 돌아와서 ***StandaloneWindows64*** 플랫폼 폴더를 통째로 S3에 업로드하자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr111.png)

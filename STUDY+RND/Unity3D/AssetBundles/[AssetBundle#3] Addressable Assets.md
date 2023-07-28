@@ -548,7 +548,7 @@
         }
         ```
 - ***서버(CDN) 준비***
-    - 이제 실제로 사용해 보도록 하겠다. 우선 서버가 있어야 하는데 "아마존 S3"를 사용하기로 했다.
+    - 우선 서버(CDN)가 있어야 하는데 ***Amazon S3***를 사용하기로 했다.
         > *https://aws.amazon.com/ko/s3/*
     - s3의 콘솔에 로그인하고 버킷을 만들자 버킷 이름은 중복이 안되므로 자신만의 고유한 이름으로 작명하면 된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr91.png)

@@ -587,8 +587,6 @@
         ```
         https://s3.ap-northeast-2.amazonaws.com/버킷이름/[BuildTarget]
         ```
-    - 그리고 위 파일은 주소를 알아내기 위해 넣은 의미 없는 파일이니 지워주도록 한다.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr95.png)
     - 어드레서블창을 키고 프로파일을 수정하기 위해 Manage Profiles를 찾아서 클릭하자
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr96.png)
     - 이게 버전마다 위치가 다른 경우가 많은데 창에서 못 찾으면 아래 이미지처럼 어드레서블 세팅에도 있으니 확인해 보길 바란다.

@@ -499,7 +499,8 @@
 
             void Spawn()
             {
-                Addressables.InstantiateAsync(characterAddress, new Vector3(Random.Range(-2f, 2f), 5, 0), Quaternion.identity).Completed +=
+                Addressables.InstantiateAsync(
+                    characterAddress, new Vector3(Random.Range(-2f, 2f), 5, 0), Quaternion.identity).Completed +=
                     (AsyncOperationHandle<GameObject> obj) =>
                     {
                         character = obj.Result;

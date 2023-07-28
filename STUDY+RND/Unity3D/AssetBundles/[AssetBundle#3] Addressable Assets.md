@@ -687,10 +687,10 @@ https://blog.naver.com/cdw0424/221637763395
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr126.png)
     - 아이피와 포트 번호 각각 앞에 있는 변수에 우 클릭을 하고 키를 복사한 뒤 메모장에다가 붙여넣기를 하자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr128.png)
-        > - [PrivateIpAddress]
-        > - [HostingServicePort]
-        > - 그럼 위와 같은 뒤 변수가 복사되는데
-        > - 이걸 http://[PrivateIpAddress]:[HostingServicePort] 이렇게 작성해 주면 된다.
+        > - *[PrivateIpAddress]*
+        > - *[HostingServicePort]*
+        > - *그럼 위와 같은 뒤 변수가 복사되는데*
+        > - *이걸 http://[PrivateIpAddress]:[HostingServicePort] 이렇게 사용하면 된다.*
     - 프로필 설정 창을 열고
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr129.png)
     - 프로필을 하나 추가해준다.

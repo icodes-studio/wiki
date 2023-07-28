@@ -547,6 +547,10 @@
             }
         }
         ```
+
+
+　
+
 - ***서버(CDN) 준비***
     - 우선 서버(CDN)가 있어야 하는데 ***Amazon S3***를 사용하기로 했다.
         > *https://aws.amazon.com/ko/s3/*
@@ -615,6 +619,10 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr119.png)
     - 다운로드 사이즈를 받아오는 것도 문제가 없다. 이렇게 앱을 재배포하지 않고서도 콘텐츠를 수정할 수 있으니 매우 편리하고 합리적이다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr120.png)
+
+
+　
+
 - ***이제 마지막으로 다운로드에 대한 개념을 정리해보자.***
     - 어드레서블의 서버에서 로드한다는 말은 결국 번들을 다운받는다는 말과 같다.
         > - 예를 들어 

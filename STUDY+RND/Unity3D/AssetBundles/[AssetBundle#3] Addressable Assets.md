@@ -579,13 +579,13 @@
             ]
         }
         ```
-    - 또는 객체 소유권 설정에서 ACL 활성화 옵션을 키고 업로드한 파일을 퍼블릭으로 만들어도 된다.
+    - 또는 객체 소유권 설정에서 ***ACL 활성화*** 옵션을 키고 업로드한 파일을 퍼블릭으로 만들어도 된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr95.png)
     - 버킷에 아무 파일이나 하나 올려보자
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr93.png)
     - 업로드된 파일 속성을 보면 이렇게 웹 주소가 나온다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr94.png)
-    - 객체 URL을 클릭했을 때, 아래 처럼 AccessDenied 에러코드가 떨어지면 문제가 있는 거다.
+    - 객체 URL을 클릭했을 때, 아래 처럼 ***AccessDenied*** 에러코드가 떨어지면 문제가 있는 거다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr21.png)
     - 버킷 정책을 편집하지 않고 ACL 활성화 옵션만 킨 경우라면, ***ACL을 사용하여 퍼블릭으로 설정*** 항목을 선택하고 접근이 되는지 확인하자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr22.png)

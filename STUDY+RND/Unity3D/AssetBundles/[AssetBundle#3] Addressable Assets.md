@@ -652,61 +652,10 @@
     - 다운로드 사이즈를 받아오는 것도 문제가 없다. 
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr120.png)
         > - *참고: GetDownloadSizeAsync()는 한번 받은적이 있으면 0을 반환한다.*
-        
 
 
 　
 
-- ***이제 마지막으로 다운로드에 대한 개념을 정리해보자.***
-    - 어드레서블의 서버에서 로드한다는 말은 결국 번들을 다운받는다는 말과 같다.
-        > - 예를 들어 
-        > - "과일"이라는 번들에서 "사과"만 로드하더라도
-        > - 나는 "과일"이라는 번들을 다운받은것이다.
-        > - 때문에 이 다음번에 인터넷이 연결되어 있지 않아도
-        > - 이미 로드한 "사과"에셋 또는 "과일"번들에 포함된 에셋들을 사용할 수 있다.
-        > - (하나의 에셋만 로드한 직후 인터넷을 모두 끈상태로 같은 번들에 포함된 다른 에셋을 로드한 결과 로드됨)
-    - 다운로드에는 번들 하나만 다운로드하는 방법과 여러개를 한방에 다운로드하는 방법이 있다.
-        > - 하나씩 : LoadAsset, Inastantate 등등
-        > - 한방에 : DownloadDependenciesAsync
-    - DownloadDependenciesAsync(레이블)에서 레이블이라는 값을 가지는 번들을 모두 다운로드한다.
-        > - 예를 들어 
-        > - "과일"번들에 "망고"라는 에셋이 있고 "동남아 음식"이라는 레이블이 지정되어 있으며,
-        > - "곡식"번들, "쌀"에셋, "동남아 음식"레이블이 있고,
-        > - "과자"번들,"빠다코코낫"에셋,"한국 과자"레이블이 있을 때
-        > - DownloadDependenciesAsync(동남아 음식)이라고 작성하면
-        > - "과일","곡식"번들만 다운로드한다.
-    - LoadAssets(레이블)을 사용할 땐 레이블이 지정된 에셋을 모두 가져온다.
-        > - 우선
-        > - LoadAsset과 LoadAssets가 다른 점을 인식하자.
-        > - LoadAsset는 하나의 에셋만 리턴하고
-        > - LoadAssets는 같은 레이블이 지정된 에셋들을 배열에 담아 리턴한다.
-        > - 예를 들어
-        > - "EBS 캐릭터"번들, "펭수"에셋, "펭귄"
-        > - "EBS 캐릭터"번들, "뚝딱이"에셋, "도깨비"
-        > - "EBS 캐릭터"번들, "뽀로로"에셋, "펭귄"
-        > - 일 때
-        > - LoadAssets(펭귄)을 사용하면
-        > - 펭수, 뽀로로 에셋이 리턴된다.
-    - 이미 다운로드한 번들이라도 서버에 해당 번들이 수정되어 있다면 다시 변경된 에셋a만 다운로드하는게 아니라 번들을 통째로 지우고 다시 다운받는다.
-        > - 예를 들어
-        > - "펭귄"어드레스를 가진 
-        > - "뽀로로" 에셋을 "펭수"에셋으로 바꾸고 
-        > - 그렇게 빌드 한 번들을 서버에 올리면
-        > - 사용자는 기존의 번들 대신 교체된 새로운 번들을 통째로 다시 다운받아온다.
-    - 인터넷이 연결된 상태라면 앱 실행 후 최초 로드할 때마다 번들 변경사항을 검토한다.(뇌피셜)
-        > - 예를 들어
-        > - 앱 사용 중간에 펭귄 번들의 "뽀로로"를 "펭수"로 바꿔도 앱 사용 중간엔 바뀌지 않는다.
-        > - (사실 중간에 바뀌면 유저가 혼란해하기 때문에 바뀌게 할 수 있어도 안 바뀌는 게 맞음)
-        > - 앱을 종료 후 다시 실행하고 처음 번들에 접근할 때 변경사항을 검토하고 
-        > - 해당되는 에셋은 변경된 에셋을 다운로드한다.
-    - GetDownloadSizeAsync()는 한번 받은적이 있으면 0을 반환한다.
-        > - 공식문서의 GetDownloadSizeAsync() 설명 부분을 보면
-        > - If you wish to ask the user for consent prior to download, use Addressables.GetDownloadSize() to return how much space is needed to download the content from a given address or label. Note that this takes into account any previously downloaded bundles that are still in Unity's asset bundle cache.
-        > - 라고 적혀 있는데, 이미 다운 받은 경우 새로운 내용이 없다면 0을 반환 한다는 이야기로 추정된다.
-        > - 실험 해본 결과 한번 다운받은 뒤 번들이 변경되지 않았다면 다운받지 않는다.
-    - 여러개의 번들 중 하나의 번들을 수정하였다면 그 번들만 다시 다운받을수있다.
-        > - DownloadDependenciesAsync(레이블)에 영향을 받는 번들이 5개있고
-        > - 그 중 1개의 번들만 수정되었다면 그 1개만 다시 다운받는다.
 - ***추가***
     - 퍼센트 출력 방법
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr121.png)

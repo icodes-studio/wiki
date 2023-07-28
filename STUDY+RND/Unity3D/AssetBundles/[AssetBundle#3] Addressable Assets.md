@@ -589,10 +589,15 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr21.png)
     - ACL 활성화 옵션을 킨 경우라면, ***ACL을 사용하여 퍼블릭으로 설정*** 항목을 선택하고 접근이 되는지 확인해보자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr22.png)
-    - 모두 문제가 없다면, 객체 URL에서 맨 마지막 파일 이름 대신 ***[BuildTarget]*** 문자열을 추가해서 복사해 두자.
+    - 모두 문제가 없다면, 객체 URL에서 맨 마지막 파일 이름 대신 ***[BuildTarget]*** 문자열을 추가해서 잠시 복사해 두자.
         ```
         https://s3.ap-northeast-2.amazonaws.com/버킷이름/[BuildTarget]
         ```
+
+
+　
+
+- ***번들 준비 및 업로드***
     - 프로필 추가를 위해 ***Manage Profiles*** 메뉴를 선택하여 ***Addressables Profiles*** 창을 연다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr96.png)
     - 프로필 창 띄우는 방법이 유니티 버전마다 조금씩 다른데... 어드레서블 세팅 인스펙터에도 있고,
@@ -625,12 +630,15 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr109.png)
     - ***StandaloneWindows64*** 플랫폼 폴더를 통째로 S3에 업로드하자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr111.png)
-    - 마지막으로 작업을 눌러서 퍼블릭 설정을 해주면 된다.
+    - 마지막으로 작업을 눌러서 퍼블릭 설정을 해주면 된다. (버킷 정책을 모두 Allow로 편집한 경우는 필요 없음)
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr112.png)
-    - 모든 준비가 끝났으니 프로젝트를 빌드 해서 실행해보자.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr113.png)
-    - 스폰 버튼을 누르면 캐릭터가 잘 나오는 것을 확인할 수 있다.
+    - 모든 준비가 끝났으니 게임을 실행해보자. Spawn 버튼을 누르면 큐브가 잘 나오는지 확인하자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr114.png)
+
+
+　
+
+- ***번들 업데이트***
     - 앱을 종료하고 다시 에디터로 가서 바꾸고 초록머리 캐릭터를 빨간 머리 캐릭터로 바꾸기 위해
     - 빨간 머리 에셋의 어드레스를 이전 초록머리의 어드레스랑 같은 이름으로 만들어 준 뒤
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr115.png)

@@ -581,7 +581,7 @@
         ```
     - 버킷에 아무 파일이나 하나 올려보자
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr93.png)
-    - 그럼 이렇게 파일이 올라가고, 파일을 눌러보면 이렇게 주소가 나오는데
+    - 업로드된 파일 속성을 보면 이렇게 웹 주소가 나온다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr94.png)
     - 맨 마지막 파일 이름 대신 ***[BuildTarget]*** 문자열을 추가해서 복사해 두자.
         ```

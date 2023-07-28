@@ -28,6 +28,8 @@
 
 ## # 애셋 로드
 
+*https://blog.naver.com/cdw0424/221636783259*
+
 - ***Settingup***
     - 애셋을 어드레서블로 로드하기 위해서는 인스펙터에서 ***Addressable*** 항목을 선택해야 한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr7.png)
@@ -128,6 +130,8 @@
 
 ## # 프로파일러와 디버깅
 
+*https://blog.naver.com/cdw0424/221636822258*
+
 - ***Addressables Event Viewer***
     - 어드레서블 전용 프로파일러(이벤트뷰어) 툴이 제공된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr16.png)
@@ -144,6 +148,8 @@
 　
 
 ## # 애셋 언로드
+
+*https://blog.naver.com/cdw0424/221637349195*
 
 - ***References***
     - *https://www.youtube.com/watch?v=yoBzTpJYN44&t=1972s*
@@ -270,6 +276,8 @@
 
 ## # 씬 로드와 언로드
 
+https://blog.naver.com/cdw0424/221637763395
+
 - ***LoadSceneAsync***
     - 씬을 하나 만들고 어드레서블 체크 후 이름을 정해 주자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr29.png)
@@ -370,6 +378,8 @@
 
 ## # 빌드 후 번들 사용
 
+*https://blog.naver.com/cdw0424/221638017138*
+
 - ***Play Mode Script***
     - ***Addressables Groups*** 윈도우의 상단부에 위치한 ***Play Mode Script*** 항목을 보면 아래와 같다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr37.png)
@@ -393,6 +403,8 @@
 　
 
 ## # 서버에서 다운로드하기 #1
+
+*https://blog.naver.com/cdw0424/221755856111*
 
 - ***Settingup***
     - 서버에 넣을 번들과 로컬에서 사용할 번들을 구분해보자. 우선, 우 클릭을 통해 그룹을 새로 생성한다.
@@ -432,6 +444,8 @@
 　
 
 # 서버에서 다운로드하기 #2
+
+*https://blog.naver.com/cdw0424/221756844361*
 
 - ***Catalog 이해하기***
     - ***Build Remote Catalog***
@@ -473,6 +487,8 @@
 　
 
 # 서버에서 다운로드하기 #3
+
+*https://blog.naver.com/cdw0424/221764918184*
 
 - ***코드준비***
     - 캐릭터(큐브)를 소환하는 예제를 작성해보자.

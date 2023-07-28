@@ -561,11 +561,32 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr91.png)
     - 원활한 진행을 위해 ***모든 퍼블릭 액세스 차단*** 항목을 체크 ***해제*** 하자
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr92.png)
-    - 버킷이 생성되었다면 아무 파일이나 하나 올려보자
+    - 버킷 정책을 아래와 같이 편집한다. ARN 이름은 속성 탭에서 확인할 수 있다.
+        ```
+        {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Sid": "Stmt1405592139000",
+                    "Effect": "Allow",
+                    "Principal": "*",
+                    "Action": "s3:*",
+                    "Resource": [
+                        "ARN 이름/*",
+                        "ARN 이름"
+                    ]
+                }
+            ]
+        }
+        ```
+    - 버킷에 아무 파일이나 하나 올려보자
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr93.png)
     - 그럼 이렇게 파일이 올라가고, 파일을 눌러보면 이렇게 주소가 나오는데
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr94.png)
     - 맨 마지막 파일 이름 대신 [BuildTarget]를 추가해서 복사해 두자.
+        ```
+        https://s3.ap-northeast-2.amazonaws.com/버킷이름/[BuildTarget]
+        ```
     - 그리고 위 파일은 주소를 알아내기 위해 넣은 의미 없는 파일이니 지워주도록 한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr95.png)
     - 어드레서블창을 키고 프로파일을 수정하기 위해 Manage Profiles를 찾아서 클릭하자

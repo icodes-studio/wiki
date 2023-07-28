@@ -9,6 +9,8 @@
 
 ## # 설치 및 준비
 
+*https://blog.naver.com/cdw0424/221636733877*
+
 - ***Settingup***
     - ***Package Manager***에서 ***Addressables*** 패키지를 설치한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr1.png)
@@ -647,11 +649,11 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr106.png)
     - 서버에서 기존 파일을 지우고 방금 새로 빌드한 번들과 카탈로그 파일들을 넣어주자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr118.png)
-    - 다시 스폰을 눌러주면 큐브가 바뀐 것을 확인할 수 있다.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr119.png)
-    - 다운로드 사이즈를 받아오는 것도 문제가 없다. 
+    - 다운로드 사이즈도 새로 잘 받아온다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr120.png)
         > - *참고: GetDownloadSizeAsync()는 한번 받은적이 있으면 0을 반환한다.*
+    - 다시 스폰을 눌러주면 큐브가 바뀐 것을 확인할 수 있다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr119.png)
 
 
 　

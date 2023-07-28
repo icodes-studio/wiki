@@ -589,7 +589,7 @@
         ```
     - 프로필 추가를 위해 ***Manage Profiles*** 메뉴를 선택하여 ***Addressables Profiles*** 창을 연다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr96.png)
-    - 이게 버전마다 위치가 다른 경우가 많은데 창에서 못 찾으면 아래 이미지처럼 어드레서블 세팅에도 있으니 확인해 보길 바란다.
+    - 프로필 창 띄우는 방법이 유니티 버전마다 조금씩 다른데... 어드레서블 세팅 인스펙터에도 있고,
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr97.png)
     - 창이 뜨면 빨간 동그라미가 있는 RemoteLoadPath에다가 기존 값을 지우고 아까 복사한 주소를 넣어주자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr98.png)

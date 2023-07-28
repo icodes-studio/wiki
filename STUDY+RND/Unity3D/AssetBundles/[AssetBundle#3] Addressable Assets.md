@@ -639,13 +639,12 @@
 　
 
 - ***번들 업데이트***
-    - 앱을 종료하고 다시 에디터로 가서 바꾸고 초록머리 캐릭터를 빨간 머리 캐릭터로 바꾸기 위해
-    - 빨간 머리 에셋의 어드레스를 이전 초록머리의 어드레스랑 같은 이름으로 만들어 준 뒤
+    - 큐브의 재질을 변경해서 번들을 업데이트 해보자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr115.png)
-    - 초록머리 어드레스를 지우고 
+    - 큐브의 모양이 좀 달라지도록 적당히 모습을 바꿔주고...
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr116.png)
-    - 빨간 머리 캐릭터를 리모트 그룹으로 옮겨 주고 레이블도 다시 지정해준 뒤 번들을 빌드 한다.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr117.png)
+    - 번들을 빌드 한다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr106.png)
     - 서버에서 기존 파일을 지우고 방금 새로 만든 번들과 카탈로그 파일들을 넣어주자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr118.png)
     - 이때 유저는 앱을 다시 새로 다운로드하지 않았고 기존의 앱을 다시 실행한다. 

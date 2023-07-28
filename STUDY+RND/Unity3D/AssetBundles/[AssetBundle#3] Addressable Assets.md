@@ -603,7 +603,7 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr101.png)
     - 이제 이 그룹으로 에셋을 넣어준 뒤, 번들 식별을 위해 ***Character*** 라는 레이블을 달아두도록 하자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr102.png)
-    - 그리고 처음 나온 두 스크립트를 아무 오브젝트에 넣은 뒤 값을 설정해준 다음
+    - 그리고 처음에 만들었던 두 스크립트를 적당한 오브젝트에 적당히 바인딩하고 적당히 값을 넣은다음...
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr103.png)
     - 어드레서블 설정으로 가서 카탈로그를 설정해주면 모든 준비가 끝난다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr104.png)

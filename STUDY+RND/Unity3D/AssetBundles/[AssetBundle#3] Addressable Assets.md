@@ -475,9 +475,9 @@
 - ***코드준비***
     - 캐릭터(큐브)를 소환하는 예제를 작성해보자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr90.png)
-        > - Spawn: 누르면 캐릭터(큐브) 생성
-        > - Download: 의존성을 가지는 모든 번들들을 통째로 다운로드
-        > - Sizeof: 다운로드할 파일 크기 가져오기
+        > - *Spawn: 누르면 캐릭터(큐브) 생성*
+        > - *Download: 의존성을 가지는 모든 번들들을 통째로 다운로드*
+        > - *Sizeof: 다운로드할 파일 크기 가져오기*
     - ***캐릭터 소환 코드 - Spawner.cs***
         ```
         using UnityEngine;

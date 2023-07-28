@@ -607,7 +607,7 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr103.png)
     - 어드레서블 설정으로 가서 카탈로그를 설정해주면 모든 준비가 끝난다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr104.png)
-    - 이제 번들을 빌드 해보자. 플레이 모드를 Use Existing Build로 수정하고 
+    - 이제 번들을 빌드 해보자. 플레이 모드를 ***Use Existing Build*** 모드로 수정하고 
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr105.png)
     - 빌드 하면
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr106.png)

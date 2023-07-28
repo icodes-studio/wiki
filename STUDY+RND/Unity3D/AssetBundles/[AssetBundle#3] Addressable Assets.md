@@ -623,7 +623,7 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr108.png)
     - 또 그 안에 카탈로그와 번들이 빌드 된 걸 확인할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr109.png)
-    - 이전 경로로 다시 돌아와서 ***StandaloneWindows64*** 플랫폼 폴더를 통째로 S3에 업로드하자.
+    - ***StandaloneWindows64*** 플랫폼 폴더를 통째로 S3에 업로드하자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr111.png)
     - 마지막으로 작업을 눌러서 퍼블릭 설정을 해주면 된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr112.png)

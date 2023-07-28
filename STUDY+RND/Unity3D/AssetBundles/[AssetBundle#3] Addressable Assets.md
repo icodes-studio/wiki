@@ -472,13 +472,13 @@
 
 # 서버에서 다운로드하기 #3
 
-- ***...***
-    - 아래 예제는 스폰 버튼을 누르면 캐릭터를 생성하는데
-    - 서버에서 내가 부르려는 어드레드 또는 레이블과 의존성을 가지는 모든 번들들을 통째로 다운받아 사용하는 방법과
-    - 필요한 에셋만 하나가 포함된 번들만 다운받아 사용하는 방법을 보여준다.
+- ***코드준비***
+    - 캐릭터(큐브)를 소환하는 예제를 작성해보자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr90.png)
-    - 먼저 작성한 코드를 보자
-    - 아래 코드는 우리가 이때까지 사용해온 방식으로 오브젝트를 생성하는 방식이다. (필요한 거 하나씩 다운로드하는 방법)
+        > - Spawn: 누르면 캐릭터(큐브) 생성
+        > - Download: 의존성을 가지는 모든 번들들을 통째로 다운로드
+        > - Sizeof: 다운로드할 파일 크기 가져오기
+    - ***캐릭터 소환 코드 - Spawner.cs***
         ```
         using UnityEngine;
         using UnityEngine.AddressableAssets;
@@ -486,52 +486,34 @@
 
         public class Spawner : MonoBehaviour
         {
-            private GameObject Character = null;
+            private GameObject character;
+            [SerializeField] private string characterAddress;
 
-            [Header("캐릭터의 어드레스를 입력해 주세요!")]
-            [SerializeField] private string CharacterAddress = string.Empty;
-
-            private void Start()
+            public void OnClickSpawn()
             {
-                Character = null;
-            }
+                if (ReferenceEquals(character, null) == false)
+                    ReleaseCharacter();
 
-            public void _ClickSpawn()
-            {
-
-                //Character가 null포인터가 아니라면
-                //해당 인스턴스를 제거.
-
-                if (!ReferenceEquals(Character, null))
-                {
-                    ReleaseObj();
-                }
-
-
-                //캐릭터를 스폰 한다.
                 Spawn();
-
             }
 
             void Spawn()
             {
-                Addressables.InstantiateAsync(CharacterAddress, new Vector3(Random.Range(-2f, 2f), 5, 0), Quaternion.identity).Completed +=
+                Addressables.InstantiateAsync(characterAddress, new Vector3(Random.Range(-2f, 2f), 5, 0), Quaternion.identity).Completed +=
                     (AsyncOperationHandle<GameObject> obj) =>
                     {
-                        Character = obj.Result;
+                        character = obj.Result;
                     };
 
             }
 
-            void ReleaseObj()
+            void ReleaseCharacter()
             {
-                //객체가 삭제될 때 메모리 해제를 위해 레퍼런스 카운트 -1 및 오브젝트인스턴스 제거.
-                Addressables.ReleaseInstance(Character);
+                Addressables.ReleaseInstance(character);
             }
-
         }
         ```
-    - 아래 코드는 번들을 한방에 다운받는 방법이다. DownloadDependenciesAsync("레이블")로 다운로드할 수 있고, GetDownloadSizeAsync("레이블")로 미리 사이즈를 확인할 수도 있다.
+    - ***번들 다운로드 코드 - BundleDownload.cs***
         ```
         using UnityEngine;
         using UnityEngine.UI;
@@ -540,48 +522,31 @@
 
         public class BundleDown : MonoBehaviour
         {
-            [SerializeField] Text SizeText;
+            [SerializeField] Text sizeText;
+            [SerializeField] string lableForBundleDown = string.Empty;
 
-            [Space]
-            [Header("다운로드를 원하는 번들 또는 번들들에 포함된 레이블중 아무거나 입력해주세요.")]
-            [SerializeField] string LableForBundleDown = string.Empty;
-
-            public void _Click_BundleDown()
+            public void OnClickDownload()
             {
-                Addressables.DownloadDependenciesAsync(LableForBundleDown).Completed +=
-                    (AsyncOperationHandle Handle) =>
+                Addressables.DownloadDependenciesAsync(lableForBundleDown).Completed +=
+                    (AsyncOperationHandle handle) =>
                     {
-                        //DownloadPercent프로퍼티로 다운로드 정도를 확인할 수 있음.
-                        //ex) float DownloadPercent = Handle.PercentComplete;
-
-                        Debug.Log("다운로드 완료!");
-
-                        //다운로드가 끝나면 메모리 해제.
-                        Addressables.Release(Handle);
-
+                        Debug.Log("Download Completed!");
+                        Addressables.Release(handle);
                     };
             }
 
-            public void _Click_CheckTheDownloadFileSize()
+            public void OnClickDownloadFileSize()
             {
-                //크기를 확인할 번들 또는 번들들에 포함된 레이블을 인자로 주면 됨.
-                //long타입으로 반환되는게 특징임.
-                Addressables.GetDownloadSizeAsync(LableForBundleDown).Completed +=
-                    (AsyncOperationHandle<long> SizeHandle) =>
+                Addressables.GetDownloadSizeAsync(lableForBundleDown).Completed +=
+                    (AsyncOperationHandle<long> handle) =>
                     {
-                        string sizeText = string.Concat(SizeHandle.Result, " byte");
-
-                        SizeText.text = sizeText;
-
-                        //메모리 해제.
-                        Addressables.Release(SizeHandle);
+                        sizeText.text = $"{handle.Result} byte";
+                        Addressables.Release(handle);
                     };
-
-
             }
         }
         ```
-- ***4편(서버 업로드)***
+- ***서버(CDN) 준비***
     - 이제 실제로 사용해 보도록 하겠다. 우선 서버가 있어야 하는데 "아마존 S3"를 사용하기로 했다.
         > *https://aws.amazon.com/ko/s3/*
     - s3의 콘솔에 로그인하고 버킷을 만들자 버킷 이름은 중복이 안되므로 자신만의 고유한 이름으로 작명하면 된다.

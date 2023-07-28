@@ -561,7 +561,6 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr91.png)
     - 원활한 진행을 위해 ***모든 퍼블릭 액세스 차단*** 항목을 체크 ***해제*** 하자
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr92.png)
-    - 그 뒤엔 전부 다음을 눌러 버킷을 생성하자.
     - 버킷이 생성되었다면 아무 파일이나 하나 올려보자
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr93.png)
     - 그럼 이렇게 파일이 올라가고, 파일을 눌러보면 이렇게 주소가 나오는데

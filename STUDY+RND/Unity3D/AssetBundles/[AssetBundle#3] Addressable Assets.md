@@ -561,7 +561,7 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr91.png)
     - 원활한 진행을 위해 ***모든 퍼블릭 액세스 차단*** 항목을 체크 ***해제*** 하자
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr92.png)
-    - 버킷 정책을 아래와 같이 편집한다. ARN 이름은 속성 탭에서 확인할 수 있다.
+    - 퍼블릭 접근을 위해, 버킷 정책을 아래와 같이 편집한다. ARN 이름은 속성 탭에서 확인할 수 있다.
         ```
         {
             "Version": "2012-10-17",
@@ -579,6 +579,8 @@
             ]
         }
         ```
+    - 또는 객체 소유권 설정에서 ACL 활성화 옵션을 키고 파일을 퍼블릭으로 만들어도 된다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr95.png)
     - 버킷에 아무 파일이나 하나 올려보자
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr93.png)
     - 업로드된 파일 속성을 보면 이렇게 웹 주소가 나온다.

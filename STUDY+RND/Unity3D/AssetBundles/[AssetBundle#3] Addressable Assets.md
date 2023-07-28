@@ -591,7 +591,9 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr96.png)
     - 프로필 창 띄우는 방법이 유니티 버전마다 조금씩 다른데... 어드레서블 세팅 인스펙터에도 있고,
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr97.png)
-    - 창이 뜨면 빨간 동그라미가 있는 RemoteLoadPath에다가 기존 값을 지우고 아까 복사한 주소를 넣어주자.
+    - 메뉴 ***Window ‣ Asset Management ‣ Addressables ‣ Profiles*** 항목을 선택하여 띄울 수도 있다.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr51.png)
+    - 암튼, 프로필 창이 뜨면 ***RemoteLoadPath*** 필드에 기존 값을 지우고 아까 복사한 주소를 넣어주자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr98.png)
     - 그런 다음 다시 그룹창으로 가서 그룹을 하나 만들어주고
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr99.png)

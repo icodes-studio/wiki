@@ -593,14 +593,13 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr97.png)
     - 메뉴 ***Window ‣ Asset Management ‣ Addressables ‣ Profiles*** 항목을 선택하여 띄울 수도 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr51.png)
-    - 암튼, 프로필 창이 뜨면 ***RemoteLoadPath*** 필드에 기존 값을 지우고 아까 복사한 주소를 넣어주자.
+    - 암튼, 프로필 창이 뜨면 ***Remote.LoadPath*** 필드에 기존 값을 지우고 아까 복사한 주소를 넣어주자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr98.png)
     - 그런 다음 다시 그룹창으로 가서 그룹을 하나 만들어주고
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr99.png)
     - 우 클릭을 통해 그룹 설정을 열어주자
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr100.png)
-    - 인스펙터를 확인해보면 설정이 열려있는 걸 확인할 수 있다.
-    - 그리고 이 그룹은 리모트 즉 서버용으로 사용할 거니까 빌드와 로드 패스를 각각 리모트 빌드와 리모트 로드로 바꿔주면 된다.
+    - 이 그룹은 리모트 즉 서버용으로 사용할 거니까 ***Build & Load Paths*** 필드를 ***Remote*** 모드로 변경한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr101.png)
     - 이제 이 그룹으로 에셋을 넣어준 뒤 번들 식별을 위해 Character라는 레이블을 달아두도록 하자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr102.png)

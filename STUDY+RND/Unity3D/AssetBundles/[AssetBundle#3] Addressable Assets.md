@@ -668,7 +668,7 @@ https://blog.naver.com/cdw0424/221637763395
     - 다운로드 사이즈도 새로 잘 받아온다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr120.png)
         > - *참고: GetDownloadSizeAsync()는 한번 받은적이 있으면 0을 반환한다.*
-    - 다시 스폰을 눌러주면 큐브가 바뀐 것을 확인할 수 있다.
+    - 다시 스폰 해보면 큐브가 바뀐 것을 확인할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr119.png)
 
 
@@ -678,18 +678,13 @@ https://blog.naver.com/cdw0424/221637763395
 
 *https://blog.naver.com/cdw0424/222090659316*
 
-- 유니티 로컬 Hosting 서비스
-    - 로컬 서버를 이용해서 테스트하는 워크플로우
-    - 아래 이미지와 같은 경로를 통해 호스팅 창을 열고
+- 유니티 로컬 호스팅 서비스 준비
+    - 메뉴 ***Window ‣ Asset Management ‣ Addressables ‣ Hosting*** 항목을 선택하여 호스팅 창을 연다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr123.png)
-    - 좌측 상단에 위치한 Create 버튼을 눌러서 Local Hosting을 클릭해 주자.
+    - 좌측 상단에 위치한 ***Create*** 버튼을 눌러서 ***Local Hosting*** 항목을 선택하자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr124.png)
-    - 그러면 오른쪽에 이런 화면이 나오는데
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr125.jpg)
-    - 아무것도 건드리지 말고 그저 Enable만 체크해 주면 된다.
+    - ***Enable*** 필드를 체크하면 아이피 주소와 포트 번호가 나온다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr126.png)
-    - 그러면 이렇게 ip 주소와 포트 번호가 나오는데
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr127.png)
     - 아이피와 포트 번호 각각 앞에 있는 변수에 우 클릭을 하고 키를 복사한 뒤 메모장에다가 붙여넣기를 하자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr128.png)
         > - [PrivateIpAddress]

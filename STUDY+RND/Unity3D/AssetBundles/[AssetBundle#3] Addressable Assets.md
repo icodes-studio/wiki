@@ -611,15 +611,13 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr105.png)
     - 빌드 하면
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr106.png)
-    - 프로젝트 폴더 안에 ServerData라는 폴더가 생기고
+    - 프로젝트 폴더 안에 ***ServerData*** 폴더가 생기고
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr107.png)
-    - 그 안에 빌드 한 플랫폼에 해당하는 폴더가 있으며 
+    - 그 안에 플랫폼에 해당하는 폴더가 있으며 
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr108.png)
     - 또 그 안에 카탈로그와 번들이 빌드 된 걸 확인할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr109.png)
-    - 이전 경로로 다시 돌아온 뒤
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr110.png)
-    - 플랫폼 폴더를 통째로 서버에 업로드해주자.
+    - 이전 경로로 다시 돌아와서 ***StandaloneWindows64*** 플랫폼 폴더를 통째로 S3에 업로드하자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr111.png)
     - 마지막으로 작업을 눌러서 퍼블릭 설정을 해주면 된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr112.png)

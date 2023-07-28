@@ -691,17 +691,13 @@ https://blog.naver.com/cdw0424/221637763395
         > - *[HostingServicePort]*
         > - *그럼 위와 같은 뒤 변수가 복사되는데*
         > - *이걸 http://[PrivateIpAddress]:[HostingServicePort] 이렇게 사용하면 된다.*
-    - 프로필을 하나 새로 추가하고 
+    - 프로필을 하나 새로 추가하고 Remote를 ***Editor Hosted*** 모드로 변경하자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr130.png)
     - 그리고 이름을 적당하게 바꿔준 뒤 remotepath들을 수정해 주자.
     - 빌드 패스는 원래 적혀있던 ServerData를 HostedData라고 고쳐주고
     - 로드 패스는 http://[PrivateIpAddress]:[HostingServicePort]를 넣어주면 된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr131.png)
-    - 그런 다음 어드레서블 인스펙터창을 열고
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr132.png)
-    - 기존 프로필을
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr133.png)
-    - 방금 만들어준 프로필로 설정해 주자.
+    - 그런 다음 어드레서블 인스펙터창을 열고 기존 프로필을 방금 만들어준 프로필로 설정해 주자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr134.png)
     - 다른 서버 관련 설정들은 이전에 한대로...
     - 이렇게 해주고 번들을 빌드 한 뒤 게임을 빌드하고 나서 

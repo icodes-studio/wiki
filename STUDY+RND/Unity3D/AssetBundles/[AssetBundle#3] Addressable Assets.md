@@ -308,7 +308,7 @@ https://blog.naver.com/cdw0424/221637763395
             }
         }
         ```
-    - 버튼에 위 스크립트를 바인딩 시키고, 이동할 씬 어드레스를 지정하자.
+    - 버튼에 위 스크립트를 바인딩하고 이동할 씬 어드레스를 지정하자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr30.png)
     - 버튼을 클릭하여 씬 로딩 동작을 확인할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr31.png)

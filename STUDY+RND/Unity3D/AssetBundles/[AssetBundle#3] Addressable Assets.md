@@ -401,7 +401,7 @@ https://blog.naver.com/cdw0424/221637763395
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr38.png)
     - 빌드 내용이 담긴 bin 파일이 생긴다. (번들아님)
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr39.png)
-    - ***Use Existing Build*** 모드로 플레이 하면, 번들 파일에서 데이터를 가져오는 걸 확인할 수 있다.
+    - ***Use Existing Build*** 모드로 플레이 하면, 번들 파일에서 가져오는 걸 확인할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr41.png)
 
 
@@ -441,7 +441,7 @@ https://blog.naver.com/cdw0424/221637763395
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr63.png)
     - 로컬 패스는 프로젝트 내부에 번들이 생성되지만, 리모트 패스는 기본 경로가 이렇게 프로젝트 밖의 ***ServerData*** 폴더로 설정된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr64.png)
-    - 그 안엔 실제로 빌드 시 이렇게 번들이 들어가 있다. 나중에 이걸 서버에 넣어주면 된다.
+    - 폴더 안에는 빌드 시 이렇게 번들이 들어가는데, 이걸 서버에 넣어주면 된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr65.png)
     - 지금 위 폴더를 살펴보면 번들이 없는데, 아직 번들을 이 폴더에 빌드 하겠다고 설정을 안 했기 때문이다. 나중에 할 거임.
 
@@ -466,8 +466,8 @@ https://blog.naver.com/cdw0424/221637763395
         > - *번들이 없는 이유는 아직 번들을 이 폴더에 빌드 하겠다고 설정을 안 했기 때문. 나중에 할 거임.*
     - JSON 파일을 열어서 살펴보면,
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr69.png)
-        > - 이렇게 번들과, 어드레스 애셋 정보가 있는 것을 확인할 수 있다.
-        > - 그렇기 때문에 나중에 우리는 번들과 함께 이 카탈로그 사본도 함께 서버(CDN)에 넣어 주어야 한다.
+        > - *이렇게 번들과, 어드레스 애셋 정보가 있는 것을 확인할 수 있다.*
+        > - *그렇기 때문에 나중에 우리는 번들과 함께 이 카탈로그 사본도 함께 서버(CDN)에 넣어 주어야 한다.*
     - ***Only update catalogs manually*** 옵션을 키면 카탈로그가 초기화될 타이밍에 버전 체크를 하지 않는다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr70.png)
         > - ~~아직 이게 무슨말인지 정확히 모르겠다~~

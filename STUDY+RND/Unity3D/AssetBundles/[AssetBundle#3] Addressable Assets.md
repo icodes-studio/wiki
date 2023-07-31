@@ -471,6 +471,7 @@ https://blog.naver.com/cdw0424/221637763395
     - ***Only update catalogs manually*** 옵션을 키면 카탈로그가 초기화될 타이밍에 버전 체크를 하지 않는다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr70.png)
         > - ~~아직 이게 무슨말인지 정확히 모르겠다~~
+        > - ~~빌드시 카탈로그 업데이트를 하지 않는 옵션으로 보이는데 좀 더 확인 필요~~
     - ***Player Version Override*** 필드로 카탈로그의 버전을 관리를 할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr71.png)
     - 예를 들어, 이 값을 1로 지정하고 빌드 하면 1 버전 값을 가진 기존과 다른 파일이 생긴다.

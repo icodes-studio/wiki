@@ -1,5 +1,5 @@
 ## # Addressable Assets
-    ● 어드레서블 애셋 시스템을 이용하여 주소를 통해 에셋을 요청할 수 있다.
+    ● 어드레서블 애셋 시스템을 이용하여 주소를 통해 애셋을 요청할 수 있다.
     ● 애셋(예: 프리팹)이 “어드레서블”로 표시되면 어디에서든 호출할 수 있는 주소가 생성된다.
     ● 애셋 위치(로컬 또는 원격)에 관계없이 시스템은 애셋과 해당 종속성을 찾아 반한다.
     ● 어드레서블 애셋 시스템은 애셋 번들을 대체하는 기술이 아니다. 
@@ -153,17 +153,17 @@
 
 *https://blog.naver.com/cdw0424/221637349195*
 
-- ***References***
+- ***API sets***
     - *https://www.youtube.com/watch?v=yoBzTpJYN44&t=1972s*
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr25.png)
-- ***LoadAssetAsync, InstantiateAsync에 맞게 해제***
-    - ***LoadAssetAsync*** 함수로 로드한 애셋은 ***Release*** 함수로 언로드
-    - ***InstantiateAsync*** 함수로 로드 및 생성한 오브젝트는 ***ReleaseInstance*** 함수로 언로드
-- ***Addressable, AssetReference 클래스 각각에 언로드 함수 존재***
-    - *Addressables.Release*
-    - *Addressables.ReleaseInstance*
-    - *AssetReference.Release*
-    - *AssetReference.ReleaseInstance*
+    - ***LoadAssetAsync, InstantiateAsync에 맞게 해제***
+        > - ***LoadAssetAsync*** 함수로 로드한 애셋은 ***Release*** 함수로 언로드
+        > - ***InstantiateAsync*** 함수로 로드 및 생성한 오브젝트는 ***ReleaseInstance*** 함수로 언로드
+    - ***Addressable, AssetReference 클래스 각각에 언로드 함수 존재***
+        > - *Addressables.Release*
+        > - *Addressables.ReleaseInstance*
+        > - *AssetReference.Release*
+        > - *AssetReference.ReleaseInstance*
 - ***동작확인***
     - 큐브 오브젝트를 생성하는 스크립트를 만들어서 버튼 오브젝트에 바인딩.
         ```
@@ -632,7 +632,7 @@ https://blog.naver.com/cdw0424/221637763395
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr100.png)
     - 이 그룹은 리모트 즉 서버용으로 사용할 거니까 ***Build & Load Paths*** 필드를 ***Remote*** 모드로 변경한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr101.png)
-    - 이제 이 그룹으로 에셋을 넣어준 뒤, 번들 식별을 위해 ***Character*** 라는 레이블을 달아두도록 하자.
+    - 이제 이 그룹으로 애셋을 넣어준 뒤, 번들 식별을 위해 ***Character*** 라는 레이블을 달아두도록 하자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr102.png)
     - 그리고 처음에 만들었던 두 스크립트를 적당한 오브젝트에 적당히 바인딩하고 적당히 값을 넣은다음...
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr103.png)

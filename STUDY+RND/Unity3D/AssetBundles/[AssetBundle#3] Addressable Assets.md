@@ -60,7 +60,6 @@
 
             void OnCreateCube()
             {
-                // 로드와 인스턴스 생성을 동시에 수행
                 Addressables.InstantiateAsync("Cube", new Vector3(0, 0, 0), Quaternion.identity);
             }
         }
@@ -86,13 +85,11 @@
 
             void OnCreateCube()
             {
-                // "Cube" 애셋 로드
                 Addressables.LoadAssetAsync<GameObject>("Cube").Completed += OnLoadCompleted;
             }
 
             void OnLoadCompleted(AsyncOperationHandle<GameObject> obj)
             {
-                // 로드된 "Cube" 애셋에서 게임 오브젝트 인스턴싱
                 GameObject resultObject = obj.Result;
                 Instantiate(resultObject, new Vector3(0, 0, 0), Quaternion.identity);
             }

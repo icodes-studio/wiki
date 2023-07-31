@@ -192,7 +192,7 @@
         using UnityEngine;
         using UnityEngine.AddressableAssets;
 
-        public class Destructer : MonoBehaviour
+        public class ReleaseCube : MonoBehaviour
         {
             void Start()
             {

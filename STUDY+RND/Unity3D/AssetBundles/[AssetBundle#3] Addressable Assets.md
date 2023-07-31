@@ -232,11 +232,11 @@
                     (AsyncOperationHandle<GameObject> op) =>
                     {
                         temp = op.Result;
-                        Invoke("ReleaseDestroy", 3f);
+                        Invoke("Release", 1f);
                     };
             }
 
-            void ReleaseDestroy()
+            void Release()
             {
                 assetReference.ReleaseInstance(temp);
             }

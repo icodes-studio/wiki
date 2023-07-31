@@ -262,10 +262,10 @@
                 if (opHandle.Status == AsyncOperationStatus.Succeeded)
                     temp = Instantiate(opHandle.Result);
 
-                Invoke("ReleaseDestroy", 1f);
+                Invoke("Release", 1f);
             }
 
-            void ReleaseDestroy()
+            void Release()
             {
                 Destroy(temp);
                 Addressables.Release(opHandle);

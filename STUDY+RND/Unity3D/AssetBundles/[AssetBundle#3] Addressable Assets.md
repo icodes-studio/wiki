@@ -411,7 +411,7 @@ https://blog.naver.com/cdw0424/221637763395
 
 *https://blog.naver.com/cdw0424/221755856111*
 
-- ***Settingup***
+- ***그룹 및 프로필 개념 이해하기***
     - 서버에 넣을 번들과 로컬에서 사용할 번들을 구분해보자. 우선, 우 클릭을 통해 그룹을 새로 생성한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr45.png)
     - 이렇게 생성된 그룹은 각각의 애셋 번들로 빌드 된다.
@@ -452,7 +452,7 @@ https://blog.naver.com/cdw0424/221637763395
 
 *https://blog.naver.com/cdw0424/221756844361*
 
-- ***Catalog 이해하기***
+- ***카탈로그 개념 이해하기***
     - ***Build Remote Catalog***
         > - 각 어드레스와 자산(애셋)을 매핑하며, 원한다면 매핑을 변경하여 불러올 번들의 위치와 로드 방법 등을 설정할 수 있다.
         > - 그러기 위해선 이렇게 ***Build Remote Catalog*** 항목을 활성화해주어야 한다.

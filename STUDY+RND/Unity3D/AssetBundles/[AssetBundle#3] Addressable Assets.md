@@ -196,10 +196,10 @@
         {
             void Start()
             {
-                Invoke("ReleaseObj", 1f);
+                Invoke("Release", 1f);
             }
 
-            void ReleaseObj()
+            void Release()
             {
                 Addressables.ReleaseInstance(gameObject);
             }

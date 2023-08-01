@@ -9,12 +9,9 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr124.png)
     - ***Enable*** 필드를 체크하면 아이피 주소와 포트 번호가 나온다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr126.png)
-    - 아이피와 포트 번호 각각 앞에 있는 변수에 우 클릭을 하고 키를 복사한 뒤 메모장에다가 붙여넣기를 하자.
+    - 아이피와 포트 번호를 확인할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr128.png)
-        > - *[PrivateIpAddress]*
-        > - *[HostingServicePort]*
-        > - *그럼 위와 같은 뒤 변수가 복사되는데*
-        > - *이걸 http://[PrivateIpAddress]:[HostingServicePort] 이렇게 사용하면 된다.*
+        > - *잠시후 이 값을 http://[PrivateIpAddress]:[HostingServicePort] 이렇게 사용할 예정이다.*
     - 이어서 프로필을 하나 새로 추가하고 Remote를 ***Editor Hosted*** 모드로 변경하자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr130.png)
     - 그리고 이름을 적당하게 바꿔준 뒤 remotepath들을 수정해 주자.

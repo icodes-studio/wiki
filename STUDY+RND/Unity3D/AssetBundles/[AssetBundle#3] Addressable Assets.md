@@ -653,7 +653,7 @@ https://blog.naver.com/cdw0424/221637763395
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr109.png)
     - ***StandaloneWindows64*** 플랫폼 폴더를 통째로 S3에 업로드하자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr111.png)
-    - 마지막으로 작업을 눌러서 퍼블릭 설정을 해주면 된다. (버킷 정책을 모두 Allow로 편집한 경우는 필요 없음)
+    - ACL을 사용하는 경우 퍼블릭 설정을 해주면 된다. (버킷 정책을 모두 Allow로 편집한 경우는 필요 없음)
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr112.png)
     - 모든 준비가 끝났으니 게임을 실행해보자. Spawn 버튼을 누르면 큐브가 잘 나오는지 확인하자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr114.png)

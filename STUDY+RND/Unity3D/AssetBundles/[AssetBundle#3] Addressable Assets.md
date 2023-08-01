@@ -529,7 +529,6 @@ https://blog.naver.com/cdw0424/221637763395
                     {
                         character = obj.Result;
                     };
-
             }
 
             void ReleaseCharacter()

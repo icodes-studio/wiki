@@ -675,12 +675,3 @@ https://blog.naver.com/cdw0424/221637763395
         > - *참고: GetDownloadSizeAsync()는 한번 받은적이 있으면 0을 반환한다.*
     - 다시 스폰 해보면 모습이 바뀐 큐브를 로드한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr119.png)
-
-
-　
-
-## # 외부 서버 없이 서버 기능 테스트하기.
-
-*https://blog.naver.com/cdw0424/222090659316*
-
-- 잘 안되네...

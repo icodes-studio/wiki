@@ -10,7 +10,7 @@
 *public bool Initialized*
 
 - ***Description***
-    - Whether the manager was initialized successfully or not.
+    - Returns whether the manager was initialized successfully or not.
 
 
 　
@@ -19,7 +19,7 @@
 *public AssetBundleManifest Manifest*
 
 - ***Description***
-    - Object for the platform(entry-point) manifest.
+    - Returns object for the platform(entry-point) manifest.
 
 
 　

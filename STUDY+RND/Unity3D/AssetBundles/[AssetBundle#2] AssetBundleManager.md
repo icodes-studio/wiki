@@ -8,8 +8,7 @@
 *public bool Initialized*
 
 - **Description**
-    - 매니저가 성공적으로 초기화 되었는지 아닌지 반환한다.
-    - 초기화 되었다는 것은 플랫폼(엔트리포인트) 매니페스트를 성공적으로 로드했다는 것을 의미한다.
+    - Whether the manager was initialized successfully or not
 
 
 　
@@ -27,19 +26,44 @@
 *public ManifestType ManifestType*
 
 - **Description**
-    - 애셋번들 매니페스트 타입을 반환한다.
-        - None: 에러 또는 정의되지 않는 상태
-        - Remote: 원격지에서 다운로드한 번들
-        - LocalCached: 로컬 캐시에서 로드한 번들
-        - StreamingAssets: 스트리밍 애셋 폴더에서 로드한 번들
-
-
-
-
-
+    - Returns the AssetBundle manifest type.
+        - None: an error or undefined condition
+        - Remote: Download bundles remotely
+        - LocalCached: Bundle loaded from local cache
+        - StreamingAssets: Bundle loaded from StreamingAssets folder
 
 
 　
+
+## # AssetBundleManager.Initialize
+*public AssetBundleManager Initialize(string uri)*
+
+- **Description**
+    - Initializes the base-uri used for AssetBundle calls.
+    - The manager will load the manifest file located at base-url/[PlatformName].
+
+- **Parameters**
+    - **string uri**: List of base-uris
+
+
+　
+
+## # AssetBundleManager.Initialize
+*public AssetBundleManager Initialize(string[] uris)*
+
+- **Description**
+    - Initializes a list of base-uris used for AssetBundle calls.
+    - The manager will load the manifest file located at base-url/[PlatformName].
+    - If access to one uri is denied, the manager will try to access the next uri.
+
+- **Parameters**
+    **string[] uris**: List of base-uris
+        
+
+
+
+
+
 
 - ***References***
     - *https://github.com/SadPandaStudios/AssetBundleManager/tree/master*
@@ -53,25 +77,9 @@
 
 
 
-        /// <summary>
-        /// Initializes the base-uri used for AssetBundle calls.
-        /// The manager will load the manifest file located at base-url/[PlatformName].
-        /// </summary>
-        /// <param name="uri">base uri</param>
-        /// <returns>this</returns>
-        public AssetBundleManager Initialize(string uri)
-        {
-            return Initialize(new[] { uri ?? string.Empty });
-        }
 
-        /// <summary>
-        /// Initializes a list of base-uris used for AssetBundle calls.
-        /// The manager will load the manifest file located at base-url/[PlatformName].
-        /// If access to one uri is denied, the manager will try to access the next uri.
-        /// </summary>
-        /// <param name="uri">List of base-uris</param>
-        /// <returns>this</returns>
-        public AssetBundleManager Initialize(string[] uris)
+
+
         {
             baseUris = new string[uris.Length];
 

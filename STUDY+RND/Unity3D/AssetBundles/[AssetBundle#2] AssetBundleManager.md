@@ -1,10 +1,10 @@
-# # AssetBundleManager
+# AssetBundleManager
 *Simple AssetBundle management*
 
 
 　
 
-## AssetBundleManager.Initialized
+## # AssetBundleManager.Initialized
 *public bool Initialized*
 
 - **Description**
@@ -14,7 +14,7 @@
 
 　
 
-## AssetBundleManager.Manifest
+## # AssetBundleManager.Manifest
 *public AssetBundleManifest Manifest*
 
 - **Description**
@@ -23,7 +23,7 @@
 
 　
 
-## AssetBundleManager.ManifestType
+## # AssetBundleManager.ManifestType
 *public ManifestType ManifestType*
 
 - **Description**

@@ -4,7 +4,7 @@
 
 　
 
-## Initialized
+## AssetBundleManager.Initialized
 *public bool Initialized*
 
 - **Description**
@@ -12,6 +12,26 @@
     - 초기화 되었다는 것은 플랫폼(엔트리포인트) 매니페스트를 성공적으로 로드했다는 것을 의미한다.
 
 
+　
+
+## AssetBundleManager.Manifest
+*public AssetBundleManifest Manifest*
+
+- **Description**
+    - Object for the platform(entry-point) manifest
+
+
+　
+
+## AssetBundleManager.ManifestType
+*public ManifestType ManifestType*
+
+- **Description**
+    - 애셋번들 매니페스트 타입을 반환한다.
+        - None: 에러 또는 정의되지 않는 상태
+        - Remote: 원격지에서 다운로드한 번들
+        - LocalCached: 로컬 캐시에서 로드한 번들
+        - StreamingAssets: 스트리밍 애셋 폴더에서 로드한 번들
 
 
 
@@ -19,6 +39,7 @@
 
 
 
+　
 
 - ***References***
     - *https://github.com/SadPandaStudios/AssetBundleManager/tree/master*
@@ -28,48 +49,9 @@
 
 
 
-using System;
-using System.Text;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace AssetBundles
-{
-    /// <summary>
-    /// 
-    /// </summary>
-    public class AssetBundleManager : IDisposable
-    {
-        private const string ManifestDownloadKey = "@manifest download key";
-        private const string ManifestVersionKey = "@manifest version key";
-
-        private string[] baseUris = default;
-        private string platformName = default;
-        private PrioritizationStrategy defaultPriority = PrioritizationStrategy.Remote;
-        private IDictionary<string, AssetBundleContainer> activeBundles = new Dictionary<string, AssetBundleContainer>(StringComparer.OrdinalIgnoreCase);
-        private IDictionary<string, AssetBundleDownloadCallback> downloadCallbacks = new Dictionary<string, AssetBundleDownloadCallback>(StringComparer.OrdinalIgnoreCase);
-        private ICommandHandler<AssetBundleDownloadCommand> downloader = default;
 
 
-        /// <summary>
-        /// Object for the platform(entry-point) manifest
-        /// </summary>
-        public AssetBundleManifest Manifest
-        {
-            get; private set;
-        }
 
-        /// <summary>
-        /// Manifest type
-        ///     None: 
-        ///     Remote: 
-        ///     LocalCached: 
-        ///     StreamingAssets: 
-        /// </summary>
-        public ManifestType ManifestType
-        {
-            get; private set;
-        }
 
         /// <summary>
         /// Initializes the base-uri used for AssetBundle calls.

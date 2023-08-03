@@ -4,7 +4,7 @@
 - *Simple AssetBundle management*
 - ***Main Methods***
     - ***Initialize***: Initializes the base-uri used for AssetBundle calls.
-    - ***Startup***: Load the platform(entry-point) manifest file.
+    - ***Start***: Load the platform(entry-point) manifest file.
     - ***LoadBundle***: Downloads an AssetBundle or returns a cached AssetBundle if it has already been downloaded.
     - ***UnloadBundle***: Unloads an AssetBundle.
     - ***IsVersionCached***: Check to see if a specific asset bundle is cached or needs to be downloaded.
@@ -37,7 +37,7 @@
 
 　
 
-## # Startup
+## # Start
 *public void Startup(Action\<bool\> callback)*
 
 - ***Description***
@@ -50,7 +50,7 @@
 
 　
 
-## # Startup
+## # Start
 *public void Startup(string manifestName, bool refresh, Action\<bool\> callback)*
 
 - ***Description***

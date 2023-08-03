@@ -1,7 +1,7 @@
 # AssetBundleManager
 
-- *Simple AssetBundle management*
 - *https://github.com/SadPandaStudios/AssetBundleManager/tree/master*
+- *Simple AssetBundle management*
 - ***Methods***
     - ***Initialize***: Initializes the base-uri used for AssetBundle calls.
     - ***Startup***: Load the platform(entry-point) manifest file.

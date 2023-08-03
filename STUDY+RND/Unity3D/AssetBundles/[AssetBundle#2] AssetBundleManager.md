@@ -32,7 +32,7 @@
 　
 
 ## # Startup
-*public void Startup(Action<bool> callback)*
+*public void Startup(Action\<bool\> callback)*
 
 - ***Description***
     - Load the platform(entry-point) manifest file.
@@ -45,7 +45,7 @@
 　
 
 ## # Startup
-*public void Startup(string manifestName, bool refresh, Action<bool> callback)*
+*public void Startup(string manifestName, bool refresh, Action\<bool\> callback)*
 
 - ***Description***
     - Load the platform(entry-point) manifest file.
@@ -53,6 +53,36 @@
     - ***string manifestName***: The name of the manifest file to download.
     - ***bool refresh***: Always try to download a new manifest even if one has already been cached.
     - ***Action\<bool\> callback***: Called when the loading is complete.
+
+
+　
+
+## # LoadBundle
+*public void LoadBundle(string bundleName, Action\<AssetBundle\> callback)*
+
+- ***Description***
+    - Downloads an AssetBundle or returns a cached AssetBundle if it has already been downloaded.
+    - Remember to call UnloadBundle(AssetBundle, bool) for every bundle you download once you are done with it.
+- ***Parameters***
+    - ***string bundleName***: Name of the bundle to download.
+    - ***Action\<AssetBundle\> callback***: Action to perform when the bundle has been successfully downloaded.
+
+
+　
+
+## # LoadBundle
+*public void LoadBundle(string bundleName, Action\<AssetBundle\> callback, DownloadSettings downloadSettings)*
+
+- ***Description***
+    - Downloads an AssetBundle or returns a cached AssetBundle if it has already been downloaded.
+    - Remember to call UnloadBundle(AssetBundle, bool) for every bundle you download once you are done with it.
+- ***Parameters***
+    - ***string bundleName***: Name of the bundle to download.
+    - ***Action\<AssetBundle\> callback***: Action to perform when the bundle has been successfully downloaded.
+    - ***DownloadSettings downloadSettings***: 
+        - Tell the function to use a previously downloaded version of the bundle if available.
+        - If the bundle is currently "active" (it has not been unloaded) then the active bundle will be used regardless of this setting.
+        - If it's important that a new version is downloaded then be sure it isn't active.
 
 
 　

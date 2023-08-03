@@ -2,6 +2,18 @@
 
 - *Simple AssetBundle management*
 - *https://github.com/SadPandaStudios/AssetBundleManager/tree/master*
+- ***Methods***
+    - ***Initialize***: Initializes the base-uri used for AssetBundle calls.
+    - ***Startup***: Load the platform(entry-point) manifest file.
+    - ***LoadBundle***: Downloads an AssetBundle or returns a cached AssetBundle if it has already been downloaded.
+    - ***UnloadBundle***: Unloads an AssetBundle.
+    - ***Initialized***: Returns whether the manager was initialized successfully or not.
+    - ***Manifest***: Returns object for the platform(entry-point) manifest.
+    - ***ManifestType***: Returns the AssetBundle manifest type.
+    - ***UseStreamingAssets***: Loading from Unity's StreamingAsset folder.
+    - ***UseSimulation***: Loading from the Simulation folder.
+    - ***SetPrioritizationStrategy***: Changes the strategy used to determine what should happen when an asset bundle exists in both the StreamingAssets and the remote server.
+    - ***IsVersionCached***: Check to see if a specific asset bundle is cached or needs to be downloaded.
 
 
 　

@@ -6,6 +6,98 @@
 
 　
 
+## # Initialize
+*public AssetBundleManager Initialize(string uri)*
+
+- ***Description***
+    - Initializes the base-uri used for AssetBundle calls.
+    - The manager will load the manifest file located at base-url/[PlatformName].
+- ***Parameters***
+    - ***string uri***: List of base-uris.
+
+
+　
+
+## # Initialize
+*public AssetBundleManager Initialize(string[] uris)*
+
+- ***Description***
+    - Initializes a list of base-uris used for AssetBundle calls.
+    - The manager will load the manifest file located at base-url/[PlatformName].
+    - If access to one uri is denied, the manager will try to access the next uri.
+- ***Parameters***
+    ***string[] uris***: List of base-uris.
+
+
+　
+
+## # Startup
+*public void Startup(Action<bool> callback)*
+
+- ***Description***
+    - Load the platform(entry-point) manifest file.
+    - Downloads the AssetBundle manifest and prepares the system for bundle management.
+    - Uses the platform name as the manifest name.
+- ***Parameters***
+    - ***Action\<bool\> callback***: Called when the loading is complete.
+
+
+　
+
+## # Startup
+*public void Startup(string manifestName, bool refresh, Action<bool> callback)*
+
+- ***Description***
+    - Load the platform(entry-point) manifest file.
+- ***Parameters***
+    - ***string manifestName***: The name of the manifest file to download.
+    - ***bool refresh***: Always try to download a new manifest even if one has already been cached.
+    - ***Action\<bool\> callback***: Called when the loading is complete.
+
+
+　
+
+## # UnloadBundle
+*public void UnloadBundle(AssetBundle bundle)*
+
+- ***Description***
+    - Unloads an AssetBundle.
+    - Objects that were loaded from this bundle will need to be manually destroyed.
+- ***Parameters***
+    - ***AssetBundle bundle***: Bundle to unload.
+
+
+　
+
+## # UnloadBundle
+*public void UnloadBundle(AssetBundle bundle, bool unloadAllLoadedObjects)*
+
+- ***Description***
+    - Unloads an AssetBundle.
+- ***Parameters***
+    - ***AssetBundle bundle***: Bundle to unload.
+    - ***bool unloadAllLoadedObjects***: 
+        - When true, all objects that were loaded from this bundle will be destroyed as well.
+        - If there are game objects in your scene referencing those assets, the references to them will become missing.
+
+
+　
+
+## # UnloadBundle
+*public void UnloadBundle(AssetBundle bundle, bool unloadAllLoadedObjects, bool force)*
+
+- ***Description***
+    - Unloads an AssetBundle.
+- ***Parameters***
+    - ***AssetBundle bundle***: Bundle to unload.
+    - ***bool unloadAllLoadedObjects***: 
+        - When true, all objects that were loaded from this bundle will be destroyed as well.
+        - If there are game objects in your scene referencing those assets, the references to them will become missing.
+    - ***bool force***: Unload the bundle even if ABM believes there are other dependencies on it.
+
+
+　
+
 ## # Initialized
 *public bool Initialized*
 
@@ -33,61 +125,6 @@
         - Remote: Download bundles remotely.
         - LocalCached: Bundle loaded from local cache.
         - StreamingAssets: Bundle loaded from StreamingAssets folder.
-
-
-　
-
-## # Initialize
-*public AssetBundleManager Initialize(string uri)*
-
-- ***Description***
-    - Initializes the base-uri used for AssetBundle calls.
-    - The manager will load the manifest file located at base-url/[PlatformName].
-
-- ***Parameters***
-    - ***string uri***: List of base-uris.
-
-
-　
-
-## # Initialize
-*public AssetBundleManager Initialize(string[] uris)*
-
-- ***Description***
-    - Initializes a list of base-uris used for AssetBundle calls.
-    - The manager will load the manifest file located at base-url/[PlatformName].
-    - If access to one uri is denied, the manager will try to access the next uri.
-
-- ***Parameters***
-    ***string[] uris***: List of base-uris.
-
-
-　
-
-## # Startup
-*public void Startup(Action<bool> callback)*
-
-- ***Description***
-    - Load the platform(entry-point) manifest file.
-    - Downloads the AssetBundle manifest and prepares the system for bundle management.
-    - Uses the platform name as the manifest name.
-
-- ***Parameters***
-    - ***Action\<bool\> callback***: Called when the loading is complete.
-
-
-　
-
-## # Startup
-*public void Startup(string manifestName, bool refresh, Action<bool> callback)*
-
-- ***Description***
-    - Load the platform(entry-point) manifest file.
-
-- ***Parameters***
-    - ***string manifestName***: The name of the manifest file to download.
-    - ***bool refresh***: Always try to download a new manifest even if one has already been cached.
-    - ***Action\<bool\> callback***: Called when the loading is complete.
 
 
 　

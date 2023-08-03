@@ -150,6 +150,29 @@
 
 　
 
+## # SetPrioritizationStrategy
+*public AssetBundleManager SetPrioritizationStrategy(PrioritizationStrategy strategy)*
+
+- ***Description***
+    - Changes the strategy used to determine what should happen when an asset bundle exists in both the StreamingAssets and the remote server.
+    - The default is to prioritize the remote asset over the StreamingAssets folder
+- ***Parameters***
+    - ***PrioritizationStrategy strategy***
+        - Remote:
+        - StreamingAssets:
+
+
+　
+
+## # IsVersionCached
+*public bool IsVersionCached(string bundleName)*
+
+- ***Description***
+    - Check to see if a specific asset bundle is cached or needs to be downloaded.
+
+
+　
+
 ## # Dispose
 
 - ***Description***

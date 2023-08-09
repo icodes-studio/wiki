@@ -474,7 +474,7 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tmp-dynamic7.png)
     - 왜냐하면 썼다 지워도 이미 생성된 이미지는 그대로 남아 있기 때문
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tmp-dynamic8.png)
-    - SDF 같은 용도는 입력 후 ***Static*** 모드로 변경하는 것을 추천
+    - 실행 중 동적으로 변하지 않는 텍스트는 ***Static*** 모드를 사용하는 게 좋겠다.
 
 
 　

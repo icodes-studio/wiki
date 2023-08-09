@@ -462,7 +462,7 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tmp-dynamic1.png)
     - 폰트 우 클릭 ***Create - Textmeshpro - FontAsset*** 클릭
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tmp-dynamic2.png)
-    - 폰트 생성됨.
+    - SDF 폰트 생성됨.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tmp-dynamic3.png)
     - 인스펙터 창에서 ***Generation Settings ▸ Atlas Population*** 모드를 ***Dynamic*** 선택
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/tmp-dynamic4.png)

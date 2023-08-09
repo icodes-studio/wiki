@@ -411,6 +411,9 @@
 
 # # 한글 사용법
     ● 텍스트 메쉬 프로 한글 사용법
+    ● using Custom Characters
+    ● using Custom Range
+    ● using Dynamic Atlas Population Mode
 *https://m.blog.naver.com/cdw0424/221641217203*
 
 

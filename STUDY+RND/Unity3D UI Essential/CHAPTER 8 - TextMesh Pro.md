@@ -448,7 +448,7 @@
 
 ## 한글 폰트 애셋 만들기 - using Custom Range
 
-- Character Set 필드를 Custom Range 모드로 선택
+- ***Character Set*** 필드를 ***Custom Range*** 모드로 선택
     - 44032-55203 내용을 입력하면 한글이 모두 적용된다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D%20UI%20Essential/Assets/fontassetcreator7.png)
 

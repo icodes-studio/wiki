@@ -37,7 +37,7 @@
 
 　
 
-## # Start
+## # Load
 *public void Load(Action\<bool\> callback)*
 
 - ***Description***
@@ -50,7 +50,7 @@
 
 　
 
-## # Start
+## # Load
 *public void Load(string manifestName, bool refresh, Action\<bool\> callback)*
 
 - ***Description***

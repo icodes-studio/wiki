@@ -1,7 +1,7 @@
 # AssetBundleManager
 
 - *https://github.com/icodes-studio/AssetBundleManager*
-- forked from [*SadPandaStudios/AssetBundleManager*](https://github.com/SadPandaStudios/AssetBundleManager)
+- *forked from* [*SadPandaStudios/AssetBundleManager*](https://github.com/SadPandaStudios/AssetBundleManager)
 - *Simple AssetBundle management*
 
 

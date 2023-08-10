@@ -1,8 +1,30 @@
 # AssetBundleManager
 
-- *https://github.com/SadPandaStudios/AssetBundleManager/tree/master*
-- [***Download***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundleManager.zip)
+- *https://github.com/icodes-studio/AssetBundleManager*
+- forked from [*SadPandaStudios/AssetBundleManager*](https://github.com/SadPandaStudios/AssetBundleManager)
 - *Simple AssetBundle management*
+
+
+## # Requirements
+    - Unity 2017.1 or greater.
+    - Developed with Unity 2022.3.4f1 LTS
+
+## # Initializing
+    - First you need to build your bundles.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/abm-0.png)
+    - By default, it puts bundles in PROJECT\AssetBundles\PLATFORM.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/abm-1.png)
+
+
+
+
+
+
+
+　
+
+# API References
+
 - **Main Methods**
     - **Initialize**: Initializes the base-uri used for AssetBundle calls.
     - **Load**: Load the platform(entry-point) manifest file.

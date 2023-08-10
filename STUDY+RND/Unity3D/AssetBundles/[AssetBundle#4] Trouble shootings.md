@@ -4,7 +4,7 @@
     - 애셋 번들을 다운로드 하는 경우 압축을 풀수 없다는 에러 메시지 발생
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/troubleshooting-0.png)
 
-- ***Solution#1***
+- ***Solutions***
     - FIlezilla를 사용하여 에셋 번들을 업로드하는 경우, 기본 전송 유형 설정을 바이너리로 변경하고 업로드.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/troubleshooting-1.png)
     - ***See Also***

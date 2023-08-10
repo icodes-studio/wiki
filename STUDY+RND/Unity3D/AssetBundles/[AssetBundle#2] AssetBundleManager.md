@@ -1,6 +1,7 @@
 # AssetBundleManager
 
 - *https://github.com/SadPandaStudios/AssetBundleManager/tree/master*
+- [***Download***](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/AssetBundleManager.zip)
 - *Simple AssetBundle management*
 - **Main Methods**
     - **Initialize**: Initializes the base-uri used for AssetBundle calls.

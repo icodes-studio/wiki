@@ -1,5 +1,3 @@
-# Trouble shooting
-
 ## # 1. Error while downloading Asset Bundle: Failed to decompress data for the AssetBundle
 
 - ***Problems***

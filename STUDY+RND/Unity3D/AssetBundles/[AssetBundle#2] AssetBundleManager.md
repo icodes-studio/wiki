@@ -245,6 +245,7 @@
 - **LoadBundle**: Downloads an AssetBundle or returns a cached AssetBundle if it has already been downloaded.
 - **UnloadBundle**: Unloads an AssetBundle.
 - **IsVersionCached**: Check to see if a specific asset bundle is cached or needs to be downloaded.
+- **Dispose**: Cleans up all downloaded bundles.
 
 
 　

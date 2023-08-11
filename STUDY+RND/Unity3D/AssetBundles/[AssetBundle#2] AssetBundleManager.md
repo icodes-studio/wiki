@@ -15,7 +15,7 @@
 - **Initializing**
     - First, you need to build your bundles.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/abm-0.png)
-    - By default, it puts bundles in PROJECT\AssetBundles\PLATFORM.
+    - By default, it puts bundles in ***PROJECT\AssetBundles\PLATFORM***.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/abm-1.png)
     - Once the bundles are built, you can start accessing them with the manager.
     - When you are done testing your bundles you need to upload them to a server. 

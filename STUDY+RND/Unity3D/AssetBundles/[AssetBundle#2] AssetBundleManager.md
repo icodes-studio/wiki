@@ -370,15 +370,6 @@
 
 　
 
-## # Initialized
-*public bool Initialized*
-
-- **Description**
-    - Returns whether the manager was initialized successfully or not.
-
-
-　
-
 ## # Manifest
 *public AssetBundleManifest Manifest*
 

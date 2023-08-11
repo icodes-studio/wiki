@@ -13,12 +13,141 @@
     - Unity 2017.1 or greater.
     - Developed with Unity 2022.3.4f1 LTS
 - **Initializing**
-    - First you need to build your bundles.
+    - First, you need to build your bundles.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/abm-0.png)
     - By default, it puts bundles in PROJECT\AssetBundles\PLATFORM.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/abm-1.png)
+    - Once the bundles are built, you can start accessing them with the manager.
+    - When you are done testing your bundles you need to upload them to a server. 
+    - They can go anywhere in the server as long as they are contained in a PLATFORM folder. 
+    - For example, builds for iOS bundles should be accessable from http://www.example.com/AssetBundles/iOS. 
+    - The full list of supported targets can be found in ***AssetBundleTools.cs.***
+- **Testing#1 - using a callback**
+    - *https://github.com/icodes-studio/AssetBundleManager/blob/master/Assets/Demo/Example1.cs*
+    - ***UseSimulation()*** configures ABM to use the default folder structure to retrieve bundles.
+    - This convenience means you don't have to upload your bundles to a remote server in order to test them, you can use your local files instead.
+        ```
+        using UnityEngine;
+        using AssetBundles;
 
+        public class Example1 : MonoBehaviour
+        {
+            private AssetBundleManager abm;
 
+            private void Start()
+            {
+                abm = new AssetBundleManager();
+                abm.Initialize("http://www.example.com/AssetBundles")
+                   .UseSimulation()
+                   .Load(success =>
+                    {
+                        if (success)
+                        {
+                            abm.LoadBundle("prefabs", bundle =>
+                            {
+                                if (bundle != null)
+                                {
+                                    Instantiate(bundle.LoadAsset<GameObject>("button"), transform);
+                                    abm.UnloadBundle(bundle);
+                                }
+                            });
+                        }
+                    });
+            }
+
+            private void OnDestroy()
+            {
+                abm?.Dispose();
+            }
+        }
+        ```
+    - The Initialize(...) function configures ABM to point to a remote server that contains your bundles.
+    - Calling Load(...) causes ABM to download the manifest file for your bundles. 
+    - Once this file is downloaded and processed you are ready to begin downloading bundles.
+- **Testing#2 - using a Coroutine**
+    - *https://github.com/icodes-studio/AssetBundleManager/blob/master/Assets/Demo/Example2.cs*
+    - If you prefer to use a coroutine instead of a callback
+        ```
+        using System.Collections;
+        using UnityEngine;
+        using UnityEngine.SceneManagement;
+        using AssetBundles;
+
+        public class Example2 : MonoBehaviour
+        {
+            private AssetBundleManager abm;
+
+            private IEnumerator Start()
+            {
+                Caching.ClearCache();
+
+                abm = new AssetBundleManager();
+                var loadAsync = abm
+                    .Initialize("http://icoder.example.com/AssetBundles")
+                    .UseSimulation()
+                    .Load();
+
+                yield return loadAsync;
+                if (loadAsync.Success)
+                {
+                    var loadBundleAsync = abm.LoadBundle("scenes");
+                    yield return loadBundleAsync;
+                    if (loadBundleAsync.Success)
+                    {
+                        yield return SceneManager.LoadSceneAsync("test", LoadSceneMode.Additive);
+                        abm.UnloadBundle(loadBundleAsync.AssetBundle);
+                    }
+                }
+            }
+
+            private void OnDestroy()
+            {
+                abm?.Dispose();
+            }
+        }
+        ```
+- **Testing#3 - using a Treading.Task**
+    - *https://github.com/icodes-studio/AssetBundleManager/blob/master/Assets/Demo/Example3.cs*
+    - If you prefer to use a Threading.Task instead of a coroutine
+        ```
+        using UnityEngine;
+        using UnityEngine.UI;
+        using AssetBundles;
+
+        public class Example3 : MonoBehaviour
+        {
+            private AssetBundleManager abm;
+
+            private async void Start()
+            {
+                Caching.ClearCache();
+
+                abm = new AssetBundleManager();
+                abm.Initialize("http://www.example.com/AssetBundles")
+                   .UseSimulation()
+                   .Load();
+
+                var loadAsync = abm.LoadAsync();
+                await loadAsync;
+                if (loadAsync.Result)
+                {
+                    var loadBundleAsync = abm.LoadBundleAsync("sprites");
+                    await loadBundleAsync;
+                    if (loadBundleAsync.Result != null)
+                    {
+                        var image = GetComponentInChildren<Image>();
+                        image.sprite = loadBundleAsync.Result.LoadAsset<Sprite>("sprite");
+                        abm.UnloadBundle(loadBundleAsync.Result);
+                    }
+                }
+            }
+
+            private void OnDestroy()
+            {
+                abm?.Dispose();
+            }
+        }
+        ```
 
 
 

@@ -79,7 +79,7 @@
 
 - **using a Coroutine**
     - *https://github.com/icodes-studio/AssetBundleManager/blob/master/Assets/Demo/Example2.cs*
-    - If you prefer to use a coroutine instead of a callback
+    - If you prefer to use a ***coroutine*** instead of a callback
         ```csharp
         using System.Collections;
         using UnityEngine;
@@ -125,7 +125,7 @@
 
 - **using a Treading.Task**
     - *https://github.com/icodes-studio/AssetBundleManager/blob/master/Assets/Demo/Example3.cs*
-    - If you prefer to use a Threading.Task instead of a coroutine
+    - If you prefer to use a ***Threading.Task*** instead of a coroutine
         ```csharp
         #if NET_4_6 || NET_STANDARD_2_0
         using UnityEngine;
@@ -165,7 +165,7 @@
         }
         #endif
         ```
-    - Threading.Task works only in .net 4.6 or .net standard environment.
+    - Threading.Task works only in ***.net 4.6*** or ***.net standard*** environment.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/abm-2.png)
 
 

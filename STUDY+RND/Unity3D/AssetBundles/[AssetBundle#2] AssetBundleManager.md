@@ -31,7 +31,8 @@
 - **using a callback**
     - *https://github.com/icodes-studio/AssetBundleManager/blob/master/Assets/Demo/Example1.cs*
     - ***UseSimulation()*** configures ABM to use the default folder structure to retrieve bundles.
-    - This convenience means you don't have to upload your bundles to a remote server in order to test them, you can use your local files instead.
+    - This convenience means you don't have to upload your bundles to a remote server in order to test them.
+    - You can use your local files instead.
         ```
         using UnityEngine;
         using AssetBundles;

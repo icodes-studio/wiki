@@ -165,7 +165,7 @@
         }
         #endif
         ```
-    - Threading.Task works only in ***.net 4.6*** or ***.net standard 2.0*** environment.
+    - Threading.Task works only in ***.net 4.x*** or ***.net standard 2.x*** environment.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/abm-2.png)
 
 

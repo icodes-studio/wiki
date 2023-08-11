@@ -176,8 +176,6 @@
 - **Preparation**
     - ABM supports pre-caching your bundles with the use of the ***StreamingAssets*** folder in Unity.
     - Once your bundles are built you can copy the manifest and any number of bundles to the ***StreamingAsests\PLATFORM*** folder.
-    - You can simply copy them using the menu below.
-        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/abm-3.png)
     - For example if you wanted to pre-cache the ***SomeBundle*** iOS bundles you would have a structure like:
         ```
         PROJECT
@@ -189,6 +187,8 @@
                 \SomeBundle
                 \SomeBundle.manifest
         ```
+    - You can simply copy them using the menu below.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/abm-3.png)
 - **Loading strategies**
     - When you make a ***LoadBundle(...)*** call ABM will check to see if that bundle exists in the StreamingAssets folder first.
     - And use it if its hash matches the hash of the remote server.

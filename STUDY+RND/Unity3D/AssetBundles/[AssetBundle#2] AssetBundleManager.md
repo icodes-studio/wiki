@@ -240,12 +240,11 @@
 
 # API References
 
-- **Main Methods**
-    - **Initialize**: Initializes the base-uri used for AssetBundle calls.
-    - **Load**: Load the platform(entry-point) manifest file.
-    - **LoadBundle**: Downloads an AssetBundle or returns a cached AssetBundle if it has already been downloaded.
-    - **UnloadBundle**: Unloads an AssetBundle.
-    - **IsVersionCached**: Check to see if a specific asset bundle is cached or needs to be downloaded.
+- **Initialize**: Initializes the base-uri used for AssetBundle calls.
+- **Load**: Load the platform(entry-point) manifest file.
+- **LoadBundle**: Downloads an AssetBundle or returns a cached AssetBundle if it has already been downloaded.
+- **UnloadBundle**: Unloads an AssetBundle.
+- **IsVersionCached**: Check to see if a specific asset bundle is cached or needs to be downloaded.
 
 
 　

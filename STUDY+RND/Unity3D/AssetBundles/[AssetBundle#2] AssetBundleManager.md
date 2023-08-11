@@ -21,7 +21,7 @@
     - When you are done testing your bundles you need to upload them to a server. 
     - They can go anywhere in the server as long as they are contained in a PLATFORM folder. 
     - For example, builds for iOS bundles should be accessable from http://www.example.com/AssetBundles/iOS. 
-    - The full list of supported targets can be found in ***AssetBundleTools.cs.***
+    - The full list of supported targets can be found in [***AssetBundleTools.cs.***](https://github.com/icodes-studio/AssetBundleManager/blob/master/Assets/Scripts/AssetBundleTools.cs)
 
 
 　

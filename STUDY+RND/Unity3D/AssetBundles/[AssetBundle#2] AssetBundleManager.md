@@ -9,9 +9,8 @@
 
 ## # Gettting started
 
-- **Requirements**
-    - Unity 2017.1 or greater.
-    - Developed with Unity 2022.3.4f1 LTS
+- **Developed & tested with**
+    - Unity 2022.3.4f1 LTS
 - **Initializing**
     - First, you need to build your bundles.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/abm-0.png)

@@ -22,7 +22,13 @@
     - They can go anywhere in the server as long as they are contained in a PLATFORM folder. 
     - For example, builds for iOS bundles should be accessable from http://www.example.com/AssetBundles/iOS. 
     - The full list of supported targets can be found in ***AssetBundleTools.cs.***
-- **Testing#1 - using a callback**
+
+
+　
+
+## # Testing #1
+
+- **using a callback**
     - *https://github.com/icodes-studio/AssetBundleManager/blob/master/Assets/Demo/Example1.cs*
     - ***UseSimulation()*** configures ABM to use the default folder structure to retrieve bundles.
     - This convenience means you don't have to upload your bundles to a remote server in order to test them, you can use your local files instead.
@@ -64,7 +70,13 @@
     - The Initialize(...) function configures ABM to point to a remote server that contains your bundles.
     - Calling Load(...) causes ABM to download the manifest file for your bundles. 
     - Once this file is downloaded and processed you are ready to begin downloading bundles.
-- **Testing#2 - using a Coroutine**
+
+
+　
+
+## # Testing #2
+
+- **using a Coroutine**
     - *https://github.com/icodes-studio/AssetBundleManager/blob/master/Assets/Demo/Example2.cs*
     - If you prefer to use a coroutine instead of a callback
         ```
@@ -106,10 +118,17 @@
             }
         }
         ```
-- **Testing#3 - using a Treading.Task**
+
+
+　
+
+## # Testing #3
+
+- **using a Treading.Task**
     - *https://github.com/icodes-studio/AssetBundleManager/blob/master/Assets/Demo/Example3.cs*
     - If you prefer to use a Threading.Task instead of a coroutine
         ```
+        #if NET_4_6 || NET_STANDARD_2_0
         using UnityEngine;
         using UnityEngine.UI;
         using AssetBundles;
@@ -147,8 +166,13 @@
                 abm?.Dispose();
             }
         }
+        #endif
         ```
+    - Threading.Task works only in .net 4.6 or .net standard environment.
+        > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/abm-2.png)
 
+    
+    
 
 
 

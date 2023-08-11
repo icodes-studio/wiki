@@ -225,7 +225,7 @@
 - ***Problem #1***
     - Error while downloading Asset Bundle: Failed to decompress data for the AssetBundle
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/troubleshooting-0.png)
-    - If you are using FIlezilla to upload your asset bundles. Try inside of FIlezilla ***Transfers > File Type > BInary***. then delete your build and asset bundles and re-upload them.
+    - If you are using FIlezilla to upload your asset bundles. Try inside of FIlezilla ***Transfers > File Type > Binary***. then delete your build and asset bundles and re-upload them.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/troubleshooting-1.png)
     - ***See Also***
         - *https://blog.naver.com/chic1007/221734272760*

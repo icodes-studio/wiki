@@ -1,6 +1,6 @@
 # AssetBundleManager
 
-- *https://github.com/icodes-studio/AssetBundleManager*
+- ***https://github.com/icodes-studio/AssetBundleManager***
 - *forked from* [*SadPandaStudios/AssetBundleManager*](https://github.com/SadPandaStudios/AssetBundleManager)
 - *Simple AssetBundle management*
 
@@ -33,7 +33,7 @@
     - ***UseSimulation()*** configures ABM to use the default folder structure to retrieve bundles.
     - This convenience means you don't have to upload your bundles to a remote server in order to test them.
     - You can use your local files instead.
-        ```
+        ```csharp
         using UnityEngine;
         using AssetBundles;
 
@@ -80,7 +80,7 @@
 - **using a Coroutine**
     - *https://github.com/icodes-studio/AssetBundleManager/blob/master/Assets/Demo/Example2.cs*
     - If you prefer to use a coroutine instead of a callback
-        ```
+        ```csharp
         using System.Collections;
         using UnityEngine;
         using UnityEngine.SceneManagement;
@@ -126,7 +126,7 @@
 - **using a Treading.Task**
     - *https://github.com/icodes-studio/AssetBundleManager/blob/master/Assets/Demo/Example3.cs*
     - If you prefer to use a Threading.Task instead of a coroutine
-        ```
+        ```csharp
         #if NET_4_6 || NET_STANDARD_2_0
         using UnityEngine;
         using UnityEngine.UI;
@@ -168,10 +168,51 @@
     - Threading.Task works only in .net 4.6 or .net standard environment.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/abm-2.png)
 
-    
-    
+
+　
+
+## # StreamingAssets
+
+- ABM supports pre-caching your bundles with the use of the ***StreamingAssets*** folder in Unity.
+- Once your bundles are built you can copy the manifest and any number of bundles to the ***StreamingAsests\PLATFORM*** folder in your project.
+- For example if you wanted to pre-cache the ***SomeBundle*** iOS bundles you would have a structure like:
+    ```
+    PROJECT
+    \Assets
+        \StreamingAssets
+        \iOS
+            \iOS
+            \iOS.manifest
+            \SomeBundle
+            \SomeBundle.manifest
+    ```
+- When you make a ***LoadBundle(...)*** call ABM will check to see if that bundle exists in the StreamingAssets folder first.
+- And use it if its hash matches the hash of the remote server.
+- If the file does not exist OR the hash is different then the remote bundle is used.
+- You can change this behaviour when initializing ABM by changing the prioritization strategy:
+    ```csharp
+    abm.SetPrioritizationStrategy(PrioritizationStrategy.StreamingAssets);
+    ```
+- This will tell ABM to always use the StreamingAssets bundle if it exists.
+- If the bundle doesn't exist in StreamingAssets the remote one will be used.
 
 
+　
+
+### Cleanup
+
+- There are two patterns you should follow when using ABM.
+- The first, as mentioned before, is to always unload the bundle when you are finished with it:
+    ```csharp
+    abm.UnloadBundle(bundle);
+    ```
+- If no other scripts are using this bundle it will be unloaded from memory.
+- Likewise, when you are completely done with ABM (maybe because you're switching scenes and don't need the bundles anymore),
+- You can dispose of it:
+    ```csharp
+    abm.Dispose();
+    ```
+- This will force ALL bundles (and their objects) to be unloaded.
 
 
 　

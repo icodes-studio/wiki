@@ -68,8 +68,8 @@
             }
         }
         ```
-    - The Initialize(...) function configures ABM to point to a remote server that contains your bundles.
-    - Calling Load(...) causes ABM to download the manifest file for your bundles. 
+    - The ***Initialize(...)*** function configures ABM to point to a remote server that contains your bundles.
+    - Calling ***Load(...)*** causes ABM to download the manifest file for your bundles. 
     - Once this file is downloaded and processed you are ready to begin downloading bundles.
 
 

@@ -91,8 +91,6 @@
 
             private IEnumerator Start()
             {
-                Caching.ClearCache();
-
                 abm = new AssetBundleManager();
                 var loadAsync = abm
                     .Initialize("http://icoder.example.com/AssetBundles")
@@ -139,8 +137,6 @@
 
             private async void Start()
             {
-                Caching.ClearCache();
-
                 abm = new AssetBundleManager();
                 abm.Initialize("http://www.example.com/AssetBundles")
                    .UseSimulation()

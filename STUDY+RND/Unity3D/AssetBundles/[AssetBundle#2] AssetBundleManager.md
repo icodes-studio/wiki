@@ -10,7 +10,7 @@
 ## # Gettting started
 
 - **Developed & tested with**
-    - Unity 2022.3.4f1 LTS
+    - Unity 2022.3.4f1
 - **Initializing**
     - First, you need to build your bundles.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/abm-0.png)
@@ -164,7 +164,7 @@
         }
         #endif
         ```
-    - Threading.Task works only in ***.net 4.x ↑*** or ***.net standard 2.0 ↑*** environment.
+    - Threading.Task works only in ***.net 4.x*** or ***.net standard 2.0 ↑*** environment.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/abm-2.png)
 
 

@@ -1,6 +1,5 @@
 ## # Addressable Assets
     ● 어드레서블 애셋 시스템을 이용하여 주소를 통해 애셋을 요청할 수 있다.
-    ● 애셋(예: 프리팹)이 “어드레서블”로 표시되면 어디에서든 호출할 수 있는 주소가 생성된다.
     ● 애셋 위치(로컬 또는 원격)에 관계없이 시스템은 애셋과 해당 종속성을 찾아 반한다.
     ● 어드레서블 애셋 시스템은 애셋 번들을 대체하는 기술이 아니다. 
     ● 애셋 번들을 쉽고 효율적이게 사용하는 유틸리티라고 보면 된다.
@@ -15,13 +14,13 @@
 *https://blog.naver.com/cdw0424/221636733877*
 
 - ***Settingup***
-    - ***Package Manager***에서 ***Addressables*** 패키지를 설치한다.
+    - ***Addressables*** 패키지를 설치한다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr1.png)
     - 메뉴 ***Window ‣ Asset Management ‣ Addressables ‣ Groups*** 항목을 선택하여 ***Addressables Groups*** 윈도우를 연다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr2.png)
     - ***Create Addressables Settings*** 버튼 클릭.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr3.png)
-    - 프로젝트뷰에 ***AddressableAssetsData*** 라는 폴더가 생겼다.
+    - 프로젝트뷰에 ***AddressableAssetsData*** 폴더가 생겼다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr4.png)
     - ***Addressables Groups*** 윈도우는 이렇게 바뀌었다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr6.png)
@@ -40,9 +39,9 @@
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr7.png)
     - ***Addressable*** 항목을 선택하면 바로 옆에 어드레스가 자동으로 생성되는데, 이 값으로 애셋을 로드할 수 있다.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr8.png)
-    - 이 값은 다른 어드레스와 겹치지만 않는다면 원하는 대로 수정할 수 있다. ***Cube***로 변경.
+    - 이 값은 다른 어드레스와 겹치지만 않는다면 원하는 대로 수정할 수 있다. ***Cube***로 변경하자.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/addr9.png)
-    - 큐브 프리팹을 로드하는 스크립트를 만들어서 버튼 오브젝트에 바인딩 해주자.
+    - 큐브 프리팹을 로드하는 스크립트를 만들어서 버튼 오브젝트에 바인딩하자.
         ```
         using UnityEngine;
         using UnityEngine.UI;
@@ -448,7 +447,7 @@ https://blog.naver.com/cdw0424/221637763395
 
 　
 
-# 서버에서 다운로드하기 #2
+## # 서버에서 다운로드하기 #2
 
 *https://blog.naver.com/cdw0424/221756844361*
 
@@ -492,7 +491,7 @@ https://blog.naver.com/cdw0424/221637763395
 
 　
 
-# 서버에서 다운로드하기 #3
+## # 서버에서 다운로드하기 #3
 
 *https://blog.naver.com/cdw0424/221764918184*
 

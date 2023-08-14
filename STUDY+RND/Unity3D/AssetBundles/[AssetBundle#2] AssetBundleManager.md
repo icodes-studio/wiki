@@ -27,7 +27,7 @@
 
 　
 
-## # Testing #1
+## # Test #1
 
 - **using a callback**
     - *https://github.com/icodes-studio/AssetBundleManager/blob/master/Assets/Demo/Example1.cs*
@@ -76,7 +76,7 @@
 
 　
 
-## # Testing #2
+## # Test #2
 
 - **using a Coroutine**
     - *https://github.com/icodes-studio/AssetBundleManager/blob/master/Assets/Demo/Example2.cs*
@@ -122,7 +122,7 @@
 
 　
 
-## # Testing #3
+## # Test #3
 
 - **using a Treading.Task**
     - *https://github.com/icodes-studio/AssetBundleManager/blob/master/Assets/Demo/Example3.cs*

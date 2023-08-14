@@ -11,6 +11,8 @@
 
 - **Developed & tested with**
     - Unity 2022.3.4f1
+    - Unity 2021.3.29f1
+    - Unity 2020.3.39f1
 - **Initializing**
     - First, you need to build your bundles.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/abm-0.png)

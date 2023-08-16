@@ -51,12 +51,12 @@
                     {
                         if (success)
                         {
-                            abm.LoadBundle("prefabs", bundle =>
+                            abm.LoadAsset("prefabs", bundle =>
                             {
                                 if (bundle != null)
                                 {
                                     Instantiate(bundle.LoadAsset<GameObject>("button"), transform);
-                                    abm.UnloadBundle(bundle);
+                                    abm.ReleaseAsset(bundle);
                                 }
                             });
                         }
@@ -102,12 +102,12 @@
                 yield return loadAsync;
                 if (loadAsync.Success)
                 {
-                    var loadBundleAsync = abm.LoadBundle("scenes");
-                    yield return loadBundleAsync;
-                    if (loadBundleAsync.Success)
+                    var loadAssetAsync = abm.LoadAsset("scenes");
+                    yield return loadAssetAsync;
+                    if (loadAssetAsync.Success)
                     {
                         yield return SceneManager.LoadSceneAsync("test", LoadSceneMode.Additive);
-                        abm.UnloadBundle(loadBundleAsync.AssetBundle);
+                        abm.ReleaseAsset(loadAssetAsync.AssetBundle);
                     }
                 }
             }
@@ -148,13 +148,13 @@
                 await loadAsync;
                 if (loadAsync.Result)
                 {
-                    var loadBundleAsync = abm.LoadBundleAsync("sprites");
-                    await loadBundleAsync;
-                    if (loadBundleAsync.Result != null)
+                    var loadAssetAsync = abm.LoadAssetAsync("sprites");
+                    await loadAssetAsync;
+                    if (loadAssetAsync.Result != null)
                     {
                         var image = GetComponentInChildren<Image>();
-                        image.sprite = loadBundleAsync.Result.LoadAsset<Sprite>("sprite");
-                        abm.UnloadBundle(loadBundleAsync.Result);
+                        image.sprite = loadAssetAsync.Result.LoadAsset<Sprite>("sprite");
+                        abm.ReleaseAsset(loadAssetAsync.Result);
                     }
                 }
             }
@@ -191,7 +191,7 @@
     - You can simply copy them using the menu below.
         > ![](https://github.com/icodes-studio/wiki/blob/main/STUDY%2BRND/Unity3D/AssetBundles/Assets/abm-3.png)
 - **Loading strategies**
-    - When you make a ***LoadBundle(...)*** call ABM will check to see if that bundle exists in the StreamingAssets folder first.
+    - When you make a ***LoadAsset(...)*** call ABM will check to see if that bundle exists in the StreamingAssets folder first.
     - And use it if its hash matches the hash of the remote server.
     - If the file does not exist OR the hash is different then the remote bundle is used.
     - You can change this behaviour when initializing ABM by changing the prioritization strategy:
@@ -209,7 +209,7 @@
 - **There are two patterns you should follow when using ABM.**
     - The first is to always unload the bundle when you are finished with it:
         ```csharp
-        abm.UnloadBundle(bundle);
+        abm.ReleaseAsset(bundle);
         ```
 - **If no other scripts are using this bundle it will be unloaded from memory.**
     - Likewise, when you are completely done with ABM (maybe because you're switching scenes and don't need the bundles anymore),
@@ -242,8 +242,8 @@
 
 - **Initialize**: Initializes the base-uri used for AssetBundle calls.
 - **Load**: Load the platform(entry-point) manifest file.
-- **LoadBundle**: Downloads an AssetBundle or returns a cached AssetBundle if it has already been downloaded.
-- **UnloadBundle**: Unloads an AssetBundle.
+- **LoadAsset**: Downloads an AssetBundle or returns a cached AssetBundle if it has already been downloaded.
+- **ReleaseAsset**: Unloads an AssetBundle.
 - **IsVersionCached**: Check to see if a specific asset bundle is cached or needs to be downloaded.
 - **Dispose**: Cleans up all downloaded bundles.
 
@@ -301,12 +301,12 @@
 
 　
 
-## # LoadBundle
-*public void LoadBundle(string bundleName, Action\<AssetBundle\> callback)*
+## # LoadAsset
+*public void LoadAsset(string bundleName, Action\<AssetBundle\> callback)*
 
 - **Description**
     - Downloads an AssetBundle or returns a cached AssetBundle if it has already been downloaded.
-    - Remember to call UnloadBundle(AssetBundle, bool) for every bundle you download once you are done with it.
+    - Remember to call ReleaseAsset(AssetBundle, bool) for every bundle you download once you are done with it.
 - **Parameters**
     - **string bundleName**: Name of the bundle to download.
     - **Action\<AssetBundle\> callback**: Action to perform when the bundle has been successfully downloaded.
@@ -314,12 +314,12 @@
 
 　
 
-## # LoadBundle
-*public void LoadBundle(string bundleName, Action\<AssetBundle\> callback, DownloadSettings downloadSettings)*
+## # LoadAsset
+*public void LoadAsset(string bundleName, Action\<AssetBundle\> callback, DownloadSettings downloadSettings)*
 
 - **Description**
     - Downloads an AssetBundle or returns a cached AssetBundle if it has already been downloaded.
-    - Remember to call UnloadBundle(AssetBundle, bool) for every bundle you download once you are done with it.
+    - Remember to call ReleaseAsset(AssetBundle, bool) for every bundle you download once you are done with it.
 - **Parameters**
     - **string bundleName**: Name of the bundle to download.
     - **Action\<AssetBundle\> callback**: Action to perform when the bundle has been successfully downloaded.
@@ -331,8 +331,8 @@
 
 　
 
-## # UnloadBundle
-*public void UnloadBundle(AssetBundle bundle)*
+## # ReleaseAsset
+*public void ReleaseAsset(AssetBundle bundle)*
 
 - **Description**
     - Unloads an AssetBundle.
@@ -343,8 +343,8 @@
 
 　
 
-## # UnloadBundle
-*public void UnloadBundle(AssetBundle bundle, bool unloadAllLoadedObjects)*
+## # ReleaseAsset
+*public void ReleaseAsset(AssetBundle bundle, bool unloadAllLoadedObjects)*
 
 - **Description**
     - Unloads an AssetBundle.
@@ -357,8 +357,8 @@
 
 　
 
-## # UnloadBundle
-*public void UnloadBundle(AssetBundle bundle, bool unloadAllLoadedObjects, bool force)*
+## # ReleaseAsset
+*public void ReleaseAsset(AssetBundle bundle, bool unloadAllLoadedObjects, bool force)*
 
 - **Description**
     - Unloads an AssetBundle.

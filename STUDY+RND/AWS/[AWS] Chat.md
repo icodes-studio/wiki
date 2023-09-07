@@ -1,4 +1,7 @@
 - [***AWS 서비스로 Serverless 채팅서버 만들기***](https://www.youtube.com/watch?v=SPtRdnB5wSE)
 - ***AWS WebScoket+Unity 사용한 게임 샘플***
-    - https://github.com/BatteryAcid/DodgeballLearn1
-    - https://github.com/BatteryAcid/basic-multiplayer-aws
+    - *https://github.com/BatteryAcid/DodgeballLearn1*
+        - *https://youtu.be/BljQ5FwQzis*
+    - *https://github.com/BatteryAcid/basic-multiplayer-aws*
+        - *https://youtu.be/X45VYma6738*
+
